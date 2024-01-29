@@ -408,6 +408,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Defines a job to be run by the Cloud Dataflow service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1649,6 +1650,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Datastore connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreIODetails : pb::IMessage<DatastoreIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1884,6 +1886,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Pub/Sub connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubSubIODetails : pb::IMessage<PubSubIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2119,6 +2122,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a File connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileIODetails : pb::IMessage<FileIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2314,6 +2318,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Cloud Bigtable connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigTableIODetails : pb::IMessage<BigTableIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2589,6 +2594,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a BigQuery connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryIODetails : pb::IMessage<BigQueryIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2904,6 +2910,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Spanner connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpannerIODetails : pb::IMessage<SpannerIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3179,6 +3186,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// The version of the SDK used to run the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SdkVersion : pb::IMessage<SdkVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3490,6 +3498,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Metadata available primarily for filtering jobs. Will be included in the
   /// ListJob response and Job SUMMARY view.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobMetadata : pb::IMessage<JobMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3868,6 +3877,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A message describing the state of a particular execution stage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionStageState : pb::IMessage<ExecutionStageState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4154,6 +4164,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// form.  This data is provided by the Dataflow service for ease of visualizing
   /// the pipeline and interpreting Dataflow provided metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PipelineDescription : pb::IMessage<PipelineDescription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4396,6 +4407,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Description of the type, names/ids, and input/outputs for a transform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransformSummary : pb::IMessage<TransformSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4760,6 +4772,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// stage of execution.  Some composing transforms and sources may have been
   /// generated by the Dataflow service during execution planning.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionStageSummary : pb::IMessage<ExecutionStageSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5183,6 +5196,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// Description of an input or output of an execution stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StageSource : pb::IMessage<StageSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5499,6 +5513,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// Description of a transform executed as part of an execution stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ComponentTransform : pb::IMessage<ComponentTransform>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5776,6 +5791,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// Description of an interstitial value between transforms in an execution
       /// stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ComponentSource : pb::IMessage<ComponentSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6057,6 +6073,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Data provided with a pipeline or transform to provide descriptive info.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisplayData : pb::IMessage<DisplayData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6870,6 +6887,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Note that the Cloud Dataflow service may be used to run many different
   /// types of jobs, not just Map-Reduce.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Step : pb::IMessage<Step>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7158,6 +7176,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Additional information about how a Cloud Dataflow job will be executed that
   /// isn't contained in the submitted job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobExecutionInfo : pb::IMessage<JobExecutionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7343,6 +7362,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Contains information about how a particular
   /// [google.dataflow.v1beta3.Step][google.dataflow.v1beta3.Step] will be executed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobExecutionStageInfo : pb::IMessage<JobExecutionStageInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7529,6 +7549,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to create a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7895,6 +7916,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to get the state of a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8212,6 +8234,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to update a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8539,6 +8562,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to list Cloud Dataflow jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8979,6 +9003,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) failed
   /// to respond to a request for data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FailedLocation : pb::IMessage<FailedLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9180,6 +9205,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// ListJobsResponse is not returned and the requests's response
   /// body is empty {}.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9435,6 +9461,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to create a snapshot of a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SnapshotJobRequest : pb::IMessage<SnapshotJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9839,6 +9866,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to check is active jobs exists for a project
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckActiveJobsRequest : pb::IMessage<CheckActiveJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10034,6 +10062,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response for CheckActiveJobsRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckActiveJobsResponse : pb::IMessage<CheckActiveJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

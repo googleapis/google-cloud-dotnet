@@ -26,12 +26,12 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvc2VjdXJpdHkucHJvdG8SGGdv",
             "b2dsZS5jbG91ZC5kYXRhcGxleC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90byJVChJSZXNvdXJjZUFjY2Vzc1NwZWMSFAoHcmVhZGVycxgB",
-            "IAMoCUID4EEBEhQKB3dyaXRlcnMYAiADKAlCA+BBARITCgZvd25lcnMYAyAD",
-            "KAlCA+BBASImCg5EYXRhQWNjZXNzU3BlYxIUCgdyZWFkZXJzGAEgAygJQgPg",
-            "QQFCaQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUINU2VjdXJpdHlQ",
-            "cm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2Rh",
-            "dGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "dmlvci5wcm90byJYChJSZXNvdXJjZUFjY2Vzc1NwZWMSFQoHcmVhZGVycxgB",
+            "IAMoCUIE4kEBARIVCgd3cml0ZXJzGAIgAygJQgTiQQEBEhQKBm93bmVycxgD",
+            "IAMoCUIE4kEBASInCg5EYXRhQWNjZXNzU3BlYxIVCgdyZWFkZXJzGAEgAygJ",
+            "QgTiQQEBQmkKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDVNlY3Vy",
+            "aXR5UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2",
+            "MS9kYXRhcGxleHBiO2RhdGFwbGV4cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,6 +48,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// on the resources, for example, Cloud Storage bucket, BigQuery dataset,
   /// BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceAccessSpec : pb::IMessage<ResourceAccessSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -296,6 +297,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// principals explicitly granted access through the DataAccessSpec. Principals
   /// with access to the containing resource are not implicitly granted access.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataAccessSpec : pb::IMessage<DataAccessSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

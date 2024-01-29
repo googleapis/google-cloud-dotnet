@@ -28,26 +28,26 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
             "cF9jb25uZWN0b3JfaW5zdGFuY2VfY29uZmlnLnByb3RvEihnb29nbGUuY2xv",
             "dWQuYmV5b25kY29ycC5hcHBjb25uZWN0b3JzLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3Rv",
-            "IpECChpBcHBDb25uZWN0b3JJbnN0YW5jZUNvbmZpZxIcCg9zZXF1ZW5jZV9u",
-            "dW1iZXIYASABKANCA+BBAhItCg9pbnN0YW5jZV9jb25maWcYAiABKAsyFC5n",
-            "b29nbGUucHJvdG9idWYuQW55ElkKE25vdGlmaWNhdGlvbl9jb25maWcYAyAB",
-            "KAsyPC5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBjb25uZWN0b3JzLnYx",
-            "Lk5vdGlmaWNhdGlvbkNvbmZpZxJLCgxpbWFnZV9jb25maWcYBCABKAsyNS5n",
-            "b29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBjb25uZWN0b3JzLnYxLkltYWdl",
-            "Q29uZmlnItcBChJOb3RpZmljYXRpb25Db25maWcSeQoTcHVic3ViX25vdGlm",
-            "aWNhdGlvbhgBIAEoCzJaLmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmFwcGNv",
-            "bm5lY3RvcnMudjEuTm90aWZpY2F0aW9uQ29uZmlnLkNsb3VkUHViU3ViTm90",
-            "aWZpY2F0aW9uQ29uZmlnSAAaPAodQ2xvdWRQdWJTdWJOb3RpZmljYXRpb25D",
-            "b25maWcSGwoTcHVic3ViX3N1YnNjcmlwdGlvbhgBIAEoCUIICgZjb25maWci",
-            "OQoLSW1hZ2VDb25maWcSFAoMdGFyZ2V0X2ltYWdlGAEgASgJEhQKDHN0YWJs",
-            "ZV9pbWFnZRgCIAEoCUKqAgosY29tLmdvb2dsZS5jbG91ZC5iZXlvbmRjb3Jw",
-            "LmFwcGNvbm5lY3RvcnMudjFCH0FwcENvbm5lY3Rvckluc3RhbmNlQ29uZmln",
-            "UHJvdG9QAVpSY2xvdWQuZ29vZ2xlLmNvbS9nby9iZXlvbmRjb3JwL2FwcGNv",
-            "bm5lY3RvcnMvYXBpdjEvYXBwY29ubmVjdG9yc3BiO2FwcGNvbm5lY3RvcnNw",
-            "YqoCKEdvb2dsZS5DbG91ZC5CZXlvbmRDb3JwLkFwcENvbm5lY3RvcnMuVjHK",
-            "AihHb29nbGVcQ2xvdWRcQmV5b25kQ29ycFxBcHBDb25uZWN0b3JzXFYx6gIs",
-            "R29vZ2xlOjpDbG91ZDo6QmV5b25kQ29ycDo6QXBwQ29ubmVjdG9yczo6VjFi",
-            "BnByb3RvMw=="));
+            "IpICChpBcHBDb25uZWN0b3JJbnN0YW5jZUNvbmZpZxIdCg9zZXF1ZW5jZV9u",
+            "dW1iZXIYASABKANCBOJBAQISLQoPaW5zdGFuY2VfY29uZmlnGAIgASgLMhQu",
+            "Z29vZ2xlLnByb3RvYnVmLkFueRJZChNub3RpZmljYXRpb25fY29uZmlnGAMg",
+            "ASgLMjwuZ29vZ2xlLmNsb3VkLmJleW9uZGNvcnAuYXBwY29ubmVjdG9ycy52",
+            "MS5Ob3RpZmljYXRpb25Db25maWcSSwoMaW1hZ2VfY29uZmlnGAQgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLmJleW9uZGNvcnAuYXBwY29ubmVjdG9ycy52MS5JbWFn",
+            "ZUNvbmZpZyLXAQoSTm90aWZpY2F0aW9uQ29uZmlnEnkKE3B1YnN1Yl9ub3Rp",
+            "ZmljYXRpb24YASABKAsyWi5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBj",
+            "b25uZWN0b3JzLnYxLk5vdGlmaWNhdGlvbkNvbmZpZy5DbG91ZFB1YlN1Yk5v",
+            "dGlmaWNhdGlvbkNvbmZpZ0gAGjwKHUNsb3VkUHViU3ViTm90aWZpY2F0aW9u",
+            "Q29uZmlnEhsKE3B1YnN1Yl9zdWJzY3JpcHRpb24YASABKAlCCAoGY29uZmln",
+            "IjkKC0ltYWdlQ29uZmlnEhQKDHRhcmdldF9pbWFnZRgBIAEoCRIUCgxzdGFi",
+            "bGVfaW1hZ2UYAiABKAlCqgIKLGNvbS5nb29nbGUuY2xvdWQuYmV5b25kY29y",
+            "cC5hcHBjb25uZWN0b3JzLnYxQh9BcHBDb25uZWN0b3JJbnN0YW5jZUNvbmZp",
+            "Z1Byb3RvUAFaUmNsb3VkLmdvb2dsZS5jb20vZ28vYmV5b25kY29ycC9hcHBj",
+            "b25uZWN0b3JzL2FwaXYxL2FwcGNvbm5lY3RvcnNwYjthcHBjb25uZWN0b3Jz",
+            "cGKqAihHb29nbGUuQ2xvdWQuQmV5b25kQ29ycC5BcHBDb25uZWN0b3JzLlYx",
+            "ygIoR29vZ2xlXENsb3VkXEJleW9uZENvcnBcQXBwQ29ubmVjdG9yc1xWMeoC",
+            "LEdvb2dsZTo6Q2xvdWQ6OkJleW9uZENvcnA6OkFwcENvbm5lY3RvcnM6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -63,6 +63,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// AppConnectorInstanceConfig defines the instance config of a AppConnector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppConnectorInstanceConfig : pb::IMessage<AppConnectorInstanceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -409,6 +410,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// NotificationConfig defines the mechanisms to notify instance agent.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -650,6 +652,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <summary>
       /// The configuration for Pub/Sub messaging for the AppConnector.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CloudPubSubNotificationConfig : pb::IMessage<CloudPubSubNotificationConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -850,6 +853,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// ImageConfig defines the control plane images to run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageConfig : pb::IMessage<ImageConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

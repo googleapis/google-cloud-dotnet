@@ -48,6 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// File information about the related binary/library used by an executable, or
   /// the script used by a script interpreter
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class File : pb::IMessage<File>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

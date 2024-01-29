@@ -103,6 +103,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Global topology of the streaming Dataflow job, including all
   /// computations and their sharded locations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TopologyConfig : pb::IMessage<TopologyConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -426,6 +427,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Identifies a pubsub location to use for transferring data into or
   /// out of a streaming Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubLocation : pb::IMessage<PubsubLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -867,6 +869,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Identifies the location of a streaming computation stage, for
   /// stage-to-stage communication.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingStageLocation : pb::IMessage<StreamingStageLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1063,6 +1066,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Identifies the location of a streaming side input.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingSideInputLocation : pb::IMessage<StreamingSideInputLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1298,6 +1302,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Identifies the location of a custom souce.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomSourceLocation : pb::IMessage<CustomSourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1494,6 +1499,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Describes a stream of data, either as input to be processed or as
   /// output of a streaming Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamLocation : pb::IMessage<StreamLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1901,6 +1907,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// State family configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StateFamilyConfig : pb::IMessage<StateFamilyConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2136,6 +2143,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// All configuration data for a particular Computation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComputationTopology : pb::IMessage<ComputationTopology>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2489,6 +2497,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Currently we only support UTF-8 character splits to simplify encoding into
   /// JSON.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KeyRangeLocation : pb::IMessage<KeyRangeLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2850,6 +2859,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Describes mounted data disk.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MountedDataDisk : pb::IMessage<MountedDataDisk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3048,6 +3058,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Data disk assignment for a given VM instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataDiskAssignment : pb::IMessage<DataDiskAssignment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3279,6 +3290,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Currently we only support UTF-8 character splits to simplify encoding into
   /// JSON.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KeyRangeDataDiskAssignment : pb::IMessage<KeyRangeDataDiskAssignment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3558,6 +3570,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Describes full or partial data disk assignment information of the computation
   /// ranges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingComputationRanges : pb::IMessage<StreamingComputationRanges>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3782,6 +3795,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Streaming appliance snapshot configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingApplianceSnapshotConfig : pb::IMessage<StreamingApplianceSnapshotConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

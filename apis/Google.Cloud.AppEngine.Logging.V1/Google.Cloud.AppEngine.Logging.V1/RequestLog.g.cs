@@ -76,6 +76,7 @@ namespace Google.Cloud.AppEngine.Logging.V1 {
   /// <summary>
   /// Application log line emitted while processing a request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogLine : pb::IMessage<LogLine>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -409,6 +410,7 @@ namespace Google.Cloud.AppEngine.Logging.V1 {
   /// <summary>
   /// Specifies a location in a source code file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -691,6 +693,7 @@ namespace Google.Cloud.AppEngine.Logging.V1 {
   /// A reference to a particular snapshot of the source tree used to build and
   /// deploy an application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceReference : pb::IMessage<SourceReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -929,6 +932,7 @@ namespace Google.Cloud.AppEngine.Logging.V1 {
   /// Complete log information about a single HTTP request to an App Engine
   /// application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestLog : pb::IMessage<RequestLog>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

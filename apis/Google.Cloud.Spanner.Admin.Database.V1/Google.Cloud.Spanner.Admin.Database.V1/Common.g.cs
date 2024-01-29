@@ -33,29 +33,29 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUAoQRW5jcnlwdGlvbkNvbmZp",
             "ZxI8CgxrbXNfa2V5X25hbWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xl",
-            "YXBpcy5jb20vQ3J5cHRvS2V5IsICCg5FbmNyeXB0aW9uSW5mbxJTCg9lbmNy",
+            "YXBpcy5jb20vQ3J5cHRvS2V5IsUCCg5FbmNyeXB0aW9uSW5mbxJUCg9lbmNy",
             "eXB0aW9uX3R5cGUYAyABKA4yNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRh",
-            "YmFzZS52MS5FbmNyeXB0aW9uSW5mby5UeXBlQgPgQQMSMgoRZW5jcnlwdGlv",
-            "bl9zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkkKD2tt",
-            "c19rZXlfdmVyc2lvbhgCIAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtD",
-            "VVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04QAipcCg9EYXRhYmFzZURpYWxl",
-            "Y3QSIAocREFUQUJBU0VfRElBTEVDVF9VTlNQRUNJRklFRBAAEhcKE0dPT0dM",
-            "RV9TVEFOREFSRF9TUUwQARIOCgpQT1NUR1JFU1FMEAJCogQKJGNvbS5nb29n",
-            "bGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MUILQ29tbW9uUHJvdG9QAVpG",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FkbWluL2RhdGFiYXNlL2Fw",
-            "aXYxL2RhdGFiYXNlcGI7ZGF0YWJhc2VwYqoCJkdvb2dsZS5DbG91ZC5TcGFu",
-            "bmVyLkFkbWluLkRhdGFiYXNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJc",
-            "QWRtaW5cRGF0YWJhc2VcVjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpB",
-            "ZG1pbjo6RGF0YWJhc2U6OlYx6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNv",
-            "bS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
-            "b19rZXl96kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "VmVyc2lvbhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tl",
-            "eX0vY3J5cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lvbn1iBnBy",
-            "b3RvMw=="));
+            "YmFzZS52MS5FbmNyeXB0aW9uSW5mby5UeXBlQgTiQQEDEjMKEWVuY3J5cHRp",
+            "b25fc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCBOJBAQMSSgoP",
+            "a21zX2tleV92ZXJzaW9uGAIgASgJQjHiQQED+kEqCihjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9V",
+            "TlNQRUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIf",
+            "ChtDVVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04QAipcCg9EYXRhYmFzZURp",
+            "YWxlY3QSIAocREFUQUJBU0VfRElBTEVDVF9VTlNQRUNJRklFRBAAEhcKE0dP",
+            "T0dMRV9TVEFOREFSRF9TUUwQARIOCgpQT1NUR1JFU1FMEAJCogQKJGNvbS5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MUILQ29tbW9uUHJvdG9Q",
+            "AVpGY2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FkbWluL2RhdGFiYXNl",
+            "L2FwaXYxL2RhdGFiYXNlcGI7ZGF0YWJhc2VwYqoCJkdvb2dsZS5DbG91ZC5T",
+            "cGFubmVyLkFkbWluLkRhdGFiYXNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5u",
+            "ZXJcQWRtaW5cRGF0YWJhc2VcVjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVy",
+            "OjpBZG1pbjo6RGF0YWJhc2U6OlYx6kF4CiFjbG91ZGttcy5nb29nbGVhcGlz",
+            "LmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2Ny",
+            "eXB0b19rZXl96kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5VmVyc2lvbhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRv",
+            "X2tleX0vY3J5cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lvbn1i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.DatabaseDialect), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,6 +94,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// Encapsulates progress related information for a Cloud Spanner long
   /// running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationProgress : pb::IMessage<OperationProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -389,6 +390,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// <summary>
   /// Encryption configuration for a Cloud Spanner database.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -586,6 +588,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// <summary>
   /// Encryption information for a Cloud Spanner database or backup.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionInfo : pb::IMessage<EncryptionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

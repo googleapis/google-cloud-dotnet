@@ -48,6 +48,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// The response for [Commit][google.spanner.v1.Spanner.Commit].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -306,6 +307,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <summary>
       /// Additional statistics about a commit.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CommitStats : pb::IMessage<CommitStats>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

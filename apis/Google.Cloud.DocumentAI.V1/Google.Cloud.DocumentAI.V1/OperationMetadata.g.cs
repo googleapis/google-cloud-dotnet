@@ -53,6 +53,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// The common metadata for long running operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonOperationMetadata : pb::IMessage<CommonOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

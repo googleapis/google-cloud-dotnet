@@ -370,6 +370,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// A contiguous set of days: `startDate`, `startDate + 1`, ..., `endDate`.
   /// Requests are allowed up to 4 date ranges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DateRange : pb::IMessage<DateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -655,6 +656,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// A contiguous set of minutes: `startMinutesAgo`, `startMinutesAgo + 1`, ...,
   /// `endMinutesAgo`. Requests are allowed up to 2 minute ranges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MinuteRange : pb::IMessage<MinuteRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -983,6 +985,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// responses are strings; for example, the city could be "Paris" or "New York".
   /// Requests are allowed up to 9 dimensions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dimension : pb::IMessage<Dimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1251,6 +1254,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// 1) lower_case(dimension)
   /// 2) concatenate(dimension1, symbol, dimension2).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionExpression : pb::IMessage<DimensionExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1605,6 +1609,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Used to convert a dimension value to a single case.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CaseExpression : pb::IMessage<CaseExpression>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1801,6 +1806,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Used to combine dimension values to a single dimension.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConcatenateExpression : pb::IMessage<ConcatenateExpression>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2039,6 +2045,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// `eventCount` is the total number of events. Requests are allowed up to 10
   /// metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Metric : pb::IMessage<Metric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2338,6 +2345,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// To express dimension or metric filters. The fields in the same
   /// FilterExpression need to be either all dimensions or all metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilterExpression : pb::IMessage<FilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2745,6 +2753,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// A list of filter expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilterExpressionList : pb::IMessage<FilterExpressionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2929,6 +2938,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// An expression to filter dimension or metric values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Filter : pb::IMessage<Filter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3383,6 +3393,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// The filter for string
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringFilter : pb::IMessage<StringFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3700,6 +3711,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// The result needs to be in a list of string values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InListFilter : pb::IMessage<InListFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3925,6 +3937,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Filters for numeric or date values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NumericFilter : pb::IMessage<NumericFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4207,6 +4220,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// To express that the result needs to be between two numbers (inclusive).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BetweenFilter : pb::IMessage<BetweenFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4467,6 +4481,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// ordering rows by descending event count is one ordering, and ordering rows by
   /// the event name string is a different ordering.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrderBy : pb::IMessage<OrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4860,6 +4875,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by metric values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetricOrderBy : pb::IMessage<MetricOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5055,6 +5071,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by dimension values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DimensionOrderBy : pb::IMessage<DimensionOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5325,6 +5342,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by a pivot column group.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PivotOrderBy : pb::IMessage<PivotOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5571,6 +5589,7 @@ namespace Google.Analytics.Data.V1Beta {
           ///       Canada |    3     |       1        |     4    |        1
           ///     ---------|----------|----------------|----------|----------------
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class PivotSelection : pb::IMessage<PivotSelection>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5816,6 +5835,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Describes the visible dimension columns and rows in the report response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Pivot : pb::IMessage<Pivot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6169,6 +6189,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// six weeks. These two percentages can be calculated by the metric
   /// `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the report.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortSpec : pb::IMessage<CohortSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6457,6 +6478,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// a common characteristic. For example, users with the same `firstSessionDate`
   /// belong to the same cohort.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cohort : pb::IMessage<Cohort>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6761,6 +6783,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// Configures the extended reporting date range for a cohort report. Specifies
   /// an offset duration to follow the cohorts over.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortsRange : pb::IMessage<CohortsRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7095,6 +7118,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Optional settings of a cohort report.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7291,6 +7315,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Response's metadata carrying additional information about the report content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseMetaData : pb::IMessage<ResponseMetaData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7827,6 +7852,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// more, see [Access and data-restriction
       /// management](https://support.google.com/analytics/answer/10851388).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SchemaRestrictionResponse : pb::IMessage<SchemaRestrictionResponse>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8017,6 +8043,7 @@ namespace Google.Analytics.Data.V1Beta {
           /// <summary>
           /// A metric actively restricted in creating the report.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ActiveMetricRestriction : pb::IMessage<ActiveMetricRestriction>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -8271,6 +8298,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// practice of analyzing a subset of all data in order to uncover the meaningful
   /// information in the larger data set.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SamplingMetadata : pb::IMessage<SamplingMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8517,6 +8545,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// used exclusively within filters or expressions do not produce columns in a
   /// report; correspondingly, those dimensions do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8715,6 +8744,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// metrics used exclusively within filters or expressions do not produce columns
   /// in a report; correspondingly, those metrics do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricHeader : pb::IMessage<MetricHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8950,6 +8980,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Dimensions' values in a single pivot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PivotHeader : pb::IMessage<PivotHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9177,6 +9208,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Summarizes dimension values from a row for this pivot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PivotDimensionHeader : pb::IMessage<PivotDimensionHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9397,6 +9429,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// ]
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Row : pb::IMessage<Row>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9611,6 +9644,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The value of a dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionValue : pb::IMessage<DimensionValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9850,6 +9884,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The value of a metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricValue : pb::IMessage<MetricValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10089,6 +10124,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// To represent a number.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NumericValue : pb::IMessage<NumericValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10387,6 +10423,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// property is exhausted, all requests to that property will return Resource
   /// Exhausted errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertyQuota : pb::IMessage<PropertyQuota>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10852,6 +10889,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Current state for a particular quota group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaStatus : pb::IMessage<QuotaStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11119,6 +11157,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Explains a dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionMetadata : pb::IMessage<DimensionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11509,6 +11548,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Explains a metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricMetadata : pb::IMessage<MetricMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12047,6 +12087,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The compatibility for a single dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionCompatibility : pb::IMessage<DimensionCompatibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12311,6 +12352,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The compatibility for a single metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricCompatibility : pb::IMessage<MetricCompatibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

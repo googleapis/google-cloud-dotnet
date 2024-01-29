@@ -75,6 +75,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// depending on what resources exist and what filters are associated with the
   /// group and its ancestors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Group : pb::IMessage<Group>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

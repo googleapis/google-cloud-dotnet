@@ -26,25 +26,25 @@ namespace Google.Cloud.Connectors.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvY29ubmVjdG9ycy92MS9ydW50aW1lLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuY29ubmVjdG9ycy52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJYChdH",
-            "ZXRSdW50aW1lQ29uZmlnUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkK",
-            "J2Nvbm5lY3RvcnMuZ29vZ2xlYXBpcy5jb20vUnVudGltZUNvbmZpZyLHBAoN",
-            "UnVudGltZUNvbmZpZxIYCgtsb2NhdGlvbl9pZBgBIAEoCUID4EEDEhgKC2Nv",
-            "bm5kX3RvcGljGAIgASgJQgPgQQMSHwoSY29ubmRfc3Vic2NyaXB0aW9uGAMg",
-            "ASgJQgPgQQMSIAoTY29udHJvbF9wbGFuZV90b3BpYxgEIAEoCUID4EEDEicK",
-            "GmNvbnRyb2xfcGxhbmVfc3Vic2NyaXB0aW9uGAUgASgJQgPgQQMSHQoQcnVu",
-            "dGltZV9lbmRwb2ludBgGIAEoCUID4EEDEkMKBXN0YXRlGAcgASgOMi8uZ29v",
-            "Z2xlLmNsb3VkLmNvbm5lY3RvcnMudjEuUnVudGltZUNvbmZpZy5TdGF0ZUID",
-            "4EEDEh4KEXNjaGVtYV9nY3NfYnVja2V0GAggASgJQgPgQQMSHgoRc2Vydmlj",
-            "ZV9kaXJlY3RvcnkYCSABKAlCA+BBAxIRCgRuYW1lGAsgASgJQgPgQQMiegoF",
-            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCghJTkFDVElWRRABGgII",
-            "ARISCgpBQ1RJVkFUSU5HEAIaAggBEgoKBkFDVElWRRADEgwKCENSRUFUSU5H",
-            "EAQSDAoIREVMRVRJTkcQBRIMCghVUERBVElORxAGOmPqQWAKJ2Nvbm5lY3Rv",
-            "cnMuZ29vZ2xlYXBpcy5jb20vUnVudGltZUNvbmZpZxI1cHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3J1bnRpbWVDb25maWdCcAoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5jb25uZWN0b3JzLnYxQgxSdW50aW1lUHJvdG9Q",
-            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9jb25uZWN0b3JzL2FwaXYxL2Nvbm5l",
-            "Y3RvcnNwYjtjb25uZWN0b3JzcGJiBnByb3RvMw=="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJZChdH",
+            "ZXRSdW50aW1lQ29uZmlnUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDiQQEC+kEp",
+            "Cidjb25uZWN0b3JzLmdvb2dsZWFwaXMuY29tL1J1bnRpbWVDb25maWci0QQK",
+            "DVJ1bnRpbWVDb25maWcSGQoLbG9jYXRpb25faWQYASABKAlCBOJBAQMSGQoL",
+            "Y29ubmRfdG9waWMYAiABKAlCBOJBAQMSIAoSY29ubmRfc3Vic2NyaXB0aW9u",
+            "GAMgASgJQgTiQQEDEiEKE2NvbnRyb2xfcGxhbmVfdG9waWMYBCABKAlCBOJB",
+            "AQMSKAoaY29udHJvbF9wbGFuZV9zdWJzY3JpcHRpb24YBSABKAlCBOJBAQMS",
+            "HgoQcnVudGltZV9lbmRwb2ludBgGIAEoCUIE4kEBAxJECgVzdGF0ZRgHIAEo",
+            "DjIvLmdvb2dsZS5jbG91ZC5jb25uZWN0b3JzLnYxLlJ1bnRpbWVDb25maWcu",
+            "U3RhdGVCBOJBAQMSHwoRc2NoZW1hX2djc19idWNrZXQYCCABKAlCBOJBAQMS",
+            "HwoRc2VydmljZV9kaXJlY3RvcnkYCSABKAlCBOJBAQMSEgoEbmFtZRgLIAEo",
+            "CUIE4kEBAyJ6CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKCElO",
+            "QUNUSVZFEAEaAggBEhIKCkFDVElWQVRJTkcQAhoCCAESCgoGQUNUSVZFEAMS",
+            "DAoIQ1JFQVRJTkcQBBIMCghERUxFVElORxAFEgwKCFVQREFUSU5HEAY6Y+pB",
+            "YAonY29ubmVjdG9ycy5nb29nbGVhcGlzLmNvbS9SdW50aW1lQ29uZmlnEjVw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcnVudGlt",
+            "ZUNvbmZpZ0JwCh5jb20uZ29vZ2xlLmNsb3VkLmNvbm5lY3RvcnMudjFCDFJ1",
+            "bnRpbWVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Nvbm5lY3RvcnMv",
+            "YXBpdjEvY29ubmVjdG9yc3BiO2Nvbm5lY3RvcnNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,6 +59,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// Request message for Connectors.GetRuntimeConfig.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRuntimeConfigRequest : pb::IMessage<GetRuntimeConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -258,6 +259,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// plane like: pub/sub topic/subscription resource name, Cloud Storage location
   /// storing schema etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RuntimeConfig : pb::IMessage<RuntimeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

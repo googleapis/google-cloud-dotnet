@@ -26,18 +26,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iwwIK",
-            "BlRlbmFudBIMCgRuYW1lGAEgASgJEhgKC2V4dGVybmFsX2lkGAIgASgJQgPg",
-            "QQISRQoKdXNhZ2VfdHlwZRgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5UZW5hbnQuRGF0YVVzYWdlVHlwZRI0CixrZXl3b3JkX3NlYXJj",
-            "aGFibGVfcHJvZmlsZV9jdXN0b21fYXR0cmlidXRlcxgEIAMoCSJOCg1EYXRh",
-            "VXNhZ2VUeXBlEh8KG0RBVEFfVVNBR0VfVFlQRV9VTlNQRUNJRklFRBAAEg4K",
-            "CkFHR1JFR0FURUQQARIMCghJU09MQVRFRBACOkTqQUEKGmpvYnMuZ29vZ2xl",
-            "YXBpcy5jb20vVGVuYW50EiNwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50cy97",
-            "dGVuYW50fUJ3Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhNU",
-            "ZW5hbnRSZXNvdXJjZVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vdGFs",
-            "ZW50L2FwaXY0YmV0YTEvdGFsZW50cGI7dGFsZW50cGKiAgNDVFNiBnByb3Rv",
-            "Mw=="));
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ixAIK",
+            "BlRlbmFudBIMCgRuYW1lGAEgASgJEhkKC2V4dGVybmFsX2lkGAIgASgJQgTi",
+            "QQECEkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29yZF9zZWFy",
+            "Y2hhYmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAkiTgoNRGF0",
+            "YVVzYWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIO",
+            "CgpBR0dSRUdBVEVEEAESDAoISVNPTEFURUQQAjpE6kFBChpqb2JzLmdvb2ds",
+            "ZWFwaXMuY29tL1RlbmFudBIjcHJvamVjdHMve3Byb2plY3R9L3RlbmFudHMv",
+            "e3RlbmFudH1CdwofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIT",
+            "VGVuYW50UmVzb3VyY2VQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL3Rh",
+            "bGVudC9hcGl2NGJldGExL3RhbGVudHBiO3RhbGVudHBiogIDQ1RTYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,6 +54,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// profiles. Customer may create multiple tenants to provide data isolation for
   /// different groups.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tenant : pb::IMessage<Tenant>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

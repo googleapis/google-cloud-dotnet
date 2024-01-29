@@ -51,26 +51,27 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "QV0KKmZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RlbGl2ZXJ5VmVoaWNs",
             "ZRIvcHJvdmlkZXJzL3twcm92aWRlcn0vZGVsaXZlcnlWZWhpY2xlcy97dmVo",
             "aWNsZX0iMgoMTG9jYXRpb25JbmZvEiIKBXBvaW50GAEgASgLMhMuZ29vZ2xl",
-            "LnR5cGUuTGF0TG5nIvUBChVWZWhpY2xlSm91cm5leVNlZ21lbnQSNwoEc3Rv",
+            "LnR5cGUuTGF0TG5nIvgBChVWZWhpY2xlSm91cm5leVNlZ21lbnQSNwoEc3Rv",
             "cBgBIAEoCzIpLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNs",
-            "ZVN0b3ASQQoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29n",
-            "bGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEDEjgKEGRyaXZpbmdfZHVyYXRp",
-            "b24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxImCgRw",
-            "YXRoGAUgAygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQMivgMKC1ZlaGlj",
-            "bGVTdG9wEkkKEHBsYW5uZWRfbG9jYXRpb24YASABKAsyKi5tYXBzLmZsZWV0",
-            "ZW5naW5lLmRlbGl2ZXJ5LnYxLkxvY2F0aW9uSW5mb0ID4EECEkEKBXRhc2tz",
-            "GAIgAygLMjIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xl",
-            "U3RvcC5UYXNrSW5mbxI+CgVzdGF0ZRgDIAEoDjIvLm1hcHMuZmxlZXRlbmdp",
-            "bmUuZGVsaXZlcnkudjEuVmVoaWNsZVN0b3AuU3RhdGUanQEKCFRhc2tJbmZv",
-            "Eg8KB3Rhc2tfaWQYASABKAkSNQoNdGFza19kdXJhdGlvbhgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEkkKEnRhcmdldF90aW1lX3dp",
-            "bmRvdxgDIAEoCzIoLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGlt",
-            "ZVdpbmRvd0ID4EEDIkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "BwoDTkVXEAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQA0KxAQojZ29vZ2xl",
-            "Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCEERlbGl2ZXJ5VmVoaWNs",
-            "ZXNQAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5lL2Rl",
-            "bGl2ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSqAiNH",
-            "b29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJvdG8z"));
+            "ZVN0b3ASQgoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29n",
+            "bGUucHJvdG9idWYuSW50MzJWYWx1ZUIE4kEBAxI5ChBkcml2aW5nX2R1cmF0",
+            "aW9uGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgTiQQEDEicK",
+            "BHBhdGgYBSADKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCBOJBAQMiwQMKC1Zl",
+            "aGljbGVTdG9wEkoKEHBsYW5uZWRfbG9jYXRpb24YASABKAsyKi5tYXBzLmZs",
+            "ZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkxvY2F0aW9uSW5mb0IE4kEBAhJBCgV0",
+            "YXNrcxgCIAMoCzIyLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVo",
+            "aWNsZVN0b3AuVGFza0luZm8SPgoFc3RhdGUYAyABKA4yLy5tYXBzLmZsZWV0",
+            "ZW5naW5lLmRlbGl2ZXJ5LnYxLlZlaGljbGVTdG9wLlN0YXRlGp8BCghUYXNr",
+            "SW5mbxIPCgd0YXNrX2lkGAEgASgJEjYKDXRhc2tfZHVyYXRpb24YAiABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CBOJBAQMSSgoSdGFyZ2V0X3Rp",
+            "bWVfd2luZG93GAMgASgLMigubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52",
+            "MS5UaW1lV2luZG93QgTiQQEDIkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASBwoDTkVXEAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQA0KxAQoj",
+            "Z29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCEERlbGl2ZXJ5",
+            "VmVoaWNsZXNQAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5n",
+            "aW5lL2RlbGl2ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENG",
+            "RUSqAiNHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,6 +96,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   /// `DeliveryVehicle.currentRouteSegment` field in the REST API refer to the same
   /// field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeliveryVehicle : pb::IMessage<DeliveryVehicle>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -757,6 +759,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   /// <summary>
   /// A location with any additional identifiers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationInfo : pb::IMessage<LocationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -963,6 +966,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   /// current stop. If it is the first active stop, then it is from the
   /// Vehicle’s current location to this stop.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VehicleJourneySegment : pb::IMessage<VehicleJourneySegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1324,6 +1328,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   /// <summary>
   /// Describes a point where a Vehicle stops to perform one or more `Task`s.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VehicleStop : pb::IMessage<VehicleStop>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1628,6 +1633,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       /// <summary>
       /// Additional information about the Task performed at this stop.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TaskInfo : pb::IMessage<TaskInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -202,6 +202,7 @@ namespace Google.Cloud.Asset.V1 {
   /// An asset in Google Cloud and its temporal metadata, including the time window
   /// when it was observed and its status during that window.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TemporalAsset : pb::IMessage<TemporalAsset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -619,6 +620,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A time window specified by its `start_time` and `end_time`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -881,6 +883,7 @@ namespace Google.Cloud.Asset.V1 {
   /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
   /// for more information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Asset : pb::IMessage<Asset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1701,6 +1704,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A representation of a Google Cloud resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Resource : pb::IMessage<Resource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2173,6 +2177,7 @@ namespace Google.Cloud.Asset.V1 {
   /// The detailed related assets with the `relationship_type`.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedAssets : pb::IMessage<RelatedAssets>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2412,6 +2417,7 @@ namespace Google.Cloud.Asset.V1 {
   /// `target_resource_type` and `action`.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelationshipAttributes : pb::IMessage<RelationshipAttributes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2735,6 +2741,7 @@ namespace Google.Cloud.Asset.V1 {
   /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
   /// for more information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedAsset : pb::IMessage<RelatedAsset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3055,6 +3062,7 @@ namespace Google.Cloud.Asset.V1 {
   /// The key and value for a
   /// [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview),
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tag : pb::IMessage<Tag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3373,6 +3381,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The effective tags and the ancestor resources from which they were inherited.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EffectiveTagDetails : pb::IMessage<EffectiveTagDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3623,6 +3632,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A result of Resource Search, containing information of a cloud resource.
   /// Next ID: 34
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5013,6 +5023,7 @@ namespace Google.Cloud.Asset.V1 {
   /// Resource representation as defined by the corresponding service providing the
   /// resource for a given API version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VersionedResource : pb::IMessage<VersionedResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5274,6 +5285,7 @@ namespace Google.Cloud.Asset.V1 {
   /// Attached resource representation, which is defined by the corresponding
   /// service provider. It represents an attached resource's payload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttachedResource : pb::IMessage<AttachedResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5506,6 +5518,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The related resources of the primary resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedResources : pb::IMessage<RelatedResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5690,6 +5703,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The detailed related resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedResource : pb::IMessage<RelatedResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5926,6 +5940,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A result of IAM Policy search, containing information of an IAM policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamPolicySearchResult : pb::IMessage<IamPolicySearchResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6423,6 +6438,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Explanation about the IAM policy search result.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Explanation : pb::IMessage<Explanation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6616,6 +6632,7 @@ namespace Google.Cloud.Asset.V1 {
           /// <summary>
           /// IAM permissions
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Permissions : pb::IMessage<Permissions>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -6811,6 +6828,7 @@ namespace Google.Cloud.Asset.V1 {
   /// Represents the detailed state of an entity under analysis, such as a
   /// resource, an identity or an access.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamPolicyAnalysisState : pb::IMessage<IamPolicyAnalysisState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7051,6 +7069,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The Condition evaluation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConditionEvaluation : pb::IMessage<ConditionEvaluation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7279,6 +7298,7 @@ namespace Google.Cloud.Asset.V1 {
   /// IAM Policy analysis result, consisting of one IAM policy binding and derived
   /// access control lists.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamPolicyAnalysisResult : pb::IMessage<IamPolicyAnalysisResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7655,6 +7675,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// A Google Cloud resource under analysis.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Resource : pb::IMessage<Resource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7900,6 +7921,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// An IAM role or permission under analysis.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Access : pb::IMessage<Access>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8245,6 +8267,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// An identity under analysis.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Identity : pb::IMessage<Identity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8499,6 +8522,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// A directional edge.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Edge : pb::IMessage<Edge>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8750,6 +8774,7 @@ namespace Google.Cloud.Asset.V1 {
       /// - AccessControlList 1: [R1, R2], [P1, P2]
       /// - AccessControlList 2: [R2, R3], [P3]
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AccessControlList : pb::IMessage<AccessControlList>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9052,6 +9077,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The identities and group edges.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IdentityList : pb::IMessage<IdentityList>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

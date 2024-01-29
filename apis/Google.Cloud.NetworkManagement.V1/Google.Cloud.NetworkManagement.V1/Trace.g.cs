@@ -364,6 +364,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   ///   Step1(State) Step2(State) ---  StepN(State(final))
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trace : pb::IMessage<Trace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -606,6 +607,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// A simulated forwarding path is composed of multiple steps.
   /// Each step has a well-defined state and an associated configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Step : pb::IMessage<Step>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2215,6 +2217,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceInfo : pb::IMessage<InstanceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2680,6 +2683,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine network.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkInfo : pb::IMessage<NetworkInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2956,6 +2960,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// For display only. Metadata associated with a VPC firewall rule, an implied
   /// VPC firewall rule, or a hierarchical firewall policy rule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirewallInfo : pb::IMessage<FirewallInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3549,6 +3554,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine route.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteInfo : pb::IMessage<RouteInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4464,6 +4470,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// infrastructure to reach Compute Engine Instances.
   /// https://cloud.google.com/vpc/docs/routes#special_return_paths
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleServiceInfo : pb::IMessage<GoogleServiceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4736,6 +4743,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine forwarding rule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ForwardingRuleInfo : pb::IMessage<ForwardingRuleInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5171,6 +5179,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a load balancer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoadBalancerInfo : pb::IMessage<LoadBalancerInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5575,6 +5584,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a specific load balancer backend.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoadBalancerBackend : pb::IMessage<LoadBalancerBackend>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5939,6 +5949,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine VPN gateway.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpnGatewayInfo : pb::IMessage<VpnGatewayInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6336,6 +6347,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Compute Engine VPN tunnel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpnTunnelInfo : pb::IMessage<VpnTunnelInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6884,6 +6896,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// EndpointInfo is derived from source and destination Endpoint and validated
   /// by the backend data plane model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EndpointInfo : pb::IMessage<EndpointInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7359,6 +7372,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// Details of the final state "deliver" and associated resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeliverInfo : pb::IMessage<DeliverInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7651,6 +7665,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// Details of the final state "forward" and associated resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ForwardInfo : pb::IMessage<ForwardInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7936,6 +7951,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// Details of the final state "abort" and associated resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AbortInfo : pb::IMessage<AbortInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8325,6 +8341,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// Details of the final state "drop" and associated resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DropInfo : pb::IMessage<DropInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8776,6 +8793,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// For display only. Metadata associated with a Google Kubernetes Engine (GKE)
   /// cluster master.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GKEMasterInfo : pb::IMessage<GKEMasterInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9091,6 +9109,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Cloud SQL instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSQLInstanceInfo : pb::IMessage<CloudSQLInstanceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9487,6 +9506,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Cloud Function.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudFunctionInfo : pb::IMessage<CloudFunctionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9802,6 +9822,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a Cloud Run revision.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudRunRevisionInfo : pb::IMessage<CloudRunRevisionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10117,6 +10138,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with an App Engine version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineVersionInfo : pb::IMessage<AppEngineVersionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10432,6 +10454,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   /// <summary>
   /// For display only. Metadata associated with a VPC connector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpcConnectorInfo : pb::IMessage<VpcConnectorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

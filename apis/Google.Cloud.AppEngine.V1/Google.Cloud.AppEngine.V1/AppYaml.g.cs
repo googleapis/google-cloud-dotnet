@@ -198,6 +198,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// [Google Cloud Endpoints](https://cloud.google.com/appengine/docs/python/endpoints/)
   /// configuration for API handlers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiConfigHandler : pb::IMessage<ApiConfigHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -555,6 +556,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Custom static error page to be served when an error occurs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorHandler : pb::IMessage<ErrorHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -867,6 +869,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// handle URLs by executing application code or by serving static files
   /// uploaded with the version, such as images, CSS, or JavaScript.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UrlMap : pb::IMessage<UrlMap>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1462,6 +1465,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// files in the application directory are static files, and which URLs serve
   /// them.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StaticFilesHandler : pb::IMessage<StaticFilesHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1907,6 +1911,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Executes a script to handle the request that matches the URL pattern.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScriptHandler : pb::IMessage<ScriptHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2102,6 +2107,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Uses Google Cloud Endpoints to handle requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiEndpointHandler : pb::IMessage<ApiEndpointHandler>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2299,6 +2305,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// are killed and replaced with new instances. Only applicable for
   /// instances in App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HealthCheck : pb::IMessage<HealthCheck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2757,6 +2764,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Readiness checking configuration for VM instances. Unhealthy instances
   /// are removed from traffic rotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadinessCheck : pb::IMessage<ReadinessCheck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3225,6 +3233,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Health checking configuration for VM instances. Unhealthy instances
   /// are killed and replaced with new instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LivenessCheck : pb::IMessage<LivenessCheck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3690,6 +3699,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Third-party Python runtime library that is required by the application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Library : pb::IMessage<Library>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

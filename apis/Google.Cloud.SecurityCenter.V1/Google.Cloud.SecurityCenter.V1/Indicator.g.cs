@@ -64,6 +64,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// For more information, see [Indicator of
   /// compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Indicator : pb::IMessage<Indicator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -339,6 +340,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Indicates what signature matched this process.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ProcessSignature : pb::IMessage<ProcessSignature>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -636,6 +638,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           /// <summary>
           /// A signature corresponding to memory page hashes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class MemoryHashSignature : pb::IMessage<MemoryHashSignature>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -864,6 +867,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
               /// <summary>
               /// Memory hash detection contributing to the binary family match.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Detection : pb::IMessage<Detection>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1106,6 +1110,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           /// <summary>
           /// A signature corresponding to a YARA rule.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class YaraRuleSignature : pb::IMessage<YaraRuleSignature>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

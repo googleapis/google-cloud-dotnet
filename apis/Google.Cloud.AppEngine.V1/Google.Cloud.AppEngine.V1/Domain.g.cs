@@ -46,6 +46,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// of a domain, verify ownership via
   /// [Search Console](https://search.google.com/search-console/welcome).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizedDomain : pb::IMessage<AuthorizedDomain>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

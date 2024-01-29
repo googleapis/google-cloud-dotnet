@@ -223,14 +223,14 @@ namespace Google.Cloud.Batch.V1Alpha
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BatchServiceClient.Create(callInvoker, Settings, Logger);
+            return BatchServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BatchServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BatchServiceClient.Create(callInvoker, Settings, Logger);
+            return BatchServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

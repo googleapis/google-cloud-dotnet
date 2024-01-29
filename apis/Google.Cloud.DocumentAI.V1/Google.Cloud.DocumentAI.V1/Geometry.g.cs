@@ -52,6 +52,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// A vertex represents a 2D point in the image.
   /// NOTE: the vertex coordinates are in the same scale as the original image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vertex : pb::IMessage<Vertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -289,6 +290,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// NOTE: the normalized vertex coordinates are relative to the original image
   /// and range from 0 to 1.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -524,6 +526,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// A bounding polygon for the detected image annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

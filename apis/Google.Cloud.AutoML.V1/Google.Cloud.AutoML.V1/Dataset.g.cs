@@ -70,6 +70,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// A workspace for solving a single, particular machine learning (ML) problem.
   /// A workspace contains examples that may be annotated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

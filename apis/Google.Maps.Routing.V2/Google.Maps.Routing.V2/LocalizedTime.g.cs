@@ -46,6 +46,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Localized description of time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalizedTime : pb::IMessage<LocalizedTime>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

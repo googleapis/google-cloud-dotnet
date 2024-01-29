@@ -24,6 +24,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedCloudChannelReportsServiceClientSnippets
     {
         /// <summary>Snippet for RunReportJob</summary>

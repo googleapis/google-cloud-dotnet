@@ -73,23 +73,23 @@ namespace Google.Cloud.Audit {
             "bmNpcGFsEjMKEnRoaXJkX3BhcnR5X2NsYWltcxgBIAEoCzIXLmdvb2dsZS5w",
             "cm90b2J1Zi5TdHJ1Y3RCCwoJQXV0aG9yaXR5ImQKE1BvbGljeVZpb2xhdGlv",
             "bkluZm8STQoZb3JnX3BvbGljeV92aW9sYXRpb25faW5mbxgBIAEoCzIqLmdv",
-            "b2dsZS5jbG91ZC5hdWRpdC5PcmdQb2xpY3lWaW9sYXRpb25JbmZvIrICChZP",
-            "cmdQb2xpY3lWaW9sYXRpb25JbmZvEi0KB3BheWxvYWQYASABKAsyFy5nb29n",
-            "bGUucHJvdG9idWYuU3RydWN0QgPgQQESGgoNcmVzb3VyY2VfdHlwZRgCIAEo",
-            "CUID4EEBElgKDXJlc291cmNlX3RhZ3MYAyADKAsyPC5nb29nbGUuY2xvdWQu",
-            "YXVkaXQuT3JnUG9saWN5VmlvbGF0aW9uSW5mby5SZXNvdXJjZVRhZ3NFbnRy",
-            "eUID4EEBEj4KDnZpb2xhdGlvbl9pbmZvGAQgAygLMiEuZ29vZ2xlLmNsb3Vk",
-            "LmF1ZGl0LlZpb2xhdGlvbkluZm9CA+BBARozChFSZXNvdXJjZVRhZ3NFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpcCCg1WaW9sYXRp",
-            "b25JbmZvEhcKCmNvbnN0cmFpbnQYASABKAlCA+BBARIaCg1lcnJvcl9tZXNz",
-            "YWdlGAIgASgJQgPgQQESGgoNY2hlY2tlZF92YWx1ZRgDIAEoCUID4EEBEkYK",
-            "C3BvbGljeV90eXBlGAQgASgOMiwuZ29vZ2xlLmNsb3VkLmF1ZGl0LlZpb2xh",
-            "dGlvbkluZm8uUG9saWN5VHlwZUID4EEBIm0KClBvbGljeVR5cGUSGwoXUE9M",
-            "SUNZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJCT09MRUFOX0NPTlNUUkFJTlQQ",
-            "ARITCg9MSVNUX0NPTlNUUkFJTlQQAhIVChFDVVNUT01fQ09OU1RSQUlOVBAD",
-            "QmUKFmNvbS5nb29nbGUuY2xvdWQuYXVkaXRCDUF1ZGl0TG9nUHJvdG9QAVo3",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
-            "dWRpdDthdWRpdPgBAWIGcHJvdG8z"));
+            "b2dsZS5jbG91ZC5hdWRpdC5PcmdQb2xpY3lWaW9sYXRpb25JbmZvIrYCChZP",
+            "cmdQb2xpY3lWaW9sYXRpb25JbmZvEi4KB3BheWxvYWQYASABKAsyFy5nb29n",
+            "bGUucHJvdG9idWYuU3RydWN0QgTiQQEBEhsKDXJlc291cmNlX3R5cGUYAiAB",
+            "KAlCBOJBAQESWQoNcmVzb3VyY2VfdGFncxgDIAMoCzI8Lmdvb2dsZS5jbG91",
+            "ZC5hdWRpdC5PcmdQb2xpY3lWaW9sYXRpb25JbmZvLlJlc291cmNlVGFnc0Vu",
+            "dHJ5QgTiQQEBEj8KDnZpb2xhdGlvbl9pbmZvGAQgAygLMiEuZ29vZ2xlLmNs",
+            "b3VkLmF1ZGl0LlZpb2xhdGlvbkluZm9CBOJBAQEaMwoRUmVzb3VyY2VUYWdz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKbAgoNVmlv",
+            "bGF0aW9uSW5mbxIYCgpjb25zdHJhaW50GAEgASgJQgTiQQEBEhsKDWVycm9y",
+            "X21lc3NhZ2UYAiABKAlCBOJBAQESGwoNY2hlY2tlZF92YWx1ZRgDIAEoCUIE",
+            "4kEBARJHCgtwb2xpY3lfdHlwZRgEIAEoDjIsLmdvb2dsZS5jbG91ZC5hdWRp",
+            "dC5WaW9sYXRpb25JbmZvLlBvbGljeVR5cGVCBOJBAQEibQoKUG9saWN5VHlw",
+            "ZRIbChdQT0xJQ1lfVFlQRV9VTlNQRUNJRklFRBAAEhYKEkJPT0xFQU5fQ09O",
+            "U1RSQUlOVBABEhMKD0xJU1RfQ09OU1RSQUlOVBACEhUKEUNVU1RPTV9DT05T",
+            "VFJBSU5UEANCZQoWY29tLmdvb2dsZS5jbG91ZC5hdWRpdEINQXVkaXRMb2dQ",
+            "cm90b1ABWjdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL2F1ZGl0O2F1ZGl0+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.Context.AttributeContextReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -112,6 +112,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Common audit log format for Google Cloud Platform API operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditLog : pb::IMessage<AuditLog>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -982,6 +983,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Authentication information for the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthenticationInfo : pb::IMessage<AuthenticationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1393,6 +1395,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Authorization information for the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizationInfo : pb::IMessage<AuthorizationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1728,6 +1731,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Metadata about the request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestMetadata : pb::IMessage<RequestMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2137,6 +2141,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Location information about a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceLocation : pb::IMessage<ResourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2364,6 +2369,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Identity delegation history of an authenticated service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccountDelegationInfo : pb::IMessage<ServiceAccountDelegationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2706,6 +2712,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// First party identity principal.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FirstPartyPrincipal : pb::IMessage<FirstPartyPrincipal>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2950,6 +2957,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Third party identity principal.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThirdPartyPrincipal : pb::IMessage<ThirdPartyPrincipal>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3159,6 +3167,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Information related to policy violations for this request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyViolationInfo : pb::IMessage<PolicyViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3363,6 +3372,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Represents OrgPolicy Violation information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrgPolicyViolationInfo : pb::IMessage<OrgPolicyViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3674,6 +3684,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Provides information about the Policy violation info for this request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ViolationInfo : pb::IMessage<ViolationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

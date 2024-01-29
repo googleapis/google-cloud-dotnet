@@ -27,41 +27,41 @@ namespace Google.Cloud.OrgPolicy.V2 {
             "Cipnb29nbGUvY2xvdWQvb3JncG9saWN5L3YyL2NvbnN0cmFpbnQucHJvdG8S",
             "GWdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjIaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i0QUKCkNvbnN0cmFpbnQS",
-            "EQoEbmFtZRgBIAEoCUID4EEFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtk",
-            "ZXNjcmlwdGlvbhgDIAEoCRJTChJjb25zdHJhaW50X2RlZmF1bHQYBCABKA4y",
-            "Ny5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyLkNvbnN0cmFpbnQuQ29uc3Ry",
-            "YWludERlZmF1bHQSTwoPbGlzdF9jb25zdHJhaW50GAUgASgLMjQuZ29vZ2xl",
-            "LmNsb3VkLm9yZ3BvbGljeS52Mi5Db25zdHJhaW50Lkxpc3RDb25zdHJhaW50",
-            "SAASVQoSYm9vbGVhbl9jb25zdHJhaW50GAYgASgLMjcuZ29vZ2xlLmNsb3Vk",
-            "Lm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkJvb2xlYW5Db25zdHJhaW50SAAS",
-            "GAoQc3VwcG9ydHNfZHJ5X3J1bhgHIAEoCBo9Cg5MaXN0Q29uc3RyYWludBIT",
-            "CgtzdXBwb3J0c19pbhgBIAEoCBIWCg5zdXBwb3J0c191bmRlchgCIAEoCBoT",
-            "ChFCb29sZWFuQ29uc3RyYWludCJMChFDb25zdHJhaW50RGVmYXVsdBIiCh5D",
-            "T05TVFJBSU5UX0RFRkFVTFRfVU5TUEVDSUZJRUQQABIJCgVBTExPVxABEggK",
-            "BERFTlkQAjq4AepBtAEKI29yZ3BvbGljeS5nb29nbGVhcGlzLmNvbS9Db25z",
-            "dHJhaW50Eitwcm9qZWN0cy97cHJvamVjdH0vY29uc3RyYWludHMve2NvbnN0",
-            "cmFpbnR9Eilmb2xkZXJzL3tmb2xkZXJ9L2NvbnN0cmFpbnRzL3tjb25zdHJh",
-            "aW50fRI1b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9jb25zdHJhaW50",
-            "cy97Y29uc3RyYWludH1CEQoPY29uc3RyYWludF90eXBlItQEChBDdXN0b21D",
-            "b25zdHJhaW50EhEKBG5hbWUYASABKAlCA+BBBRIbCg5yZXNvdXJjZV90eXBl",
-            "cxgCIAMoCUID4EEFEkwKDG1ldGhvZF90eXBlcxgDIAMoDjI2Lmdvb2dsZS5j",
-            "bG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5NZXRob2RUeXBl",
-            "EhEKCWNvbmRpdGlvbhgEIAEoCRJLCgthY3Rpb25fdHlwZRgFIAEoDjI2Lmdv",
-            "b2dsZS5jbG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5BY3Rp",
-            "b25UeXBlEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgH",
-            "IAEoCRI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAyJNCgpNZXRob2RUeXBlEhsKF01FVEhPRF9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAESCgoGVVBEQVRFEAISCgoGREVMRVRF",
-            "EAMiPgoKQWN0aW9uVHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAA",
-            "EgkKBUFMTE9XEAESCAoEREVOWRACOnLqQW8KKW9yZ3BvbGljeS5nb29nbGVh",
-            "cGlzLmNvbS9DdXN0b21Db25zdHJhaW50EkJvcmdhbml6YXRpb25zL3tvcmdh",
-            "bml6YXRpb259L2N1c3RvbUNvbnN0cmFpbnRzL3tjdXN0b21fY29uc3RyYWlu",
-            "dH1CxgEKHWNvbS5nb29nbGUuY2xvdWQub3JncG9saWN5LnYyQg9Db25zdHJh",
-            "aW50UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9vcmdwb2xpY3kvYXBp",
-            "djIvb3JncG9saWN5cGI7b3JncG9saWN5cGKqAhlHb29nbGUuQ2xvdWQuT3Jn",
-            "UG9saWN5LlYyygIZR29vZ2xlXENsb3VkXE9yZ1BvbGljeVxWMuoCHEdvb2ds",
-            "ZTo6Q2xvdWQ6Ok9yZ1BvbGljeTo6VjJiBnByb3RvMw=="));
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i0gUKCkNvbnN0cmFpbnQS",
+            "EgoEbmFtZRgBIAEoCUIE4kEBBRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoL",
+            "ZGVzY3JpcHRpb24YAyABKAkSUwoSY29uc3RyYWludF9kZWZhdWx0GAQgASgO",
+            "MjcuZ29vZ2xlLmNsb3VkLm9yZ3BvbGljeS52Mi5Db25zdHJhaW50LkNvbnN0",
+            "cmFpbnREZWZhdWx0Ek8KD2xpc3RfY29uc3RyYWludBgFIAEoCzI0Lmdvb2ds",
+            "ZS5jbG91ZC5vcmdwb2xpY3kudjIuQ29uc3RyYWludC5MaXN0Q29uc3RyYWlu",
+            "dEgAElUKEmJvb2xlYW5fY29uc3RyYWludBgGIAEoCzI3Lmdvb2dsZS5jbG91",
+            "ZC5vcmdwb2xpY3kudjIuQ29uc3RyYWludC5Cb29sZWFuQ29uc3RyYWludEgA",
+            "EhgKEHN1cHBvcnRzX2RyeV9ydW4YByABKAgaPQoOTGlzdENvbnN0cmFpbnQS",
+            "EwoLc3VwcG9ydHNfaW4YASABKAgSFgoOc3VwcG9ydHNfdW5kZXIYAiABKAga",
+            "EwoRQm9vbGVhbkNvbnN0cmFpbnQiTAoRQ29uc3RyYWludERlZmF1bHQSIgoe",
+            "Q09OU1RSQUlOVF9ERUZBVUxUX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARII",
+            "CgRERU5ZEAI6uAHqQbQBCiNvcmdwb2xpY3kuZ29vZ2xlYXBpcy5jb20vQ29u",
+            "c3RyYWludBIrcHJvamVjdHMve3Byb2plY3R9L2NvbnN0cmFpbnRzL3tjb25z",
+            "dHJhaW50fRIpZm9sZGVycy97Zm9sZGVyfS9jb25zdHJhaW50cy97Y29uc3Ry",
+            "YWludH0SNW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vY29uc3RyYWlu",
+            "dHMve2NvbnN0cmFpbnR9QhEKD2NvbnN0cmFpbnRfdHlwZSLXBAoQQ3VzdG9t",
+            "Q29uc3RyYWludBISCgRuYW1lGAEgASgJQgTiQQEFEhwKDnJlc291cmNlX3R5",
+            "cGVzGAIgAygJQgTiQQEFEkwKDG1ldGhvZF90eXBlcxgDIAMoDjI2Lmdvb2ds",
+            "ZS5jbG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5NZXRob2RU",
+            "eXBlEhEKCWNvbmRpdGlvbhgEIAEoCRJLCgthY3Rpb25fdHlwZRgFIAEoDjI2",
+            "Lmdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjIuQ3VzdG9tQ29uc3RyYWludC5B",
+            "Y3Rpb25UeXBlEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlv",
+            "bhgHIAEoCRI1Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCBOJBAQMiTQoKTWV0aG9kVHlwZRIbChdNRVRIT0RfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgoKBkNSRUFURRABEgoKBlVQREFURRACEgoKBkRF",
+            "TEVURRADIj4KCkFjdGlvblR5cGUSGwoXQUNUSU9OX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIJCgVBTExPVxABEggKBERFTlkQAjpy6kFvCilvcmdwb2xpY3kuZ29v",
+            "Z2xlYXBpcy5jb20vQ3VzdG9tQ29uc3RyYWludBJCb3JnYW5pemF0aW9ucy97",
+            "b3JnYW5pemF0aW9ufS9jdXN0b21Db25zdHJhaW50cy97Y3VzdG9tX2NvbnN0",
+            "cmFpbnR9QsYBCh1jb20uZ29vZ2xlLmNsb3VkLm9yZ3BvbGljeS52MkIPQ29u",
+            "c3RyYWludFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vb3JncG9saWN5",
+            "L2FwaXYyL29yZ3BvbGljeXBiO29yZ3BvbGljeXBiqgIZR29vZ2xlLkNsb3Vk",
+            "Lk9yZ1BvbGljeS5WMsoCGUdvb2dsZVxDbG91ZFxPcmdQb2xpY3lcVjLqAhxH",
+            "b29nbGU6OkNsb3VkOjpPcmdQb2xpY3k6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,6 +90,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
   /// field, which is the enforcement behavior that is used in the absence of a
   /// policy being defined or inherited for the resource in question.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Constraint : pb::IMessage<Constraint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -624,6 +625,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       /// A constraint that allows or disallows a list of string values, which are
       /// configured by an Organization Policy administrator with a policy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ListConstraint : pb::IMessage<ListConstraint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -868,6 +870,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
       /// If it is enforced on a VM instance, serial port connections will not be
       /// opened to that instance.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BooleanConstraint : pb::IMessage<BooleanConstraint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1033,6 +1036,7 @@ namespace Google.Cloud.OrgPolicy.V2 {
   /// custom constraint. *Creating a custom constraint itself does NOT apply any
   /// policy enforcement*.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomConstraint : pb::IMessage<CustomConstraint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

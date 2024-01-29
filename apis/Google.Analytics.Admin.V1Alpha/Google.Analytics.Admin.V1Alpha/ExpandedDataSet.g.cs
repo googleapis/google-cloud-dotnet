@@ -28,41 +28,41 @@ namespace Google.Analytics.Admin.V1Alpha {
             "YV9zZXQucHJvdG8SHmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
             "ZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byKmBAoVRXhwYW5kZWREYXRhU2V0RmlsdGVyElsKDXN0cmluZ19maWx0ZXIY",
+            "byKsBAoVRXhwYW5kZWREYXRhU2V0RmlsdGVyElsKDXN0cmluZ19maWx0ZXIY",
             "AiABKAsyQi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRXhwYW5k",
             "ZWREYXRhU2V0RmlsdGVyLlN0cmluZ0ZpbHRlckgAElwKDmluX2xpc3RfZmls",
             "dGVyGAMgASgLMkIuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV4",
-            "cGFuZGVkRGF0YVNldEZpbHRlci5Jbkxpc3RGaWx0ZXJIABIXCgpmaWVsZF9u",
-            "YW1lGAEgASgJQgPgQQIa6AEKDFN0cmluZ0ZpbHRlchJlCgptYXRjaF90eXBl",
-            "GAEgASgOMkwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV4cGFu",
-            "ZGVkRGF0YVNldEZpbHRlci5TdHJpbmdGaWx0ZXIuTWF0Y2hUeXBlQgPgQQIS",
-            "EgoFdmFsdWUYAiABKAlCA+BBAhIbCg5jYXNlX3NlbnNpdGl2ZRgDIAEoCEID",
-            "4EEBIkAKCU1hdGNoVHlwZRIaChZNQVRDSF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "CQoFRVhBQ1QQARIMCghDT05UQUlOUxACGkAKDEluTGlzdEZpbHRlchITCgZ2",
-            "YWx1ZXMYASADKAlCA+BBAhIbCg5jYXNlX3NlbnNpdGl2ZRgCIAEoCEID4EEB",
-            "QgwKCm9uZV9maWx0ZXIipwIKH0V4cGFuZGVkRGF0YVNldEZpbHRlckV4cHJl",
-            "c3Npb24SWAoJYW5kX2dyb3VwGAEgASgLMkMuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLkV4cGFuZGVkRGF0YVNldEZpbHRlckV4cHJlc3Npb25M",
-            "aXN0SAASWQoObm90X2V4cHJlc3Npb24YAiABKAsyPy5nb29nbGUuYW5hbHl0",
-            "aWNzLmFkbWluLnYxYWxwaGEuRXhwYW5kZWREYXRhU2V0RmlsdGVyRXhwcmVz",
-            "c2lvbkgAEkcKBmZpbHRlchgDIAEoCzI1Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5FeHBhbmRlZERhdGFTZXRGaWx0ZXJIAEIGCgRleHByIoIB",
-            "CiNFeHBhbmRlZERhdGFTZXRGaWx0ZXJFeHByZXNzaW9uTGlzdBJbChJmaWx0",
-            "ZXJfZXhwcmVzc2lvbnMYASADKAsyPy5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYWxwaGEuRXhwYW5kZWREYXRhU2V0RmlsdGVyRXhwcmVzc2lvbiKyAwoP",
-            "RXhwYW5kZWREYXRhU2V0EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5",
-            "X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEhwK",
-            "D2RpbWVuc2lvbl9uYW1lcxgEIAMoCUID4EEFEhkKDG1ldHJpY19uYW1lcxgF",
-            "IAMoCUID4EEFEmkKG2RpbWVuc2lvbl9maWx0ZXJfZXhwcmVzc2lvbhgGIAEo",
-            "CzI/Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBhbmRlZERh",
-            "dGFTZXRGaWx0ZXJFeHByZXNzaW9uQgPgQQUSQwoaZGF0YV9jb2xsZWN0aW9u",
-            "X3N0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQM6bupBawotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXhw",
-            "YW5kZWREYXRhU2V0Ejpwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZXhwYW5kZWRE",
-            "YXRhU2V0cy97ZXhwYW5kZWRfZGF0YV9zZXR9QnwKImNvbS5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYWxwaGFCFEV4cGFuZGVkRGF0YVNldFByb3RvUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0aWNzL2FkbWluL2FwaXYxYWxw",
-            "aGEvYWRtaW5wYjthZG1pbnBiYgZwcm90bzM="));
+            "cGFuZGVkRGF0YVNldEZpbHRlci5Jbkxpc3RGaWx0ZXJIABIYCgpmaWVsZF9u",
+            "YW1lGAEgASgJQgTiQQECGusBCgxTdHJpbmdGaWx0ZXISZgoKbWF0Y2hfdHlw",
+            "ZRgBIAEoDjJMLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBh",
+            "bmRlZERhdGFTZXRGaWx0ZXIuU3RyaW5nRmlsdGVyLk1hdGNoVHlwZUIE4kEB",
+            "AhITCgV2YWx1ZRgCIAEoCUIE4kEBAhIcCg5jYXNlX3NlbnNpdGl2ZRgDIAEo",
+            "CEIE4kEBASJACglNYXRjaFR5cGUSGgoWTUFUQ0hfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgkKBUVYQUNUEAESDAoIQ09OVEFJTlMQAhpCCgxJbkxpc3RGaWx0ZXIS",
+            "FAoGdmFsdWVzGAEgAygJQgTiQQECEhwKDmNhc2Vfc2Vuc2l0aXZlGAIgASgI",
+            "QgTiQQEBQgwKCm9uZV9maWx0ZXIipwIKH0V4cGFuZGVkRGF0YVNldEZpbHRl",
+            "ckV4cHJlc3Npb24SWAoJYW5kX2dyb3VwGAEgASgLMkMuZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLkV4cGFuZGVkRGF0YVNldEZpbHRlckV4cHJl",
+            "c3Npb25MaXN0SAASWQoObm90X2V4cHJlc3Npb24YAiABKAsyPy5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRXhwYW5kZWREYXRhU2V0RmlsdGVy",
+            "RXhwcmVzc2lvbkgAEkcKBmZpbHRlchgDIAEoCzI1Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5FeHBhbmRlZERhdGFTZXRGaWx0ZXJIAEIGCgRl",
+            "eHByIoIBCiNFeHBhbmRlZERhdGFTZXRGaWx0ZXJFeHByZXNzaW9uTGlzdBJb",
+            "ChJmaWx0ZXJfZXhwcmVzc2lvbnMYASADKAsyPy5nb29nbGUuYW5hbHl0aWNz",
+            "LmFkbWluLnYxYWxwaGEuRXhwYW5kZWREYXRhU2V0RmlsdGVyRXhwcmVzc2lv",
+            "biK5AwoPRXhwYW5kZWREYXRhU2V0EhIKBG5hbWUYASABKAlCBOJBAQMSGgoM",
+            "ZGlzcGxheV9uYW1lGAIgASgJQgTiQQECEhkKC2Rlc2NyaXB0aW9uGAMgASgJ",
+            "QgTiQQEBEh0KD2RpbWVuc2lvbl9uYW1lcxgEIAMoCUIE4kEBBRIaCgxtZXRy",
+            "aWNfbmFtZXMYBSADKAlCBOJBAQUSagobZGltZW5zaW9uX2ZpbHRlcl9leHBy",
+            "ZXNzaW9uGAYgASgLMj8uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkV4cGFuZGVkRGF0YVNldEZpbHRlckV4cHJlc3Npb25CBOJBAQUSRAoaZGF0",
+            "YV9jb2xsZWN0aW9uX3N0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgTiQQEDOm7qQWsKLWFuYWx5dGljc2FkbWluLmdvb2ds",
+            "ZWFwaXMuY29tL0V4cGFuZGVkRGF0YVNldBI6cHJvcGVydGllcy97cHJvcGVy",
+            "dHl9L2V4cGFuZGVkRGF0YVNldHMve2V4cGFuZGVkX2RhdGFfc2V0fUJ8CiJj",
+            "b20uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhQhRFeHBhbmRlZERh",
+            "dGFTZXRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FuYWx5dGljcy9h",
+            "ZG1pbi9hcGl2MWFscGhhL2FkbWlucGI7YWRtaW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,6 +80,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A specific filter for a single dimension
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilter : pb::IMessage<ExpandedDataSetFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -418,6 +419,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// A filter for a string-type dimension that matches a particular pattern.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringFilter : pb::IMessage<StringFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -722,6 +724,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// A filter for a string dimension that matches a particular list of options.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InListFilter : pb::IMessage<InListFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -954,6 +957,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A logical expression of EnhancedDataSet dimension filters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilterExpression : pb::IMessage<ExpandedDataSetFilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1310,6 +1314,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A list of ExpandedDataSet filter expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilterExpressionList : pb::IMessage<ExpandedDataSetFilterExpressionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1494,6 +1499,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A resource message representing a GA4 ExpandedDataSet.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSet : pb::IMessage<ExpandedDataSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

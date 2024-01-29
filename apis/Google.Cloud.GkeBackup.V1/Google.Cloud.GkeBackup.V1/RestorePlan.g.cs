@@ -28,30 +28,30 @@ namespace Google.Cloud.GkeBackup.V1 {
             "bxIZZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxon",
             "Z29vZ2xlL2Nsb3VkL2drZWJhY2t1cC92MS9yZXN0b3JlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqoGCgtSZXN0b3JlUGxhbhIR",
-            "CgRuYW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRl",
-            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "NAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSEwoLZGVzY3JpcHRpb24YBSABKAkSQwoLYmFja3VwX3BsYW4Y",
-            "BiABKAlCLuBBBeBBAvpBJQojZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL0Jh",
-            "Y2t1cFBsYW4SPAoHY2x1c3RlchgHIAEoCUIr4EEF4EEC+kEiCiBjb250YWlu",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchJFCg5yZXN0b3JlX2NvbmZpZxgI",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZp",
-            "Z0ID4EECEkIKBmxhYmVscxgJIAMoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNr",
-            "dXAudjEuUmVzdG9yZVBsYW4uTGFiZWxzRW50cnkSEQoEZXRhZxgKIAEoCUID",
-            "4EEDEkAKBXN0YXRlGAsgASgOMiwuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
-            "MS5SZXN0b3JlUGxhbi5TdGF0ZUID4EEDEhkKDHN0YXRlX3JlYXNvbhgMIAEo",
-            "CUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEiWAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABITCg9D",
-            "TFVTVEVSX1BFTkRJTkcQARIJCgVSRUFEWRACEgoKBkZBSUxFRBADEgwKCERF",
-            "TEVUSU5HEAQ6bupBawokZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL1Jlc3Rv",
-            "cmVQbGFuEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vcmVzdG9yZVBsYW5zL3tyZXN0b3JlX3BsYW59QscBCh1jb20uZ29vZ2xl",
-            "LmNsb3VkLmdrZWJhY2t1cC52MUIQUmVzdG9yZVBsYW5Qcm90b1ABWjtjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtn",
-            "a2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29n",
-            "bGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFj",
-            "a3VwOjpWMWIGcHJvdG8z"));
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrAGCgtSZXN0b3JlUGxhbhIS",
+            "CgRuYW1lGAEgASgJQgTiQQEDEhEKA3VpZBgCIAEoCUIE4kEBAxI1CgtjcmVh",
+            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJB",
+            "AQMSNQoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgTiQQEDEhMKC2Rlc2NyaXB0aW9uGAUgASgJEkIKC2JhY2t1cF9w",
+            "bGFuGAYgASgJQi3iQQIFAvpBJQojZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29t",
+            "L0JhY2t1cFBsYW4SOwoHY2x1c3RlchgHIAEoCUIq4kECBQL6QSIKIGNvbnRh",
+            "aW5lci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEkYKDnJlc3RvcmVfY29uZmln",
+            "GAggASgLMiguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29u",
+            "ZmlnQgTiQQECEkIKBmxhYmVscxgJIAMoCzIyLmdvb2dsZS5jbG91ZC5na2Vi",
+            "YWNrdXAudjEuUmVzdG9yZVBsYW4uTGFiZWxzRW50cnkSEgoEZXRhZxgKIAEo",
+            "CUIE4kEBAxJBCgVzdGF0ZRgLIAEoDjIsLmdvb2dsZS5jbG91ZC5na2ViYWNr",
+            "dXAudjEuUmVzdG9yZVBsYW4uU3RhdGVCBOJBAQMSGgoMc3RhdGVfcmVhc29u",
+            "GAwgASgJQgTiQQEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEiWAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABITCg9DTFVTVEVSX1BFTkRJTkcQARIJCgVSRUFEWRACEgoKBkZBSUxFRBAD",
+            "EgwKCERFTEVUSU5HEAQ6bupBawokZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29t",
+            "L1Jlc3RvcmVQbGFuEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcmVzdG9yZVBsYW5zL3tyZXN0b3JlX3BsYW59QscBCh1jb20u",
+            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MUIQUmVzdG9yZVBsYW5Qcm90b1AB",
+            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNr",
+            "dXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHK",
+            "AhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6",
+            "R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.RestoreReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,6 +67,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// against Backups belong to a particular BackupPlan.
   /// Next id: 13
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestorePlan : pb::IMessage<RestorePlan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -46,17 +46,17 @@ namespace Google.LongRunning {
             "dHlwZRgBIAEoCRIVCg1tZXRhZGF0YV90eXBlGAIgASgJMqoFCgpPcGVyYXRp",
             "b25zEpQBCg5MaXN0T3BlcmF0aW9ucxIpLmdvb2dsZS5sb25ncnVubmluZy5M",
             "aXN0T3BlcmF0aW9uc1JlcXVlc3QaKi5nb29nbGUubG9uZ3J1bm5pbmcuTGlz",
-            "dE9wZXJhdGlvbnNSZXNwb25zZSIrgtPkkwIXEhUvdjEve25hbWU9b3BlcmF0",
-            "aW9uc33aQQtuYW1lLGZpbHRlchJ/CgxHZXRPcGVyYXRpb24SJy5nb29nbGUu",
+            "dE9wZXJhdGlvbnNSZXNwb25zZSIr2kELbmFtZSxmaWx0ZXKC0+STAhcSFS92",
+            "MS97bmFtZT1vcGVyYXRpb25zfRJ/CgxHZXRPcGVyYXRpb24SJy5nb29nbGUu",
             "bG9uZ3J1bm5pbmcuR2V0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iJ4LT5JMCGhIYL3YxL3tuYW1lPW9wZXJhdGlv",
-            "bnMvKip92kEEbmFtZRJ+Cg9EZWxldGVPcGVyYXRpb24SKi5nb29nbGUubG9u",
+            "cnVubmluZy5PcGVyYXRpb24iJ9pBBG5hbWWC0+STAhoSGC92MS97bmFtZT1v",
+            "cGVyYXRpb25zLyoqfRJ+Cg9EZWxldGVPcGVyYXRpb24SKi5nb29nbGUubG9u",
             "Z3J1bm5pbmcuRGVsZXRlT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIngtPkkwIaKhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn3a",
-            "QQRuYW1lEogBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9uZ3J1bm5p",
+            "b2J1Zi5FbXB0eSIn2kEEbmFtZYLT5JMCGioYL3YxL3tuYW1lPW9wZXJhdGlv",
+            "bnMvKip9EogBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9uZ3J1bm5p",
             "bmcuQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIxgtPkkwIkIh8vdjEve25hbWU9b3BlcmF0aW9ucy8qKn06Y2FuY2Vs",
-            "OgEq2kEEbmFtZRJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
+            "bXB0eSIx2kEEbmFtZYLT5JMCJCIfL3YxL3tuYW1lPW9wZXJhdGlvbnMvKip9",
+            "OmNhbmNlbDoBKhJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
             "aW5nLldhaXRPcGVyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
             "Lk9wZXJhdGlvbiIAGh3KQRpsb25ncnVubmluZy5nb29nbGVhcGlzLmNvbTpa",
             "Cg5vcGVyYXRpb25faW5mbxIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRp",
@@ -100,6 +100,7 @@ namespace Google.LongRunning {
   /// This resource represents a long-running operation that is the result of a
   /// network API call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -537,6 +538,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOperationRequest : pb::IMessage<GetOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -732,6 +734,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOperationsRequest : pb::IMessage<ListOperationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1047,6 +1050,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOperationsResponse : pb::IMessage<ListOperationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1271,6 +1275,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelOperationRequest : pb::IMessage<CancelOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1466,6 +1471,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationRequest : pb::IMessage<DeleteOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1661,6 +1667,7 @@ namespace Google.LongRunning {
   /// <summary>
   /// The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WaitOperationRequest : pb::IMessage<WaitOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1917,6 +1924,7 @@ namespace Google.LongRunning {
   ///     };
   ///   }
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationInfo : pb::IMessage<OperationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

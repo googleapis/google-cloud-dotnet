@@ -46,6 +46,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// The metadata message for
   /// [google.cloud.location.Location.metadata][google.cloud.location.Location.metadata].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

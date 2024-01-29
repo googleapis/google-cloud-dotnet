@@ -63,6 +63,7 @@ namespace Grafeas.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlsaProvenance : pb::IMessage<SlsaProvenance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -402,6 +403,7 @@ namespace Grafeas.V1 {
       /// For a TaskRun, typically each container corresponds to one step in the
       /// recipe.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaRecipe : pb::IMessage<SlsaRecipe>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -793,6 +795,7 @@ namespace Grafeas.V1 {
       /// Indicates that the builder claims certain fields in this message to be
       /// complete.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaCompleteness : pb::IMessage<SlsaCompleteness>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1071,6 +1074,7 @@ namespace Grafeas.V1 {
       /// <summary>
       /// Other properties of the build.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaMetadata : pb::IMessage<SlsaMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1454,6 +1458,7 @@ namespace Grafeas.V1 {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaBuilder : pb::IMessage<SlsaBuilder>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1643,6 +1648,7 @@ namespace Grafeas.V1 {
 
       }
 
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Material : pb::IMessage<Material>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

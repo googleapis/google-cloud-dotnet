@@ -72,6 +72,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// API proto representing a trained machine learning model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Model : pb::IMessage<Model>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

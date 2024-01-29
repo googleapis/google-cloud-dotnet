@@ -265,6 +265,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// `Table.schema` may continue to be present in your logs during this
   /// transition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditData : pb::IMessage<AuditData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1617,6 +1618,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Table insert request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableInsertRequest : pb::IMessage<TableInsertRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1821,6 +1823,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Table update request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableUpdateRequest : pb::IMessage<TableUpdateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2025,6 +2028,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Table insert response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableInsertResponse : pb::IMessage<TableInsertResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2229,6 +2233,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Table update response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableUpdateResponse : pb::IMessage<TableUpdateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2433,6 +2438,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Dataset list request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetListRequest : pb::IMessage<DatasetListRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2628,6 +2634,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Dataset insert request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetInsertRequest : pb::IMessage<DatasetInsertRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2832,6 +2839,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Dataset insert response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetInsertResponse : pb::IMessage<DatasetInsertResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3036,6 +3044,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Dataset update request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetUpdateRequest : pb::IMessage<DatasetUpdateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3240,6 +3249,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Dataset update response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetUpdateResponse : pb::IMessage<DatasetUpdateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3444,6 +3454,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job insert request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobInsertRequest : pb::IMessage<JobInsertRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3648,6 +3659,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job insert response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobInsertResponse : pb::IMessage<JobInsertResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3852,6 +3864,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job query request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobQueryRequest : pb::IMessage<JobQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4216,6 +4229,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job query response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobQueryResponse : pb::IMessage<JobQueryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4460,6 +4474,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job getQueryResults request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobGetQueryResultsRequest : pb::IMessage<JobGetQueryResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4695,6 +4710,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job getQueryResults response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobGetQueryResultsResponse : pb::IMessage<JobGetQueryResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4941,6 +4957,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job getQueryDone response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobQueryDoneResponse : pb::IMessage<JobQueryDoneResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5146,6 +5163,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Query job completed event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobCompletedEvent : pb::IMessage<JobCompletedEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5391,6 +5409,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// Table data read event. Only present for tables, not views, and is only
   /// included in the log record for the project that owns the table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableDataReadEvent : pb::IMessage<TableDataReadEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5626,6 +5645,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Table data-list request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableDataListRequest : pb::IMessage<TableDataListRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5866,6 +5886,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// `Table.schema` may continue to be present in your logs during this
   /// transition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Table : pb::IMessage<Table>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6456,6 +6477,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// User-provided metadata for a table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableInfo : pb::IMessage<TableInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6721,6 +6743,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Describes a virtual table defined by a SQL query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableViewDefinition : pb::IMessage<TableViewDefinition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6918,6 +6941,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// See the [Dataset](/bigquery/docs/reference/v2/datasets) API resource
   /// for more details on individual fields.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7370,6 +7394,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// User-provided metadata for a dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetInfo : pb::IMessage<DatasetInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7635,6 +7660,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// An access control list.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryAcl : pb::IMessage<BigQueryAcl>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7822,6 +7848,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// <summary>
       /// Access control entry.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entry : pb::IMessage<Entry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8232,6 +8259,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Describes a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8585,6 +8613,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// See the [Jobs](/bigquery/docs/reference/v2/jobs) API resource
   /// for more details on individual fields.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobConfiguration : pb::IMessage<JobConfiguration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9063,6 +9092,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// <summary>
       /// Describes a query job, which executes a SQL-like query.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Query : pb::IMessage<Query>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9600,6 +9630,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// Describes a load job, which loads data from an external source via
       /// the  import pipeline.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Load : pb::IMessage<Load>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -10007,6 +10038,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// Describes an extract job, which exports data to an external source
       /// via the  export pipeline.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Extract : pb::IMessage<Extract>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -10240,6 +10272,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// <summary>
       /// Describes a copy job, which copies an existing table to another table.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableCopy : pb::IMessage<TableCopy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -10610,6 +10643,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Describes an external data source used in a query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableDefinition : pb::IMessage<TableDefinition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10834,6 +10868,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Running state of a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobStatus : pb::IMessage<JobStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11108,6 +11143,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Job statistics that may change after a job starts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobStatistics : pb::IMessage<JobStatistics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11872,6 +11908,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
       /// <summary>
       /// Job resource usage breakdown by reservation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReservationResourceUsage : pb::IMessage<ReservationResourceUsage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -12112,6 +12149,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// The fully-qualified name for a dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetName : pb::IMessage<DatasetName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12347,6 +12385,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// The fully-qualified name for a table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableName : pb::IMessage<TableName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12622,6 +12661,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// The fully-qualified name for a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobName : pb::IMessage<JobName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12897,6 +12937,7 @@ namespace Google.Cloud.BigQuery.Logging.V1 {
   /// <summary>
   /// Describes encryption properties for a table or a job
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionInfo : pb::IMessage<EncryptionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

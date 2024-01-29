@@ -51,6 +51,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Cloud SCC's Notification
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationMessage : pb::IMessage<NotificationMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -46,6 +46,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Notebook instance configurations that can be updated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceConfig : pb::IMessage<InstanceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -27,16 +27,16 @@ namespace Google.Maps.Places.V1 {
             "CiFnb29nbGUvbWFwcy9wbGFjZXMvdjEvcGhvdG8ucHJvdG8SFWdvb2dsZS5t",
             "YXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxonZ29vZ2xlL21hcHMvcGxh",
-            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvItYBCgVQaG90bxIRCgRuYW1lGAEg",
-            "ASgJQgPgQQgSEAoId2lkdGhfcHgYAiABKAUSEQoJaGVpZ2h0X3B4GAMgASgF",
-            "EkUKE2F1dGhvcl9hdHRyaWJ1dGlvbnMYBCADKAsyKC5nb29nbGUubWFwcy5w",
-            "bGFjZXMudjEuQXV0aG9yQXR0cmlidXRpb246TupBSwobcGxhY2VzLmdvb2ds",
-            "ZWFwaXMuY29tL1Bob3RvEh1wbGFjZXMve3BsYWNlfS9waG90b3Mve3Bob3Rv",
-            "fSoGcGhvdG9zMgVwaG90b0KeAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MUIKUGhvdG9Qcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxh",
-            "Y2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29v",
-            "Z2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZw",
-            "cm90bzM="));
+            "Y2VzL3YxL2F0dHJpYnV0aW9uLnByb3RvItcBCgVQaG90bxISCgRuYW1lGAEg",
+            "ASgJQgTiQQEIEhAKCHdpZHRoX3B4GAIgASgFEhEKCWhlaWdodF9weBgDIAEo",
+            "BRJFChNhdXRob3JfYXR0cmlidXRpb25zGAQgAygLMiguZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLkF1dGhvckF0dHJpYnV0aW9uOk7qQUsKG3BsYWNlcy5nb29n",
+            "bGVhcGlzLmNvbS9QaG90bxIdcGxhY2VzL3twbGFjZX0vcGhvdG9zL3twaG90",
+            "b30qBnBob3RvczIFcGhvdG9CngEKGWNvbS5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djFCClBob3RvUHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3Bs",
+            "YWNlcy9hcGl2MS9wbGFjZXNwYjtwbGFjZXNwYvgBAaICBkdNUFNWMaoCFUdv",
+            "b2dsZS5NYXBzLlBsYWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNlc1xWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.Places.V1.AttributionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -50,6 +50,7 @@ namespace Google.Maps.Places.V1 {
   /// <summary>
   /// Information about a photo of a place.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Photo : pb::IMessage<Photo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

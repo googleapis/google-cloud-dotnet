@@ -26,35 +26,35 @@ namespace Grafeas.V1 {
           string.Concat(
             "ChhncmFmZWFzL3YxL3BhY2thZ2UucHJvdG8SCmdyYWZlYXMudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aF2dyYWZlYXMvdjEvY29tbW9u",
-            "LnByb3RvIrcBCgxEaXN0cmlidXRpb24SFAoHY3BlX3VyaRgBIAEoCUID4EEC",
-            "Ei4KDGFyY2hpdGVjdHVyZRgCIAEoDjIYLmdyYWZlYXMudjEuQXJjaGl0ZWN0",
-            "dXJlEisKDmxhdGVzdF92ZXJzaW9uGAMgASgLMhMuZ3JhZmVhcy52MS5WZXJz",
-            "aW9uEhIKCm1haW50YWluZXIYBCABKAkSCwoDdXJsGAUgASgJEhMKC2Rlc2Ny",
-            "aXB0aW9uGAYgASgJIk8KCExvY2F0aW9uEg8KB2NwZV91cmkYASABKAkSJAoH",
-            "dmVyc2lvbhgCIAEoCzITLmdyYWZlYXMudjEuVmVyc2lvbhIMCgRwYXRoGAMg",
-            "ASgJItACCgtQYWNrYWdlTm90ZRIUCgRuYW1lGAEgASgJQgbgQQLgQQUSLgoM",
+            "LnByb3RvIrgBCgxEaXN0cmlidXRpb24SFQoHY3BlX3VyaRgBIAEoCUIE4kEB",
+            "AhIuCgxhcmNoaXRlY3R1cmUYAiABKA4yGC5ncmFmZWFzLnYxLkFyY2hpdGVj",
+            "dHVyZRIrCg5sYXRlc3RfdmVyc2lvbhgDIAEoCzITLmdyYWZlYXMudjEuVmVy",
+            "c2lvbhISCgptYWludGFpbmVyGAQgASgJEgsKA3VybBgFIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgGIAEoCSJPCghMb2NhdGlvbhIPCgdjcGVfdXJpGAEgASgJEiQK",
+            "B3ZlcnNpb24YAiABKAsyEy5ncmFmZWFzLnYxLlZlcnNpb24SDAoEcGF0aBgD",
+            "IAEoCSLPAgoLUGFja2FnZU5vdGUSEwoEbmFtZRgBIAEoCUIF4kECAgUSLgoM",
             "ZGlzdHJpYnV0aW9uGAogAygLMhguZ3JhZmVhcy52MS5EaXN0cmlidXRpb24S",
             "FAoMcGFja2FnZV90eXBlGAsgASgJEg8KB2NwZV91cmkYDCABKAkSLgoMYXJj",
             "aGl0ZWN0dXJlGA0gASgOMhguZ3JhZmVhcy52MS5BcmNoaXRlY3R1cmUSJAoH",
             "dmVyc2lvbhgOIAEoCzITLmdyYWZlYXMudjEuVmVyc2lvbhISCgptYWludGFp",
             "bmVyGA8gASgJEgsKA3VybBgQIAEoCRITCgtkZXNjcmlwdGlvbhgRIAEoCRIk",
             "CgdsaWNlbnNlGBIgASgLMhMuZ3JhZmVhcy52MS5MaWNlbnNlEiIKBmRpZ2Vz",
-            "dBgTIAMoCzISLmdyYWZlYXMudjEuRGlnZXN0IogCChFQYWNrYWdlT2NjdXJy",
-            "ZW5jZRIUCgRuYW1lGAEgASgJQgbgQQLgQQMSJgoIbG9jYXRpb24YAiADKAsy",
-            "FC5ncmFmZWFzLnYxLkxvY2F0aW9uEhkKDHBhY2thZ2VfdHlwZRgDIAEoCUID",
-            "4EEDEhQKB2NwZV91cmkYBCABKAlCA+BBAxIzCgxhcmNoaXRlY3R1cmUYBSAB",
-            "KA4yGC5ncmFmZWFzLnYxLkFyY2hpdGVjdHVyZUID4EEDEiQKB2xpY2Vuc2UY",
-            "BiABKAsyEy5ncmFmZWFzLnYxLkxpY2Vuc2USKQoHdmVyc2lvbhgHIAEoCzIT",
-            "LmdyYWZlYXMudjEuVmVyc2lvbkID4EEDIuABCgdWZXJzaW9uEg0KBWVwb2No",
-            "GAEgASgFEgwKBG5hbWUYAiABKAkSEAoIcmV2aXNpb24YAyABKAkSEQoJaW5j",
-            "bHVzaXZlGAYgASgIEi0KBGtpbmQYBCABKA4yHy5ncmFmZWFzLnYxLlZlcnNp",
-            "b24uVmVyc2lvbktpbmQSEQoJZnVsbF9uYW1lGAUgASgJIlEKC1ZlcnNpb25L",
-            "aW5kEhwKGFZFUlNJT05fS0lORF9VTlNQRUNJRklFRBAAEgoKBk5PUk1BTBAB",
-            "EgsKB01JTklNVU0QAhILCgdNQVhJTVVNEAMqPgoMQXJjaGl0ZWN0dXJlEhwK",
-            "GEFSQ0hJVEVDVFVSRV9VTlNQRUNJRklFRBAAEgcKA1g4NhABEgcKA1g2NBAC",
-            "QlEKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3Rv",
-            "Mw=="));
+            "dBgTIAMoCzISLmdyYWZlYXMudjEuRGlnZXN0IosCChFQYWNrYWdlT2NjdXJy",
+            "ZW5jZRITCgRuYW1lGAEgASgJQgXiQQICAxImCghsb2NhdGlvbhgCIAMoCzIU",
+            "LmdyYWZlYXMudjEuTG9jYXRpb24SGgoMcGFja2FnZV90eXBlGAMgASgJQgTi",
+            "QQEDEhUKB2NwZV91cmkYBCABKAlCBOJBAQMSNAoMYXJjaGl0ZWN0dXJlGAUg",
+            "ASgOMhguZ3JhZmVhcy52MS5BcmNoaXRlY3R1cmVCBOJBAQMSJAoHbGljZW5z",
+            "ZRgGIAEoCzITLmdyYWZlYXMudjEuTGljZW5zZRIqCgd2ZXJzaW9uGAcgASgL",
+            "MhMuZ3JhZmVhcy52MS5WZXJzaW9uQgTiQQEDIuABCgdWZXJzaW9uEg0KBWVw",
+            "b2NoGAEgASgFEgwKBG5hbWUYAiABKAkSEAoIcmV2aXNpb24YAyABKAkSEQoJ",
+            "aW5jbHVzaXZlGAYgASgIEi0KBGtpbmQYBCABKA4yHy5ncmFmZWFzLnYxLlZl",
+            "cnNpb24uVmVyc2lvbktpbmQSEQoJZnVsbF9uYW1lGAUgASgJIlEKC1ZlcnNp",
+            "b25LaW5kEhwKGFZFUlNJT05fS0lORF9VTlNQRUNJRklFRBAAEgoKBk5PUk1B",
+            "TBABEgsKB01JTklNVU0QAhILCgdNQVhJTVVNEAMqPgoMQXJjaGl0ZWN0dXJl",
+            "EhwKGEFSQ0hJVEVDVFVSRV9VTlNQRUNJRklFRBAAEgcKA1g4NhABEgcKA1g2",
+            "NBACQlEKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,6 +94,7 @@ namespace Grafeas.V1 {
   /// This represents a particular channel of distribution for a given package.
   /// E.g., Debian's jessie-backports dpkg mirror.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Distribution : pb::IMessage<Distribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -501,6 +502,7 @@ namespace Grafeas.V1 {
   /// An occurrence of a particular package installation found within a system's
   /// filesystem. E.g., glibc was found in `/var/lib/dpkg/status`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -787,6 +789,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// PackageNote represents a particular package version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PackageNote : pb::IMessage<PackageNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1384,6 +1387,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Details on how a particular software package was installed on a system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PackageOccurrence : pb::IMessage<PackageOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1831,6 +1835,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Version contains structured information about the version of a package.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

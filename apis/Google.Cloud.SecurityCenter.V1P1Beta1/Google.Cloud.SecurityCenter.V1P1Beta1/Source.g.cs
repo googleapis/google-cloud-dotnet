@@ -54,6 +54,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// is an entity or a mechanism that can produce a finding. A source is like a
   /// container of findings that come from the same scanner, logger, monitor, etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Source : pb::IMessage<Source>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

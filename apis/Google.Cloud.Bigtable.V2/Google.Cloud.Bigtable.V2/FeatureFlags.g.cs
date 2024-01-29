@@ -54,6 +54,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// This is an internal implementation detail and should not be used by end users
   /// directly.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureFlags : pb::IMessage<FeatureFlags>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

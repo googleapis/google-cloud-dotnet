@@ -59,6 +59,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Represents a single metric value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricValue : pb::IMessage<MetricValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -663,6 +664,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// Each metric value in the set should have a unique combination of start time,
   /// end time, and label values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricValueSet : pb::IMessage<MetricValueSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

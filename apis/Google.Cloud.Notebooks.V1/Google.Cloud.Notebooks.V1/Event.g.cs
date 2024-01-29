@@ -26,17 +26,17 @@ namespace Google.Cloud.Notebooks.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvbm90ZWJvb2tzL3YxL2V2ZW50LnByb3RvEhlnb29n",
             "bGUuY2xvdWQubm90ZWJvb2tzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsYC",
+            "aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIscC",
             "CgVFdmVudBIvCgtyZXBvcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXASOAoEdHlwZRgCIAEoDjIqLmdvb2dsZS5jbG91ZC5ub3Rl",
-            "Ym9va3MudjEuRXZlbnQuRXZlbnRUeXBlEkMKB2RldGFpbHMYAyADKAsyLS5n",
-            "b29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV2ZW50LkRldGFpbHNFbnRyeUID",
-            "4EEBGi4KDERldGFpbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBIl0KCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASCAoESURMRRABEg0KCUhFQVJUQkVBVBACEgoKBkhFQUxUSBADEg8KC01B",
-            "SU5URU5BTkNFEARCagodY29tLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFC",
-            "CkV2ZW50UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9ub3RlYm9va3Mv",
-            "YXBpdjEvbm90ZWJvb2tzcGI7bm90ZWJvb2tzcGJiBnByb3RvMw=="));
+            "Ym9va3MudjEuRXZlbnQuRXZlbnRUeXBlEkQKB2RldGFpbHMYAyADKAsyLS5n",
+            "b29nbGUuY2xvdWQubm90ZWJvb2tzLnYxLkV2ZW50LkRldGFpbHNFbnRyeUIE",
+            "4kEBARouCgxEZXRhaWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASJdCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEggKBElETEUQARINCglIRUFSVEJFQVQQAhIKCgZIRUFMVEgQAxIPCgtN",
+            "QUlOVEVOQU5DRRAEQmoKHWNvbS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYx",
+            "QgpFdmVudFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vbm90ZWJvb2tz",
+            "L2FwaXYxL25vdGVib29rc3BiO25vdGVib29rc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -50,6 +50,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// The definition of an Event for a managed / semi-managed notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Event : pb::IMessage<Event>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

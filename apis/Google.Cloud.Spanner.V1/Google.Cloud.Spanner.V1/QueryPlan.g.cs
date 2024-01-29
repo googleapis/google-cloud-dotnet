@@ -61,6 +61,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// Node information for nodes appearing in a [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlanNode : pb::IMessage<PlanNode>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -554,6 +555,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// Metadata associated with a parent-child relationship appearing in a
       /// [PlanNode][google.spanner.v1.PlanNode].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ChildLink : pb::IMessage<ChildLink>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -840,6 +842,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// Condensed representation of a node and its subtree. Only present for
       /// `SCALAR` [PlanNode(s)][google.spanner.v1.PlanNode].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ShortRepresentation : pb::IMessage<ShortRepresentation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1073,6 +1076,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// Contains an ordered list of nodes appearing in the query plan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryPlan : pb::IMessage<QueryPlan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

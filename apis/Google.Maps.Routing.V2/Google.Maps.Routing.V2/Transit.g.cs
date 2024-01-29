@@ -68,6 +68,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// A transit agency that operates a transit line.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitAgency : pb::IMessage<TransitAgency>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,6 +344,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Contains information about the transit line used in this step.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitLine : pb::IMessage<TransitLine>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -819,6 +821,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Information about a transit stop.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitStop : pb::IMessage<TransitStop>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1063,6 +1066,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Information about a vehicle used in transit routes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitVehicle : pb::IMessage<TransitVehicle>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

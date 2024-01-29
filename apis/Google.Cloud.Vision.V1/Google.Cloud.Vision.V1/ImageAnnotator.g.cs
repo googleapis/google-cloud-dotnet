@@ -158,92 +158,93 @@ namespace Google.Cloud.Vision.V1 {
             "MiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Qcm9kdWN0U2VhcmNoUmVzdWx0",
             "cxIhCgVlcnJvchgJIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEj8KB2NvbnRl",
             "eHQYFSABKAsyLi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkltYWdlQW5ub3Rh",
-            "dGlvbkNvbnRleHQicQoaQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QSQwoI",
+            "dGlvbkNvbnRleHQicgoaQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QSRAoI",
             "cmVxdWVzdHMYASADKAsyLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90",
-            "YXRlSW1hZ2VSZXF1ZXN0QgPgQQISDgoGcGFyZW50GAQgASgJIl8KG0JhdGNo",
-            "QW5ub3RhdGVJbWFnZXNSZXNwb25zZRJACglyZXNwb25zZXMYASADKAsyLS5n",
-            "b29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXNwb25zZSLP",
-            "AQoTQW5ub3RhdGVGaWxlUmVxdWVzdBI5CgxpbnB1dF9jb25maWcYASABKAsy",
-            "Iy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLklucHV0Q29uZmlnEjEKCGZlYXR1",
-            "cmVzGAIgAygLMh8uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GZWF0dXJlEjsK",
-            "DWltYWdlX2NvbnRleHQYAyABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
-            "LkltYWdlQ29udGV4dBINCgVwYWdlcxgEIAMoBSLLAQoUQW5ub3RhdGVGaWxl",
-            "UmVzcG9uc2USOQoMaW5wdXRfY29uZmlnGAEgASgLMiMuZ29vZ2xlLmNsb3Vk",
-            "LnZpc2lvbi52MS5JbnB1dENvbmZpZxJACglyZXNwb25zZXMYAiADKAsyLS5n",
-            "b29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXNwb25zZRIT",
-            "Cgt0b3RhbF9wYWdlcxgDIAEoBRIhCgVlcnJvchgEIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzIm8KGUJhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QSQgoIcmVx",
-            "dWVzdHMYASADKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRl",
-            "RmlsZVJlcXVlc3RCA+BBAhIOCgZwYXJlbnQYAyABKAkiXQoaQmF0Y2hBbm5v",
-            "dGF0ZUZpbGVzUmVzcG9uc2USPwoJcmVzcG9uc2VzGAEgAygLMiwuZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUZpbGVSZXNwb25zZSKCAgoYQXN5",
-            "bmNBbm5vdGF0ZUZpbGVSZXF1ZXN0EjkKDGlucHV0X2NvbmZpZxgBIAEoCzIj",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW5wdXRDb25maWcSMQoIZmVhdHVy",
-            "ZXMYAiADKAsyHy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUSOwoN",
-            "aW1hZ2VfY29udGV4dBgDIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
-            "SW1hZ2VDb250ZXh0EjsKDW91dHB1dF9jb25maWcYBCABKAsyJC5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyJYChlBc3luY0Fubm90YXRl",
-            "RmlsZVJlc3BvbnNlEjsKDW91dHB1dF9jb25maWcYASABKAsyJC5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyK4AQofQXN5bmNCYXRjaEFu",
-            "bm90YXRlSW1hZ2VzUmVxdWVzdBJDCghyZXF1ZXN0cxgBIAMoCzIsLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuQW5ub3RhdGVJbWFnZVJlcXVlc3RCA+BBAhJA",
-            "Cg1vdXRwdXRfY29uZmlnGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5PdXRwdXRDb25maWdCA+BBAhIOCgZwYXJlbnQYBCABKAkiXwogQXN5bmNC",
-            "YXRjaEFubm90YXRlSW1hZ2VzUmVzcG9uc2USOwoNb3V0cHV0X2NvbmZpZxgB",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnInkK",
-            "HkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBJHCghyZXF1ZXN0cxgB",
-            "IAMoCzIwLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQXN5bmNBbm5vdGF0ZUZp",
-            "bGVSZXF1ZXN0QgPgQQISDgoGcGFyZW50GAQgASgJImcKH0FzeW5jQmF0Y2hB",
-            "bm5vdGF0ZUZpbGVzUmVzcG9uc2USRAoJcmVzcG9uc2VzGAEgAygLMjEuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0Fubm90YXRlRmlsZVJlc3BvbnNl",
-            "ImgKC0lucHV0Q29uZmlnEjUKCmdjc19zb3VyY2UYASABKAsyIS5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLkdjc1NvdXJjZRIPCgdjb250ZW50GAMgASgMEhEK",
-            "CW1pbWVfdHlwZRgCIAEoCSJjCgxPdXRwdXRDb25maWcSPwoPZ2NzX2Rlc3Rp",
-            "bmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5HY3NEZXN0",
-            "aW5hdGlvbhISCgpiYXRjaF9zaXplGAIgASgFIhgKCUdjc1NvdXJjZRILCgN1",
-            "cmkYASABKAkiHQoOR2NzRGVzdGluYXRpb24SCwoDdXJpGAEgASgJIogCChFP",
-            "cGVyYXRpb25NZXRhZGF0YRI+CgVzdGF0ZRgBIAEoDjIvLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjEuT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGUSLwoLY3JlYXRl",
-            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3Vw",
-            "ZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJR",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQARIL",
-            "CgdSVU5OSU5HEAISCAoERE9ORRADEg0KCUNBTkNFTExFRBAEKmUKCkxpa2Vs",
-            "aWhvb2QSCwoHVU5LTk9XThAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJ",
-            "S0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtF",
-            "TFkQBTL1CgoOSW1hZ2VBbm5vdGF0b3ISkwIKE0JhdGNoQW5ub3RhdGVJbWFn",
-            "ZXMSMi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNoQW5ub3RhdGVJbWFn",
-            "ZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90",
-            "YXRlSW1hZ2VzUmVzcG9uc2UikgGC0+STAoABIhMvdjEvaW1hZ2VzOmFubm90",
-            "YXRlOgEqWjgiMy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2ltYWdlczphbm5vdGF0ZToBKlosIicvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9pbWFnZXM6YW5ub3RhdGU6ASraQQhyZXF1ZXN0cxKMAgoSQmF0Y2hBbm5v",
-            "dGF0ZUZpbGVzEjEuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90",
-            "YXRlRmlsZXNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRj",
-            "aEFubm90YXRlRmlsZXNSZXNwb25zZSKOAYLT5JMCfSISL3YxL2ZpbGVzOmFu",
-            "bm90YXRlOgEqWjciMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2ZpbGVzOmFubm90YXRlOgEqWisiJi92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2ZpbGVzOmFubm90YXRlOgEq2kEIcmVxdWVzdHMS6wIKGEFzeW5jQmF0",
-            "Y2hBbm5vdGF0ZUltYWdlcxI3Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQXN5",
-            "bmNCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24i9gGC0+STAp4BIh0vdjEvaW1hZ2VzOmFzeW5jQmF0",
-            "Y2hBbm5vdGF0ZToBKlpCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9pbWFnZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWjYiMS92MS97",
-            "cGFyZW50PXByb2plY3RzLyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3RhdGU6",
-            "ASraQRZyZXF1ZXN0cyxvdXRwdXRfY29uZmlnykE1CiBBc3luY0JhdGNoQW5u",
-            "b3RhdGVJbWFnZXNSZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGES1wIKF0Fz",
-            "eW5jQmF0Y2hBbm5vdGF0ZUZpbGVzEjYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIuQBgtPkkwKbASIcL3YxL2ZpbGVzOmFzeW5j",
-            "QmF0Y2hBbm5vdGF0ZToBKlpBIjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9maWxlczphc3luY0JhdGNoQW5ub3RhdGU6ASpaNSIwL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vZmlsZXM6YXN5bmNCYXRjaEFubm90YXRl",
-            "OgEq2kEIcmVxdWVzdHPKQTQKH0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVz",
-            "cG9uc2USEU9wZXJhdGlvbk1ldGFkYXRhGnbKQRV2aXNpb24uZ29vZ2xlYXBp",
-            "cy5jb23SQVtodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtdmlzaW9uQnQKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhNJbWFn",
-            "ZUFubm90YXRvclByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vdmlzaW9u",
-            "L3YyL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NWTmIGcHJvdG8z"));
+            "YXRlSW1hZ2VSZXF1ZXN0QgTiQQECEg4KBnBhcmVudBgEIAEoCSJfChtCYXRj",
+            "aEFubm90YXRlSW1hZ2VzUmVzcG9uc2USQAoJcmVzcG9uc2VzGAEgAygLMi0u",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9uc2Ui",
+            "zwEKE0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEgASgL",
+            "MiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghmZWF0",
+            "dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVyZRI7",
+            "Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5JbWFnZUNvbnRleHQSDQoFcGFnZXMYBCADKAUiywEKFEFubm90YXRlRmls",
+            "ZVJlc3BvbnNlEjkKDGlucHV0X2NvbmZpZxgBIAEoCzIjLmdvb2dsZS5jbG91",
+            "ZC52aXNpb24udjEuSW5wdXRDb25maWcSQAoJcmVzcG9uc2VzGAIgAygLMi0u",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9uc2US",
+            "EwoLdG90YWxfcGFnZXMYAyABKAUSIQoFZXJyb3IYBCABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1cyJwChlCYXRjaEFubm90YXRlRmlsZXNSZXF1ZXN0EkMKCHJl",
+            "cXVlc3RzGAEgAygLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0",
+            "ZUZpbGVSZXF1ZXN0QgTiQQECEg4KBnBhcmVudBgDIAEoCSJdChpCYXRjaEFu",
+            "bm90YXRlRmlsZXNSZXNwb25zZRI/CglyZXNwb25zZXMYASADKAsyLC5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlRmlsZVJlc3BvbnNlIoICChhB",
+            "c3luY0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEgASgL",
+            "MiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghmZWF0",
+            "dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVyZRI7",
+            "Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5JbWFnZUNvbnRleHQSOwoNb3V0cHV0X2NvbmZpZxgEIAEoCzIkLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIlgKGUFzeW5jQW5ub3Rh",
+            "dGVGaWxlUmVzcG9uc2USOwoNb3V0cHV0X2NvbmZpZxgBIAEoCzIkLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIroBCh9Bc3luY0JhdGNo",
+            "QW5ub3RhdGVJbWFnZXNSZXF1ZXN0EkQKCHJlcXVlc3RzGAEgAygLMiwuZ29v",
+            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVxdWVzdEIE4kEB",
+            "AhJBCg1vdXRwdXRfY29uZmlnGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5PdXRwdXRDb25maWdCBOJBAQISDgoGcGFyZW50GAQgASgJIl8KIEFz",
+            "eW5jQmF0Y2hBbm5vdGF0ZUltYWdlc1Jlc3BvbnNlEjsKDW91dHB1dF9jb25m",
+            "aWcYASABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZp",
+            "ZyJ6Ch5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QSSAoIcmVxdWVz",
+            "dHMYASADKAsyMC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQW5ub3Rh",
+            "dGVGaWxlUmVxdWVzdEIE4kEBAhIOCgZwYXJlbnQYBCABKAkiZwofQXN5bmNC",
+            "YXRjaEFubm90YXRlRmlsZXNSZXNwb25zZRJECglyZXNwb25zZXMYASADKAsy",
+            "MS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQW5ub3RhdGVGaWxlUmVz",
+            "cG9uc2UiaAoLSW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgBIAEoCzIhLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjEuR2NzU291cmNlEg8KB2NvbnRlbnQYAyAB",
+            "KAwSEQoJbWltZV90eXBlGAIgASgJImMKDE91dHB1dENvbmZpZxI/Cg9nY3Nf",
+            "ZGVzdGluYXRpb24YASABKAsyJi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkdj",
+            "c0Rlc3RpbmF0aW9uEhIKCmJhdGNoX3NpemUYAiABKAUiGAoJR2NzU291cmNl",
+            "EgsKA3VyaRgBIAEoCSIdCg5HY3NEZXN0aW5hdGlvbhILCgN1cmkYASABKAki",
+            "iAIKEU9wZXJhdGlvbk1ldGFkYXRhEj4KBXN0YXRlGAEgASgOMi8uZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5PcGVyYXRpb25NZXRhZGF0YS5TdGF0ZRIvCgtj",
+            "cmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wIlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRF",
+            "RBABEgsKB1JVTk5JTkcQAhIICgRET05FEAMSDQoJQ0FOQ0VMTEVEEAQqZQoK",
+            "TGlrZWxpaG9vZBILCgdVTktOT1dOEAASEQoNVkVSWV9VTkxJS0VMWRABEgwK",
+            "CFVOTElLRUxZEAISDAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIPCgtWRVJZ",
+            "X0xJS0VMWRAFMvUKCg5JbWFnZUFubm90YXRvchKTAgoTQmF0Y2hBbm5vdGF0",
+            "ZUltYWdlcxIyLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQmF0Y2hBbm5vdGF0",
+            "ZUltYWdlc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNo",
+            "QW5ub3RhdGVJbWFnZXNSZXNwb25zZSKSAdpBCHJlcXVlc3RzgtPkkwKAASIT",
+            "L3YxL2ltYWdlczphbm5vdGF0ZToBKlo4IjMvdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qfS9pbWFnZXM6YW5ub3RhdGU6ASpaLCInL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKn0vaW1hZ2VzOmFubm90YXRlOgEqEowCChJCYXRj",
+            "aEFubm90YXRlRmlsZXMSMS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNo",
+            "QW5ub3RhdGVGaWxlc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
+            "LkJhdGNoQW5ub3RhdGVGaWxlc1Jlc3BvbnNlIo4B2kEIcmVxdWVzdHOC0+ST",
+            "An0iEi92MS9maWxlczphbm5vdGF0ZToBKlo3IjIvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9maWxlczphbm5vdGF0ZToBKlorIiYvdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9maWxlczphbm5vdGF0ZToBKhLrAgoYQXN5",
+            "bmNCYXRjaEFubm90YXRlSW1hZ2VzEjcuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5Bc3luY0JhdGNoQW5ub3RhdGVJbWFnZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiL2AcpBNQogQXN5bmNCYXRjaEFubm90YXRl",
+            "SW1hZ2VzUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRh2kEWcmVxdWVzdHMs",
+            "b3V0cHV0X2NvbmZpZ4LT5JMCngEiHS92MS9pbWFnZXM6YXN5bmNCYXRjaEFu",
+            "bm90YXRlOgEqWkIiPS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3RhdGU6ASpaNiIxL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKn0vaW1hZ2VzOmFzeW5jQmF0Y2hBbm5vdGF0ZToBKhLX",
+            "AgoXQXN5bmNCYXRjaEFubm90YXRlRmlsZXMSNi5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxLkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24i5AHKQTQKH0FzeW5jQmF0Y2hBbm5v",
+            "dGF0ZUZpbGVzUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRh2kEIcmVxdWVz",
+            "dHOC0+STApsBIhwvdjEvZmlsZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWkEi",
+            "PC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2ZpbGVzOmFz",
+            "eW5jQmF0Y2hBbm5vdGF0ZToBKlo1IjAvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "fS9maWxlczphc3luY0JhdGNoQW5ub3RhdGU6ASoadspBFXZpc2lvbi5nb29n",
+            "bGVhcGlzLmNvbdJBW2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC12aXNpb25CdAoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFC",
+            "E0ltYWdlQW5ub3RhdG9yUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby92",
+            "aXNpb24vdjIvYXBpdjEvdmlzaW9ucGI7dmlzaW9ucGL4AQGiAgRHQ1ZOYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchReflection.Descriptor, global::Google.Cloud.Vision.V1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1.WebDetectionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -331,6 +332,7 @@ namespace Google.Cloud.Vision.V1 {
   /// number of results to return for that type. Multiple `Feature` objects can
   /// be specified in the `features` list.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -681,6 +683,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// External image source (Google Cloud Storage or web URL image location).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageSource : pb::IMessage<ImageSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -937,6 +940,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Client image to perform Google Cloud Vision API tasks over.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1188,6 +1192,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A face annotation object contains the results of face detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1969,6 +1974,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// A face-specific landmark (for example, a face feature).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Landmark : pb::IMessage<Landmark>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2383,6 +2389,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Detected entity location information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationInfo : pb::IMessage<LocationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2587,6 +2594,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A `Property` consists of a user-supplied name/value pair.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2862,6 +2870,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of detected entity features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityAnnotation : pb::IMessage<EntityAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3382,6 +3391,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of detected objects with bounding boxes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalizedObjectAnnotation : pb::IMessage<LocalizedObjectAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3750,6 +3760,7 @@ namespace Google.Cloud.Vision.V1 {
   /// methods over safe-search verticals (for example, adult, spoof, medical,
   /// violence).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SafeSearchAnnotation : pb::IMessage<SafeSearchAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4112,6 +4123,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Rectangle determined by min and max `LatLng` pairs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LatLongRect : pb::IMessage<LatLongRect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4366,6 +4378,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Color information consists of RGB channels, score, and the fraction of
   /// the image that the color occupies in the image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4651,6 +4664,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of dominant colors and their corresponding scores.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DominantColorsAnnotation : pb::IMessage<DominantColorsAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4835,6 +4849,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Stores image properties, such as dominant colors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageProperties : pb::IMessage<ImageProperties>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5039,6 +5054,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Single crop hint that is used to generate a new crop when serving an image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHint : pb::IMessage<CropHint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5325,6 +5341,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of crop hints that are used to generate new crops when serving images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHintsAnnotation : pb::IMessage<CropHintsAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5509,6 +5526,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for crop hints annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHintsParams : pb::IMessage<CropHintsParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5700,6 +5718,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for web detection request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebDetectionParams : pb::IMessage<WebDetectionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5896,6 +5915,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Parameters for text detections. This is used to control TEXT_DETECTION and
   /// DOCUMENT_TEXT_DETECTION features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextDetectionParams : pb::IMessage<TextDetectionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6122,6 +6142,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Image context and/or feature-specific parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageContext : pb::IMessage<ImageContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6559,6 +6580,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Request for performing Google Cloud Vision API tasks over a user-provided
   /// image, with user-requested features, and with context information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateImageRequest : pb::IMessage<AnnotateImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6842,6 +6864,7 @@ namespace Google.Cloud.Vision.V1 {
   /// If an image was produced from a file (e.g. a PDF), this message gives
   /// information about the source of that image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageAnnotationContext : pb::IMessage<ImageAnnotationContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7078,6 +7101,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateImageResponse : pb::IMessage<AnnotateImageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7806,6 +7830,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Multiple image annotation requests are batched into a single service call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateImagesRequest : pb::IMessage<BatchAnnotateImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8041,6 +8066,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to a batch image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateImagesResponse : pb::IMessage<BatchAnnotateImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8225,6 +8251,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A request to annotate one single file, e.g. a PDF, TIFF or GIF file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateFileRequest : pb::IMessage<AnnotateFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8552,6 +8579,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Response to a single file annotation request. A file may contain one or more
   /// images, which individually have their own responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateFileResponse : pb::IMessage<AnnotateFileResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8876,6 +8904,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A list of requests to annotate files using the BatchAnnotateFiles API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateFilesRequest : pb::IMessage<BatchAnnotateFilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9112,6 +9141,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A list of file annotation responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateFilesResponse : pb::IMessage<BatchAnnotateFilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9297,6 +9327,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// An offline file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncAnnotateFileRequest : pb::IMessage<AsyncAnnotateFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9628,6 +9659,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The response for a single offline file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncAnnotateFileResponse : pb::IMessage<AsyncAnnotateFileResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9832,6 +9864,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request for async image annotation for a list of images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateImagesRequest : pb::IMessage<AsyncBatchAnnotateImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10116,6 +10149,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an async batch image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateImagesResponse : pb::IMessage<AsyncBatchAnnotateImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10321,6 +10355,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Multiple async file annotation requests are batched into a single service
   /// call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateFilesRequest : pb::IMessage<AsyncBatchAnnotateFilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10556,6 +10591,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an async batch file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateFilesResponse : pb::IMessage<AsyncBatchAnnotateFilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10741,6 +10777,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The desired input location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11031,6 +11068,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The desired output location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11285,6 +11323,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the input will be read from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11481,6 +11520,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output will be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11697,6 +11737,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Contains metadata for the BatchAnnotateImages operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -69,6 +69,7 @@ namespace Google.Apps.Script.Type.Gmail {
   /// <summary>
   /// Properties customizing the appearance and execution of a Gmail add-on.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GmailAddOnManifest : pb::IMessage<GmailAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -438,6 +439,7 @@ namespace Google.Apps.Script.Type.Gmail {
   /// An action that is always available in the add-on toolbar menu regardless of
   /// message context.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UniversalAction : pb::IMessage<UniversalAction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -777,6 +779,7 @@ namespace Google.Apps.Script.Type.Gmail {
   /// <summary>
   /// A trigger that activates when user is composing an email.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComposeTrigger : pb::IMessage<ComposeTrigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1033,6 +1036,7 @@ namespace Google.Apps.Script.Type.Gmail {
   /// When the trigger fires, it executes a specific endpoint, usually
   /// in order to create new cards and update the UI.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContextualTrigger : pb::IMessage<ContextualTrigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1312,6 +1316,7 @@ namespace Google.Apps.Script.Type.Gmail {
   /// <summary>
   /// A trigger that fires when any email message is opened.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UnconditionalTrigger : pb::IMessage<UnconditionalTrigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

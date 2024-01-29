@@ -318,6 +318,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Type of information detected by the API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InfoType : pb::IMessage<InfoType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -608,6 +609,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Score is calculated from of all elements in the data profile.
   /// A higher level means the data is more sensitive.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SensitivityScore : pb::IMessage<SensitivityScore>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -840,6 +842,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A reference to a StoredInfoType to use with scanning.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StoredType : pb::IMessage<StoredType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1088,6 +1091,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Custom information type provided by the user. Used to find domain-specific
   /// sensitive information configurable to the data in question.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomInfoType : pb::IMessage<CustomInfoType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1754,6 +1758,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// these constraints, consider using `LargeCustomDictionaryConfig` in the
       /// `StoredInfoType` API.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Dictionary : pb::IMessage<Dictionary>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2052,6 +2057,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// Message defining a list of words or phrases to search for in the data.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class WordList : pb::IMessage<WordList>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2243,6 +2249,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Message defining a custom regular expression.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Regex : pb::IMessage<Regex>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2479,6 +2486,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// transformation such as `surrogate_info_type`. This CustomInfoType does
       /// not support the use of `detection_rules`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SurrogateType : pb::IMessage<SurrogateType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2637,6 +2645,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// on the specific details of the rule. Not supported for the `surrogate_type`
       /// custom infoType.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectionRule : pb::IMessage<DetectionRule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2879,6 +2888,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// Message for specifying a window around a finding to apply a detection
           /// rule.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Proximity : pb::IMessage<Proximity>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3119,6 +3129,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// Message for specifying an adjustment to the likelihood of a finding as
           /// part of a detection rule.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class LikelihoodAdjustment : pb::IMessage<LikelihoodAdjustment>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3425,6 +3436,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// The rule that adjusts the likelihood of findings within a certain
           /// proximity of hotwords.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class HotwordRule : pb::IMessage<HotwordRule>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3749,6 +3761,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// General identifier of a data field in a storage service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldId : pb::IMessage<FieldId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3949,6 +3962,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// A partition ID contains several dimensions:
   /// project ID and namespace ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartitionId : pb::IMessage<PartitionId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4184,6 +4198,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A representation of a Datastore kind.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KindExpression : pb::IMessage<KindExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4379,6 +4394,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Options defining a data set within Google Cloud Datastore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreOptions : pb::IMessage<DatastoreOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4664,6 +4680,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// include all files directly under `gs://mybucket/directory/`, without matching
   /// across `/`
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageRegexFileSet : pb::IMessage<CloudStorageRegexFileSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4932,6 +4949,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Options defining a file or a set of files within a Cloud Storage
   /// bucket.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageOptions : pb::IMessage<CloudStorageOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5366,6 +5384,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Set of files to scan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FileSet : pb::IMessage<FileSet>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5625,6 +5644,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message representing a set of files in Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageFileSet : pb::IMessage<CloudStorageFileSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5821,6 +5841,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message representing a single file or path in Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStoragePath : pb::IMessage<CloudStoragePath>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6017,6 +6038,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Options defining BigQuery table and row identifiers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryOptions : pb::IMessage<BigQueryOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6470,6 +6492,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Shared message indicating Cloud storage type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StorageConfig : pb::IMessage<StorageConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6926,6 +6949,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// Configuration of the timespan of the items to include in scanning.
       /// Currently only supported when inspecting Cloud Storage and BigQuery.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimespanConfig : pb::IMessage<TimespanConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7313,6 +7337,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Configuration to control jobs where the content being inspected is outside
   /// of Google Cloud Platform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HybridOptions : pb::IMessage<HybridOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7636,6 +7661,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Row key for identifying a record in BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryKey : pb::IMessage<BigQueryKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7884,6 +7910,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Record key for a finding in Cloud Datastore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreKey : pb::IMessage<DatastoreKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8091,6 +8118,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// reserved/read-only, the key is reserved/read-only.
   /// A reserved/read-only key is forbidden in certain documented contexts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Key : pb::IMessage<Key>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8340,6 +8368,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// If either name or ID is set, the element is complete.
       /// If neither is set, the element is incomplete.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PathElement : pb::IMessage<PathElement>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8689,6 +8718,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message for a unique key indicating a record that contains a finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecordKey : pb::IMessage<RecordKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9011,6 +9041,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// `&lt;project_id>:&lt;dataset_id>.&lt;table_id>` or
   /// `&lt;project_id>.&lt;dataset_id>.&lt;table_id>`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryTable : pb::IMessage<BigQueryTable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9287,6 +9318,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message defining a field of a BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryField : pb::IMessage<BigQueryField>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9544,6 +9576,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// identifier. This message is used when generalizations or analysis must take
   /// into account that multiple rows correspond to the same entity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityId : pb::IMessage<EntityId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9748,6 +9781,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Instructions regarding the table content being inspected.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableOptions : pb::IMessage<TableOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

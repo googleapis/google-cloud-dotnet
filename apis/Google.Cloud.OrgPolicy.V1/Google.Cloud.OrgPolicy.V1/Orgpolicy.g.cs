@@ -62,6 +62,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
   /// Defines a Cloud Organization `Policy` which is used to specify `Constraints`
   /// for configurations of Cloud Platform resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -625,6 +626,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
       /// values. If `all_values` is set to either `ALLOW` or `DENY`,
       /// `allowed_values` and `denied_values` must be unset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ListPolicy : pb::IMessage<ListPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1094,6 +1096,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
       /// Used in `policy_type` to specify how `boolean_policy` will behave at this
       /// resource.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BooleanPolicy : pb::IMessage<BooleanPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1343,6 +1346,7 @@ namespace Google.Cloud.OrgPolicy.V1 {
       /// enforcement of the `Constraint` for only those projects, allowing those
       /// projects to have all services activated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RestoreDefault : pb::IMessage<RestoreDefault>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -48,6 +48,7 @@ namespace Google.Maps.Routing.V2 {
   /// Encapsulates navigation instructions for a
   /// [RouteLegStep][google.maps.routing.v2.RouteLegStep]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NavigationInstruction : pb::IMessage<NavigationInstruction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

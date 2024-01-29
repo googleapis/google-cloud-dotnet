@@ -54,6 +54,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Annotation for identifying spans of text.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextExtractionAnnotation : pb::IMessage<TextExtractionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -334,6 +335,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model evaluation metrics for text extraction problems.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextExtractionEvaluationMetrics : pb::IMessage<TextExtractionEvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -562,6 +564,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Metrics for a single confidence threshold.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

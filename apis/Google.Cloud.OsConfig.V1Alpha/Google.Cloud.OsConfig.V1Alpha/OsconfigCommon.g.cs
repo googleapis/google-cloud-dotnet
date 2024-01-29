@@ -47,6 +47,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Message encapsulating a value that can be either absolute ("fixed") or
   /// relative ("percent") to a value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FixedOrPercent : pb::IMessage<FixedOrPercent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

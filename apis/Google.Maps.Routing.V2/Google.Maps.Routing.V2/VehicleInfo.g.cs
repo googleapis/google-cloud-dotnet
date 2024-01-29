@@ -47,6 +47,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Contains the vehicle information, such as the vehicle emission type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VehicleInfo : pb::IMessage<VehicleInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

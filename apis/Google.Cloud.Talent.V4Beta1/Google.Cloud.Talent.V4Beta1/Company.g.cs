@@ -27,25 +27,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGihn",
-            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIoAFCgdD",
-            "b21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPg",
-            "QQISGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAhI2CgRzaXplGAQgASgOMigu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBhbnlTaXplEhwKFGhl",
-            "YWRxdWFydGVyc19hZGRyZXNzGAUgASgJEhUKDWhpcmluZ19hZ2VuY3kYBiAB",
-            "KAgSEAoIZWVvX3RleHQYByABKAkSEwoLd2Vic2l0ZV91cmkYCCABKAkSFwoP",
-            "Y2FyZWVyX3NpdGVfdXJpGAkgASgJEhEKCWltYWdlX3VyaRgKIAEoCRI0Cihr",
-            "ZXl3b3JkX3NlYXJjaGFibGVfam9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsgAygJ",
-            "QgIYARJLCgxkZXJpdmVkX2luZm8YDCABKAsyMC5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuQ29tcGFueS5EZXJpdmVkSW5mb0ID4EEDEhYKCXN1c3Bl",
-            "bmRlZBgNIAEoCEID4EEDGlMKC0Rlcml2ZWRJbmZvEkQKFWhlYWRxdWFydGVy",
-            "c19sb2NhdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Mb2NhdGlvbjqBAepBfgobam9icy5nb29nbGVhcGlzLmNvbS9Db21wYW55",
-            "Ejdwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50cy97dGVuYW50fS9jb21wYW5p",
-            "ZXMve2NvbXBhbnl9EiZwcm9qZWN0cy97cHJvamVjdH0vY29tcGFuaWVzL3tj",
-            "b21wYW55fUJ4Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhRD",
-            "b21wYW55UmVzb3VyY2VQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL3Rh",
-            "bGVudC9hcGl2NGJldGExL3RhbGVudHBiO3RhbGVudHBiogIDQ1RTYgZwcm90",
-            "bzM="));
+            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvIoQFCgdD",
+            "b21wYW55EgwKBG5hbWUYASABKAkSGgoMZGlzcGxheV9uYW1lGAIgASgJQgTi",
+            "QQECEhkKC2V4dGVybmFsX2lkGAMgASgJQgTiQQECEjYKBHNpemUYBCABKA4y",
+            "KC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueVNpemUSHAoU",
+            "aGVhZHF1YXJ0ZXJzX2FkZHJlc3MYBSABKAkSFQoNaGlyaW5nX2FnZW5jeRgG",
+            "IAEoCBIQCghlZW9fdGV4dBgHIAEoCRITCgt3ZWJzaXRlX3VyaRgIIAEoCRIX",
+            "Cg9jYXJlZXJfc2l0ZV91cmkYCSABKAkSEQoJaW1hZ2VfdXJpGAogASgJEjQK",
+            "KGtleXdvcmRfc2VhcmNoYWJsZV9qb2JfY3VzdG9tX2F0dHJpYnV0ZXMYCyAD",
+            "KAlCAhgBEkwKDGRlcml2ZWRfaW5mbxgMIAEoCzIwLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Db21wYW55LkRlcml2ZWRJbmZvQgTiQQEDEhcKCXN1",
+            "c3BlbmRlZBgNIAEoCEIE4kEBAxpTCgtEZXJpdmVkSW5mbxJEChVoZWFkcXVh",
+            "cnRlcnNfbG9jYXRpb24YASABKAsyJS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuTG9jYXRpb246gQHqQX4KG2pvYnMuZ29vZ2xlYXBpcy5jb20vQ29t",
+            "cGFueRI3cHJvamVjdHMve3Byb2plY3R9L3RlbmFudHMve3RlbmFudH0vY29t",
+            "cGFuaWVzL3tjb21wYW55fRImcHJvamVjdHMve3Byb2plY3R9L2NvbXBhbmll",
+            "cy97Y29tcGFueX1CeAofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MUIUQ29tcGFueVJlc291cmNlUHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by90YWxlbnQvYXBpdjRiZXRhMS90YWxlbnRwYjt0YWxlbnRwYqICA0NUU2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// entity that owns job postings, that is, the hiring entity responsible for
   /// employing applicants for the job position.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Company : pb::IMessage<Company>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -779,6 +780,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Derived details about the company.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

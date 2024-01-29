@@ -28,29 +28,29 @@ namespace Google.Cloud.ApigeeConnect.V1 {
             "b3RvEh1nb29nbGUuY2xvdWQuYXBpZ2VlY29ubmVjdC52MRocZ29vZ2xlL2Fw",
             "aS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8a",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8ifgoWTGlzdENvbm5lY3Rpb25zUmVxdWVzdBI9CgZw",
-            "YXJlbnQYASABKAlCLeBBAvpBJwolYXBpZ2VlY29ubmVjdC5nb29nbGVhcGlz",
-            "LmNvbS9FbmRwb2ludBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
-            "bhgDIAEoCSJyChdMaXN0Q29ubmVjdGlvbnNSZXNwb25zZRI+Cgtjb25uZWN0",
-            "aW9ucxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5hcGlnZWVjb25uZWN0LnYxLkNv",
-            "bm5lY3Rpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIm0KCkNvbm5lY3Rp",
-            "b24SEAoIZW5kcG9pbnQYASABKAkSNwoHY2x1c3RlchgCIAEoCzImLmdvb2ds",
-            "ZS5jbG91ZC5hcGlnZWVjb25uZWN0LnYxLkNsdXN0ZXISFAoMc3RyZWFtX2Nv",
-            "dW50GAMgASgFIicKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRIOCgZyZWdpb24Y",
-            "AiABKAkyqgIKEUNvbm5lY3Rpb25TZXJ2aWNlEsIBCg9MaXN0Q29ubmVjdGlv",
-            "bnMSNS5nb29nbGUuY2xvdWQuYXBpZ2VlY29ubmVjdC52MS5MaXN0Q29ubmVj",
-            "dGlvbnNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmFwaWdlZWNvbm5lY3QudjEu",
-            "TGlzdENvbm5lY3Rpb25zUmVzcG9uc2UiQILT5JMCMRIvL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9lbmRwb2ludHMvKn0vY29ubmVjdGlvbnPaQQZwYXJlbnQa",
-            "UMpBHGFwaWdlZWNvbm5lY3QuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrUCCiFjb20u",
-            "Z29vZ2xlLmNsb3VkLmFwaWdlZWNvbm5lY3QudjFCD0Nvbm5lY3Rpb25Qcm90",
-            "b1ABWkdjbG91ZC5nb29nbGUuY29tL2dvL2FwaWdlZWNvbm5lY3QvYXBpdjEv",
-            "YXBpZ2VlY29ubmVjdHBiO2FwaWdlZWNvbm5lY3RwYqoCHUdvb2dsZS5DbG91",
-            "ZC5BcGlnZWVDb25uZWN0LlYxygIdR29vZ2xlXENsb3VkXEFwaWdlZUNvbm5l",
-            "Y3RcVjHqAiBHb29nbGU6OkNsb3VkOjpBcGlnZWVDb25uZWN0OjpWMepBUAol",
-            "YXBpZ2VlY29ubmVjdC5nb29nbGVhcGlzLmNvbS9FbmRwb2ludBIncHJvamVj",
-            "dHMve3Byb2plY3R9L2VuZHBvaW50cy97ZW5kcG9pbnR9YgZwcm90bzM="));
+            "cmVzb3VyY2UucHJvdG8ifwoWTGlzdENvbm5lY3Rpb25zUmVxdWVzdBI+CgZw",
+            "YXJlbnQYASABKAlCLuJBAQL6QScKJWFwaWdlZWNvbm5lY3QuZ29vZ2xlYXBp",
+            "cy5jb20vRW5kcG9pbnQSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9r",
+            "ZW4YAyABKAkicgoXTGlzdENvbm5lY3Rpb25zUmVzcG9uc2USPgoLY29ubmVj",
+            "dGlvbnMYASADKAsyKS5nb29nbGUuY2xvdWQuYXBpZ2VlY29ubmVjdC52MS5D",
+            "b25uZWN0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJtCgpDb25uZWN0",
+            "aW9uEhAKCGVuZHBvaW50GAEgASgJEjcKB2NsdXN0ZXIYAiABKAsyJi5nb29n",
+            "bGUuY2xvdWQuYXBpZ2VlY29ubmVjdC52MS5DbHVzdGVyEhQKDHN0cmVhbV9j",
+            "b3VudBgDIAEoBSInCgdDbHVzdGVyEgwKBG5hbWUYASABKAkSDgoGcmVnaW9u",
+            "GAIgASgJMqoCChFDb25uZWN0aW9uU2VydmljZRLCAQoPTGlzdENvbm5lY3Rp",
+            "b25zEjUuZ29vZ2xlLmNsb3VkLmFwaWdlZWNvbm5lY3QudjEuTGlzdENvbm5l",
+            "Y3Rpb25zUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5hcGlnZWVjb25uZWN0LnYx",
+            "Lkxpc3RDb25uZWN0aW9uc1Jlc3BvbnNlIkDaQQZwYXJlbnSC0+STAjESLy92",
+            "MS97cGFyZW50PXByb2plY3RzLyovZW5kcG9pbnRzLyp9L2Nvbm5lY3Rpb25z",
+            "GlDKQRxhcGlnZWVjb25uZWN0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK1AgohY29t",
+            "Lmdvb2dsZS5jbG91ZC5hcGlnZWVjb25uZWN0LnYxQg9Db25uZWN0aW9uUHJv",
+            "dG9QAVpHY2xvdWQuZ29vZ2xlLmNvbS9nby9hcGlnZWVjb25uZWN0L2FwaXYx",
+            "L2FwaWdlZWNvbm5lY3RwYjthcGlnZWVjb25uZWN0cGKqAh1Hb29nbGUuQ2xv",
+            "dWQuQXBpZ2VlQ29ubmVjdC5WMcoCHUdvb2dsZVxDbG91ZFxBcGlnZWVDb25u",
+            "ZWN0XFYx6gIgR29vZ2xlOjpDbG91ZDo6QXBpZ2VlQ29ubmVjdDo6VjHqQVAK",
+            "JWFwaWdlZWNvbm5lY3QuZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSJ3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9lbmRwb2ludHMve2VuZHBvaW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,6 +67,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The request for [ListConnections][Management.ListConnections].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsRequest : pb::IMessage<ListConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -350,6 +351,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// The response for
   /// [ListConnections][Management.ListConnections].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsResponse : pb::IMessage<ListConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -572,6 +574,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Connection : pb::IMessage<Connection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -854,6 +857,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cluster : pb::IMessage<Cluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

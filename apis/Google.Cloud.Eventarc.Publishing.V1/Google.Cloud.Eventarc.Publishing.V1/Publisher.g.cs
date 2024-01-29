@@ -70,6 +70,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
   /// <summary>
   /// The request message for the PublishChannelConnectionEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PublishChannelConnectionEventsRequest : pb::IMessage<PublishChannelConnectionEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -329,6 +330,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
   /// <summary>
   /// The response message for the PublishChannelConnectionEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PublishChannelConnectionEventsResponse : pb::IMessage<PublishChannelConnectionEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -484,6 +486,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
   /// <summary>
   /// The request message for the PublishEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PublishEventsRequest : pb::IMessage<PublishEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -743,6 +746,7 @@ namespace Google.Cloud.Eventarc.Publishing.V1 {
   /// <summary>
   /// The response message for the PublishEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PublishEventsResponse : pb::IMessage<PublishEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

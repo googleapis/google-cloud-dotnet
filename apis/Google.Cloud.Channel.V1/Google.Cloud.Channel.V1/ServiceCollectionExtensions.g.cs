@@ -38,6 +38,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddCloudChannelReportsServiceClient(this IServiceCollection services, sys::Action<gccv::CloudChannelReportsServiceClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {

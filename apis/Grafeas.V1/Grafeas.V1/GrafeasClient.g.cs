@@ -347,14 +347,14 @@ namespace Grafeas.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GrafeasClient.Create(callInvoker, Settings, Logger);
+            return GrafeasClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<GrafeasClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GrafeasClient.Create(callInvoker, Settings, Logger);
+            return GrafeasClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
     }
 

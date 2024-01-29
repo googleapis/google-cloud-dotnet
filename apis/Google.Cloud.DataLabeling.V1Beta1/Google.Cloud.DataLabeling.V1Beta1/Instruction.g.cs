@@ -63,6 +63,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Instruction of how to perform the labeling task for human operators.
   /// Currently only PDF instruction is supported.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instruction : pb::IMessage<Instruction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -614,6 +615,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Deprecated: this instruction format is not supported any more.
   /// Instruction from a CSV file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CsvInstruction : pb::IMessage<CsvInstruction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -809,6 +811,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Instruction from a PDF file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PdfInstruction : pb::IMessage<PdfInstruction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

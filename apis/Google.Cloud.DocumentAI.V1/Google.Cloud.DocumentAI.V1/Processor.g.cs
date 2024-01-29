@@ -29,7 +29,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjBn",
             "b29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MS9kb2N1bWVudF9zY2hlbWEucHJv",
             "dG8aK2dvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxL2V2YWx1YXRpb24ucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itQcKEFByb2Nl",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8itgcKEFByb2Nl",
             "c3NvclZlcnNpb24SDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiAB",
             "KAkSQwoPZG9jdW1lbnRfc2NoZW1hGAwgASgLMiouZ29vZ2xlLmNsb3VkLmRv",
             "Y3VtZW50YWkudjEuRG9jdW1lbnRTY2hlbWESQQoFc3RhdGUYBiABKA4yMi5n",
@@ -38,41 +38,41 @@ namespace Google.Cloud.DocumentAI.V1 {
             "bWVzdGFtcBJKChFsYXRlc3RfZXZhbHVhdGlvbhgIIAEoCzIvLmdvb2dsZS5j",
             "bG91ZC5kb2N1bWVudGFpLnYxLkV2YWx1YXRpb25SZWZlcmVuY2USFAoMa21z",
             "X2tleV9uYW1lGAkgASgJEhwKFGttc19rZXlfdmVyc2lvbl9uYW1lGAogASgJ",
-            "EhsKDmdvb2dsZV9tYW5hZ2VkGAsgASgIQgPgQQMSVgoQZGVwcmVjYXRpb25f",
-            "aW5mbxgNIAEoCzI8Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLlByb2Nl",
-            "c3NvclZlcnNpb24uRGVwcmVjYXRpb25JbmZvGp8BCg9EZXByZWNhdGlvbklu",
-            "Zm8SNAoQZGVwcmVjYXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASVgodcmVwbGFjZW1lbnRfcHJvY2Vzc29yX3ZlcnNpb24Y",
-            "AiABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNz",
-            "b3JWZXJzaW9uIpMBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
-            "CERFUExPWUVEEAESDQoJREVQTE9ZSU5HEAISDgoKVU5ERVBMT1lFRBADEg8K",
-            "C1VOREVQTE9ZSU5HEAQSDAoIQ1JFQVRJTkcQBRIMCghERUxFVElORxAGEgoK",
-            "BkZBSUxFRBAHEg0KCUlNUE9SVElORxAIOpYB6kGSAQoqZG9jdW1lbnRhaS5n",
-            "b29nbGVhcGlzLmNvbS9Qcm9jZXNzb3JWZXJzaW9uEmRwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vz",
-            "c29yfS9wcm9jZXNzb3JWZXJzaW9ucy97cHJvY2Vzc29yX3ZlcnNpb259InIK",
-            "FVByb2Nlc3NvclZlcnNpb25BbGlhcxINCgVhbGlhcxgBIAEoCRJKChFwcm9j",
-            "ZXNzb3JfdmVyc2lvbhgCIAEoCUIv+kEsCipkb2N1bWVudGFpLmdvb2dsZWFw",
-            "aXMuY29tL1Byb2Nlc3NvclZlcnNpb24iiAUKCVByb2Nlc3NvchIUCgRuYW1l",
-            "GAEgASgJQgbgQQXgQQMSDAoEdHlwZRgCIAEoCRIUCgxkaXNwbGF5X25hbWUY",
-            "AyABKAkSPwoFc3RhdGUYBCABKA4yKy5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MS5Qcm9jZXNzb3IuU3RhdGVCA+BBAxJSChlkZWZhdWx0X3Byb2Nlc3Nv",
-            "cl92ZXJzaW9uGAkgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5j",
-            "b20vUHJvY2Vzc29yVmVyc2lvbhJZChlwcm9jZXNzb3JfdmVyc2lvbl9hbGlh",
-            "c2VzGAogAygLMjEuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjEuUHJvY2Vz",
-            "c29yVmVyc2lvbkFsaWFzQgPgQQMSIAoQcHJvY2Vzc19lbmRwb2ludBgGIAEo",
-            "CUIG4EED4EEFEi8KC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIUCgxrbXNfa2V5X25hbWUYCCABKAkifgoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJM",
-            "RUQQAhIMCghFTkFCTElORxADEg0KCURJU0FCTElORxAEEgwKCENSRUFUSU5H",
-            "EAUSCgoGRkFJTEVEEAYSDAoIREVMRVRJTkcQBzpo6kFlCiNkb2N1bWVudGFp",
-            "Lmdvb2dsZWFwaXMuY29tL1Byb2Nlc3NvchI+cHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3Byb2Nlc3Nvcn1C",
-            "0QEKHmNvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MUITRG9jdW1lbnRB",
-            "aVByb2Nlc3NvclABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkv",
-            "YXBpdjEvZG9jdW1lbnRhaXBiO2RvY3VtZW50YWlwYqoCGkdvb2dsZS5DbG91",
-            "ZC5Eb2N1bWVudEFJLlYxygIaR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjHq",
-            "Ah1Hb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWIGcHJvdG8z"));
+            "EhwKDmdvb2dsZV9tYW5hZ2VkGAsgASgIQgTiQQEDElYKEGRlcHJlY2F0aW9u",
+            "X2luZm8YDSABKAsyPC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MS5Qcm9j",
+            "ZXNzb3JWZXJzaW9uLkRlcHJlY2F0aW9uSW5mbxqfAQoPRGVwcmVjYXRpb25J",
+            "bmZvEjQKEGRlcHJlY2F0aW9uX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wElYKHXJlcGxhY2VtZW50X3Byb2Nlc3Nvcl92ZXJzaW9u",
+            "GAIgASgJQi/6QSwKKmRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb20vUHJvY2Vz",
+            "c29yVmVyc2lvbiKTAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIM",
+            "CghERVBMT1lFRBABEg0KCURFUExPWUlORxACEg4KClVOREVQTE9ZRUQQAxIP",
+            "CgtVTkRFUExPWUlORxAEEgwKCENSRUFUSU5HEAUSDAoIREVMRVRJTkcQBhIK",
+            "CgZGQUlMRUQQBxINCglJTVBPUlRJTkcQCDqWAepBkgEKKmRvY3VtZW50YWku",
+            "Z29vZ2xlYXBpcy5jb20vUHJvY2Vzc29yVmVyc2lvbhJkcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3NvcnMve3Byb2Nl",
+            "c3Nvcn0vcHJvY2Vzc29yVmVyc2lvbnMve3Byb2Nlc3Nvcl92ZXJzaW9ufSJy",
+            "ChVQcm9jZXNzb3JWZXJzaW9uQWxpYXMSDQoFYWxpYXMYASABKAkSSgoRcHJv",
+            "Y2Vzc29yX3ZlcnNpb24YAiABKAlCL/pBLAoqZG9jdW1lbnRhaS5nb29nbGVh",
+            "cGlzLmNvbS9Qcm9jZXNzb3JWZXJzaW9uIogFCglQcm9jZXNzb3ISEwoEbmFt",
+            "ZRgBIAEoCUIF4kECBQMSDAoEdHlwZRgCIAEoCRIUCgxkaXNwbGF5X25hbWUY",
+            "AyABKAkSQAoFc3RhdGUYBCABKA4yKy5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MS5Qcm9jZXNzb3IuU3RhdGVCBOJBAQMSUgoZZGVmYXVsdF9wcm9jZXNz",
+            "b3JfdmVyc2lvbhgJIAEoCUIv+kEsCipkb2N1bWVudGFpLmdvb2dsZWFwaXMu",
+            "Y29tL1Byb2Nlc3NvclZlcnNpb24SWgoZcHJvY2Vzc29yX3ZlcnNpb25fYWxp",
+            "YXNlcxgKIAMoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxLlByb2Nl",
+            "c3NvclZlcnNpb25BbGlhc0IE4kEBAxIfChBwcm9jZXNzX2VuZHBvaW50GAYg",
+            "ASgJQgXiQQIDBRIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASFAoMa21zX2tleV9uYW1lGAggASgJIn4KBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FC",
+            "TEVEEAISDAoIRU5BQkxJTkcQAxINCglESVNBQkxJTkcQBBIMCghDUkVBVElO",
+            "RxAFEgoKBkZBSUxFRBAGEgwKCERFTEVUSU5HEAc6aOpBZQojZG9jdW1lbnRh",
+            "aS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzb3ISPnByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9",
+            "QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFCE0RvY3VtZW50",
+            "QWlQcm9jZXNzb3JQAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kb2N1bWVudGFp",
+            "L2FwaXYxL2RvY3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAhpHb29nbGUuQ2xv",
+            "dWQuRG9jdW1lbnRBSS5WMcoCGkdvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.DocumentSchemaReflection.Descriptor, global::Google.Cloud.DocumentAI.V1.EvaluationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,6 +91,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// by the customer. A processor can only have one default version at a time.
   /// Its document-processing behavior is defined by that version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessorVersion : pb::IMessage<ProcessorVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -729,6 +730,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Information about the upcoming deprecation of this processor version.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeprecationInfo : pb::IMessage<DeprecationInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -978,6 +980,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Contains the alias and the aliased resource name of processor version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessorVersionAlias : pb::IMessage<ProcessorVersionAlias>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1214,6 +1217,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// The first-class citizen for Document AI. Each processor defines how to
   /// extract structural information from a document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Processor : pb::IMessage<Processor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

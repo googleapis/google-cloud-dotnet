@@ -49,6 +49,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Avro schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AvroSchema : pb::IMessage<AvroSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -245,6 +246,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Avro rows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AvroRows : pb::IMessage<AvroRows>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -482,6 +484,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Contains options specific to Avro Serialization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AvroSerializationOptions : pb::IMessage<AvroSerializationOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

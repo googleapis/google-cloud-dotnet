@@ -27,21 +27,22 @@ namespace Google.Cloud.Eventarc.V1 {
             "CjFnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvY2hhbm5lbF9jb25uZWN0aW9u",
             "LnByb3RvEhhnb29nbGUuY2xvdWQuZXZlbnRhcmMudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipwMKEUNoYW5u",
-            "ZWxDb25uZWN0aW9uEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1aWQYAiABKAlC",
-            "A+BBAxI4CgdjaGFubmVsGAUgASgJQifgQQL6QSEKH2V2ZW50YXJjLmdvb2ds",
-            "ZWFwaXMuY29tL0NoYW5uZWwSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHQoQYWN0aXZh",
-            "dGlvbl90b2tlbhgIIAEoCUID4EEEOqcB6kGjAQopZXZlbnRhcmMuZ29vZ2xl",
-            "YXBpcy5jb20vQ2hhbm5lbENvbm5lY3Rpb24ST3Byb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jaGFubmVsQ29ubmVjdGlvbnMve2No",
-            "YW5uZWxfY29ubmVjdGlvbn0qEmNoYW5uZWxDb25uZWN0aW9uczIRY2hhbm5l",
-            "bENvbm5lY3Rpb25CxgEKHGNvbS5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjFC",
-            "FkNoYW5uZWxDb25uZWN0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9ldmVudGFyYy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKqAhhHb29n",
-            "bGUuQ2xvdWQuRXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNc",
-            "VjHqAhtHb29nbGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8irQMKEUNoYW5u",
+            "ZWxDb25uZWN0aW9uEhIKBG5hbWUYASABKAlCBOJBAQISEQoDdWlkGAIgASgJ",
+            "QgTiQQEDEjkKB2NoYW5uZWwYBSABKAlCKOJBAQL6QSEKH2V2ZW50YXJjLmdv",
+            "b2dsZWFwaXMuY29tL0NoYW5uZWwSNQoLY3JlYXRlX3RpbWUYBiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1l",
+            "GAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIeChBh",
+            "Y3RpdmF0aW9uX3Rva2VuGAggASgJQgTiQQEEOqcB6kGjAQopZXZlbnRhcmMu",
+            "Z29vZ2xlYXBpcy5jb20vQ2hhbm5lbENvbm5lY3Rpb24ST3Byb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jaGFubmVsQ29ubmVjdGlv",
+            "bnMve2NoYW5uZWxfY29ubmVjdGlvbn0qEmNoYW5uZWxDb25uZWN0aW9uczIR",
+            "Y2hhbm5lbENvbm5lY3Rpb25CxgEKHGNvbS5nb29nbGUuY2xvdWQuZXZlbnRh",
+            "cmMudjFCFkNoYW5uZWxDb25uZWN0aW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9ldmVudGFyYy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKq",
+            "AhhHb29nbGUuQ2xvdWQuRXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZl",
+            "bnRhcmNcVjHqAhtHb29nbGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -58,6 +59,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// activation process to establish a connection between the provider and the
   /// subscriber channel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChannelConnection : pb::IMessage<ChannelConnection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

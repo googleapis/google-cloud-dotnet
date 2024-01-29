@@ -28,28 +28,28 @@ namespace Google.Cloud.Recommender.V1 {
             "bmZpZy5wcm90bxIbZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
             "cmNlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrEFChFJbnNpZ2h0VHlwZUNv",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrAFChFJbnNpZ2h0VHlwZUNv",
             "bmZpZxIMCgRuYW1lGAEgASgJEmAKHmluc2lnaHRfdHlwZV9nZW5lcmF0aW9u",
             "X2NvbmZpZxgCIAEoCzI4Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5J",
             "bnNpZ2h0VHlwZUdlbmVyYXRpb25Db25maWcSDAoEZXRhZxgDIAEoCRIvCgt1",
             "cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "GwoLcmV2aXNpb25faWQYBSABKAlCBuBBBeBBAxJUCgthbm5vdGF0aW9ucxgG",
-            "IAMoCzI/Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5JbnNpZ2h0VHlw",
-            "ZUNvbmZpZy5Bbm5vdGF0aW9uc0VudHJ5EhQKDGRpc3BsYXlfbmFtZRgHIAEo",
-            "CRoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAE6rwLqQasCCixyZWNvbW1lbmRlci5nb29nbGVhcGlzLmNvbS9J",
-            "bnNpZ2h0VHlwZUNvbmZpZxJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2luc2lnaHRUeXBlcy97aW5zaWdodF90eXBlfS9jb25m",
-            "aWcSVG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5cGV9L2NvbmZpZxJZ",
-            "YmlsbGluZ0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2luc2lnaHRUeXBlcy97aW5zaWdodF90eXBlfS9jb25maWci",
-            "RgobSW5zaWdodFR5cGVHZW5lcmF0aW9uQ29uZmlnEicKBnBhcmFtcxgBIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCowEKH2NvbS5nb29nbGUuY2xv",
-            "dWQucmVjb21tZW5kZXIudjFCFkluc2lnaHRUeXBlQ29uZmlnUHJvdG9QAVpB",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9yZWNvbW1lbmRlci9hcGl2MS9yZWNvbW1l",
-            "bmRlcnBiO3JlY29tbWVuZGVycGKiAgRDUkVDqgIbR29vZ2xlLkNsb3VkLlJl",
-            "Y29tbWVuZGVyLlYxYgZwcm90bzM="));
+            "GgoLcmV2aXNpb25faWQYBSABKAlCBeJBAgUDElQKC2Fubm90YXRpb25zGAYg",
+            "AygLMj8uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLkluc2lnaHRUeXBl",
+            "Q29uZmlnLkFubm90YXRpb25zRW50cnkSFAoMZGlzcGxheV9uYW1lGAcgASgJ",
+            "GjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ATqvAupBqwIKLHJlY29tbWVuZGVyLmdvb2dsZWFwaXMuY29tL0lu",
+            "c2lnaHRUeXBlQ29uZmlnEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5cGV9L2NvbmZp",
+            "ZxJUb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9pbnNpZ2h0VHlwZXMve2luc2lnaHRfdHlwZX0vY29uZmlnElli",
+            "aWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5cGV9L2NvbmZpZyJG",
+            "ChtJbnNpZ2h0VHlwZUdlbmVyYXRpb25Db25maWcSJwoGcGFyYW1zGAEgASgL",
+            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEKjAQofY29tLmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRlci52MUIWSW5zaWdodFR5cGVDb25maWdQcm90b1ABWkFj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3JlY29tbWVuZGVyL2FwaXYxL3JlY29tbWVu",
+            "ZGVycGI7cmVjb21tZW5kZXJwYqICBENSRUOqAhtHb29nbGUuQ2xvdWQuUmVj",
+            "b21tZW5kZXIuVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Configuration for an InsightType.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsightTypeConfig : pb::IMessage<InsightTypeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -522,6 +523,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// Eg, customizing the lookback period considered when generating a
   /// insight.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsightTypeGenerationConfig : pb::IMessage<InsightTypeGenerationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

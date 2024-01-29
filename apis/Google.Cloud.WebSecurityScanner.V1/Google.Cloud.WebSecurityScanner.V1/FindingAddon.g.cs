@@ -76,6 +76,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// ! Information about a vulnerability with an HTML.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Form : pb::IMessage<Form>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -300,6 +301,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Information reported for an outdated library.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutdatedLibrary : pb::IMessage<OutdatedLibrary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -565,6 +567,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// Information regarding any resource causing the vulnerability such
   /// as JavaScript sources, image, audio files, etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ViolatingResource : pb::IMessage<ViolatingResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -800,6 +803,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Information about vulnerable request parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VulnerableParameters : pb::IMessage<VulnerableParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -984,6 +988,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Information about vulnerable or missing HTTP Headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VulnerableHeaders : pb::IMessage<VulnerableHeaders>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1200,6 +1205,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Describes a HTTP Header.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Header : pb::IMessage<Header>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1440,6 +1446,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Information reported for an XSS.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Xss : pb::IMessage<Xss>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1823,6 +1830,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Information reported for an XXE.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Xxe : pb::IMessage<Xxe>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

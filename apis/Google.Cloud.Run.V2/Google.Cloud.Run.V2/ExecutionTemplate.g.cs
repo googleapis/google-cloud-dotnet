@@ -27,17 +27,17 @@ namespace Google.Cloud.Run.V2 {
             "Cixnb29nbGUvY2xvdWQvcnVuL3YyL2V4ZWN1dGlvbl90ZW1wbGF0ZS5wcm90",
             "bxITZ29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxonZ29vZ2xlL2Nsb3VkL3J1bi92Mi90YXNrX3RlbXBsYXRl",
-            "LnByb3RvIusCChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
+            "LnByb3RvIuwCChFFeGVjdXRpb25UZW1wbGF0ZRJCCgZsYWJlbHMYASADKAsy",
             "Mi5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvblRlbXBsYXRlLkxhYmVs",
             "c0VudHJ5EkwKC2Fubm90YXRpb25zGAIgAygLMjcuZ29vZ2xlLmNsb3VkLnJ1",
             "bi52Mi5FeGVjdXRpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0VudHJ5EhMKC3Bh",
-            "cmFsbGVsaXNtGAMgASgFEhIKCnRhc2tfY291bnQYBCABKAUSOAoIdGVtcGxh",
-            "dGUYBSABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tUZW1wbGF0ZUID",
-            "4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBQl4KF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhZFeGVj",
-            "dXRpb25UZW1wbGF0ZVByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vcnVu",
-            "L2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "cmFsbGVsaXNtGAMgASgFEhIKCnRhc2tfY291bnQYBCABKAUSOQoIdGVtcGxh",
+            "dGUYBSABKAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tUZW1wbGF0ZUIE",
+            "4kEBAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4AUJeChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIWRXhl",
+            "Y3V0aW9uVGVtcGxhdGVQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1",
+            "bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +52,7 @@ namespace Google.Cloud.Run.V2 {
   /// ExecutionTemplate describes the data an execution should have when created
   /// from a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionTemplate : pb::IMessage<ExecutionTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

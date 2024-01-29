@@ -50,6 +50,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Contains information about the IP connection associated with the finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Connection : pb::IMessage<Connection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

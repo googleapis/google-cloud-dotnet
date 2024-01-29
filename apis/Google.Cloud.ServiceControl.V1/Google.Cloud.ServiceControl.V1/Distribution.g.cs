@@ -69,6 +69,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// * the sum-squared-deviation of the samples, used to compute variance
   /// * a histogram of the values of the sample points
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Distribution : pb::IMessage<Distribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -696,6 +697,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// <summary>
       /// Describing buckets with constant width.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LinearBuckets : pb::IMessage<LinearBuckets>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -978,6 +980,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// <summary>
       /// Describing buckets with exponentially growing width.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExponentialBuckets : pb::IMessage<ExponentialBuckets>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1261,6 +1264,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// <summary>
       /// Describing buckets with arbitrary user-provided width.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExplicitBuckets : pb::IMessage<ExplicitBuckets>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

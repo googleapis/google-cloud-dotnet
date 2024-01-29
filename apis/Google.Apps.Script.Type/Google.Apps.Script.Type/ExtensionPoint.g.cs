@@ -53,6 +53,7 @@ namespace Google.Apps.Script.Type {
   /// Common format for declaring a  menu item, or button, that appears within a
   /// host app.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MenuItemExtensionPoint : pb::IMessage<MenuItemExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -332,6 +333,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// Common format for declaring an add-on's home-page view.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HomepageExtensionPoint : pb::IMessage<HomepageExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -581,6 +583,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// Format for declaring a universal action menu item extension point.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UniversalActionExtensionPoint : pb::IMessage<UniversalActionExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

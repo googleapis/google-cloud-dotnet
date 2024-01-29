@@ -29,25 +29,25 @@ namespace Google.Cloud.ServiceDirectory.V1 {
             "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xp",
             "ZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
             "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi5nb29nbGUvY2xvdWQvc2Vydmlj",
-            "ZWRpcmVjdG9yeS92MS9zZXJ2aWNlLnByb3RvIpABChVSZXNvbHZlU2Vydmlj",
-            "ZVJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCidzZXJ2aWNlZGlyZWN0",
-            "b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USGgoNbWF4X2VuZHBvaW50cxgC",
-            "IAEoBUID4EEBEhwKD2VuZHBvaW50X2ZpbHRlchgDIAEoCUID4EEBIlQKFlJl",
-            "c29sdmVTZXJ2aWNlUmVzcG9uc2USOgoHc2VydmljZRgBIAEoCzIpLmdvb2ds",
-            "ZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxLlNlcnZpY2UyuAIKDUxvb2t1",
-            "cFNlcnZpY2US0QEKDlJlc29sdmVTZXJ2aWNlEjcuZ29vZ2xlLmNsb3VkLnNl",
-            "cnZpY2VkaXJlY3RvcnkudjEuUmVzb2x2ZVNlcnZpY2VSZXF1ZXN0GjguZ29v",
-            "Z2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuUmVzb2x2ZVNlcnZpY2VS",
-            "ZXNwb25zZSJMgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9uYW1lc3BhY2VzLyovc2VydmljZXMvKn06cmVzb2x2ZToBKhpTykEf",
-            "c2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/QEKJGNvbS5n",
-            "b29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MUISTG9va3VwU2Vydmlj",
-            "ZVByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28vc2VydmljZWRpcmVjdG9y",
-            "eS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2VydmljZWRpcmVjdG9yeXBi",
-            "+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjHKAiBHb29n",
-            "bGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6",
-            "OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90bzM="));
+            "ZWRpcmVjdG9yeS92MS9zZXJ2aWNlLnByb3RvIpMBChVSZXNvbHZlU2Vydmlj",
+            "ZVJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4kEBAvpBKQonc2VydmljZWRpcmVj",
+            "dG9yeS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEhsKDW1heF9lbmRwb2ludHMY",
+            "AiABKAVCBOJBAQESHQoPZW5kcG9pbnRfZmlsdGVyGAMgASgJQgTiQQEBIlQK",
+            "FlJlc29sdmVTZXJ2aWNlUmVzcG9uc2USOgoHc2VydmljZRgBIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5zZXJ2aWNlZGlyZWN0b3J5LnYxLlNlcnZpY2UyuAIKDUxv",
+            "b2t1cFNlcnZpY2US0QEKDlJlc29sdmVTZXJ2aWNlEjcuZ29vZ2xlLmNsb3Vk",
+            "LnNlcnZpY2VkaXJlY3RvcnkudjEuUmVzb2x2ZVNlcnZpY2VSZXF1ZXN0Gjgu",
+            "Z29vZ2xlLmNsb3VkLnNlcnZpY2VkaXJlY3RvcnkudjEuUmVzb2x2ZVNlcnZp",
+            "Y2VSZXNwb25zZSJMgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9uYW1lc3BhY2VzLyovc2VydmljZXMvKn06cmVzb2x2ZToBKhpT",
+            "ykEfc2VydmljZWRpcmVjdG9yeS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C/QEKJGNv",
+            "bS5nb29nbGUuY2xvdWQuc2VydmljZWRpcmVjdG9yeS52MUISTG9va3VwU2Vy",
+            "dmljZVByb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28vc2VydmljZWRpcmVj",
+            "dG9yeS9hcGl2MS9zZXJ2aWNlZGlyZWN0b3J5cGI7c2VydmljZWRpcmVjdG9y",
+            "eXBi+AEBqgIgR29vZ2xlLkNsb3VkLlNlcnZpY2VEaXJlY3RvcnkuVjHKAiBH",
+            "b29nbGVcQ2xvdWRcU2VydmljZURpcmVjdG9yeVxWMeoCI0dvb2dsZTo6Q2xv",
+            "dWQ6OlNlcnZpY2VEaXJlY3Rvcnk6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ServiceDirectory.V1.ServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// [LookupService.ResolveService][google.cloud.servicedirectory.v1.LookupService.ResolveService].
   /// Looks up a service by its name, returns the service and its endpoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveServiceRequest : pb::IMessage<ResolveServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -377,6 +378,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
   /// The response message for
   /// [LookupService.ResolveService][google.cloud.servicedirectory.v1.LookupService.ResolveService].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveServiceResponse : pb::IMessage<ResolveServiceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

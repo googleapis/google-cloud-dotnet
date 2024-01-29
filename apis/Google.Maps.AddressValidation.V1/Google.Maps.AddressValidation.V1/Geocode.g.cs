@@ -54,6 +54,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// <summary>
   /// Contains information about the place the input was geocoded to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Geocode : pb::IMessage<Geocode>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -483,6 +484,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// global code defining a 14mx14m (1/8000th of a degree) or smaller rectangle,
   /// and compound code, replacing the prefix with a reference location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlusCode : pb::IMessage<PlusCode>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

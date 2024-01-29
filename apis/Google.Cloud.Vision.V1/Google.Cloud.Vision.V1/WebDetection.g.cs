@@ -64,6 +64,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Relevant information for the image from the Internet.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebDetection : pb::IMessage<WebDetection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -400,6 +401,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Entity deduced from similar images on the Internet.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebEntity : pb::IMessage<WebEntity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -676,6 +678,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Metadata for online images.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebImage : pb::IMessage<WebImage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -911,6 +914,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Metadata for web pages.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebPage : pb::IMessage<WebPage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1248,6 +1252,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Label to provide extra metadata for the web detection.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebLabel : pb::IMessage<WebLabel>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

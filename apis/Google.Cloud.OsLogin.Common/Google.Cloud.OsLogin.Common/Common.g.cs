@@ -26,27 +26,27 @@ namespace Google.Cloud.OsLogin.Common {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvb3Nsb2dpbi9jb21tb24vY29tbW9uLnByb3RvEhtn",
             "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24aH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i3AIK",
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i3gIK",
             "DFBvc2l4QWNjb3VudBIPCgdwcmltYXJ5GAEgASgIEhAKCHVzZXJuYW1lGAIg",
             "ASgJEgsKA3VpZBgDIAEoAxILCgNnaWQYBCABKAMSFgoOaG9tZV9kaXJlY3Rv",
             "cnkYBSABKAkSDQoFc2hlbGwYBiABKAkSDQoFZ2Vjb3MYByABKAkSEQoJc3lz",
-            "dGVtX2lkGAggASgJEhcKCmFjY291bnRfaWQYCSABKAlCA+BBAxJPChVvcGVy",
-            "YXRpbmdfc3lzdGVtX3R5cGUYCiABKA4yMC5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi5jb21tb24uT3BlcmF0aW5nU3lzdGVtVHlwZRIRCgRuYW1lGAsgASgJQgPg",
-            "QQM6SepBRgojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Qb3NpeEFjY291bnQS",
-            "H3VzZXJzL3t1c2VyfS9wcm9qZWN0cy97cHJvamVjdH0iugEKDFNzaFB1Ymxp",
-            "Y0tleRILCgNrZXkYASABKAkSHAoUZXhwaXJhdGlvbl90aW1lX3VzZWMYAiAB",
-            "KAMSGAoLZmluZ2VycHJpbnQYAyABKAlCA+BBAxIRCgRuYW1lGAQgASgJQgPg",
-            "QQM6UupBTwojb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkS",
-            "KHVzZXJzL3t1c2VyfS9zc2hQdWJsaWNLZXlzL3tmaW5nZXJwcmludH0qVAoT",
-            "T3BlcmF0aW5nU3lzdGVtVHlwZRIlCiFPUEVSQVRJTkdfU1lTVEVNX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIJCgVMSU5VWBABEgsKB1dJTkRPV1MQAkLwAQofY29t",
-            "Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbkIMT3NMb2dpblByb3RvWjRj",
-            "bG91ZC5nb29nbGUuY29tL2dvL29zbG9naW4vY29tbW9uL2NvbW1vbnBiO2Nv",
-            "bW1vbnBiqgIbR29vZ2xlLkNsb3VkLk9zTG9naW4uQ29tbW9uygIbR29vZ2xl",
-            "XENsb3VkXE9zTG9naW5cQ29tbW9u6gIeR29vZ2xlOjpDbG91ZDo6T3NMb2dp",
-            "bjo6Q29tbW9u6kErChtvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1VzZXISDHVz",
-            "ZXJzL3t1c2VyfWIGcHJvdG8z"));
+            "dGVtX2lkGAggASgJEhgKCmFjY291bnRfaWQYCSABKAlCBOJBAQMSTwoVb3Bl",
+            "cmF0aW5nX3N5c3RlbV90eXBlGAogASgOMjAuZ29vZ2xlLmNsb3VkLm9zbG9n",
+            "aW4uY29tbW9uLk9wZXJhdGluZ1N5c3RlbVR5cGUSEgoEbmFtZRgLIAEoCUIE",
+            "4kEBAzpJ6kFGCiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1Bvc2l4QWNjb3Vu",
+            "dBIfdXNlcnMve3VzZXJ9L3Byb2plY3RzL3twcm9qZWN0fSK8AQoMU3NoUHVi",
+            "bGljS2V5EgsKA2tleRgBIAEoCRIcChRleHBpcmF0aW9uX3RpbWVfdXNlYxgC",
+            "IAEoAxIZCgtmaW5nZXJwcmludBgDIAEoCUIE4kEBAxISCgRuYW1lGAQgASgJ",
+            "QgTiQQEDOlLqQU8KI29zbG9naW4uZ29vZ2xlYXBpcy5jb20vU3NoUHVibGlj",
+            "S2V5Eih1c2Vycy97dXNlcn0vc3NoUHVibGljS2V5cy97ZmluZ2VycHJpbnR9",
+            "KlQKE09wZXJhdGluZ1N5c3RlbVR5cGUSJQohT1BFUkFUSU5HX1NZU1RFTV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCQoFTElOVVgQARILCgdXSU5ET1dTEAJC8AEK",
+            "H2NvbS5nb29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb25CDE9zTG9naW5Qcm90",
+            "b1o0Y2xvdWQuZ29vZ2xlLmNvbS9nby9vc2xvZ2luL2NvbW1vbi9jb21tb25w",
+            "Yjtjb21tb25wYqoCG0dvb2dsZS5DbG91ZC5Pc0xvZ2luLkNvbW1vbsoCG0dv",
+            "b2dsZVxDbG91ZFxPc0xvZ2luXENvbW1vbuoCHkdvb2dsZTo6Q2xvdWQ6Ok9z",
+            "TG9naW46OkNvbW1vbupBKwobb3Nsb2dpbi5nb29nbGVhcGlzLmNvbS9Vc2Vy",
+            "Egx1c2Vycy97dXNlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.Common.OperatingSystemType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,6 +83,7 @@ namespace Google.Cloud.OsLogin.Common {
   /// <summary>
   /// The POSIX account information associated with a Google account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PosixAccount : pb::IMessage<PosixAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,6 +680,7 @@ namespace Google.Cloud.OsLogin.Common {
   /// <summary>
   /// The SSH public key information associated with a Google account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SshPublicKey : pb::IMessage<SshPublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

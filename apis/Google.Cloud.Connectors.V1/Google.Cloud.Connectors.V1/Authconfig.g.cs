@@ -113,6 +113,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// AuthConfig defines details of a authentication type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthConfig : pb::IMessage<AuthConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -591,6 +592,7 @@ namespace Google.Cloud.Connectors.V1 {
       /// <summary>
       /// Parameters to support Username and Password Authentication.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserPassword : pb::IMessage<UserPassword>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -837,6 +839,7 @@ namespace Google.Cloud.Connectors.V1 {
       /// Authorization Grant based authentication.
       /// See https://tools.ietf.org/html/rfc7523 for more details.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Oauth2JwtBearer : pb::IMessage<Oauth2JwtBearer>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1096,6 +1099,7 @@ namespace Google.Cloud.Connectors.V1 {
           /// <summary>
           /// JWT claims used for the jwt-bearer authorization grant.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class JwtClaims : pb::IMessage<JwtClaims>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1377,6 +1381,7 @@ namespace Google.Cloud.Connectors.V1 {
       /// Parameters to support Oauth 2.0 Client Credentials Grant Authentication.
       /// See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Oauth2ClientCredentials : pb::IMessage<Oauth2ClientCredentials>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1621,6 +1626,7 @@ namespace Google.Cloud.Connectors.V1 {
       /// <summary>
       /// Parameters to support Ssh public key Authentication.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SshPublicKey : pb::IMessage<SshPublicKey>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1959,6 +1965,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// AuthConfigTemplate defines required field over an authentication type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthConfigTemplate : pb::IMessage<AuthConfigTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -56,6 +56,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// image classification tasks, you define a set of possible labels for images as
   /// an AnnotationSpecSet. An AnnotationSpecSet is immutable upon creation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationSpecSet : pb::IMessage<AnnotationSpecSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -398,6 +399,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// are labeled as `dog` or `cat` must reference an AnnotationSpec for `dog` and
   /// an AnnotationSpec for `cat`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationSpec : pb::IMessage<AnnotationSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

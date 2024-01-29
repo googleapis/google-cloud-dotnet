@@ -26,16 +26,16 @@ namespace Google.Cloud.Support.V2 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvc3VwcG9ydC92Mi9lc2NhbGF0aW9uLnByb3RvEhdn",
             "b29nbGUuY2xvdWQuc3VwcG9ydC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90byLOAQoKRXNjYWxhdGlvbhI/CgZyZWFzb24YBCABKA4yKi5n",
-            "b29nbGUuY2xvdWQuc3VwcG9ydC52Mi5Fc2NhbGF0aW9uLlJlYXNvbkID4EEC",
-            "EhoKDWp1c3RpZmljYXRpb24YBSABKAlCA+BBAiJjCgZSZWFzb24SFgoSUkVB",
-            "U09OX1VOU1BFQ0lGSUVEEAASEwoPUkVTT0xVVElPTl9USU1FEAESFwoTVEVD",
-            "SE5JQ0FMX0VYUEVSVElTRRACEhMKD0JVU0lORVNTX0lNUEFDVBADQrgBChtj",
-            "b20uZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJCD0VzY2FsYXRpb25Qcm90b1AB",
-            "WjVjbG91ZC5nb29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIvc3VwcG9ydHBi",
-            "O3N1cHBvcnRwYqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyygIXR29vZ2xl",
-            "XENsb3VkXFN1cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpTdXBwb3J0OjpW",
-            "MmIGcHJvdG8z"));
+            "dmlvci5wcm90byLQAQoKRXNjYWxhdGlvbhJACgZyZWFzb24YBCABKA4yKi5n",
+            "b29nbGUuY2xvdWQuc3VwcG9ydC52Mi5Fc2NhbGF0aW9uLlJlYXNvbkIE4kEB",
+            "AhIbCg1qdXN0aWZpY2F0aW9uGAUgASgJQgTiQQECImMKBlJlYXNvbhIWChJS",
+            "RUFTT05fVU5TUEVDSUZJRUQQABITCg9SRVNPTFVUSU9OX1RJTUUQARIXChNU",
+            "RUNITklDQUxfRVhQRVJUSVNFEAISEwoPQlVTSU5FU1NfSU1QQUNUEANCuAEK",
+            "G2NvbS5nb29nbGUuY2xvdWQuc3VwcG9ydC52MkIPRXNjYWxhdGlvblByb3Rv",
+            "UAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2Mi9zdXBwb3J0",
+            "cGI7c3VwcG9ydHBiqgIXR29vZ2xlLkNsb3VkLlN1cHBvcnQuVjLKAhdHb29n",
+            "bGVcQ2xvdWRcU3VwcG9ydFxWMuoCGkdvb2dsZTo6Q2xvdWQ6OlN1cHBvcnQ6",
+            "OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -49,6 +49,7 @@ namespace Google.Cloud.Support.V2 {
   /// <summary>
   /// An escalation of a support case.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Escalation : pb::IMessage<Escalation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

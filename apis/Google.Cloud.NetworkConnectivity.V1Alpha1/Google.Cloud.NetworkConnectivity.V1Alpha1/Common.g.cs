@@ -27,20 +27,20 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
             "CjZnb29nbGUvY2xvdWQvbmV0d29ya2Nvbm5lY3Rpdml0eS92MWFscGhhMS9j",
             "b21tb24ucHJvdG8SKWdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5",
             "LnYxYWxwaGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoACChFPcGVyYXRpb25N",
-            "ZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJnZXQYAyABKAlCA+BBAxIR",
-            "CgR2ZXJiGAQgASgJQgPgQQMSGwoOc3RhdHVzX21lc3NhZ2UYBSABKAlCA+BB",
-            "AxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYgASgIQgPgQQMSGAoLYXBp",
-            "X3ZlcnNpb24YByABKAlCA+BBA0KmAgotY29tLmdvb2dsZS5jbG91ZC5uZXR3",
-            "b3JrY29ubmVjdGl2aXR5LnYxYWxwaGExQgtDb21tb25Qcm90b1ABWl9jbG91",
-            "ZC5nb29nbGUuY29tL2dvL25ldHdvcmtjb25uZWN0aXZpdHkvYXBpdjFhbHBo",
-            "YTEvbmV0d29ya2Nvbm5lY3Rpdml0eXBiO25ldHdvcmtjb25uZWN0aXZpdHlw",
-            "YqoCKUdvb2dsZS5DbG91ZC5OZXR3b3JrQ29ubmVjdGl2aXR5LlYxQWxwaGEx",
-            "ygIpR29vZ2xlXENsb3VkXE5ldHdvcmtDb25uZWN0aXZpdHlcVjFhbHBoYTHq",
-            "AixHb29nbGU6OkNsb3VkOjpOZXR3b3JrQ29ubmVjdGl2aXR5OjpWMWFscGhh",
-            "MWIGcHJvdG8z"));
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIocCChFPcGVyYXRpb25N",
+            "ZXRhZGF0YRI1CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCBOJBAQMSMgoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEhQKBnRhcmdldBgDIAEoCUIE4kEB",
+            "AxISCgR2ZXJiGAQgASgJQgTiQQEDEhwKDnN0YXR1c19tZXNzYWdlGAUgASgJ",
+            "QgTiQQEDEiQKFnJlcXVlc3RlZF9jYW5jZWxsYXRpb24YBiABKAhCBOJBAQMS",
+            "GQoLYXBpX3ZlcnNpb24YByABKAlCBOJBAQNCpgIKLWNvbS5nb29nbGUuY2xv",
+            "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWFscGhhMUILQ29tbW9uUHJvdG9Q",
+            "AVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3JrY29ubmVjdGl2aXR5L2Fw",
+            "aXYxYWxwaGExL25ldHdvcmtjb25uZWN0aXZpdHlwYjtuZXR3b3JrY29ubmVj",
+            "dGl2aXR5cGKqAilHb29nbGUuQ2xvdWQuTmV0d29ya0Nvbm5lY3Rpdml0eS5W",
+            "MUFscGhhMcoCKUdvb2dsZVxDbG91ZFxOZXR3b3JrQ29ubmVjdGl2aXR5XFYx",
+            "YWxwaGEx6gIsR29vZ2xlOjpDbG91ZDo6TmV0d29ya0Nvbm5lY3Rpdml0eTo6",
+            "VjFhbHBoYTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,6 +54,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

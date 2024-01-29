@@ -57,6 +57,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata for classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextClassificationDatasetMetadata : pb::IMessage<TextClassificationDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -252,6 +253,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata that is specific to text classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextClassificationModelMetadata : pb::IMessage<TextClassificationModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -447,6 +449,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata that is specific to text extraction
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextExtractionDatasetMetadata : pb::IMessage<TextExtractionDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -602,6 +605,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata that is specific to text extraction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextExtractionModelMetadata : pb::IMessage<TextExtractionModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -757,6 +761,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata for text sentiment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSentimentDatasetMetadata : pb::IMessage<TextSentimentDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -957,6 +962,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata that is specific to text sentiment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSentimentModelMetadata : pb::IMessage<TextSentimentModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -79,29 +79,29 @@ namespace Google.Shopping.Css.V1 {
             "Y2F0aW9uEgwKBG5hbWUYASABKAkSEQoJYXV0aG9yaXR5GAIgASgJEgwKBGNv",
             "ZGUYAyABKAkiVgoNUHJvZHVjdERldGFpbBIUCgxzZWN0aW9uX25hbWUYASAB",
             "KAkSFgoOYXR0cmlidXRlX25hbWUYAiABKAkSFwoPYXR0cmlidXRlX3ZhbHVl",
-            "GAMgASgJIjkKEFByb2R1Y3REaW1lbnNpb24SEgoFdmFsdWUYASABKAFCA+BB",
-            "AhIRCgR1bml0GAIgASgJQgPgQQIiNgoNUHJvZHVjdFdlaWdodBISCgV2YWx1",
-            "ZRgBIAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiKxBQoQQ3NzUHJvZHVj",
-            "dFN0YXR1cxJYChRkZXN0aW5hdGlvbl9zdGF0dXNlcxgDIAMoCzI6Lmdvb2ds",
-            "ZS5zaG9wcGluZy5jc3MudjEuQ3NzUHJvZHVjdFN0YXR1cy5EZXN0aW5hdGlv",
-            "blN0YXR1cxJSChFpdGVtX2xldmVsX2lzc3VlcxgEIAMoCzI3Lmdvb2dsZS5z",
-            "aG9wcGluZy5jc3MudjEuQ3NzUHJvZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1",
-            "ZRIxCg1jcmVhdGlvbl9kYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV9kYXRlGAYgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcBI6ChZnb29nbGVfZXhwaXJhdGlvbl9kYXRlGAcg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBp+ChFEZXN0aW5hdGlv",
-            "blN0YXR1cxITCgtkZXN0aW5hdGlvbhgBIAEoCRIaChJhcHByb3ZlZF9jb3Vu",
-            "dHJpZXMYAiADKAkSGQoRcGVuZGluZ19jb3VudHJpZXMYAyADKAkSHQoVZGlz",
-            "YXBwcm92ZWRfY291bnRyaWVzGAQgAygJGskBCg5JdGVtTGV2ZWxJc3N1ZRIM",
-            "CgRjb2RlGAEgASgJEhMKC3NlcnZhYmlsaXR5GAIgASgJEhIKCnJlc29sdXRp",
-            "b24YAyABKAkSEQoJYXR0cmlidXRlGAQgASgJEhMKC2Rlc3RpbmF0aW9uGAUg",
-            "ASgJEhMKC2Rlc2NyaXB0aW9uGAYgASgJEg4KBmRldGFpbBgHIAEoCRIVCg1k",
-            "b2N1bWVudGF0aW9uGAggASgJEhwKFGFwcGxpY2FibGVfY291bnRyaWVzGAkg",
-            "AygJQrcBChpjb20uZ29vZ2xlLnNob3BwaW5nLmNzcy52MUIVQ3NzUHJvZHVj",
-            "dENvbW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcv",
-            "Y3NzL2FwaXYxL2Nzc3BiO2Nzc3BiqgIWR29vZ2xlLlNob3BwaW5nLkNzcy5W",
-            "McoCFkdvb2dsZVxTaG9wcGluZ1xDc3NcVjHqAhlHb29nbGU6OlNob3BwaW5n",
-            "OjpDc3M6OlYxYgZwcm90bzM="));
+            "GAMgASgJIjsKEFByb2R1Y3REaW1lbnNpb24SEwoFdmFsdWUYASABKAFCBOJB",
+            "AQISEgoEdW5pdBgCIAEoCUIE4kEBAiI4Cg1Qcm9kdWN0V2VpZ2h0EhMKBXZh",
+            "bHVlGAEgASgBQgTiQQECEhIKBHVuaXQYAiABKAlCBOJBAQIisQUKEENzc1By",
+            "b2R1Y3RTdGF0dXMSWAoUZGVzdGluYXRpb25fc3RhdHVzZXMYAyADKAsyOi5n",
+            "b29nbGUuc2hvcHBpbmcuY3NzLnYxLkNzc1Byb2R1Y3RTdGF0dXMuRGVzdGlu",
+            "YXRpb25TdGF0dXMSUgoRaXRlbV9sZXZlbF9pc3N1ZXMYBCADKAsyNy5nb29n",
+            "bGUuc2hvcHBpbmcuY3NzLnYxLkNzc1Byb2R1Y3RTdGF0dXMuSXRlbUxldmVs",
+            "SXNzdWUSMQoNY3JlYXRpb25fZGF0ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVfZGF0ZRgGIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASOgoWZ29vZ2xlX2V4cGlyYXRpb25fZGF0",
+            "ZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAafgoRRGVzdGlu",
+            "YXRpb25TdGF0dXMSEwoLZGVzdGluYXRpb24YASABKAkSGgoSYXBwcm92ZWRf",
+            "Y291bnRyaWVzGAIgAygJEhkKEXBlbmRpbmdfY291bnRyaWVzGAMgAygJEh0K",
+            "FWRpc2FwcHJvdmVkX2NvdW50cmllcxgEIAMoCRrJAQoOSXRlbUxldmVsSXNz",
+            "dWUSDAoEY29kZRgBIAEoCRITCgtzZXJ2YWJpbGl0eRgCIAEoCRISCgpyZXNv",
+            "bHV0aW9uGAMgASgJEhEKCWF0dHJpYnV0ZRgEIAEoCRITCgtkZXN0aW5hdGlv",
+            "bhgFIAEoCRITCgtkZXNjcmlwdGlvbhgGIAEoCRIOCgZkZXRhaWwYByABKAkS",
+            "FQoNZG9jdW1lbnRhdGlvbhgIIAEoCRIcChRhcHBsaWNhYmxlX2NvdW50cmll",
+            "cxgJIAMoCUK3AQoaY29tLmdvb2dsZS5zaG9wcGluZy5jc3MudjFCFUNzc1By",
+            "b2R1Y3RDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3Nob3Bw",
+            "aW5nL2Nzcy9hcGl2MS9jc3NwYjtjc3NwYqoCFkdvb2dsZS5TaG9wcGluZy5D",
+            "c3MuVjHKAhZHb29nbGVcU2hvcHBpbmdcQ3NzXFYx6gIZR29vZ2xlOjpTaG9w",
+            "cGluZzo6Q3NzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -121,6 +121,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// Attributes for CSS Product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attributes : pb::IMessage<Attributes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2661,6 +2662,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// The certification for the product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Certification : pb::IMessage<Certification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2936,6 +2938,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// The product details.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductDetail : pb::IMessage<ProductDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3211,6 +3214,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// The dimension of the product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductDimension : pb::IMessage<ProductDimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3450,6 +3454,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// The weight of the product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductWeight : pb::IMessage<ProductWeight>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3692,6 +3697,7 @@ namespace Google.Shopping.Css.V1 {
   /// The status of the Css Product, data validation issues, that is,
   /// information about the Css Product computed asynchronously.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CssProductStatus : pb::IMessage<CssProductStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4058,6 +4064,7 @@ namespace Google.Shopping.Css.V1 {
       /// <summary>
       /// The destination status of the product status.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DestinationStatus : pb::IMessage<DestinationStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4343,6 +4350,7 @@ namespace Google.Shopping.Css.V1 {
       /// <summary>
       /// The ItemLevelIssue of the product status.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ItemLevelIssue : pb::IMessage<ItemLevelIssue>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

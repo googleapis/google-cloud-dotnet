@@ -34,18 +34,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "eRIcChhWUENTQ19QT0xJQ1lfVU5TUEVDSUZJRUQQABIICgRERU5ZEAESCQoF",
             "QUxMT1cQAjpl6kFiCithcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29t",
             "L1ZwY3NjQ29uZmlnEjNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vdnBjc2NDb25maWciWgoVR2V0VlBDU0NDb25maWdSZXF1ZXN0",
-            "EkEKBG5hbWUYASABKAlCM+BBAvpBLQorYXJ0aWZhY3RyZWdpc3RyeS5nb29n",
-            "bGVhcGlzLmNvbS9WcGNzY0NvbmZpZyKTAQoYVXBkYXRlVlBDU0NDb25maWdS",
-            "ZXF1ZXN0EkYKDHZwY3NjX2NvbmZpZxgBIAEoCzIwLmdvb2dsZS5kZXZ0b29s",
-            "cy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlZQQ1NDQ29uZmlnEi8KC3VwZGF0ZV9t",
-            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0L7AQonY29t",
-            "Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxQhBWUENTQ0Nv",
-            "bmZpZ1Byb3RvUAFaUGNsb3VkLmdvb2dsZS5jb20vZ28vYXJ0aWZhY3RyZWdp",
-            "c3RyeS9hcGl2MS9hcnRpZmFjdHJlZ2lzdHJ5cGI7YXJ0aWZhY3RyZWdpc3Ry",
-            "eXBiqgIgR29vZ2xlLkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29n",
-            "bGVcQ2xvdWRcQXJ0aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6",
-            "OkFydGlmYWN0UmVnaXN0cnk6OlYxYgZwcm90bzM="));
+            "b2NhdGlvbn0vdnBjc2NDb25maWciWwoVR2V0VlBDU0NDb25maWdSZXF1ZXN0",
+            "EkIKBG5hbWUYASABKAlCNOJBAQL6QS0KK2FydGlmYWN0cmVnaXN0cnkuZ29v",
+            "Z2xlYXBpcy5jb20vVnBjc2NDb25maWcikwEKGFVwZGF0ZVZQQ1NDQ29uZmln",
+            "UmVxdWVzdBJGCgx2cGNzY19jb25maWcYASABKAsyMC5nb29nbGUuZGV2dG9v",
+            "bHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5WUENTQ0NvbmZpZxIvCgt1cGRhdGVf",
+            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC+wEKJ2Nv",
+            "bS5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIQVlBDU0ND",
+            "b25maWdQcm90b1ABWlBjbG91ZC5nb29nbGUuY29tL2dvL2FydGlmYWN0cmVn",
+            "aXN0cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3RyeXBiO2FydGlmYWN0cmVnaXN0",
+            "cnlwYqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFjdFJlZ2lzdHJ5LlYxygIgR29v",
+            "Z2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjHqAiNHb29nbGU6OkNsb3Vk",
+            "OjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The Artifact Registry VPC SC config that apply to a Project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VPCSCConfig : pb::IMessage<VPCSCConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Gets the VPC SC config for a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVPCSCConfigRequest : pb::IMessage<GetVPCSCConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -528,6 +530,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Sets the VPCSC config of the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateVPCSCConfigRequest : pb::IMessage<UpdateVPCSCConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

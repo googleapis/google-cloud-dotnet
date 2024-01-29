@@ -49,6 +49,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// A single firewall rule that is evaluated against incoming traffic
   /// and provides an action to take on matched requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirewallRule : pb::IMessage<FirewallRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -44,6 +44,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Promotion information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Promotion : pb::IMessage<Promotion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

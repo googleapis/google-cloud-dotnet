@@ -32,6 +32,7 @@ using stt = System.Threading.Tasks;
 namespace Google.Cloud.Channel.V1
 {
     /// <summary>Settings for <see cref="CloudChannelReportsServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="CloudChannelReportsServiceSettings"/>.</summary>
@@ -123,6 +124,7 @@ namespace Google.Cloud.Channel.V1
     /// Builder class for <see cref="CloudChannelReportsServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceClientBuilder : gaxgrpc::ClientBuilderBase<CloudChannelReportsServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -157,14 +159,14 @@ namespace Google.Cloud.Channel.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudChannelReportsServiceClient.Create(callInvoker, Settings, Logger);
+            return CloudChannelReportsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CloudChannelReportsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudChannelReportsServiceClient.Create(callInvoker, Settings, Logger);
+            return CloudChannelReportsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -182,6 +184,7 @@ namespace Google.Cloud.Channel.V1
     /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
     /// instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class CloudChannelReportsServiceClient
     {
         /// <summary>
@@ -703,6 +706,7 @@ namespace Google.Cloud.Channel.V1
     /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
     /// instead.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class CloudChannelReportsServiceClientImpl : CloudChannelReportsServiceClient
     {
 #pragma warning disable CS0612

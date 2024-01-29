@@ -47,6 +47,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Encapsulates a location (a geographic point, and an optional heading).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

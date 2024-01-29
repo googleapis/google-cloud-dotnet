@@ -48,6 +48,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// cluster_id from response trailers to tag the metrics. This should not be
   /// used by customers directly
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseParams : pb::IMessage<ResponseParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

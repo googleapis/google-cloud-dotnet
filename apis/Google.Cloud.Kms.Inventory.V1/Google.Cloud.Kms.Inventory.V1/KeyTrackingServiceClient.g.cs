@@ -122,14 +122,14 @@ namespace Google.Cloud.Kms.Inventory.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return KeyTrackingServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyTrackingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<KeyTrackingServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return KeyTrackingServiceClient.Create(callInvoker, Settings, Logger);
+            return KeyTrackingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

@@ -28,18 +28,18 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
             "MS9kZXRlY3Rvci5wcm90bxIsZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
             "LnNldHRpbmdzLnYxYmV0YTEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aQ2dvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci9zZXR0aW5ncy92",
-            "MWJldGExL2JpbGxpbmdfc2V0dGluZ3MucHJvdG8irQEKCERldGVjdG9yEhUK",
-            "CGRldGVjdG9yGAEgASgJQgPgQQMSFgoJY29tcG9uZW50GAIgASgJQgPgQQMS",
-            "VAoMYmlsbGluZ190aWVyGAMgASgOMjkuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
-            "Y2VudGVyLnNldHRpbmdzLnYxYmV0YTEuQmlsbGluZ1RpZXJCA+BBAxIcCg9k",
-            "ZXRlY3Rvcl9sYWJlbHMYBCADKAlCA+BBA0KmAgowY29tLmdvb2dsZS5jbG91",
-            "ZC5zZWN1cml0eWNlbnRlci5zZXR0aW5ncy52MWJldGExQg5EZXRlY3RvcnNQ",
-            "cm90b1ABWkxjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVyL3Nl",
-            "dHRpbmdzL2FwaXYxYmV0YTEvc2V0dGluZ3NwYjtzZXR0aW5nc3Bi+AEBqgIs",
-            "R29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlNldHRpbmdzLlYxQmV0YTHK",
-            "AixHb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcU2V0dGluZ3NcVjFiZXRh",
-            "MeoCMEdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpTZXR0aW5nczo6",
-            "VjFiZXRhMWIGcHJvdG8z"));
+            "MWJldGExL2JpbGxpbmdfc2V0dGluZ3MucHJvdG8isQEKCERldGVjdG9yEhYK",
+            "CGRldGVjdG9yGAEgASgJQgTiQQEDEhcKCWNvbXBvbmVudBgCIAEoCUIE4kEB",
+            "AxJVCgxiaWxsaW5nX3RpZXIYAyABKA4yOS5nb29nbGUuY2xvdWQuc2VjdXJp",
+            "dHljZW50ZXIuc2V0dGluZ3MudjFiZXRhMS5CaWxsaW5nVGllckIE4kEBAxId",
+            "Cg9kZXRlY3Rvcl9sYWJlbHMYBCADKAlCBOJBAQNCpgIKMGNvbS5nb29nbGUu",
+            "Y2xvdWQuc2VjdXJpdHljZW50ZXIuc2V0dGluZ3MudjFiZXRhMUIORGV0ZWN0",
+            "b3JzUHJvdG9QAVpMY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRl",
+            "ci9zZXR0aW5ncy9hcGl2MWJldGExL3NldHRpbmdzcGI7c2V0dGluZ3NwYvgB",
+            "AaoCLEdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5TZXR0aW5ncy5WMUJl",
+            "dGExygIsR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFNldHRpbmdzXFYx",
+            "YmV0YTHqAjBHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6U2V0dGlu",
+            "Z3M6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingSettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,6 +60,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   ///
   /// Defines a detector, its billing tier and any applicable labels.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Detector : pb::IMessage<Detector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

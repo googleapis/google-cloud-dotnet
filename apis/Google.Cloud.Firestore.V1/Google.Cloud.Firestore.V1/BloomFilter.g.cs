@@ -61,6 +61,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// The "size" of a `BitSequence` (the number of bits it contains) is calculated
   /// by this formula: `(bitmap.length * 8) - padding`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BitSequence : pb::IMessage<BitSequence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -311,6 +312,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// These resulting values are then taken modulo the number of bits in the bloom
   /// filter to get the bits of the bloom filter to test for the given entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BloomFilter : pb::IMessage<BloomFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

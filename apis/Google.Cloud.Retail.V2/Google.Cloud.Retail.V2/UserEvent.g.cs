@@ -29,36 +29,37 @@ namespace Google.Cloud.Retail.V2 {
             "b3IucHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29tbW9uLnByb3Rv",
             "GiRnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3Byb2R1Y3QucHJvdG8aH2dvb2ds",
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93",
-            "cmFwcGVycy5wcm90byKXBgoJVXNlckV2ZW50EhcKCmV2ZW50X3R5cGUYASAB",
-            "KAlCA+BBAhIXCgp2aXNpdG9yX2lkGAIgASgJQgPgQQISEgoKc2Vzc2lvbl9p",
-            "ZBgVIAEoCRIuCgpldmVudF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIWCg5leHBlcmltZW50X2lkcxgEIAMoCRIZChFhdHRyaWJ1",
-            "dGlvbl90b2tlbhgFIAEoCRI+Cg9wcm9kdWN0X2RldGFpbHMYBiADKAsyJS5n",
-            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1Y3REZXRhaWwSQwoRY29tcGxl",
-            "dGlvbl9kZXRhaWwYFiABKAsyKC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNv",
-            "bXBsZXRpb25EZXRhaWwSRQoKYXR0cmlidXRlcxgHIAMoCzIxLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuVXNlckV2ZW50LkF0dHJpYnV0ZXNFbnRyeRIPCgdj",
-            "YXJ0X2lkGAggASgJEkkKFHB1cmNoYXNlX3RyYW5zYWN0aW9uGAkgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QdXJjaGFzZVRyYW5zYWN0aW9uEhQK",
-            "DHNlYXJjaF9xdWVyeRgKIAEoCRIOCgZmaWx0ZXIYECABKAkSEAoIb3JkZXJf",
-            "YnkYESABKAkSDgoGb2Zmc2V0GBIgASgFEhcKD3BhZ2VfY2F0ZWdvcmllcxgL",
-            "IAMoCRIzCgl1c2VyX2luZm8YDCABKAsyIC5nb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyLlVzZXJJbmZvEgsKA3VyaRgNIAEoCRIUCgxyZWZlcnJlcl91cmkYDiAB",
-            "KAkSFAoMcGFnZV92aWV3X2lkGA8gASgJEg4KBmVudGl0eRgXIAEoCRpaCg9B",
-            "dHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgLMicu",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRyaWJ1dGU6AjgBInUK",
-            "DVByb2R1Y3REZXRhaWwSNQoHcHJvZHVjdBgBIAEoCzIfLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuUHJvZHVjdEID4EECEi0KCHF1YW50aXR5GAIgASgLMhsu",
-            "Z29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUicAoQQ29tcGxldGlvbkRldGFp",
-            "bBIkChxjb21wbGV0aW9uX2F0dHJpYnV0aW9uX3Rva2VuGAEgASgJEhsKE3Nl",
-            "bGVjdGVkX3N1Z2dlc3Rpb24YAiABKAkSGQoRc2VsZWN0ZWRfcG9zaXRpb24Y",
-            "AyABKAUibgoTUHVyY2hhc2VUcmFuc2FjdGlvbhIKCgJpZBgBIAEoCRIUCgdy",
-            "ZXZlbnVlGAIgASgCQgPgQQISCwoDdGF4GAMgASgCEgwKBGNvc3QYBCABKAIS",
-            "GgoNY3VycmVuY3lfY29kZRgFIAEoCUID4EECQrkBChpjb20uZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52MkIOVXNlckV2ZW50UHJvdG9QAVoyY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9yZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZSRVRB",
-            "SUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJl",
-            "dGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "cmFwcGVycy5wcm90byKZBgoJVXNlckV2ZW50EhgKCmV2ZW50X3R5cGUYASAB",
+            "KAlCBOJBAQISGAoKdmlzaXRvcl9pZBgCIAEoCUIE4kEBAhISCgpzZXNzaW9u",
+            "X2lkGBUgASgJEi4KCmV2ZW50X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEhYKDmV4cGVyaW1lbnRfaWRzGAQgAygJEhkKEWF0dHJp",
+            "YnV0aW9uX3Rva2VuGAUgASgJEj4KD3Byb2R1Y3RfZGV0YWlscxgGIAMoCzIl",
+            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdERldGFpbBJDChFjb21w",
+            "bGV0aW9uX2RldGFpbBgWIAEoCzIoLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
+            "Q29tcGxldGlvbkRldGFpbBJFCgphdHRyaWJ1dGVzGAcgAygLMjEuZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5Vc2VyRXZlbnQuQXR0cmlidXRlc0VudHJ5Eg8K",
+            "B2NhcnRfaWQYCCABKAkSSQoUcHVyY2hhc2VfdHJhbnNhY3Rpb24YCSABKAsy",
+            "Ky5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlB1cmNoYXNlVHJhbnNhY3Rpb24S",
+            "FAoMc2VhcmNoX3F1ZXJ5GAogASgJEg4KBmZpbHRlchgQIAEoCRIQCghvcmRl",
+            "cl9ieRgRIAEoCRIOCgZvZmZzZXQYEiABKAUSFwoPcGFnZV9jYXRlZ29yaWVz",
+            "GAsgAygJEjMKCXVzZXJfaW5mbxgMIAEoCzIgLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuVXNlckluZm8SCwoDdXJpGA0gASgJEhQKDHJlZmVycmVyX3VyaRgO",
+            "IAEoCRIUCgxwYWdlX3ZpZXdfaWQYDyABKAkSDgoGZW50aXR5GBcgASgJGloK",
+            "D0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsy",
+            "Jy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAEi",
+            "dgoNUHJvZHVjdERldGFpbBI2Cgdwcm9kdWN0GAEgASgLMh8uZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5Qcm9kdWN0QgTiQQECEi0KCHF1YW50aXR5GAIgASgL",
+            "MhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUicAoQQ29tcGxldGlvbkRl",
+            "dGFpbBIkChxjb21wbGV0aW9uX2F0dHJpYnV0aW9uX3Rva2VuGAEgASgJEhsK",
+            "E3NlbGVjdGVkX3N1Z2dlc3Rpb24YAiABKAkSGQoRc2VsZWN0ZWRfcG9zaXRp",
+            "b24YAyABKAUicAoTUHVyY2hhc2VUcmFuc2FjdGlvbhIKCgJpZBgBIAEoCRIV",
+            "CgdyZXZlbnVlGAIgASgCQgTiQQECEgsKA3RheBgDIAEoAhIMCgRjb3N0GAQg",
+            "ASgCEhsKDWN1cnJlbmN5X2NvZGUYBSABKAlCBOJBAQJCuQEKGmNvbS5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyQg5Vc2VyRXZlbnRQcm90b1ABWjJjbG91ZC5n",
+            "b29nbGUuY29tL2dvL3JldGFpbC9hcGl2Mi9yZXRhaWxwYjtyZXRhaWxwYqIC",
+            "BlJFVEFJTKoCFkdvb2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xv",
+            "dWRcUmV0YWlsXFYy6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,6 +77,7 @@ namespace Google.Cloud.Retail.V2 {
   /// UserEvent captures all metadata information Retail API needs to know about
   /// how end users interact with customers' website.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1241,6 +1243,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Detailed product information associated with a user event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductDetail : pb::IMessage<ProductDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1514,6 +1517,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Detailed completion information including completion attribution token and
   /// clicked completion info.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionDetail : pb::IMessage<CompletionDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1793,6 +1797,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// A transaction represents the entire purchase transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurchaseTransaction : pb::IMessage<PurchaseTransaction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

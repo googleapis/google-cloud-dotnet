@@ -163,14 +163,14 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AdvisoryNotificationsServiceClient.Create(callInvoker, Settings, Logger);
+            return AdvisoryNotificationsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AdvisoryNotificationsServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AdvisoryNotificationsServiceClient.Create(callInvoker, Settings, Logger);
+            return AdvisoryNotificationsServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

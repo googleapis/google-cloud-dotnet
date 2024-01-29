@@ -66,6 +66,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// A ScanRun is a output-only resource representing an actual run of the scan.
   /// Next id: 12
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanRun : pb::IMessage<ScanRun>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

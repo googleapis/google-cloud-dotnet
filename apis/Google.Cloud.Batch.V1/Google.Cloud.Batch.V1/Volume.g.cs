@@ -50,6 +50,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Volume describes a volume and parameters for it to be mounted to a VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -483,6 +484,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Represents an NFS volume.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NFS : pb::IMessage<NFS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -718,6 +720,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Represents a Google Cloud Storage volume.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GCS : pb::IMessage<GCS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

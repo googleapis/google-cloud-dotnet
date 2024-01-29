@@ -94,6 +94,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// A service that is available for use by the consumer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -427,6 +428,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// The configuration of the service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceConfig : pb::IMessage<ServiceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1003,6 +1005,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
   /// <summary>
   /// The operation metadata returned for the batchend services operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

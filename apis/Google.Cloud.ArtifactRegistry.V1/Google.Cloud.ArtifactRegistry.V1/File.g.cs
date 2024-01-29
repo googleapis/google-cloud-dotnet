@@ -31,29 +31,29 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "AQoESGFzaBJACgR0eXBlGAEgASgOMjIuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
             "YWN0cmVnaXN0cnkudjEuSGFzaC5IYXNoVHlwZRINCgV2YWx1ZRgCIAEoDCI6",
             "CghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTSEEy",
-            "NTYQARIHCgNNRDUQAiKOAwoERmlsZRIMCgRuYW1lGAEgASgJEhIKCnNpemVf",
+            "NTYQARIHCgNNRDUQAiKRAwoERmlsZRIMCgRuYW1lGAEgASgJEhIKCnNpemVf",
             "Ynl0ZXMYAyABKAMSOQoGaGFzaGVzGAQgAygLMikuZ29vZ2xlLmRldnRvb2xz",
-            "LmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaBI0CgtjcmVhdGVfdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIN",
-            "CgVvd25lchgHIAEoCRIzCgpmZXRjaF90aW1lGAggASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDOnnqQXYKJGFydGlmYWN0cmVnaXN0cnku",
-            "Z29vZ2xlYXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0vZmls",
-            "ZXMve2ZpbGV9IpkBChBMaXN0RmlsZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEo",
-            "CUIs4EEC+kEmEiRhcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0Zp",
-            "bGUSDgoGZmlsdGVyGAQgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAUgASgJImYKEUxpc3RGaWxlc1Jl",
-            "c3BvbnNlEjgKBWZpbGVzGAEgAygLMikuZ29vZ2xlLmRldnRvb2xzLmFydGlm",
-            "YWN0cmVnaXN0cnkudjEuRmlsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
-            "TAoOR2V0RmlsZVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRhcnRp",
-            "ZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL0ZpbGVC9AEKJ2NvbS5nb29n",
-            "bGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIJRmlsZVByb3RvUAFa",
-            "UGNsb3VkLmdvb2dsZS5jb20vZ28vYXJ0aWZhY3RyZWdpc3RyeS9hcGl2MS9h",
-            "cnRpZmFjdHJlZ2lzdHJ5cGI7YXJ0aWZhY3RyZWdpc3RyeXBiqgIgR29vZ2xl",
-            "LkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVcQ2xvdWRcQXJ0",
-            "aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVn",
-            "aXN0cnk6OlYxYgZwcm90bzM="));
+            "LmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaBI1CgtjcmVhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoLdXBkYXRl",
+            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQED",
+            "Eg0KBW93bmVyGAcgASgJEjQKCmZldGNoX3RpbWUYCCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgTiQQEDOnnqQXYKJGFydGlmYWN0cmVnaXN0",
+            "cnkuZ29vZ2xlYXBpcy5jb20vRmlsZRJOcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0v",
+            "ZmlsZXMve2ZpbGV9IpoBChBMaXN0RmlsZXNSZXF1ZXN0Ej0KBnBhcmVudBgB",
+            "IAEoCUIt4kEBAvpBJhIkYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlzLmNv",
+            "bS9GaWxlEg4KBmZpbHRlchgEIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJmChFMaXN0Rmls",
+            "ZXNSZXNwb25zZRI4CgVmaWxlcxgBIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5h",
+            "cnRpZmFjdHJlZ2lzdHJ5LnYxLkZpbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
+            "ASgJIk0KDkdldEZpbGVSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeJBAQL6QSYK",
+            "JGFydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vRmlsZUL0AQonY29t",
+            "Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxQglGaWxlUHJv",
+            "dG9QAVpQY2xvdWQuZ29vZ2xlLmNvbS9nby9hcnRpZmFjdHJlZ2lzdHJ5L2Fw",
+            "aXYxL2FydGlmYWN0cmVnaXN0cnlwYjthcnRpZmFjdHJlZ2lzdHJ5cGKqAiBH",
+            "b29nbGUuQ2xvdWQuQXJ0aWZhY3RSZWdpc3RyeS5WMcoCIEdvb2dsZVxDbG91",
+            "ZFxBcnRpZmFjdFJlZ2lzdHJ5XFYx6gIjR29vZ2xlOjpDbG91ZDo6QXJ0aWZh",
+            "Y3RSZWdpc3RyeTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,6 +71,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// A hash of file content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Hash : pb::IMessage<Hash>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -332,6 +333,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Files store content that is potentially associated with Packages or Versions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class File : pb::IMessage<File>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -786,6 +788,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to list files.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFilesRequest : pb::IMessage<ListFilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1153,6 +1156,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response from listing files.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFilesResponse : pb::IMessage<ListFilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1378,6 +1382,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to retrieve a file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFileRequest : pb::IMessage<GetFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -29,23 +29,23 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2Ns",
             "aWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3VkL2ttcy92",
-            "MS9yZXNvdXJjZXMucHJvdG8ijQEKFUxpc3RDcnlwdG9LZXlzUmVxdWVzdBJD",
-            "CgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vUHJvamVjdBIWCglwYWdlX3NpemUYAiABKAVCA+BB",
-            "ARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiZgoWTGlzdENyeXB0b0tleXNS",
-            "ZXNwb25zZRIzCgtjcnlwdG9fa2V5cxgBIAMoCzIeLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuQ3J5cHRvS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKbAgoT",
-            "S2V5RGFzaGJvYXJkU2VydmljZRKyAQoOTGlzdENyeXB0b0tleXMSNC5nb29n",
-            "bGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5cHRvS2V5c1JlcXVl",
-            "c3QaNS5nb29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5cHRv",
-            "S2V5c1Jlc3BvbnNlIjOC0+STAiQSIi92MS97cGFyZW50PXByb2plY3RzLyp9",
-            "L2NyeXB0b0tleXPaQQZwYXJlbnQaT8pBG2ttc2ludmVudG9yeS5nb29nbGVh",
-            "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtcGxhdGZvcm1CwwEKIWNvbS5nb29nbGUuY2xvdWQua21zLmludmVudG9y",
-            "eS52MUIYS2V5RGFzaGJvYXJkU2VydmljZVByb3RvUAFaP2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28va21zL2ludmVudG9yeS9hcGl2MS9pbnZlbnRvcnlwYjtpbnZl",
-            "bnRvcnlwYvgBAaoCHUdvb2dsZS5DbG91ZC5LbXMuSW52ZW50b3J5LlYxygId",
-            "R29vZ2xlXENsb3VkXEttc1xJbnZlbnRvcnlcVjFiBnByb3RvMw=="));
+            "MS9yZXNvdXJjZXMucHJvdG8ikAEKFUxpc3RDcnlwdG9LZXlzUmVxdWVzdBJE",
+            "CgZwYXJlbnQYASABKAlCNOJBAQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2plY3QSFwoJcGFnZV9zaXplGAIgASgFQgTi",
+            "QQEBEhgKCnBhZ2VfdG9rZW4YAyABKAlCBOJBAQEiZgoWTGlzdENyeXB0b0tl",
+            "eXNSZXNwb25zZRIzCgtjcnlwdG9fa2V5cxgBIAMoCzIeLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuQ3J5cHRvS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTKb",
+            "AgoTS2V5RGFzaGJvYXJkU2VydmljZRKyAQoOTGlzdENyeXB0b0tleXMSNC5n",
+            "b29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5cHRvS2V5c1Jl",
+            "cXVlc3QaNS5nb29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5",
+            "cHRvS2V5c1Jlc3BvbnNlIjPaQQZwYXJlbnSC0+STAiQSIi92MS97cGFyZW50",
+            "PXByb2plY3RzLyp9L2NyeXB0b0tleXMaT8pBG2ttc2ludmVudG9yeS5nb29n",
+            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm1CwwEKIWNvbS5nb29nbGUuY2xvdWQua21zLmludmVu",
+            "dG9yeS52MUIYS2V5RGFzaGJvYXJkU2VydmljZVByb3RvUAFaP2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28va21zL2ludmVudG9yeS9hcGl2MS9pbnZlbnRvcnlwYjtp",
+            "bnZlbnRvcnlwYvgBAaoCHUdvb2dsZS5DbG91ZC5LbXMuSW52ZW50b3J5LlYx",
+            "ygIdR29vZ2xlXENsb3VkXEttc1xJbnZlbnRvcnlcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
   /// Request message for
   /// [KeyDashboardService.ListCryptoKeys][google.cloud.kms.inventory.v1.KeyDashboardService.ListCryptoKeys].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCryptoKeysRequest : pb::IMessage<ListCryptoKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -341,6 +342,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
   /// Response message for
   /// [KeyDashboardService.ListCryptoKeys][google.cloud.kms.inventory.v1.KeyDashboardService.ListCryptoKeys].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCryptoKeysResponse : pb::IMessage<ListCryptoKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

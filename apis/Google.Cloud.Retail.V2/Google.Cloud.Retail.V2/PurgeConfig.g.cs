@@ -27,15 +27,15 @@ namespace Google.Cloud.Retail.V2 {
             "Cilnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3B1cmdlX2NvbmZpZy5wcm90bxIW",
             "Z29vZ2xlLmNsb3VkLnJldGFpbC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byIPCg1QdXJn",
-            "ZU1ldGFkYXRhInMKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSNQoGcGFyZW50",
-            "GAEgASgJQiXgQQL6QR8KHXJldGFpbC5nb29nbGVhcGlzLmNvbS9DYXRhbG9n",
-            "EhMKBmZpbHRlchgCIAEoCUID4EECEg0KBWZvcmNlGAMgASgIIjYKF1B1cmdl",
-            "VXNlckV2ZW50c1Jlc3BvbnNlEhsKE3B1cmdlZF9ldmVudHNfY291bnQYASAB",
-            "KANCuwEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhBQdXJnZUNvbmZp",
-            "Z1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYyL3Jl",
-            "dGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFp",
-            "bC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3Vk",
-            "OjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "ZU1ldGFkYXRhInUKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSNgoGcGFyZW50",
+            "GAEgASgJQibiQQEC+kEfCh1yZXRhaWwuZ29vZ2xlYXBpcy5jb20vQ2F0YWxv",
+            "ZxIUCgZmaWx0ZXIYAiABKAlCBOJBAQISDQoFZm9yY2UYAyABKAgiNgoXUHVy",
+            "Z2VVc2VyRXZlbnRzUmVzcG9uc2USGwoTcHVyZ2VkX2V2ZW50c19jb3VudBgB",
+            "IAEoA0K7AQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCEFB1cmdlQ29u",
+            "ZmlnUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9yZXRhaWwvYXBpdjIv",
+            "cmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0",
+            "YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xv",
+            "dWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +52,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Metadata related to the progress of the Purge operation.
   /// This will be returned by the google.longrunning.Operation.metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeMetadata : pb::IMessage<PurgeMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -207,6 +208,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for PurgeUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeUserEventsRequest : pb::IMessage<PurgeUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -510,6 +512,7 @@ namespace Google.Cloud.Retail.V2 {
   /// successfully done, then this message is returned by the
   /// google.longrunning.Operations.response field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeUserEventsResponse : pb::IMessage<PurgeUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

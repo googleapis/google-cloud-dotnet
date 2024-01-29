@@ -67,6 +67,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// The schema defines the output of the processed document by a processor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentSchema : pb::IMessage<DocumentSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -385,6 +386,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// detailed attributes and limitations for entity-based processors. Multiple
       /// types can also compose a dependency tree to represent nested types.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityType : pb::IMessage<EntityType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -781,6 +783,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           /// <summary>
           /// Defines the a list of enum values.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class EnumValues : pb::IMessage<EnumValues>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -965,6 +968,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           /// <summary>
           /// Defines properties that can be part of the entity type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Property : pb::IMessage<Property>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1292,6 +1296,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Metadata for global schema behavior.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metadata : pb::IMessage<Metadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START cloudchannel_v1_generated_CloudChannelReportsService_RunReportJob_sync]
     using Google.Cloud.Channel.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedCloudChannelReportsServiceClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void RunReportJobRequestObject()
         {
             // Create client

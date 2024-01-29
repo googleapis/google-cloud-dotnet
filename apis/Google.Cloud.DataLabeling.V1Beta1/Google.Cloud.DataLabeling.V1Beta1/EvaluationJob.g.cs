@@ -95,6 +95,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// job](/ml-engine/docs/continuous-evaluation/create-job) is the starting point
   /// for using continuous evaluation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationJob : pb::IMessage<EvaluationJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -752,6 +753,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Configures specific details of how a continuous evaluation job works. Provide
   /// this configuration when you create an EvaluationJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationJobConfig : pb::IMessage<EvaluationJobConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1469,6 +1471,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Provides details for how an evaluation job sends email alerts based on the
   /// results of a run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationJobAlertConfig : pb::IMessage<EvaluationJobAlertConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1708,6 +1711,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Records a failed evaluation job run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attempt : pb::IMessage<Attempt>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

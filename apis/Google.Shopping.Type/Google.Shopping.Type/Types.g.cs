@@ -65,6 +65,7 @@ namespace Google.Shopping.Type {
   /// <summary>
   /// The price represented as a number and currency.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Price : pb::IMessage<Price>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -337,6 +338,7 @@ namespace Google.Shopping.Type {
   /// A message that represents custom attributes. Exactly one of `value` or
   /// `group_values` must not be empty.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomAttribute : pb::IMessage<CustomAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -634,6 +636,7 @@ namespace Google.Shopping.Type {
   /// Destinations are used in Merchant Center to allow you to control where the
   /// products from your data feed should be displayed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Destination : pb::IMessage<Destination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -839,6 +842,7 @@ namespace Google.Shopping.Type {
   /// formats within a destination (for example, [Discovery
   /// ads](https://support.google.com/merchants/answer/13389785)).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportingContext : pb::IMessage<ReportingContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1069,6 +1073,7 @@ namespace Google.Shopping.Type {
   ///
   /// Channel is used to distinguish between online and local products.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Channel : pb::IMessage<Channel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

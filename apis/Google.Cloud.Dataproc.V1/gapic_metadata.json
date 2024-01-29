@@ -212,6 +212,84 @@
         }
       }
     },
+    "SessionController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SessionControllerClient",
+          "rpcs": {
+            "CreateSession": {
+              "methods": [
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
+            "TerminateSession": {
+              "methods": [
+                "TerminateSession",
+                "TerminateSessionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SessionTemplateController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SessionTemplateControllerClient",
+          "rpcs": {
+            "CreateSessionTemplate": {
+              "methods": [
+                "CreateSessionTemplate",
+                "CreateSessionTemplateAsync"
+              ]
+            },
+            "DeleteSessionTemplate": {
+              "methods": [
+                "DeleteSessionTemplate",
+                "DeleteSessionTemplateAsync"
+              ]
+            },
+            "GetSessionTemplate": {
+              "methods": [
+                "GetSessionTemplate",
+                "GetSessionTemplateAsync"
+              ]
+            },
+            "ListSessionTemplates": {
+              "methods": [
+                "ListSessionTemplates",
+                "ListSessionTemplatesAsync"
+              ]
+            },
+            "UpdateSessionTemplate": {
+              "methods": [
+                "UpdateSessionTemplate",
+                "UpdateSessionTemplateAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "WorkflowTemplateService": {
       "clients": {
         "grpc": {

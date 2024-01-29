@@ -118,14 +118,14 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublicCertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
+            return PublicCertificateAuthorityServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PublicCertificateAuthorityServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublicCertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
+            return PublicCertificateAuthorityServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

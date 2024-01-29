@@ -48,6 +48,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// ProtoSchema describes the schema of the serialized protocol buffer data rows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProtoSchema : pb::IMessage<ProtoSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -257,6 +258,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProtoRows : pb::IMessage<ProtoRows>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

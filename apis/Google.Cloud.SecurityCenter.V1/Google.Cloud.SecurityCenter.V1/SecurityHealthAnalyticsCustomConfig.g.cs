@@ -64,6 +64,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Health Analytics. Use the custom module configuration to create custom
   /// detectors that generate custom findings for resources that you specify.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomConfig : pb::IMessage<CustomConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -525,6 +526,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// source properties that are defined here are included in the finding JSON
       /// under `sourceProperties`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CustomOutputSpec : pb::IMessage<CustomOutputSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -712,6 +714,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           /// <summary>
           /// An individual name-value pair that defines a custom source property.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Property : pb::IMessage<Property>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -963,6 +966,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Resource for selecting resource type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceSelector : pb::IMessage<ResourceSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

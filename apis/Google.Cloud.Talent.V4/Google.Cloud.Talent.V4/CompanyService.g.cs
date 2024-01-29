@@ -31,47 +31,47 @@ namespace Google.Cloud.Talent.V4 {
             "cHJvdG8aI2dvb2dsZS9jbG91ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvGiRn",
             "b29nbGUvY2xvdWQvdGFsZW50L3Y0L2NvbXBhbnkucHJvdG8aG2dvb2dsZS9w",
             "cm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21h",
-            "c2sucHJvdG8igQEKFENyZWF0ZUNvbXBhbnlSZXF1ZXN0EjIKBnBhcmVudBgB",
-            "IAEoCUIi4EEC+kEcChpqb2JzLmdvb2dsZWFwaXMuY29tL1RlbmFudBI1Cgdj",
-            "b21wYW55GAIgASgLMh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55",
-            "QgPgQQIiRgoRR2V0Q29tcGFueVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC",
-            "+kEdChtqb2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkifgoUVXBkYXRlQ29t",
-            "cGFueVJlcXVlc3QSNQoHY29tcGFueRgBIAEoCzIfLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjQuQ29tcGFueUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJJChREZWxldGVDb21wYW55UmVx",
-            "dWVzdBIxCgRuYW1lGAEgASgJQiPgQQL6QR0KG2pvYnMuZ29vZ2xlYXBpcy5j",
-            "b20vQ29tcGFueSKMAQoUTGlzdENvbXBhbmllc1JlcXVlc3QSMgoGcGFyZW50",
-            "GAEgASgJQiLgQQL6QRwKGmpvYnMuZ29vZ2xlYXBpcy5jb20vVGVuYW50EhIK",
-            "CnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhkKEXJlcXVp",
-            "cmVfb3Blbl9qb2JzGAQgASgIIqABChVMaXN0Q29tcGFuaWVzUmVzcG9uc2US",
-            "MgoJY29tcGFuaWVzGAEgAygLMh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5D",
-            "b21wYW55EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRI6CghtZXRhZGF0YRgD",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuUmVzcG9uc2VNZXRhZGF0",
-            "YTLDBwoOQ29tcGFueVNlcnZpY2USrQEKDUNyZWF0ZUNvbXBhbnkSLC5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0LkNyZWF0ZUNvbXBhbnlSZXF1ZXN0Gh8uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55Ik2C0+STAjYiKy92NC97cGFy",
-            "ZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9jb21wYW5pZXM6B2NvbXBhbnna",
-            "QQ5wYXJlbnQsY29tcGFueRKUAQoKR2V0Q29tcGFueRIpLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjQuR2V0Q29tcGFueVJlcXVlc3QaHy5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0LkNvbXBhbnkiOoLT5JMCLRIrL3Y0L3tuYW1lPXByb2plY3Rz",
-            "LyovdGVuYW50cy8qL2NvbXBhbmllcy8qfdpBBG5hbWUSugEKDVVwZGF0ZUNv",
-            "bXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0LlVwZGF0ZUNvbXBhbnlS",
-            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55IlqC0+ST",
-            "Aj4yMy92NC97Y29tcGFueS5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2Nv",
-            "bXBhbmllcy8qfToHY29tcGFuedpBE2NvbXBhbnksdXBkYXRlX21hc2sSkQEK",
-            "DURlbGV0ZUNvbXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0LkRlbGV0",
-            "ZUNvbXBhbnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjqC0+ST",
-            "Ai0qKy92NC97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMv",
-            "Kn3aQQRuYW1lEqoBCg1MaXN0Q29tcGFuaWVzEiwuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NC5MaXN0Q29tcGFuaWVzUmVxdWVzdBotLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjQuTGlzdENvbXBhbmllc1Jlc3BvbnNlIjyC0+STAi0SKy92NC97",
-            "cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9jb21wYW5pZXPaQQZwYXJl",
-            "bnQabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvam9ic0JtChpjb20uZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NEITQ29tcGFueVNlcnZpY2VQcm90b1ABWjJjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL3RhbGVudC9hcGl2NC90YWxlbnRwYjt0YWxlbnRwYqICA0NUU2IG",
-            "cHJvdG8z"));
+            "c2sucHJvdG8igwEKFENyZWF0ZUNvbXBhbnlSZXF1ZXN0EjMKBnBhcmVudBgB",
+            "IAEoCUIj4kEBAvpBHAoaam9icy5nb29nbGVhcGlzLmNvbS9UZW5hbnQSNgoH",
+            "Y29tcGFueRgCIAEoCzIfLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuQ29tcGFu",
+            "eUIE4kEBAiJHChFHZXRDb21wYW55UmVxdWVzdBIyCgRuYW1lGAEgASgJQiTi",
+            "QQEC+kEdChtqb2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkifwoUVXBkYXRl",
+            "Q29tcGFueVJlcXVlc3QSNgoHY29tcGFueRgBIAEoCzIfLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjQuQ29tcGFueUIE4kEBAhIvCgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSgoURGVsZXRlQ29tcGFu",
+            "eVJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4kEBAvpBHQobam9icy5nb29nbGVh",
+            "cGlzLmNvbS9Db21wYW55Io0BChRMaXN0Q29tcGFuaWVzUmVxdWVzdBIzCgZw",
+            "YXJlbnQYASABKAlCI+JBAQL6QRwKGmpvYnMuZ29vZ2xlYXBpcy5jb20vVGVu",
+            "YW50EhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhkK",
+            "EXJlcXVpcmVfb3Blbl9qb2JzGAQgASgIIqABChVMaXN0Q29tcGFuaWVzUmVz",
+            "cG9uc2USMgoJY29tcGFuaWVzGAEgAygLMh8uZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NC5Db21wYW55EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRI6CghtZXRh",
+            "ZGF0YRgDIAEoCzIoLmdvb2dsZS5jbG91ZC50YWxlbnQudjQuUmVzcG9uc2VN",
+            "ZXRhZGF0YTLDBwoOQ29tcGFueVNlcnZpY2USrQEKDUNyZWF0ZUNvbXBhbnkS",
+            "LC5nb29nbGUuY2xvdWQudGFsZW50LnY0LkNyZWF0ZUNvbXBhbnlSZXF1ZXN0",
+            "Gh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55Ik3aQQ5wYXJlbnQs",
+            "Y29tcGFueYLT5JMCNiIrL3Y0L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRz",
+            "Lyp9L2NvbXBhbmllczoHY29tcGFueRKUAQoKR2V0Q29tcGFueRIpLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjQuR2V0Q29tcGFueVJlcXVlc3QaHy5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0LkNvbXBhbnkiOtpBBG5hbWWC0+STAi0SKy92NC97",
+            "bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMvKn0SugEKDVVw",
+            "ZGF0ZUNvbXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0LlVwZGF0ZUNv",
+            "bXBhbnlSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55",
+            "IlraQRNjb21wYW55LHVwZGF0ZV9tYXNrgtPkkwI+MjMvdjQve2NvbXBhbnku",
+            "bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9jb21wYW5pZXMvKn06B2NvbXBh",
+            "bnkSkQEKDURlbGV0ZUNvbXBhbnkSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "LkRlbGV0ZUNvbXBhbnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IjraQQRuYW1lgtPkkwItKisvdjQve25hbWU9cHJvamVjdHMvKi90ZW5hbnRz",
+            "LyovY29tcGFuaWVzLyp9EqoBCg1MaXN0Q29tcGFuaWVzEiwuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NC5MaXN0Q29tcGFuaWVzUmVxdWVzdBotLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjQuTGlzdENvbXBhbmllc1Jlc3BvbnNlIjzaQQZwYXJl",
+            "bnSC0+STAi0SKy92NC97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9j",
+            "b21wYW5pZXMabMpBE2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9ic0JtChpjb20uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NEITQ29tcGFueVNlcnZpY2VQcm90b1ABWjJjbG91ZC5n",
+            "b29nbGUuY29tL2dvL3RhbGVudC9hcGl2NC90YWxlbnRwYjt0YWxlbnRwYqIC",
+            "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4.CompanyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,6 +90,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The Request of the CreateCompany method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCompanyRequest : pb::IMessage<CreateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -337,6 +338,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request for getting a company by name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCompanyRequest : pb::IMessage<GetCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -536,6 +538,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request for updating a specified company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCompanyRequest : pb::IMessage<UpdateCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -799,6 +802,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to delete a company.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCompanyRequest : pb::IMessage<DeleteCompanyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -998,6 +1002,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// List companies for which the client has ACL visibility.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesRequest : pb::IMessage<ListCompaniesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1323,6 +1328,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The List companies response object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCompaniesResponse : pb::IMessage<ListCompaniesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

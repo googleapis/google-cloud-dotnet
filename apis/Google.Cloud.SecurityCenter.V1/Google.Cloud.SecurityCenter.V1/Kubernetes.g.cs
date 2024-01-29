@@ -83,6 +83,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Kubernetes-related attributes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Kubernetes : pb::IMessage<Kubernetes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -427,6 +428,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// A Kubernetes Pod.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Pod : pb::IMessage<Pod>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -721,6 +723,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Kubernetes nodes associated with the finding.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Node : pb::IMessage<Node>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -917,6 +920,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Provides GKE node pool information.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NodePool : pb::IMessage<NodePool>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1141,6 +1145,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Kubernetes Role or ClusterRole.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Role : pb::IMessage<Role>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1442,6 +1447,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Represents a Kubernetes RoleBinding or ClusterRoleBinding.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Binding : pb::IMessage<Binding>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1756,6 +1762,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// Represents a Kubernetes subject.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Subject : pb::IMessage<Subject>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2064,6 +2071,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access)
       /// command) that was involved in a finding.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AccessReview : pb::IMessage<AccessReview>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

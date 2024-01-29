@@ -58,6 +58,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Represents an access event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Access : pb::IMessage<Access>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,6 +680,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Identity delegation history of an authenticated service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceAccountDelegationInfo : pb::IMessage<ServiceAccountDelegationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -920,6 +922,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Represents a geographical location for a given access.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Geolocation : pb::IMessage<Geolocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

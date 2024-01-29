@@ -100,6 +100,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// to its desired state.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicyResourceConfigStep : pb::IMessage<OSPolicyResourceConfigStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -437,6 +438,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Compliance data for an OS policy resource.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicyResourceCompliance : pb::IMessage<OSPolicyResourceCompliance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -791,6 +793,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// ExecResource specific output.
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExecResourceOutput : pb::IMessage<ExecResourceOutput>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

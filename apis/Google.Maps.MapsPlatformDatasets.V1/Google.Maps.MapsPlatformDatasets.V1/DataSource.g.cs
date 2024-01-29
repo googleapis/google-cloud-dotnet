@@ -78,6 +78,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
   /// <summary>
   /// The details about the data source when it is a local file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalFileSource : pb::IMessage<LocalFileSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -313,6 +314,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1 {
   /// <summary>
   /// The details about the data source when it is in Google Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -42,8 +42,8 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
             "c2lvbnMSRy5nb29nbGUuY2xvdWQub3JjaGVzdHJhdGlvbi5haXJmbG93LnNl",
             "cnZpY2UudjEuTGlzdEltYWdlVmVyc2lvbnNSZXF1ZXN0GkguZ29vZ2xlLmNs",
             "b3VkLm9yY2hlc3RyYXRpb24uYWlyZmxvdy5zZXJ2aWNlLnYxLkxpc3RJbWFn",
-            "ZVZlcnNpb25zUmVzcG9uc2UiQoLT5JMCMxIxL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vaW1hZ2VWZXJzaW9uc9pBBnBhcmVudBpLykEX",
+            "ZVZlcnNpb25zUmVzcG9uc2UiQtpBBnBhcmVudILT5JMCMxIxL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW1hZ2VWZXJzaW9ucxpLykEX",
             "Y29tcG9zZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
             "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQoIBCjFjb20uZ29vZ2xlLmNs",
             "b3VkLm9yY2hlc3RyYXRpb24uYWlyZmxvdy5zZXJ2aWNlLnYxUAFaS2Nsb3Vk",
@@ -64,6 +64,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
   /// <summary>
   /// List ImageVersions in a project and location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListImageVersionsRequest : pb::IMessage<ListImageVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -380,6 +381,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
   /// <summary>
   /// The ImageVersions in a project and location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListImageVersionsResponse : pb::IMessage<ListImageVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -604,6 +606,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
   /// <summary>
   /// ImageVersion information
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageVersion : pb::IMessage<ImageVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

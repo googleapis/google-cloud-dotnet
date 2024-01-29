@@ -29,53 +29,54 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxoWZ29v",
             "Z2xlL3R5cGUvZGF0ZS5wcm90bxoXZ29vZ2xlL3R5cGUvbW9uZXkucHJvdG8i",
-            "zwMKBkJ1ZGdldBIRCgRuYW1lGAEgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1l",
-            "GAIgASgJEkMKDWJ1ZGdldF9maWx0ZXIYAyABKAsyJy5nb29nbGUuY2xvdWQu",
-            "YmlsbGluZy5idWRnZXRzLnYxLkZpbHRlckID4EEBEkIKBmFtb3VudBgEIAEo",
-            "CzItLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjEuQnVkZ2V0QW1v",
-            "dW50QgPgQQISTAoPdGhyZXNob2xkX3J1bGVzGAUgAygLMi4uZ29vZ2xlLmNs",
-            "b3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5UaHJlc2hvbGRSdWxlQgPgQQESUwoS",
-            "bm90aWZpY2F0aW9uc19ydWxlGAYgASgLMjIuZ29vZ2xlLmNsb3VkLmJpbGxp",
-            "bmcuYnVkZ2V0cy52MS5Ob3RpZmljYXRpb25zUnVsZUID4EEBEhEKBGV0YWcY",
-            "ByABKAlCA+BBATpd6kFaCiRiaWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNv",
-            "bS9CdWRnZXQSMmJpbGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9i",
-            "dWRnZXRzL3tidWRnZXR9IqABCgxCdWRnZXRBbW91bnQSLgoQc3BlY2lmaWVk",
-            "X2Ftb3VudBgBIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5SAASTwoSbGFzdF9w",
-            "ZXJpb2RfYW1vdW50GAIgASgLMjEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVk",
-            "Z2V0cy52MS5MYXN0UGVyaW9kQW1vdW50SABCDwoNYnVkZ2V0X2Ftb3VudCIS",
-            "ChBMYXN0UGVyaW9kQW1vdW50IsgBCg1UaHJlc2hvbGRSdWxlEh4KEXRocmVz",
-            "aG9sZF9wZXJjZW50GAEgASgBQgPgQQISTgoLc3BlbmRfYmFzaXMYAiABKA4y",
-            "NC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxLlRocmVzaG9sZFJ1",
-            "bGUuQmFzaXNCA+BBASJHCgVCYXNpcxIVChFCQVNJU19VTlNQRUNJRklFRBAA",
-            "EhEKDUNVUlJFTlRfU1BFTkQQARIUChBGT1JFQ0FTVEVEX1NQRU5EEAIi1QEK",
-            "EU5vdGlmaWNhdGlvbnNSdWxlEhkKDHB1YnN1Yl90b3BpYxgBIAEoCUID4EEB",
-            "EhsKDnNjaGVtYV92ZXJzaW9uGAIgASgJQgPgQQESLQogbW9uaXRvcmluZ19u",
-            "b3RpZmljYXRpb25fY2hhbm5lbHMYAyADKAlCA+BBARIrCh5kaXNhYmxlX2Rl",
-            "ZmF1bHRfaWFtX3JlY2lwaWVudHMYBCABKAhCA+BBARIsCh9lbmFibGVfcHJv",
-            "amVjdF9sZXZlbF9yZWNpcGllbnRzGAUgASgIQgPgQQEixAUKBkZpbHRlchIV",
-            "Cghwcm9qZWN0cxgBIAMoCUID4EEBEh8KEnJlc291cmNlX2FuY2VzdG9ycxgC",
-            "IAMoCUID4EEBEhkKDGNyZWRpdF90eXBlcxgHIAMoCUID4EEBEmEKFmNyZWRp",
-            "dF90eXBlc190cmVhdG1lbnQYBCABKA4yPC5nb29nbGUuY2xvdWQuYmlsbGlu",
-            "Zy5idWRnZXRzLnYxLkZpbHRlci5DcmVkaXRUeXBlc1RyZWF0bWVudEID4EEB",
-            "EhUKCHNlcnZpY2VzGAMgAygJQgPgQQESGAoLc3ViYWNjb3VudHMYBSADKAlC",
-            "A+BBARJICgZsYWJlbHMYBiADKAsyMy5nb29nbGUuY2xvdWQuYmlsbGluZy5i",
-            "dWRnZXRzLnYxLkZpbHRlci5MYWJlbHNFbnRyeUID4EEBEk8KD2NhbGVuZGFy",
-            "X3BlcmlvZBgIIAEoDjIvLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMu",
-            "djEuQ2FsZW5kYXJQZXJpb2RCA+BBAUgAEksKDWN1c3RvbV9wZXJpb2QYCSAB",
-            "KAsyLS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxLkN1c3RvbVBl",
-            "cmlvZEID4EEBSAAaSQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEikKBXZh",
-            "bHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZToCOAEijwEK",
-            "FENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNSRURJVF9UWVBFU19UUkVBVE1F",
-            "TlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURFX0FMTF9DUkVESVRTEAESFwoT",
-            "RVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlOQ0xVREVfU1BFQ0lGSUVEX0NS",
-            "RURJVFMQA0IOCgx1c2FnZV9wZXJpb2QiZAoMQ3VzdG9tUGVyaW9kEioKCnN0",
-            "YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISKAoIZW5k",
-            "X2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQEqUwoOQ2FsZW5k",
-            "YXJQZXJpb2QSHwobQ0FMRU5EQVJfUEVSSU9EX1VOU1BFQ0lGSUVEEAASCQoF",
-            "TU9OVEgQARILCgdRVUFSVEVSEAISCAoEWUVBUhADQngKI2NvbS5nb29nbGUu",
-            "Y2xvdWQuYmlsbGluZy5idWRnZXRzLnYxQhBCdWRnZXRNb2RlbFByb3RvUAFa",
-            "PWNsb3VkLmdvb2dsZS5jb20vZ28vYmlsbGluZy9idWRnZXRzL2FwaXYxL2J1",
-            "ZGdldHNwYjtidWRnZXRzcGJiBnByb3RvMw=="));
+            "1QMKBkJ1ZGdldBISCgRuYW1lGAEgASgJQgTiQQEDEhQKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCRJECg1idWRnZXRfZmlsdGVyGAMgASgLMicuZ29vZ2xlLmNsb3Vk",
+            "LmJpbGxpbmcuYnVkZ2V0cy52MS5GaWx0ZXJCBOJBAQESQwoGYW1vdW50GAQg",
+            "ASgLMi0uZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5CdWRnZXRB",
+            "bW91bnRCBOJBAQISTQoPdGhyZXNob2xkX3J1bGVzGAUgAygLMi4uZ29vZ2xl",
+            "LmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5UaHJlc2hvbGRSdWxlQgTiQQEB",
+            "ElQKEm5vdGlmaWNhdGlvbnNfcnVsZRgGIAEoCzIyLmdvb2dsZS5jbG91ZC5i",
+            "aWxsaW5nLmJ1ZGdldHMudjEuTm90aWZpY2F0aW9uc1J1bGVCBOJBAQESEgoE",
+            "ZXRhZxgHIAEoCUIE4kEBATpd6kFaCiRiaWxsaW5nYnVkZ2V0cy5nb29nbGVh",
+            "cGlzLmNvbS9CdWRnZXQSMmJpbGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2Nv",
+            "dW50fS9idWRnZXRzL3tidWRnZXR9IqABCgxCdWRnZXRBbW91bnQSLgoQc3Bl",
+            "Y2lmaWVkX2Ftb3VudBgBIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5SAASTwoS",
+            "bGFzdF9wZXJpb2RfYW1vdW50GAIgASgLMjEuZ29vZ2xlLmNsb3VkLmJpbGxp",
+            "bmcuYnVkZ2V0cy52MS5MYXN0UGVyaW9kQW1vdW50SABCDwoNYnVkZ2V0X2Ft",
+            "b3VudCISChBMYXN0UGVyaW9kQW1vdW50IsoBCg1UaHJlc2hvbGRSdWxlEh8K",
+            "EXRocmVzaG9sZF9wZXJjZW50GAEgASgBQgTiQQECEk8KC3NwZW5kX2Jhc2lz",
+            "GAIgASgOMjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5UaHJl",
+            "c2hvbGRSdWxlLkJhc2lzQgTiQQEBIkcKBUJhc2lzEhUKEUJBU0lTX1VOU1BF",
+            "Q0lGSUVEEAASEQoNQ1VSUkVOVF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BF",
+            "TkQQAiLaAQoRTm90aWZpY2F0aW9uc1J1bGUSGgoMcHVic3ViX3RvcGljGAEg",
+            "ASgJQgTiQQEBEhwKDnNjaGVtYV92ZXJzaW9uGAIgASgJQgTiQQEBEi4KIG1v",
+            "bml0b3Jpbmdfbm90aWZpY2F0aW9uX2NoYW5uZWxzGAMgAygJQgTiQQEBEiwK",
+            "HmRpc2FibGVfZGVmYXVsdF9pYW1fcmVjaXBpZW50cxgEIAEoCEIE4kEBARIt",
+            "Ch9lbmFibGVfcHJvamVjdF9sZXZlbF9yZWNpcGllbnRzGAUgASgIQgTiQQEB",
+            "Is0FCgZGaWx0ZXISFgoIcHJvamVjdHMYASADKAlCBOJBAQESIAoScmVzb3Vy",
+            "Y2VfYW5jZXN0b3JzGAIgAygJQgTiQQEBEhoKDGNyZWRpdF90eXBlcxgHIAMo",
+            "CUIE4kEBARJiChZjcmVkaXRfdHlwZXNfdHJlYXRtZW50GAQgASgOMjwuZ29v",
+            "Z2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5GaWx0ZXIuQ3JlZGl0VHlw",
+            "ZXNUcmVhdG1lbnRCBOJBAQESFgoIc2VydmljZXMYAyADKAlCBOJBAQESGQoL",
+            "c3ViYWNjb3VudHMYBSADKAlCBOJBAQESSQoGbGFiZWxzGAYgAygLMjMuZ29v",
+            "Z2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5GaWx0ZXIuTGFiZWxzRW50",
+            "cnlCBOJBAQESUAoPY2FsZW5kYXJfcGVyaW9kGAggASgOMi8uZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5DYWxlbmRhclBlcmlvZEIE4kEBAUgA",
+            "EkwKDWN1c3RvbV9wZXJpb2QYCSABKAsyLS5nb29nbGUuY2xvdWQuYmlsbGlu",
+            "Zy5idWRnZXRzLnYxLkN1c3RvbVBlcmlvZEIE4kEBAUgAGkkKC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRIpCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5MaXN0VmFsdWU6AjgBIo8BChRDcmVkaXRUeXBlc1RyZWF0bWVudBIm",
+            "CiJDUkVESVRfVFlQRVNfVFJFQVRNRU5UX1VOU1BFQ0lGSUVEEAASFwoTSU5D",
+            "TFVERV9BTExfQ1JFRElUUxABEhcKE0VYQ0xVREVfQUxMX0NSRURJVFMQAhId",
+            "ChlJTkNMVURFX1NQRUNJRklFRF9DUkVESVRTEANCDgoMdXNhZ2VfcGVyaW9k",
+            "ImYKDEN1c3RvbVBlcmlvZBIrCgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xl",
+            "LnR5cGUuRGF0ZUIE4kEBAhIpCghlbmRfZGF0ZRgCIAEoCzIRLmdvb2dsZS50",
+            "eXBlLkRhdGVCBOJBAQEqUwoOQ2FsZW5kYXJQZXJpb2QSHwobQ0FMRU5EQVJf",
+            "UEVSSU9EX1VOU1BFQ0lGSUVEEAASCQoFTU9OVEgQARILCgdRVUFSVEVSEAIS",
+            "CAoEWUVBUhADQngKI2NvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRz",
+            "LnYxQhBCdWRnZXRNb2RlbFByb3RvUAFaPWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YmlsbGluZy9idWRnZXRzL2FwaXYxL2J1ZGdldHNwYjtidWRnZXRzcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Billing.Budgets.V1.CalendarPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -130,6 +131,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// The budget time period is configurable, with options such as month (default),
   /// quarter, year, or custom time period.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Budget : pb::IMessage<Budget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -594,6 +596,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// The budgeted amount for each usage period.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BudgetAmount : pb::IMessage<BudgetAmount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -902,6 +905,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// a
   /// [Filter.custom_period][google.cloud.billing.budgets.v1.Filter.custom_period].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LastPeriodAmount : pb::IMessage<LastPeriodAmount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1078,6 +1082,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// [set budget threshold rules and
   /// actions](https://cloud.google.com/billing/docs/how-to/budgets#budget-actions).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThresholdRule : pb::IMessage<ThresholdRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1348,6 +1353,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// NotificationsRule defines notifications that are sent based on budget spend
   /// and thresholds.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationsRule : pb::IMessage<NotificationsRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1752,6 +1758,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// A filter for a budget, limiting the scope of the cost to calculate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Filter : pb::IMessage<Filter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2341,6 +2348,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomPeriod : pb::IMessage<CustomPeriod>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

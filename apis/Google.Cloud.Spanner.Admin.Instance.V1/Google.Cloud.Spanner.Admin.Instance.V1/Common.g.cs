@@ -50,6 +50,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// Encapsulates progress related information for a Cloud Spanner long
   /// running instance operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationProgress : pb::IMessage<OperationProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -66,6 +66,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// <summary>
   /// A unit of scheduled work.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Task : pb::IMessage<Task>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -879,6 +880,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// <summary>
   /// The status of a task attempt.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attempt : pb::IMessage<Attempt>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

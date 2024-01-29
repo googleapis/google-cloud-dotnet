@@ -28,41 +28,41 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "YXBzaG90LnByb3RvEiFnb29nbGUuY2xvdWQuYmFyZW1ldGFsc29sdXRpb24u",
             "djIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8i5wMKDlZvbHVtZVNuYXBzaG90EgwKBG5hbWUYASABKAkSDwoCaWQY",
-            "BiABKAlCA+BBAxITCgtkZXNjcmlwdGlvbhgCIAEoCRI0CgtjcmVhdGVfdGlt",
-            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJHCg5z",
-            "dG9yYWdlX3ZvbHVtZRgFIAEoCUIv4EED+kEpCidiYXJlbWV0YWxzb2x1dGlv",
-            "bi5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSUQoEdHlwZRgHIAEoDjI+Lmdvb2ds",
-            "ZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1bWVTbmFwc2hvdC5T",
-            "bmFwc2hvdFR5cGVCA+BBAyJICgxTbmFwc2hvdFR5cGUSHQoZU05BUFNIT1Rf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEgoKBkFEX0hPQxABEg0KCVNDSEVEVUxFRBAC",
-            "OoQB6kGAAQovYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9s",
-            "dW1lU25hcHNob3QSTXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L3NuYXBzaG90cy97c25hcHNob3R9",
-            "ImEKGEdldFZvbHVtZVNuYXBzaG90UmVxdWVzdBJFCgRuYW1lGAEgASgJQjfg",
-            "QQL6QTEKL2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL1ZvbHVt",
-            "ZVNuYXBzaG90IoQBChpMaXN0Vm9sdW1lU25hcHNob3RzUmVxdWVzdBI/CgZw",
-            "YXJlbnQYASABKAlCL+BBAvpBKQonYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vVm9sdW1lEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rv",
-            "a2VuGAMgASgJIpgBChtMaXN0Vm9sdW1lU25hcHNob3RzUmVzcG9uc2USSwoQ",
-            "dm9sdW1lX3NuYXBzaG90cxgBIAMoCzIxLmdvb2dsZS5jbG91ZC5iYXJlbWV0",
-            "YWxzb2x1dGlvbi52Mi5Wb2x1bWVTbmFwc2hvdBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiZAobRGVsZXRlVm9sdW1l",
-            "U25hcHNob3RSZXF1ZXN0EkUKBG5hbWUYASABKAlCN+BBAvpBMQovYmFyZW1l",
-            "dGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9sdW1lU25hcHNob3QirwEK",
-            "G0NyZWF0ZVZvbHVtZVNuYXBzaG90UmVxdWVzdBI/CgZwYXJlbnQYASABKAlC",
-            "L+BBAvpBKQonYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20vVm9s",
-            "dW1lEk8KD3ZvbHVtZV9zbmFwc2hvdBgCIAEoCzIxLmdvb2dsZS5jbG91ZC5i",
-            "YXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1bWVTbmFwc2hvdEID4EECInAKHFJl",
-            "c3RvcmVWb2x1bWVTbmFwc2hvdFJlcXVlc3QSUAoPdm9sdW1lX3NuYXBzaG90",
-            "GAEgASgJQjfgQQL6QTEKL2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMu",
-            "Y29tL1ZvbHVtZVNuYXBzaG90QoICCiVjb20uZ29vZ2xlLmNsb3VkLmJhcmVt",
-            "ZXRhbHNvbHV0aW9uLnYyQhNWb2x1bWVTbmFwc2hvdFByb3RvUAFaU2Nsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYmFyZW1ldGFsc29sdXRpb24vYXBpdjIvYmFyZW1l",
-            "dGFsc29sdXRpb25wYjtiYXJlbWV0YWxzb2x1dGlvbnBiqgIhR29vZ2xlLkNs",
-            "b3VkLkJhcmVNZXRhbFNvbHV0aW9uLlYyygIhR29vZ2xlXENsb3VkXEJhcmVN",
-            "ZXRhbFNvbHV0aW9uXFYy6gIkR29vZ2xlOjpDbG91ZDo6QmFyZU1ldGFsU29s",
-            "dXRpb246OlYyYgZwcm90bzM="));
+            "cHJvdG8i6wMKDlZvbHVtZVNuYXBzaG90EgwKBG5hbWUYASABKAkSEAoCaWQY",
+            "BiABKAlCBOJBAQMSEwoLZGVzY3JpcHRpb24YAiABKAkSNQoLY3JlYXRlX3Rp",
+            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEkgK",
+            "DnN0b3JhZ2Vfdm9sdW1lGAUgASgJQjDiQQED+kEpCidiYXJlbWV0YWxzb2x1",
+            "dGlvbi5nb29nbGVhcGlzLmNvbS9Wb2x1bWUSUgoEdHlwZRgHIAEoDjI+Lmdv",
+            "b2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1bWVTbmFwc2hv",
+            "dC5TbmFwc2hvdFR5cGVCBOJBAQMiSAoMU25hcHNob3RUeXBlEh0KGVNOQVBT",
+            "SE9UX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZBRF9IT0MQARINCglTQ0hFRFVM",
+            "RUQQAjqEAepBgAEKL2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29t",
+            "L1ZvbHVtZVNuYXBzaG90Ek1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vdm9sdW1lcy97dm9sdW1lfS9zbmFwc2hvdHMve3NuYXBz",
+            "aG90fSJiChhHZXRWb2x1bWVTbmFwc2hvdFJlcXVlc3QSRgoEbmFtZRgBIAEo",
+            "CUI44kEBAvpBMQovYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xlYXBpcy5jb20v",
+            "Vm9sdW1lU25hcHNob3QihQEKGkxpc3RWb2x1bWVTbmFwc2hvdHNSZXF1ZXN0",
+            "EkAKBnBhcmVudBgBIAEoCUIw4kEBAvpBKQonYmFyZW1ldGFsc29sdXRpb24u",
+            "Z29vZ2xlYXBpcy5jb20vVm9sdW1lEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAMgASgJIpgBChtMaXN0Vm9sdW1lU25hcHNob3RzUmVzcG9u",
+            "c2USSwoQdm9sdW1lX3NuYXBzaG90cxgBIAMoCzIxLmdvb2dsZS5jbG91ZC5i",
+            "YXJlbWV0YWxzb2x1dGlvbi52Mi5Wb2x1bWVTbmFwc2hvdBIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiZQobRGVsZXRl",
+            "Vm9sdW1lU25hcHNob3RSZXF1ZXN0EkYKBG5hbWUYASABKAlCOOJBAQL6QTEK",
+            "L2JhcmVtZXRhbHNvbHV0aW9uLmdvb2dsZWFwaXMuY29tL1ZvbHVtZVNuYXBz",
+            "aG90IrEBChtDcmVhdGVWb2x1bWVTbmFwc2hvdFJlcXVlc3QSQAoGcGFyZW50",
+            "GAEgASgJQjDiQQEC+kEpCidiYXJlbWV0YWxzb2x1dGlvbi5nb29nbGVhcGlz",
+            "LmNvbS9Wb2x1bWUSUAoPdm9sdW1lX3NuYXBzaG90GAIgASgLMjEuZ29vZ2xl",
+            "LmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyLlZvbHVtZVNuYXBzaG90QgTi",
+            "QQECInEKHFJlc3RvcmVWb2x1bWVTbmFwc2hvdFJlcXVlc3QSUQoPdm9sdW1l",
+            "X3NuYXBzaG90GAEgASgJQjjiQQEC+kExCi9iYXJlbWV0YWxzb2x1dGlvbi5n",
+            "b29nbGVhcGlzLmNvbS9Wb2x1bWVTbmFwc2hvdEKCAgolY29tLmdvb2dsZS5j",
+            "bG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52MkITVm9sdW1lU25hcHNob3RQcm90",
+            "b1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL2JhcmVtZXRhbHNvbHV0aW9uL2Fw",
+            "aXYyL2JhcmVtZXRhbHNvbHV0aW9ucGI7YmFyZW1ldGFsc29sdXRpb25wYqoC",
+            "IUdvb2dsZS5DbG91ZC5CYXJlTWV0YWxTb2x1dGlvbi5WMsoCIUdvb2dsZVxD",
+            "bG91ZFxCYXJlTWV0YWxTb2x1dGlvblxWMuoCJEdvb2dsZTo6Q2xvdWQ6OkJh",
+            "cmVNZXRhbFNvbHV0aW9uOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,6 +82,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// A snapshot of a volume. Only boot volumes can have snapshots.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VolumeSnapshot : pb::IMessage<VolumeSnapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -513,6 +514,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for requesting volume snapshot information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVolumeSnapshotRequest : pb::IMessage<GetVolumeSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -708,6 +710,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for requesting a list of volume snapshots.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVolumeSnapshotsRequest : pb::IMessage<ListVolumeSnapshotsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -984,6 +987,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Response message containing the list of volume snapshots.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVolumeSnapshotsResponse : pb::IMessage<ListVolumeSnapshotsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1237,6 +1241,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for deleting named Volume snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVolumeSnapshotRequest : pb::IMessage<DeleteVolumeSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1432,6 +1437,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for creating a volume snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateVolumeSnapshotRequest : pb::IMessage<CreateVolumeSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1676,6 +1682,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for restoring a volume snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestoreVolumeSnapshotRequest : pb::IMessage<RestoreVolumeSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -58,6 +58,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   ///
   /// See code samples on how this message can be deserialized.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ArrowSchema : pb::IMessage<ArrowSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -253,6 +254,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Arrow RecordBatch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ArrowRecordBatch : pb::IMessage<ArrowRecordBatch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -490,6 +492,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Contains options specific to Arrow Serialization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ArrowSerializationOptions : pb::IMessage<ArrowSerializationOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

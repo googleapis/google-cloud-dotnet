@@ -26,25 +26,25 @@ namespace Google.Cloud.Talent.V4 {
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2V2ZW50LnByb3RvEhZnb29nbGUu",
             "Y2xvdWQudGFsZW50LnY0Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsMBCgtDbGll",
-            "bnRFdmVudBISCgpyZXF1ZXN0X2lkGAEgASgJEhUKCGV2ZW50X2lkGAIgASgJ",
-            "QgPgQQISNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQISNQoJam9iX2V2ZW50GAUgASgLMiAuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NC5Kb2JFdmVudEgAEhMKC2V2ZW50X25vdGVzGAkgASgJ",
-            "QgcKBWV2ZW50IuADCghKb2JFdmVudBJACgR0eXBlGAEgASgOMi0uZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NC5Kb2JFdmVudC5Kb2JFdmVudFR5cGVCA+BBAhIR",
-            "CgRqb2JzGAIgAygJQgPgQQIi/gIKDEpvYkV2ZW50VHlwZRIeChpKT0JfRVZF",
-            "TlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVX",
-            "EAISEQoNVklFV19SRURJUkVDVBADEhUKEUFQUExJQ0FUSU9OX1NUQVJUEAQS",
-            "FgoSQVBQTElDQVRJT05fRklOSVNIEAUSIAocQVBQTElDQVRJT05fUVVJQ0tf",
-            "U1VCTUlTU0lPThAGEhgKFEFQUExJQ0FUSU9OX1JFRElSRUNUEAcSIQodQVBQ",
-            "TElDQVRJT05fU1RBUlRfRlJPTV9TRUFSQ0gQCBIkCiBBUFBMSUNBVElPTl9S",
-            "RURJUkVDVF9GUk9NX1NFQVJDSBAJEh4KGkFQUExJQ0FUSU9OX0NPTVBBTllf",
-            "U1VCTUlUEAoSDAoIQk9PS01BUksQCxIQCgxOT1RJRklDQVRJT04QDBIJCgVI",
-            "SVJFRBANEgsKB1NFTlRfQ1YQDhIVChFJTlRFUlZJRVdfR1JBTlRFRBAPQmQK",
-            "GmNvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0QgpFdmVudFByb3RvUAFaMmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vdGFsZW50L2FwaXY0L3RhbGVudHBiO3RhbGVu",
-            "dHBiogIDQ1RTYgZwcm90bzM="));
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsUBCgtDbGll",
+            "bnRFdmVudBISCgpyZXF1ZXN0X2lkGAEgASgJEhYKCGV2ZW50X2lkGAIgASgJ",
+            "QgTiQQECEjUKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEIE4kEBAhI1Cglqb2JfZXZlbnQYBSABKAsyIC5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0LkpvYkV2ZW50SAASEwoLZXZlbnRfbm90ZXMYCSAB",
+            "KAlCBwoFZXZlbnQi4gMKCEpvYkV2ZW50EkEKBHR5cGUYASABKA4yLS5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0LkpvYkV2ZW50LkpvYkV2ZW50VHlwZUIE4kEB",
+            "AhISCgRqb2JzGAIgAygJQgTiQQECIv4CCgxKb2JFdmVudFR5cGUSHgoaSk9C",
+            "X0VWRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpJTVBSRVNTSU9OEAESCAoE",
+            "VklFVxACEhEKDVZJRVdfUkVESVJFQ1QQAxIVChFBUFBMSUNBVElPTl9TVEFS",
+            "VBAEEhYKEkFQUExJQ0FUSU9OX0ZJTklTSBAFEiAKHEFQUExJQ0FUSU9OX1FV",
+            "SUNLX1NVQk1JU1NJT04QBhIYChRBUFBMSUNBVElPTl9SRURJUkVDVBAHEiEK",
+            "HUFQUExJQ0FUSU9OX1NUQVJUX0ZST01fU0VBUkNIEAgSJAogQVBQTElDQVRJ",
+            "T05fUkVESVJFQ1RfRlJPTV9TRUFSQ0gQCRIeChpBUFBMSUNBVElPTl9DT01Q",
+            "QU5ZX1NVQk1JVBAKEgwKCEJPT0tNQVJLEAsSEAoMTk9USUZJQ0FUSU9OEAwS",
+            "CQoFSElSRUQQDRILCgdTRU5UX0NWEA4SFQoRSU5URVJWSUVXX0dSQU5URUQQ",
+            "D0JkChpjb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NEIKRXZlbnRQcm90b1AB",
+            "WjJjbG91ZC5nb29nbGUuY29tL2dvL3RhbGVudC9hcGl2NC90YWxlbnRwYjt0",
+            "YWxlbnRwYqICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -63,6 +63,7 @@ namespace Google.Cloud.Talent.V4 {
   /// service to perform optimally. The number of events sent must be consistent
   /// with other calls, such as job searches, issued to the service by the client.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClientEvent : pb::IMessage<ClientEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -476,6 +477,7 @@ namespace Google.Cloud.Talent.V4 {
   /// An event issued when a job seeker interacts with the application that
   /// implements Cloud Talent Solution.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobEvent : pb::IMessage<JobEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

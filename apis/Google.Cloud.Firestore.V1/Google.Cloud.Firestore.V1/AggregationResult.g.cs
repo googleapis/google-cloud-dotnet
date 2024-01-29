@@ -53,6 +53,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// query, unlike document queries which can have different fields present for
   /// each result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationResult : pb::IMessage<AggregationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

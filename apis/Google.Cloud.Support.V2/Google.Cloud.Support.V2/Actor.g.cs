@@ -26,12 +26,13 @@ namespace Google.Cloud.Support.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvc3VwcG9ydC92Mi9hY3Rvci5wcm90bxIXZ29vZ2xl",
             "LmNsb3VkLnN1cHBvcnQudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8iSQoFQWN0b3ISFAoMZGlzcGxheV9uYW1lGAEgASgJEg0KBWVtYWls",
-            "GAIgASgJEhsKDmdvb2dsZV9zdXBwb3J0GAQgASgIQgPgQQNCswEKG2NvbS5n",
-            "b29nbGUuY2xvdWQuc3VwcG9ydC52MkIKQWN0b3JQcm90b1ABWjVjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIvc3VwcG9ydHBiO3N1cHBvcnRw",
-            "YqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyygIXR29vZ2xlXENsb3VkXFN1",
-            "cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpTdXBwb3J0OjpWMmIGcHJvdG8z"));
+            "cHJvdG8iSgoFQWN0b3ISFAoMZGlzcGxheV9uYW1lGAEgASgJEg0KBWVtYWls",
+            "GAIgASgJEhwKDmdvb2dsZV9zdXBwb3J0GAQgASgIQgTiQQEDQrMBChtjb20u",
+            "Z29vZ2xlLmNsb3VkLnN1cHBvcnQudjJCCkFjdG9yUHJvdG9QAVo1Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9zdXBwb3J0L2FwaXYyL3N1cHBvcnRwYjtzdXBwb3J0",
+            "cGKqAhdHb29nbGUuQ2xvdWQuU3VwcG9ydC5WMsoCF0dvb2dsZVxDbG91ZFxT",
+            "dXBwb3J0XFYy6gIaR29vZ2xlOjpDbG91ZDo6U3VwcG9ydDo6VjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,6 +47,7 @@ namespace Google.Cloud.Support.V2 {
   /// An object containing information about the effective user and
   /// authenticated principal responsible for an action.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Actor : pb::IMessage<Actor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

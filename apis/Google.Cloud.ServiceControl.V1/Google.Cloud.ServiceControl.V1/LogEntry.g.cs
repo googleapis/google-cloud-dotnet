@@ -68,6 +68,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// An individual log entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntry : pb::IMessage<LogEntry>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -819,6 +820,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// Additional information about a potentially long-running operation with which
   /// a log entry is associated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntryOperation : pb::IMessage<LogEntryOperation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1138,6 +1140,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// Additional information about the source code location that produced the log
   /// entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntrySourceLocation : pb::IMessage<LogEntrySourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

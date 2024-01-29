@@ -33,7 +33,7 @@ namespace Google.Cloud.Retail.V2 {
             "VGltZVJhbmdlGi4KCVF1ZXJ5VGVybRINCgV2YWx1ZRgBIAEoCRISCgpmdWxs",
             "X21hdGNoGAIgASgIGmkKCVRpbWVSYW5nZRIuCgpzdGFydF90aW1lGAEgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi/QgKBFJ1bGUSQAoMYm9v",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi/ggKBFJ1bGUSQAoMYm9v",
             "c3RfYWN0aW9uGAIgASgLMiguZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SdWxl",
             "LkJvb3N0QWN0aW9uSAASRgoPcmVkaXJlY3RfYWN0aW9uGAMgASgLMisuZ29v",
             "Z2xlLmNsb3VkLnJldGFpbC52Mi5SdWxlLlJlZGlyZWN0QWN0aW9uSAASUwoW",
@@ -47,65 +47,65 @@ namespace Google.Cloud.Retail.V2 {
             "Cg1maWx0ZXJfYWN0aW9uGAogASgLMikuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
             "Mi5SdWxlLkZpbHRlckFjdGlvbkgAElMKFnR3b3dheV9zeW5vbnltc19hY3Rp",
             "b24YCyABKAsyMS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlJ1bGUuVHdvd2F5",
-            "U3lub255bXNBY3Rpb25IABI5Cgljb25kaXRpb24YASABKAsyIS5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLkNvbmRpdGlvbkID4EECGjUKC0Jvb3N0QWN0aW9u",
-            "Eg0KBWJvb3N0GAEgASgCEhcKD3Byb2R1Y3RzX2ZpbHRlchgCIAEoCRoeCgxG",
-            "aWx0ZXJBY3Rpb24SDgoGZmlsdGVyGAEgASgJGiYKDlJlZGlyZWN0QWN0aW9u",
-            "EhQKDHJlZGlyZWN0X3VyaRgBIAEoCRooChRUd293YXlTeW5vbnltc0FjdGlv",
-            "bhIQCghzeW5vbnltcxgBIAMoCRpTChRPbmV3YXlTeW5vbnltc0FjdGlvbhIT",
-            "CgtxdWVyeV90ZXJtcxgDIAMoCRIQCghzeW5vbnltcxgEIAMoCRIUCgxvbmV3",
-            "YXlfdGVybXMYAiADKAkaWgoURG9Ob3RBc3NvY2lhdGVBY3Rpb24SEwoLcXVl",
-            "cnlfdGVybXMYAiADKAkSHgoWZG9fbm90X2Fzc29jaWF0ZV90ZXJtcxgDIAMo",
-            "CRINCgV0ZXJtcxgBIAMoCRpQChFSZXBsYWNlbWVudEFjdGlvbhITCgtxdWVy",
-            "eV90ZXJtcxgCIAMoCRIYChByZXBsYWNlbWVudF90ZXJtGAMgASgJEgwKBHRl",
-            "cm0YASABKAkaJAoMSWdub3JlQWN0aW9uEhQKDGlnbm9yZV90ZXJtcxgBIAMo",
-            "CUIICgZhY3Rpb24iLwoIQXVkaWVuY2USDwoHZ2VuZGVycxgBIAMoCRISCgph",
-            "Z2VfZ3JvdXBzGAIgAygJIjMKCUNvbG9ySW5mbxIWCg5jb2xvcl9mYW1pbGll",
-            "cxgBIAMoCRIOCgZjb2xvcnMYAiADKAkihgEKD0N1c3RvbUF0dHJpYnV0ZRIM",
-            "CgR0ZXh0GAEgAygJEg8KB251bWJlcnMYAiADKAESGwoKc2VhcmNoYWJsZRgD",
-            "IAEoCEICGAFIAIgBARIaCglpbmRleGFibGUYBCABKAhCAhgBSAGIAQFCDQoL",
-            "X3NlYXJjaGFibGVCDAoKX2luZGV4YWJsZSIyCg9GdWxmaWxsbWVudEluZm8S",
-            "DAoEdHlwZRgBIAEoCRIRCglwbGFjZV9pZHMYAiADKAkiOAoFSW1hZ2USEAoD",
-            "dXJpGAEgASgJQgPgQQISDgoGaGVpZ2h0GAIgASgFEg0KBXdpZHRoGAMgASgF",
-            "IngKCEludGVydmFsEhEKB21pbmltdW0YASABKAFIABIbChFleGNsdXNpdmVf",
-            "bWluaW11bRgCIAEoAUgAEhEKB21heGltdW0YAyABKAFIARIbChFleGNsdXNp",
-            "dmVfbWF4aW11bRgEIAEoAUgBQgUKA21pbkIFCgNtYXgiiQMKCVByaWNlSW5m",
-            "bxIVCg1jdXJyZW5jeV9jb2RlGAEgASgJEg0KBXByaWNlGAIgASgCEhYKDm9y",
-            "aWdpbmFsX3ByaWNlGAMgASgCEgwKBGNvc3QYBCABKAISOAoUcHJpY2VfZWZm",
-            "ZWN0aXZlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjUKEXByaWNlX2V4cGlyZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBJGCgtwcmljZV9yYW5nZRgHIAEoCzIsLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuUHJpY2VJbmZvLlByaWNlUmFuZ2VCA+BBAxp3CgpQcmlj",
-            "ZVJhbmdlEi8KBXByaWNlGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbnRlcnZhbBI4Cg5vcmlnaW5hbF9wcmljZRgCIAEoCzIgLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW50ZXJ2YWwiUAoGUmF0aW5nEhQKDHJhdGluZ19j",
-            "b3VudBgBIAEoBRIWCg5hdmVyYWdlX3JhdGluZxgCIAEoAhIYChByYXRpbmdf",
-            "aGlzdG9ncmFtGAMgAygFImAKCFVzZXJJbmZvEg8KB3VzZXJfaWQYASABKAkS",
-            "EgoKaXBfYWRkcmVzcxgCIAEoCRISCgp1c2VyX2FnZW50GAMgASgJEhsKE2Rp",
-            "cmVjdF91c2VyX3JlcXVlc3QYBCABKAgioQIKDkxvY2FsSW52ZW50b3J5EhAK",
-            "CHBsYWNlX2lkGAEgASgJEjUKCnByaWNlX2luZm8YAiABKAsyIS5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlByaWNlSW5mbxJKCgphdHRyaWJ1dGVzGAMgAygL",
-            "MjYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Mb2NhbEludmVudG9yeS5BdHRy",
-            "aWJ1dGVzRW50cnkSHgoRZnVsZmlsbG1lbnRfdHlwZXMYBCADKAlCA+BBBBpa",
-            "Cg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgL",
-            "MicuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRyaWJ1dGU6AjgB",
-            "KoYBChRBdHRyaWJ1dGVDb25maWdMZXZlbBImCiJBVFRSSUJVVEVfQ09ORklH",
-            "X0xFVkVMX1VOU1BFQ0lGSUVEEAASIgoeUFJPRFVDVF9MRVZFTF9BVFRSSUJV",
-            "VEVfQ09ORklHEAESIgoeQ0FUQUxPR19MRVZFTF9BVFRSSUJVVEVfQ09ORklH",
-            "EAIqaQoMU29sdXRpb25UeXBlEh0KGVNPTFVUSU9OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIgChxTT0xVVElPTl9UWVBFX1JFQ09NTUVOREFUSU9OEAESGAoUU09M",
-            "VVRJT05fVFlQRV9TRUFSQ0gQAiqhAQoeUmVjb21tZW5kYXRpb25zRmlsdGVy",
-            "aW5nT3B0aW9uEjAKLFJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfT1BUSU9O",
-            "X1VOU1BFQ0lGSUVEEAASJgoiUkVDT01NRU5EQVRJT05TX0ZJTFRFUklOR19E",
-            "SVNBQkxFRBABEiUKIVJFQ09NTUVOREFUSU9OU19GSUxURVJJTkdfRU5BQkxF",
-            "RBADKosBChVTZWFyY2hTb2x1dGlvblVzZUNhc2USKAokU0VBUkNIX1NPTFVU",
-            "SU9OX1VTRV9DQVNFX1VOU1BFQ0lGSUVEEAASIwofU0VBUkNIX1NPTFVUSU9O",
-            "X1VTRV9DQVNFX1NFQVJDSBABEiMKH1NFQVJDSF9TT0xVVElPTl9VU0VfQ0FT",
-            "RV9CUk9XU0UQAkK2AQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCC0Nv",
-            "bW1vblByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYy",
-            "L3JldGFpbHBiO3JldGFpbHBiogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJl",
-            "dGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNs",
-            "b3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "U3lub255bXNBY3Rpb25IABI6Cgljb25kaXRpb24YASABKAsyIS5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLkNvbmRpdGlvbkIE4kEBAho1CgtCb29zdEFjdGlv",
+            "bhINCgVib29zdBgBIAEoAhIXCg9wcm9kdWN0c19maWx0ZXIYAiABKAkaHgoM",
+            "RmlsdGVyQWN0aW9uEg4KBmZpbHRlchgBIAEoCRomCg5SZWRpcmVjdEFjdGlv",
+            "bhIUCgxyZWRpcmVjdF91cmkYASABKAkaKAoUVHdvd2F5U3lub255bXNBY3Rp",
+            "b24SEAoIc3lub255bXMYASADKAkaUwoUT25ld2F5U3lub255bXNBY3Rpb24S",
+            "EwoLcXVlcnlfdGVybXMYAyADKAkSEAoIc3lub255bXMYBCADKAkSFAoMb25l",
+            "d2F5X3Rlcm1zGAIgAygJGloKFERvTm90QXNzb2NpYXRlQWN0aW9uEhMKC3F1",
+            "ZXJ5X3Rlcm1zGAIgAygJEh4KFmRvX25vdF9hc3NvY2lhdGVfdGVybXMYAyAD",
+            "KAkSDQoFdGVybXMYASADKAkaUAoRUmVwbGFjZW1lbnRBY3Rpb24SEwoLcXVl",
+            "cnlfdGVybXMYAiADKAkSGAoQcmVwbGFjZW1lbnRfdGVybRgDIAEoCRIMCgR0",
+            "ZXJtGAEgASgJGiQKDElnbm9yZUFjdGlvbhIUCgxpZ25vcmVfdGVybXMYASAD",
+            "KAlCCAoGYWN0aW9uIi8KCEF1ZGllbmNlEg8KB2dlbmRlcnMYASADKAkSEgoK",
+            "YWdlX2dyb3VwcxgCIAMoCSIzCglDb2xvckluZm8SFgoOY29sb3JfZmFtaWxp",
+            "ZXMYASADKAkSDgoGY29sb3JzGAIgAygJIoYBCg9DdXN0b21BdHRyaWJ1dGUS",
+            "DAoEdGV4dBgBIAMoCRIPCgdudW1iZXJzGAIgAygBEhsKCnNlYXJjaGFibGUY",
+            "AyABKAhCAhgBSACIAQESGgoJaW5kZXhhYmxlGAQgASgIQgIYAUgBiAEBQg0K",
+            "C19zZWFyY2hhYmxlQgwKCl9pbmRleGFibGUiMgoPRnVsZmlsbG1lbnRJbmZv",
+            "EgwKBHR5cGUYASABKAkSEQoJcGxhY2VfaWRzGAIgAygJIjkKBUltYWdlEhEK",
+            "A3VyaRgBIAEoCUIE4kEBAhIOCgZoZWlnaHQYAiABKAUSDQoFd2lkdGgYAyAB",
+            "KAUieAoISW50ZXJ2YWwSEQoHbWluaW11bRgBIAEoAUgAEhsKEWV4Y2x1c2l2",
+            "ZV9taW5pbXVtGAIgASgBSAASEQoHbWF4aW11bRgDIAEoAUgBEhsKEWV4Y2x1",
+            "c2l2ZV9tYXhpbXVtGAQgASgBSAFCBQoDbWluQgUKA21heCKKAwoJUHJpY2VJ",
+            "bmZvEhUKDWN1cnJlbmN5X2NvZGUYASABKAkSDQoFcHJpY2UYAiABKAISFgoO",
+            "b3JpZ2luYWxfcHJpY2UYAyABKAISDAoEY29zdBgEIAEoAhI4ChRwcmljZV9l",
+            "ZmZlY3RpdmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASNQoRcHJpY2VfZXhwaXJlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEkcKC3ByaWNlX3JhbmdlGAcgASgLMiwuZ29vZ2xlLmNs",
+            "b3VkLnJldGFpbC52Mi5QcmljZUluZm8uUHJpY2VSYW5nZUIE4kEBAxp3CgpQ",
+            "cmljZVJhbmdlEi8KBXByaWNlGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFp",
+            "bC52Mi5JbnRlcnZhbBI4Cg5vcmlnaW5hbF9wcmljZRgCIAEoCzIgLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuSW50ZXJ2YWwiUAoGUmF0aW5nEhQKDHJhdGlu",
+            "Z19jb3VudBgBIAEoBRIWCg5hdmVyYWdlX3JhdGluZxgCIAEoAhIYChByYXRp",
+            "bmdfaGlzdG9ncmFtGAMgAygFImAKCFVzZXJJbmZvEg8KB3VzZXJfaWQYASAB",
+            "KAkSEgoKaXBfYWRkcmVzcxgCIAEoCRISCgp1c2VyX2FnZW50GAMgASgJEhsK",
+            "E2RpcmVjdF91c2VyX3JlcXVlc3QYBCABKAgiogIKDkxvY2FsSW52ZW50b3J5",
+            "EhAKCHBsYWNlX2lkGAEgASgJEjUKCnByaWNlX2luZm8YAiABKAsyIS5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLlByaWNlSW5mbxJKCgphdHRyaWJ1dGVzGAMg",
+            "AygLMjYuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Mb2NhbEludmVudG9yeS5B",
+            "dHRyaWJ1dGVzRW50cnkSHwoRZnVsZmlsbG1lbnRfdHlwZXMYBCADKAlCBOJB",
+            "AQQaWgoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRI2CgV2YWx1ZRgC",
+            "IAEoCzInLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuQ3VzdG9tQXR0cmlidXRl",
+            "OgI4ASqGAQoUQXR0cmlidXRlQ29uZmlnTGV2ZWwSJgoiQVRUUklCVVRFX0NP",
+            "TkZJR19MRVZFTF9VTlNQRUNJRklFRBAAEiIKHlBST0RVQ1RfTEVWRUxfQVRU",
+            "UklCVVRFX0NPTkZJRxABEiIKHkNBVEFMT0dfTEVWRUxfQVRUUklCVVRFX0NP",
+            "TkZJRxACKmkKDFNvbHV0aW9uVHlwZRIdChlTT0xVVElPTl9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASIAocU09MVVRJT05fVFlQRV9SRUNPTU1FTkRBVElPThABEhgK",
+            "FFNPTFVUSU9OX1RZUEVfU0VBUkNIEAIqoQEKHlJlY29tbWVuZGF0aW9uc0Zp",
+            "bHRlcmluZ09wdGlvbhIwCixSRUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX09Q",
+            "VElPTl9VTlNQRUNJRklFRBAAEiYKIlJFQ09NTUVOREFUSU9OU19GSUxURVJJ",
+            "TkdfRElTQUJMRUQQARIlCiFSRUNPTU1FTkRBVElPTlNfRklMVEVSSU5HX0VO",
+            "QUJMRUQQAyqLAQoVU2VhcmNoU29sdXRpb25Vc2VDYXNlEigKJFNFQVJDSF9T",
+            "T0xVVElPTl9VU0VfQ0FTRV9VTlNQRUNJRklFRBAAEiMKH1NFQVJDSF9TT0xV",
+            "VElPTl9VU0VfQ0FTRV9TRUFSQ0gQARIjCh9TRUFSQ0hfU09MVVRJT05fVVNF",
+            "X0NBU0VfQlJPV1NFEAJCtgEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "QgtDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3JldGFpbC9h",
+            "cGl2Mi9yZXRhaWxwYjtyZXRhaWxwYqICBlJFVEFJTKoCFkdvb2dsZS5DbG91",
+            "ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy6gIZR29vZ2xl",
+            "OjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Retail.V2.AttributeConfigLevel), typeof(global::Google.Cloud.Retail.V2.SolutionType), typeof(global::Google.Cloud.Retail.V2.RecommendationsFilteringOption), typeof(global::Google.Cloud.Retail.V2.SearchSolutionUseCase), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -226,6 +226,7 @@ namespace Google.Cloud.Retail.V2 {
   /// are set, then only items matching the product_filter for requests with a
   /// query matching the query terms wil get boosted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Condition : pb::IMessage<Condition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -446,6 +447,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// Query terms that we want to match on.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QueryTerm : pb::IMessage<QueryTerm>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -687,6 +689,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Used for time-dependent conditions.
       /// Example: Want to have rule applied for week long sale.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimeRange : pb::IMessage<TimeRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -950,6 +953,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Currently rules only work for [controls][google.cloud.retail.v2.Control] with
   /// [SOLUTION_TYPE_SEARCH][google.cloud.retail.v2.SolutionType.SOLUTION_TYPE_SEARCH].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rule : pb::IMessage<Rule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1634,6 +1638,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <summary>
       /// A boost action to apply to results matching condition specified above.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BoostAction : pb::IMessage<BoostAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1911,6 +1916,7 @@ namespace Google.Cloud.Retail.V2 {
       /// * Action Result: Filters the returned objects to be ONLY those that passed
       /// the filter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FilterAction : pb::IMessage<FilterAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2125,6 +2131,7 @@ namespace Google.Cloud.Retail.V2 {
       /// * Action Input: Request Query
       /// * Action Result: Redirects shopper to provided uri.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RedirectAction : pb::IMessage<RedirectAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2324,6 +2331,7 @@ namespace Google.Cloud.Retail.V2 {
       ///  * "sneakers" will use a synonym of "shoes".
       ///  * "shoes" will use a synonym of "sneakers".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TwowaySynonymsAction : pb::IMessage<TwowaySynonymsAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2514,6 +2522,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Example: "sneakers" will use a synonym of "shoes".
       /// "shoes" will not use a synonym of "sneakers".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OnewaySynonymsAction : pb::IMessage<OnewaySynonymsAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2763,6 +2772,7 @@ namespace Google.Cloud.Retail.V2 {
       /// search.
       /// Example: Don't associate "gShoe" and "cheap".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DoNotAssociateAction : pb::IMessage<DoNotAssociateAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3010,6 +3020,7 @@ namespace Google.Cloud.Retail.V2 {
       /// specified. All `query_terms` will be replaced with the replacement term.
       /// Example: Replace "gShoe" with "google shoe".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReplacementAction : pb::IMessage<ReplacementAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3277,6 +3288,7 @@ namespace Google.Cloud.Retail.V2 {
       /// Prevents a term in the query from being used in search.
       /// Example: Don't search for "shoddy".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IgnoreAction : pb::IMessage<IgnoreAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3467,6 +3479,7 @@ namespace Google.Cloud.Retail.V2 {
   /// An intended audience of the [Product][google.cloud.retail.v2.Product] for
   /// whom it's sold.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Audience : pb::IMessage<Audience>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3703,6 +3716,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The color information of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3940,6 +3954,7 @@ namespace Google.Cloud.Retail.V2 {
   /// A custom attribute that is not explicitly modeled in
   /// [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomAttribute : pb::IMessage<CustomAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4315,6 +4330,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Fulfillment information, such as the store IDs for in-store pickup or region
   /// IDs for different shipping methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FulfillmentInfo : pb::IMessage<FulfillmentInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4568,6 +4584,7 @@ namespace Google.Cloud.Retail.V2 {
   /// results. However, product images can be returned in results, and are shown in
   /// prediction or search previews in the console.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4856,6 +4873,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// A floating point interval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Interval : pb::IMessage<Interval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5293,6 +5311,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The price information of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PriceInfo : pb::IMessage<PriceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5820,6 +5839,7 @@ namespace Google.Cloud.Retail.V2 {
       /// [Product][google.cloud.retail.v2.Product] having the same
       /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PriceRange : pb::IMessage<PriceRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6086,6 +6106,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The rating of a [Product][google.cloud.retail.v2.Product].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rating : pb::IMessage<Rating>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6365,6 +6386,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Information of an end user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserInfo : pb::IMessage<UserInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6725,6 +6747,7 @@ namespace Google.Cloud.Retail.V2 {
   /// The inventory information at a place (e.g. a store) identified
   /// by a place ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalInventory : pb::IMessage<LocalInventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

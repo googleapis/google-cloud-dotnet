@@ -30,58 +30,58 @@ namespace Google.Cloud.Scheduler.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxojZ29vZ2xlL2Nsb3VkL3NjaGVkdWxlci92MS9qb2IucHJv",
             "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3Rv",
-            "YnVmL2ZpZWxkX21hc2sucHJvdG8icwoPTGlzdEpvYnNSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjEiFjbG91ZHNjaGVkdWxlci5nb29nbGVhcGlz",
-            "LmNvbS9Kb2ISEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiAB",
-            "KAkiWQoQTGlzdEpvYnNSZXNwb25zZRIsCgRqb2JzGAEgAygLMh4uZ29vZ2xl",
-            "LmNsb3VkLnNjaGVkdWxlci52MS5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIkgKDUdldEpvYlJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFj",
-            "bG91ZHNjaGVkdWxlci5nb29nbGVhcGlzLmNvbS9Kb2IifwoQQ3JlYXRlSm9i",
-            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhY2xvdWRzY2hlZHVs",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vSm9iEjAKA2pvYhgCIAEoCzIeLmdvb2dsZS5j",
-            "bG91ZC5zY2hlZHVsZXIudjEuSm9iQgPgQQIidQoQVXBkYXRlSm9iUmVxdWVz",
-            "dBIwCgNqb2IYASABKAsyHi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkpv",
-            "YkID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzayJLChBEZWxldGVKb2JSZXF1ZXN0EjcKBG5hbWUYASABKAlC",
-            "KeBBAvpBIwohY2xvdWRzY2hlZHVsZXIuZ29vZ2xlYXBpcy5jb20vSm9iIkoK",
-            "D1BhdXNlSm9iUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNsb3Vk",
-            "c2NoZWR1bGVyLmdvb2dsZWFwaXMuY29tL0pvYiJLChBSZXN1bWVKb2JSZXF1",
-            "ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohY2xvdWRzY2hlZHVsZXIuZ29v",
-            "Z2xlYXBpcy5jb20vSm9iIkgKDVJ1bkpvYlJlcXVlc3QSNwoEbmFtZRgBIAEo",
-            "CUIp4EEC+kEjCiFjbG91ZHNjaGVkdWxlci5nb29nbGVhcGlzLmNvbS9Kb2Iy",
-            "swoKDkNsb3VkU2NoZWR1bGVyEp4BCghMaXN0Sm9icxIqLmdvb2dsZS5jbG91",
-            "ZC5zY2hlZHVsZXIudjEuTGlzdEpvYnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
-            "LnNjaGVkdWxlci52MS5MaXN0Sm9ic1Jlc3BvbnNlIjmC0+STAioSKC92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnPaQQZwYXJlbnQS",
-            "iwEKBkdldEpvYhIoLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuR2V0Sm9i",
-            "UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iIjeC0+ST",
-            "AioSKC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn3a",
-            "QQRuYW1lEpwBCglDcmVhdGVKb2ISKy5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxLkNyZWF0ZUpvYlJlcXVlc3QaHi5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxLkpvYiJCgtPkkwIvIigvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9qb2JzOgNqb2LaQQpwYXJlbnQsam9iEqUBCglVcGRhdGVKb2IS",
-            "Ky5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLlVwZGF0ZUpvYlJlcXVlc3Qa",
-            "Hi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJLgtPkkwIzMiwvdjEv",
-            "e2pvYi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfToDam9i",
-            "2kEPam9iLHVwZGF0ZV9tYXNrEokBCglEZWxldGVKb2ISKy5nb29nbGUuY2xv",
-            "dWQuc2NoZWR1bGVyLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiN4LT5JMCKiooL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovam9icy8qfdpBBG5hbWUSmAEKCFBhdXNlSm9iEiouZ29vZ2xl",
-            "LmNsb3VkLnNjaGVkdWxlci52MS5QYXVzZUpvYlJlcXVlc3QaHi5nb29nbGUu",
-            "Y2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJAgtPkkwIzIi4vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9OnBhdXNlOgEq2kEEbmFtZRKb",
-            "AQoJUmVzdW1lSm9iEisuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5SZXN1",
-            "bWVKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5Kb2Ii",
-            "QYLT5JMCNCIvL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9i",
-            "cy8qfTpyZXN1bWU6ASraQQRuYW1lEpIBCgZSdW5Kb2ISKC5nb29nbGUuY2xv",
-            "dWQuc2NoZWR1bGVyLnYxLlJ1bkpvYlJlcXVlc3QaHi5nb29nbGUuY2xvdWQu",
-            "c2NoZWR1bGVyLnYxLkpvYiI+gtPkkwIxIiwvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9qb2JzLyp9OnJ1bjoBKtpBBG5hbWUaUcpBHWNsb3Vk",
-            "c2NoZWR1bGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJ6Ch1jb20uZ29vZ2xlLmNs",
-            "b3VkLnNjaGVkdWxlci52MUIOU2NoZWR1bGVyUHJvdG9QAVo7Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9zY2hlZHVsZXIvYXBpdjEvc2NoZWR1bGVycGI7c2NoZWR1",
-            "bGVycGKiAglTQ0hFRFVMRVJiBnByb3RvMw=="));
+            "YnVmL2ZpZWxkX21hc2sucHJvdG8idAoPTGlzdEpvYnNSZXF1ZXN0EjoKBnBh",
+            "cmVudBgBIAEoCUIq4kEBAvpBIxIhY2xvdWRzY2hlZHVsZXIuZ29vZ2xlYXBp",
+            "cy5jb20vSm9iEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYg",
+            "ASgJIlkKEExpc3RKb2JzUmVzcG9uc2USLAoEam9icxgBIAMoCzIeLmdvb2ds",
+            "ZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iEhcKD25leHRfcGFnZV90b2tlbhgC",
+            "IAEoCSJJCg1HZXRKb2JSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuJBAQL6QSMK",
+            "IWNsb3Vkc2NoZWR1bGVyLmdvb2dsZWFwaXMuY29tL0pvYiKBAQoQQ3JlYXRl",
+            "Sm9iUmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuJBAQL6QSMSIWNsb3Vkc2No",
+            "ZWR1bGVyLmdvb2dsZWFwaXMuY29tL0pvYhIxCgNqb2IYAiABKAsyHi5nb29n",
+            "bGUuY2xvdWQuc2NoZWR1bGVyLnYxLkpvYkIE4kEBAiJ2ChBVcGRhdGVKb2JS",
+            "ZXF1ZXN0EjEKA2pvYhgBIAEoCzIeLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIu",
+            "djEuSm9iQgTiQQECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzayJMChBEZWxldGVKb2JSZXF1ZXN0EjgKBG5hbWUY",
+            "ASABKAlCKuJBAQL6QSMKIWNsb3Vkc2NoZWR1bGVyLmdvb2dsZWFwaXMuY29t",
+            "L0pvYiJLCg9QYXVzZUpvYlJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4kEBAvpB",
+            "IwohY2xvdWRzY2hlZHVsZXIuZ29vZ2xlYXBpcy5jb20vSm9iIkwKEFJlc3Vt",
+            "ZUpvYlJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4kEBAvpBIwohY2xvdWRzY2hl",
+            "ZHVsZXIuZ29vZ2xlYXBpcy5jb20vSm9iIkkKDVJ1bkpvYlJlcXVlc3QSOAoE",
+            "bmFtZRgBIAEoCUIq4kEBAvpBIwohY2xvdWRzY2hlZHVsZXIuZ29vZ2xlYXBp",
+            "cy5jb20vSm9iMrMKCg5DbG91ZFNjaGVkdWxlchKeAQoITGlzdEpvYnMSKi5n",
+            "b29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkxpc3RKb2JzUmVxdWVzdBorLmdv",
+            "b2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuTGlzdEpvYnNSZXNwb25zZSI52kEG",
+            "cGFyZW50gtPkkwIqEigvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9qb2JzEosBCgZHZXRKb2ISKC5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
+            "LnYxLkdldEpvYlJlcXVlc3QaHi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
+            "LkpvYiI32kEEbmFtZYLT5JMCKhIoL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovam9icy8qfRKcAQoJQ3JlYXRlSm9iEisuZ29vZ2xlLmNsb3Vk",
+            "LnNjaGVkdWxlci52MS5DcmVhdGVKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3Vk",
+            "LnNjaGVkdWxlci52MS5Kb2IiQtpBCnBhcmVudCxqb2KC0+STAi8iKC92MS97",
+            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnM6A2pvYhKlAQoJ",
+            "VXBkYXRlSm9iEisuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5VcGRhdGVK",
+            "b2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5Kb2IiS9pB",
+            "D2pvYix1cGRhdGVfbWFza4LT5JMCMzIsL3YxL3tqb2IubmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn06A2pvYhKJAQoJRGVsZXRlSm9iEisu",
+            "Z29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5EZWxldGVKb2JSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IjfaQQRuYW1lgtPkkwIqKigvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9EpgBCghQYXVzZUpv",
+            "YhIqLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuUGF1c2VKb2JSZXF1ZXN0",
+            "Gh4uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5Kb2IiQNpBBG5hbWWC0+ST",
+            "AjMiLi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn06",
+            "cGF1c2U6ASoSmwEKCVJlc3VtZUpvYhIrLmdvb2dsZS5jbG91ZC5zY2hlZHVs",
+            "ZXIudjEuUmVzdW1lSm9iUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5zY2hlZHVs",
+            "ZXIudjEuSm9iIkHaQQRuYW1lgtPkkwI0Ii8vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9qb2JzLyp9OnJlc3VtZToBKhKSAQoGUnVuSm9iEigu",
+            "Z29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5SdW5Kb2JSZXF1ZXN0Gh4uZ29v",
+            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MS5Kb2IiPtpBBG5hbWWC0+STAjEiLC92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn06cnVuOgEq",
+            "GlHKQR1jbG91ZHNjaGVkdWxlci5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CegodY29t",
+            "Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFCDlNjaGVkdWxlclByb3RvUAFa",
+            "O2Nsb3VkLmdvb2dsZS5jb20vZ28vc2NoZWR1bGVyL2FwaXYxL3NjaGVkdWxl",
+            "cnBiO3NjaGVkdWxlcnBiogIJU0NIRURVTEVSYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -104,6 +104,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for listing jobs using
   /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -395,6 +396,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Response message for listing jobs using
   /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -627,6 +629,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [GetJob][google.cloud.scheduler.v1.CloudScheduler.GetJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -824,6 +827,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [CreateJob][google.cloud.scheduler.v1.CloudScheduler.CreateJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,6 +1079,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [UpdateJob][google.cloud.scheduler.v1.CloudScheduler.UpdateJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1333,6 +1338,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for deleting a job using
   /// [DeleteJob][google.cloud.scheduler.v1.CloudScheduler.DeleteJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1530,6 +1536,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [PauseJob][google.cloud.scheduler.v1.CloudScheduler.PauseJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PauseJobRequest : pb::IMessage<PauseJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1727,6 +1734,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResumeJobRequest : pb::IMessage<ResumeJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1924,6 +1932,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for forcing a job to run now using
   /// [RunJob][google.cloud.scheduler.v1.CloudScheduler.RunJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunJobRequest : pb::IMessage<RunJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

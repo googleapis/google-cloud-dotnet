@@ -28,26 +28,26 @@ namespace Google.Cloud.Channel.V1 {
             "a3MucHJvdG8SF2dvb2dsZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGiRnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ijwQKEkNoYW5uZWxQYXJ0",
-            "bmVyTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSJwoacmVzZWxsZXJfY2xvdWRf",
-            "aWRlbnRpdHlfaWQYAiABKAlCA+BBAhJJCgpsaW5rX3N0YXRlGAMgASgOMjAu",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ2hhbm5lbFBhcnRuZXJMaW5rU3Rh",
-            "dGVCA+BBAhIcCg9pbnZpdGVfbGlua191cmkYBCABKAlCA+BBAxI0CgtjcmVh",
-            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxIWCglwdWJsaWNfaWQYByABKAlCA+BBAxJcCiNjaGFubmVs",
-            "X3BhcnRuZXJfY2xvdWRfaWRlbnRpdHlfaW5mbxgIIAEoCzIqLmdvb2dsZS5j",
-            "bG91ZC5jaGFubmVsLnYxLkNsb3VkSWRlbnRpdHlJbmZvQgPgQQM6cupBbwou",
-            "Y2xvdWRjaGFubmVsLmdvb2dsZWFwaXMuY29tL0NoYW5uZWxQYXJ0bmVyTGlu",
-            "axI9YWNjb3VudHMve2FjY291bnR9L2NoYW5uZWxQYXJ0bmVyTGlua3Mve2No",
-            "YW5uZWxfcGFydG5lcl9saW5rfSo+ChZDaGFubmVsUGFydG5lckxpbmtWaWV3",
-            "Eg8KC1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARIICgRGVUxMEAIqegoXQ2hh",
-            "bm5lbFBhcnRuZXJMaW5rU3RhdGUSKgomQ0hBTk5FTF9QQVJUTkVSX0xJTktf",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdJTlZJVEVEEAESCgoGQUNUSVZFEAIS",
-            "CwoHUkVWT0tFRBADEg0KCVNVU1BFTkRFRBAEQnAKG2NvbS5nb29nbGUuY2xv",
-            "dWQuY2hhbm5lbC52MUIYQ2hhbm5lbFBhcnRuZXJMaW5rc1Byb3RvUAFaNWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVscGI7Y2hh",
-            "bm5lbHBiYgZwcm90bzM="));
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilwQKEkNoYW5uZWxQYXJ0",
+            "bmVyTGluaxISCgRuYW1lGAEgASgJQgTiQQEDEigKGnJlc2VsbGVyX2Nsb3Vk",
+            "X2lkZW50aXR5X2lkGAIgASgJQgTiQQECEkoKCmxpbmtfc3RhdGUYAyABKA4y",
+            "MC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5DaGFubmVsUGFydG5lckxpbmtT",
+            "dGF0ZUIE4kEBAhIdCg9pbnZpdGVfbGlua191cmkYBCABKAlCBOJBAQMSNQoL",
+            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgTiQQEDEjUKC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEIE4kEBAxIXCglwdWJsaWNfaWQYByABKAlCBOJBAQMSXQoj",
+            "Y2hhbm5lbF9wYXJ0bmVyX2Nsb3VkX2lkZW50aXR5X2luZm8YCCABKAsyKi5n",
+            "b29nbGUuY2xvdWQuY2hhbm5lbC52MS5DbG91ZElkZW50aXR5SW5mb0IE4kEB",
+            "Azpy6kFvCi5jbG91ZGNoYW5uZWwuZ29vZ2xlYXBpcy5jb20vQ2hhbm5lbFBh",
+            "cnRuZXJMaW5rEj1hY2NvdW50cy97YWNjb3VudH0vY2hhbm5lbFBhcnRuZXJM",
+            "aW5rcy97Y2hhbm5lbF9wYXJ0bmVyX2xpbmt9Kj4KFkNoYW5uZWxQYXJ0bmVy",
+            "TGlua1ZpZXcSDwoLVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQ",
+            "Aip6ChdDaGFubmVsUGFydG5lckxpbmtTdGF0ZRIqCiZDSEFOTkVMX1BBUlRO",
+            "RVJfTElOS19TVEFURV9VTlNQRUNJRklFRBAAEgsKB0lOVklURUQQARIKCgZB",
+            "Q1RJVkUQAhILCgdSRVZPS0VEEAMSDQoJU1VTUEVOREVEEARCcAobY29tLmdv",
+            "b2dsZS5jbG91ZC5jaGFubmVsLnYxQhhDaGFubmVsUGFydG5lckxpbmtzUHJv",
+            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5u",
+            "ZWxwYjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.ChannelPartnerLinkView), typeof(global::Google.Cloud.Channel.V1.ChannelPartnerLinkState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,6 +114,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Entity representing a link between distributors and their indirect
   /// resellers in an n-tier resale channel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChannelPartnerLink : pb::IMessage<ChannelPartnerLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

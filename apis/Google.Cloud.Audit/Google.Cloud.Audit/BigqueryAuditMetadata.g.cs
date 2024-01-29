@@ -407,6 +407,7 @@ namespace Google.Cloud.Audit {
   /// <summary>
   /// Audit log format for BigQuery cloud audit logs metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryAuditMetadata : pb::IMessage<BigQueryAuditMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2172,6 +2173,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Job insertion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobInsertion : pb::IMessage<JobInsertion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2442,6 +2444,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Job state change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobChange : pb::IMessage<JobChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2726,6 +2729,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Job deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobDeletion : pb::IMessage<JobDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2985,6 +2989,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Dataset creation event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DatasetCreation : pb::IMessage<DatasetCreation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3298,6 +3303,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Dataset change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DatasetChange : pb::IMessage<DatasetChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3615,6 +3621,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Dataset deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DatasetDeletion : pb::IMessage<DatasetDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3879,6 +3886,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Table creation event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableCreation : pb::IMessage<TableCreation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4197,6 +4205,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Model creation event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelCreation : pb::IMessage<ModelCreation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4505,6 +4514,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Routine creation event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RoutineCreation : pb::IMessage<RoutineCreation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4817,6 +4827,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Table data read event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableDataRead : pb::IMessage<TableDataRead>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5284,6 +5295,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Table metadata change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableChange : pb::IMessage<TableChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5641,6 +5653,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Model metadata change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelMetadataChange : pb::IMessage<ModelMetadataChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5954,6 +5967,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Routine change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RoutineChange : pb::IMessage<RoutineChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6266,6 +6280,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Table data change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableDataChange : pb::IMessage<TableDataChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6700,6 +6715,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Model data change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelDataChange : pb::IMessage<ModelDataChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6959,6 +6975,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Model data read event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelDataRead : pb::IMessage<ModelDataRead>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7218,6 +7235,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Table deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableDeletion : pb::IMessage<TableDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7486,6 +7504,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Model deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelDeletion : pb::IMessage<ModelDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7754,6 +7773,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Routine deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RoutineDeletion : pb::IMessage<RoutineDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8067,6 +8087,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Row access policy creation event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RowAccessPolicyCreation : pb::IMessage<RowAccessPolicyCreation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8313,6 +8334,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Row access policy change event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RowAccessPolicyChange : pb::IMessage<RowAccessPolicyChange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8559,6 +8581,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Row access policy deletion event.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RowAccessPolicyDeletion : pb::IMessage<RowAccessPolicyDeletion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8827,6 +8850,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Unlink linked dataset from its source dataset event
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UnlinkDataset : pb::IMessage<UnlinkDataset>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9128,6 +9152,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// BigQuery job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Job : pb::IMessage<Job>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9474,6 +9499,7 @@ namespace Google.Cloud.Audit {
       /// See the [Jobs](https://cloud.google.com/bigquery/docs/reference/v2/jobs)
       /// API resource for more details on individual fields.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobConfig : pb::IMessage<JobConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9978,6 +10004,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Query job configuration.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Query : pb::IMessage<Query>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -10558,6 +10585,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Load job configuration.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Load : pb::IMessage<Load>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -11034,6 +11062,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Extract job configuration.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Extract : pb::IMessage<Extract>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -11400,6 +11429,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Table copy job configuration.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TableCopy : pb::IMessage<TableCopy>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -11889,6 +11919,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Definition of an external data source used in a query.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableDefinition : pb::IMessage<TableDefinition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -12113,6 +12144,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Status of a job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobStatus : pb::IMessage<JobStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -12387,6 +12419,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Job statistics.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class JobStats : pb::IMessage<JobStats>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -13040,6 +13073,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Query job statistics.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Query : pb::IMessage<Query>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -13482,6 +13516,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Load job statistics.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Load : pb::IMessage<Load>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -13677,6 +13712,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Extract job statistics.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Extract : pb::IMessage<Extract>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -13872,6 +13908,7 @@ namespace Google.Cloud.Audit {
           /// <summary>
           /// Job resource usage breakdown by reservation.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ReservationResourceUsage : pb::IMessage<ReservationResourceUsage>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -14112,6 +14149,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// BigQuery table.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Table : pb::IMessage<Table>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -14733,6 +14771,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Trained BigQuery ML model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Model : pb::IMessage<Model>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -15175,6 +15214,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// User Defined Function (UDF) or Stored Procedure.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Routine : pb::IMessage<Routine>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -15471,6 +15511,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// User-provided metadata for an entity, for e.g. dataset, table or model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityInfo : pb::IMessage<EntityInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -15735,6 +15776,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// View definition.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableViewDefinition : pb::IMessage<TableViewDefinition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -15970,6 +16012,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// BigQuery dataset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Dataset : pb::IMessage<Dataset>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16501,6 +16544,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// An access control list.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BigQueryAcl : pb::IMessage<BigQueryAcl>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16736,6 +16780,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Encryption properties for a table or a job
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EncryptionInfo : pb::IMessage<EncryptionInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16934,6 +16979,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// BigQuery row access policy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RowAccessPolicy : pb::IMessage<RowAccessPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -17132,6 +17178,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// First party (Google) application specific request metadata.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FirstPartyAppMetadata : pb::IMessage<FirstPartyAppMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -17370,6 +17417,7 @@ namespace Google.Cloud.Audit {
       /// <summary>
       /// Google Sheets specific request metadata.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SheetsMetadata : pb::IMessage<SheetsMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

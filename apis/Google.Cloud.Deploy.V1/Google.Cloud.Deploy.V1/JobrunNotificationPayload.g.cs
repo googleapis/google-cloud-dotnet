@@ -50,6 +50,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Platform Log event that describes the failure to send JobRun resource update
   /// Pub/Sub notification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobRunNotificationEvent : pb::IMessage<JobRunNotificationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

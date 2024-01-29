@@ -66,6 +66,7 @@ namespace Google.Cloud.Location {
   /// <summary>
   /// The request message for [Locations.ListLocations][google.cloud.location.Locations.ListLocations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLocationsRequest : pb::IMessage<ListLocationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -381,6 +382,7 @@ namespace Google.Cloud.Location {
   /// <summary>
   /// The response message for [Locations.ListLocations][google.cloud.location.Locations.ListLocations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLocationsResponse : pb::IMessage<ListLocationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -605,6 +607,7 @@ namespace Google.Cloud.Location {
   /// <summary>
   /// The request message for [Locations.GetLocation][google.cloud.location.Locations.GetLocation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetLocationRequest : pb::IMessage<GetLocationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -800,6 +803,7 @@ namespace Google.Cloud.Location {
   /// <summary>
   /// A resource that represents Google Cloud Platform location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

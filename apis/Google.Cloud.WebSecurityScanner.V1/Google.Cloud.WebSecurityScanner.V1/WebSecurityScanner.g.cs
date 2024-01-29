@@ -160,6 +160,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `CreateScanConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateScanConfigRequest : pb::IMessage<CreateScanConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -405,6 +406,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `DeleteScanConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteScanConfigRequest : pb::IMessage<DeleteScanConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -601,6 +603,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `GetScanConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetScanConfigRequest : pb::IMessage<GetScanConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -797,6 +800,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `ListScanConfigs` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListScanConfigsRequest : pb::IMessage<ListScanConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1077,6 +1081,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `UpdateScanConfigRequest` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateScanConfigRequest : pb::IMessage<UpdateScanConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1334,6 +1339,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Response for the `ListScanConfigs` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListScanConfigsResponse : pb::IMessage<ListScanConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1559,6 +1565,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `StartScanRun` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartScanRunRequest : pb::IMessage<StartScanRunRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1755,6 +1762,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `GetScanRun` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetScanRunRequest : pb::IMessage<GetScanRunRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1952,6 +1960,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `ListScanRuns` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListScanRunsRequest : pb::IMessage<ListScanRunsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2232,6 +2241,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Response for the `ListScanRuns` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListScanRunsResponse : pb::IMessage<ListScanRunsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2457,6 +2467,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `StopScanRun` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StopScanRunRequest : pb::IMessage<StopScanRunRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2654,6 +2665,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `ListCrawledUrls` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCrawledUrlsRequest : pb::IMessage<ListCrawledUrlsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2935,6 +2947,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Response for the `ListCrawledUrls` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCrawledUrlsResponse : pb::IMessage<ListCrawledUrlsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3160,6 +3173,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `GetFinding` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFindingRequest : pb::IMessage<GetFindingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3357,6 +3371,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `ListFindings` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFindingsRequest : pb::IMessage<ListFindingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3681,6 +3696,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Response for the `ListFindings` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFindingsResponse : pb::IMessage<ListFindingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3906,6 +3922,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Request for the `ListFindingTypeStats` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFindingTypeStatsRequest : pb::IMessage<ListFindingTypeStatsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4103,6 +4120,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// Response for the `ListFindingTypeStats` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFindingTypeStatsResponse : pb::IMessage<ListFindingTypeStatsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -76,6 +76,7 @@ namespace Google.Cloud.Run.V2 {
   /// Holds a single traffic routing entry for the Service. Allocations can be done
   /// to a specific Revision name, or pointing to the latest Ready Revision.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrafficTarget : pb::IMessage<TrafficTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -394,6 +395,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Represents the observed state of a single `TrafficTarget` entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrafficTargetStatus : pb::IMessage<TrafficTargetStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

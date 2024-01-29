@@ -113,6 +113,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// is authorized to administer any certificate that applies to one of their
   /// authorized domains.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizedCertificate : pb::IMessage<AuthorizedCertificate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -670,6 +671,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// An SSL certificate obtained from a certificate authority.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateRawData : pb::IMessage<CertificateRawData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -919,6 +921,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// A certificate managed by App Engine.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManagedCertificate : pb::IMessage<ManagedCertificate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

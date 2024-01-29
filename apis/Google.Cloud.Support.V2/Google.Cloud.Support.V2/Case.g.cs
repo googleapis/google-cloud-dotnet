@@ -28,31 +28,32 @@ namespace Google.Cloud.Support.V2 {
             "Y2xvdWQuc3VwcG9ydC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3Vk",
             "L3N1cHBvcnQvdjIvYWN0b3IucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8i4QYKBENhc2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5",
+            "c3RhbXAucHJvdG8i5AYKBENhc2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5",
             "X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSQwoOY2xhc3NpZmlj",
             "YXRpb24YBCABKAsyKy5nb29nbGUuY2xvdWQuc3VwcG9ydC52Mi5DYXNlQ2xh",
             "c3NpZmljYXRpb24SEQoJdGltZV96b25lGAggASgJEiIKGnN1YnNjcmliZXJf",
-            "ZW1haWxfYWRkcmVzc2VzGAkgAygJEjcKBXN0YXRlGAwgASgOMiMuZ29vZ2xl",
-            "LmNsb3VkLnN1cHBvcnQudjIuQ2FzZS5TdGF0ZUID4EEDEjQKC2NyZWF0ZV90",
-            "aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C3VwZGF0ZV90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEi8KB2NyZWF0b3IYDyABKAsyHi5nb29nbGUuY2xvdWQuc3VwcG9y",
-            "dC52Mi5BY3RvchIVCg1jb250YWN0X2VtYWlsGCMgASgJEhEKCWVzY2FsYXRl",
-            "ZBgRIAEoCBIRCgl0ZXN0X2Nhc2UYEyABKAgSFQoNbGFuZ3VhZ2VfY29kZRgX",
-            "IAEoCRI4Cghwcmlvcml0eRggIAEoDjImLmdvb2dsZS5jbG91ZC5zdXBwb3J0",
-            "LnYyLkNhc2UuUHJpb3JpdHkifwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIHCgNORVcQARIeChpJTl9QUk9HUkVTU19HT09HTEVfU1VQUE9SVBAC",
-            "EhMKD0FDVElPTl9SRVFVSVJFRBADEhUKEVNPTFVUSU9OX1BST1ZJREVEEAQS",
-            "CgoGQ0xPU0VEEAUiTAoIUHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5TUEVDSUZJ",
-            "RUQQABIGCgJQMBABEgYKAlAxEAISBgoCUDIQAxIGCgJQMxAEEgYKAlA0EAU6",
-            "cepBbgogY2xvdWRzdXBwb3J0Lmdvb2dsZWFwaXMuY29tL0Nhc2USKW9yZ2Fu",
-            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vY2FzZXMve2Nhc2V9Eh9wcm9qZWN0",
-            "cy97cHJvamVjdH0vY2FzZXMve2Nhc2V9IjYKEkNhc2VDbGFzc2lmaWNhdGlv",
-            "bhIKCgJpZBgDIAEoCRIUCgxkaXNwbGF5X25hbWUYBCABKAlCsgEKG2NvbS5n",
-            "b29nbGUuY2xvdWQuc3VwcG9ydC52MkIJQ2FzZVByb3RvUAFaNWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2Mi9zdXBwb3J0cGI7c3VwcG9ydHBi",
-            "qgIXR29vZ2xlLkNsb3VkLlN1cHBvcnQuVjLKAhdHb29nbGVcQ2xvdWRcU3Vw",
-            "cG9ydFxWMuoCGkdvb2dsZTo6Q2xvdWQ6OlN1cHBvcnQ6OlYyYgZwcm90bzM="));
+            "ZW1haWxfYWRkcmVzc2VzGAkgAygJEjgKBXN0YXRlGAwgASgOMiMuZ29vZ2xl",
+            "LmNsb3VkLnN1cHBvcnQudjIuQ2FzZS5TdGF0ZUIE4kEBAxI1CgtjcmVhdGVf",
+            "dGltZRgNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMS",
+            "NQoLdXBkYXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgTiQQEDEi8KB2NyZWF0b3IYDyABKAsyHi5nb29nbGUuY2xvdWQuc3Vw",
+            "cG9ydC52Mi5BY3RvchIVCg1jb250YWN0X2VtYWlsGCMgASgJEhEKCWVzY2Fs",
+            "YXRlZBgRIAEoCBIRCgl0ZXN0X2Nhc2UYEyABKAgSFQoNbGFuZ3VhZ2VfY29k",
+            "ZRgXIAEoCRI4Cghwcmlvcml0eRggIAEoDjImLmdvb2dsZS5jbG91ZC5zdXBw",
+            "b3J0LnYyLkNhc2UuUHJpb3JpdHkifwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIHCgNORVcQARIeChpJTl9QUk9HUkVTU19HT09HTEVfU1VQUE9S",
+            "VBACEhMKD0FDVElPTl9SRVFVSVJFRBADEhUKEVNPTFVUSU9OX1BST1ZJREVE",
+            "EAQSCgoGQ0xPU0VEEAUiTAoIUHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5TUEVD",
+            "SUZJRUQQABIGCgJQMBABEgYKAlAxEAISBgoCUDIQAxIGCgJQMxAEEgYKAlA0",
+            "EAU6cepBbgogY2xvdWRzdXBwb3J0Lmdvb2dsZWFwaXMuY29tL0Nhc2USKW9y",
+            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vY2FzZXMve2Nhc2V9Eh9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vY2FzZXMve2Nhc2V9IjYKEkNhc2VDbGFzc2lmaWNh",
+            "dGlvbhIKCgJpZBgDIAEoCRIUCgxkaXNwbGF5X25hbWUYBCABKAlCsgEKG2Nv",
+            "bS5nb29nbGUuY2xvdWQuc3VwcG9ydC52MkIJQ2FzZVByb3RvUAFaNWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2Mi9zdXBwb3J0cGI7c3VwcG9y",
+            "dHBiqgIXR29vZ2xlLkNsb3VkLlN1cHBvcnQuVjLKAhdHb29nbGVcQ2xvdWRc",
+            "U3VwcG9ydFxWMuoCGkdvb2dsZTo6Q2xvdWQ6OlN1cHBvcnQ6OlYyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2.ActorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,6 +68,7 @@ namespace Google.Cloud.Support.V2 {
   /// <summary>
   /// A support case.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Case : pb::IMessage<Case>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -933,6 +935,7 @@ namespace Google.Cloud.Support.V2 {
   /// <summary>
   /// A classification object with a product type and value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CaseClassification : pb::IMessage<CaseClassification>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

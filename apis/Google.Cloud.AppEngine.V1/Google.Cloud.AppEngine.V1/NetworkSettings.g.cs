@@ -51,6 +51,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// A NetworkSettings resource is a container for ingress settings for a version
   /// or service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkSettings : pb::IMessage<NetworkSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -28,46 +28,46 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
             "YXRhbG9nLnByb3RvEilnb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdp",
             "bmUudjFiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxo2",
             "Z29vZ2xlL2Nsb3VkL3JlY29tbWVuZGF0aW9uZW5naW5lL3YxYmV0YTEvY29t",
-            "bW9uLnByb3RvIv4DCgtDYXRhbG9nSXRlbRIPCgJpZBgBIAEoCUID4EECEmsK",
-            "FGNhdGVnb3J5X2hpZXJhcmNoaWVzGAIgAygLMkguZ29vZ2xlLmNsb3VkLnJl",
-            "Y29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuQ2F0YWxvZ0l0ZW0uQ2F0ZWdv",
-            "cnlIaWVyYXJjaHlCA+BBAhISCgV0aXRsZRgDIAEoCUID4EECEhgKC2Rlc2Ny",
-            "aXB0aW9uGAQgASgJQgPgQQESUwoPaXRlbV9hdHRyaWJ1dGVzGAUgASgLMjUu",
-            "Z29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuRmVh",
-            "dHVyZU1hcEID4EEBEhoKDWxhbmd1YWdlX2NvZGUYBiABKAlCA+BBARIRCgR0",
-            "YWdzGAggAygJQgPgQQESGgoNaXRlbV9ncm91cF9pZBgJIAEoCUID4EEBEl4K",
-            "EHByb2R1Y3RfbWV0YWRhdGEYCiABKAsyPS5nb29nbGUuY2xvdWQucmVjb21t",
-            "ZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Qcm9kdWN0Q2F0YWxvZ0l0ZW1CA+BB",
-            "AUgAGiwKEUNhdGVnb3J5SGllcmFyY2h5EhcKCmNhdGVnb3JpZXMYASADKAlC",
-            "A+BBAkIVChNyZWNvbW1lbmRhdGlvbl90eXBlIuYGChJQcm9kdWN0Q2F0YWxv",
-            "Z0l0ZW0SZAoLZXhhY3RfcHJpY2UYASABKAsySC5nb29nbGUuY2xvdWQucmVj",
-            "b21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Qcm9kdWN0Q2F0YWxvZ0l0ZW0u",
-            "RXhhY3RQcmljZUID4EEBSAASZAoLcHJpY2VfcmFuZ2UYAiABKAsySC5nb29n",
-            "bGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Qcm9kdWN0",
-            "Q2F0YWxvZ0l0ZW0uUHJpY2VSYW5nZUID4EEBSAASXAoFY29zdHMYAyADKAsy",
-            "SC5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5Q",
-            "cm9kdWN0Q2F0YWxvZ0l0ZW0uQ29zdHNFbnRyeUID4EEBEhoKDWN1cnJlbmN5",
-            "X2NvZGUYBCABKAlCA+BBARJiCgtzdG9ja19zdGF0ZRgFIAEoDjJILmdvb2ds",
-            "ZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExLlByb2R1Y3RD",
-            "YXRhbG9nSXRlbS5TdG9ja1N0YXRlQgPgQQESHwoSYXZhaWxhYmxlX3F1YW50",
-            "aXR5GAYgASgDQgPgQQESIgoVY2Fub25pY2FsX3Byb2R1Y3RfdXJpGAcgASgJ",
-            "QgPgQQESRQoGaW1hZ2VzGAggAygLMjAuZ29vZ2xlLmNsb3VkLnJlY29tbWVu",
-            "ZGF0aW9uZW5naW5lLnYxYmV0YTEuSW1hZ2VCA+BBARpFCgpFeGFjdFByaWNl",
-            "EhoKDWRpc3BsYXlfcHJpY2UYASABKAJCA+BBARIbCg5vcmlnaW5hbF9wcmlj",
-            "ZRgCIAEoAkID4EEBGjAKClByaWNlUmFuZ2USEAoDbWluGAEgASgCQgPgQQIS",
-            "EAoDbWF4GAIgASgCQgPgQQIaLAoKQ29zdHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAI6AjgBImoKClN0b2NrU3RhdGUSGwoXU1RPQ0tfU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIMCghJTl9TVE9DSxAAEhAKDE9VVF9PRl9TVE9D",
-            "SxABEgwKCFBSRU9SREVSEAISDQoJQkFDS09SREVSEAMaAhABQgcKBXByaWNl",
-            "IkIKBUltYWdlEhAKA3VyaRgBIAEoCUID4EECEhMKBmhlaWdodBgCIAEoBUID",
-            "4EEBEhIKBXdpZHRoGAMgASgFQgPgQQFCowIKLWNvbS5nb29nbGUuY2xvdWQu",
-            "cmVjb21tZW5kYXRpb25lbmdpbmUudjFiZXRhMVABWmFjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL3JlY29tbWVuZGF0aW9uZW5naW5lL2FwaXYxYmV0YTEvcmVjb21t",
-            "ZW5kYXRpb25lbmdpbmVwYjtyZWNvbW1lbmRhdGlvbmVuZ2luZXBiogIFUkVD",
-            "QUmqAilHb29nbGUuQ2xvdWQuUmVjb21tZW5kYXRpb25FbmdpbmUuVjFCZXRh",
-            "McoCKUdvb2dsZVxDbG91ZFxSZWNvbW1lbmRhdGlvbkVuZ2luZVxWMWJldGEx",
-            "6gIsR29vZ2xlOjpDbG91ZDo6UmVjb21tZW5kYXRpb25FbmdpbmU6OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "bW9uLnByb3RvIogECgtDYXRhbG9nSXRlbRIQCgJpZBgBIAEoCUIE4kEBAhJs",
+            "ChRjYXRlZ29yeV9oaWVyYXJjaGllcxgCIAMoCzJILmdvb2dsZS5jbG91ZC5y",
+            "ZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExLkNhdGFsb2dJdGVtLkNhdGVn",
+            "b3J5SGllcmFyY2h5QgTiQQECEhMKBXRpdGxlGAMgASgJQgTiQQECEhkKC2Rl",
+            "c2NyaXB0aW9uGAQgASgJQgTiQQEBElQKD2l0ZW1fYXR0cmlidXRlcxgFIAEo",
+            "CzI1Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGEx",
+            "LkZlYXR1cmVNYXBCBOJBAQESGwoNbGFuZ3VhZ2VfY29kZRgGIAEoCUIE4kEB",
+            "ARISCgR0YWdzGAggAygJQgTiQQEBEhsKDWl0ZW1fZ3JvdXBfaWQYCSABKAlC",
+            "BOJBAQESXwoQcHJvZHVjdF9tZXRhZGF0YRgKIAEoCzI9Lmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJldGExLlByb2R1Y3RDYXRhbG9n",
+            "SXRlbUIE4kEBAUgAGi0KEUNhdGVnb3J5SGllcmFyY2h5EhgKCmNhdGVnb3Jp",
+            "ZXMYASADKAlCBOJBAQJCFQoTcmVjb21tZW5kYXRpb25fdHlwZSLyBgoSUHJv",
+            "ZHVjdENhdGFsb2dJdGVtEmUKC2V4YWN0X3ByaWNlGAEgASgLMkguZ29vZ2xl",
+            "LmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYxYmV0YTEuUHJvZHVjdENh",
+            "dGFsb2dJdGVtLkV4YWN0UHJpY2VCBOJBAQFIABJlCgtwcmljZV9yYW5nZRgC",
+            "IAEoCzJILmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRhdGlvbmVuZ2luZS52MWJl",
+            "dGExLlByb2R1Y3RDYXRhbG9nSXRlbS5QcmljZVJhbmdlQgTiQQEBSAASXQoF",
+            "Y29zdHMYAyADKAsySC5nb29nbGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdp",
+            "bmUudjFiZXRhMS5Qcm9kdWN0Q2F0YWxvZ0l0ZW0uQ29zdHNFbnRyeUIE4kEB",
+            "ARIbCg1jdXJyZW5jeV9jb2RlGAQgASgJQgTiQQEBEmMKC3N0b2NrX3N0YXRl",
+            "GAUgASgOMkguZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5lLnYx",
+            "YmV0YTEuUHJvZHVjdENhdGFsb2dJdGVtLlN0b2NrU3RhdGVCBOJBAQESIAoS",
+            "YXZhaWxhYmxlX3F1YW50aXR5GAYgASgDQgTiQQEBEiMKFWNhbm9uaWNhbF9w",
+            "cm9kdWN0X3VyaRgHIAEoCUIE4kEBARJGCgZpbWFnZXMYCCADKAsyMC5nb29n",
+            "bGUuY2xvdWQucmVjb21tZW5kYXRpb25lbmdpbmUudjFiZXRhMS5JbWFnZUIE",
+            "4kEBARpHCgpFeGFjdFByaWNlEhsKDWRpc3BsYXlfcHJpY2UYASABKAJCBOJB",
+            "AQESHAoOb3JpZ2luYWxfcHJpY2UYAiABKAJCBOJBAQEaMgoKUHJpY2VSYW5n",
+            "ZRIRCgNtaW4YASABKAJCBOJBAQISEQoDbWF4GAIgASgCQgTiQQECGiwKCkNv",
+            "c3RzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgCOgI4ASJqCgpT",
+            "dG9ja1N0YXRlEhsKF1NUT0NLX1NUQVRFX1VOU1BFQ0lGSUVEEAASDAoISU5f",
+            "U1RPQ0sQABIQCgxPVVRfT0ZfU1RPQ0sQARIMCghQUkVPUkRFUhACEg0KCUJB",
+            "Q0tPUkRFUhADGgIQAUIHCgVwcmljZSJFCgVJbWFnZRIRCgN1cmkYASABKAlC",
+            "BOJBAQISFAoGaGVpZ2h0GAIgASgFQgTiQQEBEhMKBXdpZHRoGAMgASgFQgTi",
+            "QQEBQqMCCi1jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGF0aW9uZW5naW5l",
+            "LnYxYmV0YTFQAVphY2xvdWQuZ29vZ2xlLmNvbS9nby9yZWNvbW1lbmRhdGlv",
+            "bmVuZ2luZS9hcGl2MWJldGExL3JlY29tbWVuZGF0aW9uZW5naW5lcGI7cmVj",
+            "b21tZW5kYXRpb25lbmdpbmVwYqICBVJFQ0FJqgIpR29vZ2xlLkNsb3VkLlJl",
+            "Y29tbWVuZGF0aW9uRW5naW5lLlYxQmV0YTHKAilHb29nbGVcQ2xvdWRcUmVj",
+            "b21tZW5kYXRpb25FbmdpbmVcVjFiZXRhMeoCLEdvb2dsZTo6Q2xvdWQ6OlJl",
+            "Y29tbWVuZGF0aW9uRW5naW5lOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.RecommendationEngine.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,6 +85,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// CatalogItem captures all metadata information of items to be recommended.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CatalogItem : pb::IMessage<CatalogItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -667,6 +668,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// Category represents catalog item category hierarchy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CategoryHierarchy : pb::IMessage<CategoryHierarchy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -860,6 +862,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// ProductCatalogItem captures item metadata specific to retail products.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductCatalogItem : pb::IMessage<ProductCatalogItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1411,6 +1414,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// Exact product price.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExactPrice : pb::IMessage<ExactPrice>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1648,6 +1652,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// Product price range when there are a range of prices for different
       /// variations of the same product.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PriceRange : pb::IMessage<PriceRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1888,6 +1893,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Catalog item thumbnail/detail image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

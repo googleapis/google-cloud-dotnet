@@ -45,6 +45,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// A contiguous part of a text (string), assuming it has an UTF-8 NFC encoding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSegment : pb::IMessage<TextSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

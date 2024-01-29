@@ -28,47 +28,48 @@ namespace Google.Cloud.NetApp.V1 {
             "Fmdvb2dsZS5jbG91ZC5uZXRhcHAudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdvb2ds",
             "ZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvIrYGCgxCYWNrdXBQb2xpY3kSEQoEbmFtZRgBIAEo",
-            "CUID4EEIEh8KEmRhaWx5X2JhY2t1cF9saW1pdBgCIAEoBUgAiAEBEiAKE3dl",
-            "ZWtseV9iYWNrdXBfbGltaXQYAyABKAVIAYgBARIhChRtb250aGx5X2JhY2t1",
-            "cF9saW1pdBgEIAEoBUgCiAEBEhgKC2Rlc2NyaXB0aW9uGAUgASgJSAOIAQES",
-            "FAoHZW5hYmxlZBgGIAEoCEgEiAEBEicKFWFzc2lnbmVkX3ZvbHVtZV9jb3Vu",
-            "dBgHIAEoBUID4EEDSAWIAQESNAoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQAoGbGFiZWxzGAkgAygLMjAu",
-            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNrdXBQb2xpY3kuTGFiZWxzRW50",
-            "cnkSPgoFc3RhdGUYCiABKA4yKi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJh",
-            "Y2t1cFBvbGljeS5TdGF0ZUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXgoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAISDAoIREVMRVRJ",
-            "TkcQAxIJCgVFUlJPUhAEEgwKCFVQREFUSU5HEAU6jgHqQYoBCiJuZXRhcHAu",
-            "Z29vZ2xlYXBpcy5jb20vQmFja3VwUG9saWN5EkZwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmFja3VwUG9saWNpZXMve2JhY2t1",
-            "cF9wb2xpY3l9Kg5iYWNrdXBQb2xpY2llczIMYmFja3VwUG9saWN5QhUKE19k",
-            "YWlseV9iYWNrdXBfbGltaXRCFgoUX3dlZWtseV9iYWNrdXBfbGltaXRCFwoV",
-            "X21vbnRobHlfYmFja3VwX2xpbWl0Qg4KDF9kZXNjcmlwdGlvbkIKCghfZW5h",
-            "YmxlZEIYChZfYXNzaWduZWRfdm9sdW1lX2NvdW50IrgBChlDcmVhdGVCYWNr",
-            "dXBQb2xpY3lSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJuZXRh",
-            "cHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwUG9saWN5EkAKDWJhY2t1cF9wb2xp",
-            "Y3kYAiABKAsyJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkJhY2t1cFBvbGlj",
-            "eUID4EECEh0KEGJhY2t1cF9wb2xpY3lfaWQYAyABKAlCA+BBAiJSChZHZXRC",
-            "YWNrdXBQb2xpY3lSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoibmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeSKgAQoZTGlzdEJhY2t1",
-            "cFBvbGljaWVzUmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJBIibmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeRIRCglwYWdlX3NpemUY",
-            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoI",
-            "b3JkZXJfYnkYBSABKAkiiQEKGkxpc3RCYWNrdXBQb2xpY2llc1Jlc3BvbnNl",
-            "Ej0KD2JhY2t1cF9wb2xpY2llcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjEuQmFja3VwUG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
-            "Cgt1bnJlYWNoYWJsZRgDIAMoCSKTAQoZVXBkYXRlQmFja3VwUG9saWN5UmVx",
-            "dWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBAhJACg1iYWNrdXBfcG9saWN5GAIgASgLMiQuZ29vZ2xl",
-            "LmNsb3VkLm5ldGFwcC52MS5CYWNrdXBQb2xpY3lCA+BBAiJVChlEZWxldGVC",
-            "YWNrdXBQb2xpY3lSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoibmV0",
-            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeUKzAQoaY29tLmdvb2ds",
-            "ZS5jbG91ZC5uZXRhcHAudjFCEUJhY2t1cFBvbGljeVByb3RvUAFaMmNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBi",
-            "qgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRB",
-            "cHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "dGltZXN0YW1wLnByb3RvIroGCgxCYWNrdXBQb2xpY3kSEgoEbmFtZRgBIAEo",
+            "CUIE4kEBCBIfChJkYWlseV9iYWNrdXBfbGltaXQYAiABKAVIAIgBARIgChN3",
+            "ZWVrbHlfYmFja3VwX2xpbWl0GAMgASgFSAGIAQESIQoUbW9udGhseV9iYWNr",
+            "dXBfbGltaXQYBCABKAVIAogBARIYCgtkZXNjcmlwdGlvbhgFIAEoCUgDiAEB",
+            "EhQKB2VuYWJsZWQYBiABKAhIBIgBARIoChVhc3NpZ25lZF92b2x1bWVfY291",
+            "bnQYByABKAVCBOJBAQNIBYgBARI1CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSQAoGbGFiZWxzGAkgAygL",
+            "MjAuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5CYWNrdXBQb2xpY3kuTGFiZWxz",
+            "RW50cnkSPwoFc3RhdGUYCiABKA4yKi5nb29nbGUuY2xvdWQubmV0YXBwLnYx",
+            "LkJhY2t1cFBvbGljeS5TdGF0ZUIE4kEBAxotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIl4KBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCERF",
+            "TEVUSU5HEAMSCQoFRVJST1IQBBIMCghVUERBVElORxAFOo4B6kGKAQoibmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeRJGcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2JhY2t1cFBvbGljaWVzL3ti",
+            "YWNrdXBfcG9saWN5fSoOYmFja3VwUG9saWNpZXMyDGJhY2t1cFBvbGljeUIV",
+            "ChNfZGFpbHlfYmFja3VwX2xpbWl0QhYKFF93ZWVrbHlfYmFja3VwX2xpbWl0",
+            "QhcKFV9tb250aGx5X2JhY2t1cF9saW1pdEIOCgxfZGVzY3JpcHRpb25CCgoI",
+            "X2VuYWJsZWRCGAoWX2Fzc2lnbmVkX3ZvbHVtZV9jb3VudCK7AQoZQ3JlYXRl",
+            "QmFja3VwUG9saWN5UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+JBAQL6QSQS",
+            "Im5ldGFwcC5nb29nbGVhcGlzLmNvbS9CYWNrdXBQb2xpY3kSQQoNYmFja3Vw",
+            "X3BvbGljeRgCIAEoCzIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQmFja3Vw",
+            "UG9saWN5QgTiQQECEh4KEGJhY2t1cF9wb2xpY3lfaWQYAyABKAlCBOJBAQIi",
+            "UwoWR2V0QmFja3VwUG9saWN5UmVxdWVzdBI5CgRuYW1lGAEgASgJQiviQQEC",
+            "+kEkCiJuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwUG9saWN5IqEBChlM",
+            "aXN0QmFja3VwUG9saWNpZXNSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4kEB",
+            "AvpBJBIibmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeRIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIY",
+            "BCABKAkSEAoIb3JkZXJfYnkYBSABKAkiiQEKGkxpc3RCYWNrdXBQb2xpY2ll",
+            "c1Jlc3BvbnNlEj0KD2JhY2t1cF9wb2xpY2llcxgBIAMoCzIkLmdvb2dsZS5j",
+            "bG91ZC5uZXRhcHAudjEuQmFja3VwUG9saWN5EhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSKVAQoZVXBkYXRlQmFja3Vw",
+            "UG9saWN5UmVxdWVzdBI1Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5GaWVsZE1hc2tCBOJBAQISQQoNYmFja3VwX3BvbGljeRgCIAEo",
+            "CzIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQmFja3VwUG9saWN5QgTiQQEC",
+            "IlYKGURlbGV0ZUJhY2t1cFBvbGljeVJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr",
+            "4kEBAvpBJAoibmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeUKz",
+            "AQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEUJhY2t1cFBvbGljeVBy",
+            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFw",
+            "cHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2ds",
+            "ZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,6 +89,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// Backup Policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BackupPolicy : pb::IMessage<BackupPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -774,6 +776,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// CreateBackupPolicyRequest creates a backupPolicy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateBackupPolicyRequest : pb::IMessage<CreateBackupPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1062,6 +1065,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// GetBackupPolicyRequest gets the state of a backupPolicy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetBackupPolicyRequest : pb::IMessage<GetBackupPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1258,6 +1262,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// ListBackupPoliciesRequest for requesting multiple backup policies.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListBackupPoliciesRequest : pb::IMessage<ListBackupPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1614,6 +1619,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// ListBackupPoliciesResponse contains all the backup policies requested.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListBackupPoliciesResponse : pb::IMessage<ListBackupPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1867,6 +1873,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// UpdateBackupPolicyRequest for updating a backup policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateBackupPolicyRequest : pb::IMessage<UpdateBackupPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2124,6 +2131,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// DeleteBackupPolicyRequest deletes a backup policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteBackupPolicyRequest : pb::IMessage<DeleteBackupPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

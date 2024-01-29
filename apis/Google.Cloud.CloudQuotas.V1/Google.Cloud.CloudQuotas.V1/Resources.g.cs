@@ -54,48 +54,48 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhSW5jcmVhc2VFbGlnaWJpbGl0eS5J",
             "bmVsaWdpYmlsaXR5UmVhc29uImQKE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
             "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIcChhOT19WQUxJ",
-            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIoMGCg9RdW90YVByZWZl",
+            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIokGCg9RdW90YVByZWZl",
             "cmVuY2USDAoEbmFtZRgBIAEoCRJOCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
             "Z2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5z",
-            "aW9uc0VudHJ5EkEKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGku",
-            "Y2xvdWRxdW90YXMudjEuUXVvdGFDb25maWdCA+BBAhIRCgRldGFnGAQgASgJ",
-            "QgPgQQESNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHc2VydmljZRgHIAEoCUID4EEC",
-            "EhUKCHF1b3RhX2lkGAggASgJQgPgQQISGAoLcmVjb25jaWxpbmcYCiABKAhC",
-            "A+BBAxIVCg1qdXN0aWZpY2F0aW9uGAsgASgJEh0KDWNvbnRhY3RfZW1haWwY",
-            "DCABKAlCBuBBBOBBAhoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ATqfAupBmwIKKmNsb3VkcXVvdGFzLmdvb2ds",
-            "ZWFwaXMuY29tL1F1b3RhUHJlZmVyZW5jZRJLcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3Rh",
-            "X3ByZWZlcmVuY2V9Eklmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9ElVv",
-            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9IqwDCgtR",
-            "dW90YUNvbmZpZxIcCg9wcmVmZXJyZWRfdmFsdWUYASABKANCA+BBAhIZCgxz",
-            "dGF0ZV9kZXRhaWwYAiABKAlCA+BBAxI3Cg1ncmFudGVkX3ZhbHVlGAMgASgL",
-            "MhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBAxIVCgh0cmFjZV9p",
-            "ZBgEIAEoCUID4EEDEkwKC2Fubm90YXRpb25zGAUgAygLMjcuZ29vZ2xlLmFw",
-            "aS5jbG91ZHF1b3Rhcy52MS5RdW90YUNvbmZpZy5Bbm5vdGF0aW9uc0VudHJ5",
-            "EkoKDnJlcXVlc3Rfb3JpZ2luGAYgASgOMi0uZ29vZ2xlLmFwaS5jbG91ZHF1",
-            "b3Rhcy52MS5RdW90YUNvbmZpZy5PcmlnaW5CA+BBAxoyChBBbm5vdGF0aW9u",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRgoGT3Jp",
-            "Z2luEhYKEk9SSUdJTl9VTlNQRUNJRklFRBAAEhEKDUNMT1VEX0NPTlNPTEUQ",
-            "ARIRCg1BVVRPX0FESlVTVEVSEAIi6gEKDkRpbWVuc2lvbnNJbmZvEk0KCmRp",
-            "bWVuc2lvbnMYASADKAsyOS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLkRp",
-            "bWVuc2lvbnNJbmZvLkRpbWVuc2lvbnNFbnRyeRI4CgdkZXRhaWxzGAIgASgL",
-            "MicuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YURldGFpbHMSHAoU",
-            "YXBwbGljYWJsZV9sb2NhdGlvbnMYAyADKAkaMQoPRGltZW5zaW9uc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiHQoMUXVvdGFEZXRh",
-            "aWxzEg0KBXZhbHVlGAEgASgDKn4KEFF1b3RhU2FmZXR5Q2hlY2sSIgoeUVVP",
-            "VEFfU0FGRVRZX0NIRUNLX1VOU1BFQ0lGSUVEEAASHgoaUVVPVEFfREVDUkVB",
-            "U0VfQkVMT1dfVVNBR0UQARImCiJRVU9UQV9ERUNSRUFTRV9QRVJDRU5UQUdF",
-            "X1RPT19ISUdIEAJC0QEKHWNvbS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYx",
-            "Qg5SZXNvdXJjZXNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3Vk",
-            "cXVvdGFzL2FwaXYxL2Nsb3VkcXVvdGFzcGI7Y2xvdWRxdW90YXNwYqoCG0dv",
-            "b2dsZS5DbG91ZC5DbG91ZFF1b3Rhcy5WMcoCG0dvb2dsZVxDbG91ZFxDbG91",
-            "ZFF1b3Rhc1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkNsb3VkUXVvdGFzOjpWMWIG",
-            "cHJvdG8z"));
+            "aW9uc0VudHJ5EkIKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGku",
+            "Y2xvdWRxdW90YXMudjEuUXVvdGFDb25maWdCBOJBAQISEgoEZXRhZxgEIAEo",
+            "CUIE4kEBARI1CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCBOJBAQMSNQoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEhUKB3NlcnZpY2UYByABKAlC",
+            "BOJBAQISFgoIcXVvdGFfaWQYCCABKAlCBOJBAQISGQoLcmVjb25jaWxpbmcY",
+            "CiABKAhCBOJBAQMSFQoNanVzdGlmaWNhdGlvbhgLIAEoCRIcCg1jb250YWN0",
+            "X2VtYWlsGAwgASgJQgXiQQIEAhoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqfAupBmwIKKmNsb3VkcXVvdGFz",
+            "Lmdvb2dsZWFwaXMuY29tL1F1b3RhUHJlZmVyZW5jZRJLcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMv",
+            "e3F1b3RhX3ByZWZlcmVuY2V9Eklmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVu",
+            "Y2V9ElVvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9",
+            "IrEDCgtRdW90YUNvbmZpZxIdCg9wcmVmZXJyZWRfdmFsdWUYASABKANCBOJB",
+            "AQISGgoMc3RhdGVfZGV0YWlsGAIgASgJQgTiQQEDEjgKDWdyYW50ZWRfdmFs",
+            "dWUYAyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUIE4kEBAxIW",
+            "Cgh0cmFjZV9pZBgEIAEoCUIE4kEBAxJMCgthbm5vdGF0aW9ucxgFIAMoCzI3",
+            "Lmdvb2dsZS5hcGkuY2xvdWRxdW90YXMudjEuUXVvdGFDb25maWcuQW5ub3Rh",
+            "dGlvbnNFbnRyeRJLCg5yZXF1ZXN0X29yaWdpbhgGIAEoDjItLmdvb2dsZS5h",
+            "cGkuY2xvdWRxdW90YXMudjEuUXVvdGFDb25maWcuT3JpZ2luQgTiQQEDGjIK",
+            "EEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASJGCgZPcmlnaW4SFgoST1JJR0lOX1VOU1BFQ0lGSUVEEAASEQoNQ0xP",
+            "VURfQ09OU09MRRABEhEKDUFVVE9fQURKVVNURVIQAiLqAQoORGltZW5zaW9u",
+            "c0luZm8STQoKZGltZW5zaW9ucxgBIAMoCzI5Lmdvb2dsZS5hcGkuY2xvdWRx",
+            "dW90YXMudjEuRGltZW5zaW9uc0luZm8uRGltZW5zaW9uc0VudHJ5EjgKB2Rl",
+            "dGFpbHMYAiABKAsyJy5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLlF1b3Rh",
+            "RGV0YWlscxIcChRhcHBsaWNhYmxlX2xvY2F0aW9ucxgDIAMoCRoxCg9EaW1l",
+            "bnNpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASId",
+            "CgxRdW90YURldGFpbHMSDQoFdmFsdWUYASABKAMqfgoQUXVvdGFTYWZldHlD",
+            "aGVjaxIiCh5RVU9UQV9TQUZFVFlfQ0hFQ0tfVU5TUEVDSUZJRUQQABIeChpR",
+            "VU9UQV9ERUNSRUFTRV9CRUxPV19VU0FHRRABEiYKIlFVT1RBX0RFQ1JFQVNF",
+            "X1BFUkNFTlRBR0VfVE9PX0hJR0gQAkLRAQodY29tLmdvb2dsZS5hcGkuY2xv",
+            "dWRxdW90YXMudjFCDlJlc291cmNlc1Byb3RvUAFaQWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vY2xvdWRxdW90YXMvYXBpdjEvY2xvdWRxdW90YXNwYjtjbG91ZHF1",
+            "b3Rhc3BiqgIbR29vZ2xlLkNsb3VkLkNsb3VkUXVvdGFzLlYxygIbR29vZ2xl",
+            "XENsb3VkXENsb3VkUXVvdGFzXFYx6gIeR29vZ2xlOjpDbG91ZDo6Q2xvdWRR",
+            "dW90YXM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudQuotas.V1.QuotaSafetyCheck), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -138,6 +138,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// QuotaInfo represents information about a particular quota for a given
   /// project, folder or organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaInfo : pb::IMessage<QuotaInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -971,6 +972,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// <summary>
   /// Eligibility information regarding requesting increase adjustment of a quota.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaIncreaseEligibility : pb::IMessage<QuotaIncreaseEligibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1237,6 +1239,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// a project, folder or organization. There is only one QuotaPreference
   /// resource for a quota value targeting a unique set of dimensions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaPreference : pb::IMessage<QuotaPreference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1876,6 +1879,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// <summary>
   /// The preferred quota configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaConfig : pb::IMessage<QuotaConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2302,6 +2306,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// The detailed quota information such as effective quota value for a
   /// combination of dimensions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionsInfo : pb::IMessage<DimensionsInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2574,6 +2579,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
   /// <summary>
   /// The quota details for a map of dimensions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaDetails : pb::IMessage<QuotaDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

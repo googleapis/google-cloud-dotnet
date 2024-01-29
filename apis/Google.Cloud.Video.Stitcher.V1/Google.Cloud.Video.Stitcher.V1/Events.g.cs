@@ -58,6 +58,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Describes an event and a trigger URI.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Event : pb::IMessage<Event>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -497,6 +498,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// Indicates a time in which a list of events should be triggered
   /// during media playback.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProgressEvent : pb::IMessage<ProgressEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

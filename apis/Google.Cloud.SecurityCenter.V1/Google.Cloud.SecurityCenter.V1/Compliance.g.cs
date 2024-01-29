@@ -47,6 +47,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Contains compliance information about a security standard indicating unmet
   /// recommendations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Compliance : pb::IMessage<Compliance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

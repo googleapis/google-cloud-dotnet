@@ -53,6 +53,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// App Engine admin service audit log.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditData : pb::IMessage<AuditData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -347,6 +348,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Detailed information about UpdateService call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateServiceMethod : pb::IMessage<UpdateServiceMethod>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -551,6 +553,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Detailed information about CreateVersion call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateVersionMethod : pb::IMessage<CreateVersionMethod>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

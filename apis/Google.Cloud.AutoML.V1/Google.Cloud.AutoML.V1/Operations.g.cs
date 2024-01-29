@@ -94,6 +94,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Metadata used across all long running operations returned by AutoML API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -951,6 +952,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of operations that perform deletes of any entities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1106,6 +1108,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of DeployModel operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployModelOperationMetadata : pb::IMessage<DeployModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1261,6 +1264,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of UndeployModel operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeployModelOperationMetadata : pb::IMessage<UndeployModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1416,6 +1420,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of CreateDataset operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDatasetOperationMetadata : pb::IMessage<CreateDatasetOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1571,6 +1576,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of CreateModel operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateModelOperationMetadata : pb::IMessage<CreateModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1726,6 +1732,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of ImportData operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1881,6 +1888,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of ExportData operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2090,6 +2098,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// Supplements
       /// [OutputConfig][google.cloud.automl.v1.OutputConfig].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExportDataOutputInfo : pb::IMessage<ExportDataOutputInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2335,6 +2344,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of BatchPredict operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchPredictOperationMetadata : pb::IMessage<BatchPredictOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2594,6 +2604,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// Supplements
       /// [BatchPredictOutputConfig][google.cloud.automl.v1.BatchPredictOutputConfig].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BatchPredictOutputInfo : pb::IMessage<BatchPredictOutputInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2839,6 +2850,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of ExportModel operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportModelOperationMetadata : pb::IMessage<ExportModelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3049,6 +3061,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// Supplements
       /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExportModelOutputInfo : pb::IMessage<ExportModelOutputInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

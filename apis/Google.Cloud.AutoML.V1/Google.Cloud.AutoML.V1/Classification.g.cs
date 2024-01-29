@@ -89,6 +89,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Contains annotation details specific to classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassificationAnnotation : pb::IMessage<ClassificationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -290,6 +291,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// Note: For Video Classification this metrics only describe quality of the
   /// Video Classification predictions of "segment_classification" type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassificationEvaluationMetrics : pb::IMessage<ClassificationEvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -686,6 +688,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Metrics for a single confidence threshold.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1415,6 +1418,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Confusion matrix of the model running the classification.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfusionMatrix : pb::IMessage<ConfusionMatrix>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1672,6 +1676,7 @@ namespace Google.Cloud.AutoML.V1 {
           /// <summary>
           /// Output only. A row in the confusion matrix.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Row : pb::IMessage<Row>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

@@ -97,6 +97,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Gives a short summary of an evaluation, and links to the evaluation itself.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationReference : pb::IMessage<EvaluationReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -430,6 +431,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// An evaluation of a ProcessorVersion's performance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Evaluation : pb::IMessage<Evaluation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -886,6 +888,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Evaluation counters for the documents that were used.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Counters : pb::IMessage<Counters>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1203,6 +1206,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Evaluation metrics, either in aggregate or about a specific entity.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metrics : pb::IMessage<Metrics>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1798,6 +1802,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Evaluations metrics, at a specific confidence level.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfidenceLevelMetrics : pb::IMessage<ConfidenceLevelMetrics>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2042,6 +2047,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Metrics across multiple confidence levels.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MultiConfidenceMetrics : pb::IMessage<MultiConfidenceMetrics>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

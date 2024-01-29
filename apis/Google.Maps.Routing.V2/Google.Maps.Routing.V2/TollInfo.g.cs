@@ -46,6 +46,7 @@ namespace Google.Maps.Routing.V2 {
   /// Encapsulates toll information on a [Route][google.maps.routing.v2.Route] or
   /// on a [RouteLeg][google.maps.routing.v2.RouteLeg].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TollInfo : pb::IMessage<TollInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

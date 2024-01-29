@@ -46,6 +46,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// Define the Connectors target endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationConfig : pb::IMessage<DestinationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -267,6 +268,7 @@ namespace Google.Cloud.Connectors.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Destination : pb::IMessage<Destination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

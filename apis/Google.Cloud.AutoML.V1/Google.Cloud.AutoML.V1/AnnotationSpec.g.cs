@@ -48,6 +48,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// A definition of an annotation spec.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationSpec : pb::IMessage<AnnotationSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

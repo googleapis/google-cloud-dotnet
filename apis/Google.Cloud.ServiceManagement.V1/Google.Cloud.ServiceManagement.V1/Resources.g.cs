@@ -52,29 +52,29 @@ namespace Google.Cloud.ServiceManagement.V1 {
             "SUxFX0RFU0NSSVBUT1JfU0VUX1BST1RPEAQSDgoKUFJPVE9fRklMRRAGIhkK",
             "CUNvbmZpZ1JlZhIMCgRuYW1lGAEgASgJIkAKDENoYW5nZVJlcG9ydBIwCg5j",
             "b25maWdfY2hhbmdlcxgBIAMoCzIYLmdvb2dsZS5hcGkuQ29uZmlnQ2hhbmdl",
-            "IvkFCgdSb2xsb3V0EhcKCnJvbGxvdXRfaWQYASABKAlCA+BBARIvCgtjcmVh",
-            "dGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoK",
-            "Y3JlYXRlZF9ieRgDIAEoCRJGCgZzdGF0dXMYBCABKA4yNi5nb29nbGUuYXBp",
-            "LnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuUm9sbG91dFN0YXR1cxJj",
-            "Chh0cmFmZmljX3BlcmNlbnRfc3RyYXRlZ3kYBSABKAsyPy5nb29nbGUuYXBp",
-            "LnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuVHJhZmZpY1BlcmNlbnRT",
-            "dHJhdGVneUgAEmIKF2RlbGV0ZV9zZXJ2aWNlX3N0cmF0ZWd5GMgBIAEoCzI+",
-            "Lmdvb2dsZS5hcGkuc2VydmljZW1hbmFnZW1lbnQudjEuUm9sbG91dC5EZWxl",
-            "dGVTZXJ2aWNlU3RyYXRlZ3lIABIUCgxzZXJ2aWNlX25hbWUYCCABKAkaswEK",
-            "FlRyYWZmaWNQZXJjZW50U3RyYXRlZ3kSZQoLcGVyY2VudGFnZXMYASADKAsy",
-            "UC5nb29nbGUuYXBpLnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuVHJh",
-            "ZmZpY1BlcmNlbnRTdHJhdGVneS5QZXJjZW50YWdlc0VudHJ5GjIKEFBlcmNl",
-            "bnRhZ2VzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ARoX",
-            "ChVEZWxldGVTZXJ2aWNlU3RyYXRlZ3kijQEKDVJvbGxvdXRTdGF0dXMSHgoa",
-            "Uk9MTE9VVF9TVEFUVVNfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxAB",
-            "EgsKB1NVQ0NFU1MQAhINCglDQU5DRUxMRUQQAxIKCgZGQUlMRUQQBBILCgdQ",
-            "RU5ESU5HEAUSFgoSRkFJTEVEX1JPTExFRF9CQUNLEAZCCgoIc3RyYXRlZ3lC",
-            "ggIKI2NvbS5nb29nbGUuYXBpLnNlcnZpY2VtYW5hZ2VtZW50LnYxQg5SZXNv",
-            "dXJjZXNQcm90b1ABWlNjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2VtYW5h",
-            "Z2VtZW50L2FwaXYxL3NlcnZpY2VtYW5hZ2VtZW50cGI7c2VydmljZW1hbmFn",
-            "ZW1lbnRwYqICBEdBU02qAiFHb29nbGUuQ2xvdWQuU2VydmljZU1hbmFnZW1l",
-            "bnQuVjHKAiFHb29nbGVcQ2xvdWRcU2VydmljZU1hbmFnZW1lbnRcVjHqAiRH",
-            "b29nbGU6OkNsb3VkOjpTZXJ2aWNlTWFuYWdlbWVudDo6VjFiBnByb3RvMw=="));
+            "IvoFCgdSb2xsb3V0EhgKCnJvbGxvdXRfaWQYASABKAlCBOJBAQESLwoLY3Jl",
+            "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhIK",
+            "CmNyZWF0ZWRfYnkYAyABKAkSRgoGc3RhdHVzGAQgASgOMjYuZ29vZ2xlLmFw",
+            "aS5zZXJ2aWNlbWFuYWdlbWVudC52MS5Sb2xsb3V0LlJvbGxvdXRTdGF0dXMS",
+            "YwoYdHJhZmZpY19wZXJjZW50X3N0cmF0ZWd5GAUgASgLMj8uZ29vZ2xlLmFw",
+            "aS5zZXJ2aWNlbWFuYWdlbWVudC52MS5Sb2xsb3V0LlRyYWZmaWNQZXJjZW50",
+            "U3RyYXRlZ3lIABJiChdkZWxldGVfc2VydmljZV9zdHJhdGVneRjIASABKAsy",
+            "Pi5nb29nbGUuYXBpLnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuRGVs",
+            "ZXRlU2VydmljZVN0cmF0ZWd5SAASFAoMc2VydmljZV9uYW1lGAggASgJGrMB",
+            "ChZUcmFmZmljUGVyY2VudFN0cmF0ZWd5EmUKC3BlcmNlbnRhZ2VzGAEgAygL",
+            "MlAuZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MS5Sb2xsb3V0LlRy",
+            "YWZmaWNQZXJjZW50U3RyYXRlZ3kuUGVyY2VudGFnZXNFbnRyeRoyChBQZXJj",
+            "ZW50YWdlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEa",
+            "FwoVRGVsZXRlU2VydmljZVN0cmF0ZWd5Io0BCg1Sb2xsb3V0U3RhdHVzEh4K",
+            "GlJPTExPVVRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDwoLSU5fUFJPR1JFU1MQ",
+            "ARILCgdTVUNDRVNTEAISDQoJQ0FOQ0VMTEVEEAMSCgoGRkFJTEVEEAQSCwoH",
+            "UEVORElORxAFEhYKEkZBSUxFRF9ST0xMRURfQkFDSxAGQgoKCHN0cmF0ZWd5",
+            "QoICCiNjb20uZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MUIOUmVz",
+            "b3VyY2VzUHJvdG9QAVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9zZXJ2aWNlbWFu",
+            "YWdlbWVudC9hcGl2MS9zZXJ2aWNlbWFuYWdlbWVudHBiO3NlcnZpY2VtYW5h",
+            "Z2VtZW50cGKiAgRHQVNNqgIhR29vZ2xlLkNsb3VkLlNlcnZpY2VNYW5hZ2Vt",
+            "ZW50LlYxygIhR29vZ2xlXENsb3VkXFNlcnZpY2VNYW5hZ2VtZW50XFYx6gIk",
+            "R29vZ2xlOjpDbG91ZDo6U2VydmljZU1hbmFnZW1lbnQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ConfigChangeReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,6 +97,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// The full representation of a Service that is managed by
   /// Google Service Management.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManagedService : pb::IMessage<ManagedService>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -334,6 +335,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// The metadata associated with a long running operation resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -671,6 +673,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <summary>
       /// Represents the status of one operation step.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Step : pb::IMessage<Step>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -911,6 +914,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Represents a diagnostic message (error or warning)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Diagnostic : pb::IMessage<Diagnostic>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1209,6 +1213,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// Represents a source file which is used to generate the service configuration
   /// defined by `google.api.Service`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSource : pb::IMessage<ConfigSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1436,6 +1441,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Generic specification of a source configuration file
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigFile : pb::IMessage<ConfigFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1756,6 +1762,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
   /// Represents a service configuration with its name and id.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigRef : pb::IMessage<ConfigRef>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1962,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// It contains a list of ConfigChanges based on the comparison between
   /// two service configurations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeReport : pb::IMessage<ChangeReport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2145,6 +2153,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   /// to control plane systems. Typically, you create a new version of the
   /// service config, and then create a Rollout to push the service config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Rollout : pb::IMessage<Rollout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2728,6 +2737,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       ///       }
       ///     }
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrafficPercentStrategy : pb::IMessage<TrafficPercentStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2915,6 +2925,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// Strategy used to delete a service. This strategy is a placeholder only
       /// used by the system generated rollout to delete a service.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeleteServiceStrategy : pb::IMessage<DeleteServiceStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -27,18 +27,18 @@ namespace Google.Cloud.DataCatalog.V1 {
             "CjJnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvZ2NzX2ZpbGVzZXRfc3Bl",
             "Yy5wcm90bxIbZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGixnb29nbGUvY2xvdWQvZGF0YWNh",
-            "dGFsb2cvdjEvdGltZXN0YW1wcy5wcm90byJ6Cg5HY3NGaWxlc2V0U3BlYxIa",
-            "Cg1maWxlX3BhdHRlcm5zGAEgAygJQgPgQQISTAoVc2FtcGxlX2djc19maWxl",
-            "X3NwZWNzGAIgAygLMiguZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkdj",
-            "c0ZpbGVTcGVjQgPgQQMiigEKC0djc0ZpbGVTcGVjEhYKCWZpbGVfcGF0aBgB",
-            "IAEoCUID4EECEkoKDmdjc190aW1lc3RhbXBzGAIgASgLMi0uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLlN5c3RlbVRpbWVzdGFtcHNCA+BBAxIXCgpz",
-            "aXplX2J5dGVzGAQgASgDQgPgQQNCxgEKH2NvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YWNhdGFsb2cudjFQAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhY2F0YWxv",
-            "Zy9hcGl2MS9kYXRhY2F0YWxvZ3BiO2RhdGFjYXRhbG9ncGL4AQGqAhtHb29n",
-            "bGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xvdWRcRGF0YUNh",
-            "dGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxvZzo6VjFiBnBy",
-            "b3RvMw=="));
+            "dGFsb2cvdjEvdGltZXN0YW1wcy5wcm90byJ8Cg5HY3NGaWxlc2V0U3BlYxIb",
+            "Cg1maWxlX3BhdHRlcm5zGAEgAygJQgTiQQECEk0KFXNhbXBsZV9nY3NfZmls",
+            "ZV9zcGVjcxgCIAMoCzIoLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5H",
+            "Y3NGaWxlU3BlY0IE4kEBAyKNAQoLR2NzRmlsZVNwZWMSFwoJZmlsZV9wYXRo",
+            "GAEgASgJQgTiQQECEksKDmdjc190aW1lc3RhbXBzGAIgASgLMi0uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLlN5c3RlbVRpbWVzdGFtcHNCBOJBAQMS",
+            "GAoKc2l6ZV9ieXRlcxgEIAEoA0IE4kEBA0LGAQofY29tLmdvb2dsZS5jbG91",
+            "ZC5kYXRhY2F0YWxvZy52MVABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFj",
+            "YXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoC",
+            "G0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxE",
+            "YXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TimestampsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,6 +53,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Describes a Cloud Storage fileset entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsFilesetSpec : pb::IMessage<GcsFilesetSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -295,6 +296,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Specification of a single file in Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsFileSpec : pb::IMessage<GcsFileSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

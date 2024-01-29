@@ -28,44 +28,44 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Ehlnb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiZn",
             "b29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKwCwoKQmFja3VwUGxhbhIRCgRu",
-            "YW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
-            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
-            "dXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSEwoLZGVzY3JpcHRpb24YBSABKAkSPAoHY2x1c3RlchgGIAEoCUIr",
-            "4EEF4EEC+kEiCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchJP",
-            "ChByZXRlbnRpb25fcG9saWN5GAcgASgLMjUuZ29vZ2xlLmNsb3VkLmdrZWJh",
-            "Y2t1cC52MS5CYWNrdXBQbGFuLlJldGVudGlvblBvbGljeRJBCgZsYWJlbHMY",
-            "CCADKAsyMS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cFBsYW4u",
-            "TGFiZWxzRW50cnkSRwoPYmFja3VwX3NjaGVkdWxlGAkgASgLMi4uZ29vZ2xl",
-            "LmNsb3VkLmdrZWJhY2t1cC52MS5CYWNrdXBQbGFuLlNjaGVkdWxlEhEKBGV0",
-            "YWcYCiABKAlCA+BBAxITCgtkZWFjdGl2YXRlZBgLIAEoCBJJCg1iYWNrdXBf",
-            "Y29uZmlnGAwgASgLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5CYWNr",
-            "dXBQbGFuLkJhY2t1cENvbmZpZxIgChNwcm90ZWN0ZWRfcG9kX2NvdW50GA0g",
-            "ASgFQgPgQQMSPwoFc3RhdGUYDiABKA4yKy5nb29nbGUuY2xvdWQuZ2tlYmFj",
-            "a3VwLnYxLkJhY2t1cFBsYW4uU3RhdGVCA+BBAxIZCgxzdGF0ZV9yZWFzb24Y",
-            "DyABKAlCA+BBAxpeCg9SZXRlbnRpb25Qb2xpY3kSHwoXYmFja3VwX2RlbGV0",
-            "ZV9sb2NrX2RheXMYASABKAUSGgoSYmFja3VwX3JldGFpbl9kYXlzGAIgASgF",
-            "Eg4KBmxvY2tlZBgDIAEoCBoxCghTY2hlZHVsZRIVCg1jcm9uX3NjaGVkdWxl",
-            "GAEgASgJEg4KBnBhdXNlZBgCIAEoCBrDAgoMQmFja3VwQ29uZmlnEhgKDmFs",
-            "bF9uYW1lc3BhY2VzGAEgASgISAASRAoTc2VsZWN0ZWRfbmFtZXNwYWNlcxgC",
-            "IAEoCzIlLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlc0gA",
-            "EksKFXNlbGVjdGVkX2FwcGxpY2F0aW9ucxgDIAEoCzIqLmdvb2dsZS5jbG91",
-            "ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlZE5hbWVzSAASGwoTaW5jbHVkZV92",
-            "b2x1bWVfZGF0YRgEIAEoCBIXCg9pbmNsdWRlX3NlY3JldHMYBSABKAgSQAoO",
-            "ZW5jcnlwdGlvbl9rZXkYBiABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFja3Vw",
-            "LnYxLkVuY3J5cHRpb25LZXlCDgoMYmFja3VwX3Njb3BlGi0KC0xhYmVsc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiewoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABITCg9DTFVTVEVSX1BFTkRJTkcQARIQ",
-            "CgxQUk9WSVNJT05JTkcQAhIJCgVSRUFEWRADEgoKBkZBSUxFRBAEEg8KC0RF",
-            "QUNUSVZBVEVEEAUSDAoIREVMRVRJTkcQBjpr6kFoCiNna2ViYWNrdXAuZ29v",
-            "Z2xlYXBpcy5jb20vQmFja3VwUGxhbhJBcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2JhY2t1cFBsYW5zL3tiYWNrdXBfcGxhbn1C",
-            "xgEKHWNvbS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxQg9CYWNrdXBQbGFu",
-            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEv",
-            "Z2tlYmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFj",
-            "a3VwLlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6",
-            "Q2xvdWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK3CwoKQmFja3VwUGxhbhISCgRu",
+            "YW1lGAEgASgJQgTiQQEDEhEKA3VpZBgCIAEoCUIE4kEBAxI1CgtjcmVhdGVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMS",
+            "NQoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgTiQQEDEhMKC2Rlc2NyaXB0aW9uGAUgASgJEjsKB2NsdXN0ZXIYBiAB",
+            "KAlCKuJBAgUC+kEiCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3Rl",
+            "chJPChByZXRlbnRpb25fcG9saWN5GAcgASgLMjUuZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5CYWNrdXBQbGFuLlJldGVudGlvblBvbGljeRJBCgZsYWJl",
+            "bHMYCCADKAsyMS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cFBs",
+            "YW4uTGFiZWxzRW50cnkSRwoPYmFja3VwX3NjaGVkdWxlGAkgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MS5CYWNrdXBQbGFuLlNjaGVkdWxlEhIK",
+            "BGV0YWcYCiABKAlCBOJBAQMSEwoLZGVhY3RpdmF0ZWQYCyABKAgSSQoNYmFj",
+            "a3VwX2NvbmZpZxgMIAEoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEu",
+            "QmFja3VwUGxhbi5CYWNrdXBDb25maWcSIQoTcHJvdGVjdGVkX3BvZF9jb3Vu",
+            "dBgNIAEoBUIE4kEBAxJACgVzdGF0ZRgOIAEoDjIrLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuQmFja3VwUGxhbi5TdGF0ZUIE4kEBAxIaCgxzdGF0ZV9y",
+            "ZWFzb24YDyABKAlCBOJBAQMaXgoPUmV0ZW50aW9uUG9saWN5Eh8KF2JhY2t1",
+            "cF9kZWxldGVfbG9ja19kYXlzGAEgASgFEhoKEmJhY2t1cF9yZXRhaW5fZGF5",
+            "cxgCIAEoBRIOCgZsb2NrZWQYAyABKAgaMQoIU2NoZWR1bGUSFQoNY3Jvbl9z",
+            "Y2hlZHVsZRgBIAEoCRIOCgZwYXVzZWQYAiABKAgawwIKDEJhY2t1cENvbmZp",
+            "ZxIYCg5hbGxfbmFtZXNwYWNlcxgBIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVz",
+            "cGFjZXMYAiABKAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVz",
+            "cGFjZXNIABJLChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYAyABKAsyKi5nb29n",
+            "bGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEhsKE2lu",
+            "Y2x1ZGVfdm9sdW1lX2RhdGEYBCABKAgSFwoPaW5jbHVkZV9zZWNyZXRzGAUg",
+            "ASgIEkAKDmVuY3J5cHRpb25fa2V5GAYgASgLMiguZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5FbmNyeXB0aW9uS2V5Qg4KDGJhY2t1cF9zY29wZRotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEwoPQ0xVU1RFUl9QRU5E",
+            "SU5HEAESEAoMUFJPVklTSU9OSU5HEAISCQoFUkVBRFkQAxIKCgZGQUlMRUQQ",
+            "BBIPCgtERUFDVElWQVRFRBAFEgwKCERFTEVUSU5HEAY6a+pBaAojZ2tlYmFj",
+            "a3VwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4SQXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3Vw",
+            "X3BsYW59QsYBCh1jb20uZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MUIPQmFj",
+            "a3VwUGxhblByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZ2tlYmFja3Vw",
+            "L2FwaXYxL2drZWJhY2t1cHBiO2drZWJhY2t1cHBiqgIZR29vZ2xlLkNsb3Vk",
+            "LkdrZUJhY2t1cC5WMcoCGUdvb2dsZVxDbG91ZFxHa2VCYWNrdXBcVjHqAhxH",
+            "b29nbGU6OkNsb3VkOjpHa2VCYWNrdXA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,6 +82,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// Defines the configuration and scheduling for a "line" of Backups.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BackupPlan : pb::IMessage<BackupPlan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -933,6 +934,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// <summary>
       /// RetentionPolicy defines a Backup retention policy for a BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RetentionPolicy : pb::IMessage<RetentionPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1238,6 +1240,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// Defines scheduling parameters for automatically creating Backups
       /// via this BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1483,6 +1486,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// BackupConfig defines the configuration of Backups created via this
       /// BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BackupConfig : pb::IMessage<BackupConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

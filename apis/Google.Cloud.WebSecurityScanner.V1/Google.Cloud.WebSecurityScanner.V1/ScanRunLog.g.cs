@@ -60,6 +60,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// Representation in logs is either a proto Struct, or converted to JSON.
   /// Next id: 9
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanRunLog : pb::IMessage<ScanRunLog>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

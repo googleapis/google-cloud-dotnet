@@ -26,14 +26,14 @@ namespace Google.Cloud.Notebooks.V1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvbm90ZWJvb2tzL3YxL2RpYWdub3N0aWNfY29uZmln",
             "LnByb3RvEhlnb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIr4BChBEaWFnbm9zdGljQ29uZmlnEhcK",
-            "Cmdjc19idWNrZXQYASABKAlCA+BBAhIaCg1yZWxhdGl2ZV9wYXRoGAIgASgJ",
-            "QgPgQQESIAoTcmVwYWlyX2ZsYWdfZW5hYmxlZBgDIAEoCEID4EEBEigKG3Bh",
-            "Y2tldF9jYXB0dXJlX2ZsYWdfZW5hYmxlZBgEIAEoCEID4EEBEikKHGNvcHlf",
-            "aG9tZV9maWxlc19mbGFnX2VuYWJsZWQYBSABKAhCA+BBAUJ1Ch1jb20uZ29v",
-            "Z2xlLmNsb3VkLm5vdGVib29rcy52MUIVRGlhZ25vc3RpY0NvbmZpZ1Byb3Rv",
-            "UAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vbm90ZWJvb2tzL2FwaXYxL25vdGVi",
-            "b29rc3BiO25vdGVib29rc3BiYgZwcm90bzM="));
+            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvIsMBChBEaWFnbm9zdGljQ29uZmlnEhgK",
+            "Cmdjc19idWNrZXQYASABKAlCBOJBAQISGwoNcmVsYXRpdmVfcGF0aBgCIAEo",
+            "CUIE4kEBARIhChNyZXBhaXJfZmxhZ19lbmFibGVkGAMgASgIQgTiQQEBEikK",
+            "G3BhY2tldF9jYXB0dXJlX2ZsYWdfZW5hYmxlZBgEIAEoCEIE4kEBARIqChxj",
+            "b3B5X2hvbWVfZmlsZXNfZmxhZ19lbmFibGVkGAUgASgIQgTiQQEBQnUKHWNv",
+            "bS5nb29nbGUuY2xvdWQubm90ZWJvb2tzLnYxQhVEaWFnbm9zdGljQ29uZmln",
+            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9ub3RlYm9va3MvYXBpdjEv",
+            "bm90ZWJvb2tzcGI7bm90ZWJvb2tzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,6 +47,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Defines flags that are used to run the diagnostic tool
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiagnosticConfig : pb::IMessage<DiagnosticConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -28,31 +28,31 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "c2VydmljZS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
             "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9j",
             "bGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ivwEKFENvbXBsZXRlUXVlcnlS",
-            "ZXF1ZXN0EkQKCmRhdGFfc3RvcmUYASABKAlCMOBBAvpBKgooZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRISCgVxdWVyeRgCIAEo",
-            "CUID4EECEhMKC3F1ZXJ5X21vZGVsGAMgASgJEhYKDnVzZXJfcHNldWRvX2lk",
-            "GAQgASgJEiAKGGluY2x1ZGVfdGFpbF9zdWdnZXN0aW9ucxgFIAEoCCK/AQoV",
-            "Q29tcGxldGVRdWVyeVJlc3BvbnNlEmEKEXF1ZXJ5X3N1Z2dlc3Rpb25zGAEg",
-            "AygLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Db21wbGV0",
-            "ZVF1ZXJ5UmVzcG9uc2UuUXVlcnlTdWdnZXN0aW9uEhwKFHRhaWxfbWF0Y2hf",
-            "dHJpZ2dlcmVkGAIgASgIGiUKD1F1ZXJ5U3VnZ2VzdGlvbhISCgpzdWdnZXN0",
-            "aW9uGAEgASgJMooDChFDb21wbGV0aW9uU2VydmljZRKgAgoNQ29tcGxldGVR",
-            "dWVyeRI1Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuQ29tcGxl",
-            "dGVRdWVyeVJlcXVlc3QaNi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLkNvbXBsZXRlUXVlcnlSZXNwb25zZSKfAYLT5JMCmAESQi92MS97ZGF0",
-            "YV9zdG9yZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKn06",
-            "Y29tcGxldGVRdWVyeVpSElAvdjEve2RhdGFfc3RvcmU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKn06Y29tcGxl",
-            "dGVRdWVyeRpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEu",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUKJAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCFkNv",
-            "bXBsZXRpb25TZXJ2aWNlUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "aXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292",
-            "ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQu",
-            "RGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
-            "Z2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFi",
-            "BnByb3RvMw=="));
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iwQEKFENvbXBsZXRlUXVlcnlS",
+            "ZXF1ZXN0EkUKCmRhdGFfc3RvcmUYASABKAlCMeJBAQL6QSoKKGRpc2NvdmVy",
+            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbS9EYXRhU3RvcmUSEwoFcXVlcnkYAiAB",
+            "KAlCBOJBAQISEwoLcXVlcnlfbW9kZWwYAyABKAkSFgoOdXNlcl9wc2V1ZG9f",
+            "aWQYBCABKAkSIAoYaW5jbHVkZV90YWlsX3N1Z2dlc3Rpb25zGAUgASgIIr8B",
+            "ChVDb21wbGV0ZVF1ZXJ5UmVzcG9uc2USYQoRcXVlcnlfc3VnZ2VzdGlvbnMY",
+            "ASADKAsyRi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkNvbXBs",
+            "ZXRlUXVlcnlSZXNwb25zZS5RdWVyeVN1Z2dlc3Rpb24SHAoUdGFpbF9tYXRj",
+            "aF90cmlnZ2VyZWQYAiABKAgaJQoPUXVlcnlTdWdnZXN0aW9uEhIKCnN1Z2dl",
+            "c3Rpb24YASABKAkyigMKEUNvbXBsZXRpb25TZXJ2aWNlEqACCg1Db21wbGV0",
+            "ZVF1ZXJ5EjUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Db21w",
+            "bGV0ZVF1ZXJ5UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjEuQ29tcGxldGVRdWVyeVJlc3BvbnNlIp8BgtPkkwKYARJCL3YxL3tk",
+            "YXRhX3N0b3JlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8q",
+            "fTpjb21wbGV0ZVF1ZXJ5WlISUC92MS97ZGF0YV9zdG9yZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qfTpjb21w",
+            "bGV0ZVF1ZXJ5GlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23S",
+            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtQokCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIW",
+            "Q29tcGxldGlvblNlcnZpY2VQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNj",
+            "b3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91",
+            "ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5",
+            "RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -69,6 +69,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// [CompletionService.CompleteQuery][google.cloud.discoveryengine.v1.CompletionService.CompleteQuery]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompleteQueryRequest : pb::IMessage<CompleteQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -461,6 +462,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// [CompletionService.CompleteQuery][google.cloud.discoveryengine.v1.CompletionService.CompleteQuery]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompleteQueryResponse : pb::IMessage<CompleteQueryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -692,6 +694,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <summary>
       /// Suggestions as search queries.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QuerySuggestion : pb::IMessage<QuerySuggestion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

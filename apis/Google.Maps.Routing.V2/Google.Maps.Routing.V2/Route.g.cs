@@ -155,6 +155,7 @@ namespace Google.Maps.Routing.V2 {
   /// Contains a route, which consists of a series of connected road segments
   /// that join beginning, ending, and intermediate waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Route : pb::IMessage<Route>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -876,6 +877,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Text representations of certain properties.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RouteLocalizedValues : pb::IMessage<RouteLocalizedValues>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1236,6 +1238,7 @@ namespace Google.Maps.Routing.V2 {
   /// Contains the additional information that the user should be informed
   /// about, such as possible traffic zone restrictions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteTravelAdvisory : pb::IMessage<RouteTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1615,6 +1618,7 @@ namespace Google.Maps.Routing.V2 {
   /// Contains the additional information that the user should be informed
   /// about on a leg step, such as possible traffic zone restrictions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegTravelAdvisory : pb::IMessage<RouteLegTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1863,6 +1867,7 @@ namespace Google.Maps.Routing.V2 {
   /// Contains the additional information that the user should be informed
   /// about, such as possible traffic zone restrictions on a leg step.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegStepTravelAdvisory : pb::IMessage<RouteLegStepTravelAdvisory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2047,6 +2052,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Contains a segment between non-`via` waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLeg : pb::IMessage<RouteLeg>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2679,6 +2685,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Text representations of certain properties.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RouteLegLocalizedValues : pb::IMessage<RouteLegLocalizedValues>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2984,6 +2991,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Provides overview information about a list of `RouteLegStep`s.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StepsOverview : pb::IMessage<StepsOverview>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3177,6 +3185,7 @@ namespace Google.Maps.Routing.V2 {
           /// This field is not populated if the `RouteLeg` does not contain any
           /// multi-modal segments in the steps.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class MultiModalSegment : pb::IMessage<MultiModalSegment>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3547,6 +3556,7 @@ namespace Google.Maps.Routing.V2 {
   /// step corresponds to a single navigation instruction. Route legs are made up
   /// of steps.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegStep : pb::IMessage<RouteLegStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4181,6 +4191,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Text representations of certain properties.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RouteLegStepLocalizedValues : pb::IMessage<RouteLegStepLocalizedValues>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4440,6 +4451,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Additional information for the `RouteLegStep` related to `TRANSIT` routes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteLegStepTransitDetails : pb::IMessage<RouteLegStepTransitDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4924,6 +4936,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Details about the transit stops for the `RouteLegStep`
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TransitStopDetails : pb::IMessage<TransitStopDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5275,6 +5288,7 @@ namespace Google.Maps.Routing.V2 {
       /// <summary>
       /// Localized descriptions of values for RouteTransitDetails.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TransitDetailsLocalizedValues : pb::IMessage<TransitDetailsLocalizedValues>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

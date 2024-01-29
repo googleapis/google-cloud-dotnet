@@ -54,6 +54,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// job](https://cloud.google.com/dlp/docs/concepts-job-triggers) that produced
   /// the finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudDlpInspection : pb::IMessage<CloudDlpInspection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

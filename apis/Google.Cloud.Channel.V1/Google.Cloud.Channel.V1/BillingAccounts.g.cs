@@ -27,16 +27,16 @@ namespace Google.Cloud.Channel.V1 {
             "Ci5nb29nbGUvY2xvdWQvY2hhbm5lbC92MS9iaWxsaW5nX2FjY291bnRzLnBy",
             "b3RvEhdnb29nbGUuY2xvdWQuY2hhbm5lbC52MRofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKMAgoOQmlsbGluZ0Fj",
-            "Y291bnQSEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEo",
-            "CRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxIaCg1jdXJyZW5jeV9jb2RlGAQgASgJQgPgQQMSGAoLcmVn",
-            "aW9uX2NvZGUYBSABKAlCA+BBAzpl6kFiCipjbG91ZGNoYW5uZWwuZ29vZ2xl",
-            "YXBpcy5jb20vQmlsbGluZ0FjY291bnQSNGFjY291bnRzL3thY2NvdW50fS9i",
-            "aWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH1CbAobY29tLmdvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxQhRCaWxsaW5nQWNjb3VudHNQcm90b1ABWjVj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2NoYW5uZWwvYXBpdjEvY2hhbm5lbHBiO2No",
-            "YW5uZWxwYmIGcHJvdG8z"));
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKQAgoOQmlsbGluZ0Fj",
+            "Y291bnQSEgoEbmFtZRgBIAEoCUIE4kEBAxIUCgxkaXNwbGF5X25hbWUYAiAB",
+            "KAkSNQoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgTiQQEDEhsKDWN1cnJlbmN5X2NvZGUYBCABKAlCBOJBAQMSGQoL",
+            "cmVnaW9uX2NvZGUYBSABKAlCBOJBAQM6ZepBYgoqY2xvdWRjaGFubmVsLmdv",
+            "b2dsZWFwaXMuY29tL0JpbGxpbmdBY2NvdW50EjRhY2NvdW50cy97YWNjb3Vu",
+            "dH0vYmlsbGluZ0FjY291bnRzL3tiaWxsaW5nX2FjY291bnR9QmwKG2NvbS5n",
+            "b29nbGUuY2xvdWQuY2hhbm5lbC52MUIUQmlsbGluZ0FjY291bnRzUHJvdG9Q",
+            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5uZWxw",
+            "YjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -50,6 +50,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents a billing account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BillingAccount : pb::IMessage<BillingAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -46,6 +46,7 @@ namespace Google.Maps.Places.V1 {
   /// [Photo][google.maps.places.v1.Photo], and
   /// [Review][google.maps.places.v1.Review].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorAttribution : pb::IMessage<AuthorAttribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

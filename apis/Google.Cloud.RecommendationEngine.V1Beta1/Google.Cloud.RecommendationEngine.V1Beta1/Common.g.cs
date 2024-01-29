@@ -62,6 +62,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// recommendation model for catalogs/user events as categorical/numerical
   /// features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureMap : pb::IMessage<FeatureMap>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -291,6 +292,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// A list of string features.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringList : pb::IMessage<StringList>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -475,6 +477,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// A list of float features.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FloatList : pb::IMessage<FloatList>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

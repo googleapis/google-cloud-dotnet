@@ -634,14 +634,14 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ArtifactRegistryClient.Create(callInvoker, Settings, Logger);
+            return ArtifactRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ArtifactRegistryClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ArtifactRegistryClient.Create(callInvoker, Settings, Logger);
+            return ArtifactRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

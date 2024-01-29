@@ -57,6 +57,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// Output only.
   /// Defines an error trace message for a ScanRun.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanRunErrorTrace : pb::IMessage<ScanRunErrorTrace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

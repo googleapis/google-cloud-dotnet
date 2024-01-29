@@ -34,19 +34,19 @@ namespace Google.Cloud.Optimization.V1 {
             "Cg9nY3NfZGVzdGluYXRpb24YASABKAsyLC5nb29nbGUuY2xvdWQub3B0aW1p",
             "emF0aW9uLnYxLkdjc0Rlc3RpbmF0aW9uSAASPQoLZGF0YV9mb3JtYXQYAiAB",
             "KA4yKC5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkRhdGFGb3JtYXRC",
-            "DQoLZGVzdGluYXRpb24iHQoJR2NzU291cmNlEhAKA3VyaRgBIAEoCUID4EEC",
-            "IiIKDkdjc0Rlc3RpbmF0aW9uEhAKA3VyaRgBIAEoCUID4EECIqsCChJBc3lu",
-            "Y01vZGVsTWV0YWRhdGESRQoFc3RhdGUYASABKA4yNi5nb29nbGUuY2xvdWQu",
-            "b3B0aW1pemF0aW9uLnYxLkFzeW5jTW9kZWxNZXRhZGF0YS5TdGF0ZRIVCg1z",
-            "dGF0ZV9tZXNzYWdlGAIgASgJEi8KC2NyZWF0ZV90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiVQoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJU1VDQ0VFREVEEAISDQoJ",
-            "Q0FOQ0VMTEVEEAMSCgoGRkFJTEVEEAQqPwoKRGF0YUZvcm1hdBIbChdEQVRB",
-            "X0ZPUk1BVF9VTlNQRUNJRklFRBAAEggKBEpTT04QARIKCgZTVFJJTkcQAkJ7",
-            "CiBjb20uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MUIPQXN5bmNNb2Rl",
-            "bFByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vb3B0aW1pemF0aW9uL2Fw",
-            "aXYxL29wdGltaXphdGlvbnBiO29wdGltaXphdGlvbnBiYgZwcm90bzM="));
+            "DQoLZGVzdGluYXRpb24iHgoJR2NzU291cmNlEhEKA3VyaRgBIAEoCUIE4kEB",
+            "AiIjCg5HY3NEZXN0aW5hdGlvbhIRCgN1cmkYASABKAlCBOJBAQIiqwIKEkFz",
+            "eW5jTW9kZWxNZXRhZGF0YRJFCgVzdGF0ZRgBIAEoDjI2Lmdvb2dsZS5jbG91",
+            "ZC5vcHRpbWl6YXRpb24udjEuQXN5bmNNb2RlbE1ldGFkYXRhLlN0YXRlEhUK",
+            "DXN0YXRlX21lc3NhZ2UYAiABKAkSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJVCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIN",
+            "CglDQU5DRUxMRUQQAxIKCgZGQUlMRUQQBCo/CgpEYXRhRm9ybWF0EhsKF0RB",
+            "VEFfRk9STUFUX1VOU1BFQ0lGSUVEEAASCAoESlNPThABEgoKBlNUUklORxAC",
+            "QnsKIGNvbS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxQg9Bc3luY01v",
+            "ZGVsUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9vcHRpbWl6YXRpb24v",
+            "YXBpdjEvb3B0aW1pemF0aW9ucGI7b3B0aW1pemF0aW9ucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Optimization.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,6 +85,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The desired input location information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -364,6 +365,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The desired output location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -642,6 +644,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the input file will be read from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -837,6 +840,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output file will be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1032,6 +1036,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The long running operation metadata for async model related methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncModelMetadata : pb::IMessage<AsyncModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

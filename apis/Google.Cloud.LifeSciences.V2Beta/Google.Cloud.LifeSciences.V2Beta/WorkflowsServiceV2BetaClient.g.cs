@@ -134,14 +134,14 @@ namespace Google.Cloud.LifeSciences.V2Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<WorkflowsServiceV2BetaClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return WorkflowsServiceV2BetaClient.Create(callInvoker, Settings, Logger);
+            return WorkflowsServiceV2BetaClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

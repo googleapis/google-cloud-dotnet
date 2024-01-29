@@ -49,6 +49,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// Security Scanner Service crawls the web applications, following all links
   /// within the scope of sites, to find the URLs to test against.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CrawledUrl : pb::IMessage<CrawledUrl>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

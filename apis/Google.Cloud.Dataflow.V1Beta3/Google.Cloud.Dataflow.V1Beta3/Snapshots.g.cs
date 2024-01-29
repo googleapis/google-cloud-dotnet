@@ -129,6 +129,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Represents a Pubsub snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubSnapshotMetadata : pb::IMessage<PubsubSnapshotMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -413,6 +414,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Represents a snapshot of a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Snapshot : pb::IMessage<Snapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -976,6 +978,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to get information about a snapshot
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSnapshotRequest : pb::IMessage<GetSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1251,6 +1254,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to delete a snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSnapshotRequest : pb::IMessage<DeleteSnapshotRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1526,6 +1530,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response from deleting a snapshot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSnapshotResponse : pb::IMessage<DeleteSnapshotResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1681,6 +1686,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to list snapshots.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnapshotsRequest : pb::IMessage<ListSnapshotsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1956,6 +1962,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// List of snapshots.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnapshotsResponse : pb::IMessage<ListSnapshotsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

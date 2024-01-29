@@ -165,14 +165,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PredictionApiKeyRegistryClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PredictionApiKeyRegistryClient.Create(callInvoker, Settings, Logger);
+            return PredictionApiKeyRegistryClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

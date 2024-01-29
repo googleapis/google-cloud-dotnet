@@ -48,6 +48,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The histogram request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HistogramQuery : pb::IMessage<HistogramQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -252,6 +253,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// [HistogramQuery][google.cloud.talent.v4beta1.HistogramQuery] specified in
   /// searches.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HistogramQueryResult : pb::IMessage<HistogramQueryResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

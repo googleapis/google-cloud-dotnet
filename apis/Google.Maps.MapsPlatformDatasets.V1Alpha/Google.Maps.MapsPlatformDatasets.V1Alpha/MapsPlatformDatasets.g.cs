@@ -29,40 +29,40 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
             "bGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aNmdvb2ds",
             "ZS9tYXBzL21hcHNwbGF0Zm9ybWRhdGFzZXRzL3YxYWxwaGEvZGF0YXNldC5w",
-            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8ipAEKFENy",
-            "ZWF0ZURhdGFzZXRSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitj",
-            "bG91ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EkcK",
-            "B2RhdGFzZXQYAiABKAsyMS5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRh",
-            "c2V0cy52MWFscGhhLkRhdGFzZXRCA+BBAiKYAQocVXBkYXRlRGF0YXNldE1l",
-            "dGFkYXRhUmVxdWVzdBJHCgdkYXRhc2V0GAEgASgLMjEuZ29vZ2xlLm1hcHMu",
-            "bWFwc3BsYXRmb3JtZGF0YXNldHMudjFhbHBoYS5EYXRhc2V0QgPgQQISLwoL",
-            "dXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
-            "IqABChFHZXREYXRhc2V0UmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0K",
-            "K21hcHNwbGF0Zm9ybWRhdGFzZXRzLmdvb2dsZWFwaXMuY29tL0RhdGFzZXQS",
-            "SAoPcHVibGlzaGVkX3VzYWdlGAIgASgOMi8uZ29vZ2xlLm1hcHMubWFwc3Bs",
-            "YXRmb3JtZGF0YXNldHMudjFhbHBoYS5Vc2FnZSKGAQoaTGlzdERhdGFzZXRW",
-            "ZXJzaW9uc1JlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCittYXBzcGxh",
-            "dGZvcm1kYXRhc2V0cy5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInsKG0xpc3REYXRhc2V0",
-            "VmVyc2lvbnNSZXNwb25zZRJDCghkYXRhc2V0cxgBIAMoCzIxLmdvb2dsZS5t",
-            "YXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGEuRGF0YXNldBIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkigQEKE0xpc3REYXRhc2V0c1JlcXVlc3QS",
-            "QwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2Vy",
-            "Lmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIgASgFEhIK",
-            "CnBhZ2VfdG9rZW4YAyABKAkidAoUTGlzdERhdGFzZXRzUmVzcG9uc2USQwoI",
-            "ZGF0YXNldHMYASADKAsyMS5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRh",
-            "c2V0cy52MWFscGhhLkRhdGFzZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "ImgKFERlbGV0ZURhdGFzZXRSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpB",
-            "LQorbWFwc3BsYXRmb3JtZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNl",
-            "dBINCgVmb3JjZRgCIAEoCCJgChtEZWxldGVEYXRhc2V0VmVyc2lvblJlcXVl",
-            "c3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCittYXBzcGxhdGZvcm1kYXRhc2V0",
-            "cy5nb29nbGVhcGlzLmNvbS9EYXRhc2V0QokCCixjb20uZ29vZ2xlLm1hcHMu",
-            "bWFwc3BsYXRmb3JtZGF0YXNldHMudjFhbHBoYUIZTWFwc1BsYXRmb3JtRGF0",
-            "YXNldHNQcm90b1ABWmZjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvbWFwc3Bs",
-            "YXRmb3JtZGF0YXNldHMvYXBpdjFhbHBoYS9tYXBzcGxhdGZvcm1kYXRhc2V0",
-            "c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKqAihHb29nbGUuTWFwcy5NYXBz",
-            "UGxhdGZvcm1EYXRhc2V0cy5WMUFscGhhygIoR29vZ2xlXE1hcHNcTWFwc1Bs",
-            "YXRmb3JtRGF0YXNldHNcVjFhbHBoYWIGcHJvdG8z"));
+            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8ipgEKFENy",
+            "ZWF0ZURhdGFzZXRSZXF1ZXN0EkQKBnBhcmVudBgBIAEoCUI04kEBAvpBLQor",
+            "Y2xvdWRyZXNvdXJjZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBJI",
+            "CgdkYXRhc2V0GAIgASgLMjEuZ29vZ2xlLm1hcHMubWFwc3BsYXRmb3JtZGF0",
+            "YXNldHMudjFhbHBoYS5EYXRhc2V0QgTiQQECIpkBChxVcGRhdGVEYXRhc2V0",
+            "TWV0YWRhdGFSZXF1ZXN0EkgKB2RhdGFzZXQYASABKAsyMS5nb29nbGUubWFw",
+            "cy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MWFscGhhLkRhdGFzZXRCBOJBAQIS",
+            "LwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrIqEBChFHZXREYXRhc2V0UmVxdWVzdBJCCgRuYW1lGAEgASgJQjTiQQEC",
+            "+kEtCittYXBzcGxhdGZvcm1kYXRhc2V0cy5nb29nbGVhcGlzLmNvbS9EYXRh",
+            "c2V0EkgKD3B1Ymxpc2hlZF91c2FnZRgCIAEoDjIvLmdvb2dsZS5tYXBzLm1h",
+            "cHNwbGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGEuVXNhZ2UihwEKGkxpc3REYXRh",
+            "c2V0VmVyc2lvbnNSZXF1ZXN0EkIKBG5hbWUYASABKAlCNOJBAQL6QS0KK21h",
+            "cHNwbGF0Zm9ybWRhdGFzZXRzLmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSEQoJ",
+            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiewobTGlzdERh",
+            "dGFzZXRWZXJzaW9uc1Jlc3BvbnNlEkMKCGRhdGFzZXRzGAEgAygLMjEuZ29v",
+            "Z2xlLm1hcHMubWFwc3BsYXRmb3JtZGF0YXNldHMudjFhbHBoYS5EYXRhc2V0",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKCAQoTTGlzdERhdGFzZXRzUmVx",
+            "dWVzdBJECgZwYXJlbnQYASABKAlCNOJBAQL6QS0KK2Nsb3VkcmVzb3VyY2Vt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkidAoUTGlzdERhdGFzZXRzUmVzcG9u",
+            "c2USQwoIZGF0YXNldHMYASADKAsyMS5nb29nbGUubWFwcy5tYXBzcGxhdGZv",
+            "cm1kYXRhc2V0cy52MWFscGhhLkRhdGFzZXQSFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJImkKFERlbGV0ZURhdGFzZXRSZXF1ZXN0EkIKBG5hbWUYASABKAlC",
+            "NOJBAQL6QS0KK21hcHNwbGF0Zm9ybWRhdGFzZXRzLmdvb2dsZWFwaXMuY29t",
+            "L0RhdGFzZXQSDQoFZm9yY2UYAiABKAgiYQobRGVsZXRlRGF0YXNldFZlcnNp",
+            "b25SZXF1ZXN0EkIKBG5hbWUYASABKAlCNOJBAQL6QS0KK21hcHNwbGF0Zm9y",
+            "bWRhdGFzZXRzLmdvb2dsZWFwaXMuY29tL0RhdGFzZXRCiQIKLGNvbS5nb29n",
+            "bGUubWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MWFscGhhQhlNYXBzUGxh",
+            "dGZvcm1EYXRhc2V0c1Byb3RvUAFaZmNsb3VkLmdvb2dsZS5jb20vZ28vbWFw",
+            "cy9tYXBzcGxhdGZvcm1kYXRhc2V0cy9hcGl2MWFscGhhL21hcHNwbGF0Zm9y",
+            "bWRhdGFzZXRzcGI7bWFwc3BsYXRmb3JtZGF0YXNldHNwYqoCKEdvb2dsZS5N",
+            "YXBzLk1hcHNQbGF0Zm9ybURhdGFzZXRzLlYxQWxwaGHKAihHb29nbGVcTWFw",
+            "c1xNYXBzUGxhdGZvcm1EYXRhc2V0c1xWMWFscGhhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1Alpha.DatasetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,6 +84,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to create a maps dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDatasetRequest : pb::IMessage<CreateDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -329,6 +330,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to update the metadata fields of the dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDatasetMetadataRequest : pb::IMessage<UpdateDatasetMetadataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -585,6 +587,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to get the specified dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatasetRequest : pb::IMessage<GetDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -829,6 +832,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to list of all versions of the dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatasetVersionsRequest : pb::IMessage<ListDatasetVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1107,6 +1111,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Response with list of all versions of the dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatasetVersionsResponse : pb::IMessage<ListDatasetVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1332,6 +1337,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to list datasets for the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatasetsRequest : pb::IMessage<ListDatasetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1610,6 +1616,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Response to list datasets for the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatasetsResponse : pb::IMessage<ListDatasetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1837,6 +1844,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   ///
   /// The dataset to be deleted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDatasetRequest : pb::IMessage<DeleteDatasetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2073,6 +2081,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// Request to delete a version of a dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDatasetVersionRequest : pb::IMessage<DeleteDatasetVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

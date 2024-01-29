@@ -30,57 +30,57 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "cHJvdG8aLmdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9jdW1l",
             "bnQucHJvdG8aMWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTMvZG9j",
             "dW1lbnRfaW8ucHJvdG8aNWdvb2dsZS9jbG91ZC9kb2N1bWVudGFpL3YxYmV0",
-            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIuIHCgdEYXRhc2V0ElwKEmdjc19t",
+            "YTMvZG9jdW1lbnRfc2NoZW1hLnByb3RvIuoHCgdEYXRhc2V0El0KEmdjc19t",
             "YW5hZ2VkX2NvbmZpZxgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
-            "LnYxYmV0YTMuRGF0YXNldC5HQ1NNYW5hZ2VkQ29uZmlnQgPgQQFIABJqChlk",
-            "b2N1bWVudF93YXJlaG91c2VfY29uZmlnGAUgASgLMkAuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5EYXRhc2V0LkRvY3VtZW50V2FyZWhvdXNl",
-            "Q29uZmlnQgPgQQFIABJoChh1bm1hbmFnZWRfZGF0YXNldF9jb25maWcYBiAB",
-            "KAsyPy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRhdGFzZXQu",
-            "VW5tYW5hZ2VkRGF0YXNldENvbmZpZ0ID4EEBSAASZgoXc3Bhbm5lcl9pbmRl",
-            "eGluZ19jb25maWcYBCABKAsyPi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MWJldGEzLkRhdGFzZXQuU3Bhbm5lckluZGV4aW5nQ29uZmlnQgPgQQFIARIM",
-            "CgRuYW1lGAEgASgJEkIKBXN0YXRlGAIgASgOMi4uZ29vZ2xlLmNsb3VkLmRv",
-            "Y3VtZW50YWkudjFiZXRhMy5EYXRhc2V0LlN0YXRlQgPgQQIaVwoQR0NTTWFu",
-            "YWdlZENvbmZpZxJDCgpnY3NfcHJlZml4GAEgASgLMiouZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5HY3NQcmVmaXhCA+BBAhpyChdEb2N1bWVu",
-            "dFdhcmVob3VzZUNvbmZpZxIXCgpjb2xsZWN0aW9uGAEgASgJQgPgQQMSPgoG",
-            "c2NoZW1hGAIgASgJQi7gQQP6QSgKJmNvbnRlbnR3YXJlaG91c2UuZ29vZ2xl",
-            "YXBpcy5jb20vU2NoZW1hGhgKFlVubWFuYWdlZERhdGFzZXRDb25maWcaFwoV",
-            "U3Bhbm5lckluZGV4aW5nQ29uZmlnIlQKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASEQoNVU5JTklUSUFMSVpFRBABEhAKDElOSVRJQUxJWklORxAC",
-            "Eg8KC0lOSVRJQUxJWkVEEAM6bupBawohZG9jdW1lbnRhaS5nb29nbGVhcGlz",
-            "LmNvbS9EYXRhc2V0EkZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcHJvY2Vzc29ycy97cHJvY2Vzc29yfS9kYXRhc2V0QhAKDnN0",
-            "b3JhZ2Vfc291cmNlQhEKD2luZGV4aW5nX3NvdXJjZSKGAwoKRG9jdW1lbnRJ",
-            "ZBJeChJnY3NfbWFuYWdlZF9kb2NfaWQYASABKAsyQC5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWQuR0NTTWFuYWdlZERvY3Vt",
-            "ZW50SWRIABJbChB1bm1hbmFnZWRfZG9jX2lkGAQgASgLMj8uZ29vZ2xlLmNs",
-            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudElkLlVubWFuYWdlZERv",
-            "Y3VtZW50SWRIABJCCgxyZXZpc2lvbl9yZWYYAyABKAsyLC5nb29nbGUuY2xv",
-            "dWQuZG9jdW1lbnRhaS52MWJldGEzLlJldmlzaW9uUmVmGkMKFEdDU01hbmFn",
-            "ZWREb2N1bWVudElkEhQKB2djc191cmkYASABKAlCA+BBAhIVCgljd19kb2Nf",
-            "aWQYAiABKAlCAhgBGioKE1VubWFuYWdlZERvY3VtZW50SWQSEwoGZG9jX2lk",
-            "GAEgASgJQgPgQQJCBgoEdHlwZSLxAQoNRGF0YXNldFNjaGVtYRIMCgRuYW1l",
-            "GAEgASgJEk0KD2RvY3VtZW50X3NjaGVtYRgDIAEoCzIvLmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWFCA+BBATqCAepB",
-            "fwonZG9jdW1lbnRhaS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0U2NoZW1hElRw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vz",
-            "c29ycy97cHJvY2Vzc29yfS9kYXRhc2V0L2RhdGFzZXRTY2hlbWEihwIKFUJh",
-            "dGNoRGF0YXNldERvY3VtZW50cxJvChdpbmRpdmlkdWFsX2RvY3VtZW50X2lk",
-            "cxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuQmF0",
-            "Y2hEYXRhc2V0RG9jdW1lbnRzLkluZGl2aWR1YWxEb2N1bWVudElkc0gAEhAK",
-            "BmZpbHRlchgCIAEoCUgAGl8KFUluZGl2aWR1YWxEb2N1bWVudElkcxJGCgxk",
-            "b2N1bWVudF9pZHMYASADKAsyKy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
-            "MWJldGEzLkRvY3VtZW50SWRCA+BBAkIKCghjcml0ZXJpYULIAgojY29tLmdv",
-            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCDERhdGFzZXRQcm90b1AB",
-            "WkNjbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9k",
-            "b2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3Vt",
-            "ZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0",
-            "YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJldGEz6kFiCiZj",
-            "b250ZW50d2FyZWhvdXNlLmdvb2dsZWFwaXMuY29tL1NjaGVtYRI4cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NjaGVtYXMve3Nj",
-            "aGVtYX1iBnByb3RvMw=="));
+            "LnYxYmV0YTMuRGF0YXNldC5HQ1NNYW5hZ2VkQ29uZmlnQgTiQQEBSAASawoZ",
+            "ZG9jdW1lbnRfd2FyZWhvdXNlX2NvbmZpZxgFIAEoCzJALmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRGF0YXNldC5Eb2N1bWVudFdhcmVob3Vz",
+            "ZUNvbmZpZ0IE4kEBAUgAEmkKGHVubWFuYWdlZF9kYXRhc2V0X2NvbmZpZxgG",
+            "IAEoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRGF0YXNl",
+            "dC5Vbm1hbmFnZWREYXRhc2V0Q29uZmlnQgTiQQEBSAASZwoXc3Bhbm5lcl9p",
+            "bmRleGluZ19jb25maWcYBCABKAsyPi5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkRhdGFzZXQuU3Bhbm5lckluZGV4aW5nQ29uZmlnQgTiQQEB",
+            "SAESDAoEbmFtZRgBIAEoCRJDCgVzdGF0ZRgCIAEoDjIuLmdvb2dsZS5jbG91",
+            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRGF0YXNldC5TdGF0ZUIE4kEBAhpYChBH",
+            "Q1NNYW5hZ2VkQ29uZmlnEkQKCmdjc19wcmVmaXgYASABKAsyKi5nb29nbGUu",
+            "Y2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkdjc1ByZWZpeEIE4kEBAhp0ChdE",
+            "b2N1bWVudFdhcmVob3VzZUNvbmZpZxIYCgpjb2xsZWN0aW9uGAEgASgJQgTi",
+            "QQEDEj8KBnNjaGVtYRgCIAEoCUIv4kEBA/pBKAomY29udGVudHdhcmVob3Vz",
+            "ZS5nb29nbGVhcGlzLmNvbS9TY2hlbWEaGAoWVW5tYW5hZ2VkRGF0YXNldENv",
+            "bmZpZxoXChVTcGFubmVySW5kZXhpbmdDb25maWciVAoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIRCg1VTklOSVRJQUxJWkVEEAESEAoMSU5JVElB",
+            "TElaSU5HEAISDwoLSU5JVElBTElaRUQQAzpu6kFrCiFkb2N1bWVudGFpLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFzZXQSRnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L2RhdGFz",
+            "ZXRCEAoOc3RvcmFnZV9zb3VyY2VCEQoPaW5kZXhpbmdfc291cmNlIogDCgpE",
+            "b2N1bWVudElkEl4KEmdjc19tYW5hZ2VkX2RvY19pZBgBIAEoCzJALmdvb2ds",
+            "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJZC5HQ1NNYW5h",
+            "Z2VkRG9jdW1lbnRJZEgAElsKEHVubWFuYWdlZF9kb2NfaWQYBCABKAsyPy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50SWQuVW5t",
+            "YW5hZ2VkRG9jdW1lbnRJZEgAEkIKDHJldmlzaW9uX3JlZhgDIAEoCzIsLmdv",
+            "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuUmV2aXNpb25SZWYaRAoU",
+            "R0NTTWFuYWdlZERvY3VtZW50SWQSFQoHZ2NzX3VyaRgBIAEoCUIE4kEBAhIV",
+            "Cgljd19kb2NfaWQYAiABKAlCAhgBGisKE1VubWFuYWdlZERvY3VtZW50SWQS",
+            "FAoGZG9jX2lkGAEgASgJQgTiQQECQgYKBHR5cGUi8gEKDURhdGFzZXRTY2hl",
+            "bWESDAoEbmFtZRgBIAEoCRJOCg9kb2N1bWVudF9zY2hlbWEYAyABKAsyLy5n",
+            "b29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2NoZW1h",
+            "QgTiQQEBOoIB6kF/Cidkb2N1bWVudGFpLmdvb2dsZWFwaXMuY29tL0RhdGFz",
+            "ZXRTY2hlbWESVHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9wcm9jZXNzb3JzL3twcm9jZXNzb3J9L2RhdGFzZXQvZGF0YXNldFNj",
+            "aGVtYSKIAgoVQmF0Y2hEYXRhc2V0RG9jdW1lbnRzEm8KF2luZGl2aWR1YWxf",
+            "ZG9jdW1lbnRfaWRzGAEgASgLMkwuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWku",
+            "djFiZXRhMy5CYXRjaERhdGFzZXREb2N1bWVudHMuSW5kaXZpZHVhbERvY3Vt",
+            "ZW50SWRzSAASEAoGZmlsdGVyGAIgASgJSAAaYAoVSW5kaXZpZHVhbERvY3Vt",
+            "ZW50SWRzEkcKDGRvY3VtZW50X2lkcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRJZEIE4kEBAkIKCghjcml0ZXJp",
+            "YULIAgojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTNCDERh",
+            "dGFzZXRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkv",
+            "YXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29vZ2xl",
+            "LkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1",
+            "bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpW",
+            "MWJldGEz6kFiCiZjb250ZW50d2FyZWhvdXNlLmdvb2dsZWFwaXMuY29tL1Nj",
+            "aGVtYRI4cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L3NjaGVtYXMve3NjaGVtYX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentIoReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -103,6 +103,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// [Processor][google.cloud.documentai.v1beta3.Processor] which configures a
   /// collection of documents.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -649,6 +650,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Configuration specific to the Cloud Storage-based implementation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GCSManagedConfig : pb::IMessage<GCSManagedConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -854,6 +856,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Configuration specific to the Document AI Warehouse-based implementation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DocumentWarehouseConfig : pb::IMessage<DocumentWarehouseConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1091,6 +1094,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Configuration specific to an unmanaged dataset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UnmanagedDatasetConfig : pb::IMessage<UnmanagedDatasetConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1246,6 +1250,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Configuration specific to spanner-based indexing.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SpannerIndexingConfig : pb::IMessage<SpannerIndexingConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1406,6 +1411,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Document Identifier.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentId : pb::IMessage<DocumentId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1753,6 +1759,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// Identifies a document uniquely within the scope of a dataset in the
       /// user-managed Cloud Storage option.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GCSManagedDocumentId : pb::IMessage<GCSManagedDocumentId>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1990,6 +1997,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// Identifies a document uniquely within the scope of a dataset in unmanaged
       /// option.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UnmanagedDocumentId : pb::IMessage<UnmanagedDocumentId>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2190,6 +2198,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Dataset Schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetSchema : pb::IMessage<DatasetSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2436,6 +2445,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Dataset documents that the batch operation will be applied to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDatasetDocuments : pb::IMessage<BatchDatasetDocuments>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2736,6 +2746,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// List of individual DocumentIds.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IndividualDocumentIds : pb::IMessage<IndividualDocumentIds>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

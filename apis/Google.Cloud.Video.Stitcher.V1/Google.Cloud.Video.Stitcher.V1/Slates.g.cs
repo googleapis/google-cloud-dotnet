@@ -27,15 +27,15 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "Citnb29nbGUvY2xvdWQvdmlkZW8vc3RpdGNoZXIvdjEvc2xhdGVzLnByb3Rv",
             "Eh5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8ijQIKBVNsYXRlEhEKBG5hbWUYASABKAlCA+BBAxILCgN1cmkYAiABKAkS",
-            "QQoJZ2FtX3NsYXRlGAMgASgLMi4uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
-            "aGVyLnYxLlNsYXRlLkdhbVNsYXRlGkAKCEdhbVNsYXRlEhkKDG5ldHdvcmtf",
-            "Y29kZRgBIAEoCUID4EECEhkKDGdhbV9zbGF0ZV9pZBgCIAEoA0ID4EEDOl/q",
-            "QVwKInZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vU2xhdGUSNnByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zbGF0ZXMve3Ns",
-            "YXRlfUJzCiJjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxQgtT",
-            "bGF0ZXNQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0aXRj",
-            "aGVyL2FwaXYxL3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
+            "dG8ikAIKBVNsYXRlEhIKBG5hbWUYASABKAlCBOJBAQMSCwoDdXJpGAIgASgJ",
+            "EkEKCWdhbV9zbGF0ZRgDIAEoCzIuLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0",
+            "Y2hlci52MS5TbGF0ZS5HYW1TbGF0ZRpCCghHYW1TbGF0ZRIaCgxuZXR3b3Jr",
+            "X2NvZGUYASABKAlCBOJBAQISGgoMZ2FtX3NsYXRlX2lkGAIgASgDQgTiQQED",
+            "Ol/qQVwKInZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vU2xhdGUSNnBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zbGF0ZXMv",
+            "e3NsYXRlfUJzCiJjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYx",
+            "QgtTbGF0ZXNQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL3ZpZGVvL3N0",
+            "aXRjaGVyL2FwaXYxL3N0aXRjaGVycGI7c3RpdGNoZXJwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -49,6 +49,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Slate object
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Slate : pb::IMessage<Slate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -339,6 +340,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// GamSlate object has Google Ad Manager (GAM) related properties for the
       /// slate.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GamSlate : pb::IMessage<GamSlate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

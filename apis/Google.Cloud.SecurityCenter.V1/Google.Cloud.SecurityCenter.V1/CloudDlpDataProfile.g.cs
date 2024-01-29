@@ -56,6 +56,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// The [data profile](https://cloud.google.com/dlp/docs/data-profiles)
   /// associated with the finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudDlpDataProfile : pb::IMessage<CloudDlpDataProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
