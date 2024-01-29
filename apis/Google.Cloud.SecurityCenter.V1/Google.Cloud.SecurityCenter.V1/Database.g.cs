@@ -58,6 +58,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Cloud SQL databases). In these cases only the display name will be
   /// provided.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Database : pb::IMessage<Database>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

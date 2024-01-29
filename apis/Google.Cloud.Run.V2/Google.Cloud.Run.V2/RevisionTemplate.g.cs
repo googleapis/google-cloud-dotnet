@@ -63,6 +63,7 @@ namespace Google.Cloud.Run.V2 {
   /// RevisionTemplate describes the data a revision should have when created from
   /// a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RevisionTemplate : pb::IMessage<RevisionTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

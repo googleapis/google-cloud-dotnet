@@ -265,6 +265,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// example in image classification problem, each image might have one or more
   /// labels. We call labels binded with this image an Annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Annotation : pb::IMessage<Annotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -642,6 +643,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Annotation value for an example.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationValue : pb::IMessage<AnnotationValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1332,6 +1334,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Image classification annotation definition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageClassificationAnnotation : pb::IMessage<ImageClassificationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1537,6 +1540,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// A vertex represents a 2D point in the image.
   /// NOTE: the vertex coordinates are in the same scale as the original image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vertex : pb::IMessage<Vertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1774,6 +1778,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// NOTE: the normalized vertex coordinates are relative to the original image
   /// and range from 0 to 1.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2009,6 +2014,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// A bounding polygon in the image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2193,6 +2199,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Normalized bounding polygon.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedBoundingPoly : pb::IMessage<NormalizedBoundingPoly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2378,6 +2385,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Image bounding poly annotation. It represents a polygon including
   /// bounding box in the image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageBoundingPolyAnnotation : pb::IMessage<ImageBoundingPolyAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2715,6 +2723,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// A line with multiple line segments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Polyline : pb::IMessage<Polyline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2899,6 +2908,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Normalized polyline.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedPolyline : pb::IMessage<NormalizedPolyline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3083,6 +3093,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// A polyline for the image annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImagePolylineAnnotation : pb::IMessage<ImagePolylineAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3420,6 +3431,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Image segmentation annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageSegmentationAnnotation : pb::IMessage<ImageSegmentationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3686,6 +3698,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Text classification annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextClassificationAnnotation : pb::IMessage<TextClassificationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3890,6 +3903,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Text entity extraction annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextEntityExtractionAnnotation : pb::IMessage<TextEntityExtractionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4143,6 +4157,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Start and end position in a sequence (e.g. text segment).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SequentialSegment : pb::IMessage<SequentialSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4378,6 +4393,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// A time period inside of an example that has a time dimension (e.g. video).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSegment : pb::IMessage<TimeSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4633,6 +4649,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Video classification annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoClassificationAnnotation : pb::IMessage<VideoClassificationAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4886,6 +4903,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Video frame level annotation for object detection and tracking.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectTrackingFrame : pb::IMessage<ObjectTrackingFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5223,6 +5241,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Video object tracking annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoObjectTrackingAnnotation : pb::IMessage<VideoObjectTrackingAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5505,6 +5524,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Video event annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoEventAnnotation : pb::IMessage<VideoEventAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5758,6 +5778,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Additional information associated with the annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotationMetadata : pb::IMessage<AnnotationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5962,6 +5983,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// General information useful for labels coming from contributors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperatorMetadata : pb::IMessage<OperatorMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -57,6 +57,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
   /// <summary>
   /// Metadata describing an operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

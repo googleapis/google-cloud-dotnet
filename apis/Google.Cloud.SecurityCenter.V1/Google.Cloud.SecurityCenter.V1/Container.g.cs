@@ -48,6 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Container associated with the finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Container : pb::IMessage<Container>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

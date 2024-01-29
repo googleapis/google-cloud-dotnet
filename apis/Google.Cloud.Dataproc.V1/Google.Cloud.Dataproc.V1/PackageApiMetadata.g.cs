@@ -77,6 +77,8 @@ namespace Google.Cloud.Dataproc.V1
             yield return JobsReflection.Descriptor;
             yield return NodeGroupsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return SessionTemplatesReflection.Descriptor;
+            yield return SessionsReflection.Descriptor;
             yield return SharedReflection.Descriptor;
             yield return WorkflowTemplatesReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;

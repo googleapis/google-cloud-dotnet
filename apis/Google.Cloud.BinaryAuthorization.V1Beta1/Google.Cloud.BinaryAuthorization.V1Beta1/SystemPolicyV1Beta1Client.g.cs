@@ -105,14 +105,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SystemPolicyV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return SystemPolicyV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SystemPolicyV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SystemPolicyV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return SystemPolicyV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

@@ -30,34 +30,34 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
             "aWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxox",
             "Z29vZ2xlL2Nsb3VkL3RleHR0b3NwZWVjaC92MWJldGExL2Nsb3VkX3R0cy5w",
             "cm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iqAIKGlN5bnRoZXNpemVM",
-            "b25nQXVkaW9SZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJFCgVpbnB1dBgCIAEo",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8irAIKGlN5bnRoZXNpemVM",
+            "b25nQXVkaW9SZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJGCgVpbnB1dBgCIAEo",
             "CzIxLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TeW50aGVz",
-            "aXNJbnB1dEID4EECEkkKDGF1ZGlvX2NvbmZpZxgDIAEoCzIuLmdvb2dsZS5j",
-            "bG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5BdWRpb0NvbmZpZ0ID4EECEhsK",
-            "Dm91dHB1dF9nY3NfdXJpGAQgASgJQgPgQQISSwoFdm9pY2UYBSABKAsyNy5n",
-            "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuVm9pY2VTZWxlY3Rp",
-            "b25QYXJhbXNCA+BBAiIdChtTeW50aGVzaXplTG9uZ0F1ZGlvUmVzcG9uc2Ui",
-            "pAEKG1N5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0YRIuCgpzdGFydF90aW1l",
-            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI4ChBsYXN0X3Vw",
-            "ZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIC",
-            "GAESGwoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgDIAEoATKzAwofVGV4dFRvU3Bl",
-            "ZWNoTG9uZ0F1ZGlvU3ludGhlc2l6ZRK+AgoTU3ludGhlc2l6ZUxvbmdBdWRp",
-            "bxI9Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFiZXRhMS5TeW50aGVz",
-            "aXplTG9uZ0F1ZGlvUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24iyAGC0+STAkEiPC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn06c3ludGhlc2l6ZUxvbmdBdWRpbzoBKspBfgo9Z29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGExLlN5bnRoZXNpemVMb25nQXVk",
-            "aW9SZXNwb25zZRI9Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MWJldGEx",
-            "LlN5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0YRpPykEbdGV4dHRvc3BlZWNo",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUKLAgolY29tLmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjFiZXRhMUIjVGV4dFRvU3BlZWNoTG9uZ0F1ZGlvU3ludGhl",
-            "c2lzUHJvdG9QAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gv",
-            "YXBpdjFiZXRhMS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9zcGVlY2hwYvgBAaoC",
-            "IUdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjFCZXRhMcoCIUdvb2dsZVxD",
-            "bG91ZFxUZXh0VG9TcGVlY2hcVjFiZXRhMeoCJEdvb2dsZTo6Q2xvdWQ6OlRl",
-            "eHRUb1NwZWVjaDo6VjFiZXRhMWIGcHJvdG8z"));
+            "aXNJbnB1dEIE4kEBAhJKCgxhdWRpb19jb25maWcYAyABKAsyLi5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuQXVkaW9Db25maWdCBOJBAQIS",
+            "HAoOb3V0cHV0X2djc191cmkYBCABKAlCBOJBAQISTAoFdm9pY2UYBSABKAsy",
+            "Ny5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuVm9pY2VTZWxl",
+            "Y3Rpb25QYXJhbXNCBOJBAQIiHQobU3ludGhlc2l6ZUxvbmdBdWRpb1Jlc3Bv",
+            "bnNlIqQBChtTeW50aGVzaXplTG9uZ0F1ZGlvTWV0YWRhdGESLgoKc3RhcnRf",
+            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOAoQbGFz",
+            "dF91cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCAhgBEhsKE3Byb2dyZXNzX3BlcmNlbnRhZ2UYAyABKAEyswMKH1RleHRU",
+            "b1NwZWVjaExvbmdBdWRpb1N5bnRoZXNpemUSvgIKE1N5bnRoZXNpemVMb25n",
+            "QXVkaW8SPS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuU3lu",
+            "dGhlc2l6ZUxvbmdBdWRpb1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uIsgBykF+Cj1nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
+            "YmV0YTEuU3ludGhlc2l6ZUxvbmdBdWRpb1Jlc3BvbnNlEj1nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxYmV0YTEuU3ludGhlc2l6ZUxvbmdBdWRpb01l",
+            "dGFkYXRhgtPkkwJBIjwvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9OnN5bnRoZXNpemVMb25nQXVkaW86ASoaT8pBG3RleHR0b3Nw",
+            "ZWVjaC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CiwIKJWNvbS5nb29nbGUuY2xvdWQu",
+            "dGV4dHRvc3BlZWNoLnYxYmV0YTFCI1RleHRUb1NwZWVjaExvbmdBdWRpb1N5",
+            "bnRoZXNpc1Byb3RvUAFaSWNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRvc3Bl",
+            "ZWNoL2FwaXYxYmV0YTEvdGV4dHRvc3BlZWNocGI7dGV4dHRvc3BlZWNocGL4",
+            "AQGqAiFHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYxQmV0YTHKAiFHb29n",
+            "bGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYxYmV0YTHqAiRHb29nbGU6OkNsb3Vk",
+            "OjpUZXh0VG9TcGVlY2g6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.TextToSpeech.V1Beta1.CloudTtsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -74,6 +74,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
   /// The top-level message sent by the client for the
   /// `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioRequest : pb::IMessage<SynthesizeLongAudioRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -460,6 +461,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
   /// <summary>
   /// The message returned to the client by the `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioResponse : pb::IMessage<SynthesizeLongAudioResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -615,6 +617,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
   /// <summary>
   /// Metadata for response returned by the `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioMetadata : pb::IMessage<SynthesizeLongAudioMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

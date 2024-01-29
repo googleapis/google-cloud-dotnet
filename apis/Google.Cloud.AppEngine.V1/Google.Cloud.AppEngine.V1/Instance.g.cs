@@ -27,30 +27,31 @@ namespace Google.Cloud.AppEngine.V1 {
             "CiJnb29nbGUvYXBwZW5naW5lL3YxL2luc3RhbmNlLnByb3RvEhNnb29nbGUu",
             "YXBwZW5naW5lLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvIs4GCghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSDwoCaWQYAiABKAlCA+BBAxIfChJhcHBfZW5naW5lX3JlbGVhc2UYAyAB",
-            "KAlCA+BBAxJFCgxhdmFpbGFiaWxpdHkYBCABKA4yKi5nb29nbGUuYXBwZW5n",
-            "aW5lLnYxLkluc3RhbmNlLkF2YWlsYWJpbGl0eUID4EEDEhQKB3ZtX25hbWUY",
-            "BSABKAlCA+BBAxIZCgx2bV96b25lX25hbWUYBiABKAlCA+BBAxISCgV2bV9p",
-            "ZBgHIAEoCUID4EEDEjMKCnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSFQoIcmVxdWVzdHMYCSABKAVCA+BBAxIT",
-            "CgZlcnJvcnMYCiABKAVCA+BBAxIQCgNxcHMYCyABKAJCA+BBAxIcCg9hdmVy",
-            "YWdlX2xhdGVuY3kYDCABKAVCA+BBAxIZCgxtZW1vcnlfdXNhZ2UYDSABKANC",
-            "A+BBAxIWCgl2bV9zdGF0dXMYDiABKAlCA+BBAxIdChB2bV9kZWJ1Z19lbmFi",
-            "bGVkGA8gASgIQgPgQQMSEgoFdm1faXAYECABKAlCA+BBAxJOCgt2bV9saXZl",
-            "bmVzcxgRIAEoDjI0Lmdvb2dsZS5hcHBlbmdpbmUudjEuSW5zdGFuY2UuTGl2",
-            "ZW5lc3MuTGl2ZW5lc3NTdGF0ZUID4EEDGn8KCExpdmVuZXNzInMKDUxpdmVu",
-            "ZXNzU3RhdGUSHgoaTElWRU5FU1NfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdV",
-            "TktOT1dOEAESCwoHSEVBTFRIWRACEg0KCVVOSEVBTFRIWRADEgwKCERSQUlO",
-            "SU5HEAQSCwoHVElNRU9VVBAFIjoKDEF2YWlsYWJpbGl0eRIPCgtVTlNQRUNJ",
-            "RklFRBAAEgwKCFJFU0lERU5UEAESCwoHRFlOQU1JQxACOm3qQWoKIWFwcGVu",
-            "Z2luZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRJFYXBwcy97YXBwfS9zZXJ2",
-            "aWNlcy97c2VydmljZX0vdmVyc2lvbnMve3ZlcnNpb259L2luc3RhbmNlcy97",
-            "aW5zdGFuY2V9Qr4BChdjb20uZ29vZ2xlLmFwcGVuZ2luZS52MUINSW5zdGFu",
-            "Y2VQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2FwcGVuZ2luZS9hcGl2",
-            "MS9hcHBlbmdpbmVwYjthcHBlbmdpbmVwYqoCGUdvb2dsZS5DbG91ZC5BcHBF",
-            "bmdpbmUuVjHKAhlHb29nbGVcQ2xvdWRcQXBwRW5naW5lXFYx6gIcR29vZ2xl",
-            "OjpDbG91ZDo6QXBwRW5naW5lOjpWMWIGcHJvdG8z"));
+            "dGltZXN0YW1wLnByb3RvIt8GCghJbnN0YW5jZRISCgRuYW1lGAEgASgJQgTi",
+            "QQEDEhAKAmlkGAIgASgJQgTiQQEDEiAKEmFwcF9lbmdpbmVfcmVsZWFzZRgD",
+            "IAEoCUIE4kEBAxJGCgxhdmFpbGFiaWxpdHkYBCABKA4yKi5nb29nbGUuYXBw",
+            "ZW5naW5lLnYxLkluc3RhbmNlLkF2YWlsYWJpbGl0eUIE4kEBAxIVCgd2bV9u",
+            "YW1lGAUgASgJQgTiQQEDEhoKDHZtX3pvbmVfbmFtZRgGIAEoCUIE4kEBAxIT",
+            "CgV2bV9pZBgHIAEoCUIE4kEBAxI0CgpzdGFydF90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIWCghyZXF1ZXN0cxgJIAEo",
+            "BUIE4kEBAxIUCgZlcnJvcnMYCiABKAVCBOJBAQMSEQoDcXBzGAsgASgCQgTi",
+            "QQEDEh0KD2F2ZXJhZ2VfbGF0ZW5jeRgMIAEoBUIE4kEBAxIaCgxtZW1vcnlf",
+            "dXNhZ2UYDSABKANCBOJBAQMSFwoJdm1fc3RhdHVzGA4gASgJQgTiQQEDEh4K",
+            "EHZtX2RlYnVnX2VuYWJsZWQYDyABKAhCBOJBAQMSEwoFdm1faXAYECABKAlC",
+            "BOJBAQMSTwoLdm1fbGl2ZW5lc3MYESABKA4yNC5nb29nbGUuYXBwZW5naW5l",
+            "LnYxLkluc3RhbmNlLkxpdmVuZXNzLkxpdmVuZXNzU3RhdGVCBOJBAQMafwoI",
+            "TGl2ZW5lc3MicwoNTGl2ZW5lc3NTdGF0ZRIeChpMSVZFTkVTU19TVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB1VOS05PV04QARILCgdIRUFMVEhZEAISDQoJVU5I",
+            "RUFMVEhZEAMSDAoIRFJBSU5JTkcQBBILCgdUSU1FT1VUEAUiOgoMQXZhaWxh",
+            "YmlsaXR5Eg8KC1VOU1BFQ0lGSUVEEAASDAoIUkVTSURFTlQQARILCgdEWU5B",
+            "TUlDEAI6bepBagohYXBwZW5naW5lLmdvb2dsZWFwaXMuY29tL0luc3RhbmNl",
+            "EkVhcHBzL3thcHB9L3NlcnZpY2VzL3tzZXJ2aWNlfS92ZXJzaW9ucy97dmVy",
+            "c2lvbn0vaW5zdGFuY2VzL3tpbnN0YW5jZX1CvgEKF2NvbS5nb29nbGUuYXBw",
+            "ZW5naW5lLnYxQg1JbnN0YW5jZVByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYXBwZW5naW5lL2FwaXYxL2FwcGVuZ2luZXBiO2FwcGVuZ2luZXBiqgIZ",
+            "R29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBF",
+            "bmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +66,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// An Instance resource is the computing unit that App Engine uses to
   /// automatically scale an application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -932,6 +934,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <summary>
       /// Wrapper for LivenessState enum.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Liveness : pb::IMessage<Liveness>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

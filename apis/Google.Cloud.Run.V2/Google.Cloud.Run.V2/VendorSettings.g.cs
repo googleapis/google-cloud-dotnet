@@ -127,6 +127,7 @@ namespace Google.Cloud.Run.V2 {
   /// VPC Access settings. For more information on sending traffic to a VPC
   /// network, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpcAccess : pb::IMessage<VpcAccess>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -418,6 +419,7 @@ namespace Google.Cloud.Run.V2 {
       /// <summary>
       /// Direct VPC egress settings.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NetworkInterface : pb::IMessage<NetworkInterface>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -695,6 +697,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Settings for Binary Authorization feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BinaryAuthorization : pb::IMessage<BinaryAuthorization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -978,6 +981,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Settings for revision-level scaling settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RevisionScaling : pb::IMessage<RevisionScaling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

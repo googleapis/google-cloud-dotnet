@@ -31,61 +31,61 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "bnMucHJvdG8aK2dvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9ldmVu",
             "dHMucHJvdG8aMWdvb2dsZS9jbG91ZC92aWRlby9zdGl0Y2hlci92MS9saXZl",
             "X2NvbmZpZ3MucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "byLrBQoKVm9kU2Vzc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSSQoNaW50ZXJz",
-            "dGl0aWFscxgCIAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52",
-            "MS5JbnRlcnN0aXRpYWxzQgPgQQMSFQoIcGxheV91cmkYBCABKAlCA+BBAxIX",
-            "Cgpzb3VyY2VfdXJpGAUgASgJQgPgQQISFwoKYWRfdGFnX3VyaRgGIAEoCUID",
-            "4EECElcKEGFkX3RhZ19tYWNyb19tYXAYByADKAsyPS5nb29nbGUuY2xvdWQu",
-            "dmlkZW8uc3RpdGNoZXIudjEuVm9kU2Vzc2lvbi5BZFRhZ01hY3JvTWFwRW50",
-            "cnkSSQoQbWFuaWZlc3Rfb3B0aW9ucxgJIAEoCzIvLmdvb2dsZS5jbG91ZC52",
-            "aWRlby5zdGl0Y2hlci52MS5NYW5pZmVzdE9wdGlvbnMSFQoIYXNzZXRfaWQY",
-            "CiABKAlCA+BBAxJECgthZF90cmFja2luZxgLIAEoDjIqLmdvb2dsZS5jbG91",
-            "ZC52aWRlby5zdGl0Y2hlci52MS5BZFRyYWNraW5nQgPgQQISTAoMZ2FtX3Nl",
-            "dHRpbmdzGA0gASgLMjYuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYx",
-            "LlZvZFNlc3Npb24uR2FtU2V0dGluZ3MaQAoLR2FtU2V0dGluZ3MSGQoMbmV0",
-            "d29ya19jb2RlGAEgASgJQgPgQQISFgoJc3RyZWFtX2lkGAIgASgJQgPgQQIa",
-            "NAoSQWRUYWdNYWNyb01hcEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAE6b+pBbAondmlkZW9zdGl0Y2hlci5nb29nbGVhcGlzLmNvbS9W",
-            "b2RTZXNzaW9uEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vdm9kU2Vzc2lvbnMve3ZvZF9zZXNzaW9ufSKhAQoNSW50ZXJzdGl0",
-            "aWFscxJECglhZF9icmVha3MYASADKAsyMS5nb29nbGUuY2xvdWQudmlkZW8u",
-            "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkQnJlYWsSSgoPc2Vzc2lvbl9jb250",
-            "ZW50GAIgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlZv",
-            "ZFNlc3Npb25Db250ZW50IsABCgxWb2RTZXNzaW9uQWQSKwoIZHVyYXRpb24Y",
-            "ASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SQwoNY29tcGFuaW9u",
-            "X2FkcxgCIAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5D",
-            "b21wYW5pb25BZHMSPgoPYWN0aXZpdHlfZXZlbnRzGAMgAygLMiUuZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkV2ZW50IkAKEVZvZFNlc3Npb25D",
-            "b250ZW50EisKCGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uIoACChFWb2RTZXNzaW9uQWRCcmVhaxJGCg9wcm9ncmVzc19ldmVu",
-            "dHMYASADKAsyLS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIudjEuUHJv",
-            "Z3Jlc3NFdmVudBI5CgNhZHMYAiADKAsyLC5nb29nbGUuY2xvdWQudmlkZW8u",
-            "c3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkEjIKD2VuZF90aW1lX29mZnNldBgD",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzdGFydF90aW1l",
-            "X29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiK7BAoL",
-            "TGl2ZVNlc3Npb24SEQoEbmFtZRgBIAEoCUID4EEDEhUKCHBsYXlfdXJpGAIg",
-            "ASgJQgPgQQMSUwoNYWRfdGFnX21hY3JvcxgGIAMoCzI8Lmdvb2dsZS5jbG91",
-            "ZC52aWRlby5zdGl0Y2hlci52MS5MaXZlU2Vzc2lvbi5BZFRhZ01hY3Jvc0Vu",
-            "dHJ5EkkKEG1hbmlmZXN0X29wdGlvbnMYCiABKAsyLy5nb29nbGUuY2xvdWQu",
-            "dmlkZW8uc3RpdGNoZXIudjEuTWFuaWZlc3RPcHRpb25zEk0KDGdhbV9zZXR0",
-            "aW5ncxgPIAEoCzI3Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5M",
-            "aXZlU2Vzc2lvbi5HYW1TZXR0aW5ncxJECgtsaXZlX2NvbmZpZxgQIAEoCUIv",
-            "4EEC+kEpCid2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMuY29tL0xpdmVDb25m",
-            "aWcaJQoLR2FtU2V0dGluZ3MSFgoJc3RyZWFtX2lkGAEgASgJQgPgQQIaMgoQ",
-            "QWRUYWdNYWNyb3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBOnLqQW8KKHZpZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vTGl2ZVNl",
-            "c3Npb24SQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9saXZlU2Vzc2lvbnMve2xpdmVfc2Vzc2lvbn0i/gEKD01hbmlmZXN0T3B0",
-            "aW9ucxJLChJpbmNsdWRlX3JlbmRpdGlvbnMYASADKAsyLy5nb29nbGUuY2xv",
-            "dWQudmlkZW8uc3RpdGNoZXIudjEuUmVuZGl0aW9uRmlsdGVyElIKDWJpdHJh",
-            "dGVfb3JkZXIYAiABKA4yOy5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIu",
-            "djEuTWFuaWZlc3RPcHRpb25zLk9yZGVyUG9saWN5IkoKC09yZGVyUG9saWN5",
-            "EhwKGE9SREVSX1BPTElDWV9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxAB",
-            "Eg4KCkRFU0NFTkRJTkcQAiI2Cg9SZW5kaXRpb25GaWx0ZXISEwoLYml0cmF0",
-            "ZV9icHMYASABKAUSDgoGY29kZWNzGAIgASgJQnUKImNvbS5nb29nbGUuY2xv",
-            "dWQudmlkZW8uc3RpdGNoZXIudjFCDVNlc3Npb25zUHJvdG9QAVo+Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby92aWRlby9zdGl0Y2hlci9hcGl2MS9zdGl0Y2hlcnBi",
-            "O3N0aXRjaGVycGJiBnByb3RvMw=="));
+            "byL0BQoKVm9kU2Vzc2lvbhISCgRuYW1lGAEgASgJQgTiQQEDEkoKDWludGVy",
+            "c3RpdGlhbHMYAiABKAsyLS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNoZXIu",
+            "djEuSW50ZXJzdGl0aWFsc0IE4kEBAxIWCghwbGF5X3VyaRgEIAEoCUIE4kEB",
+            "AxIYCgpzb3VyY2VfdXJpGAUgASgJQgTiQQECEhgKCmFkX3RhZ191cmkYBiAB",
+            "KAlCBOJBAQISVwoQYWRfdGFnX21hY3JvX21hcBgHIAMoCzI9Lmdvb2dsZS5j",
+            "bG91ZC52aWRlby5zdGl0Y2hlci52MS5Wb2RTZXNzaW9uLkFkVGFnTWFjcm9N",
+            "YXBFbnRyeRJJChBtYW5pZmVzdF9vcHRpb25zGAkgASgLMi8uZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvLnN0aXRjaGVyLnYxLk1hbmlmZXN0T3B0aW9ucxIWCghhc3Nl",
+            "dF9pZBgKIAEoCUIE4kEBAxJFCgthZF90cmFja2luZxgLIAEoDjIqLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5BZFRyYWNraW5nQgTiQQECEkwK",
+            "DGdhbV9zZXR0aW5ncxgNIAEoCzI2Lmdvb2dsZS5jbG91ZC52aWRlby5zdGl0",
+            "Y2hlci52MS5Wb2RTZXNzaW9uLkdhbVNldHRpbmdzGkIKC0dhbVNldHRpbmdz",
+            "EhoKDG5ldHdvcmtfY29kZRgBIAEoCUIE4kEBAhIXCglzdHJlYW1faWQYAiAB",
+            "KAlCBOJBAQIaNAoSQWRUYWdNYWNyb01hcEVudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAE6b+pBbAondmlkZW9zdGl0Y2hlci5nb29nbGVh",
+            "cGlzLmNvbS9Wb2RTZXNzaW9uEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vdm9kU2Vzc2lvbnMve3ZvZF9zZXNzaW9ufSKhAQoN",
+            "SW50ZXJzdGl0aWFscxJECglhZF9icmVha3MYASADKAsyMS5nb29nbGUuY2xv",
+            "dWQudmlkZW8uc3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkQnJlYWsSSgoPc2Vz",
+            "c2lvbl9jb250ZW50GAIgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRj",
+            "aGVyLnYxLlZvZFNlc3Npb25Db250ZW50IsABCgxWb2RTZXNzaW9uQWQSKwoI",
+            "ZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SQwoN",
+            "Y29tcGFuaW9uX2FkcxgCIAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0",
+            "Y2hlci52MS5Db21wYW5pb25BZHMSPgoPYWN0aXZpdHlfZXZlbnRzGAMgAygL",
+            "MiUuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkV2ZW50IkAKEVZv",
+            "ZFNlc3Npb25Db250ZW50EisKCGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uIoACChFWb2RTZXNzaW9uQWRCcmVhaxJGCg9wcm9n",
+            "cmVzc19ldmVudHMYASADKAsyLS5nb29nbGUuY2xvdWQudmlkZW8uc3RpdGNo",
+            "ZXIudjEuUHJvZ3Jlc3NFdmVudBI5CgNhZHMYAiADKAsyLC5nb29nbGUuY2xv",
+            "dWQudmlkZW8uc3RpdGNoZXIudjEuVm9kU2Vzc2lvbkFkEjIKD2VuZF90aW1l",
+            "X29mZnNldBgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFz",
+            "dGFydF90aW1lX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbiK/BAoLTGl2ZVNlc3Npb24SEgoEbmFtZRgBIAEoCUIE4kEBAxIWCghw",
+            "bGF5X3VyaRgCIAEoCUIE4kEBAxJTCg1hZF90YWdfbWFjcm9zGAYgAygLMjwu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLkxpdmVTZXNzaW9uLkFk",
+            "VGFnTWFjcm9zRW50cnkSSQoQbWFuaWZlc3Rfb3B0aW9ucxgKIAEoCzIvLmdv",
+            "b2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MS5NYW5pZmVzdE9wdGlvbnMS",
+            "TQoMZ2FtX3NldHRpbmdzGA8gASgLMjcuZ29vZ2xlLmNsb3VkLnZpZGVvLnN0",
+            "aXRjaGVyLnYxLkxpdmVTZXNzaW9uLkdhbVNldHRpbmdzEkUKC2xpdmVfY29u",
+            "ZmlnGBAgASgJQjDiQQEC+kEpCid2aWRlb3N0aXRjaGVyLmdvb2dsZWFwaXMu",
+            "Y29tL0xpdmVDb25maWcaJgoLR2FtU2V0dGluZ3MSFwoJc3RyZWFtX2lkGAEg",
+            "ASgJQgTiQQECGjIKEEFkVGFnTWFjcm9zRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATpy6kFvCih2aWRlb3N0aXRjaGVyLmdvb2dsZWFw",
+            "aXMuY29tL0xpdmVTZXNzaW9uEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vbGl2ZVNlc3Npb25zL3tsaXZlX3Nlc3Npb259Iv4B",
+            "Cg9NYW5pZmVzdE9wdGlvbnMSSwoSaW5jbHVkZV9yZW5kaXRpb25zGAEgAygL",
+            "Mi8uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxLlJlbmRpdGlvbkZp",
+            "bHRlchJSCg1iaXRyYXRlX29yZGVyGAIgASgOMjsuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvLnN0aXRjaGVyLnYxLk1hbmlmZXN0T3B0aW9ucy5PcmRlclBvbGljeSJK",
+            "CgtPcmRlclBvbGljeRIcChhPUkRFUl9QT0xJQ1lfVU5TUEVDSUZJRUQQABIN",
+            "CglBU0NFTkRJTkcQARIOCgpERVNDRU5ESU5HEAIiNgoPUmVuZGl0aW9uRmls",
+            "dGVyEhMKC2JpdHJhdGVfYnBzGAEgASgFEg4KBmNvZGVjcxgCIAEoCUJ1CiJj",
+            "b20uZ29vZ2xlLmNsb3VkLnZpZGVvLnN0aXRjaGVyLnYxQg1TZXNzaW9uc1By",
+            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3RpdGNoZXIvYXBp",
+            "djEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.CompanionsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.EventsReflection.Descriptor, global::Google.Cloud.Video.Stitcher.V1.LiveConfigsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -108,6 +108,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for a VOD session. The session expires 4 hours after its creation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodSession : pb::IMessage<VodSession>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -696,6 +697,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// Defines fields related to Google Ad Manager (GAM). This should be set if
       /// GAM is being used for ads.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GamSettings : pb::IMessage<GamSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -936,6 +938,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Describes what was stitched into a VOD session's manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Interstitials : pb::IMessage<Interstitials>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1169,6 +1172,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for an inserted ad in a VOD session.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodSessionAd : pb::IMessage<VodSessionAd>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1455,6 +1459,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for the entire stitched content in a VOD session.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodSessionContent : pb::IMessage<VodSessionContent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1660,6 +1665,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for an inserted ad break.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodSessionAdBreak : pb::IMessage<VodSessionAdBreak>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1972,6 +1978,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// Metadata for a live session. The session expires 5 minutes after the client
   /// stops fetching the session's playlists.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LiveSession : pb::IMessage<LiveSession>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2393,6 +2400,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// Defines fields related to Google Ad Manager (GAM). This should be set if
       /// GAM is being used for ads.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GamSettings : pb::IMessage<GamSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2593,6 +2601,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Options for manifest generation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManifestOptions : pb::IMessage<ManifestOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2845,6 +2854,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Filters for a video or muxed redition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RenditionFilter : pb::IMessage<RenditionFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

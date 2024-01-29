@@ -54,6 +54,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// Defines a warning trace message for ScanRun. Warning traces provide customers
   /// with useful information that helps make the scanning process more effective.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanRunWarningTrace : pb::IMessage<ScanRunWarningTrace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

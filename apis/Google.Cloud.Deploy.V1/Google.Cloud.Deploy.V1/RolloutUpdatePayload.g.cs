@@ -56,6 +56,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Payload proto for "clouddeploy.googleapis.com/rollout_update"
   /// Platform Log event that describes the rollout update event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RolloutUpdateEvent : pb::IMessage<RolloutUpdateEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -29,42 +29,43 @@ namespace Google.Cloud.Monitoring.V3 {
             "cHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "GiFnb29nbGUvbW9uaXRvcmluZy92My9zbm9vemUucHJvdG8aIGdvb2dsZS9w",
-            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIoIBChNDcmVhdGVTbm9vemVSZXF1",
-            "ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBtb25pdG9yaW5nLmdvb2ds",
-            "ZWFwaXMuY29tL1Nub296ZRIxCgZzbm9vemUYAiABKAsyHC5nb29nbGUubW9u",
-            "aXRvcmluZy52My5Tbm9vemVCA+BBAiKUAQoSTGlzdFNub296ZXNSZXF1ZXN0",
-            "EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBtb25pdG9yaW5nLmdvb2dsZWFw",
-            "aXMuY29tL1Nub296ZRITCgZmaWx0ZXIYAiABKAlCA+BBARIWCglwYWdlX3Np",
-            "emUYBCABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAUgASgJQgPgQQEiXQoTTGlz",
-            "dFNub296ZXNSZXNwb25zZRItCgdzbm9vemVzGAEgAygLMhwuZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjMuU25vb3plEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJK",
-            "ChBHZXRTbm9vemVSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogbW9u",
-            "aXRvcmluZy5nb29nbGVhcGlzLmNvbS9Tbm9vemUifgoTVXBkYXRlU25vb3pl",
-            "UmVxdWVzdBIxCgZzbm9vemUYASABKAsyHC5nb29nbGUubW9uaXRvcmluZy52",
-            "My5Tbm9vemVCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBAjKYBgoNU25vb3plU2VydmljZRKYAQoM",
-            "Q3JlYXRlU25vb3plEikuZ29vZ2xlLm1vbml0b3JpbmcudjMuQ3JlYXRlU25v",
-            "b3plUmVxdWVzdBocLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSI/gtPk",
-            "kwIpIh8vdjMve3BhcmVudD1wcm9qZWN0cy8qfS9zbm9vemVzOgZzbm9vemXa",
-            "QQ1wYXJlbnQsc25vb3plEpQBCgtMaXN0U25vb3plcxIoLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLkxpc3RTbm9vemVzUmVxdWVzdBopLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkxpc3RTbm9vemVzUmVzcG9uc2UiMILT5JMCIRIfL3YzL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vc25vb3plc9pBBnBhcmVudBKBAQoJR2V0U25vb3pl",
-            "EiYuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0U25vb3plUmVxdWVzdBocLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSIugtPkkwIhEh8vdjMve25hbWU9",
-            "cHJvamVjdHMvKi9zbm9vemVzLyp92kEEbmFtZRKkAQoMVXBkYXRlU25vb3pl",
-            "EikuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXBkYXRlU25vb3plUmVxdWVzdBoc",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSJLgtPkkwIwMiYvdjMve3Nu",
-            "b296ZS5uYW1lPXByb2plY3RzLyovc25vb3plcy8qfToGc25vb3pl2kESc25v",
-            "b3plLHVwZGF0ZV9tYXNrGqkBykEZbW9uaXRvcmluZy5nb29nbGVhcGlzLmNv",
-            "bdJBiQFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRv",
-            "cmluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3Jp",
-            "bmcucmVhZELNAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJTbm9vemVT",
-            "ZXJ2aWNlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9tb25pdG9yaW5n",
-            "L2FwaXYzL3YyL21vbml0b3JpbmdwYjttb25pdG9yaW5ncGKqAhpHb29nbGUu",
-            "Q2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5n",
-            "XFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIoQBChNDcmVhdGVTbm9vemVSZXF1",
+            "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4kEBAvpBIhIgbW9uaXRvcmluZy5nb29n",
+            "bGVhcGlzLmNvbS9Tbm9vemUSMgoGc25vb3plGAIgASgLMhwuZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuU25vb3plQgTiQQECIpgBChJMaXN0U25vb3plc1JlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQiniQQEC+kEiEiBtb25pdG9yaW5nLmdvb2ds",
+            "ZWFwaXMuY29tL1Nub296ZRIUCgZmaWx0ZXIYAiABKAlCBOJBAQESFwoJcGFn",
+            "ZV9zaXplGAQgASgFQgTiQQEBEhgKCnBhZ2VfdG9rZW4YBSABKAlCBOJBAQEi",
+            "XQoTTGlzdFNub296ZXNSZXNwb25zZRItCgdzbm9vemVzGAEgAygLMhwuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuU25vb3plEhcKD25leHRfcGFnZV90b2tlbhgC",
+            "IAEoCSJLChBHZXRTbm9vemVSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeJBAQL6",
+            "QSIKIG1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vU25vb3plIoABChNVcGRh",
+            "dGVTbm9vemVSZXF1ZXN0EjIKBnNub296ZRgBIAEoCzIcLmdvb2dsZS5tb25p",
+            "dG9yaW5nLnYzLlNub296ZUIE4kEBAhI1Cgt1cGRhdGVfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIymAYKDVNub296ZVNl",
+            "cnZpY2USmAEKDENyZWF0ZVNub296ZRIpLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "LkNyZWF0ZVNub296ZVJlcXVlc3QaHC5nb29nbGUubW9uaXRvcmluZy52My5T",
+            "bm9vemUiP9pBDXBhcmVudCxzbm9vemWC0+STAikiHy92My97cGFyZW50PXBy",
+            "b2plY3RzLyp9L3Nub296ZXM6BnNub296ZRKUAQoLTGlzdFNub296ZXMSKC5n",
+            "b29nbGUubW9uaXRvcmluZy52My5MaXN0U25vb3plc1JlcXVlc3QaKS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5MaXN0U25vb3plc1Jlc3BvbnNlIjDaQQZwYXJl",
+            "bnSC0+STAiESHy92My97cGFyZW50PXByb2plY3RzLyp9L3Nub296ZXMSgQEK",
+            "CUdldFNub296ZRImLmdvb2dsZS5tb25pdG9yaW5nLnYzLkdldFNub296ZVJl",
+            "cXVlc3QaHC5nb29nbGUubW9uaXRvcmluZy52My5Tbm9vemUiLtpBBG5hbWWC",
+            "0+STAiESHy92My97bmFtZT1wcm9qZWN0cy8qL3Nub296ZXMvKn0SpAEKDFVw",
+            "ZGF0ZVNub296ZRIpLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwZGF0ZVNub296",
+            "ZVJlcXVlc3QaHC5nb29nbGUubW9uaXRvcmluZy52My5Tbm9vemUiS9pBEnNu",
+            "b296ZSx1cGRhdGVfbWFza4LT5JMCMDImL3YzL3tzbm9vemUubmFtZT1wcm9q",
+            "ZWN0cy8qL3Nub296ZXMvKn06BnNub296ZRqpAcpBGW1vbml0b3JpbmcuZ29v",
+            "Z2xlYXBpcy5jb23SQYkBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL21vbml0b3JpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9tb25pdG9yaW5nLnJlYWRCzQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52",
+            "M0ISU25vb3plU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "bW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRvcmluZ3Bi",
+            "qgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRc",
+            "TW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYz",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.SnoozeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,6 +84,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for creating a `Snooze`. Users must provide the body
   /// of the `Snooze` to be created but must omit the `Snooze` field, `name`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSnoozeRequest : pb::IMessage<CreateSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +335,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for listing `Snooze`s associated with the given
   /// `parent`, satisfying the optional `filter`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnoozesRequest : pb::IMessage<ListSnoozesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -669,6 +672,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The results of a successful `ListSnoozes` call, containing the matching
   /// `Snooze`s.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnoozesResponse : pb::IMessage<ListSnoozesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -895,6 +899,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for retrieving a `Snooze`. Users must specify the
   /// field, `name`, which identifies the `Snooze`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSnoozeRequest : pb::IMessage<GetSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1104,6 +1109,7 @@ namespace Google.Cloud.Monitoring.V3 {
   ///   * start time is in the future: `display_name`, `interval.start_time` and
   ///     `interval.end_time` can be updated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSnoozeRequest : pb::IMessage<UpdateSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

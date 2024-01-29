@@ -76,6 +76,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Defines a status condition for a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Condition : pb::IMessage<Condition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

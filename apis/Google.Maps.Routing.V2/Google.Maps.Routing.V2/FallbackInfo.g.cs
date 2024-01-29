@@ -99,6 +99,7 @@ namespace Google.Maps.Routing.V2 {
   /// is set, then it means the server used a different routing mode from your
   /// preferred mode as fallback.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FallbackInfo : pb::IMessage<FallbackInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

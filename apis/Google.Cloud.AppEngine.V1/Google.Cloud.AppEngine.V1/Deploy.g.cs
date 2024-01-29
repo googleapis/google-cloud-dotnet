@@ -61,6 +61,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Code and application artifacts used to deploy a version to App Engine.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Deployment : pb::IMessage<Deployment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -400,6 +401,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Single source file that is part of the version to be deployed. Each source
   /// file that is deployed must be specified separately.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileInfo : pb::IMessage<FileInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -681,6 +683,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// the version that you deploy. Only applicable for instances running in the App
   /// Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerInfo : pb::IMessage<ContainerInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -880,6 +883,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// deployment. Only applicable for App Engine flexible environment when creating
   /// a version using source code directly.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudBuildOptions : pb::IMessage<CloudBuildOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1131,6 +1135,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// The zip file information for a zip deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ZipInfo : pb::IMessage<ZipInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

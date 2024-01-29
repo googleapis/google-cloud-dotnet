@@ -29,58 +29,59 @@ namespace Google.Cloud.DataCatalog.V1 {
             "Zy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2Fw",
             "aS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
             "dG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aMmdvb2dsZS9jbG91ZC9k",
-            "YXRhY2F0YWxvZy92MS9wb2xpY3l0YWdtYW5hZ2VyLnByb3RvIt0BChJTZXJp",
-            "YWxpemVkVGF4b25vbXkSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISEwoL",
-            "ZGVzY3JpcHRpb24YAiABKAkSRQoLcG9saWN5X3RhZ3MYAyADKAsyMC5nb29n",
-            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU2VyaWFsaXplZFBvbGljeVRhZxJQ",
-            "ChZhY3RpdmF0ZWRfcG9saWN5X3R5cGVzGAQgAygOMjAuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLnYxLlRheG9ub215LlBvbGljeVR5cGUipgEKE1Nlcmlh",
-            "bGl6ZWRQb2xpY3lUYWcSEgoKcG9saWN5X3RhZxgBIAEoCRIZCgxkaXNwbGF5",
-            "X25hbWUYAiABKAlCA+BBAhITCgtkZXNjcmlwdGlvbhgDIAEoCRJLChFjaGls",
-            "ZF9wb2xpY3lfdGFncxgEIAMoCzIwLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy52MS5TZXJpYWxpemVkUG9saWN5VGFnIqYBChZSZXBsYWNlVGF4b25vbXlS",
-            "ZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZGF0YWNhdGFsb2cuZ29v",
-            "Z2xlYXBpcy5jb20vVGF4b25vbXkSUQoTc2VyaWFsaXplZF90YXhvbm9teRgC",
-            "IAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZXJpYWxpemVk",
-            "VGF4b25vbXlCA+BBAiL3AQoXSW1wb3J0VGF4b25vbWllc1JlcXVlc3QSOwoG",
-            "cGFyZW50GAEgASgJQivgQQL6QSUSI2RhdGFjYXRhbG9nLmdvb2dsZWFwaXMu",
-            "Y29tL1RheG9ub215EkIKDWlubGluZV9zb3VyY2UYAiABKAsyKS5nb29nbGUu",
-            "Y2xvdWQuZGF0YWNhdGFsb2cudjEuSW5saW5lU291cmNlSAASUQoVY3Jvc3Nf",
-            "cmVnaW9uYWxfc291cmNlGAMgASgLMjAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
-            "bG9nLnYxLkNyb3NzUmVnaW9uYWxTb3VyY2VIAEIICgZzb3VyY2UiWAoMSW5s",
-            "aW5lU291cmNlEkgKCnRheG9ub21pZXMYASADKAsyLy5nb29nbGUuY2xvdWQu",
-            "ZGF0YWNhdGFsb2cudjEuU2VyaWFsaXplZFRheG9ub215QgPgQQIiVAoTQ3Jv",
-            "c3NSZWdpb25hbFNvdXJjZRI9Cgh0YXhvbm9teRgBIAEoCUIr4EEC+kElCiNk",
-            "YXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYXhvbm9teSJVChhJbXBvcnRU",
-            "YXhvbm9taWVzUmVzcG9uc2USOQoKdGF4b25vbWllcxgBIAMoCzIlLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYXhvbm9teSLHAQoXRXhwb3J0VGF4",
-            "b25vbWllc1JlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI2RhdGFj",
-            "YXRhbG9nLmdvb2dsZWFwaXMuY29tL1RheG9ub215Ej8KCnRheG9ub21pZXMY",
-            "AiADKAlCK+BBAvpBJQojZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGF4",
-            "b25vbXkSHwoVc2VyaWFsaXplZF90YXhvbm9taWVzGAMgASgISABCDQoLZGVz",
-            "dGluYXRpb24iXwoYRXhwb3J0VGF4b25vbWllc1Jlc3BvbnNlEkMKCnRheG9u",
-            "b21pZXMYASADKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU2Vy",
-            "aWFsaXplZFRheG9ub215MqcFCh1Qb2xpY3lUYWdNYW5hZ2VyU2VyaWFsaXph",
-            "dGlvbhKwAQoPUmVwbGFjZVRheG9ub215EjMuZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLlJlcGxhY2VUYXhvbm9teVJlcXVlc3QaJS5nb29nbGUuY2xv",
-            "dWQuZGF0YWNhdGFsb2cudjEuVGF4b25vbXkiQYLT5JMCOyI2L3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWllcy8qfTpyZXBsYWNl",
-            "OgEqEsEBChBJbXBvcnRUYXhvbm9taWVzEjQuZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLkltcG9ydFRheG9ub21pZXNSZXF1ZXN0GjUuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLkltcG9ydFRheG9ub21pZXNSZXNwb25zZSJA",
-            "gtPkkwI6IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS90",
-            "YXhvbm9taWVzOmltcG9ydDoBKhK+AQoQRXhwb3J0VGF4b25vbWllcxI0Lmdv",
-            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FeHBvcnRUYXhvbm9taWVzUmVx",
-            "dWVzdBo1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FeHBvcnRUYXhv",
-            "bm9taWVzUmVzcG9uc2UiPYLT5JMCNxI1L3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vdGF4b25vbWllczpleHBvcnQaTspBGmRhdGFjYXRh",
-            "bG9nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybULqAQofY29tLmdvb2dsZS5jbG91ZC5k",
-            "YXRhY2F0YWxvZy52MUIiUG9saWN5VGFnTWFuYWdlclNlcmlhbGl6YXRpb25Q",
-            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYx",
-            "L2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91",
-            "ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xW",
-            "MeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "YXRhY2F0YWxvZy92MS9wb2xpY3l0YWdtYW5hZ2VyLnByb3RvIt4BChJTZXJp",
+            "YWxpemVkVGF4b25vbXkSGgoMZGlzcGxheV9uYW1lGAEgASgJQgTiQQECEhMK",
+            "C2Rlc2NyaXB0aW9uGAIgASgJEkUKC3BvbGljeV90YWdzGAMgAygLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNlcmlhbGl6ZWRQb2xpY3lUYWcS",
+            "UAoWYWN0aXZhdGVkX3BvbGljeV90eXBlcxgEIAMoDjIwLmdvb2dsZS5jbG91",
+            "ZC5kYXRhY2F0YWxvZy52MS5UYXhvbm9teS5Qb2xpY3lUeXBlIqcBChNTZXJp",
+            "YWxpemVkUG9saWN5VGFnEhIKCnBvbGljeV90YWcYASABKAkSGgoMZGlzcGxh",
+            "eV9uYW1lGAIgASgJQgTiQQECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEksKEWNo",
+            "aWxkX3BvbGljeV90YWdzGAQgAygLMjAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLnYxLlNlcmlhbGl6ZWRQb2xpY3lUYWciqAEKFlJlcGxhY2VUYXhvbm9t",
+            "eVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4kEBAvpBJQojZGF0YWNhdGFsb2cu",
+            "Z29vZ2xlYXBpcy5jb20vVGF4b25vbXkSUgoTc2VyaWFsaXplZF90YXhvbm9t",
+            "eRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZXJpYWxp",
+            "emVkVGF4b25vbXlCBOJBAQIi+AEKF0ltcG9ydFRheG9ub21pZXNSZXF1ZXN0",
+            "EjwKBnBhcmVudBgBIAEoCUIs4kEBAvpBJRIjZGF0YWNhdGFsb2cuZ29vZ2xl",
+            "YXBpcy5jb20vVGF4b25vbXkSQgoNaW5saW5lX3NvdXJjZRgCIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbmxpbmVTb3VyY2VIABJRChVj",
+            "cm9zc19yZWdpb25hbF9zb3VyY2UYAyABKAsyMC5nb29nbGUuY2xvdWQuZGF0",
+            "YWNhdGFsb2cudjEuQ3Jvc3NSZWdpb25hbFNvdXJjZUgAQggKBnNvdXJjZSJZ",
+            "CgxJbmxpbmVTb3VyY2USSQoKdGF4b25vbWllcxgBIAMoCzIvLmdvb2dsZS5j",
+            "bG91ZC5kYXRhY2F0YWxvZy52MS5TZXJpYWxpemVkVGF4b25vbXlCBOJBAQIi",
+            "VQoTQ3Jvc3NSZWdpb25hbFNvdXJjZRI+Cgh0YXhvbm9teRgBIAEoCUIs4kEB",
+            "AvpBJQojZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGF4b25vbXkiVQoY",
+            "SW1wb3J0VGF4b25vbWllc1Jlc3BvbnNlEjkKCnRheG9ub21pZXMYASADKAsy",
+            "JS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGF4b25vbXkiyQEKF0V4",
+            "cG9ydFRheG9ub21pZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4kEBAvpB",
+            "JRIjZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vVGF4b25vbXkSQAoKdGF4",
+            "b25vbWllcxgCIAMoCUIs4kEBAvpBJQojZGF0YWNhdGFsb2cuZ29vZ2xlYXBp",
+            "cy5jb20vVGF4b25vbXkSHwoVc2VyaWFsaXplZF90YXhvbm9taWVzGAMgASgI",
+            "SABCDQoLZGVzdGluYXRpb24iXwoYRXhwb3J0VGF4b25vbWllc1Jlc3BvbnNl",
+            "EkMKCnRheG9ub21pZXMYASADKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
+            "b2cudjEuU2VyaWFsaXplZFRheG9ub215MqcFCh1Qb2xpY3lUYWdNYW5hZ2Vy",
+            "U2VyaWFsaXphdGlvbhKwAQoPUmVwbGFjZVRheG9ub215EjMuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFjYXRhbG9nLnYxLlJlcGxhY2VUYXhvbm9teVJlcXVlc3QaJS5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuVGF4b25vbXkiQYLT5JMCOyI2",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWllcy8q",
+            "fTpyZXBsYWNlOgEqEsEBChBJbXBvcnRUYXhvbm9taWVzEjQuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFjYXRhbG9nLnYxLkltcG9ydFRheG9ub21pZXNSZXF1ZXN0GjUu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkltcG9ydFRheG9ub21pZXNS",
+            "ZXNwb25zZSJAgtPkkwI6IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qfS90YXhvbm9taWVzOmltcG9ydDoBKhK+AQoQRXhwb3J0VGF4b25v",
+            "bWllcxI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5FeHBvcnRUYXhv",
+            "bm9taWVzUmVxdWVzdBo1Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5F",
+            "eHBvcnRUYXhvbm9taWVzUmVzcG9uc2UiPYLT5JMCNxI1L3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdGF4b25vbWllczpleHBvcnQaTspB",
+            "GmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULqAQofY29tLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MUIiUG9saWN5VGFnTWFuYWdlclNlcmlh",
+            "bGl6YXRpb25Qcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRh",
+            "bG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dv",
+            "b2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRh",
+            "Q2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.PolicytagmanagerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -104,6 +105,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// policy tags. Used for taxonomy replacement, import, and
   /// export.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SerializedTaxonomy : pb::IMessage<SerializedTaxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -402,6 +404,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// A nested protocol buffer that represents a policy tag and all its
   /// descendants.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SerializedPolicyTag : pb::IMessage<SerializedPolicyTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -712,6 +715,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ReplaceTaxonomy][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ReplaceTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReplaceTaxonomyRequest : pb::IMessage<ReplaceTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -957,6 +961,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ImportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ImportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportTaxonomiesRequest : pb::IMessage<ImportTaxonomiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1292,6 +1297,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Inline source containing taxonomies to import.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InlineSource : pb::IMessage<InlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1477,6 +1483,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Cross-regional source used to import an existing taxonomy into a different
   /// region.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CrossRegionalSource : pb::IMessage<CrossRegionalSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1673,6 +1680,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ImportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ImportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportTaxonomiesResponse : pb::IMessage<ImportTaxonomiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1858,6 +1866,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ExportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ExportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportTaxonomiesRequest : pb::IMessage<ExportTaxonomiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2169,6 +2178,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ExportTaxonomies][google.cloud.datacatalog.v1.PolicyTagManagerSerialization.ExportTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportTaxonomiesResponse : pb::IMessage<ExportTaxonomiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

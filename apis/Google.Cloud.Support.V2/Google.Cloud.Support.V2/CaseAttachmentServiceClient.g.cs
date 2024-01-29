@@ -115,14 +115,14 @@ namespace Google.Cloud.Support.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CaseAttachmentServiceClient.Create(callInvoker, Settings, Logger);
+            return CaseAttachmentServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CaseAttachmentServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CaseAttachmentServiceClient.Create(callInvoker, Settings, Logger);
+            return CaseAttachmentServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

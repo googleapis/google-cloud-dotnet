@@ -26,16 +26,16 @@ namespace Google.Cloud.Connectors.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvY29ubmVjdG9ycy92MS9zZXR0aW5ncy5wcm90bxIa",
             "Z29vZ2xlLmNsb3VkLmNvbm5lY3RvcnMudjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iVAoY",
-            "R2V0R2xvYmFsU2V0dGluZ3NSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpB",
-            "JAoiY29ubmVjdG9ycy5nb29nbGVhcGlzLmNvbS9TZXR0aW5ncyKbAQoIU2V0",
-            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEhIKBXZwY3NjGAIgASgIQgPgQQES",
-            "EQoEcGF5ZxgDIAEoCEID4EEDOlXqQVIKImNvbm5lY3RvcnMuZ29vZ2xlYXBp",
-            "cy5jb20vU2V0dGluZ3MSLHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "Z2xvYmFsL3NldHRpbmdzQnEKHmNvbS5nb29nbGUuY2xvdWQuY29ubmVjdG9y",
-            "cy52MUINU2V0dGluZ3NQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Nv",
-            "bm5lY3RvcnMvYXBpdjEvY29ubmVjdG9yc3BiO2Nvbm5lY3RvcnNwYmIGcHJv",
-            "dG8z"));
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iVQoY",
+            "R2V0R2xvYmFsU2V0dGluZ3NSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+JBAQL6",
+            "QSQKImNvbm5lY3RvcnMuZ29vZ2xlYXBpcy5jb20vU2V0dGluZ3MingEKCFNl",
+            "dHRpbmdzEhIKBG5hbWUYASABKAlCBOJBAQMSEwoFdnBjc2MYAiABKAhCBOJB",
+            "AQESEgoEcGF5ZxgDIAEoCEIE4kEBAzpV6kFSCiJjb25uZWN0b3JzLmdvb2ds",
+            "ZWFwaXMuY29tL1NldHRpbmdzEixwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL2dsb2JhbC9zZXR0aW5nc0JxCh5jb20uZ29vZ2xlLmNsb3VkLmNvbm5l",
+            "Y3RvcnMudjFCDVNldHRpbmdzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9jb25uZWN0b3JzL2FwaXYxL2Nvbm5lY3RvcnNwYjtjb25uZWN0b3JzcGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -50,6 +50,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// Request for [GetGlobalSettingsRequest].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetGlobalSettingsRequest : pb::IMessage<GetGlobalSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -245,6 +246,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// Global Settings details.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Settings : pb::IMessage<Settings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

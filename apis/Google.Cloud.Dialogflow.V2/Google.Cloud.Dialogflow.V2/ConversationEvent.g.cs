@@ -54,6 +54,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Represents a notification sent to Pub/Sub subscribers for conversation
   /// lifecycle events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConversationEvent : pb::IMessage<ConversationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

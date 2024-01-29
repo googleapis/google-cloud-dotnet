@@ -59,6 +59,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Annotation details for image object detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionAnnotation : pb::IMessage<ImageObjectDetectionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -305,6 +306,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// Bounding box matching model metrics for a single intersection-over-union
   /// threshold and multiple label match confidence thresholds.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingBoxMetricsEntry : pb::IMessage<BoundingBoxMetricsEntry>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -575,6 +577,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Metrics for a single confidence threshold.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -896,6 +899,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// Model evaluation metrics for image object detection problems.
   /// Evaluates prediction quality of labeled bounding boxes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionEvaluationMetrics : pb::IMessage<ImageObjectDetectionEvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

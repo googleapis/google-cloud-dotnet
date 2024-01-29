@@ -83,6 +83,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Request message for the AllocateQuota method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllocateQuotaRequest : pb::IMessage<AllocateQuotaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -372,6 +373,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Represents information regarding a quota operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaOperation : pb::IMessage<QuotaOperation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -838,6 +840,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Response message for the AllocateQuota method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllocateQuotaResponse : pb::IMessage<AllocateQuotaResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1141,6 +1144,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaError : pb::IMessage<QuotaError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

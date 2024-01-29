@@ -405,14 +405,14 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RapidMigrationAssessmentClient.Create(callInvoker, Settings, Logger);
+            return RapidMigrationAssessmentClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RapidMigrationAssessmentClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RapidMigrationAssessmentClient.Create(callInvoker, Settings, Logger);
+            return RapidMigrationAssessmentClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

@@ -62,6 +62,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// [Document][google.firestore.v1.Document], and takes in account the dynamic
   /// nature of [Value][google.firestore.v1.Value].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentMask : pb::IMessage<DocumentMask>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -248,6 +249,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A precondition on a document, used for conditional operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Precondition : pb::IMessage<Precondition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -545,6 +547,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// Options for creating a new transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -845,6 +848,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// Firestore does not allow 3rd party auth requests to create read-write.
       /// transactions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1040,6 +1044,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// Options for a transaction that can only be used to read documents.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadOnly : pb::IMessage<ReadOnly>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

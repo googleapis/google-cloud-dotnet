@@ -48,6 +48,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// A FindingTypeStats resource represents stats regarding a specific FindingType
   /// of Findings under a given ScanRun.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FindingTypeStats : pb::IMessage<FindingTypeStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

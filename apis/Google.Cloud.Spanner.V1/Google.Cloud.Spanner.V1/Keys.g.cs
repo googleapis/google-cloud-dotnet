@@ -139,6 +139,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// Note that 100 is passed as the start, and 1 is passed as the end,
   /// because `Key` is a descending column in the schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KeyRange : pb::IMessage<KeyRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -582,6 +583,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// if two ranges, two keys, or a key and a range overlap), Cloud Spanner
   /// behaves as if the key were only specified once.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KeySet : pb::IMessage<KeySet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

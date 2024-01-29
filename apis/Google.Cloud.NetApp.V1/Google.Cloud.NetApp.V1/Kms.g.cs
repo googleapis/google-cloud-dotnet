@@ -28,49 +28,50 @@ namespace Google.Cloud.NetApp.V1 {
             "b3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
             "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8iTAoTR2V0S21zQ29uZmlnUmVxdWVzdBI1CgRuYW1lGAEgASgJQifg",
-            "QQL6QSEKH25ldGFwcC5nb29nbGVhcGlzLmNvbS9LbXNDb25maWcimQEKFUxp",
-            "c3RLbXNDb25maWdzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIf",
-            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZpZxIRCglwYWdlX3NpemUY",
-            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQCghvcmRlcl9ieRgEIAEoCRIO",
-            "CgZmaWx0ZXIYBSABKAkifgoWTGlzdEttc0NvbmZpZ3NSZXNwb25zZRI2Cgtr",
-            "bXNfY29uZmlncxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuS21z",
-            "Q29uZmlnEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJs",
-            "ZRgDIAMoCSKpAQoWQ3JlYXRlS21zQ29uZmlnUmVxdWVzdBI3CgZwYXJlbnQY",
-            "ASABKAlCJ+BBAvpBIRIfbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZp",
-            "ZxIaCg1rbXNfY29uZmlnX2lkGAIgASgJQgPgQQISOgoKa21zX2NvbmZpZxgD",
-            "IAEoCzIhLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuS21zQ29uZmlnQgPgQQIi",
-            "igEKFlVwZGF0ZUttc0NvbmZpZ1JlcXVlc3QSNAoLdXBkYXRlX21hc2sYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISOgoKa21zX2Nv",
-            "bmZpZxgCIAEoCzIhLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuS21zQ29uZmln",
-            "QgPgQQIiTwoWRGVsZXRlS21zQ29uZmlnUmVxdWVzdBI1CgRuYW1lGAEgASgJ",
-            "QifgQQL6QSEKH25ldGFwcC5nb29nbGVhcGlzLmNvbS9LbXNDb25maWciTgoV",
-            "RW5jcnlwdFZvbHVtZXNSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQof",
-            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZpZyJPChZWZXJpZnlLbXND",
-            "b25maWdSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofbmV0YXBwLmdv",
-            "b2dsZWFwaXMuY29tL0ttc0NvbmZpZyJlChdWZXJpZnlLbXNDb25maWdSZXNw",
-            "b25zZRIUCgdoZWFsdGh5GAEgASgIQgPgQQMSGQoMaGVhbHRoX2Vycm9yGAIg",
-            "ASgJQgPgQQMSGQoMaW5zdHJ1Y3Rpb25zGAMgASgJQgPgQQMizAUKCUttc0Nv",
-            "bmZpZxIRCgRuYW1lGAEgASgJQgPgQQgSHAoPY3J5cHRvX2tleV9uYW1lGAIg",
-            "ASgJQgPgQQISOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuY2xvdWQubmV0YXBw",
-            "LnYxLkttc0NvbmZpZy5TdGF0ZUID4EEDEhoKDXN0YXRlX2RldGFpbHMYBCAB",
-            "KAlCA+BBAxI0CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxITCgtkZXNjcmlwdGlvbhgGIAEoCRI9CgZsYWJl",
-            "bHMYByADKAsyLS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkttc0NvbmZpZy5M",
-            "YWJlbHNFbnRyeRIZCgxpbnN0cnVjdGlvbnMYCCABKAlCA+BBAxIcCg9zZXJ2",
-            "aWNlX2FjY291bnQYCSABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIsQBCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxF",
-            "VElORxADEgwKCFVQREFUSU5HEAQSCgoGSU5fVVNFEAUSCQoFRVJST1IQBhIV",
-            "ChFLRVlfQ0hFQ0tfUEVORElORxAHEhUKEUtFWV9OT1RfUkVBQ0hBQkxFEAgS",
-            "DQoJRElTQUJMSU5HEAkSDAoIRElTQUJMRUQQChINCglNSUdSQVRJTkcQCzp8",
-            "6kF5Ch9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnEj9wcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va21zQ29uZmlncy97",
-            "a21zX2NvbmZpZ30qCmttc0NvbmZpZ3MyCWttc0NvbmZpZ0KqAQoaY29tLmdv",
-            "b2dsZS5jbG91ZC5uZXRhcHAudjFCCEttc1Byb3RvUAFaMmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29v",
-            "Z2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHq",
-            "AhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "cHJvdG8iTQoTR2V0S21zQ29uZmlnUmVxdWVzdBI2CgRuYW1lGAEgASgJQiji",
+            "QQEC+kEhCh9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnIpoBChVM",
+            "aXN0S21zQ29uZmlnc1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijiQQEC+kEh",
+            "Eh9uZXRhcHAuZ29vZ2xlYXBpcy5jb20vS21zQ29uZmlnEhEKCXBhZ2Vfc2l6",
+            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJ",
+            "Eg4KBmZpbHRlchgFIAEoCSJ+ChZMaXN0S21zQ29uZmlnc1Jlc3BvbnNlEjYK",
+            "C2ttc19jb25maWdzGAEgAygLMiEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5L",
+            "bXNDb25maWcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hh",
+            "YmxlGAMgAygJIqwBChZDcmVhdGVLbXNDb25maWdSZXF1ZXN0EjgKBnBhcmVu",
+            "dBgBIAEoCUIo4kEBAvpBIRIfbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0Nv",
+            "bmZpZxIbCg1rbXNfY29uZmlnX2lkGAIgASgJQgTiQQECEjsKCmttc19jb25m",
+            "aWcYAyABKAsyIS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkttc0NvbmZpZ0IE",
+            "4kEBAiKMAQoWVXBkYXRlS21zQ29uZmlnUmVxdWVzdBI1Cgt1cGRhdGVfbWFz",
+            "axgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQISOwoK",
+            "a21zX2NvbmZpZxgCIAEoCzIhLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuS21z",
+            "Q29uZmlnQgTiQQECIlAKFkRlbGV0ZUttc0NvbmZpZ1JlcXVlc3QSNgoEbmFt",
+            "ZRgBIAEoCUIo4kEBAvpBIQofbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0Nv",
+            "bmZpZyJPChVFbmNyeXB0Vm9sdW1lc1JlcXVlc3QSNgoEbmFtZRgBIAEoCUIo",
+            "4kEBAvpBIQofbmV0YXBwLmdvb2dsZWFwaXMuY29tL0ttc0NvbmZpZyJQChZW",
+            "ZXJpZnlLbXNDb25maWdSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOJBAQL6QSEK",
+            "H25ldGFwcC5nb29nbGVhcGlzLmNvbS9LbXNDb25maWciaAoXVmVyaWZ5S21z",
+            "Q29uZmlnUmVzcG9uc2USFQoHaGVhbHRoeRgBIAEoCEIE4kEBAxIaCgxoZWFs",
+            "dGhfZXJyb3IYAiABKAlCBOJBAQMSGgoMaW5zdHJ1Y3Rpb25zGAMgASgJQgTi",
+            "QQEDItMFCglLbXNDb25maWcSEgoEbmFtZRgBIAEoCUIE4kEBCBIdCg9jcnlw",
+            "dG9fa2V5X25hbWUYAiABKAlCBOJBAQISPAoFc3RhdGUYAyABKA4yJy5nb29n",
+            "bGUuY2xvdWQubmV0YXBwLnYxLkttc0NvbmZpZy5TdGF0ZUIE4kEBAxIbCg1z",
+            "dGF0ZV9kZXRhaWxzGAQgASgJQgTiQQEDEjUKC2NyZWF0ZV90aW1lGAUgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxITCgtkZXNjcmlw",
+            "dGlvbhgGIAEoCRI9CgZsYWJlbHMYByADKAsyLS5nb29nbGUuY2xvdWQubmV0",
+            "YXBwLnYxLkttc0NvbmZpZy5MYWJlbHNFbnRyeRIaCgxpbnN0cnVjdGlvbnMY",
+            "CCABKAlCBOJBAQMSHQoPc2VydmljZV9hY2NvdW50GAkgASgJQgTiQQEDGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "xAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIM",
+            "CghDUkVBVElORxACEgwKCERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBIKCgZJ",
+            "Tl9VU0UQBRIJCgVFUlJPUhAGEhUKEUtFWV9DSEVDS19QRU5ESU5HEAcSFQoR",
+            "S0VZX05PVF9SRUFDSEFCTEUQCBINCglESVNBQkxJTkcQCRIMCghESVNBQkxF",
+            "RBAKEg0KCU1JR1JBVElORxALOnzqQXkKH25ldGFwcC5nb29nbGVhcGlzLmNv",
+            "bS9LbXNDb25maWcSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9rbXNDb25maWdzL3trbXNfY29uZmlnfSoKa21zQ29uZmlnczIJ",
+            "a21zQ29uZmlnQqoBChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUIIS21z",
+            "UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0",
+            "YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29v",
+            "Z2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,6 +94,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// GetKmsConfigRequest gets a KMS Config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetKmsConfigRequest : pb::IMessage<GetKmsConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -288,6 +290,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// ListKmsConfigsRequest lists KMS Configs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListKmsConfigsRequest : pb::IMessage<ListKmsConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -644,6 +647,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// ListKmsConfigsResponse is the response to a ListKmsConfigsRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListKmsConfigsResponse : pb::IMessage<ListKmsConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -897,6 +901,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// CreateKmsConfigRequest creates a KMS Config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateKmsConfigRequest : pb::IMessage<CreateKmsConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1183,6 +1188,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// UpdateKmsConfigRequest updates a KMS Config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateKmsConfigRequest : pb::IMessage<UpdateKmsConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1440,6 +1446,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// DeleteKmsConfigRequest deletes a KMS Config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteKmsConfigRequest : pb::IMessage<DeleteKmsConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1635,6 +1642,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// EncryptVolumesRequest specifies the KMS config to encrypt existing volumes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptVolumesRequest : pb::IMessage<EncryptVolumesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1830,6 +1838,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// VerifyKmsConfigRequest specifies the KMS config to be validated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyKmsConfigRequest : pb::IMessage<VerifyKmsConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2026,6 +2035,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// VerifyKmsConfigResponse contains the information if the config is correctly
   /// and error message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyKmsConfigResponse : pb::IMessage<VerifyKmsConfigResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2303,6 +2313,7 @@ namespace Google.Cloud.NetApp.V1 {
   /// <summary>
   /// KmsConfig is the customer managed encryption key(CMEK) configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KmsConfig : pb::IMessage<KmsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

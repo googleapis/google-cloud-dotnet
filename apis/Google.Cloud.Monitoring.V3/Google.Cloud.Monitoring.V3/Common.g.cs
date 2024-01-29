@@ -150,6 +150,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A single strongly-typed value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TypedValue : pb::IMessage<TypedValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -645,6 +646,7 @@ namespace Google.Cloud.Monitoring.V3 {
   ///   interval, then data written at the new start time could overwrite data
   ///   written at the previous end time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeInterval : pb::IMessage<TimeInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -925,6 +927,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// details, see [Filtering and
   /// aggregation](https://cloud.google.com/monitoring/api/v3/aggregation).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Aggregation : pb::IMessage<Aggregation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

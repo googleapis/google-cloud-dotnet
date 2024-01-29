@@ -30,48 +30,49 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxouZ29vZ2xlL2Nsb3VkL25ldHdv",
             "cmtzZWN1cml0eS92MWJldGExL3Rscy5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
             "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8izgUKD1NlcnZlclRsc1BvbGljeRIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "EwoLZGVzY3JpcHRpb24YAiABKAkSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSUQoGbGFi",
-            "ZWxzGAUgAygLMkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJl",
-            "dGExLlNlcnZlclRsc1BvbGljeS5MYWJlbHNFbnRyeRISCgphbGxvd19vcGVu",
-            "GAYgASgIElUKEnNlcnZlcl9jZXJ0aWZpY2F0ZRgHIAEoCzI5Lmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VjdXJpdHkudjFiZXRhMS5DZXJ0aWZpY2F0ZVByb3Zp",
-            "ZGVyElUKC210bHNfcG9saWN5GAggASgLMkAuZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGljeS5NVExTUG9saWN5",
-            "Gl4KCk1UTFNQb2xpY3kSUAoUY2xpZW50X3ZhbGlkYXRpb25fY2EYASADKAsy",
-            "Mi5nb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuVmFsaWRh",
-            "dGlvbkNBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAE6ggHqQX8KLm5ldHdvcmtzZWN1cml0eS5nb29nbGVhcGlzLmNv",
-            "bS9TZXJ2ZXJUbHNQb2xpY3kSTXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9zZXJ2ZXJUbHNQb2xpY2llcy97c2VydmVyX3Rsc19w",
-            "b2xpY3l9IoABChxMaXN0U2VydmVyVGxzUG9saWNpZXNSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkijAEKHUxpc3RTZXJ2ZXJUbHNQb2xpY2llc1Jlc3BvbnNlElIKE3NlcnZl",
-            "cl90bHNfcG9saWNpZXMYASADKAsyNS5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
-            "Y3VyaXR5LnYxYmV0YTEuU2VydmVyVGxzUG9saWN5EhcKD25leHRfcGFnZV90",
-            "b2tlbhgCIAEoCSJhChlHZXRTZXJ2ZXJUbHNQb2xpY3lSZXF1ZXN0EkQKBG5h",
-            "bWUYASABKAlCNuBBAvpBMAoubmV0d29ya3NlY3VyaXR5Lmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZlclRsc1BvbGljeSLgAQocQ3JlYXRlU2VydmVyVGxzUG9saWN5",
-            "UmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpBMBIubmV0d29ya3NlY3Vy",
-            "aXR5Lmdvb2dsZWFwaXMuY29tL1NlcnZlclRsc1BvbGljeRIhChRzZXJ2ZXJf",
-            "dGxzX3BvbGljeV9pZBgCIAEoCUID4EECElUKEXNlcnZlcl90bHNfcG9saWN5",
-            "GAMgASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGEx",
-            "LlNlcnZlclRsc1BvbGljeUID4EECIqsBChxVcGRhdGVTZXJ2ZXJUbHNQb2xp",
-            "Y3lSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFza0ID4EEBElUKEXNlcnZlcl90bHNfcG9saWN5GAIgASgL",
-            "MjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExLlNlcnZl",
-            "clRsc1BvbGljeUID4EECImQKHERlbGV0ZVNlcnZlclRsc1BvbGljeVJlcXVl",
-            "c3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi5uZXR3b3Jrc2VjdXJpdHkuZ29v",
-            "Z2xlYXBpcy5jb20vU2VydmVyVGxzUG9saWN5Qo4CCihjb20uZ29vZ2xlLmNs",
-            "b3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExQhRTZXJ2ZXJUbHNQb2xpY3lQ",
-            "cm90b1ABWlJjbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmtzZWN1cml0eS9h",
-            "cGl2MWJldGExL25ldHdvcmtzZWN1cml0eXBiO25ldHdvcmtzZWN1cml0eXBi",
-            "qgIkR29vZ2xlLkNsb3VkLk5ldHdvcmtTZWN1cml0eS5WMUJldGExygIkR29v",
-            "Z2xlXENsb3VkXE5ldHdvcmtTZWN1cml0eVxWMWJldGEx6gInR29vZ2xlOjpD",
-            "bG91ZDo6TmV0d29ya1NlY3VyaXR5OjpWMWJldGExYgZwcm90bzM="));
+            "cHJvdG8i0QUKD1NlcnZlclRsc1BvbGljeRISCgRuYW1lGAEgASgJQgTiQQEC",
+            "EhMKC2Rlc2NyaXB0aW9uGAIgASgJEjUKC2NyZWF0ZV90aW1lGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgt1cGRhdGVfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSUQoG",
+            "bGFiZWxzGAUgAygLMkEuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52",
+            "MWJldGExLlNlcnZlclRsc1BvbGljeS5MYWJlbHNFbnRyeRISCgphbGxvd19v",
+            "cGVuGAYgASgIElUKEnNlcnZlcl9jZXJ0aWZpY2F0ZRgHIAEoCzI5Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VjdXJpdHkudjFiZXRhMS5DZXJ0aWZpY2F0ZVBy",
+            "b3ZpZGVyElUKC210bHNfcG9saWN5GAggASgLMkAuZ29vZ2xlLmNsb3VkLm5l",
+            "dHdvcmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGljeS5NVExTUG9s",
+            "aWN5Gl4KCk1UTFNQb2xpY3kSUAoUY2xpZW50X3ZhbGlkYXRpb25fY2EYASAD",
+            "KAsyMi5nb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuVmFs",
+            "aWRhdGlvbkNBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAE6ggHqQX8KLm5ldHdvcmtzZWN1cml0eS5nb29nbGVhcGlz",
+            "LmNvbS9TZXJ2ZXJUbHNQb2xpY3kSTXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9zZXJ2ZXJUbHNQb2xpY2llcy97c2VydmVyX3Rs",
+            "c19wb2xpY3l9IoEBChxMaXN0U2VydmVyVGxzUG9saWNpZXNSZXF1ZXN0EjoK",
+            "BnBhcmVudBgBIAEoCUIq4kEBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMu",
+            "Y29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2Vu",
+            "GAMgASgJIowBCh1MaXN0U2VydmVyVGxzUG9saWNpZXNSZXNwb25zZRJSChNz",
+            "ZXJ2ZXJfdGxzX3BvbGljaWVzGAEgAygLMjUuZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGljeRIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkiYgoZR2V0U2VydmVyVGxzUG9saWN5UmVxdWVzdBJF",
+            "CgRuYW1lGAEgASgJQjfiQQEC+kEwCi5uZXR3b3Jrc2VjdXJpdHkuZ29vZ2xl",
+            "YXBpcy5jb20vU2VydmVyVGxzUG9saWN5IuMBChxDcmVhdGVTZXJ2ZXJUbHNQ",
+            "b2xpY3lSZXF1ZXN0EkcKBnBhcmVudBgBIAEoCUI34kEBAvpBMBIubmV0d29y",
+            "a3NlY3VyaXR5Lmdvb2dsZWFwaXMuY29tL1NlcnZlclRsc1BvbGljeRIiChRz",
+            "ZXJ2ZXJfdGxzX3BvbGljeV9pZBgCIAEoCUIE4kEBAhJWChFzZXJ2ZXJfdGxz",
+            "X3BvbGljeRgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VjdXJpdHku",
+            "djFiZXRhMS5TZXJ2ZXJUbHNQb2xpY3lCBOJBAQIirQEKHFVwZGF0ZVNlcnZl",
+            "clRsc1BvbGljeVJlcXVlc3QSNQoLdXBkYXRlX21hc2sYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgTiQQEBElYKEXNlcnZlcl90bHNfcG9s",
+            "aWN5GAIgASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJl",
+            "dGExLlNlcnZlclRsc1BvbGljeUIE4kEBAiJlChxEZWxldGVTZXJ2ZXJUbHNQ",
+            "b2xpY3lSZXF1ZXN0EkUKBG5hbWUYASABKAlCN+JBAQL6QTAKLm5ldHdvcmtz",
+            "ZWN1cml0eS5nb29nbGVhcGlzLmNvbS9TZXJ2ZXJUbHNQb2xpY3lCjgIKKGNv",
+            "bS5nb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTFCFFNlcnZl",
+            "clRsc1BvbGljeVByb3RvUAFaUmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29y",
+            "a3NlY3VyaXR5L2FwaXYxYmV0YTEvbmV0d29ya3NlY3VyaXR5cGI7bmV0d29y",
+            "a3NlY3VyaXR5cGKqAiRHb29nbGUuQ2xvdWQuTmV0d29ya1NlY3VyaXR5LlYx",
+            "QmV0YTHKAiRHb29nbGVcQ2xvdWRcTmV0d29ya1NlY3VyaXR5XFYxYmV0YTHq",
+            "AidHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VjdXJpdHk6OlYxYmV0YTFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkSecurity.V1Beta1.TlsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,6 +95,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// incoming requests. This resource itself does not affect configuration unless
   /// it is attached to a target https proxy or endpoint config selector resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServerTlsPolicy : pb::IMessage<ServerTlsPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -615,6 +617,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
       /// <summary>
       /// Specification of the MTLSPolicy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MTLSPolicy : pb::IMessage<MTLSPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -806,6 +809,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the ListServerTlsPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServerTlsPoliciesRequest : pb::IMessage<ListServerTlsPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1085,6 +1089,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Response returned by the ListServerTlsPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServerTlsPoliciesResponse : pb::IMessage<ListServerTlsPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1311,6 +1316,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the GetServerTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServerTlsPolicyRequest : pb::IMessage<GetServerTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1507,6 +1513,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the CreateServerTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServerTlsPolicyRequest : pb::IMessage<CreateServerTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1795,6 +1802,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by UpdateServerTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateServerTlsPolicyRequest : pb::IMessage<UpdateServerTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2053,6 +2061,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Request used by the DeleteServerTlsPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServerTlsPolicyRequest : pb::IMessage<DeleteServerTlsPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

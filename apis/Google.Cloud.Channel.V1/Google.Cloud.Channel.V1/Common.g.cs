@@ -36,23 +36,23 @@ namespace Google.Cloud.Channel.V1 {
             "RV9VTlNQRUNJRklFRBAAEg4KClNJWkVfMV8xMDAQARIQCgxTSVpFXzEwMV81",
             "MDAQAhIRCg1TSVpFXzUwMV8xMDAwEAMSEgoOU0laRV8xMDAxXzIwMDAQBBIS",
             "Cg5TSVpFXzIwMDFfNTAwMBAFEhMKD1NJWkVfNTAwMV8xMDAwMBAGEhYKElNJ",
-            "WkVfMTAwMDFfT1JfTU9SRRAHIoADChFDbG91ZElkZW50aXR5SW5mbxJOCg1j",
+            "WkVfMTAwMDFfT1JfTU9SRRAHIoMDChFDbG91ZElkZW50aXR5SW5mbxJOCg1j",
             "dXN0b21lcl90eXBlGAEgASgOMjcuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEu",
-            "Q2xvdWRJZGVudGl0eUluZm8uQ3VzdG9tZXJUeXBlEhsKDnByaW1hcnlfZG9t",
-            "YWluGAkgASgJQgPgQQMSHwoSaXNfZG9tYWluX3ZlcmlmaWVkGAQgASgIQgPg",
-            "QQMSFwoPYWx0ZXJuYXRlX2VtYWlsGAYgASgJEhQKDHBob25lX251bWJlchgH",
-            "IAEoCRIVCg1sYW5ndWFnZV9jb2RlGAggASgJEh4KEWFkbWluX2NvbnNvbGVf",
-            "dXJpGAogASgJQgPgQQMSMgoIZWR1X2RhdGEYFiABKAsyIC5nb29nbGUuY2xv",
-            "dWQuY2hhbm5lbC52MS5FZHVEYXRhIkMKDEN1c3RvbWVyVHlwZRIdChlDVVNU",
-            "T01FUl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGRE9NQUlOEAESCAoEVEVBTRAC",
-            "IpkBCgVWYWx1ZRIVCgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDHN0cmluZ192",
-            "YWx1ZRgCIAEoCUgAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEisKC3Byb3Rv",
-            "X3ZhbHVlGAQgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueUgAEhQKCmJvb2xf",
-            "dmFsdWUYBSABKAhIAEIGCgRraW5kIkMKCUFkbWluVXNlchINCgVlbWFpbBgB",
-            "IAEoCRISCgpnaXZlbl9uYW1lGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMgASgJ",
-            "QmMKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJvdG9Q",
-            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5uZWxw",
-            "YjtjaGFubmVscGJiBnByb3RvMw=="));
+            "Q2xvdWRJZGVudGl0eUluZm8uQ3VzdG9tZXJUeXBlEhwKDnByaW1hcnlfZG9t",
+            "YWluGAkgASgJQgTiQQEDEiAKEmlzX2RvbWFpbl92ZXJpZmllZBgEIAEoCEIE",
+            "4kEBAxIXCg9hbHRlcm5hdGVfZW1haWwYBiABKAkSFAoMcGhvbmVfbnVtYmVy",
+            "GAcgASgJEhUKDWxhbmd1YWdlX2NvZGUYCCABKAkSHwoRYWRtaW5fY29uc29s",
+            "ZV91cmkYCiABKAlCBOJBAQMSMgoIZWR1X2RhdGEYFiABKAsyIC5nb29nbGUu",
+            "Y2xvdWQuY2hhbm5lbC52MS5FZHVEYXRhIkMKDEN1c3RvbWVyVHlwZRIdChlD",
+            "VVNUT01FUl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGRE9NQUlOEAESCAoEVEVB",
+            "TRACIpkBCgVWYWx1ZRIVCgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDHN0cmlu",
+            "Z192YWx1ZRgCIAEoCUgAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEisKC3By",
+            "b3RvX3ZhbHVlGAQgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueUgAEhQKCmJv",
+            "b2xfdmFsdWUYBSABKAhIAEIGCgRraW5kIkMKCUFkbWluVXNlchINCgVlbWFp",
+            "bBgBIAEoCRISCgpnaXZlbl9uYW1lGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMg",
+            "ASgJQmMKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJv",
+            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGFubmVsL2FwaXYxL2NoYW5u",
+            "ZWxwYjtjaGFubmVscGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -69,6 +69,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Required Edu Attributes
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EduData : pb::IMessage<EduData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -408,6 +409,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Cloud Identity information for the Cloud Channel Customer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudIdentityInfo : pb::IMessage<CloudIdentityInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -922,6 +924,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Data type and value of a parameter.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Value : pb::IMessage<Value>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1388,6 +1391,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Information needed to create an Admin User for Google Workspace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdminUser : pb::IMessage<AdminUser>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

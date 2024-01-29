@@ -122,6 +122,7 @@ namespace Google.Maps.Places.V1 {
   /// could charge one car at a time. One port has one or more connectors. One
   /// station has one or more ports.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EVChargeOptions : pb::IMessage<EVChargeOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -355,6 +356,7 @@ namespace Google.Maps.Places.V1 {
       /// Shows EV charge aggregation of connectors that have the same type and max
       /// charge rate in kw.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConnectorAggregation : pb::IMessage<ConnectorAggregation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

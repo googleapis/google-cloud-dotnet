@@ -67,6 +67,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for a product search request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSearchParams : pb::IMessage<ProductSearchParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -397,6 +398,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Results for a product search request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSearchResults : pb::IMessage<ProductSearchResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -667,6 +669,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Information about a product.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Result : pb::IMessage<Result>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -953,6 +956,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Prediction for what the object in the bounding box is.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ObjectAnnotation : pb::IMessage<ObjectAnnotation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1271,6 +1275,7 @@ namespace Google.Cloud.Vision.V1 {
       /// Information about the products similar to a single product in a query
       /// image.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GroupedResult : pb::IMessage<GroupedResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

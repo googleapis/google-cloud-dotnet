@@ -67,6 +67,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// Results from [Read][google.spanner.v1.Spanner.Read] or
   /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResultSet : pb::IMessage<ResultSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -363,6 +364,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// SQL queries better tolerate large result sets, large rows, and large
   /// values, but are a little trickier to consume.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartialResultSet : pb::IMessage<PartialResultSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -809,6 +811,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResultSetMetadata : pb::IMessage<ResultSetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1128,6 +1131,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResultSetStats : pb::IMessage<ResultSetStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

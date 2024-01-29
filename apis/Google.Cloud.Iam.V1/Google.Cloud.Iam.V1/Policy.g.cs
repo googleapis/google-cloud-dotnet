@@ -141,6 +141,7 @@ namespace Google.Cloud.Iam.V1 {
   /// For a description of IAM and its features, see the
   /// [IAM documentation](https://cloud.google.com/iam/docs/).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -478,6 +479,7 @@ namespace Google.Cloud.Iam.V1 {
   /// <summary>
   /// Associates `members`, or principals, with a `role`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Binding : pb::IMessage<Binding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -852,6 +854,7 @@ namespace Google.Cloud.Iam.V1 {
   /// logging. It also exempts `jose@example.com` from DATA_READ logging, and
   /// `aliya@example.com` from DATA_WRITE logging.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditConfig : pb::IMessage<AuditConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1096,6 +1099,7 @@ namespace Google.Cloud.Iam.V1 {
   /// This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting
   /// jose@example.com from DATA_READ logging.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditLogConfig : pb::IMessage<AuditLogConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1354,6 +1358,7 @@ namespace Google.Cloud.Iam.V1 {
   /// <summary>
   /// The difference delta between two policies.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyDelta : pb::IMessage<PolicyDelta>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1568,6 +1573,7 @@ namespace Google.Cloud.Iam.V1 {
   /// One delta entry for Binding. Each individual change (only one member in each
   /// entry) to a binding will be a separate entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BindingDelta : pb::IMessage<BindingDelta>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1924,6 +1930,7 @@ namespace Google.Cloud.Iam.V1 {
   /// One delta entry for AuditConfig. Each individual change (only one
   /// exempted_member in each entry) to a AuditConfig will be a separate entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditConfigDelta : pb::IMessage<AuditConfigDelta>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

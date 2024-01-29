@@ -150,6 +150,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Response used for ImportData longrunning operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataOperationResponse : pb::IMessage<ImportDataOperationResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -425,6 +426,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Response used for ExportDataset longrunning operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataOperationResponse : pb::IMessage<ExportDataOperationResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -799,6 +801,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metadata of an ImportData operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,6 +1078,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metadata of an ExportData operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1352,6 +1356,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Metadata of a labeling operation, such as LabelImage or LabelVideo.
   /// Next tag: 20
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelOperationMetadata : pb::IMessage<LabelOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2326,6 +2331,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metadata of a LabelImageClassification operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImageClassificationOperationMetadata : pb::IMessage<LabelImageClassificationOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2530,6 +2536,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelImageBoundingBox operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImageBoundingBoxOperationMetadata : pb::IMessage<LabelImageBoundingBoxOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2734,6 +2741,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelImageOrientedBoundingBox operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImageOrientedBoundingBoxOperationMetadata : pb::IMessage<LabelImageOrientedBoundingBoxOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2938,6 +2946,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of LabelImageBoundingPoly operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImageBoundingPolyOperationMetadata : pb::IMessage<LabelImageBoundingPolyOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3142,6 +3151,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of LabelImagePolyline operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImagePolylineOperationMetadata : pb::IMessage<LabelImagePolylineOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3346,6 +3356,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelImageSegmentation operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelImageSegmentationOperationMetadata : pb::IMessage<LabelImageSegmentationOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3550,6 +3561,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelVideoClassification operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelVideoClassificationOperationMetadata : pb::IMessage<LabelVideoClassificationOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3754,6 +3766,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelVideoObjectDetection operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelVideoObjectDetectionOperationMetadata : pb::IMessage<LabelVideoObjectDetectionOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3958,6 +3971,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelVideoObjectTracking operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelVideoObjectTrackingOperationMetadata : pb::IMessage<LabelVideoObjectTrackingOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4162,6 +4176,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelVideoEvent operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelVideoEventOperationMetadata : pb::IMessage<LabelVideoEventOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4366,6 +4381,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelTextClassification operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelTextClassificationOperationMetadata : pb::IMessage<LabelTextClassificationOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4570,6 +4586,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Details of a LabelTextEntityExtraction operation metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelTextEntityExtractionOperationMetadata : pb::IMessage<LabelTextEntityExtractionOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4774,6 +4791,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metadata of a CreateInstruction operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstructionMetadata : pb::IMessage<CreateInstructionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

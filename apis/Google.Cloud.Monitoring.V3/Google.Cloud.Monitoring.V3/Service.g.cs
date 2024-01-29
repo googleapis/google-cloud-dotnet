@@ -147,6 +147,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// Cloud Monitoring, a `Service` acts as the root resource under which
   /// operational aspects of the service are accessible.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -836,6 +837,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// Custom view of service telemetry. Currently a place-holder pending final
       /// design.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Custom : pb::IMessage<Custom>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -991,6 +993,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// App Engine service. Learn more at https://cloud.google.com/appengine.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AppEngine : pb::IMessage<AppEngine>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1188,6 +1191,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Cloud Endpoints service. Learn more at https://cloud.google.com/endpoints.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CloudEndpoints : pb::IMessage<CloudEndpoints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1387,6 +1391,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// https://istio.io. Clusters running OSS Istio will have their services
       /// ingested as this type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ClusterIstio : pb::IMessage<ClusterIstio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1709,6 +1714,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// Istio service scoped to an Istio mesh. Anthos clusters running ASM &lt; 1.6.8
       /// will have their services ingested as this type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MeshIstio : pb::IMessage<MeshIstio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1988,6 +1994,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// Canonical service scoped to an Istio mesh. Anthos clusters running ASM >=
       /// 1.6.8 will have their services ingested as this type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IstioCanonicalService : pb::IMessage<IstioCanonicalService>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2271,6 +2278,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Configuration for how to query telemetry on a Service.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Telemetry : pb::IMessage<Telemetry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2477,6 +2485,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// "99% of requests in each rolling week have latency below 200 milliseconds" or
   /// "99.5% of requests in each calendar month return successfully."
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceLevelObjective : pb::IMessage<ServiceLevelObjective>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3030,6 +3039,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// one aspect of service quality, such as fraction of successful queries or
   /// fast-enough queries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceLevelIndicator : pb::IMessage<ServiceLevelIndicator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3385,6 +3395,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// monitoring filter to filter that metric down to just the data relevant to
   /// this service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BasicSli : pb::IMessage<BasicSli>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3783,6 +3794,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Future parameters for the availability SLI.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AvailabilityCriteria : pb::IMessage<AvailabilityCriteria>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3938,6 +3950,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Parameters for a latency threshold SLI.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LatencyCriteria : pb::IMessage<LatencyCriteria>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4148,6 +4161,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// Range of numerical values within `min` and `max`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Range : pb::IMessage<Range>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4384,6 +4398,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// Service Level Indicators for which atomic units of service are counted
   /// directly.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestBasedSli : pb::IMessage<RequestBasedSli>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4687,6 +4702,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// exactly two of good, bad, and total, and the relationship `good_service +
   /// bad_service = total_service` will be assumed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesRatio : pb::IMessage<TimeSeriesRatio>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4976,6 +4992,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// computed `good_service` will be the estimated count of values in the
   /// `Distribution` that fall within the specified `min` and `max`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DistributionCut : pb::IMessage<DistributionCut>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5225,6 +5242,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// which the provided service was of good quality. Criteria for determining
   /// if service was good are embedded in the `window_criterion`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WindowsBasedSli : pb::IMessage<WindowsBasedSli>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5690,6 +5708,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// A `PerformanceThreshold` is used when each window is good when that window
       /// has a sufficiently high `performance`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PerformanceThreshold : pb::IMessage<PerformanceThreshold>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6027,6 +6046,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// `TimeSeries` must have `ValueType = INT64` or `ValueType = DOUBLE` and
       /// `MetricKind = GAUGE`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetricRange : pb::IMessage<MetricRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

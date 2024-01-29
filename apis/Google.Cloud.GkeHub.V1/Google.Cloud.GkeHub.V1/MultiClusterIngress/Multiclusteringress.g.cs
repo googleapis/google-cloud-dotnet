@@ -49,6 +49,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
   /// **Multi-cluster Ingress**: The configuration for the MultiClusterIngress
   /// feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureSpec : pb::IMessage<FeatureSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

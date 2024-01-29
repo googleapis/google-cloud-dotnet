@@ -26,15 +26,15 @@ namespace Google.Cloud.Common {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvY29tbW9uL29wZXJhdGlvbl9tZXRhZGF0YS5wcm90",
             "bxITZ29vZ2xlLmNsb3VkLmNvbW1vbhofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL5",
-            "AQoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFyZ2V0",
-            "GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhoKDXN0YXR1c19kZXRh",
-            "aWwYBSABKAlCA+BBAxIdChBjYW5jZWxfcmVxdWVzdGVkGAYgASgIQgPgQQMS",
-            "GAoLYXBpX3ZlcnNpb24YByABKAlCA+BBA0JWChdjb20uZ29vZ2xlLmNsb3Vk",
-            "LmNvbW1vblABWjlnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2NvbW1vbjtjb21tb25iBnByb3RvMw=="));
+            "dmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKA",
+            "AgoRT3BlcmF0aW9uTWV0YWRhdGESNQoLY3JlYXRlX3RpbWUYASABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjIKCGVuZF90aW1lGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIUCgZ0YXJn",
+            "ZXQYAyABKAlCBOJBAQMSEgoEdmVyYhgEIAEoCUIE4kEBAxIbCg1zdGF0dXNf",
+            "ZGV0YWlsGAUgASgJQgTiQQEDEh4KEGNhbmNlbF9yZXF1ZXN0ZWQYBiABKAhC",
+            "BOJBAQMSGQoLYXBpX3ZlcnNpb24YByABKAlCBOJBAQNCVgoXY29tLmdvb2ds",
+            "ZS5jbG91ZC5jb21tb25QAVo5Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9jb21tb247Y29tbW9uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,6 +48,7 @@ namespace Google.Cloud.Common {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

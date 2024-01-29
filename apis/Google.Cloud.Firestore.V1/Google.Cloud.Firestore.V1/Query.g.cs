@@ -71,29 +71,29 @@ namespace Google.Cloud.Firestore.V1 {
             "GAIgASgJGlEKClByb2plY3Rpb24SQwoGZmllbGRzGAIgAygLMjMuZ29vZ2xl",
             "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2Ui",
             "RQoJRGlyZWN0aW9uEhkKFURJUkVDVElPTl9VTlNQRUNJRklFRBAAEg0KCUFT",
-            "Q0VORElORxABEg4KCkRFU0NFTkRJTkcQAiK4BQoaU3RydWN0dXJlZEFnZ3Jl",
+            "Q0VORElORxABEg4KCkRFU0NFTkRJTkcQAiK7BQoaU3RydWN0dXJlZEFnZ3Jl",
             "Z2F0aW9uUXVlcnkSQAoQc3RydWN0dXJlZF9xdWVyeRgBIAEoCzIkLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SAASVgoMYWdncmVnYXRp",
+            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SAASVwoMYWdncmVnYXRp",
             "b25zGAMgAygLMjsuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkQWdn",
-            "cmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbkID4EEBGvEDCgtBZ2dyZWdhdGlv",
-            "bhJSCgVjb3VudBgBIAEoCzJBLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
-            "dXJlZEFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQ291bnRIABJOCgNz",
-            "dW0YAiABKAsyPy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dy",
-            "ZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLlN1bUgAEk4KA2F2ZxgDIAEoCzI/",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVl",
-            "cnkuQWdncmVnYXRpb24uQXZnSAASEgoFYWxpYXMYByABKAlCA+BBARo4CgVD",
-            "b3VudBIvCgV1cF90bxgBIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZh",
-            "bHVlQgPgQQEaSQoDU3VtEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2UaSQoDQXZn",
-            "EkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1",
-            "cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VCCgoIb3BlcmF0b3JCDAoKcXVlcnlf",
-            "dHlwZSJECgZDdXJzb3ISKgoGdmFsdWVzGAEgAygLMhouZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5WYWx1ZRIOCgZiZWZvcmUYAiABKAhCwgEKF2NvbS5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBiogIE",
-            "R0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xv",
-            "dWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpW",
-            "MWIGcHJvdG8z"));
+            "cmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbkIE4kEBARrzAwoLQWdncmVnYXRp",
+            "b24SUgoFY291bnQYASABKAsyQS5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVj",
+            "dHVyZWRBZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLkNvdW50SAASTgoD",
+            "c3VtGAIgASgLMj8uZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkQWdn",
+            "cmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbi5TdW1IABJOCgNhdmcYAyABKAsy",
+            "Py5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1",
+            "ZXJ5LkFnZ3JlZ2F0aW9uLkF2Z0gAEhMKBWFsaWFzGAcgASgJQgTiQQEBGjkK",
+            "BUNvdW50EjAKBXVwX3RvGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
+            "VmFsdWVCBOJBAQEaSQoDU3VtEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2UaSQoD",
+            "QXZnEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1",
+            "Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VCCgoIb3BlcmF0b3JCDAoKcXVl",
+            "cnlfdHlwZSJECgZDdXJzb3ISKgoGdmFsdWVzGAEgAygLMhouZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5WYWx1ZRIOCgZiZWZvcmUYAiABKAhCwgEKF2NvbS5nb29n",
+            "bGUuZmlyZXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaO2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBi",
+            "ogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVc",
+            "Q2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3Jl",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,6 +126,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// 5. offset
   /// 6. limit
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructuredQuery : pb::IMessage<StructuredQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -718,6 +719,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A selection of a collection, such as `messages as m1`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CollectionSelector : pb::IMessage<CollectionSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -956,6 +958,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A filter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Filter : pb::IMessage<Filter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1306,6 +1309,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A filter that merges multiple other filters using the given operator.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CompositeFilter : pb::IMessage<CompositeFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1560,6 +1564,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A filter on a specific field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FieldFilter : pb::IMessage<FieldFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1953,6 +1958,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A filter with a single operand.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UnaryFilter : pb::IMessage<UnaryFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2275,6 +2281,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// An order on a field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Order : pb::IMessage<Order>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2519,6 +2526,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A reference to a field in a document, ex: `stats.operations`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FieldReference : pb::IMessage<FieldReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2720,6 +2728,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// The projection of document's fields to return.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Projection : pb::IMessage<Projection>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2913,6 +2922,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// Firestore query for running an aggregation over a
   /// [StructuredQuery][google.firestore.v1.StructuredQuery].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructuredAggregationQuery : pb::IMessage<StructuredAggregationQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3188,6 +3198,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// Defines an aggregation that produces a single result.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Aggregation : pb::IMessage<Aggregation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3618,6 +3629,7 @@ namespace Google.Cloud.Firestore.V1 {
           /// The `COUNT(*)` aggregation function operates on the entire document
           /// so it does not require a field reference.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Count : pb::IMessage<Count>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3857,6 +3869,7 @@ namespace Google.Cloud.Firestore.V1 {
           /// time. In those cases, values should be stored as integers over
           /// floating-point numbers.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Sum : pb::IMessage<Sum>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4071,6 +4084,7 @@ namespace Google.Cloud.Firestore.V1 {
           ///
           /// * Always returns the result as a double.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Avg : pb::IMessage<Avg>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4285,6 +4299,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A position in a query result set.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cursor : pb::IMessage<Cursor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

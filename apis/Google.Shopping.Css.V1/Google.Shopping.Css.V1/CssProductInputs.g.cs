@@ -31,38 +31,38 @@ namespace Google.Shopping.Css.V1 {
             "Y2UucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xl",
             "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxovZ29vZ2xlL3Nob3BwaW5nL2Nz",
             "cy92MS9jc3NfcHJvZHVjdF9jb21tb24ucHJvdG8aIGdvb2dsZS9zaG9wcGlu",
-            "Zy90eXBlL3R5cGVzLnByb3RvIp4DCg9Dc3NQcm9kdWN0SW5wdXQSDAoEbmFt",
-            "ZRgBIAEoCRIXCgpmaW5hbF9uYW1lGAIgASgJQgPgQQMSHAoPcmF3X3Byb3Zp",
-            "ZGVkX2lkGAMgASgJQgPgQQISHQoQY29udGVudF9sYW5ndWFnZRgEIAEoCUID",
-            "4EECEhcKCmZlZWRfbGFiZWwYBSABKAlCA+BBAhIyCg5mcmVzaG5lc3NfdGlt",
-            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNgoKYXR0cmli",
-            "dXRlcxgHIAEoCzIiLmdvb2dsZS5zaG9wcGluZy5jc3MudjEuQXR0cmlidXRl",
-            "cxJAChFjdXN0b21fYXR0cmlidXRlcxgIIAMoCzIlLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLkN1c3RvbUF0dHJpYnV0ZTpg6kFdCiJjc3MuZ29vZ2xlYXBpcy5j",
-            "b20vQ3NzUHJvZHVjdElucHV0EjdhY2NvdW50cy97YWNjb3VudH0vY3NzUHJv",
-            "ZHVjdElucHV0cy97Y3NzX3Byb2R1Y3RfaW5wdXR9IrkBChxJbnNlcnRDc3NQ",
-            "cm9kdWN0SW5wdXRSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJj",
-            "c3MuZ29vZ2xlYXBpcy5jb20vQ3NzUHJvZHVjdElucHV0EkcKEWNzc19wcm9k",
-            "dWN0X2lucHV0GAIgASgLMicuZ29vZ2xlLnNob3BwaW5nLmNzcy52MS5Dc3NQ",
-            "cm9kdWN0SW5wdXRCA+BBAhIUCgdmZWVkX2lkGAMgASgDQgPgQQIilAEKHERl",
-            "bGV0ZUNzc1Byb2R1Y3RJbnB1dFJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC",
-            "+kEkCiJjc3MuZ29vZ2xlYXBpcy5jb20vQ3NzUHJvZHVjdElucHV0EiEKFHN1",
-            "cHBsZW1lbnRhbF9mZWVkX2lkGAIgASgDSACIAQFCFwoVX3N1cHBsZW1lbnRh",
-            "bF9mZWVkX2lkMsADChdDc3NQcm9kdWN0SW5wdXRzU2VydmljZRLCAQoVSW5z",
-            "ZXJ0Q3NzUHJvZHVjdElucHV0EjQuZ29vZ2xlLnNob3BwaW5nLmNzcy52MS5J",
-            "bnNlcnRDc3NQcm9kdWN0SW5wdXRSZXF1ZXN0GicuZ29vZ2xlLnNob3BwaW5n",
-            "LmNzcy52MS5Dc3NQcm9kdWN0SW5wdXQiSoLT5JMCRCIvL3YxL3twYXJlbnQ9",
-            "YWNjb3VudHMvKn0vY3NzUHJvZHVjdElucHV0czppbnNlcnQ6EWNzc19wcm9k",
-            "dWN0X2lucHV0Ep4BChVEZWxldGVDc3NQcm9kdWN0SW5wdXQSNC5nb29nbGUu",
-            "c2hvcHBpbmcuY3NzLnYxLkRlbGV0ZUNzc1Byb2R1Y3RJbnB1dFJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiN4LT5JMCKiooL3YxL3tuYW1lPWFj",
-            "Y291bnRzLyovY3NzUHJvZHVjdElucHV0cy8qfdpBBG5hbWUaP8pBEmNzcy5n",
-            "b29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY29udGVudEK3AQoaY29tLmdvb2dsZS5zaG9wcGluZy5jc3MudjFCFUNz",
-            "c1Byb2R1Y3RJbnB1dHNQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3No",
-            "b3BwaW5nL2Nzcy9hcGl2MS9jc3NwYjtjc3NwYqoCFkdvb2dsZS5TaG9wcGlu",
-            "Zy5Dc3MuVjHKAhZHb29nbGVcU2hvcHBpbmdcQ3NzXFYx6gIZR29vZ2xlOjpT",
-            "aG9wcGluZzo6Q3NzOjpWMWIGcHJvdG8z"));
+            "Zy90eXBlL3R5cGVzLnByb3RvIqIDCg9Dc3NQcm9kdWN0SW5wdXQSDAoEbmFt",
+            "ZRgBIAEoCRIYCgpmaW5hbF9uYW1lGAIgASgJQgTiQQEDEh0KD3Jhd19wcm92",
+            "aWRlZF9pZBgDIAEoCUIE4kEBAhIeChBjb250ZW50X2xhbmd1YWdlGAQgASgJ",
+            "QgTiQQECEhgKCmZlZWRfbGFiZWwYBSABKAlCBOJBAQISMgoOZnJlc2huZXNz",
+            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjYKCmF0",
+            "dHJpYnV0ZXMYByABKAsyIi5nb29nbGUuc2hvcHBpbmcuY3NzLnYxLkF0dHJp",
+            "YnV0ZXMSQAoRY3VzdG9tX2F0dHJpYnV0ZXMYCCADKAsyJS5nb29nbGUuc2hv",
+            "cHBpbmcudHlwZS5DdXN0b21BdHRyaWJ1dGU6YOpBXQoiY3NzLmdvb2dsZWFw",
+            "aXMuY29tL0Nzc1Byb2R1Y3RJbnB1dBI3YWNjb3VudHMve2FjY291bnR9L2Nz",
+            "c1Byb2R1Y3RJbnB1dHMve2Nzc19wcm9kdWN0X2lucHV0fSK8AQocSW5zZXJ0",
+            "Q3NzUHJvZHVjdElucHV0UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+JBAQL6",
+            "QSQSImNzcy5nb29nbGVhcGlzLmNvbS9Dc3NQcm9kdWN0SW5wdXQSSAoRY3Nz",
+            "X3Byb2R1Y3RfaW5wdXQYAiABKAsyJy5nb29nbGUuc2hvcHBpbmcuY3NzLnYx",
+            "LkNzc1Byb2R1Y3RJbnB1dEIE4kEBAhIVCgdmZWVkX2lkGAMgASgDQgTiQQEC",
+            "IpUBChxEZWxldGVDc3NQcm9kdWN0SW5wdXRSZXF1ZXN0EjkKBG5hbWUYASAB",
+            "KAlCK+JBAQL6QSQKImNzcy5nb29nbGVhcGlzLmNvbS9Dc3NQcm9kdWN0SW5w",
+            "dXQSIQoUc3VwcGxlbWVudGFsX2ZlZWRfaWQYAiABKANIAIgBAUIXChVfc3Vw",
+            "cGxlbWVudGFsX2ZlZWRfaWQywAMKF0Nzc1Byb2R1Y3RJbnB1dHNTZXJ2aWNl",
+            "EsIBChVJbnNlcnRDc3NQcm9kdWN0SW5wdXQSNC5nb29nbGUuc2hvcHBpbmcu",
+            "Y3NzLnYxLkluc2VydENzc1Byb2R1Y3RJbnB1dFJlcXVlc3QaJy5nb29nbGUu",
+            "c2hvcHBpbmcuY3NzLnYxLkNzc1Byb2R1Y3RJbnB1dCJKgtPkkwJEIi8vdjEv",
+            "e3BhcmVudD1hY2NvdW50cy8qfS9jc3NQcm9kdWN0SW5wdXRzOmluc2VydDoR",
+            "Y3NzX3Byb2R1Y3RfaW5wdXQSngEKFURlbGV0ZUNzc1Byb2R1Y3RJbnB1dBI0",
+            "Lmdvb2dsZS5zaG9wcGluZy5jc3MudjEuRGVsZXRlQ3NzUHJvZHVjdElucHV0",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI32kEEbmFtZYLT5JMC",
+            "KiooL3YxL3tuYW1lPWFjY291bnRzLyovY3NzUHJvZHVjdElucHV0cy8qfRo/",
+            "ykESY3NzLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jb250ZW50QrcBChpjb20uZ29vZ2xlLnNob3BwaW5nLmNz",
+            "cy52MUIVQ3NzUHJvZHVjdElucHV0c1Byb3RvUAFaMmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2hvcHBpbmcvY3NzL2FwaXYxL2Nzc3BiO2Nzc3BiqgIWR29vZ2xl",
+            "LlNob3BwaW5nLkNzcy5WMcoCFkdvb2dsZVxTaG9wcGluZ1xDc3NcVjHqAhlH",
+            "b29nbGU6OlNob3BwaW5nOjpDc3M6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Css.V1.CssProductCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,6 +80,7 @@ namespace Google.Shopping.Css.V1 {
   /// the processed CSS Product that you see in CSS Center, in Shopping Ads, or
   /// across Google surfaces.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CssProductInput : pb::IMessage<CssProductInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -598,6 +599,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// Request message for the InsertCssProductInput method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsertCssProductInputRequest : pb::IMessage<InsertCssProductInputRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -887,6 +889,7 @@ namespace Google.Shopping.Css.V1 {
   /// <summary>
   /// Request message for the DeleteCssProductInput method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCssProductInputRequest : pb::IMessage<DeleteCssProductInputRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

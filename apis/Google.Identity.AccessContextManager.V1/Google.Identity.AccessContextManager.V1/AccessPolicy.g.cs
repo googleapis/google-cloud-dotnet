@@ -58,6 +58,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// access policy is globally visible within an organization, and the
   /// restrictions it specifies apply to all projects within an organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessPolicy : pb::IMessage<AccessPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

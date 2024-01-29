@@ -45,6 +45,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Encodes the detailed information of a barcode.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Barcode : pb::IMessage<Barcode>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

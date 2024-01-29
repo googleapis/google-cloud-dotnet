@@ -56,6 +56,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Represents an operating system process.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Process : pb::IMessage<Process>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -601,6 +602,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// A name-value pair representing an environment variable used in an operating
   /// system process.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvironmentVariable : pb::IMessage<EnvironmentVariable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

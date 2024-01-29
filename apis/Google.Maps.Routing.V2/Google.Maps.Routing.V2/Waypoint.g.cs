@@ -49,6 +49,7 @@ namespace Google.Maps.Routing.V2 {
   /// Encapsulates a waypoint. Waypoints mark both the beginning and end of a
   /// route, and include intermediate stops along the route.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Waypoint : pb::IMessage<Waypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

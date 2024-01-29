@@ -217,6 +217,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// resources.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InternalChecker : pb::IMessage<InternalChecker>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -659,6 +660,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// This message configures which resources and services to monitor for
   /// availability.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UptimeCheckConfig : pb::IMessage<UptimeCheckConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1543,6 +1545,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// The resource submessage for group checks. It can be used instead of a
       /// monitored resource, when multiple resources are being monitored.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceGroup : pb::IMessage<ResourceGroup>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1782,6 +1785,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// checks. For HTTP, the pings are performed for each part of the redirect
       /// chain.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PingConfig : pb::IMessage<PingConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1977,6 +1981,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Information involved in an HTTP/HTTPS Uptime check request.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class HttpCheck : pb::IMessage<HttpCheck>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2739,6 +2744,7 @@ namespace Google.Cloud.Monitoring.V3 {
           /// [Basic HTTP authentication](https://tools.ietf.org/html/rfc7617) is
           /// supported in Uptime checks.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BasicAuthentication : pb::IMessage<BasicAuthentication>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2975,6 +2981,7 @@ namespace Google.Cloud.Monitoring.V3 {
           /// A status to accept. Either a status code class like "2xx", or an integer
           /// status code like "200".
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ResponseStatusCode : pb::IMessage<ResponseStatusCode>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3320,6 +3327,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// Information required for a TCP Uptime check request.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TcpCheck : pb::IMessage<TcpCheck>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3570,6 +3578,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// 1&amp;nbsp;MB of a TCP check's response) are examined for purposes of content
       /// matching.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ContentMatcher : pb::IMessage<ContentMatcher>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3944,6 +3953,7 @@ namespace Google.Cloud.Monitoring.V3 {
           /// Used for `ContentMatcherOption::MATCHES_JSON_PATH` and
           /// `ContentMatcherOption::NOT_MATCHES_JSON_PATH`.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class JsonPathMatcher : pb::IMessage<JsonPathMatcher>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4222,6 +4232,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// Contains the region, location, and list of IP
   /// addresses where checkers in the location run from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UptimeCheckIp : pb::IMessage<UptimeCheckIp>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

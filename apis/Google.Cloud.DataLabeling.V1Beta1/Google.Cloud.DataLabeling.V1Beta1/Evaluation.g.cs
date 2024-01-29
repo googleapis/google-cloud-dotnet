@@ -103,6 +103,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Describes an evaluation between a machine learning model's predictions and
   /// ground truth labels. Created when an [EvaluationJob][google.cloud.datalabeling.v1beta1.EvaluationJob] runs successfully.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Evaluation : pb::IMessage<Evaluation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -586,6 +587,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// Configuration details used for calculating evaluation metrics and creating an
   /// [Evaluation][google.cloud.datalabeling.v1beta1.Evaluation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationConfig : pb::IMessage<EvaluationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -826,6 +828,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Options regarding evaluation between bounding boxes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingBoxEvaluationOptions : pb::IMessage<BoundingBoxEvaluationOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1023,6 +1026,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EvaluationMetrics : pb::IMessage<EvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1311,6 +1315,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metrics calculated for a classification model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassificationMetrics : pb::IMessage<ClassificationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1565,6 +1570,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Metrics calculated for an image object detection (bounding box) model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectDetectionMetrics : pb::IMessage<ObjectDetectionMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1766,6 +1772,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrCurve : pb::IMessage<PrCurve>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2083,6 +2090,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2656,6 +2664,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// when the metrics entry aggregates multiple labels. Not applicable when the
   /// entry is for a single label.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfusionMatrix : pb::IMessage<ConfusionMatrix>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2837,6 +2846,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfusionMatrixEntry : pb::IMessage<ConfusionMatrixEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3083,6 +3093,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// A row in the confusion matrix. Each entry in this row has the same
       /// ground truth label.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Row : pb::IMessage<Row>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -68,6 +68,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// <summary>
   /// A floating point interval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Interval : pb::IMessage<Interval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -506,6 +507,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// A custom attribute that is not explicitly modeled in a resource, e.g.
   /// [UserEvent][google.cloud.discoveryengine.v1.UserEvent].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomAttribute : pb::IMessage<CustomAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -738,6 +740,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// <summary>
   /// Information of an end user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserInfo : pb::IMessage<UserInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -53,6 +53,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Contains annotation details specific to text sentiment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSentimentAnnotation : pb::IMessage<TextSentimentAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -259,6 +260,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model evaluation metrics for text sentiment problems.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSentimentEvaluationMetrics : pb::IMessage<TextSentimentEvaluationMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

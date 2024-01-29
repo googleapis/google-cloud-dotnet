@@ -77,6 +77,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Metadata describing an [Operation][google.longrunning.Operation]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadataV1 : pb::IMessage<OperationMetadataV1>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

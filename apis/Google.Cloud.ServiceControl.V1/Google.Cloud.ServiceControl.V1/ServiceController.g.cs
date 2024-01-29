@@ -87,6 +87,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Request message for the Check method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckRequest : pb::IMessage<CheckRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -380,6 +381,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Response message for the Check method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckResponse : pb::IMessage<CheckResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -742,6 +744,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// <summary>
       /// Contains additional information about the check operation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CheckInfo : pb::IMessage<CheckInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -977,6 +980,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// <summary>
       /// `ConsumerInfo` provides information about the consumer.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConsumerInfo : pb::IMessage<ConsumerInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1301,6 +1305,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Request message for the Report method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportRequest : pb::IMessage<ReportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1584,6 +1589,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Response message for the Report method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReportResponse : pb::IMessage<ReportResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1865,6 +1871,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// Represents the processing error of one
       /// [Operation][google.api.servicecontrol.v1.Operation] in the request.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReportError : pb::IMessage<ReportError>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

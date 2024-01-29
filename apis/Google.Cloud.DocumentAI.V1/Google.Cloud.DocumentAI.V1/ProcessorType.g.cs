@@ -55,6 +55,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// A processor type is responsible for performing a certain document
   /// understanding task on a certain type of document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessorType : pb::IMessage<ProcessorType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -473,6 +474,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// The location information about where the processor is available.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LocationInfo : pb::IMessage<LocationInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

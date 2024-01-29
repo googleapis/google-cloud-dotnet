@@ -48,6 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// information, see [Filtering on array-type
   /// fields](https://cloud.google.com/security-command-center/docs/how-to-api-list-findings#array-contains-filtering).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Label : pb::IMessage<Label>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

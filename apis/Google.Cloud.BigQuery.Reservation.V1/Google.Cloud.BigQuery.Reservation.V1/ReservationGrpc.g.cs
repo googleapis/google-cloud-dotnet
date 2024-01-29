@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -619,6 +619,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::ServerCallContext context)
       {
@@ -1860,6 +1861,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1893,6 +1895,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::CallOptions options)
       {
@@ -1928,6 +1931,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1961,6 +1965,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::CallOptions options)
       {

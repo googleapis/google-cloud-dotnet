@@ -394,6 +394,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// operations that are idempotent, such as deleting old rows from a very large
   /// table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -760,6 +761,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// Message type to initiate a read-write transaction. Currently this
       /// transaction type has no options.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -990,6 +992,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <summary>
       /// Message type to initiate a Partitioned DML transaction.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PartitionedDml : pb::IMessage<PartitionedDml>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1145,6 +1148,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <summary>
       /// Message type to initiate a read-only transaction.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadOnly : pb::IMessage<ReadOnly>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1698,6 +1702,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// <summary>
   /// A transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Transaction : pb::IMessage<Transaction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1959,6 +1964,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more
   /// information about transactions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionSelector : pb::IMessage<TransactionSelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

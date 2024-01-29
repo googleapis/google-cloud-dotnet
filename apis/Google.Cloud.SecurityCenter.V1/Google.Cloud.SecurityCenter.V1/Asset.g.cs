@@ -80,6 +80,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// within the context of Security Command Center and don't affect the referenced
   /// Google Cloud resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Asset : pb::IMessage<Asset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -606,6 +607,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// Security Command Center managed properties. These properties are managed by
       /// Security Command Center and cannot be modified by the user.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SecurityCenterProperties : pb::IMessage<SecurityCenterProperties>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1111,6 +1113,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// and defined by the Google Cloud resource and cannot be modified by the
       /// user.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IamPolicy : pb::IMessage<IamPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

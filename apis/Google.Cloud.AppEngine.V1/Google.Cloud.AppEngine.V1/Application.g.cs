@@ -72,6 +72,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// An Application resource contains the top-level configuration of an App
   /// Engine application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Application : pb::IMessage<Application>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -912,6 +913,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <summary>
       /// Identity-Aware Proxy
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IdentityAwareProxy : pb::IMessage<IdentityAwareProxy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1240,6 +1242,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// The feature specific settings to be used in the application. These define
       /// behaviors that are user configurable.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FeatureSettings : pb::IMessage<FeatureSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1486,6 +1489,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Rules to match an HTTP request and dispatch that request to a service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UrlDispatchRule : pb::IMessage<UrlDispatchRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

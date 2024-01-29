@@ -68,6 +68,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// <summary>
   /// USPS representation of a US address.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UspsAddress : pb::IMessage<UspsAddress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -586,6 +587,7 @@ namespace Google.Maps.AddressValidation.V1 {
   /// recommended to integrate the backup address fields in the response if you
   /// utilize uspsData as the primary part of the response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UspsData : pb::IMessage<UspsData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

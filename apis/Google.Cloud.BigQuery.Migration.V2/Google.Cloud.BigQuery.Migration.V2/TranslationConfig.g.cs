@@ -126,6 +126,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// The translation config to capture necessary settings for a translation task
   /// and subtask.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslationConfigDetails : pb::IMessage<TranslationConfigDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -719,6 +720,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The possible dialect options for translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dialect : pb::IMessage<Dialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1685,6 +1687,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for BigQuery.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryDialect : pb::IMessage<BigQueryDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1840,6 +1843,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for HiveQL.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HiveQLDialect : pb::IMessage<HiveQLDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1995,6 +1999,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Redshift.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RedshiftDialect : pb::IMessage<RedshiftDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2150,6 +2155,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Teradata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TeradataDialect : pb::IMessage<TeradataDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2371,6 +2377,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Oracle.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleDialect : pb::IMessage<OracleDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2526,6 +2533,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for SparkSQL.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkSQLDialect : pb::IMessage<SparkSQLDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2681,6 +2689,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Snowflake.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SnowflakeDialect : pb::IMessage<SnowflakeDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2836,6 +2845,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Netezza.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetezzaDialect : pb::IMessage<NetezzaDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2991,6 +3001,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Azure Synapse.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AzureSynapseDialect : pb::IMessage<AzureSynapseDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3146,6 +3157,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Vertica.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerticaDialect : pb::IMessage<VerticaDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3301,6 +3313,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for SQL Server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SQLServerDialect : pb::IMessage<SQLServerDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3456,6 +3469,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Postgresql.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostgresqlDialect : pb::IMessage<PostgresqlDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3611,6 +3625,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for Presto.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrestoDialect : pb::IMessage<PrestoDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3766,6 +3781,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The dialect definition for MySQL.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MySQLDialect : pb::IMessage<MySQLDialect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3922,6 +3938,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// Represents a map of name mappings using a list of key:value proto messages of
   /// existing name to desired output name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectNameMappingList : pb::IMessage<ObjectNameMappingList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4107,6 +4124,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// Represents a key-value pair of NameMappingKey to NameMappingValue to
   /// represent the mapping of SQL names from the input value to desired output.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectNameMapping : pb::IMessage<ObjectNameMapping>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4361,6 +4379,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// The potential components of a full name mapping that will be mapped
   /// during translation in the source data warehouse.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NameMappingKey : pb::IMessage<NameMappingKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4766,6 +4785,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// The potential components of a full name mapping that will be mapped
   /// during translation in the target data warehouse.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NameMappingValue : pb::IMessage<NameMappingValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5084,6 +5104,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Represents the default source environment values for the translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceEnv : pb::IMessage<SourceEnv>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

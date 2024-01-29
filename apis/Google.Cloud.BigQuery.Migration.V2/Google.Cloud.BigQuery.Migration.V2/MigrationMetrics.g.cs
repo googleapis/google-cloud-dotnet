@@ -28,27 +28,27 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "bl9tZXRyaWNzLnByb3RvEiJnb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0",
             "aW9uLnYyGh1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoXZ29vZ2xlL2FwaS9tZXRyaWMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i5QEKClRp",
-            "bWVTZXJpZXMSEwoGbWV0cmljGAEgASgJQgPgQQISPwoKdmFsdWVfdHlwZRgC",
-            "IAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGVC",
-            "A+BBAhJBCgttZXRyaWNfa2luZBgDIAEoDjInLmdvb2dsZS5hcGkuTWV0cmlj",
-            "RGVzY3JpcHRvci5NZXRyaWNLaW5kQgPgQQESPgoGcG9pbnRzGAQgAygLMiku",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5Qb2ludEID4EEC",
-            "IooBCgVQb2ludBJCCghpbnRlcnZhbBgBIAEoCzIwLmdvb2dsZS5jbG91ZC5i",
-            "aWdxdWVyeS5taWdyYXRpb24udjIuVGltZUludGVydmFsEj0KBXZhbHVlGAIg",
-            "ASgLMi4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UeXBl",
-            "ZFZhbHVlInYKDFRpbWVJbnRlcnZhbBIzCgpzdGFydF90aW1lGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEjEKCGVuZF90aW1lGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECIqoBCgpUeXBl",
-            "ZFZhbHVlEhQKCmJvb2xfdmFsdWUYASABKAhIABIVCgtpbnQ2NF92YWx1ZRgC",
-            "IAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEhYKDHN0cmluZ192YWx1",
-            "ZRgEIAEoCUgAEjYKEmRpc3RyaWJ1dGlvbl92YWx1ZRgFIAEoCzIYLmdvb2ds",
-            "ZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWVC0QEKJmNvbS5nb29nbGUu",
-            "Y2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyQhVNaWdyYXRpb25NZXRyaWNz",
-            "UHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9taWdyYXRp",
-            "b24vYXBpdjIvbWlncmF0aW9ucGI7bWlncmF0aW9ucGKqAiJHb29nbGUuQ2xv",
-            "dWQuQmlnUXVlcnkuTWlncmF0aW9uLlYyygIiR29vZ2xlXENsb3VkXEJpZ1F1",
-            "ZXJ5XE1pZ3JhdGlvblxWMmIGcHJvdG8z"));
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6QEKClRp",
+            "bWVTZXJpZXMSFAoGbWV0cmljGAEgASgJQgTiQQECEkAKCnZhbHVlX3R5cGUY",
+            "AiABKA4yJi5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3IuVmFsdWVUeXBl",
+            "QgTiQQECEkIKC21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xlLmFwaS5NZXRy",
+            "aWNEZXNjcmlwdG9yLk1ldHJpY0tpbmRCBOJBAQESPwoGcG9pbnRzGAQgAygL",
+            "MikuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5Qb2ludEIE",
+            "4kEBAiKKAQoFUG9pbnQSQgoIaW50ZXJ2YWwYASABKAsyMC5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlRpbWVJbnRlcnZhbBI9CgV2YWx1",
+            "ZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIu",
+            "VHlwZWRWYWx1ZSJ4CgxUaW1lSW50ZXJ2YWwSNAoKc3RhcnRfdGltZRgBIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQESMgoIZW5kX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQECIqoB",
+            "CgpUeXBlZFZhbHVlEhQKCmJvb2xfdmFsdWUYASABKAhIABIVCgtpbnQ2NF92",
+            "YWx1ZRgCIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgDIAEoAUgAEhYKDHN0cmlu",
+            "Z192YWx1ZRgEIAEoCUgAEjYKEmRpc3RyaWJ1dGlvbl92YWx1ZRgFIAEoCzIY",
+            "Lmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uSABCBwoFdmFsdWVC0QEKJmNvbS5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyQhVNaWdyYXRpb25N",
+            "ZXRyaWNzUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9t",
+            "aWdyYXRpb24vYXBpdjIvbWlncmF0aW9ucGI7bWlncmF0aW9ucGKqAiJHb29n",
+            "bGUuQ2xvdWQuQmlnUXVlcnkuTWlncmF0aW9uLlYyygIiR29vZ2xlXENsb3Vk",
+            "XEJpZ1F1ZXJ5XE1pZ3JhdGlvblxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +65,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// The metrics object for a SubTask.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -383,6 +384,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A single data point in a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Point : pb::IMessage<Point>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -646,6 +648,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// If the start time is the same as the end time, then the interval
   /// represents a single point in time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeInterval : pb::IMessage<TimeInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -901,6 +904,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// A single strongly-typed value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TypedValue : pb::IMessage<TypedValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

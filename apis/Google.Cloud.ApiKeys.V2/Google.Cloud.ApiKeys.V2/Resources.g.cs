@@ -27,41 +27,41 @@ namespace Google.Cloud.ApiKeys.V2 {
             "CiVnb29nbGUvYXBpL2FwaWtleXMvdjIvcmVzb3VyY2VzLnByb3RvEhVnb29n",
             "bGUuYXBpLmFwaWtleXMudjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8iogQKA0tleRIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSEAoDdWlkGAUgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAIgASgJEhcK",
-            "CmtleV9zdHJpbmcYAyABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGlt",
-            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtk",
-            "ZWxldGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxJACgthbm5vdGF0aW9ucxgIIAMoCzIrLmdvb2dsZS5hcGkuYXBpa2V5",
-            "cy52Mi5LZXkuQW5ub3RhdGlvbnNFbnRyeRI5CgxyZXN0cmljdGlvbnMYCSAB",
-            "KAsyIy5nb29nbGUuYXBpLmFwaWtleXMudjIuUmVzdHJpY3Rpb25zEhEKBGV0",
-            "YWcYCyABKAlCA+BBAxoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAE6YepBXgoaYXBpa2V5cy5nb29nbGVhcGlz",
-            "LmNvbS9LZXkSMnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9rZXlzL3trZXl9KgRrZXlzMgNrZXlSAQEingMKDFJlc3RyaWN0aW9u",
-            "cxJRChhicm93c2VyX2tleV9yZXN0cmljdGlvbnMYASABKAsyLS5nb29nbGUu",
-            "YXBpLmFwaWtleXMudjIuQnJvd3NlcktleVJlc3RyaWN0aW9uc0gAEk8KF3Nl",
-            "cnZlcl9rZXlfcmVzdHJpY3Rpb25zGAIgASgLMiwuZ29vZ2xlLmFwaS5hcGlr",
-            "ZXlzLnYyLlNlcnZlcktleVJlc3RyaWN0aW9uc0gAElEKGGFuZHJvaWRfa2V5",
-            "X3Jlc3RyaWN0aW9ucxgDIAEoCzItLmdvb2dsZS5hcGkuYXBpa2V5cy52Mi5B",
-            "bmRyb2lkS2V5UmVzdHJpY3Rpb25zSAASSQoUaW9zX2tleV9yZXN0cmljdGlv",
-            "bnMYBCABKAsyKS5nb29nbGUuYXBpLmFwaWtleXMudjIuSW9zS2V5UmVzdHJp",
-            "Y3Rpb25zSAASNQoLYXBpX3RhcmdldHMYBSADKAsyIC5nb29nbGUuYXBpLmFw",
-            "aWtleXMudjIuQXBpVGFyZ2V0QhUKE2NsaWVudF9yZXN0cmljdGlvbnMiMwoW",
-            "QnJvd3NlcktleVJlc3RyaWN0aW9ucxIZChFhbGxvd2VkX3JlZmVycmVycxgB",
-            "IAMoCSIsChVTZXJ2ZXJLZXlSZXN0cmljdGlvbnMSEwoLYWxsb3dlZF9pcHMY",
-            "ASADKAkiYQoWQW5kcm9pZEtleVJlc3RyaWN0aW9ucxJHChRhbGxvd2VkX2Fw",
-            "cGxpY2F0aW9ucxgBIAMoCzIpLmdvb2dsZS5hcGkuYXBpa2V5cy52Mi5BbmRy",
-            "b2lkQXBwbGljYXRpb24iRAoSQW5kcm9pZEFwcGxpY2F0aW9uEhgKEHNoYTFf",
-            "ZmluZ2VycHJpbnQYASABKAkSFAoMcGFja2FnZV9uYW1lGAIgASgJIjAKEklv",
-            "c0tleVJlc3RyaWN0aW9ucxIaChJhbGxvd2VkX2J1bmRsZV9pZHMYASADKAki",
-            "MgoJQXBpVGFyZ2V0Eg8KB3NlcnZpY2UYASABKAkSFAoHbWV0aG9kcxgCIAMo",
-            "CUID4EEBQrUBChljb20uZ29vZ2xlLmFwaS5hcGlrZXlzLnYyQg5SZXNvdXJj",
-            "ZXNQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL2FwaWtleXMvYXBpdjIv",
-            "YXBpa2V5c3BiO2FwaWtleXNwYqoCF0dvb2dsZS5DbG91ZC5BcGlLZXlzLlYy",
-            "ygIXR29vZ2xlXENsb3VkXEFwaUtleXNcVjLqAhpHb29nbGU6OkNsb3VkOjpB",
-            "cGlLZXlzOjpWMmIGcHJvdG8z"));
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8iqQQKA0tleRISCgRuYW1lGAEgASgJQgTi",
+            "QQEDEhEKA3VpZBgFIAEoCUIE4kEBAxIUCgxkaXNwbGF5X25hbWUYAiABKAkS",
+            "GAoKa2V5X3N0cmluZxgDIAEoCUIE4kEBAxI1CgtjcmVhdGVfdGltZRgEIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoLdXBkYXRl",
+            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQED",
+            "EjUKC2RlbGV0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEIE4kEBAxJACgthbm5vdGF0aW9ucxgIIAMoCzIrLmdvb2dsZS5hcGku",
+            "YXBpa2V5cy52Mi5LZXkuQW5ub3RhdGlvbnNFbnRyeRI5CgxyZXN0cmljdGlv",
+            "bnMYCSABKAsyIy5nb29nbGUuYXBpLmFwaWtleXMudjIuUmVzdHJpY3Rpb25z",
+            "EhIKBGV0YWcYCyABKAlCBOJBAQMaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmHqQV4KGmFwaWtleXMuZ29v",
+            "Z2xlYXBpcy5jb20vS2V5EjJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0va2V5cy97a2V5fSoEa2V5czIDa2V5UgEBIp4DCgxSZXN0",
+            "cmljdGlvbnMSUQoYYnJvd3Nlcl9rZXlfcmVzdHJpY3Rpb25zGAEgASgLMi0u",
+            "Z29vZ2xlLmFwaS5hcGlrZXlzLnYyLkJyb3dzZXJLZXlSZXN0cmljdGlvbnNI",
+            "ABJPChdzZXJ2ZXJfa2V5X3Jlc3RyaWN0aW9ucxgCIAEoCzIsLmdvb2dsZS5h",
+            "cGkuYXBpa2V5cy52Mi5TZXJ2ZXJLZXlSZXN0cmljdGlvbnNIABJRChhhbmRy",
+            "b2lkX2tleV9yZXN0cmljdGlvbnMYAyABKAsyLS5nb29nbGUuYXBpLmFwaWtl",
+            "eXMudjIuQW5kcm9pZEtleVJlc3RyaWN0aW9uc0gAEkkKFGlvc19rZXlfcmVz",
+            "dHJpY3Rpb25zGAQgASgLMikuZ29vZ2xlLmFwaS5hcGlrZXlzLnYyLklvc0tl",
+            "eVJlc3RyaWN0aW9uc0gAEjUKC2FwaV90YXJnZXRzGAUgAygLMiAuZ29vZ2xl",
+            "LmFwaS5hcGlrZXlzLnYyLkFwaVRhcmdldEIVChNjbGllbnRfcmVzdHJpY3Rp",
+            "b25zIjMKFkJyb3dzZXJLZXlSZXN0cmljdGlvbnMSGQoRYWxsb3dlZF9yZWZl",
+            "cnJlcnMYASADKAkiLAoVU2VydmVyS2V5UmVzdHJpY3Rpb25zEhMKC2FsbG93",
+            "ZWRfaXBzGAEgAygJImEKFkFuZHJvaWRLZXlSZXN0cmljdGlvbnMSRwoUYWxs",
+            "b3dlZF9hcHBsaWNhdGlvbnMYASADKAsyKS5nb29nbGUuYXBpLmFwaWtleXMu",
+            "djIuQW5kcm9pZEFwcGxpY2F0aW9uIkQKEkFuZHJvaWRBcHBsaWNhdGlvbhIY",
+            "ChBzaGExX2ZpbmdlcnByaW50GAEgASgJEhQKDHBhY2thZ2VfbmFtZRgCIAEo",
+            "CSIwChJJb3NLZXlSZXN0cmljdGlvbnMSGgoSYWxsb3dlZF9idW5kbGVfaWRz",
+            "GAEgAygJIjMKCUFwaVRhcmdldBIPCgdzZXJ2aWNlGAEgASgJEhUKB21ldGhv",
+            "ZHMYAiADKAlCBOJBAQFCtQEKGWNvbS5nb29nbGUuYXBpLmFwaWtleXMudjJC",
+            "DlJlc291cmNlc1Byb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vYXBpa2V5",
+            "cy9hcGl2Mi9hcGlrZXlzcGI7YXBpa2V5c3BiqgIXR29vZ2xlLkNsb3VkLkFw",
+            "aUtleXMuVjLKAhdHb29nbGVcQ2xvdWRcQXBpS2V5c1xWMuoCGkdvb2dsZTo6",
+            "Q2xvdWQ6OkFwaUtleXM6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,6 +82,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The representation of a key managed by the API Keys API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Key : pb::IMessage<Key>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,6 +680,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// Describes the restrictions on the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Restrictions : pb::IMessage<Restrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1117,6 +1119,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The HTTP referrers (websites) that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BrowserKeyRestrictions : pb::IMessage<BrowserKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1302,6 +1305,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The IP addresses of callers that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServerKeyRestrictions : pb::IMessage<ServerKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1487,6 +1491,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The Android apps that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AndroidKeyRestrictions : pb::IMessage<AndroidKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1672,6 +1677,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// Identifier of an Android application for key use.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AndroidApplication : pb::IMessage<AndroidApplication>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1910,6 +1916,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The iOS apps that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IosKeyRestrictions : pb::IMessage<IosKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2095,6 +2102,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// A restriction for a specific service and optionally one or multiple
   /// specific methods. Both fields are case insensitive.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiTarget : pb::IMessage<ApiTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

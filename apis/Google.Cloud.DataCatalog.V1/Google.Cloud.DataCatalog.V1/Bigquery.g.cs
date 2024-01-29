@@ -60,6 +60,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Specification for the BigQuery connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryConnectionSpec : pb::IMessage<BigQueryConnectionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -401,6 +402,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Specification for the BigQuery connection to a Cloud SQL instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlBigQueryConnectionSpec : pb::IMessage<CloudSqlBigQueryConnectionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -702,6 +704,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Fields specific for BigQuery routines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryRoutineSpec : pb::IMessage<BigQueryRoutineSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

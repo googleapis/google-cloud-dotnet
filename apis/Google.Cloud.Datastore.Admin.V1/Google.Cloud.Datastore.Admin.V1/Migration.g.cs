@@ -136,6 +136,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// Cloud Firestore in Datastore
   /// mode](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrationStateEvent : pb::IMessage<MigrationStateEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// Datastore to Cloud Firestore in Datastore
   /// mode](https://cloud.google.com/datastore/docs/upgrade-to-firestore).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrationProgressEvent : pb::IMessage<MigrationProgressEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -695,6 +697,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <summary>
       /// Details for the `PREPARE` step.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PrepareStepDetails : pb::IMessage<PrepareStepDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -891,6 +894,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <summary>
       /// Details for the `REDIRECT_WRITES` step.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RedirectWritesStepDetails : pb::IMessage<RedirectWritesStepDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

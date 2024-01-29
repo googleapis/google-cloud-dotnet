@@ -63,6 +63,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents Pub/Sub message content describing customer update.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomerEvent : pb::IMessage<CustomerEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -325,6 +326,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents Pub/Sub message content describing entitlement update.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntitlementEvent : pb::IMessage<EntitlementEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -631,6 +633,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Represents information which resellers will get as part of notification from
   /// Pub/Sub.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubscriberEvent : pb::IMessage<SubscriberEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

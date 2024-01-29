@@ -49,6 +49,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Represents a notification sent to Cloud Pub/Sub subscribers for
   /// human agent assistant events in a specific conversation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HumanAgentAssistantEvent : pb::IMessage<HumanAgentAssistantEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

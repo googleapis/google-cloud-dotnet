@@ -54,6 +54,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// container of findings that come from the same scanner, logger, monitor, and
   /// other tools.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Source : pb::IMessage<Source>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -65,6 +65,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// The request message for a webhook call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebhookRequest : pb::IMessage<WebhookRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -419,6 +420,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// [Protocol Buffers Language
   /// Guide](https://developers.google.com/protocol-buffers/docs/proto3#json).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebhookResponse : pb::IMessage<WebhookResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -872,6 +874,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Represents the contents of the original request that was passed to
   /// the `[Streaming]DetectIntent` call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OriginalDetectIntentRequest : pb::IMessage<OriginalDetectIntentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

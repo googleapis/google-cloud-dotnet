@@ -46,6 +46,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Payload proto for "clouddeploy.googleapis.com/automation"
   /// Platform Log event that describes the Automation related events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutomationEvent : pb::IMessage<AutomationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

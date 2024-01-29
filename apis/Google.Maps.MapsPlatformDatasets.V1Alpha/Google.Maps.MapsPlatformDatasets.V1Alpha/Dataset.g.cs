@@ -29,7 +29,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
             "LnYxYWxwaGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
             "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aOmdvb2dsZS9tYXBzL21hcHNwbGF0",
             "Zm9ybWRhdGFzZXRzL3YxYWxwaGEvZGF0YV9zb3VyY2UucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8irgUKB0RhdGFzZXQSDAoEbmFt",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8isgUKB0RhdGFzZXQSDAoEbmFt",
             "ZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24Y",
             "AyABKAkSEgoKdmVyc2lvbl9pZBgEIAEoCRI+CgV1c2FnZRgFIAMoDjIvLmdv",
             "b2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGEuVXNhZ2US",
@@ -38,24 +38,24 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
             "Cmdjc19zb3VyY2UYByABKAsyMy5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1k",
             "YXRhc2V0cy52MWFscGhhLkdjc1NvdXJjZUgAEj8KBnN0YXR1cxgMIAEoDjIv",
             "Lmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGEuU3Rh",
-            "dGUSNAoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSPAoTdmVyc2lvbl9jcmVhdGVfdGltZRgK",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIgChN2ZXJz",
-            "aW9uX2Rlc2NyaXB0aW9uGAsgASgJQgPgQQM6V+pBVAorbWFwc3BsYXRmb3Jt",
-            "ZGF0YXNldHMuZ29vZ2xlYXBpcy5jb20vRGF0YXNldBIlcHJvamVjdHMve3By",
-            "b2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0fUINCgtkYXRhX3NvdXJjZSp1CgVV",
-            "c2FnZRIVChFVU0FHRV9VTlNQRUNJRklFRBAAEh0KGVVTQUdFX0RBVEFfRFJJ",
-            "VkVOX1NUWUxJTkcQARIaChZVU0FHRV9BUkVBX0FGRk9SREFOQ0VTEAISGgoW",
-            "VVNBR0VfQVNTSVNURURfRFJJVklORxADKmgKBVN0YXRlEhUKEVNUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASEwoPU1RBVEVfSU1QT1JUSU5HEAESGgoWU1RBVEVfSU1Q",
-            "T1JUX1NVQ0NFRURFRBACEhcKE1NUQVRFX0lNUE9SVF9GQUlMRUQQA0L8AQos",
-            "Y29tLmdvb2dsZS5tYXBzLm1hcHNwbGF0Zm9ybWRhdGFzZXRzLnYxYWxwaGFC",
-            "DERhdGFzZXRQcm90b1ABWmZjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvbWFw",
-            "c3BsYXRmb3JtZGF0YXNldHMvYXBpdjFhbHBoYS9tYXBzcGxhdGZvcm1kYXRh",
-            "c2V0c3BiO21hcHNwbGF0Zm9ybWRhdGFzZXRzcGKqAihHb29nbGUuTWFwcy5N",
-            "YXBzUGxhdGZvcm1EYXRhc2V0cy5WMUFscGhhygIoR29vZ2xlXE1hcHNcTWFw",
-            "c1BsYXRmb3JtRGF0YXNldHNcVjFhbHBoYWIGcHJvdG8z"));
+            "dGUSNQoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI9ChN2ZXJzaW9uX2NyZWF0ZV90aW1l",
+            "GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIhChN2",
+            "ZXJzaW9uX2Rlc2NyaXB0aW9uGAsgASgJQgTiQQEDOlfqQVQKK21hcHNwbGF0",
+            "Zm9ybWRhdGFzZXRzLmdvb2dsZWFwaXMuY29tL0RhdGFzZXQSJXByb2plY3Rz",
+            "L3twcm9qZWN0fS9kYXRhc2V0cy97ZGF0YXNldH1CDQoLZGF0YV9zb3VyY2Uq",
+            "dQoFVXNhZ2USFQoRVVNBR0VfVU5TUEVDSUZJRUQQABIdChlVU0FHRV9EQVRB",
+            "X0RSSVZFTl9TVFlMSU5HEAESGgoWVVNBR0VfQVJFQV9BRkZPUkRBTkNFUxAC",
+            "EhoKFlVTQUdFX0FTU0lTVEVEX0RSSVZJTkcQAypoCgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEhMKD1NUQVRFX0lNUE9SVElORxABEhoKFlNUQVRF",
+            "X0lNUE9SVF9TVUNDRUVERUQQAhIXChNTVEFURV9JTVBPUlRfRkFJTEVEEANC",
+            "/AEKLGNvbS5nb29nbGUubWFwcy5tYXBzcGxhdGZvcm1kYXRhc2V0cy52MWFs",
+            "cGhhQgxEYXRhc2V0UHJvdG9QAVpmY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBz",
+            "L21hcHNwbGF0Zm9ybWRhdGFzZXRzL2FwaXYxYWxwaGEvbWFwc3BsYXRmb3Jt",
+            "ZGF0YXNldHNwYjttYXBzcGxhdGZvcm1kYXRhc2V0c3BiqgIoR29vZ2xlLk1h",
+            "cHMuTWFwc1BsYXRmb3JtRGF0YXNldHMuVjFBbHBoYcoCKEdvb2dsZVxNYXBz",
+            "XE1hcHNQbGF0Zm9ybURhdGFzZXRzXFYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.MapsPlatformDatasets.V1Alpha.DataSourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.MapsPlatformDatasets.V1Alpha.Usage), typeof(global::Google.Maps.MapsPlatformDatasets.V1Alpha.State), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,6 +117,7 @@ namespace Google.Maps.MapsPlatformDatasets.V1Alpha {
   /// <summary>
   /// A representation of a maps platform dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dataset : pb::IMessage<Dataset>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

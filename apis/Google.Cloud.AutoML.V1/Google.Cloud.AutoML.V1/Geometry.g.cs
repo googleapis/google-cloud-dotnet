@@ -51,6 +51,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// have size 10 x 20 then a point with normalized coordinates (0.1, 0.3) would
   /// be at the position (1, 6) on that plane.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -288,6 +289,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// On output both vertices and normalized_vertices are provided.
   /// The polygon is formed by connecting vertices in the order they are listed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -46,6 +46,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// Describes a change made to a configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MutationRecord : pb::IMessage<MutationRecord>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

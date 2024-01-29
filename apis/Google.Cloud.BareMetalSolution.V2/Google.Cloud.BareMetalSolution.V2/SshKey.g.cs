@@ -27,27 +27,27 @@ namespace Google.Cloud.BareMetalSolution.V2 {
             "Ci9nb29nbGUvY2xvdWQvYmFyZW1ldGFsc29sdXRpb24vdjIvc3NoX2tleS5w",
             "cm90bxIhZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9uLnYyGh9nb29n",
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvIpgBCgZTU0hLZXkSEQoEbmFtZRgBIAEoCUID4EEDEhIKCnB1",
-            "YmxpY19rZXkYAiABKAk6Z+pBZAonYmFyZW1ldGFsc29sdXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vU3NoS2V5Ejlwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vc3NoS2V5cy97c3NoX2tleX0idgoSTGlzdFNTSEtleXNS",
-            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29v",
-            "Z2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YAyABKAkiawoTTGlzdFNTSEtleXNSZXNwb25zZRI7Cghzc2hf",
-            "a2V5cxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52",
-            "Mi5TU0hLZXkSFwoPbmV4dF9wYWdlX3Rva2VuGFogASgJIqoBChNDcmVhdGVT",
-            "U0hLZXlSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlv",
-            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SPwoHc3NoX2tleRgCIAEoCzIp",
-            "Lmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5TU0hLZXlCA+BB",
-            "AhIXCgpzc2hfa2V5X2lkGAMgASgJQgPgQQIiVAoTRGVsZXRlU1NIS2V5UmVx",
-            "dWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2JhcmVtZXRhbHNvbHV0aW9u",
-            "Lmdvb2dsZWFwaXMuY29tL1NzaEtleUL6AQolY29tLmdvb2dsZS5jbG91ZC5i",
-            "YXJlbWV0YWxzb2x1dGlvbi52MkILU3NoS2V5UHJvdG9QAVpTY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJlbWV0YWxz",
-            "b2x1dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUuQ2xvdWQu",
-            "QmFyZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFyZU1ldGFs",
-            "U29sdXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxTb2x1dGlv",
-            "bjo6VjJiBnByb3RvMw=="));
+            "cmNlLnByb3RvIpkBCgZTU0hLZXkSEgoEbmFtZRgBIAEoCUIE4kEBAxISCgpw",
+            "dWJsaWNfa2V5GAIgASgJOmfqQWQKJ2JhcmVtZXRhbHNvbHV0aW9uLmdvb2ds",
+            "ZWFwaXMuY29tL1NzaEtleRI5cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3NzaEtleXMve3NzaF9rZXl9IncKEkxpc3RTU0hLZXlz",
+            "UmVxdWVzdBI6CgZwYXJlbnQYASABKAlCKuJBAQL6QSMKIWxvY2F0aW9ucy5n",
+            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCSJrChNMaXN0U1NIS2V5c1Jlc3BvbnNlEjsKCHNz",
+            "aF9rZXlzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmJhcmVtZXRhbHNvbHV0aW9u",
+            "LnYyLlNTSEtleRIXCg9uZXh0X3BhZ2VfdG9rZW4YWiABKAkirQEKE0NyZWF0",
+            "ZVNTSEtleVJlcXVlc3QSOgoGcGFyZW50GAEgASgJQiriQQEC+kEjCiFsb2Nh",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SQAoHc3NoX2tleRgCIAEo",
+            "CzIpLmdvb2dsZS5jbG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52Mi5TU0hLZXlC",
+            "BOJBAQISGAoKc3NoX2tleV9pZBgDIAEoCUIE4kEBAiJVChNEZWxldGVTU0hL",
+            "ZXlSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOJBAQL6QSkKJ2JhcmVtZXRhbHNv",
+            "bHV0aW9uLmdvb2dsZWFwaXMuY29tL1NzaEtleUL6AQolY29tLmdvb2dsZS5j",
+            "bG91ZC5iYXJlbWV0YWxzb2x1dGlvbi52MkILU3NoS2V5UHJvdG9QAVpTY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9iYXJlbWV0YWxzb2x1dGlvbi9hcGl2Mi9iYXJl",
+            "bWV0YWxzb2x1dGlvbnBiO2JhcmVtZXRhbHNvbHV0aW9ucGKqAiFHb29nbGUu",
+            "Q2xvdWQuQmFyZU1ldGFsU29sdXRpb24uVjLKAiFHb29nbGVcQ2xvdWRcQmFy",
+            "ZU1ldGFsU29sdXRpb25cVjLqAiRHb29nbGU6OkNsb3VkOjpCYXJlTWV0YWxT",
+            "b2x1dGlvbjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +65,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// An SSH key, used for authorizing with the interactive serial console feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SSHKey : pb::IMessage<SSHKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -301,6 +302,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for listing the public SSH keys in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSSHKeysRequest : pb::IMessage<ListSSHKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -577,6 +579,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for response of ListSSHKeys.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSSHKeysResponse : pb::IMessage<ListSSHKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -802,6 +805,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for registering a public SSH key in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSSHKeyRequest : pb::IMessage<CreateSSHKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1090,6 +1094,7 @@ namespace Google.Cloud.BareMetalSolution.V2 {
   /// <summary>
   /// Message for deleting an SSH key from a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSSHKeyRequest : pb::IMessage<DeleteSSHKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

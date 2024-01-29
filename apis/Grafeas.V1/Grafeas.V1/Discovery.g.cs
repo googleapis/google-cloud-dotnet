@@ -28,7 +28,7 @@ namespace Grafeas.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
             "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
             "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
-            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/AUKE0Rp",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/QUKE0Rp",
             "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
             "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
             "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
@@ -38,16 +38,16 @@ namespace Grafeas.V1 {
             "IAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzEjEKFWFuYWx5c2lzX3N0YXR1c19l",
             "cnJvchgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEgsKA2NwZRgEIAEoCRIy",
             "Cg5sYXN0X3NjYW5fdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASNQoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDGioKEUFuYWx5c2lzQ29tcGxldGVkEhUKDWFuYWx5",
-            "c2lzX3R5cGUYASADKAkiUwoSQ29udGludW91c0FuYWx5c2lzEiMKH0NPTlRJ",
-            "TlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJ",
-            "TkFDVElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtBTkFMWVNJU19TVEFU",
-            "VVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIU0NBTk5JTkcQAhIU",
-            "ChBGSU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQAxITCg9GSU5JU0hF",
-            "RF9GQUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRFRBAFGgIQAUJRCg1p",
-            "by5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "c3RhbXASNgoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEIE4kEBAxoqChFBbmFseXNpc0NvbXBsZXRlZBIVCg1hbmFs",
+            "eXNpc190eXBlGAEgAygJIlMKEkNvbnRpbnVvdXNBbmFseXNpcxIjCh9DT05U",
+            "SU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoI",
+            "SU5BQ1RJVkUQAiKjAQoOQW5hbHlzaXNTdGF0dXMSHwobQU5BTFlTSVNfU1RB",
+            "VFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwKCFNDQU5OSU5HEAIS",
+            "FAoQRklOSVNIRURfU1VDQ0VTUxADEgwKCENPTVBMRVRFEAMSEwoPRklOSVNI",
+            "RURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5TVVBQT1JURUQQBRoCEAFCUQoN",
+            "aW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Grafeas.V1 {
   /// exists in a provider's project. A `Discovery` occurrence is created in a
   /// consumer's project at the start of analysis.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoveryNote : pb::IMessage<DiscoveryNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -260,6 +261,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Provides information about the analysis status of a discovered resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoveryOccurrence : pb::IMessage<DiscoveryOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -818,6 +820,7 @@ namespace Grafeas.V1 {
       /// Indicates which analysis completed successfully. Multiple types of
       /// analysis can be performed on a single resource.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AnalysisCompleted : pb::IMessage<AnalysisCompleted>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

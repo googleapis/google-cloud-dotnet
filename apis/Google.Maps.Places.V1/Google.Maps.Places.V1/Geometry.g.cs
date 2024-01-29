@@ -26,13 +26,13 @@ namespace Google.Maps.Places.V1 {
           string.Concat(
             "CiRnb29nbGUvbWFwcy9wbGFjZXMvdjEvZ2VvbWV0cnkucHJvdG8SFWdvb2ds",
             "ZS5tYXBzLnBsYWNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvIkcKBkNpcmNsZRIoCgZj",
-            "ZW50ZXIYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCA+BBAhITCgZyYWRp",
-            "dXMYAiABKAFCA+BBAkKhAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIN",
-            "R2VvbWV0cnlQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxh",
-            "Y2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29v",
-            "Z2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZw",
-            "cm90bzM="));
+            "cm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvIkkKBkNpcmNsZRIpCgZj",
+            "ZW50ZXIYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmdCBOJBAQISFAoGcmFk",
+            "aXVzGAIgASgBQgTiQQECQqEBChljb20uZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
+            "Qg1HZW9tZXRyeVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9w",
+            "bGFjZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGL4AQGiAgZHTVBTVjGqAhVH",
+            "b29nbGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFwc1xQbGFjZXNcVjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,6 +46,7 @@ namespace Google.Maps.Places.V1 {
   /// <summary>
   /// Circle with a LatLng as center and radius.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Circle : pb::IMessage<Circle>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

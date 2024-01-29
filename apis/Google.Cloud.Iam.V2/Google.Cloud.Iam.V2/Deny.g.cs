@@ -46,6 +46,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// A deny rule in an IAM deny policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DenyRule : pb::IMessage<DenyRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

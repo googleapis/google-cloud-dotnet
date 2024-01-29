@@ -47,6 +47,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Platform Log event that describes the failure to send target status change
   /// Pub/Sub notification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TargetNotificationEvent : pb::IMessage<TargetNotificationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -52,6 +52,7 @@ namespace Google.Apps.Script.Type.Drive {
   /// <summary>
   /// Drive add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DriveAddOnManifest : pb::IMessage<DriveAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -308,6 +309,7 @@ namespace Google.Apps.Script.Type.Drive {
   /// A generic extension point with common features, e.g. something that simply
   /// needs a corresponding run function to work.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DriveExtensionPoint : pb::IMessage<DriveExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

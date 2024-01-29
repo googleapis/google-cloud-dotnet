@@ -29,21 +29,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "L2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
             "ZXNvdXJjZS5wcm90bxonZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2V2",
-            "ZW50LnByb3RvIpQBChhDcmVhdGVDbGllbnRFdmVudFJlcXVlc3QSMwoGcGFy",
-            "ZW50GAEgASgJQiPgQQL6QR0SG2pvYnMuZ29vZ2xlYXBpcy5jb20vQ29tcGFu",
-            "eRJDCgxjbGllbnRfZXZlbnQYAiABKAsyKC5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuQ2xpZW50RXZlbnRCA+BBAjL6AgoMRXZlbnRTZXJ2aWNlEvsB",
-            "ChFDcmVhdGVDbGllbnRFdmVudBI1Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5DcmVhdGVDbGllbnRFdmVudFJlcXVlc3QaKC5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQihAGC0+STAmgiMy92NGJldGEx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NsaWVudEV2ZW50czoB",
-            "KlouIikvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NsaWVudEV2ZW50",
-            "czoBKtpBE3BhcmVudCxjbGllbnRfZXZlbnQabMpBE2pvYnMuZ29vZ2xlYXBp",
-            "cy5jb23SQVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvam9i",
-            "c0J1Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhFFdmVudFNl",
-            "cnZpY2VQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL3RhbGVudC9hcGl2",
-            "NGJldGExL3RhbGVudHBiO3RhbGVudHBiogIDQ1RTYgZwcm90bzM="));
+            "ZW50LnByb3RvIpYBChhDcmVhdGVDbGllbnRFdmVudFJlcXVlc3QSNAoGcGFy",
+            "ZW50GAEgASgJQiTiQQEC+kEdEhtqb2JzLmdvb2dsZWFwaXMuY29tL0NvbXBh",
+            "bnkSRAoMY2xpZW50X2V2ZW50GAIgASgLMiguZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkNsaWVudEV2ZW50QgTiQQECMvoCCgxFdmVudFNlcnZpY2US",
+            "+wEKEUNyZWF0ZUNsaWVudEV2ZW50EjUuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLkNyZWF0ZUNsaWVudEV2ZW50UmVxdWVzdBooLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5DbGllbnRFdmVudCKEAdpBE3BhcmVudCxjbGll",
+            "bnRfZXZlbnSC0+STAmgiMy92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90",
+            "ZW5hbnRzLyp9L2NsaWVudEV2ZW50czoBKlouIikvdjRiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyp9L2NsaWVudEV2ZW50czoBKhpsykETam9icy5nb29nbGVh",
+            "cGlzLmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9q",
+            "b2JzQnUKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCEUV2ZW50",
+            "U2VydmljZVByb3RvUAFaN2Nsb3VkLmdvb2dsZS5jb20vZ28vdGFsZW50L2Fw",
+            "aXY0YmV0YTEvdGFsZW50cGI7dGFsZW50cGKiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,6 +57,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The report event request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateClientEventRequest : pb::IMessage<CreateClientEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

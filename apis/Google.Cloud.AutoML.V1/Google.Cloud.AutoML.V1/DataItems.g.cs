@@ -79,6 +79,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// A representation of an image.
   /// Only images up to 30MB in size are supported.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -360,6 +361,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// A representation of a text snippet.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSnippet : pb::IMessage<TextSnippet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -638,6 +640,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Message that describes dimension of a document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentDimensions : pb::IMessage<DocumentDimensions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -943,6 +946,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// A structured text document e.g. a PDF.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Document : pb::IMessage<Document>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1318,6 +1322,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Describes the layout information of a [text_segment][google.cloud.automl.v1.Document.Layout.text_segment] in the document.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Layout : pb::IMessage<Layout>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1729,6 +1734,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Example data used for training or prediction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExamplePayload : pb::IMessage<ExamplePayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

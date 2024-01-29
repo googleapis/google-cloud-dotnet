@@ -191,6 +191,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// **Anthos Config Management**: State for a single cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MembershipState : pb::IMessage<MembershipState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -638,6 +639,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// **Anthos Config Management**: Configuration for a single cluster.
   /// Intended to parallel the ConfigManagement CR.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MembershipSpec : pb::IMessage<MembershipSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -980,6 +982,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Configuration for Config Sync
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSync : pb::IMessage<ConfigSync>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1225,6 +1228,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Git repo configuration for a single cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitConfig : pb::IMessage<GitConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1702,6 +1706,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Configuration for Policy Controller
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyController : pb::IMessage<PolicyController>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2123,6 +2128,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Configuration for Hierarchy Controller
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HierarchyControllerConfig : pb::IMessage<HierarchyControllerConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2398,6 +2404,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Deployment state for Hierarchy Controller
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HierarchyControllerDeploymentState : pb::IMessage<HierarchyControllerDeploymentState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2633,6 +2640,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Version for Hierarchy Controller
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HierarchyControllerVersion : pb::IMessage<HierarchyControllerVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2868,6 +2876,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State for Hierarchy Controller
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HierarchyControllerState : pb::IMessage<HierarchyControllerState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3121,6 +3130,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State information for an ACM's Operator
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperatorState : pb::IMessage<OperatorState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3385,6 +3395,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Errors pertaining to the installation of ACM
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstallError : pb::IMessage<InstallError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3580,6 +3591,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State information for ConfigSync
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSyncState : pb::IMessage<ConfigSyncState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3883,6 +3895,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Specific versioning information pertaining to ConfigSync's Pods
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSyncVersion : pb::IMessage<ConfigSyncVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4278,6 +4291,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// The state of ConfigSync's deployment on a cluster
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConfigSyncDeploymentState : pb::IMessage<ConfigSyncDeploymentState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4673,6 +4687,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State indicating an ACM's progress syncing configurations to a cluster
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SyncState : pb::IMessage<SyncState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5158,6 +5173,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// An ACM created error representing a problem syncing configurations
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SyncError : pb::IMessage<SyncError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5422,6 +5438,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// Model for a config file in the git repo with an associated Sync error
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorResource : pb::IMessage<ErrorResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5746,6 +5763,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// A Kubernetes object's GVK
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GroupVersionKind : pb::IMessage<GroupVersionKind>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6021,6 +6039,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State for PolicyControllerState.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyControllerState : pb::IMessage<PolicyControllerState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6274,6 +6293,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// The build version of Gatekeeper Policy Controller is using.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyControllerVersion : pb::IMessage<PolicyControllerVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6470,6 +6490,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
   /// <summary>
   /// State of Policy Controller installation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GatekeeperDeploymentState : pb::IMessage<GatekeeperDeploymentState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

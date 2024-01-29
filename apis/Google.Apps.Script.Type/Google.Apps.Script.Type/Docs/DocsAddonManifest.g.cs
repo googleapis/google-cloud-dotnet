@@ -31,13 +31,14 @@ namespace Google.Apps.Script.Type.Docs {
             "TWFuaWZlc3QSSQoQaG9tZXBhZ2VfdHJpZ2dlchgBIAEoCzIvLmdvb2dsZS5h",
             "cHBzLnNjcmlwdC50eXBlLkhvbWVwYWdlRXh0ZW5zaW9uUG9pbnQSVwodb25f",
             "ZmlsZV9zY29wZV9ncmFudGVkX3RyaWdnZXIYAiABKAsyMC5nb29nbGUuYXBw",
-            "cy5zY3JpcHQudHlwZS5kb2NzLkRvY3NFeHRlbnNpb25Qb2ludCIvChJEb2Nz",
-            "RXh0ZW5zaW9uUG9pbnQSGQoMcnVuX2Z1bmN0aW9uGAEgASgJQgPgQQJC2gEK",
-            "IGNvbS5nb29nbGUuYXBwcy5zY3JpcHQudHlwZS5kb2NzQhZEb2NzQWRkT25N",
-            "YW5pZmVzdFByb3RvUAFaO2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvYXBwcy9zY3JpcHQvdHlwZS9kb2NzqgIcR29vZ2xlLkFwcHMu",
-            "U2NyaXB0LlR5cGUuRG9jc8oCHEdvb2dsZVxBcHBzXFNjcmlwdFxUeXBlXERv",
-            "Y3PqAiBHb29nbGU6OkFwcHM6OlNjcmlwdDo6VHlwZTo6RG9jc2IGcHJvdG8z"));
+            "cy5zY3JpcHQudHlwZS5kb2NzLkRvY3NFeHRlbnNpb25Qb2ludCIwChJEb2Nz",
+            "RXh0ZW5zaW9uUG9pbnQSGgoMcnVuX2Z1bmN0aW9uGAEgASgJQgTiQQECQtoB",
+            "CiBjb20uZ29vZ2xlLmFwcHMuc2NyaXB0LnR5cGUuZG9jc0IWRG9jc0FkZE9u",
+            "TWFuaWZlc3RQcm90b1ABWjtnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2FwcHMvc2NyaXB0L3R5cGUvZG9jc6oCHEdvb2dsZS5BcHBz",
+            "LlNjcmlwdC5UeXBlLkRvY3PKAhxHb29nbGVcQXBwc1xTY3JpcHRcVHlwZVxE",
+            "b2Nz6gIgR29vZ2xlOjpBcHBzOjpTY3JpcHQ6OlR5cGU6OkRvY3NiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +53,7 @@ namespace Google.Apps.Script.Type.Docs {
   /// <summary>
   /// Docs add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocsAddOnManifest : pb::IMessage<DocsAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -307,6 +309,7 @@ namespace Google.Apps.Script.Type.Docs {
   /// <summary>
   /// Common format for declaring a Docs add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocsExtensionPoint : pb::IMessage<DocsExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

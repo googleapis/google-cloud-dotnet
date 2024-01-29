@@ -268,6 +268,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response to the request to launch a job from Flex Template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchFlexTemplateResponse : pb::IMessage<LaunchFlexTemplateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -473,6 +474,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Container Spec.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerSpec : pb::IMessage<ContainerSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -815,6 +817,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Launch FlexTemplate Parameter.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchFlexTemplateParameter : pb::IMessage<LaunchFlexTemplateParameter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1334,6 +1337,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// The environment values to be set at runtime for flex template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FlexTemplateRuntimeEnvironment : pb::IMessage<FlexTemplateRuntimeEnvironment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2425,6 +2429,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A request to launch a Cloud Dataflow job from a FlexTemplate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchFlexTemplateRequest : pb::IMessage<LaunchFlexTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2752,6 +2757,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// The environment values to set at runtime.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RuntimeEnvironment : pb::IMessage<RuntimeEnvironment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3555,6 +3561,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a specific parameter.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParameterMetadata : pb::IMessage<ParameterMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3969,6 +3976,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata describing a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TemplateMetadata : pb::IMessage<TemplateMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4233,6 +4241,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// SDK Information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SDKInfo : pb::IMessage<SDKInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4494,6 +4503,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// RuntimeMetadata describing a runtime environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RuntimeMetadata : pb::IMessage<RuntimeMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4727,6 +4737,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A request to create a Cloud Dataflow job from a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobFromTemplateRequest : pb::IMessage<CreateJobFromTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5168,6 +5179,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A request to retrieve a Cloud Dataflow job template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTemplateRequest : pb::IMessage<GetTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5550,6 +5562,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// The response to a GetTemplate request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTemplateResponse : pb::IMessage<GetTemplateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5920,6 +5933,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Parameters to provide to the template being launched.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchTemplateParameters : pb::IMessage<LaunchTemplateParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6264,6 +6278,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A request to launch a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchTemplateRequest : pb::IMessage<LaunchTemplateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6734,6 +6749,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response to the request to launch a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LaunchTemplateResponse : pb::IMessage<LaunchTemplateResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6940,6 +6956,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Used in the error_details field of a google.rpc.Status message, this
   /// indicates problems with the template parameter.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InvalidTemplateParameters : pb::IMessage<InvalidTemplateParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7127,6 +7144,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// A specific template-parameter violation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ParameterViolation : pb::IMessage<ParameterViolation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7367,6 +7385,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Params which should be passed when launching a dynamic template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DynamicTemplateLaunchParams : pb::IMessage<DynamicTemplateLaunchParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

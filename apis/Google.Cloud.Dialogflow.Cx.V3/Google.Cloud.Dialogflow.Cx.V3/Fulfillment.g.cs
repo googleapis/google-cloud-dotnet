@@ -84,6 +84,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// [DetectIntentResponse][google.cloud.dialogflow.cx.v3.DetectIntentResponse],
   /// call the webhook (for example, to load user data from a database), or both.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Fulfillment : pb::IMessage<Fulfillment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -559,6 +560,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Setting a parameter value.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SetParameterAction : pb::IMessage<SetParameterAction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -804,6 +806,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// A list of cascading if-else conditions. Cases are mutually exclusive.
       /// The first one with a matching condition is selected, all the rest ignored.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConditionalCases : pb::IMessage<ConditionalCases>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -992,6 +995,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           /// Each case has a Boolean condition. When it is evaluated to be True, the
           /// corresponding messages will be selected and evaluated recursively.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Case : pb::IMessage<Case>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1225,6 +1229,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               /// <summary>
               /// The list of messages or conditional cases to activate for this case.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class CaseContent : pb::IMessage<CaseContent>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage

@@ -51,6 +51,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Represents a single validation error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationError : pb::IMessage<ValidationError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -362,6 +363,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Represents the output of agent validation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationResult : pb::IMessage<ValidationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

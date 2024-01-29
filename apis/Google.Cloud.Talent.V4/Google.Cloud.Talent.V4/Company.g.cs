@@ -27,23 +27,23 @@ namespace Google.Cloud.Talent.V4 {
             "CiRnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2NvbXBhbnkucHJvdG8SFmdvb2ds",
             "ZS5jbG91ZC50YWxlbnQudjQaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91",
-            "ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvIsgECgdDb21wYW55EgwKBG5hbWUY",
-            "ASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZXh0ZXJuYWxf",
-            "aWQYAyABKAlCA+BBAhIxCgRzaXplGAQgASgOMiMuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NC5Db21wYW55U2l6ZRIcChRoZWFkcXVhcnRlcnNfYWRkcmVzcxgF",
-            "IAEoCRIVCg1oaXJpbmdfYWdlbmN5GAYgASgIEhAKCGVlb190ZXh0GAcgASgJ",
-            "EhMKC3dlYnNpdGVfdXJpGAggASgJEhcKD2NhcmVlcl9zaXRlX3VyaRgJIAEo",
-            "CRIRCglpbWFnZV91cmkYCiABKAkSNAooa2V5d29yZF9zZWFyY2hhYmxlX2pv",
-            "Yl9jdXN0b21fYXR0cmlidXRlcxgLIAMoCUICGAESRgoMZGVyaXZlZF9pbmZv",
-            "GAwgASgLMisuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55LkRlcml2",
-            "ZWRJbmZvQgPgQQMSFgoJc3VzcGVuZGVkGA0gASgIQgPgQQMaTgoLRGVyaXZl",
-            "ZEluZm8SPwoVaGVhZHF1YXJ0ZXJzX2xvY2F0aW9uGAEgASgLMiAuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NC5Mb2NhdGlvbjpZ6kFWChtqb2JzLmdvb2dsZWFw",
-            "aXMuY29tL0NvbXBhbnkSN3Byb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0",
-            "ZW5hbnR9L2NvbXBhbmllcy97Y29tcGFueX1CZgoaY29tLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRCDENvbXBhbnlQcm90b1ABWjJjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3RhbGVudC9hcGl2NC90YWxlbnRwYjt0YWxlbnRwYqICA0NUU2IGcHJv",
-            "dG8z"));
+            "ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvIswECgdDb21wYW55EgwKBG5hbWUY",
+            "ASABKAkSGgoMZGlzcGxheV9uYW1lGAIgASgJQgTiQQECEhkKC2V4dGVybmFs",
+            "X2lkGAMgASgJQgTiQQECEjEKBHNpemUYBCABKA4yIy5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0LkNvbXBhbnlTaXplEhwKFGhlYWRxdWFydGVyc19hZGRyZXNz",
+            "GAUgASgJEhUKDWhpcmluZ19hZ2VuY3kYBiABKAgSEAoIZWVvX3RleHQYByAB",
+            "KAkSEwoLd2Vic2l0ZV91cmkYCCABKAkSFwoPY2FyZWVyX3NpdGVfdXJpGAkg",
+            "ASgJEhEKCWltYWdlX3VyaRgKIAEoCRI0CihrZXl3b3JkX3NlYXJjaGFibGVf",
+            "am9iX2N1c3RvbV9hdHRyaWJ1dGVzGAsgAygJQgIYARJHCgxkZXJpdmVkX2lu",
+            "Zm8YDCABKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0LkNvbXBhbnkuRGVy",
+            "aXZlZEluZm9CBOJBAQMSFwoJc3VzcGVuZGVkGA0gASgIQgTiQQEDGk4KC0Rl",
+            "cml2ZWRJbmZvEj8KFWhlYWRxdWFydGVyc19sb2NhdGlvbhgBIAEoCzIgLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjQuTG9jYXRpb246WepBVgobam9icy5nb29n",
+            "bGVhcGlzLmNvbS9Db21wYW55Ejdwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50",
+            "cy97dGVuYW50fS9jb21wYW5pZXMve2NvbXBhbnl9QmYKGmNvbS5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0QgxDb21wYW55UHJvdG9QAVoyY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby90YWxlbnQvYXBpdjQvdGFsZW50cGI7dGFsZW50cGKiAgNDVFNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,6 +59,7 @@ namespace Google.Cloud.Talent.V4 {
   /// entity that owns job postings, that is, the hiring entity responsible for
   /// employing applicants for the job position.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Company : pb::IMessage<Company>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -774,6 +775,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Derived details about the company.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

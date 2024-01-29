@@ -89,6 +89,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// services, along with a list of requirements necessary for the label to be
   /// applied.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessLevel : pb::IMessage<AccessLevel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -604,6 +605,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// <summary>
   /// `BasicLevel` is an `AccessLevel` using a set of recommended features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BasicLevel : pb::IMessage<BasicLevel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -859,6 +861,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// listed device policy AND 3) all listed access levels are granted AND 4) the
   /// request was sent at a time allowed by the DateTimeRestriction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Condition : pb::IMessage<Condition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1241,6 +1244,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// to represent the necessary conditions for the level to apply to a request.
   /// See CEL spec at: https://github.com/google/cel-spec
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomLevel : pb::IMessage<CustomLevel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1453,6 +1457,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// true for requests originating from encrypted Linux desktops and encrypted
   /// Windows desktops.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DevicePolicy : pb::IMessage<DevicePolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1821,6 +1826,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// <summary>
   /// A restriction on the OS type and version of devices making requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OsConstraint : pb::IMessage<OsConstraint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

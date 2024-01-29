@@ -118,6 +118,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::SessionControllerClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSessionControllerClient(this IServiceCollection services, sys::Action<gcdv::SessionControllerClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SessionControllerClientBuilder builder = new gcdv::SessionControllerClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::SessionTemplateControllerClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSessionTemplateControllerClient(this IServiceCollection services, sys::Action<gcdv::SessionTemplateControllerClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SessionTemplateControllerClientBuilder builder = new gcdv::SessionTemplateControllerClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::WorkflowTemplateServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">

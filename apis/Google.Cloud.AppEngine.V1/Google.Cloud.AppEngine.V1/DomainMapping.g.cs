@@ -59,6 +59,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// A domain serving an App Engine application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DomainMapping : pb::IMessage<DomainMapping>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -381,6 +382,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// SSL configuration for a `DomainMapping` resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SslSettings : pb::IMessage<SslSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -703,6 +705,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// A DNS resource record.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceRecord : pb::IMessage<ResourceRecord>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

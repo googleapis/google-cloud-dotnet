@@ -65,6 +65,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   /// Request for
   /// [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TroubleshootIamPolicyRequest : pb::IMessage<TroubleshootIamPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -271,6 +272,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   /// Response for
   /// [TroubleshootIamPolicy][google.cloud.policytroubleshooter.v1.IamChecker.TroubleshootIamPolicy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TroubleshootIamPolicyResponse : pb::IMessage<TroubleshootIamPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -26,12 +26,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9nY3MucHJvdG8SHWdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvIiIKDkdjc0Rlc3RpbmF0aW9uEhAKA3VyaRgBIAEo",
-            "CUID4EECQq4BCiFjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNC",
-            "CEdjc1Byb3RvUAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9j",
-            "eC9hcGl2My9jeHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LkN4LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6",
-            "OlYzYgZwcm90bzM="));
+            "X2JlaGF2aW9yLnByb3RvIiMKDkdjc0Rlc3RpbmF0aW9uEhEKA3VyaRgBIAEo",
+            "CUIE4kEBAkKuAQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "QghHY3NQcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cv",
+            "Y3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlh",
+            "bG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNY",
+            "OjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,6 +46,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// Google Cloud Storage location for a Dialogflow operation that writes or
   /// exports objects (e.g. exported agent or transcripts) outside of Dialogflow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

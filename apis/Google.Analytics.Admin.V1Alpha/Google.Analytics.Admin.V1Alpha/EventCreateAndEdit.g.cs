@@ -27,32 +27,33 @@ namespace Google.Analytics.Admin.V1Alpha {
             "Cjpnb29nbGUvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGEvZXZlbnRfY3JlYXRl",
             "X2FuZF9lZGl0LnByb3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
             "aGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8iSQoRUGFyYW1ldGVyTXV0YXRpb24SFgoJcGFy",
-            "YW1ldGVyGAEgASgJQgPgQQISHAoPcGFyYW1ldGVyX3ZhbHVlGAIgASgJQgPg",
-            "QQIikgMKD0V2ZW50Q3JlYXRlUnVsZRIRCgRuYW1lGAEgASgJQgPgQQMSHgoR",
-            "ZGVzdGluYXRpb25fZXZlbnQYAiABKAlCA+BBAhJQChBldmVudF9jb25kaXRp",
-            "b25zGAMgAygLMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLk1h",
-            "dGNoaW5nQ29uZGl0aW9uQgPgQQISHgoWc291cmNlX2NvcHlfcGFyYW1ldGVy",
-            "cxgEIAEoCBJOChNwYXJhbWV0ZXJfbXV0YXRpb25zGAUgAygLMjEuZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLlBhcmFtZXRlck11dGF0aW9uOokB",
-            "6kGFAQotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRXZlbnRDcmVh",
-            "dGVSdWxlElRwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVhbXMve2Rh",
-            "dGFfc3RyZWFtfS9ldmVudENyZWF0ZVJ1bGVzL3tldmVudF9jcmVhdGVfcnVs",
-            "ZX0irQQKEU1hdGNoaW5nQ29uZGl0aW9uEhIKBWZpZWxkGAEgASgJQgPgQQIS",
-            "XgoPY29tcGFyaXNvbl90eXBlGAIgASgOMkAuZ29vZ2xlLmFuYWx5dGljcy5h",
-            "ZG1pbi52MWFscGhhLk1hdGNoaW5nQ29uZGl0aW9uLkNvbXBhcmlzb25UeXBl",
-            "QgPgQQISEgoFdmFsdWUYAyABKAlCA+BBAhIPCgduZWdhdGVkGAQgASgIIv4C",
-            "Cg5Db21wYXJpc29uVHlwZRIfChtDT01QQVJJU09OX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZFUVVBTFMQARIbChdFUVVBTFNfQ0FTRV9JTlNFTlNJVElWRRAC",
-            "EgwKCENPTlRBSU5TEAMSHQoZQ09OVEFJTlNfQ0FTRV9JTlNFTlNJVElWRRAE",
-            "Eg8KC1NUQVJUU19XSVRIEAUSIAocU1RBUlRTX1dJVEhfQ0FTRV9JTlNFTlNJ",
-            "VElWRRAGEg0KCUVORFNfV0lUSBAHEh4KGkVORFNfV0lUSF9DQVNFX0lOU0VO",
-            "U0lUSVZFEAgSEAoMR1JFQVRFUl9USEFOEAkSGQoVR1JFQVRFUl9USEFOX09S",
-            "X0VRVUFMEAoSDQoJTEVTU19USEFOEAsSFgoSTEVTU19USEFOX09SX0VRVUFM",
-            "EAwSFgoSUkVHVUxBUl9FWFBSRVNTSU9OEA0SJwojUkVHVUxBUl9FWFBSRVNT",
-            "SU9OX0NBU0VfSU5TRU5TSVRJVkUQDkJmCiJjb20uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5hZG1pbi52MWFscGhhUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0",
-            "aWNzL2FkbWluL2FwaXYxYWxwaGEvYWRtaW5wYjthZG1pbnBiYgZwcm90bzM="));
+            "cGkvcmVzb3VyY2UucHJvdG8iSwoRUGFyYW1ldGVyTXV0YXRpb24SFwoJcGFy",
+            "YW1ldGVyGAEgASgJQgTiQQECEh0KD3BhcmFtZXRlcl92YWx1ZRgCIAEoCUIE",
+            "4kEBAiKVAwoPRXZlbnRDcmVhdGVSdWxlEhIKBG5hbWUYASABKAlCBOJBAQMS",
+            "HwoRZGVzdGluYXRpb25fZXZlbnQYAiABKAlCBOJBAQISUQoQZXZlbnRfY29u",
+            "ZGl0aW9ucxgDIAMoCzIxLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5NYXRjaGluZ0NvbmRpdGlvbkIE4kEBAhIeChZzb3VyY2VfY29weV9wYXJh",
+            "bWV0ZXJzGAQgASgIEk4KE3BhcmFtZXRlcl9tdXRhdGlvbnMYBSADKAsyMS5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUGFyYW1ldGVyTXV0YXRp",
+            "b246iQHqQYUBCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FdmVu",
+            "dENyZWF0ZVJ1bGUSVHByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFt",
+            "cy97ZGF0YV9zdHJlYW19L2V2ZW50Q3JlYXRlUnVsZXMve2V2ZW50X2NyZWF0",
+            "ZV9ydWxlfSKwBAoRTWF0Y2hpbmdDb25kaXRpb24SEwoFZmllbGQYASABKAlC",
+            "BOJBAQISXwoPY29tcGFyaXNvbl90eXBlGAIgASgOMkAuZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLk1hdGNoaW5nQ29uZGl0aW9uLkNvbXBhcmlz",
+            "b25UeXBlQgTiQQECEhMKBXZhbHVlGAMgASgJQgTiQQECEg8KB25lZ2F0ZWQY",
+            "BCABKAgi/gIKDkNvbXBhcmlzb25UeXBlEh8KG0NPTVBBUklTT05fVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgoKBkVRVUFMUxABEhsKF0VRVUFMU19DQVNFX0lOU0VO",
+            "U0lUSVZFEAISDAoIQ09OVEFJTlMQAxIdChlDT05UQUlOU19DQVNFX0lOU0VO",
+            "U0lUSVZFEAQSDwoLU1RBUlRTX1dJVEgQBRIgChxTVEFSVFNfV0lUSF9DQVNF",
+            "X0lOU0VOU0lUSVZFEAYSDQoJRU5EU19XSVRIEAcSHgoaRU5EU19XSVRIX0NB",
+            "U0VfSU5TRU5TSVRJVkUQCBIQCgxHUkVBVEVSX1RIQU4QCRIZChVHUkVBVEVS",
+            "X1RIQU5fT1JfRVFVQUwQChINCglMRVNTX1RIQU4QCxIWChJMRVNTX1RIQU5f",
+            "T1JfRVFVQUwQDBIWChJSRUdVTEFSX0VYUFJFU1NJT04QDRInCiNSRUdVTEFS",
+            "X0VYUFJFU1NJT05fQ0FTRV9JTlNFTlNJVElWRRAOQmYKImNvbS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFQAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9hbmFseXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2FkbWlucGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -68,6 +69,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Defines an event parameter to mutate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParameterMutation : pb::IMessage<ParameterMutation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -322,6 +324,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Event Edit and Event Create rules can't be used to modify an event created
   /// from an Event Create rule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventCreateRule : pb::IMessage<EventCreateRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -669,6 +672,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Defines a condition for when an Event Edit or Event Creation rule applies to
   /// an event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MatchingCondition : pb::IMessage<MatchingCondition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

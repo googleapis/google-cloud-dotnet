@@ -28,22 +28,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b25maWcucHJvdG8SI2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
             "ZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvInoKFVB1cmdlRG9jdW1lbnRzUmVxdWVzdBI9CgZwYXJlbnQYASAB",
-            "KAlCLeBBAvpBJwolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0Jy",
-            "YW5jaBITCgZmaWx0ZXIYAiABKAlCA+BBAhINCgVmb3JjZRgDIAEoCCJxChZQ",
-            "dXJnZURvY3VtZW50c1Jlc3BvbnNlEhMKC3B1cmdlX2NvdW50GAEgASgDEkIK",
-            "DHB1cmdlX3NhbXBsZRgCIAMoCUIs+kEpCidkaXNjb3ZlcnllbmdpbmUuZ29v",
-            "Z2xlYXBpcy5jb20vRG9jdW1lbnQiqAEKFlB1cmdlRG9jdW1lbnRzTWV0YWRh",
-            "dGESLwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBIVCg1zdWNjZXNzX2NvdW50GAMgASgDEhUKDWZhaWx1cmVf",
-            "Y291bnQYBCABKANClwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxYmV0YUIQUHVyZ2VDb25maWdQcm90b1ABWlFjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5n",
-            "aW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNH",
-            "b29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxD",
-            "bG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6",
-            "RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "LnByb3RvInwKFVB1cmdlRG9jdW1lbnRzUmVxdWVzdBI+CgZwYXJlbnQYASAB",
+            "KAlCLuJBAQL6QScKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9C",
+            "cmFuY2gSFAoGZmlsdGVyGAIgASgJQgTiQQECEg0KBWZvcmNlGAMgASgIInEK",
+            "FlB1cmdlRG9jdW1lbnRzUmVzcG9uc2USEwoLcHVyZ2VfY291bnQYASABKAMS",
+            "QgoMcHVyZ2Vfc2FtcGxlGAIgAygJQiz6QSkKJ2Rpc2NvdmVyeWVuZ2luZS5n",
+            "b29nbGVhcGlzLmNvbS9Eb2N1bWVudCKoAQoWUHVyZ2VEb2N1bWVudHNNZXRh",
+            "ZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEhUKDXN1Y2Nlc3NfY291bnQYAyABKAMSFQoNZmFpbHVy",
+            "ZV9jb3VudBgEIAEoA0KXAgonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjFiZXRhQhBQdXJnZUNvbmZpZ1Byb3RvUAFaUWNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zlcnll",
+            "bmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoC",
+            "I0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xl",
+            "XENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3Vk",
+            "OjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// [DocumentService.PurgeDocuments][google.cloud.discoveryengine.v1beta.DocumentService.PurgeDocuments]
   /// method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeDocumentsRequest : pb::IMessage<PurgeDocumentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,6 +344,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// method. If the long running operation is successfully done, then this message
   /// is returned by the google.longrunning.Operations.response field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeDocumentsResponse : pb::IMessage<PurgeDocumentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -570,6 +572,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// Metadata related to the progress of the PurgeDocuments operation.
   /// This will be returned by the google.longrunning.Operation.metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PurgeDocumentsMetadata : pb::IMessage<PurgeDocumentsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

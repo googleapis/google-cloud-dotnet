@@ -77,6 +77,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// A data store connection. It represents a data store in Discovery Engine and
   /// the type of the contents it contains.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataStoreConnection : pb::IMessage<DataStoreConnection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

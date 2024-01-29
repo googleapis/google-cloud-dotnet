@@ -213,6 +213,7 @@ namespace Google.Maps.Places.V1 {
   /// <summary>
   /// All the information representing a Place.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Place : pb::IMessage<Place>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3290,6 +3291,7 @@ namespace Google.Maps.Places.V1 {
       /// The structured components that form the formatted address, if this
       /// information is available.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AddressComponent : pb::IMessage<AddressComponent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3600,6 +3602,7 @@ namespace Google.Maps.Places.V1 {
       /// global code defining a 14mx14m (1/8000th of a degree) or smaller rectangle,
       /// and compound code, replacing the prefix with a reference location.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PlusCode : pb::IMessage<PlusCode>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3838,6 +3841,7 @@ namespace Google.Maps.Places.V1 {
       /// <summary>
       /// Information about business hour of the place.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OpeningHours : pb::IMessage<OpeningHours>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4252,6 +4256,7 @@ namespace Google.Maps.Places.V1 {
           /// <summary>
           /// A period the place remains in open_now status.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Period : pb::IMessage<Period>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4508,6 +4513,7 @@ namespace Google.Maps.Places.V1 {
               /// <summary>
               /// Status changing points.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Point : pb::IMessage<Point>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -4931,6 +4937,7 @@ namespace Google.Maps.Places.V1 {
           /// the returned opening hours cover. Special days are days that could impact
           /// the business hours of a place, e.g. Christmas day.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class SpecialDay : pb::IMessage<SpecialDay>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5140,6 +5147,7 @@ namespace Google.Maps.Places.V1 {
       /// <summary>
       /// Information about data providers of this place.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Attribution : pb::IMessage<Attribution>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5375,6 +5383,7 @@ namespace Google.Maps.Places.V1 {
       /// <summary>
       /// Payment options the place accepts.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PaymentOptions : pb::IMessage<PaymentOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5754,6 +5763,7 @@ namespace Google.Maps.Places.V1 {
       /// Information about parking options for the place. A parking lot could
       /// support more than one option at the same time.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ParkingOptions : pb::IMessage<ParkingOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6297,6 +6307,7 @@ namespace Google.Maps.Places.V1 {
       /// Place resource name and id of sub destinations that relate to the place.
       /// For example, different terminals are different destinations of an airport.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SubDestination : pb::IMessage<SubDestination>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6532,6 +6543,7 @@ namespace Google.Maps.Places.V1 {
       /// <summary>
       /// Information about the accessibility options a place offers.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AccessibilityOptions : pb::IMessage<AccessibilityOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

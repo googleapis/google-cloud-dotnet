@@ -54,6 +54,7 @@ namespace Google.Cloud.Logging.Type {
   /// defined by the HTTP specification. Product-specific logging
   /// information MUST be defined in a separate message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpRequest : pb::IMessage<HttpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

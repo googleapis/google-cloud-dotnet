@@ -143,6 +143,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// A recommendation along with a suggested action. E.g., a rightsizing
   /// recommendation for an underutilized VM, IAM role recommendations, etc
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Recommendation : pb::IMessage<Recommendation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -838,6 +839,7 @@ namespace Google.Cloud.Recommender.V1 {
       /// <summary>
       /// Reference to an associated insight.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InsightReference : pb::IMessage<InsightReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1039,6 +1041,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains what resources are changing and how they are changing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecommendationContent : pb::IMessage<RecommendationContent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1274,6 +1277,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Group of operations that need to be performed atomically.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationGroup : pb::IMessage<OperationGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1467,6 +1471,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// * Allows extension to custom operations not natively supported by RFC6902.
   /// See https://tools.ietf.org/html/rfc6902 for details on the original RFC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2105,6 +2110,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains various matching options for values for a GCP resource field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValueMatcher : pb::IMessage<ValueMatcher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2346,6 +2352,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains metadata about how much money a recommendation can save or incur.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CostProjection : pb::IMessage<CostProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2653,6 +2660,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains various ways of describing the impact on Security.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecurityProjection : pb::IMessage<SecurityProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2858,6 +2866,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// Contains metadata about how much sustainability a recommendation can save or
   /// incur.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SustainabilityProjection : pb::IMessage<SustainabilityProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3103,6 +3112,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains information on the impact of a reliability recommendation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReliabilityProjection : pb::IMessage<ReliabilityProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3369,6 +3379,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains the impact a recommendation can have for a given category.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Impact : pb::IMessage<Impact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3857,6 +3868,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Information for state. Contains state and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecommendationStateInfo : pb::IMessage<RecommendationStateInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

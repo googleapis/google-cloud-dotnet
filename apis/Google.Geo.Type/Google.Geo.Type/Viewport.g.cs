@@ -78,6 +78,7 @@ namespace Google.Geo.Type {
   ///     }
   /// }
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Viewport : pb::IMessage<Viewport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

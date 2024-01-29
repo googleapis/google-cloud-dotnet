@@ -37,19 +37,19 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
             "TV9HQ1JfSU9fRU5BQkxFRBACEiUKIVJFRElSRUNUSU9OX0ZST01fR0NSX0lP",
             "X0ZJTkFMSVpFRBADOljqQVUKL2FydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBp",
             "cy5jb20vUHJvamVjdFNldHRpbmdzEiJwcm9qZWN0cy97cHJvamVjdH0vcHJv",
-            "amVjdFNldHRpbmdzImIKGUdldFByb2plY3RTZXR0aW5nc1JlcXVlc3QSRQoE",
-            "bmFtZRgBIAEoCUI34EEC+kExCi9hcnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFw",
-            "aXMuY29tL1Byb2plY3RTZXR0aW5ncyKkAQocVXBkYXRlUHJvamVjdFNldHRp",
-            "bmdzUmVxdWVzdBJTChBwcm9qZWN0X3NldHRpbmdzGAIgASgLMjkuZ29vZ2xl",
-            "LmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5Qcm9qZWN0U2V0",
-            "dGluZ3MSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrQpECCixjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVn",
-            "aXN0cnkudjFiZXRhMkINU2V0dGluZ3NQcm90b1ABWlVjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjFiZXRhMi9hcnRpZmFjdHJl",
-            "Z2lzdHJ5cGI7YXJ0aWZhY3RyZWdpc3RyeXBiqgIlR29vZ2xlLkNsb3VkLkFy",
-            "dGlmYWN0UmVnaXN0cnkuVjFCZXRhMsoCJUdvb2dsZVxDbG91ZFxBcnRpZmFj",
-            "dFJlZ2lzdHJ5XFYxYmV0YTLqAihHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJl",
-            "Z2lzdHJ5OjpWMWJldGEyYgZwcm90bzM="));
+            "amVjdFNldHRpbmdzImMKGUdldFByb2plY3RTZXR0aW5nc1JlcXVlc3QSRgoE",
+            "bmFtZRgBIAEoCUI44kEBAvpBMQovYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVh",
+            "cGlzLmNvbS9Qcm9qZWN0U2V0dGluZ3MipAEKHFVwZGF0ZVByb2plY3RTZXR0",
+            "aW5nc1JlcXVlc3QSUwoQcHJvamVjdF9zZXR0aW5ncxgCIAEoCzI5Lmdvb2ds",
+            "ZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxYmV0YTIuUHJvamVjdFNl",
+            "dHRpbmdzEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LkZpZWxkTWFza0KRAgosY29tLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJl",
+            "Z2lzdHJ5LnYxYmV0YTJCDVNldHRpbmdzUHJvdG9QAVpVY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9hcnRpZmFjdHJlZ2lzdHJ5L2FwaXYxYmV0YTIvYXJ0aWZhY3Ry",
+            "ZWdpc3RyeXBiO2FydGlmYWN0cmVnaXN0cnlwYqoCJUdvb2dsZS5DbG91ZC5B",
+            "cnRpZmFjdFJlZ2lzdHJ5LlYxQmV0YTLKAiVHb29nbGVcQ2xvdWRcQXJ0aWZh",
+            "Y3RSZWdpc3RyeVxWMWJldGEy6gIoR29vZ2xlOjpDbG91ZDo6QXJ0aWZhY3RS",
+            "ZWdpc3RyeTo6VjFiZXRhMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +65,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The Artifact Registry settings that apply to a Project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectSettings : pb::IMessage<ProjectSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -336,6 +337,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// Gets the redirection status for a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProjectSettingsRequest : pb::IMessage<GetProjectSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -531,6 +533,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// Sets the settings of the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProjectSettingsRequest : pb::IMessage<UpdateProjectSettingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

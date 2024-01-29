@@ -48,6 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// Message that contains the resource name and display name of a folder
   /// resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Folder : pb::IMessage<Folder>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

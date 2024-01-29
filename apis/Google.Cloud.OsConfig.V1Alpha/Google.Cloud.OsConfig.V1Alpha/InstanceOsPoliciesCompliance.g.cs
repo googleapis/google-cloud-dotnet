@@ -29,42 +29,42 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             "aWcudjFhbHBoYRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoxZ29vZ2xlL2Nsb3VkL29zY29u",
             "ZmlnL3YxYWxwaGEvY29uZmlnX2NvbW1vbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byLuBgocSW5zdGFuY2VPU1BvbGljaWVzQ29t",
-            "cGxpYW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSFQoIaW5zdGFuY2UYAiABKAlC",
-            "A+BBAxJKCgVzdGF0ZRgDIAEoDjI2Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
-            "MWFscGhhLk9TUG9saWN5Q29tcGxpYW5jZVN0YXRlQgPgQQMSGwoOZGV0YWls",
-            "ZWRfc3RhdGUYBCABKAlCA+BBAxIiChVkZXRhaWxlZF9zdGF0ZV9yZWFzb24Y",
-            "BSABKAlCA+BBAxJyChVvc19wb2xpY3lfY29tcGxpYW5jZXMYBiADKAsyTi5n",
-            "b29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5JbnN0YW5jZU9TUG9saWNp",
-            "ZXNDb21wbGlhbmNlLk9TUG9saWN5Q29tcGxpYW5jZUID4EEDEkMKGmxhc3Rf",
-            "Y29tcGxpYW5jZV9jaGVja190aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEiMKFmxhc3RfY29tcGxpYW5jZV9ydW5faWQYCCAB",
-            "KAlCA+BBAxqnAgoST1NQb2xpY3lDb21wbGlhbmNlEhQKDG9zX3BvbGljeV9p",
-            "ZBgBIAEoCRJNChRvc19wb2xpY3lfYXNzaWdubWVudBgCIAEoCUIv+kEsCipv",
-            "c2NvbmZpZy5nb29nbGVhcGlzLmNvbS9PU1BvbGljeUFzc2lnbm1lbnQSRQoF",
-            "c3RhdGUYBCABKA4yNi5nb29nbGUuY2xvdWQub3Njb25maWcudjFhbHBoYS5P",
-            "U1BvbGljeUNvbXBsaWFuY2VTdGF0ZRJhCh5vc19wb2xpY3lfcmVzb3VyY2Vf",
-            "Y29tcGxpYW5jZXMYBSADKAsyOS5nb29nbGUuY2xvdWQub3Njb25maWcudjFh",
-            "bHBoYS5PU1BvbGljeVJlc291cmNlQ29tcGxpYW5jZToCGAE6jgEYAepBiAEK",
-            "NG9zY29uZmlnLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlT1NQb2xpY2llc0Nv",
-            "bXBsaWFuY2USUHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9pbnN0YW5jZU9TUG9saWNpZXNDb21wbGlhbmNlcy97aW5zdGFuY2V9",
-            "IngKJkdldEluc3RhbmNlT1NQb2xpY2llc0NvbXBsaWFuY2VSZXF1ZXN0EkoK",
-            "BG5hbWUYASABKAlCPOBBAvpBNgo0b3Njb25maWcuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zdGFuY2VPU1BvbGljaWVzQ29tcGxpYW5jZToCGAEioAEKKExpc3RJbnN0",
-            "YW5jZU9TUG9saWNpZXNDb21wbGlhbmNlc1JlcXVlc3QSOQoGcGFyZW50GAEg",
-            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
-            "bhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZm",
-            "aWx0ZXIYBCABKAk6AhgBIq8BCilMaXN0SW5zdGFuY2VPU1BvbGljaWVzQ29t",
-            "cGxpYW5jZXNSZXNwb25zZRJlCiBpbnN0YW5jZV9vc19wb2xpY2llc19jb21w",
-            "bGlhbmNlcxgBIAMoCzI7Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhh",
-            "Lkluc3RhbmNlT1NQb2xpY2llc0NvbXBsaWFuY2USFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJOgIYAULqAQohY29tLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
-            "MWFscGhhQiFJbnN0YW5jZU9TUG9saWNpZXNDb21wbGlhbmNlUHJvdG9QAVo9",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9vc2NvbmZpZy9hcGl2MWFscGhhL29zY29u",
-            "ZmlncGI7b3Njb25maWdwYqoCHUdvb2dsZS5DbG91ZC5Pc0NvbmZpZy5WMUFs",
-            "cGhhygIdR29vZ2xlXENsb3VkXE9zQ29uZmlnXFYxYWxwaGHqAiBHb29nbGU6",
-            "OkNsb3VkOjpPc0NvbmZpZzo6VjFhbHBoYWIGcHJvdG8z"));
+            "YnVmL3RpbWVzdGFtcC5wcm90byL2BgocSW5zdGFuY2VPU1BvbGljaWVzQ29t",
+            "cGxpYW5jZRISCgRuYW1lGAEgASgJQgTiQQEDEhYKCGluc3RhbmNlGAIgASgJ",
+            "QgTiQQEDEksKBXN0YXRlGAMgASgOMjYuZ29vZ2xlLmNsb3VkLm9zY29uZmln",
+            "LnYxYWxwaGEuT1NQb2xpY3lDb21wbGlhbmNlU3RhdGVCBOJBAQMSHAoOZGV0",
+            "YWlsZWRfc3RhdGUYBCABKAlCBOJBAQMSIwoVZGV0YWlsZWRfc3RhdGVfcmVh",
+            "c29uGAUgASgJQgTiQQEDEnMKFW9zX3BvbGljeV9jb21wbGlhbmNlcxgGIAMo",
+            "CzJOLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MWFscGhhLkluc3RhbmNlT1NQ",
+            "b2xpY2llc0NvbXBsaWFuY2UuT1NQb2xpY3lDb21wbGlhbmNlQgTiQQEDEkQK",
+            "Gmxhc3RfY29tcGxpYW5jZV9jaGVja190aW1lGAcgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIkChZsYXN0X2NvbXBsaWFuY2VfcnVu",
+            "X2lkGAggASgJQgTiQQEDGqcCChJPU1BvbGljeUNvbXBsaWFuY2USFAoMb3Nf",
+            "cG9saWN5X2lkGAEgASgJEk0KFG9zX3BvbGljeV9hc3NpZ25tZW50GAIgASgJ",
+            "Qi/6QSwKKm9zY29uZmlnLmdvb2dsZWFwaXMuY29tL09TUG9saWN5QXNzaWdu",
+            "bWVudBJFCgVzdGF0ZRgEIAEoDjI2Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
+            "MWFscGhhLk9TUG9saWN5Q29tcGxpYW5jZVN0YXRlEmEKHm9zX3BvbGljeV9y",
+            "ZXNvdXJjZV9jb21wbGlhbmNlcxgFIAMoCzI5Lmdvb2dsZS5jbG91ZC5vc2Nv",
+            "bmZpZy52MWFscGhhLk9TUG9saWN5UmVzb3VyY2VDb21wbGlhbmNlOgIYATqO",
+            "ARgB6kGIAQo0b3Njb25maWcuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2VPU1Bv",
+            "bGljaWVzQ29tcGxpYW5jZRJQcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2luc3RhbmNlT1NQb2xpY2llc0NvbXBsaWFuY2VzL3tp",
+            "bnN0YW5jZX0ieQomR2V0SW5zdGFuY2VPU1BvbGljaWVzQ29tcGxpYW5jZVJl",
+            "cXVlc3QSSwoEbmFtZRgBIAEoCUI94kEBAvpBNgo0b3Njb25maWcuZ29vZ2xl",
+            "YXBpcy5jb20vSW5zdGFuY2VPU1BvbGljaWVzQ29tcGxpYW5jZToCGAEioQEK",
+            "KExpc3RJbnN0YW5jZU9TUG9saWNpZXNDb21wbGlhbmNlc1JlcXVlc3QSOgoG",
+            "cGFyZW50GAEgASgJQiriQQEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5j",
+            "b20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "AyABKAkSDgoGZmlsdGVyGAQgASgJOgIYASKvAQopTGlzdEluc3RhbmNlT1NQ",
+            "b2xpY2llc0NvbXBsaWFuY2VzUmVzcG9uc2USZQogaW5zdGFuY2Vfb3NfcG9s",
+            "aWNpZXNfY29tcGxpYW5jZXMYASADKAsyOy5nb29nbGUuY2xvdWQub3Njb25m",
+            "aWcudjFhbHBoYS5JbnN0YW5jZU9TUG9saWNpZXNDb21wbGlhbmNlEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCToCGAFC6gEKIWNvbS5nb29nbGUuY2xvdWQu",
+            "b3Njb25maWcudjFhbHBoYUIhSW5zdGFuY2VPU1BvbGljaWVzQ29tcGxpYW5j",
+            "ZVByb3RvUAFaPWNsb3VkLmdvb2dsZS5jb20vZ28vb3Njb25maWcvYXBpdjFh",
+            "bHBoYS9vc2NvbmZpZ3BiO29zY29uZmlncGKqAh1Hb29nbGUuQ2xvdWQuT3ND",
+            "b25maWcuVjFBbHBoYcoCHUdvb2dsZVxDbG91ZFxPc0NvbmZpZ1xWMWFscGhh",
+            "6gIgR29vZ2xlOjpDbG91ZDo6T3NDb25maWc6OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsConfig.V1Alpha.ConfigCommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,6 +93,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// compliance](https://cloud.google.com/compute/docs/os-configuration-management/view-compliance).
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceOSPoliciesCompliance : pb::IMessage<InstanceOSPoliciesCompliance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -589,6 +590,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// Compliance data for an OS policy
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OSPolicyCompliance : pb::IMessage<OSPolicyCompliance>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -906,6 +908,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Compute Engine VM instance.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceOSPoliciesComplianceRequest : pb::IMessage<GetInstanceOSPoliciesComplianceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1111,6 +1114,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Engine VMs in the given location.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceOSPoliciesCompliancesRequest : pb::IMessage<ListInstanceOSPoliciesCompliancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1436,6 +1440,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Engine VMs in the given location.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceOSPoliciesCompliancesResponse : pb::IMessage<ListInstanceOSPoliciesCompliancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

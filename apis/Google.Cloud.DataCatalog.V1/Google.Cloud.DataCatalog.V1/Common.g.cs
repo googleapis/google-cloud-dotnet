@@ -121,6 +121,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Entry metadata relevant only to the user and private to them.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersonalDetails : pb::IMessage<PersonalDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

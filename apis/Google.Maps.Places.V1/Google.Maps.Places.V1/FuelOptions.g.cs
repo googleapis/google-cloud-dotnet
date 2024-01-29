@@ -57,6 +57,7 @@ namespace Google.Maps.Places.V1 {
   /// The most recent information about fuel options in a gas station. This
   /// information is updated regularly.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FuelOptions : pb::IMessage<FuelOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -245,6 +246,7 @@ namespace Google.Maps.Places.V1 {
       /// <summary>
       /// Fuel price information for a given type.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FuelPrice : pb::IMessage<FuelPrice>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

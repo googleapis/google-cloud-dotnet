@@ -130,6 +130,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies the complete (requested) contents of a single row of a table.
   /// Rows which exceed 256MiB in size cannot be read in full.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Row : pb::IMessage<Row>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -358,6 +359,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies (some of) the contents of a single row/column family intersection
   /// of a table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Family : pb::IMessage<Family>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -588,6 +590,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies (some of) the contents of a single row/column intersection of a
   /// table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Column : pb::IMessage<Column>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -816,6 +819,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies (some of) the contents of a single row/column/timestamp of a table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cell : pb::IMessage<Cell>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1087,6 +1091,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies a contiguous range of rows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RowRange : pb::IMessage<RowRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1524,6 +1529,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies a non-contiguous set of rows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RowSet : pb::IMessage<RowSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1740,6 +1746,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// &amp;lt;column_family&amp;gt;:&amp;lt;end_qualifier&amp;gt;, where both bounds can be either
   /// inclusive or exclusive.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColumnRange : pb::IMessage<ColumnRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2217,6 +2224,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specified a contiguous range of microsecond timestamps.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimestampRange : pb::IMessage<TimestampRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2452,6 +2460,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies a contiguous range of raw byte values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValueRange : pb::IMessage<ValueRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2921,6 +2930,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// exceed 20480 bytes, and RowFilters may not be nested within each other
   /// (in Chains or Interleaves) to a depth of more than 20.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RowFilter : pb::IMessage<RowFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4288,6 +4298,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A RowFilter which sends rows through several RowFilters in sequence.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Chain : pb::IMessage<Chain>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4475,6 +4486,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// A RowFilter which sends each row to each of several component
       /// RowFilters and interleaves the results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Interleave : pb::IMessage<Interleave>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4689,6 +4701,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// results. Additionally, Condition filters have poor performance, especially
       /// when filters are set for the false condition.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Condition : pb::IMessage<Condition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5000,6 +5013,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies a particular change to be made to the contents of a row.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mutation : pb::IMessage<Mutation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5409,6 +5423,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A Mutation which sets the value of the specified cell.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SetCell : pb::IMessage<SetCell>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5731,6 +5746,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// A Mutation which deletes cells from the specified column, optionally
       /// restricting the deletions to a given timestamp range.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeleteFromColumn : pb::IMessage<DeleteFromColumn>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6017,6 +6033,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A Mutation which deletes all cells from the specified column family.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeleteFromFamily : pb::IMessage<DeleteFromFamily>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6213,6 +6230,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A Mutation which deletes all cells from the containing row.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DeleteFromRow : pb::IMessage<DeleteFromRow>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6374,6 +6392,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies an atomic read/modify/write operation on the latest value of the
   /// specified column.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadModifyWriteRule : pb::IMessage<ReadModifyWriteRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6759,6 +6778,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
   /// A partition of a change stream.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamPartition : pb::IMessage<StreamPartition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6966,6 +6986,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// The information required to continue reading the data from multiple
   /// `StreamPartitions` from where a previous read left off.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamContinuationTokens : pb::IMessage<StreamContinuationTokens>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7152,6 +7173,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// The information required to continue reading the data from a
   /// `StreamPartition` from where a previous read left off.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamContinuationToken : pb::IMessage<StreamContinuationToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

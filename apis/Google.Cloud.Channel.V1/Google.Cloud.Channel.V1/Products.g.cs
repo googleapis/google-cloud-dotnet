@@ -77,6 +77,7 @@ namespace Google.Cloud.Channel.V1 {
   /// A Product is the entity a customer uses when placing an order. For example,
   /// Google Workspace, Google Voice, etc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Product : pb::IMessage<Product>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -325,6 +326,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Workspace Business Standard and Google Workspace Business Plus are Google
   /// Workspace product SKUs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sku : pb::IMessage<Sku>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -619,6 +621,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents the marketing information for a Product, SKU or Offer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MarketingInfo : pb::IMessage<MarketingInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -903,6 +906,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents media information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Media : pb::IMessage<Media>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

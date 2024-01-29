@@ -57,6 +57,7 @@ namespace Google.Maps.Routing.V2 {
   /// origin, destination and intermediate waypoints. Only populated for address
   /// waypoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeocodingResults : pb::IMessage<GeocodingResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -343,6 +344,7 @@ namespace Google.Maps.Routing.V2 {
   /// waypoints. Includes details about the geocoding results for the purposes of
   /// determining what the address was geocoded to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeocodedWaypoint : pb::IMessage<GeocodedWaypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -33,6 +33,7 @@ namespace Google.Cloud.Channel.V1 {
   /// BigQuery](https://cloud.google.com/channel/docs/rebilling/export-data-to-bigquery)
   /// instead.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class CloudChannelReportsService
   {
     static readonly string __ServiceName = "google.cloud.channel.v1.CloudChannelReportsService";
@@ -114,6 +115,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     /// <summary>Base class for server-side implementations of CloudChannelReportsService</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(CloudChannelReportsService), "BindService")]
     public abstract partial class CloudChannelReportsServiceBase
     {
@@ -151,6 +153,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunReportJob(global::Google.Cloud.Channel.V1.RunReportJobRequest request, grpc::ServerCallContext context)
       {
@@ -168,6 +171,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.FetchReportResultsResponse> FetchReportResults(global::Google.Cloud.Channel.V1.FetchReportResultsRequest request, grpc::ServerCallContext context)
       {
@@ -185,6 +189,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListReportsResponse> ListReports(global::Google.Cloud.Channel.V1.ListReportsRequest request, grpc::ServerCallContext context)
       {
@@ -194,6 +199,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     /// <summary>Client for CloudChannelReportsService</summary>
+    [global::System.ObsoleteAttribute]
     public partial class CloudChannelReportsServiceClient : grpc::ClientBase<CloudChannelReportsServiceClient>
     {
       /// <summary>Creates a new client for CloudChannelReportsService</summary>
@@ -256,6 +262,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunReportJob(global::Google.Cloud.Channel.V1.RunReportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -295,6 +302,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunReportJob(global::Google.Cloud.Channel.V1.RunReportJobRequest request, grpc::CallOptions options)
       {
@@ -336,6 +344,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunReportJobAsync(global::Google.Cloud.Channel.V1.RunReportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -375,6 +384,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunReportJobAsync(global::Google.Cloud.Channel.V1.RunReportJobRequest request, grpc::CallOptions options)
       {
@@ -393,6 +403,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.FetchReportResultsResponse FetchReportResults(global::Google.Cloud.Channel.V1.FetchReportResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -409,6 +420,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.FetchReportResultsResponse FetchReportResults(global::Google.Cloud.Channel.V1.FetchReportResultsRequest request, grpc::CallOptions options)
       {
@@ -427,6 +439,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.FetchReportResultsResponse> FetchReportResultsAsync(global::Google.Cloud.Channel.V1.FetchReportResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -443,6 +456,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.FetchReportResultsResponse> FetchReportResultsAsync(global::Google.Cloud.Channel.V1.FetchReportResultsRequest request, grpc::CallOptions options)
       {
@@ -461,6 +475,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListReportsResponse ListReports(global::Google.Cloud.Channel.V1.ListReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -477,6 +492,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListReportsResponse ListReports(global::Google.Cloud.Channel.V1.ListReportsRequest request, grpc::CallOptions options)
       {
@@ -495,6 +511,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListReportsResponse> ListReportsAsync(global::Google.Cloud.Channel.V1.ListReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -511,6 +528,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListReportsResponse> ListReportsAsync(global::Google.Cloud.Channel.V1.ListReportsRequest request, grpc::CallOptions options)
       {

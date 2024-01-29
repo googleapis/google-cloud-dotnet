@@ -26,20 +26,20 @@ namespace Google.Cloud.DataCatalog.V1 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvZGF0YV9zb3VyY2UucHJv",
             "dG8SG2dvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MRofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90byKcAgoKRGF0YVNvdXJjZRJACgdzZXJ2aWNl",
+            "aWVsZF9iZWhhdmlvci5wcm90byKdAgoKRGF0YVNvdXJjZRJACgdzZXJ2aWNl",
             "GAEgASgOMi8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkRhdGFTb3Vy",
-            "Y2UuU2VydmljZRIQCghyZXNvdXJjZRgCIAEoCRIZCgxzb3VyY2VfZW50cnkY",
-            "AyABKAlCA+BBAxJMChJzdG9yYWdlX3Byb3BlcnRpZXMYBCABKAsyLi5nb29n",
-            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuU3RvcmFnZVByb3BlcnRpZXNIACJD",
-            "CgdTZXJ2aWNlEhcKE1NFUlZJQ0VfVU5TUEVDSUZJRUQQABIRCg1DTE9VRF9T",
-            "VE9SQUdFEAESDAoIQklHUVVFUlkQAkIMCgpwcm9wZXJ0aWVzIjwKEVN0b3Jh",
-            "Z2VQcm9wZXJ0aWVzEhQKDGZpbGVfcGF0dGVybhgBIAMoCRIRCglmaWxlX3R5",
-            "cGUYAiABKAlC1wEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFC",
-            "D0RhdGFTb3VyY2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFj",
-            "YXRhbG9nL2FwaXYxL2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoC",
-            "G0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxE",
-            "YXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpW",
-            "MWIGcHJvdG8z"));
+            "Y2UuU2VydmljZRIQCghyZXNvdXJjZRgCIAEoCRIaCgxzb3VyY2VfZW50cnkY",
+            "AyABKAlCBOJBAQMSTAoSc3RvcmFnZV9wcm9wZXJ0aWVzGAQgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlN0b3JhZ2VQcm9wZXJ0aWVzSAAi",
+            "QwoHU2VydmljZRIXChNTRVJWSUNFX1VOU1BFQ0lGSUVEEAASEQoNQ0xPVURf",
+            "U1RPUkFHRRABEgwKCEJJR1FVRVJZEAJCDAoKcHJvcGVydGllcyI8ChFTdG9y",
+            "YWdlUHJvcGVydGllcxIUCgxmaWxlX3BhdHRlcm4YASADKAkSEQoJZmlsZV90",
+            "eXBlGAIgASgJQtcBCh9jb20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYx",
+            "Qg9EYXRhU291cmNlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
+            "Y2F0YWxvZy9hcGl2MS9kYXRhY2F0YWxvZ3BiO2RhdGFjYXRhbG9ncGL4AQGq",
+            "AhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xvdWRc",
+            "RGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxvZzo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,6 +54,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Physical location of an entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataSource : pb::IMessage<DataSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -440,6 +441,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Details the properties of the underlying storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StorageProperties : pb::IMessage<StorageProperties>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

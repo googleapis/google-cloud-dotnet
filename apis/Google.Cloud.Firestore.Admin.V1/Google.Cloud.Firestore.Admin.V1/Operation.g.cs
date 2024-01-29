@@ -150,6 +150,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// results from
   /// [FirestoreAdmin.CreateIndex][google.firestore.admin.v1.FirestoreAdmin.CreateIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexOperationMetadata : pb::IMessage<IndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -585,6 +586,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// results from
   /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldOperationMetadata : pb::IMessage<FieldOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1101,6 +1103,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Information about an index configuration change.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IndexConfigDelta : pb::IMessage<IndexConfigDelta>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1371,6 +1374,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Information about a TTL configuration change.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TtlConfigDelta : pb::IMessage<TtlConfigDelta>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1599,6 +1603,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// results from
   /// [FirestoreAdmin.ExportDocuments][google.firestore.admin.v1.FirestoreAdmin.ExportDocuments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDocumentsMetadata : pb::IMessage<ExportDocumentsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2142,6 +2147,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// results from
   /// [FirestoreAdmin.ImportDocuments][google.firestore.admin.v1.FirestoreAdmin.ImportDocuments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportDocumentsMetadata : pb::IMessage<ImportDocumentsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2633,6 +2639,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Returned in the [google.longrunning.Operation][google.longrunning.Operation]
   /// response field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportDocumentsResponse : pb::IMessage<ExportDocumentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2832,6 +2839,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Unit of work is generic and must be interpreted based on where
   /// [Progress][google.firestore.admin.v1.Progress] is used.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Progress : pb::IMessage<Progress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

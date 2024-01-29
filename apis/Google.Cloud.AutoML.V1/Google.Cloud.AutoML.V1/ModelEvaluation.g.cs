@@ -68,6 +68,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Evaluation results of a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelEvaluation : pb::IMessage<ModelEvaluation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

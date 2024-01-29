@@ -6696,6 +6696,2890 @@
       ]
     },
     {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_sync",
+      "title": "CreateSessionRequestObject",
+      "description": "Snippet for CreateSession",
+      "file": "SessionControllerClient.CreateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_async",
+      "title": "CreateSessionRequestObjectAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionControllerClient.CreateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_sync_flattened",
+      "title": "CreateSession",
+      "description": "Snippet for CreateSession",
+      "file": "SessionControllerClient.CreateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "System.String",
+            "name": "sessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_async_flattened",
+      "title": "CreateSessionAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionControllerClient.CreateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "System.String",
+            "name": "sessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_sync_flattened_resourceNames",
+      "title": "CreateSessionResourceNames",
+      "description": "Snippet for CreateSession",
+      "file": "SessionControllerClient.CreateSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "System.String",
+            "name": "sessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_CreateSession_async_flattened_resourceNames",
+      "title": "CreateSessionResourceNamesAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionControllerClient.CreateSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.Session",
+            "name": "session"
+          },
+          {
+            "type": "System.String",
+            "name": "sessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.CreateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_sync",
+      "title": "GetSessionRequestObject",
+      "description": "Snippet for GetSession",
+      "file": "SessionControllerClient.GetSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.Session",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_async",
+      "title": "GetSessionRequestObjectAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionControllerClient.GetSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_sync_flattened",
+      "title": "GetSession",
+      "description": "Snippet for GetSession",
+      "file": "SessionControllerClient.GetSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.Session",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_async_flattened",
+      "title": "GetSessionAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionControllerClient.GetSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_sync_flattened_resourceNames",
+      "title": "GetSessionResourceNames",
+      "description": "Snippet for GetSession",
+      "file": "SessionControllerClient.GetSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.Session",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_GetSession_async_flattened_resourceNames",
+      "title": "GetSessionResourceNamesAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionControllerClient.GetSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.GetSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_sync",
+      "title": "ListSessionsRequestObject",
+      "description": "Snippet for ListSessions",
+      "file": "SessionControllerClient.ListSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_async",
+      "title": "ListSessionsRequestObjectAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionControllerClient.ListSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_sync_flattened",
+      "title": "ListSessions",
+      "description": "Snippet for ListSessions",
+      "file": "SessionControllerClient.ListSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_async_flattened",
+      "title": "ListSessionsAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionControllerClient.ListSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_sync_flattened_resourceNames",
+      "title": "ListSessionsResourceNames",
+      "description": "Snippet for ListSessions",
+      "file": "SessionControllerClient.ListSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_ListSessions_async_flattened_resourceNames",
+      "title": "ListSessionsResourceNamesAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionControllerClient.ListSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionsResponse, Google.Cloud.Dataproc.V1.Session>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.dataproc.v1.SessionController.ListSessions",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_sync",
+      "title": "TerminateSessionRequestObject",
+      "description": "Snippet for TerminateSession",
+      "file": "SessionControllerClient.TerminateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.TerminateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_async",
+      "title": "TerminateSessionRequestObjectAsync",
+      "description": "Snippet for TerminateSessionAsync",
+      "file": "SessionControllerClient.TerminateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.TerminateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_sync_flattened",
+      "title": "TerminateSession",
+      "description": "Snippet for TerminateSession",
+      "file": "SessionControllerClient.TerminateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_async_flattened",
+      "title": "TerminateSessionAsync",
+      "description": "Snippet for TerminateSessionAsync",
+      "file": "SessionControllerClient.TerminateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_sync_flattened_resourceNames",
+      "title": "TerminateSessionResourceNames",
+      "description": "Snippet for TerminateSession",
+      "file": "SessionControllerClient.TerminateSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_TerminateSession_async_flattened_resourceNames",
+      "title": "TerminateSessionResourceNamesAsync",
+      "description": "Snippet for TerminateSessionAsync",
+      "file": "SessionControllerClient.TerminateSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TerminateSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.TerminateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "TerminateSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.TerminateSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_sync",
+      "title": "DeleteSessionRequestObject",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionControllerClient.DeleteSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_async",
+      "title": "DeleteSessionRequestObjectAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionControllerClient.DeleteSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_sync_flattened",
+      "title": "DeleteSession",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionControllerClient.DeleteSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_async_flattened",
+      "title": "DeleteSessionAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionControllerClient.DeleteSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_sync_flattened_resourceNames",
+      "title": "DeleteSessionResourceNames",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionControllerClient.DeleteSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionController_DeleteSession_async_flattened_resourceNames",
+      "title": "DeleteSessionResourceNamesAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionControllerClient.DeleteSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataproc.V1.Session, Google.Cloud.Dataproc.V1.SessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.dataproc.v1.SessionController.DeleteSession",
+          "service": {
+            "shortName": "SessionController",
+            "fullName": "google.cloud.dataproc.v1.SessionController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_sync",
+      "title": "CreateSessionTemplateRequestObject",
+      "description": "Snippet for CreateSessionTemplate",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.CreateSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_async",
+      "title": "CreateSessionTemplateRequestObjectAsync",
+      "description": "Snippet for CreateSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.CreateSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_sync_flattened",
+      "title": "CreateSessionTemplate",
+      "description": "Snippet for CreateSessionTemplate",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_async_flattened",
+      "title": "CreateSessionTemplateAsync",
+      "description": "Snippet for CreateSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_sync_flattened_resourceNames",
+      "title": "CreateSessionTemplateResourceNames",
+      "description": "Snippet for CreateSessionTemplate",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_CreateSessionTemplate_async_flattened_resourceNames",
+      "title": "CreateSessionTemplateResourceNamesAsync",
+      "description": "Snippet for CreateSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.CreateSessionTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.CreateSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "CreateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.CreateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_UpdateSessionTemplate_sync",
+      "title": "UpdateSessionTemplateRequestObject",
+      "description": "Snippet for UpdateSessionTemplate",
+      "file": "SessionTemplateControllerClient.UpdateSessionTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.UpdateSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.UpdateSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "UpdateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.UpdateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_UpdateSessionTemplate_async",
+      "title": "UpdateSessionTemplateRequestObjectAsync",
+      "description": "Snippet for UpdateSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.UpdateSessionTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.UpdateSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.UpdateSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "UpdateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.UpdateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_UpdateSessionTemplate_sync_flattened",
+      "title": "UpdateSessionTemplate",
+      "description": "Snippet for UpdateSessionTemplate",
+      "file": "SessionTemplateControllerClient.UpdateSessionTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.UpdateSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "UpdateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.UpdateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_UpdateSessionTemplate_async_flattened",
+      "title": "UpdateSessionTemplateAsync",
+      "description": "Snippet for UpdateSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.UpdateSessionTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.UpdateSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplate",
+            "name": "sessionTemplate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "UpdateSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.UpdateSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_sync",
+      "title": "GetSessionTemplateRequestObject",
+      "description": "Snippet for GetSessionTemplate",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.GetSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_async",
+      "title": "GetSessionTemplateRequestObjectAsync",
+      "description": "Snippet for GetSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.GetSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_sync_flattened",
+      "title": "GetSessionTemplate",
+      "description": "Snippet for GetSessionTemplate",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_async_flattened",
+      "title": "GetSessionTemplateAsync",
+      "description": "Snippet for GetSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_sync_flattened_resourceNames",
+      "title": "GetSessionTemplateResourceNames",
+      "description": "Snippet for GetSessionTemplate",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataproc.V1.SessionTemplate",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_GetSessionTemplate_async_flattened_resourceNames",
+      "title": "GetSessionTemplateResourceNamesAsync",
+      "description": "Snippet for GetSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.GetSessionTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.GetSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "GetSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.GetSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_sync",
+      "title": "ListSessionTemplatesRequestObject",
+      "description": "Snippet for ListSessionTemplates",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplates",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.ListSessionTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_async",
+      "title": "ListSessionTemplatesRequestObjectAsync",
+      "description": "Snippet for ListSessionTemplatesAsync",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplatesAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.ListSessionTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_sync_flattened",
+      "title": "ListSessionTemplates",
+      "description": "Snippet for ListSessionTemplates",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplates",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_async_flattened",
+      "title": "ListSessionTemplatesAsync",
+      "description": "Snippet for ListSessionTemplatesAsync",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplatesAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_sync_flattened_resourceNames",
+      "title": "ListSessionTemplatesResourceNames",
+      "description": "Snippet for ListSessionTemplates",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplates",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_ListSessionTemplates_async_flattened_resourceNames",
+      "title": "ListSessionTemplatesResourceNamesAsync",
+      "description": "Snippet for ListSessionTemplatesAsync",
+      "file": "SessionTemplateControllerClient.ListSessionTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionTemplatesAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.ListSessionTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataproc.V1.ListSessionTemplatesResponse, Google.Cloud.Dataproc.V1.SessionTemplate>",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "ListSessionTemplates",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.ListSessionTemplates",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_sync",
+      "title": "DeleteSessionTemplateRequestObject",
+      "description": "Snippet for DeleteSessionTemplate",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.DeleteSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_async",
+      "title": "DeleteSessionTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.DeleteSessionTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_sync_flattened",
+      "title": "DeleteSessionTemplate",
+      "description": "Snippet for DeleteSessionTemplate",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_async_flattened",
+      "title": "DeleteSessionTemplateAsync",
+      "description": "Snippet for DeleteSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_sync_flattened_resourceNames",
+      "title": "DeleteSessionTemplateResourceNames",
+      "description": "Snippet for DeleteSessionTemplate",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplate",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataproc_v1_generated_SessionTemplateController_DeleteSessionTemplate_async_flattened_resourceNames",
+      "title": "DeleteSessionTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteSessionTemplateAsync",
+      "file": "SessionTemplateControllerClient.DeleteSessionTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionTemplateAsync",
+        "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient.DeleteSessionTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataproc.V1.SessionTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SessionTemplateControllerClient",
+          "fullName": "Google.Cloud.Dataproc.V1.SessionTemplateControllerClient"
+        },
+        "method": {
+          "shortName": "DeleteSessionTemplate",
+          "fullName": "google.cloud.dataproc.v1.SessionTemplateController.DeleteSessionTemplate",
+          "service": {
+            "shortName": "SessionTemplateController",
+            "fullName": "google.cloud.dataproc.v1.SessionTemplateController"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataproc_v1_generated_WorkflowTemplateService_CreateWorkflowTemplate_sync",
       "title": "CreateWorkflowTemplateRequestObject",
       "description": "Snippet for CreateWorkflowTemplate",

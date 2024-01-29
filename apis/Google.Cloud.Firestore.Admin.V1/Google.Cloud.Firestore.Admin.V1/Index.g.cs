@@ -67,6 +67,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Cloud Firestore indexes enable simple and complex queries against
   /// documents in a database.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Index : pb::IMessage<Index>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -516,6 +517,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// The field_path describes which field is indexed, the value_mode describes
       /// how the field value is indexed.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IndexField : pb::IMessage<IndexField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

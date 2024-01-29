@@ -218,14 +218,14 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PolicyBasedRoutingServiceClient.Create(callInvoker, Settings, Logger);
+            return PolicyBasedRoutingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PolicyBasedRoutingServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PolicyBasedRoutingServiceClient.Create(callInvoker, Settings, Logger);
+            return PolicyBasedRoutingServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

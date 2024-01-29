@@ -57,6 +57,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Representation of third party SIEM/SOAR fields within SCC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExternalSystem : pb::IMessage<ExternalSystem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

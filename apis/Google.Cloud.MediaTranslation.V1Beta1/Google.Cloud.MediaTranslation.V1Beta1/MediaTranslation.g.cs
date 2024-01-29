@@ -28,45 +28,45 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
             "X3RyYW5zbGF0aW9uLnByb3RvEiVnb29nbGUuY2xvdWQubWVkaWF0cmFuc2xh",
             "dGlvbi52MWJldGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQu",
-            "cHJvdG8irgEKFVRyYW5zbGF0ZVNwZWVjaENvbmZpZxIbCg5hdWRpb19lbmNv",
-            "ZGluZxgBIAEoCUID4EECEiEKFHNvdXJjZV9sYW5ndWFnZV9jb2RlGAIgASgJ",
-            "QgPgQQISIQoUdGFyZ2V0X2xhbmd1YWdlX2NvZGUYAyABKAlCA+BBAhIeChFz",
-            "YW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBUID4EEBEhIKBW1vZGVsGAUgASgJQgPg",
-            "QQEimAEKHlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaENvbmZpZxJXCgxhdWRp",
-            "b19jb25maWcYASABKAsyPC5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xhdGlv",
-            "bi52MWJldGExLlRyYW5zbGF0ZVNwZWVjaENvbmZpZ0ID4EECEh0KEHNpbmds",
-            "ZV91dHRlcmFuY2UYAiABKAhCA+BBASKyAQofU3RyZWFtaW5nVHJhbnNsYXRl",
-            "U3BlZWNoUmVxdWVzdBJhChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMkUuZ29v",
-            "Z2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMS5TdHJlYW1pbmdU",
-            "cmFuc2xhdGVTcGVlY2hDb25maWdIABIXCg1hdWRpb19jb250ZW50GAIgASgM",
-            "SABCEwoRc3RyZWFtaW5nX3JlcXVlc3Qi9AEKHlN0cmVhbWluZ1RyYW5zbGF0",
-            "ZVNwZWVjaFJlc3VsdBJ+Chd0ZXh0X3RyYW5zbGF0aW9uX3Jlc3VsdBgBIAEo",
-            "CzJbLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTEuU3Ry",
-            "ZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzdWx0LlRleHRUcmFuc2xhdGlvblJl",
-            "c3VsdEgAGkgKFVRleHRUcmFuc2xhdGlvblJlc3VsdBIYCgt0cmFuc2xhdGlv",
-            "bhgBIAEoCUID4EEDEhUKCGlzX2ZpbmFsGAIgASgIQgPgQQNCCAoGcmVzdWx0",
-            "IvICCiBTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXNwb25zZRImCgVlcnJv",
-            "chgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMSWgoGcmVzdWx0GAIg",
-            "ASgLMkUuZ29vZ2xlLmNsb3VkLm1lZGlhdHJhbnNsYXRpb24udjFiZXRhMS5T",
-            "dHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXN1bHRCA+BBAxJ3ChFzcGVlY2hf",
-            "ZXZlbnRfdHlwZRgDIAEoDjJXLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0",
-            "aW9uLnYxYmV0YTEuU3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzcG9uc2Uu",
-            "U3BlZWNoRXZlbnRUeXBlQgPgQQMiUQoPU3BlZWNoRXZlbnRUeXBlEiEKHVNQ",
-            "RUVDSF9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASGwoXRU5EX09GX1NJTkdM",
-            "RV9VVFRFUkFOQ0UQATKjAgoYU3BlZWNoVHJhbnNsYXRpb25TZXJ2aWNlErEB",
-            "ChhTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2gSRi5nb29nbGUuY2xvdWQubWVk",
-            "aWF0cmFuc2xhdGlvbi52MWJldGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVj",
-            "aFJlcXVlc3QaRy5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xhdGlvbi52MWJl",
-            "dGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaFJlc3BvbnNlIgAoATABGlPK",
-            "QR9tZWRpYXRyYW5zbGF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKZAgopY29t",
-            "Lmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTFCFU1lZGlh",
-            "VHJhbnNsYXRpb25Qcm90b1ABWlVjbG91ZC5nb29nbGUuY29tL2dvL21lZGlh",
-            "dHJhbnNsYXRpb24vYXBpdjFiZXRhMS9tZWRpYXRyYW5zbGF0aW9ucGI7bWVk",
-            "aWF0cmFuc2xhdGlvbnBi+AEBqgIlR29vZ2xlLkNsb3VkLk1lZGlhVHJhbnNs",
-            "YXRpb24uVjFCZXRhMcoCJUdvb2dsZVxDbG91ZFxNZWRpYVRyYW5zbGF0aW9u",
-            "XFYxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpNZWRpYVRyYW5zbGF0aW9uOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "cHJvdG8iswEKFVRyYW5zbGF0ZVNwZWVjaENvbmZpZxIcCg5hdWRpb19lbmNv",
+            "ZGluZxgBIAEoCUIE4kEBAhIiChRzb3VyY2VfbGFuZ3VhZ2VfY29kZRgCIAEo",
+            "CUIE4kEBAhIiChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgDIAEoCUIE4kEBAhIf",
+            "ChFzYW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBUIE4kEBARITCgVtb2RlbBgFIAEo",
+            "CUIE4kEBASKaAQoeU3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoQ29uZmlnElgK",
+            "DGF1ZGlvX2NvbmZpZxgBIAEoCzI8Lmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5z",
+            "bGF0aW9uLnYxYmV0YTEuVHJhbnNsYXRlU3BlZWNoQ29uZmlnQgTiQQECEh4K",
+            "EHNpbmdsZV91dHRlcmFuY2UYAiABKAhCBOJBAQEisgEKH1N0cmVhbWluZ1Ry",
+            "YW5zbGF0ZVNwZWVjaFJlcXVlc3QSYQoQc3RyZWFtaW5nX2NvbmZpZxgBIAEo",
+            "CzJFLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYxYmV0YTEuU3Ry",
+            "ZWFtaW5nVHJhbnNsYXRlU3BlZWNoQ29uZmlnSAASFwoNYXVkaW9fY29udGVu",
+            "dBgCIAEoDEgAQhMKEXN0cmVhbWluZ19yZXF1ZXN0IvYBCh5TdHJlYW1pbmdU",
+            "cmFuc2xhdGVTcGVlY2hSZXN1bHQSfgoXdGV4dF90cmFuc2xhdGlvbl9yZXN1",
+            "bHQYASABKAsyWy5nb29nbGUuY2xvdWQubWVkaWF0cmFuc2xhdGlvbi52MWJl",
+            "dGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaFJlc3VsdC5UZXh0VHJhbnNs",
+            "YXRpb25SZXN1bHRIABpKChVUZXh0VHJhbnNsYXRpb25SZXN1bHQSGQoLdHJh",
+            "bnNsYXRpb24YASABKAlCBOJBAQMSFgoIaXNfZmluYWwYAiABKAhCBOJBAQNC",
+            "CAoGcmVzdWx0IvUCCiBTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2hSZXNwb25z",
+            "ZRInCgVlcnJvchgBIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgTiQQEDElsK",
+            "BnJlc3VsdBgCIAEoCzJFLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9u",
+            "LnYxYmV0YTEuU3RyZWFtaW5nVHJhbnNsYXRlU3BlZWNoUmVzdWx0QgTiQQED",
+            "EngKEXNwZWVjaF9ldmVudF90eXBlGAMgASgOMlcuZ29vZ2xlLmNsb3VkLm1l",
+            "ZGlhdHJhbnNsYXRpb24udjFiZXRhMS5TdHJlYW1pbmdUcmFuc2xhdGVTcGVl",
+            "Y2hSZXNwb25zZS5TcGVlY2hFdmVudFR5cGVCBOJBAQMiUQoPU3BlZWNoRXZl",
+            "bnRUeXBlEiEKHVNQRUVDSF9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASGwoX",
+            "RU5EX09GX1NJTkdMRV9VVFRFUkFOQ0UQATKjAgoYU3BlZWNoVHJhbnNsYXRp",
+            "b25TZXJ2aWNlErEBChhTdHJlYW1pbmdUcmFuc2xhdGVTcGVlY2gSRi5nb29n",
+            "bGUuY2xvdWQubWVkaWF0cmFuc2xhdGlvbi52MWJldGExLlN0cmVhbWluZ1Ry",
+            "YW5zbGF0ZVNwZWVjaFJlcXVlc3QaRy5nb29nbGUuY2xvdWQubWVkaWF0cmFu",
+            "c2xhdGlvbi52MWJldGExLlN0cmVhbWluZ1RyYW5zbGF0ZVNwZWVjaFJlc3Bv",
+            "bnNlIgAoATABGlPKQR9tZWRpYXRyYW5zbGF0aW9uLmdvb2dsZWFwaXMuY29t",
+            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybUKZAgopY29tLmdvb2dsZS5jbG91ZC5tZWRpYXRyYW5zbGF0aW9uLnYx",
+            "YmV0YTFCFU1lZGlhVHJhbnNsYXRpb25Qcm90b1ABWlVjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL21lZGlhdHJhbnNsYXRpb24vYXBpdjFiZXRhMS9tZWRpYXRyYW5z",
+            "bGF0aW9ucGI7bWVkaWF0cmFuc2xhdGlvbnBi+AEBqgIlR29vZ2xlLkNsb3Vk",
+            "Lk1lZGlhVHJhbnNsYXRpb24uVjFCZXRhMcoCJUdvb2dsZVxDbG91ZFxNZWRp",
+            "YVRyYW5zbGF0aW9uXFYxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpNZWRpYVRy",
+            "YW5zbGF0aW9uOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,6 +85,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   /// Provides information to the speech translation that specifies how to process
   /// the request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranslateSpeechConfig : pb::IMessage<TranslateSpeechConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -480,6 +481,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   /// <summary>
   /// Config used for streaming translation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingTranslateSpeechConfig : pb::IMessage<StreamingTranslateSpeechConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -741,6 +743,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   /// `audio_content` data. All subsequent messages must contain `audio_content`
   /// data and must not contain a `streaming_config` message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingTranslateSpeechRequest : pb::IMessage<StreamingTranslateSpeechRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1046,6 +1049,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   /// A streaming speech translation result corresponding to a portion of the audio
   /// that is currently being processed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingTranslateSpeechResult : pb::IMessage<StreamingTranslateSpeechResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1287,6 +1291,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       /// <summary>
       /// Text translation result.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TextTranslationResult : pb::IMessage<TextTranslationResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1533,6 +1538,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   /// A streaming speech translation response corresponding to a portion of
   /// the audio currently processed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingTranslateSpeechResponse : pb::IMessage<StreamingTranslateSpeechResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

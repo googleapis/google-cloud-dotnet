@@ -54,6 +54,7 @@ namespace Google.Cloud.Run.V2 {
   /// TaskTemplate describes the data a task should have when created
   /// from a template.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskTemplate : pb::IMessage<TaskTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -49,6 +49,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Represents a particular IAM binding, which captures a member's role addition,
   /// removal, or state.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamBinding : pb::IMessage<IamBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -51,6 +51,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Response of asset discovery run
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunAssetDiscoveryResponse : pb::IMessage<RunAssetDiscoveryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

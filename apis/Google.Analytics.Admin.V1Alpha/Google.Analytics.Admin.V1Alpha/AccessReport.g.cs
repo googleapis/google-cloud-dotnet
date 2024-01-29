@@ -134,6 +134,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// `userEmail` indicates the email of the user that accessed reporting data.
   /// Dimension values in report responses are strings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessDimension : pb::IMessage<AccessDimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -334,6 +335,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// The quantitative measurements of a report. For example, the metric
   /// `accessCount` is the total number of data access records.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessMetric : pb::IMessage<AccessMetric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -533,6 +535,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A contiguous range of days: startDate, startDate + 1, ..., endDate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessDateRange : pb::IMessage<AccessDateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -775,6 +778,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Expresses dimension or metric filters. The fields in the same expression need
   /// to be either all dimensions or all metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessFilterExpression : pb::IMessage<AccessFilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1182,6 +1186,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A list of filter expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessFilterExpressionList : pb::IMessage<AccessFilterExpressionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1366,6 +1371,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// An expression to filter dimension or metric values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessFilter : pb::IMessage<AccessFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1812,6 +1818,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// The filter for strings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessStringFilter : pb::IMessage<AccessStringFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2129,6 +2136,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// The result needs to be in a list of string values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessInListFilter : pb::IMessage<AccessInListFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2353,6 +2361,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Filters for numeric or date values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessNumericFilter : pb::IMessage<AccessNumericFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2635,6 +2644,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// To express that the result needs to be between two numbers (inclusive).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessBetweenFilter : pb::IMessage<AccessBetweenFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2888,6 +2898,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// To represent a number.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NumericValue : pb::IMessage<NumericValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3186,6 +3197,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// ordering rows by descending access count is one ordering, and ordering rows
   /// by the country string is a different ordering.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessOrderBy : pb::IMessage<AccessOrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3524,6 +3536,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Sorts by metric values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetricOrderBy : pb::IMessage<MetricOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3719,6 +3732,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Sorts by dimension values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DimensionOrderBy : pb::IMessage<DimensionOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3997,6 +4011,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// used exclusively within filters or expressions do not produce columns in a
   /// report; correspondingly, those dimensions do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessDimensionHeader : pb::IMessage<AccessDimensionHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4195,6 +4210,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// metrics used exclusively within filters or expressions do not produce columns
   /// in a report; correspondingly, those metrics do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessMetricHeader : pb::IMessage<AccessMetricHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4390,6 +4406,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Access report data for each row.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessRow : pb::IMessage<AccessRow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4605,6 +4622,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// The value of a dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessDimensionValue : pb::IMessage<AccessDimensionValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4801,6 +4819,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// The value of a metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessMetricValue : pb::IMessage<AccessMetricValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4998,6 +5017,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// property is exhausted, all requests to that property will return Resource
   /// Exhausted errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessQuota : pb::IMessage<AccessQuota>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5405,6 +5425,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Current state for a particular quota group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessQuotaStatus : pb::IMessage<AccessQuotaStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

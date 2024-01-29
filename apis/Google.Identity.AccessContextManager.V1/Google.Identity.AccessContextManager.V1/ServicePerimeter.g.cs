@@ -126,6 +126,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// a single Google Cloud project may belong to multiple Service Perimeter
   /// Bridges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServicePerimeter : pb::IMessage<ServicePerimeter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -737,6 +738,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// `ServicePerimeterConfig` specifies a set of Google Cloud resources that
   /// describe specific Service Perimeter configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServicePerimeterConfig : pb::IMessage<ServicePerimeterConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1142,6 +1144,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// Specifies how APIs are allowed to communicate within the Service
       /// Perimeter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VpcAccessibleServices : pb::IMessage<VpcAccessibleServices>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1371,6 +1374,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// An allowed method or permission of a service specified in [ApiOperation]
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MethodSelector : pb::IMessage<MethodSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1673,6 +1677,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// <summary>
       /// Identification for an API Operation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ApiOperation : pb::IMessage<ApiOperation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1910,6 +1915,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
       /// authorizes access from.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressSource : pb::IMessage<IngressSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2233,6 +2239,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// the request. The request must satisfy what is defined in `sources` AND
       /// identity related fields in order to match.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressFrom : pb::IMessage<IngressFrom>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2499,6 +2506,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// must satisfy what is defined in `operations` AND `resources` in order to
       /// match.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressTo : pb::IMessage<IngressTo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2744,6 +2752,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// Individual ingress policies can be limited by restricting which
       /// services and/or actions they match using the `ingress_to` field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IngressPolicy : pb::IMessage<IngressPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3014,6 +3023,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.IngressPolicy]
       /// which allows access in order for this request to succeed.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressFrom : pb::IMessage<EgressFrom>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3256,6 +3266,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// match `operations` AND `resources` fields in order to be allowed egress out
       /// of the perimeter.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressTo : pb::IMessage<EgressTo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3542,6 +3553,7 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// and [EgressTo]
       /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.EgressTo].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EgressPolicy : pb::IMessage<EgressPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -71,6 +71,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// in your audio, for example a list of passenger ship names. CustomClass items
   /// can be substituted into placeholders that you set in PhraseSet phrases.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomClass : pb::IMessage<CustomClass>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -339,6 +340,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <summary>
       /// An item of the class.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ClassItem : pb::IMessage<ClassItem>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -540,6 +542,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides "hints" to the speech recognizer to favor specific words and phrases
   /// in the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PhraseSet : pb::IMessage<PhraseSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -839,6 +842,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// [regional endpoint](https://cloud.google.com/speech-to-text/docs/endpoints)
       /// with matching `us` or `eu` location value.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Phrase : pb::IMessage<Phrase>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1087,6 +1091,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Speech adaptation configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechAdaptation : pb::IMessage<SpeechAdaptation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1385,6 +1390,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ABNFGrammar : pb::IMessage<ABNFGrammar>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1578,6 +1584,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// choosing. For StreamingRecognize, this normalization only applies to stable
   /// partial transcripts (stability > 0.8) and final transcripts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscriptNormalization : pb::IMessage<TranscriptNormalization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1768,6 +1775,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <summary>
       /// A single replacement configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entry : pb::IMessage<Entry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

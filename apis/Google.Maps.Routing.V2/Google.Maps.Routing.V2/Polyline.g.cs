@@ -97,6 +97,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Encapsulates an encoded polyline.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Polyline : pb::IMessage<Polyline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -49,6 +49,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Payload proto for "clouddeploy.googleapis.com/release_render"
   /// Platform Log event that describes the render status change.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReleaseRenderEvent : pb::IMessage<ReleaseRenderEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

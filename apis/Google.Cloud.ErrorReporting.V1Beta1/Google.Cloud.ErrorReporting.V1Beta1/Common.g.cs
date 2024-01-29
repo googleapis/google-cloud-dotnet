@@ -112,6 +112,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// Description of a group of similar error events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorGroup : pb::IMessage<ErrorGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -419,6 +420,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// Information related to tracking the progress on resolving the error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrackingIssue : pb::IMessage<TrackingIssue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -615,6 +617,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// An error event which is returned by the Error Reporting system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorEvent : pb::IMessage<ErrorEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -960,6 +963,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// Describes a running service that sends errors.
   /// Its version changes over time and multiple versions can run in parallel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceContext : pb::IMessage<ServiceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1251,6 +1255,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// unless the
   /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorContext : pb::IMessage<ErrorContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1559,6 +1564,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// unless the
   /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpRequestContext : pb::IMessage<HttpRequestContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1960,6 +1966,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// an error, unless the error report contains a `message` with a supported
   /// exception stack trace. All fields are optional for the later case.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

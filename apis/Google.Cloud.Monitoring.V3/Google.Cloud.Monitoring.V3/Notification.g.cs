@@ -84,6 +84,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// the properties of the channel and the set of labels or fields that
   /// must be specified to configure channels of a given type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationChannelDescriptor : pb::IMessage<NotificationChannelDescriptor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -518,6 +519,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// containing sensitive information like authentication tokens or
   /// contact info are only partially populated on retrieval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationChannel : pb::IMessage<NotificationChannel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

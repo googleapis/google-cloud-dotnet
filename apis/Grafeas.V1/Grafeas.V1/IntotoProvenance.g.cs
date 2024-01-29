@@ -63,6 +63,7 @@ namespace Grafeas.V1 {
   /// For a TaskRun, typically each container corresponds to one step in the
   /// recipe.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Recipe : pb::IMessage<Recipe>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -414,6 +415,7 @@ namespace Grafeas.V1 {
   /// Indicates that the builder claims certain fields in this message to be
   /// complete.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Completeness : pb::IMessage<Completeness>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -692,6 +694,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Other properties of the build.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Metadata : pb::IMessage<Metadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,6 +1078,7 @@ namespace Grafeas.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuilderConfig : pb::IMessage<BuilderConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1264,6 +1268,7 @@ namespace Grafeas.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InTotoProvenance : pb::IMessage<InTotoProvenance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

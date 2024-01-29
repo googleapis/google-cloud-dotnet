@@ -71,6 +71,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Configuration for a job.
   /// The maximum allowed size for a job is 1MB.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1038,6 +1039,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// with exponential backoff according to the settings in
   /// [RetryConfig][google.cloud.scheduler.v1.RetryConfig].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetryConfig : pb::IMessage<RetryConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

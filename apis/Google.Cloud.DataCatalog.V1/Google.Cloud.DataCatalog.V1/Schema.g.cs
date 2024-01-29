@@ -27,31 +27,31 @@ namespace Google.Cloud.DataCatalog.V1 {
             "Cihnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvc2NoZW1hLnByb3RvEhtn",
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8iRAoGU2NoZW1hEjoKB2NvbHVtbnMYAiADKAsyKS5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hItEGCgxD",
-            "b2x1bW5TY2hlbWESEwoGY29sdW1uGAYgASgJQgPgQQISEQoEdHlwZRgBIAEo",
-            "CUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESEQoEbW9kZRgDIAEo",
-            "CUID4EEBEhoKDWRlZmF1bHRfdmFsdWUYCCABKAlCA+BBARIdChBvcmRpbmFs",
-            "X3Bvc2l0aW9uGAkgASgFQgPgQQESWgoVaGlnaGVzdF9pbmRleGluZ190eXBl",
-            "GAogASgOMjYuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNvbHVtblNj",
-            "aGVtYS5JbmRleGluZ1R5cGVCA+BBARJCCgpzdWJjb2x1bW5zGAcgAygLMiku",
-            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNvbHVtblNjaGVtYUID4EEB",
-            "ElgKEmxvb2tlcl9jb2x1bW5fc3BlYxgSIAEoCzI6Lmdvb2dsZS5jbG91ZC5k",
-            "YXRhY2F0YWxvZy52MS5Db2x1bW5TY2hlbWEuTG9va2VyQ29sdW1uU3BlY0gA",
-            "EhQKB2djX3J1bGUYCyABKAlCA+BBARryAQoQTG9va2VyQ29sdW1uU3BlYxJZ",
-            "CgR0eXBlGAEgASgOMksuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNv",
-            "bHVtblNjaGVtYS5Mb29rZXJDb2x1bW5TcGVjLkxvb2tlckNvbHVtblR5cGUi",
-            "ggEKEExvb2tlckNvbHVtblR5cGUSIgoeTE9PS0VSX0NPTFVNTl9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDQoJRElNRU5TSU9OEAESEwoPRElNRU5TSU9OX0dST1VQ",
-            "EAISCgoGRklMVEVSEAMSCwoHTUVBU1VSRRAEEg0KCVBBUkFNRVRFUhAFIpwB",
-            "CgxJbmRleGluZ1R5cGUSHQoZSU5ERVhJTkdfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhYKEklOREVYSU5HX1RZUEVfTk9ORRABEhwKGElOREVYSU5HX1RZUEVfTk9O",
-            "X1VOSVFVRRACEhgKFElOREVYSU5HX1RZUEVfVU5JUVVFEAMSHQoZSU5ERVhJ",
-            "TkdfVFlQRV9QUklNQVJZX0tFWRAEQg0KC3N5c3RlbV9zcGVjQsYBCh9jb20u",
-            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaQWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtkYXRhY2F0",
-            "YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29v",
-            "Z2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0",
-            "YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hItoGCgxD",
+            "b2x1bW5TY2hlbWESFAoGY29sdW1uGAYgASgJQgTiQQECEhIKBHR5cGUYASAB",
+            "KAlCBOJBAQISGQoLZGVzY3JpcHRpb24YAiABKAlCBOJBAQESEgoEbW9kZRgD",
+            "IAEoCUIE4kEBARIbCg1kZWZhdWx0X3ZhbHVlGAggASgJQgTiQQEBEh4KEG9y",
+            "ZGluYWxfcG9zaXRpb24YCSABKAVCBOJBAQESWwoVaGlnaGVzdF9pbmRleGlu",
+            "Z190eXBlGAogASgOMjYuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNv",
+            "bHVtblNjaGVtYS5JbmRleGluZ1R5cGVCBOJBAQESQwoKc3ViY29sdW1ucxgH",
+            "IAMoCzIpLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5Db2x1bW5TY2hl",
+            "bWFCBOJBAQESWAoSbG9va2VyX2NvbHVtbl9zcGVjGBIgASgLMjouZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxLkNvbHVtblNjaGVtYS5Mb29rZXJDb2x1",
+            "bW5TcGVjSAASFQoHZ2NfcnVsZRgLIAEoCUIE4kEBARryAQoQTG9va2VyQ29s",
+            "dW1uU3BlYxJZCgR0eXBlGAEgASgOMksuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLnYxLkNvbHVtblNjaGVtYS5Mb29rZXJDb2x1bW5TcGVjLkxvb2tlckNv",
+            "bHVtblR5cGUiggEKEExvb2tlckNvbHVtblR5cGUSIgoeTE9PS0VSX0NPTFVN",
+            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJRElNRU5TSU9OEAESEwoPRElNRU5T",
+            "SU9OX0dST1VQEAISCgoGRklMVEVSEAMSCwoHTUVBU1VSRRAEEg0KCVBBUkFN",
+            "RVRFUhAFIpwBCgxJbmRleGluZ1R5cGUSHQoZSU5ERVhJTkdfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEhYKEklOREVYSU5HX1RZUEVfTk9ORRABEhwKGElOREVYSU5H",
+            "X1RZUEVfTk9OX1VOSVFVRRACEhgKFElOREVYSU5HX1RZUEVfVU5JUVVFEAMS",
+            "HQoZSU5ERVhJTkdfVFlQRV9QUklNQVJZX0tFWRAEQg0KC3N5c3RlbV9zcGVj",
+            "QsYBCh9jb20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaQWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dw",
+            "YjtkYXRhY2F0YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9n",
+            "LlYxygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpD",
+            "bG91ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -66,6 +66,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Schema : pb::IMessage<Schema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -254,6 +255,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// A column within a schema. Columns can be nested inside
   /// other columns.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColumnSchema : pb::IMessage<ColumnSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -884,6 +886,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// Column info specific to Looker System.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LookerColumnSpec : pb::IMessage<LookerColumnSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -52,6 +52,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Provides contextual information about a
   /// [google.longrunning.Operation][google.longrunning.Operation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

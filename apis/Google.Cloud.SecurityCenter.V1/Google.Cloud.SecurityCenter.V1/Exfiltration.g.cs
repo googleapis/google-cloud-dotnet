@@ -53,6 +53,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// exfiltrated data. The `targets` attribute lists the destinations the data was
   /// copied to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Exfiltration : pb::IMessage<Exfiltration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -269,6 +270,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Resource where data was exfiltrated from or exfiltrated to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExfilResource : pb::IMessage<ExfilResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

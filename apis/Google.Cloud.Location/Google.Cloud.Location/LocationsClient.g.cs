@@ -118,14 +118,14 @@ namespace Google.Cloud.Location
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LocationsClient.Create(callInvoker, Settings, Logger);
+            return LocationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<LocationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LocationsClient.Create(callInvoker, Settings, Logger);
+            return LocationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

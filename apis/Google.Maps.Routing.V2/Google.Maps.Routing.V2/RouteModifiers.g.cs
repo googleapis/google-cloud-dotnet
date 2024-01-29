@@ -52,6 +52,7 @@ namespace Google.Maps.Routing.V2 {
   /// Encapsulates a set of optional conditions to satisfy when calculating the
   /// routes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteModifiers : pb::IMessage<RouteModifiers>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

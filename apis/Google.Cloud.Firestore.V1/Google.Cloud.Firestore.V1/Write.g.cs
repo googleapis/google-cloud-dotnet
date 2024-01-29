@@ -87,6 +87,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A write on a document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Write : pb::IMessage<Write>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -581,6 +582,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A transformation of a document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentTransform : pb::IMessage<DocumentTransform>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -810,6 +812,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <summary>
       /// A transformation of a field of the document.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FieldTransform : pb::IMessage<FieldTransform>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1453,6 +1456,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// The result of applying a write.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteResult : pb::IMessage<WriteResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1699,6 +1703,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// Multiple [DocumentChange][google.firestore.v1.DocumentChange] messages may be
   /// returned for the same logical change, if multiple targets are affected.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentChange : pb::IMessage<DocumentChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1974,6 +1979,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// Multiple [DocumentDelete][google.firestore.v1.DocumentDelete] messages may be
   /// returned for the same logical delete, if multiple targets are affected.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentDelete : pb::IMessage<DocumentDelete>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2261,6 +2267,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// returned for the same logical write or delete, if multiple targets are
   /// affected.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentRemove : pb::IMessage<DocumentRemove>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2539,6 +2546,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A digest of all the documents that match a given target.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExistenceFilter : pb::IMessage<ExistenceFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -152,6 +152,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// [get][google.cloud.tasks.v2beta3.CloudTask.ListTasks], when the response view
   /// is [FULL][google.cloud.tasks.v2beta3.Task.View.Full].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PullMessage : pb::IMessage<PullMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -397,6 +398,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///
   /// Path message defines path override for HTTP targets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PathOverride : pb::IMessage<PathOverride>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -594,6 +596,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///
   /// Query message defines query override for HTTP targets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryOverride : pb::IMessage<QueryOverride>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -793,6 +796,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// When specified, all the HTTP tasks inside the queue will be partially or
   /// fully overridden depending on the configured values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UriOverride : pb::IMessage<UriOverride>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1326,6 +1330,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// When specified as a [Queue][target_type], all the tasks with [HttpRequest]
   /// will be overridden according to the target.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpTarget : pb::IMessage<HttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1791,6 +1796,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <summary>
       /// Defines a header message. A header can have a key and a value.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Header : pb::IMessage<Header>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2026,6 +2032,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <summary>
       /// Wraps the Header object.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class HeaderOverride : pb::IMessage<HeaderOverride>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2265,6 +2272,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///     spikes in create task rates, the queue being unpaused, or many tasks
   ///     that are scheduled at the same time).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpRequest : pb::IMessage<HttpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2780,6 +2788,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///
   /// `https://www.googleapis.com/auth/cloud-platform`
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineHttpQueue : pb::IMessage<AppEngineHttpQueue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3054,6 +3063,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// targets, a `429` (Too Many Requests) response from an app handler does not
   /// cause traffic congestion control to throttle the queue.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineHttpRequest : pb::IMessage<AppEngineHttpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3486,6 +3496,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// and [App Engine Flex request
   /// routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3862,6 +3873,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// This type of authorization should generally only be used when calling Google
   /// APIs hosted on *.googleapis.com.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OAuthToken : pb::IMessage<OAuthToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4108,6 +4120,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// calling Cloud Run, or endpoints where you intend to validate the token
   /// yourself.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OidcToken : pb::IMessage<OidcToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

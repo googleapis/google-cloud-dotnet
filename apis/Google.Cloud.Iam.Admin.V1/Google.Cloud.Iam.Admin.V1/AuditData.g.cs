@@ -48,6 +48,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   /// serialized as an `Any` type in the `ServiceData` message of an
   /// `AuditLog` message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditData : pb::IMessage<AuditData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -256,6 +257,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// A PermissionDelta message to record the added_permissions and
       /// removed_permissions inside a role.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PermissionDelta : pb::IMessage<PermissionDelta>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

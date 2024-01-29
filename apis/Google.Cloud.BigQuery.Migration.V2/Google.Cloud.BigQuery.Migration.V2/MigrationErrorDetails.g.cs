@@ -27,21 +27,21 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "CkBnb29nbGUvY2xvdWQvYmlncXVlcnkvbWlncmF0aW9uL3YyL21pZ3JhdGlv",
             "bl9lcnJvcl9kZXRhaWxzLnByb3RvEiJnb29nbGUuY2xvdWQuYmlncXVlcnku",
             "bWlncmF0aW9uLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
-            "Gh5nb29nbGUvcnBjL2Vycm9yX2RldGFpbHMucHJvdG8isgEKE1Jlc291cmNl",
-            "RXJyb3JEZXRhaWwSNAoNcmVzb3VyY2VfaW5mbxgBIAEoCzIYLmdvb2dsZS5y",
-            "cGMuUmVzb3VyY2VJbmZvQgPgQQISSwoNZXJyb3JfZGV0YWlscxgCIAMoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuRXJyb3JEZXRh",
-            "aWxCA+BBAhIYCgtlcnJvcl9jb3VudBgDIAEoBUID4EECIocBCgtFcnJvckRl",
-            "dGFpbBJICghsb2NhdGlvbhgBIAEoCzIxLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5taWdyYXRpb24udjIuRXJyb3JMb2NhdGlvbkID4EEBEi4KCmVycm9yX2lu",
-            "Zm8YAiABKAsyFS5nb29nbGUucnBjLkVycm9ySW5mb0ID4EECIjcKDUVycm9y",
-            "TG9jYXRpb24SEQoEbGluZRgBIAEoBUID4EEBEhMKBmNvbHVtbhgCIAEoBUID",
-            "4EEBQtYBCiZjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52",
-            "MkIaTWlncmF0aW9uRXJyb3JEZXRhaWxzUHJvdG9QAVpEY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9iaWdxdWVyeS9taWdyYXRpb24vYXBpdjIvbWlncmF0aW9ucGI7",
-            "bWlncmF0aW9ucGKqAiJHb29nbGUuQ2xvdWQuQmlnUXVlcnkuTWlncmF0aW9u",
-            "LlYyygIiR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XE1pZ3JhdGlvblxWMmIGcHJv",
-            "dG8z"));
+            "Gh5nb29nbGUvcnBjL2Vycm9yX2RldGFpbHMucHJvdG8itQEKE1Jlc291cmNl",
+            "RXJyb3JEZXRhaWwSNQoNcmVzb3VyY2VfaW5mbxgBIAEoCzIYLmdvb2dsZS5y",
+            "cGMuUmVzb3VyY2VJbmZvQgTiQQECEkwKDWVycm9yX2RldGFpbHMYAiADKAsy",
+            "Ly5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLkVycm9yRGV0",
+            "YWlsQgTiQQECEhkKC2Vycm9yX2NvdW50GAMgASgFQgTiQQECIokBCgtFcnJv",
+            "ckRldGFpbBJJCghsb2NhdGlvbhgBIAEoCzIxLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5taWdyYXRpb24udjIuRXJyb3JMb2NhdGlvbkIE4kEBARIvCgplcnJv",
+            "cl9pbmZvGAIgASgLMhUuZ29vZ2xlLnJwYy5FcnJvckluZm9CBOJBAQIiOQoN",
+            "RXJyb3JMb2NhdGlvbhISCgRsaW5lGAEgASgFQgTiQQEBEhQKBmNvbHVtbhgC",
+            "IAEoBUIE4kEBAULWAQomY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdy",
+            "YXRpb24udjJCGk1pZ3JhdGlvbkVycm9yRGV0YWlsc1Byb3RvUAFaRGNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlncXVlcnkvbWlncmF0aW9uL2FwaXYyL21pZ3Jh",
+            "dGlvbnBiO21pZ3JhdGlvbnBiqgIiR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5Lk1p",
+            "Z3JhdGlvbi5WMsoCIkdvb2dsZVxDbG91ZFxCaWdRdWVyeVxNaWdyYXRpb25c",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,6 +57,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Provides details for errors and the corresponding resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceErrorDetail : pb::IMessage<ResourceErrorDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// Provides details for errors, e.g. issues that where encountered when
   /// processing a subtask.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorDetail : pb::IMessage<ErrorDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -586,6 +588,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
   /// <summary>
   /// Holds information about where the error is located.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorLocation : pb::IMessage<ErrorLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

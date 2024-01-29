@@ -27,7 +27,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "CjRnb29nbGUvY2xvdWQvd2Vic2VjdXJpdHlzY2FubmVyL3YxL3NjYW5fY29u",
             "ZmlnLnByb3RvEiJnb29nbGUuY2xvdWQud2Vic2VjdXJpdHlzY2FubmVyLnYx",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIsQNCgpTY2FuQ29uZmlnEgwKBG5hbWUY",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIsUNCgpTY2FuQ29uZmlnEgwKBG5hbWUY",
             "ASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEg8KB21heF9xcHMYAyABKAUS",
             "FQoNc3RhcnRpbmdfdXJscxgEIAMoCRJVCg5hdXRoZW50aWNhdGlvbhgFIAEo",
             "CzI9Lmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjEuU2NhbkNv",
@@ -41,7 +41,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "Q2VudGVyEkwKCnJpc2tfbGV2ZWwYDCABKA4yOC5nb29nbGUuY2xvdWQud2Vi",
             "c2VjdXJpdHlzY2FubmVyLnYxLlNjYW5Db25maWcuUmlza0xldmVsEhQKDG1h",
             "bmFnZWRfc2NhbhgNIAEoCBIWCg5zdGF0aWNfaXBfc2NhbhgOIAEoCBIhChlp",
-            "Z25vcmVfaHR0cF9zdGF0dXNfZXJyb3JzGA8gASgIGtcFCg5BdXRoZW50aWNh",
+            "Z25vcmVfaHR0cF9zdGF0dXNfZXJyb3JzGA8gASgIGtgFCg5BdXRoZW50aWNh",
             "dGlvbhJpCg5nb29nbGVfYWNjb3VudBgBIAEoCzJLLmdvb2dsZS5jbG91ZC53",
             "ZWJzZWN1cml0eXNjYW5uZXIudjEuU2NhbkNvbmZpZy5BdXRoZW50aWNhdGlv",
             "bi5Hb29nbGVBY2NvdW50QgIYAUgAEmUKDmN1c3RvbV9hY2NvdW50GAIgASgL",
@@ -51,28 +51,28 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
             "ZXIudjEuU2NhbkNvbmZpZy5BdXRoZW50aWNhdGlvbi5JYXBDcmVkZW50aWFs",
             "SAAaNwoNR29vZ2xlQWNjb3VudBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNz",
             "d29yZBgCIAEoCToCGAEaRgoNQ3VzdG9tQWNjb3VudBIQCgh1c2VybmFtZRgB",
-            "IAEoCRIQCghwYXNzd29yZBgCIAEoCRIRCglsb2dpbl91cmwYAyABKAka+AEK",
+            "IAEoCRIQCghwYXNzd29yZBgCIAEoCRIRCglsb2dpbl91cmwYAyABKAka+QEK",
             "DUlhcENyZWRlbnRpYWwSjgEKHWlhcF90ZXN0X3NlcnZpY2VfYWNjb3VudF9p",
             "bmZvGAEgASgLMmUuZ29vZ2xlLmNsb3VkLndlYnNlY3VyaXR5c2Nhbm5lci52",
             "MS5TY2FuQ29uZmlnLkF1dGhlbnRpY2F0aW9uLklhcENyZWRlbnRpYWwuSWFw",
-            "VGVzdFNlcnZpY2VBY2NvdW50SW5mb0gAGkMKGUlhcFRlc3RTZXJ2aWNlQWNj",
-            "b3VudEluZm8SJgoZdGFyZ2V0X2F1ZGllbmNlX2NsaWVudF9pZBgBIAEoCUID",
-            "4EECQhEKD2lhcF9jcmVkZW50aWFsc0IQCg5hdXRoZW50aWNhdGlvbhpdCghT",
-            "Y2hlZHVsZRIxCg1zY2hlZHVsZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIeChZpbnRlcnZhbF9kdXJhdGlvbl9kYXlzGAIgASgF",
-            "ImAKCVVzZXJBZ2VudBIaChZVU0VSX0FHRU5UX1VOU1BFQ0lGSUVEEAASEAoM",
-            "Q0hST01FX0xJTlVYEAESEgoOQ0hST01FX0FORFJPSUQQAhIRCg1TQUZBUklf",
-            "SVBIT05FEAMiPAoJUmlza0xldmVsEhoKFlJJU0tfTEVWRUxfVU5TUEVDSUZJ",
-            "RUQQABIKCgZOT1JNQUwQARIHCgNMT1cQAiJtCh1FeHBvcnRUb1NlY3VyaXR5",
-            "Q29tbWFuZENlbnRlchIxCi1FWFBPUlRfVE9fU0VDVVJJVFlfQ09NTUFORF9D",
-            "RU5URVJfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQ",
-            "AkKFAgomY29tLmdvb2dsZS5jbG91ZC53ZWJzZWN1cml0eXNjYW5uZXIudjFC",
-            "D1NjYW5Db25maWdQcm90b1ABWlZjbG91ZC5nb29nbGUuY29tL2dvL3dlYnNl",
-            "Y3VyaXR5c2Nhbm5lci9hcGl2MS93ZWJzZWN1cml0eXNjYW5uZXJwYjt3ZWJz",
-            "ZWN1cml0eXNjYW5uZXJwYqoCIkdvb2dsZS5DbG91ZC5XZWJTZWN1cml0eVNj",
-            "YW5uZXIuVjHKAiJHb29nbGVcQ2xvdWRcV2ViU2VjdXJpdHlTY2FubmVyXFYx",
-            "6gIlR29vZ2xlOjpDbG91ZDo6V2ViU2VjdXJpdHlTY2FubmVyOjpWMWIGcHJv",
-            "dG8z"));
+            "VGVzdFNlcnZpY2VBY2NvdW50SW5mb0gAGkQKGUlhcFRlc3RTZXJ2aWNlQWNj",
+            "b3VudEluZm8SJwoZdGFyZ2V0X2F1ZGllbmNlX2NsaWVudF9pZBgBIAEoCUIE",
+            "4kEBAkIRCg9pYXBfY3JlZGVudGlhbHNCEAoOYXV0aGVudGljYXRpb24aXQoI",
+            "U2NoZWR1bGUSMQoNc2NoZWR1bGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASHgoWaW50ZXJ2YWxfZHVyYXRpb25fZGF5cxgCIAEo",
+            "BSJgCglVc2VyQWdlbnQSGgoWVVNFUl9BR0VOVF9VTlNQRUNJRklFRBAAEhAK",
+            "DENIUk9NRV9MSU5VWBABEhIKDkNIUk9NRV9BTkRST0lEEAISEQoNU0FGQVJJ",
+            "X0lQSE9ORRADIjwKCVJpc2tMZXZlbBIaChZSSVNLX0xFVkVMX1VOU1BFQ0lG",
+            "SUVEEAASCgoGTk9STUFMEAESBwoDTE9XEAIibQodRXhwb3J0VG9TZWN1cml0",
+            "eUNvbW1hbmRDZW50ZXISMQotRVhQT1JUX1RPX1NFQ1VSSVRZX0NPTU1BTkRf",
+            "Q0VOVEVSX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwKCERJU0FCTEVE",
+            "EAJChQIKJmNvbS5nb29nbGUuY2xvdWQud2Vic2VjdXJpdHlzY2FubmVyLnYx",
+            "Qg9TY2FuQ29uZmlnUHJvdG9QAVpWY2xvdWQuZ29vZ2xlLmNvbS9nby93ZWJz",
+            "ZWN1cml0eXNjYW5uZXIvYXBpdjEvd2Vic2VjdXJpdHlzY2FubmVycGI7d2Vi",
+            "c2VjdXJpdHlzY2FubmVycGKqAiJHb29nbGUuQ2xvdWQuV2ViU2VjdXJpdHlT",
+            "Y2FubmVyLlYxygIiR29vZ2xlXENsb3VkXFdlYlNlY3VyaXR5U2Nhbm5lclxW",
+            "MeoCJUdvb2dsZTo6Q2xvdWQ6OldlYlNlY3VyaXR5U2Nhbm5lcjo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,6 +89,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// <summary>
   /// A ScanConfig resource contains the configurations to launch a scan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanConfig : pb::IMessage<ScanConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -834,6 +835,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Scan authentication configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Authentication : pb::IMessage<Authentication>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1189,6 +1191,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// Describes authentication configuration that uses a Google account.
           /// </summary>
           [global::System.ObsoleteAttribute]
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class GoogleAccount : pb::IMessage<GoogleAccount>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1425,6 +1428,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// <summary>
           /// Describes authentication configuration that uses a custom account.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CustomAccount : pb::IMessage<CustomAccount>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1701,6 +1705,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
           /// <summary>
           /// Describes authentication configuration for Identity-Aware-Proxy (IAP).
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class IapCredential : pb::IMessage<IapCredential>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1944,6 +1949,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
               /// Describes authentication configuration when Web-Security-Scanner
               /// service account is added in Identity-Aware-Proxy (IAP) access policies.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class IapTestServiceAccountInfo : pb::IMessage<IapTestServiceAccountInfo>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -2150,6 +2156,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <summary>
       /// Scan schedule configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

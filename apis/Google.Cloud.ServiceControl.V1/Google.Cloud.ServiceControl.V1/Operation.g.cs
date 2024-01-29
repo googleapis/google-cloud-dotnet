@@ -61,6 +61,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Represents information regarding an operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

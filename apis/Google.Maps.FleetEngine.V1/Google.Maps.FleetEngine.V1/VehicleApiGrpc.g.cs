@@ -248,6 +248,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.V1.VehicleLocation> UpdateVehicleLocation(global::Google.Maps.FleetEngine.V1.UpdateVehicleLocationRequest request, grpc::ServerCallContext context)
       {
@@ -301,6 +302,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.V1.SearchVehiclesResponse> SearchFuzzedVehicles(global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest request, grpc::ServerCallContext context)
       {
@@ -661,6 +663,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Maps.FleetEngine.V1.VehicleLocation UpdateVehicleLocation(global::Google.Maps.FleetEngine.V1.UpdateVehicleLocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -673,6 +676,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Maps.FleetEngine.V1.VehicleLocation UpdateVehicleLocation(global::Google.Maps.FleetEngine.V1.UpdateVehicleLocationRequest request, grpc::CallOptions options)
       {
@@ -687,6 +691,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.V1.VehicleLocation> UpdateVehicleLocationAsync(global::Google.Maps.FleetEngine.V1.UpdateVehicleLocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -699,6 +704,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.V1.VehicleLocation> UpdateVehicleLocationAsync(global::Google.Maps.FleetEngine.V1.UpdateVehicleLocationRequest request, grpc::CallOptions options)
       {
@@ -876,6 +882,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Maps.FleetEngine.V1.SearchVehiclesResponse SearchFuzzedVehicles(global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -887,6 +894,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Maps.FleetEngine.V1.SearchVehiclesResponse SearchFuzzedVehicles(global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest request, grpc::CallOptions options)
       {
@@ -900,6 +908,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.V1.SearchVehiclesResponse> SearchFuzzedVehiclesAsync(global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -911,6 +920,7 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Maps.FleetEngine.V1.SearchVehiclesResponse> SearchFuzzedVehiclesAsync(global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest request, grpc::CallOptions options)
       {

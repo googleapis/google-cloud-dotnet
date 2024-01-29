@@ -104,14 +104,14 @@ namespace Google.Cloud.Talent.V4
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EventServiceClient.Create(callInvoker, Settings, Logger);
+            return EventServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<EventServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EventServiceClient.Create(callInvoker, Settings, Logger);
+            return EventServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

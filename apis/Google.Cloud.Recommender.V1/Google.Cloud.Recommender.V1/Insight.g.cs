@@ -90,6 +90,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// An insight along with the information used to derive the insight. The insight
   /// may have associated recommendations as well.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Insight : pb::IMessage<Insight>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -807,6 +808,7 @@ namespace Google.Cloud.Recommender.V1 {
       /// <summary>
       /// Reference to an associated recommendation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RecommendationReference : pb::IMessage<RecommendationReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1008,6 +1010,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Information related to insight state.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsightStateInfo : pb::IMessage<InsightStateInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

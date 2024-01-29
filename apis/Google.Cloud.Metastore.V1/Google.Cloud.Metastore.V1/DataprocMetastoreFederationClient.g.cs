@@ -239,14 +239,14 @@ namespace Google.Cloud.Metastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataprocMetastoreFederationClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreFederationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataprocMetastoreFederationClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataprocMetastoreFederationClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreFederationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

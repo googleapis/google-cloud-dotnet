@@ -235,14 +235,14 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EnterpriseKnowledgeGraphServiceClient.Create(callInvoker, Settings, Logger);
+            return EnterpriseKnowledgeGraphServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<EnterpriseKnowledgeGraphServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EnterpriseKnowledgeGraphServiceClient.Create(callInvoker, Settings, Logger);
+            return EnterpriseKnowledgeGraphServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

@@ -26,25 +26,25 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvbmV0d29ya3NlY3VyaXR5L3YxYmV0YTEvdGxzLnBy",
             "b3RvEiRnb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEaH2dv",
-            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iJwoMR3JwY0VuZHBvaW50",
-            "EhcKCnRhcmdldF91cmkYASABKAlCA+BBAiLPAQoMVmFsaWRhdGlvbkNBEksK",
-            "DWdycGNfZW5kcG9pbnQYAiABKAsyMi5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
-            "Y3VyaXR5LnYxYmV0YTEuR3JwY0VuZHBvaW50SAASagodY2VydGlmaWNhdGVf",
-            "cHJvdmlkZXJfaW5zdGFuY2UYAyABKAsyQS5nb29nbGUuY2xvdWQubmV0d29y",
-            "a3NlY3VyaXR5LnYxYmV0YTEuQ2VydGlmaWNhdGVQcm92aWRlckluc3RhbmNl",
-            "SABCBgoEdHlwZSI7ChtDZXJ0aWZpY2F0ZVByb3ZpZGVySW5zdGFuY2USHAoP",
-            "cGx1Z2luX2luc3RhbmNlGAEgASgJQgPgQQIi1gEKE0NlcnRpZmljYXRlUHJv",
-            "dmlkZXISSwoNZ3JwY19lbmRwb2ludBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3Jrc2VjdXJpdHkudjFiZXRhMS5HcnBjRW5kcG9pbnRIABJqCh1jZXJ0",
-            "aWZpY2F0ZV9wcm92aWRlcl9pbnN0YW5jZRgDIAEoCzJBLmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3Jrc2VjdXJpdHkudjFiZXRhMS5DZXJ0aWZpY2F0ZVByb3ZpZGVy",
-            "SW5zdGFuY2VIAEIGCgR0eXBlQoICCihjb20uZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmtzZWN1cml0eS52MWJldGExQghUbHNQcm90b1ABWlJjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL25ldHdvcmtzZWN1cml0eS9hcGl2MWJldGExL25ldHdvcmtzZWN1",
-            "cml0eXBiO25ldHdvcmtzZWN1cml0eXBiqgIkR29vZ2xlLkNsb3VkLk5ldHdv",
-            "cmtTZWN1cml0eS5WMUJldGExygIkR29vZ2xlXENsb3VkXE5ldHdvcmtTZWN1",
-            "cml0eVxWMWJldGEx6gInR29vZ2xlOjpDbG91ZDo6TmV0d29ya1NlY3VyaXR5",
-            "OjpWMWJldGExYgZwcm90bzM="));
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iKAoMR3JwY0VuZHBvaW50",
+            "EhgKCnRhcmdldF91cmkYASABKAlCBOJBAQIizwEKDFZhbGlkYXRpb25DQRJL",
+            "Cg1ncnBjX2VuZHBvaW50GAIgASgLMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
+            "ZWN1cml0eS52MWJldGExLkdycGNFbmRwb2ludEgAEmoKHWNlcnRpZmljYXRl",
+            "X3Byb3ZpZGVyX2luc3RhbmNlGAMgASgLMkEuZ29vZ2xlLmNsb3VkLm5ldHdv",
+            "cmtzZWN1cml0eS52MWJldGExLkNlcnRpZmljYXRlUHJvdmlkZXJJbnN0YW5j",
+            "ZUgAQgYKBHR5cGUiPAobQ2VydGlmaWNhdGVQcm92aWRlckluc3RhbmNlEh0K",
+            "D3BsdWdpbl9pbnN0YW5jZRgBIAEoCUIE4kEBAiLWAQoTQ2VydGlmaWNhdGVQ",
+            "cm92aWRlchJLCg1ncnBjX2VuZHBvaW50GAIgASgLMjIuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtzZWN1cml0eS52MWJldGExLkdycGNFbmRwb2ludEgAEmoKHWNl",
+            "cnRpZmljYXRlX3Byb3ZpZGVyX2luc3RhbmNlGAMgASgLMkEuZ29vZ2xlLmNs",
+            "b3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExLkNlcnRpZmljYXRlUHJvdmlk",
+            "ZXJJbnN0YW5jZUgAQgYKBHR5cGVCggIKKGNvbS5nb29nbGUuY2xvdWQubmV0",
+            "d29ya3NlY3VyaXR5LnYxYmV0YTFCCFRsc1Byb3RvUAFaUmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vbmV0d29ya3NlY3VyaXR5L2FwaXYxYmV0YTEvbmV0d29ya3Nl",
+            "Y3VyaXR5cGI7bmV0d29ya3NlY3VyaXR5cGKqAiRHb29nbGUuQ2xvdWQuTmV0",
+            "d29ya1NlY3VyaXR5LlYxQmV0YTHKAiRHb29nbGVcQ2xvdWRcTmV0d29ya1Nl",
+            "Y3VyaXR5XFYxYmV0YTHqAidHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VjdXJp",
+            "dHk6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,6 +61,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Specification of the GRPC Endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GrpcEndpoint : pb::IMessage<GrpcEndpoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -258,6 +259,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// Specification of ValidationCA. Defines the mechanism to obtain the
   /// Certificate Authority certificate to validate the peer certificate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationCA : pb::IMessage<ValidationCA>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -558,6 +560,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// and configured by specifying this message. Workloads use the values from this
   /// message to locate and load the CertificateProvider instance configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateProviderInstance : pb::IMessage<CertificateProviderInstance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -756,6 +759,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// Specification of certificate provider. Defines the mechanism to obtain the
   /// certificate and private key for peer to peer authentication.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateProvider : pb::IMessage<CertificateProvider>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

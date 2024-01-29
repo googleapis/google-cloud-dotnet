@@ -29,71 +29,72 @@ namespace Google.Cloud.Shell.V1 {
             "b3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoj",
             "Z29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8iswMKC0Vudmlyb25tZW50EhEKBG5h",
-            "bWUYASABKAlCA+BBBRIPCgJpZBgCIAEoCUID4EEDEhwKDGRvY2tlcl9pbWFn",
-            "ZRgDIAEoCUIG4EEC4EEFEjwKBXN0YXRlGAQgASgOMiguZ29vZ2xlLmNsb3Vk",
-            "LnNoZWxsLnYxLkVudmlyb25tZW50LlN0YXRlQgPgQQMSFQoId2ViX2hvc3QY",
-            "DCABKAlCA+BBAxIZCgxzc2hfdXNlcm5hbWUYBSABKAlCA+BBAxIVCghzc2hf",
-            "aG9zdBgGIAEoCUID4EEDEhUKCHNzaF9wb3J0GAcgASgFQgPgQQMSGAoLcHVi",
-            "bGljX2tleXMYCCADKAlCA+BBAyJVCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEg0KCVNVU1BFTkRFRBABEgsKB1BFTkRJTkcQAhILCgdSVU5OSU5H",
-            "EAMSDAoIREVMRVRJTkcQBDpT6kFQCiVjbG91ZHNoZWxsLmdvb2dsZWFwaXMu",
-            "Y29tL0Vudmlyb25tZW50Eid1c2Vycy97dXNlcn0vZW52aXJvbm1lbnRzL3tl",
-            "bnZpcm9ubWVudH0iVAoVR2V0RW52aXJvbm1lbnRSZXF1ZXN0EjsKBG5hbWUY",
-            "ASABKAlCLeBBAvpBJwolY2xvdWRzaGVsbC5nb29nbGVhcGlzLmNvbS9FbnZp",
-            "cm9ubWVudCIbChlDcmVhdGVFbnZpcm9ubWVudE1ldGFkYXRhIhsKGURlbGV0",
-            "ZUVudmlyb25tZW50TWV0YWRhdGEiUgoXU3RhcnRFbnZpcm9ubWVudFJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCRIUCgxhY2Nlc3NfdG9rZW4YAiABKAkSEwoLcHVi",
-            "bGljX2tleXMYAyADKAkihAEKG0F1dGhvcml6ZUVudmlyb25tZW50UmVxdWVz",
-            "dBIMCgRuYW1lGAEgASgJEhQKDGFjY2Vzc190b2tlbhgCIAEoCRIQCghpZF90",
-            "b2tlbhgEIAEoCRIvCgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXAiHgocQXV0aG9yaXplRW52aXJvbm1lbnRSZXNwb25z",
-            "ZSIeChxBdXRob3JpemVFbnZpcm9ubWVudE1ldGFkYXRhItIBChhTdGFydEVu",
-            "dmlyb25tZW50TWV0YWRhdGESRAoFc3RhdGUYASABKA4yNS5nb29nbGUuY2xv",
-            "dWQuc2hlbGwudjEuU3RhcnRFbnZpcm9ubWVudE1ldGFkYXRhLlN0YXRlInAK",
-            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIU1RBUlRJTkcQARIU",
-            "ChBVTkFSQ0hJVklOR19ESVNLEAISHgoaQVdBSVRJTkdfQ09NUFVURV9SRVNP",
-            "VVJDRVMQBBIMCghGSU5JU0hFRBADIlMKGFN0YXJ0RW52aXJvbm1lbnRSZXNw",
-            "b25zZRI3CgtlbnZpcm9ubWVudBgBIAEoCzIiLmdvb2dsZS5jbG91ZC5zaGVs",
-            "bC52MS5FbnZpcm9ubWVudCI3ChNBZGRQdWJsaWNLZXlSZXF1ZXN0EhMKC2Vu",
-            "dmlyb25tZW50GAEgASgJEgsKA2tleRgCIAEoCSIjChRBZGRQdWJsaWNLZXlS",
-            "ZXNwb25zZRILCgNrZXkYASABKAkiFgoUQWRkUHVibGljS2V5TWV0YWRhdGEi",
-            "OgoWUmVtb3ZlUHVibGljS2V5UmVxdWVzdBITCgtlbnZpcm9ubWVudBgBIAEo",
-            "CRILCgNrZXkYAiABKAkiGQoXUmVtb3ZlUHVibGljS2V5UmVzcG9uc2UiGQoX",
-            "UmVtb3ZlUHVibGljS2V5TWV0YWRhdGEingIKFkNsb3VkU2hlbGxFcnJvckRl",
-            "dGFpbHMSTwoEY29kZRgBIAEoDjJBLmdvb2dsZS5jbG91ZC5zaGVsbC52MS5D",
-            "bG91ZFNoZWxsRXJyb3JEZXRhaWxzLkNsb3VkU2hlbGxFcnJvckNvZGUisgEK",
-            "E0Nsb3VkU2hlbGxFcnJvckNvZGUSJgoiQ0xPVURfU0hFTExfRVJST1JfQ09E",
-            "RV9VTlNQRUNJRklFRBAAEhUKEUlNQUdFX1VOQVZBSUxBQkxFEAESGAoUQ0xP",
-            "VURfU0hFTExfRElTQUJMRUQQAhIRCg1UT1NfVklPTEFUSU9OEAQSEgoOUVVP",
-            "VEFfRVhDRUVERUQQBRIbChdFTlZJUk9OTUVOVF9VTkFWQUlMQUJMRRAGMtQI",
-            "ChFDbG91ZFNoZWxsU2VydmljZRKUAQoOR2V0RW52aXJvbm1lbnQSLC5nb29n",
-            "bGUuY2xvdWQuc2hlbGwudjEuR2V0RW52aXJvbm1lbnRSZXF1ZXN0GiIuZ29v",
-            "Z2xlLmNsb3VkLnNoZWxsLnYxLkVudmlyb25tZW50IjCC0+STAiMSIS92MS97",
-            "bmFtZT11c2Vycy8qL2Vudmlyb25tZW50cy8qfdpBBG5hbWUSzAEKEFN0YXJ0",
-            "RW52aXJvbm1lbnQSLi5nb29nbGUuY2xvdWQuc2hlbGwudjEuU3RhcnRFbnZp",
-            "cm9ubWVudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "ImmC0+STAiwiJy92MS97bmFtZT11c2Vycy8qL2Vudmlyb25tZW50cy8qfTpz",
-            "dGFydDoBKspBNAoYU3RhcnRFbnZpcm9ubWVudFJlc3BvbnNlEhhTdGFydEVu",
-            "dmlyb25tZW50TWV0YWRhdGES4AEKFEF1dGhvcml6ZUVudmlyb25tZW50EjIu",
-            "Z29vZ2xlLmNsb3VkLnNoZWxsLnYxLkF1dGhvcml6ZUVudmlyb25tZW50UmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24idYLT5JMCMCIr",
-            "L3YxL3tuYW1lPXVzZXJzLyovZW52aXJvbm1lbnRzLyp9OmF1dGhvcml6ZToB",
-            "KspBPAocQXV0aG9yaXplRW52aXJvbm1lbnRSZXNwb25zZRIcQXV0aG9yaXpl",
-            "RW52aXJvbm1lbnRNZXRhZGF0YRLKAQoMQWRkUHVibGljS2V5EiouZ29vZ2xl",
-            "LmNsb3VkLnNoZWxsLnYxLkFkZFB1YmxpY0tleVJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm+C0+STAjoiNS92MS97ZW52aXJvbm1l",
-            "bnQ9dXNlcnMvKi9lbnZpcm9ubWVudHMvKn06YWRkUHVibGljS2V5OgEqykEs",
-            "ChRBZGRQdWJsaWNLZXlSZXNwb25zZRIUQWRkUHVibGljS2V5TWV0YWRhdGES",
-            "2QEKD1JlbW92ZVB1YmxpY0tleRItLmdvb2dsZS5jbG91ZC5zaGVsbC52MS5S",
-            "ZW1vdmVQdWJsaWNLZXlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiJ4gtPkkwI9IjgvdjEve2Vudmlyb25tZW50PXVzZXJzLyovZW52",
-            "aXJvbm1lbnRzLyp9OnJlbW92ZVB1YmxpY0tleToBKspBMgoXUmVtb3ZlUHVi",
-            "bGljS2V5UmVzcG9uc2USF1JlbW92ZVB1YmxpY0tleU1ldGFkYXRhGk3KQRlj",
-            "bG91ZHNoZWxsLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJfChljb20uZ29vZ2xlLmNs",
-            "b3VkLnNoZWxsLnYxQg9DbG91ZFNoZWxsUHJvdG9QAVovY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9zaGVsbC9hcGl2MS9zaGVsbHBiO3NoZWxscGJiBnByb3RvMw=="));
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8iugMKC0Vudmlyb25tZW50EhIKBG5h",
+            "bWUYASABKAlCBOJBAQUSEAoCaWQYAiABKAlCBOJBAQMSGwoMZG9ja2VyX2lt",
+            "YWdlGAMgASgJQgXiQQICBRI9CgVzdGF0ZRgEIAEoDjIoLmdvb2dsZS5jbG91",
+            "ZC5zaGVsbC52MS5FbnZpcm9ubWVudC5TdGF0ZUIE4kEBAxIWCgh3ZWJfaG9z",
+            "dBgMIAEoCUIE4kEBAxIaCgxzc2hfdXNlcm5hbWUYBSABKAlCBOJBAQMSFgoI",
+            "c3NoX2hvc3QYBiABKAlCBOJBAQMSFgoIc3NoX3BvcnQYByABKAVCBOJBAQMS",
+            "GQoLcHVibGljX2tleXMYCCADKAlCBOJBAQMiVQoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABINCglTVVNQRU5ERUQQARILCgdQRU5ESU5HEAISCwoH",
+            "UlVOTklORxADEgwKCERFTEVUSU5HEAQ6U+pBUAolY2xvdWRzaGVsbC5nb29n",
+            "bGVhcGlzLmNvbS9FbnZpcm9ubWVudBIndXNlcnMve3VzZXJ9L2Vudmlyb25t",
+            "ZW50cy97ZW52aXJvbm1lbnR9IlUKFUdldEVudmlyb25tZW50UmVxdWVzdBI8",
+            "CgRuYW1lGAEgASgJQi7iQQEC+kEnCiVjbG91ZHNoZWxsLmdvb2dsZWFwaXMu",
+            "Y29tL0Vudmlyb25tZW50IhsKGUNyZWF0ZUVudmlyb25tZW50TWV0YWRhdGEi",
+            "GwoZRGVsZXRlRW52aXJvbm1lbnRNZXRhZGF0YSJSChdTdGFydEVudmlyb25t",
+            "ZW50UmVxdWVzdBIMCgRuYW1lGAEgASgJEhQKDGFjY2Vzc190b2tlbhgCIAEo",
+            "CRITCgtwdWJsaWNfa2V5cxgDIAMoCSKEAQobQXV0aG9yaXplRW52aXJvbm1l",
+            "bnRSZXF1ZXN0EgwKBG5hbWUYASABKAkSFAoMYWNjZXNzX3Rva2VuGAIgASgJ",
+            "EhAKCGlkX3Rva2VuGAQgASgJEi8KC2V4cGlyZV90aW1lGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCIeChxBdXRob3JpemVFbnZpcm9ubWVu",
+            "dFJlc3BvbnNlIh4KHEF1dGhvcml6ZUVudmlyb25tZW50TWV0YWRhdGEi0gEK",
+            "GFN0YXJ0RW52aXJvbm1lbnRNZXRhZGF0YRJECgVzdGF0ZRgBIAEoDjI1Lmdv",
+            "b2dsZS5jbG91ZC5zaGVsbC52MS5TdGFydEVudmlyb25tZW50TWV0YWRhdGEu",
+            "U3RhdGUicAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghTVEFS",
+            "VElORxABEhQKEFVOQVJDSElWSU5HX0RJU0sQAhIeChpBV0FJVElOR19DT01Q",
+            "VVRFX1JFU09VUkNFUxAEEgwKCEZJTklTSEVEEAMiUwoYU3RhcnRFbnZpcm9u",
+            "bWVudFJlc3BvbnNlEjcKC2Vudmlyb25tZW50GAEgASgLMiIuZ29vZ2xlLmNs",
+            "b3VkLnNoZWxsLnYxLkVudmlyb25tZW50IjcKE0FkZFB1YmxpY0tleVJlcXVl",
+            "c3QSEwoLZW52aXJvbm1lbnQYASABKAkSCwoDa2V5GAIgASgJIiMKFEFkZFB1",
+            "YmxpY0tleVJlc3BvbnNlEgsKA2tleRgBIAEoCSIWChRBZGRQdWJsaWNLZXlN",
+            "ZXRhZGF0YSI6ChZSZW1vdmVQdWJsaWNLZXlSZXF1ZXN0EhMKC2Vudmlyb25t",
+            "ZW50GAEgASgJEgsKA2tleRgCIAEoCSIZChdSZW1vdmVQdWJsaWNLZXlSZXNw",
+            "b25zZSIZChdSZW1vdmVQdWJsaWNLZXlNZXRhZGF0YSKeAgoWQ2xvdWRTaGVs",
+            "bEVycm9yRGV0YWlscxJPCgRjb2RlGAEgASgOMkEuZ29vZ2xlLmNsb3VkLnNo",
+            "ZWxsLnYxLkNsb3VkU2hlbGxFcnJvckRldGFpbHMuQ2xvdWRTaGVsbEVycm9y",
+            "Q29kZSKyAQoTQ2xvdWRTaGVsbEVycm9yQ29kZRImCiJDTE9VRF9TSEVMTF9F",
+            "UlJPUl9DT0RFX1VOU1BFQ0lGSUVEEAASFQoRSU1BR0VfVU5BVkFJTEFCTEUQ",
+            "ARIYChRDTE9VRF9TSEVMTF9ESVNBQkxFRBACEhEKDVRPU19WSU9MQVRJT04Q",
+            "BBISCg5RVU9UQV9FWENFRURFRBAFEhsKF0VOVklST05NRU5UX1VOQVZBSUxB",
+            "QkxFEAYy1AgKEUNsb3VkU2hlbGxTZXJ2aWNlEpQBCg5HZXRFbnZpcm9ubWVu",
+            "dBIsLmdvb2dsZS5jbG91ZC5zaGVsbC52MS5HZXRFbnZpcm9ubWVudFJlcXVl",
+            "c3QaIi5nb29nbGUuY2xvdWQuc2hlbGwudjEuRW52aXJvbm1lbnQiMNpBBG5h",
+            "bWWC0+STAiMSIS92MS97bmFtZT11c2Vycy8qL2Vudmlyb25tZW50cy8qfRLM",
+            "AQoQU3RhcnRFbnZpcm9ubWVudBIuLmdvb2dsZS5jbG91ZC5zaGVsbC52MS5T",
+            "dGFydEVudmlyb25tZW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
+            "cGVyYXRpb24iacpBNAoYU3RhcnRFbnZpcm9ubWVudFJlc3BvbnNlEhhTdGFy",
+            "dEVudmlyb25tZW50TWV0YWRhdGGC0+STAiwiJy92MS97bmFtZT11c2Vycy8q",
+            "L2Vudmlyb25tZW50cy8qfTpzdGFydDoBKhLgAQoUQXV0aG9yaXplRW52aXJv",
+            "bm1lbnQSMi5nb29nbGUuY2xvdWQuc2hlbGwudjEuQXV0aG9yaXplRW52aXJv",
+            "bm1lbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ1",
+            "ykE8ChxBdXRob3JpemVFbnZpcm9ubWVudFJlc3BvbnNlEhxBdXRob3JpemVF",
+            "bnZpcm9ubWVudE1ldGFkYXRhgtPkkwIwIisvdjEve25hbWU9dXNlcnMvKi9l",
+            "bnZpcm9ubWVudHMvKn06YXV0aG9yaXplOgEqEsoBCgxBZGRQdWJsaWNLZXkS",
+            "Ki5nb29nbGUuY2xvdWQuc2hlbGwudjEuQWRkUHVibGljS2V5UmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ib8pBLAoUQWRkUHVibGlj",
+            "S2V5UmVzcG9uc2USFEFkZFB1YmxpY0tleU1ldGFkYXRhgtPkkwI6IjUvdjEv",
+            "e2Vudmlyb25tZW50PXVzZXJzLyovZW52aXJvbm1lbnRzLyp9OmFkZFB1Ymxp",
+            "Y0tleToBKhLZAQoPUmVtb3ZlUHVibGljS2V5Ei0uZ29vZ2xlLmNsb3VkLnNo",
+            "ZWxsLnYxLlJlbW92ZVB1YmxpY0tleVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uInjKQTIKF1JlbW92ZVB1YmxpY0tleVJlc3BvbnNl",
+            "EhdSZW1vdmVQdWJsaWNLZXlNZXRhZGF0YYLT5JMCPSI4L3YxL3tlbnZpcm9u",
+            "bWVudD11c2Vycy8qL2Vudmlyb25tZW50cy8qfTpyZW1vdmVQdWJsaWNLZXk6",
+            "ASoaTcpBGWNsb3Vkc2hlbGwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQl8KGWNvbS5n",
+            "b29nbGUuY2xvdWQuc2hlbGwudjFCD0Nsb3VkU2hlbGxQcm90b1ABWi9jbG91",
+            "ZC5nb29nbGUuY29tL2dvL3NoZWxsL2FwaXYxL3NoZWxscGI7c2hlbGxwYmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,6 +127,7 @@ namespace Google.Cloud.Shell.V1 {
   /// containing the user's data that will remain across sessions. Each user has
   /// at least an environment with the ID "default".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -683,6 +685,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [GetEnvironment][google.cloud.shell.v1.CloudShellService.GetEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -880,6 +883,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [CreateEnvironment][google.cloud.shell.v1.CloudShellService.CreateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEnvironmentMetadata : pb::IMessage<CreateEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1036,6 +1040,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [DeleteEnvironment][google.cloud.shell.v1.CloudShellService.DeleteEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEnvironmentMetadata : pb::IMessage<DeleteEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1192,6 +1197,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentRequest : pb::IMessage<StartEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1462,6 +1468,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentRequest : pb::IMessage<AuthorizeEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1790,6 +1797,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentResponse : pb::IMessage<AuthorizeEnvironmentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1946,6 +1954,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [AuthorizeEnvironment][google.cloud.shell.v1.CloudShellService.AuthorizeEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuthorizeEnvironmentMetadata : pb::IMessage<AuthorizeEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2102,6 +2111,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentMetadata : pb::IMessage<StartEnvironmentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2345,6 +2355,7 @@ namespace Google.Cloud.Shell.V1 {
   /// [StartEnvironment][google.cloud.shell.v1.CloudShellService.StartEnvironment]
   /// once the operation is complete.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StartEnvironmentResponse : pb::IMessage<StartEnvironmentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2550,6 +2561,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyRequest : pb::IMessage<AddPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2792,6 +2804,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyResponse : pb::IMessage<AddPublicKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2988,6 +3001,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [AddPublicKey][google.cloud.shell.v1.CloudShellService.AddPublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddPublicKeyMetadata : pb::IMessage<AddPublicKeyMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3144,6 +3158,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Request message for
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyRequest : pb::IMessage<RemovePublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3381,6 +3396,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Response message for
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyResponse : pb::IMessage<RemovePublicKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3537,6 +3553,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Message included in the metadata field of operations returned from
   /// [RemovePublicKey][google.cloud.shell.v1.CloudShellService.RemovePublicKey].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemovePublicKeyMetadata : pb::IMessage<RemovePublicKeyMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3693,6 +3710,7 @@ namespace Google.Cloud.Shell.V1 {
   /// Cloud-shell specific information that will be included as details in failure
   /// responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudShellErrorDetails : pb::IMessage<CloudShellErrorDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

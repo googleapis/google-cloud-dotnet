@@ -54,6 +54,7 @@ namespace Google.Maps.FleetEngine.V1 {
   /// with points P_0, P_1, ... , P_N (zero-based index), the SpeedReadingInterval
   /// defines an interval and describes its traffic using the following categories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeedReadingInterval : pb::IMessage<SpeedReadingInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -361,6 +362,7 @@ namespace Google.Maps.FleetEngine.V1 {
   /// <summary>
   /// Traffic density along a Vehicle's path.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConsumableTrafficPolyline : pb::IMessage<ConsumableTrafficPolyline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

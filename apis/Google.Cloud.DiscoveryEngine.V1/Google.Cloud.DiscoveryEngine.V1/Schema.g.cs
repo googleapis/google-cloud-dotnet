@@ -27,21 +27,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Cixnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL3NjaGVtYS5wcm90",
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byLZAgoGU2NoZW1h",
+            "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byLaAgoGU2NoZW1h",
             "EjAKDXN0cnVjdF9zY2hlbWEYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
-            "dWN0SAASFQoLanNvbl9zY2hlbWEYAyABKAlIABIRCgRuYW1lGAEgASgJQgPg",
-            "QQU66AHqQeQBCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vU2No",
-            "ZW1hElBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2NoZW1hcy97c2NoZW1hfRJpcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rp",
-            "b25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zY2hl",
-            "bWFzL3tzY2hlbWF9QggKBnNjaGVtYUL+AQojY29tLmdvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFCC1NjaGVtYVByb3RvUAFaTWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2lu",
-            "ZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29v",
-            "Z2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxE",
-            "aXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlF",
-            "bmdpbmU6OlYxYgZwcm90bzM="));
+            "dWN0SAASFQoLanNvbl9zY2hlbWEYAyABKAlIABISCgRuYW1lGAEgASgJQgTi",
+            "QQEFOugB6kHkAQolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Nj",
+            "aGVtYRJQcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NjaGVtYXMve3NjaGVtYX0SaXBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0",
+            "aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2No",
+            "ZW1hcy97c2NoZW1hfUIICgZzY2hlbWFC/gEKI2NvbS5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxQgtTY2hlbWFQcm90b1ABWk1jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3Zlcnllbmdp",
+            "bmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dv",
+            "b2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRc",
+            "RGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5",
+            "RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -55,6 +55,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
   /// <summary>
   /// Defines the structure and layout of a type of document data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Schema : pb::IMessage<Schema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

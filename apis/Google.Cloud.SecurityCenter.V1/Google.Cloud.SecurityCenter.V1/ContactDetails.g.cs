@@ -48,6 +48,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Details about specific contacts
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContactDetails : pb::IMessage<ContactDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -232,6 +233,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// The email address of a contact.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Contact : pb::IMessage<Contact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

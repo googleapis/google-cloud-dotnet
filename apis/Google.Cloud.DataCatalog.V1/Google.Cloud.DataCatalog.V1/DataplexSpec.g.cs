@@ -63,6 +63,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Common Dataplex fields.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataplexSpec : pb::IMessage<DataplexSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -391,6 +392,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Entry specyfication for a Dataplex fileset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataplexFilesetSpec : pb::IMessage<DataplexFilesetSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -595,6 +597,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Entry specification for a Dataplex table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataplexTableSpec : pb::IMessage<DataplexTableSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -877,6 +880,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// those external tables (fully qualified name, resource name et cetera) within
   /// the Data Catalog.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataplexExternalTable : pb::IMessage<DataplexExternalTable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -60,6 +60,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// over the course of a read, e.g. how many results were scanned in a read
   /// operation versus the results returned.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadIterationStats : pb::IMessage<ReadIterationStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -379,6 +380,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// it interacts with different systems over its lifetime, e.g. how long the
   /// request took to execute within a frontend server.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestLatencyStats : pb::IMessage<RequestLatencyStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -599,6 +601,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// FullReadStatsView captures all known information about a read.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FullReadStatsView : pb::IMessage<FullReadStatsView>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -859,6 +862,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Currently, there are the following supported methods:
   ///   * google.bigtable.v2.ReadRows
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestStats : pb::IMessage<RequestStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

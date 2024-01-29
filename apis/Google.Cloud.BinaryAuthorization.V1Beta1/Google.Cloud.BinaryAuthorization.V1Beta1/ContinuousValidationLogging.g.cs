@@ -98,6 +98,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Represents an auditing event from Continuous Validation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContinuousValidationEvent : pb::IMessage<ContinuousValidationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -395,6 +396,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       /// <summary>
       /// An auditing event for one Pod.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ContinuousValidationPodEvent : pb::IMessage<ContinuousValidationPodEvent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -854,6 +856,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           /// <summary>
           /// Container image with auditing details.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ImageDetails : pb::IMessage<ImageDetails>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1280,6 +1283,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 [pbr::OriginalName("DENY")] Deny = 2,
               }
 
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class CheckResult : pb::IMessage<CheckResult>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1782,6 +1786,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                   /// <summary>
                   /// A scope specifier for check sets.
                   /// </summary>
+                  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
                   public sealed partial class CheckSetScope : pb::IMessage<CheckSetScope>
                   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                       , pb::IBufferMessage
@@ -2099,6 +2104,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       /// An event describing a user-actionable configuration issue that prevents CV
       /// from auditing.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfigErrorEvent : pb::IMessage<ConfigErrorEvent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

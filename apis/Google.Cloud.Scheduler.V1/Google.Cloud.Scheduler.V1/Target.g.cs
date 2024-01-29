@@ -123,6 +123,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// constitutes a failed execution. For a redirected request, the response
   /// returned by the redirected request is considered.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpTarget : pb::IMessage<HttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -614,6 +615,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// response code, or a failure to receive a response before the
   /// deadline, constitutes a failed attempt.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineHttpTarget : pb::IMessage<AppEngineHttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1015,6 +1017,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Pub/Sub target. The job will be delivered by publishing a message to
   /// the given Pub/Sub topic.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubTarget : pb::IMessage<PubsubTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1301,6 +1304,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// and [App Engine Flex request
   /// routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1697,6 +1701,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// This type of authorization should generally only be used when calling Google
   /// APIs hosted on *.googleapis.com.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OAuthToken : pb::IMessage<OAuthToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1942,6 +1947,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// calling Cloud Run, or endpoints where you intend to validate the token
   /// yourself.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OidcToken : pb::IMessage<OidcToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

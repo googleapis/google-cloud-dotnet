@@ -50,6 +50,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// The widget subset used by an add-on.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddOnWidgetSet : pb::IMessage<AddOnWidgetSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

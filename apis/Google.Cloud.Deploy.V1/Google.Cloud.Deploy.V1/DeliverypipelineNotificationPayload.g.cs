@@ -49,6 +49,7 @@ namespace Google.Cloud.Deploy.V1 {
   /// Platform Log event that describes the failure to send delivery pipeline
   /// status change Pub/Sub notification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeliveryPipelineNotificationEvent : pb::IMessage<DeliveryPipelineNotificationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

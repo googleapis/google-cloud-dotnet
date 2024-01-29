@@ -159,14 +159,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
+            return AnswerRecordsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AnswerRecordsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
+            return AnswerRecordsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

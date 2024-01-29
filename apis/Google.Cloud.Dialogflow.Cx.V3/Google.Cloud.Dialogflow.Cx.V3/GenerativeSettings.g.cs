@@ -66,6 +66,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
   /// Settings for Generative AI.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerativeSettings : pb::IMessage<GenerativeSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -452,6 +453,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Settings for Generative Fallback.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FallbackSettings : pb::IMessage<FallbackSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -680,6 +682,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           /// <summary>
           /// Prompt template.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class PromptTemplate : pb::IMessage<PromptTemplate>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -966,6 +969,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// &lt;business>, &lt;business_description>. Your task is to help humans on
       /// &lt;agent_scope>".
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class KnowledgeConnectorSettings : pb::IMessage<KnowledgeConnectorSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

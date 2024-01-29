@@ -70,6 +70,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// how those tasks are dispatched. Configurable properties include rate limits,
   /// retry options, queue types, and others.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Queue : pb::IMessage<Queue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -694,6 +695,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask], will run a task even if
   /// the queue has reached its [RateLimits][google.cloud.tasks.v2.RateLimits].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RateLimits : pb::IMessage<RateLimits>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1023,6 +1025,7 @@ namespace Google.Cloud.Tasks.V2 {
   ///
   /// These settings determine when a failed task attempt is retried.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetryConfig : pb::IMessage<RetryConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1488,6 +1491,7 @@ namespace Google.Cloud.Tasks.V2 {
   /// Configuration options for writing logs to
   /// [Stackdriver Logging](https://cloud.google.com/logging/docs/).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StackdriverLoggingConfig : pb::IMessage<StackdriverLoggingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

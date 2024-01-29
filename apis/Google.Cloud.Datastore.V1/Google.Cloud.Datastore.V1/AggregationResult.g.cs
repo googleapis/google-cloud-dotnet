@@ -60,6 +60,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// aggregation query, unlike entity queries which can have different fields
   /// present for each result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationResult : pb::IMessage<AggregationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -249,6 +250,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A batch of aggregation results produced by an aggregation query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationResultBatch : pb::IMessage<AggregationResultBatch>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

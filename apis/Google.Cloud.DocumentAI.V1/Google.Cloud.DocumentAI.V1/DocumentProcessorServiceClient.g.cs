@@ -649,14 +649,14 @@ namespace Google.Cloud.DocumentAI.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
+            return DocumentProcessorServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DocumentProcessorServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DocumentProcessorServiceClient.Create(callInvoker, Settings, Logger);
+            return DocumentProcessorServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

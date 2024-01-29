@@ -32,13 +32,13 @@ namespace Google.Apps.Script.Type.Slides {
             "Z29vZ2xlLmFwcHMuc2NyaXB0LnR5cGUuSG9tZXBhZ2VFeHRlbnNpb25Qb2lu",
             "dBJbCh1vbl9maWxlX3Njb3BlX2dyYW50ZWRfdHJpZ2dlchgCIAEoCzI0Lmdv",
             "b2dsZS5hcHBzLnNjcmlwdC50eXBlLnNsaWRlcy5TbGlkZXNFeHRlbnNpb25Q",
-            "b2ludCIxChRTbGlkZXNFeHRlbnNpb25Qb2ludBIZCgxydW5fZnVuY3Rpb24Y",
-            "ASABKAlCA+BBAkLmAQoiY29tLmdvb2dsZS5hcHBzLnNjcmlwdC50eXBlLnNs",
-            "aWRlc0IYU2xpZGVzQWRkT25NYW5pZmVzdFByb3RvUAFaPWdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBwcy9zY3JpcHQvdHlwZS9z",
-            "bGlkZXOqAh5Hb29nbGUuQXBwcy5TY3JpcHQuVHlwZS5TbGlkZXPKAh5Hb29n",
-            "bGVcQXBwc1xTY3JpcHRcVHlwZVxTbGlkZXPqAiJHb29nbGU6OkFwcHM6OlNj",
-            "cmlwdDo6VHlwZTo6U2xpZGVzYgZwcm90bzM="));
+            "b2ludCIyChRTbGlkZXNFeHRlbnNpb25Qb2ludBIaCgxydW5fZnVuY3Rpb24Y",
+            "ASABKAlCBOJBAQJC5gEKImNvbS5nb29nbGUuYXBwcy5zY3JpcHQudHlwZS5z",
+            "bGlkZXNCGFNsaWRlc0FkZE9uTWFuaWZlc3RQcm90b1ABWj1nb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwcHMvc2NyaXB0L3R5cGUv",
+            "c2xpZGVzqgIeR29vZ2xlLkFwcHMuU2NyaXB0LlR5cGUuU2xpZGVzygIeR29v",
+            "Z2xlXEFwcHNcU2NyaXB0XFR5cGVcU2xpZGVz6gIiR29vZ2xlOjpBcHBzOjpT",
+            "Y3JpcHQ6OlR5cGU6OlNsaWRlc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,6 +53,7 @@ namespace Google.Apps.Script.Type.Slides {
   /// <summary>
   /// Slides add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlidesAddOnManifest : pb::IMessage<SlidesAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -308,6 +309,7 @@ namespace Google.Apps.Script.Type.Slides {
   /// <summary>
   /// Common format for declaring a Slides add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlidesExtensionPoint : pb::IMessage<SlidesExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -81,6 +81,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Payload message of raw document content (bytes).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RawDocument : pb::IMessage<RawDocument>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -361,6 +362,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Specifies a document stored on Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDocument : pb::IMessage<GcsDocument>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -596,6 +598,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Specifies a set of documents on Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDocuments : pb::IMessage<GcsDocuments>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -780,6 +783,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Specifies all documents on Cloud Storage with a common prefix.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsPrefix : pb::IMessage<GcsPrefix>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -975,6 +979,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// The common config to specify a set of documents used as input.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDocumentsInputConfig : pb::IMessage<BatchDocumentsInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1270,6 +1275,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// Config that controls the output of documents. All documents will be written
   /// as a JSON file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentOutputConfig : pb::IMessage<DocumentOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1511,6 +1517,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// The configuration used when outputting documents.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GcsOutputConfig : pb::IMessage<GcsOutputConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1809,6 +1816,7 @@ namespace Google.Cloud.DocumentAI.V1 {
           /// <summary>
           /// The sharding config for the output document.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ShardingConfig : pb::IMessage<ShardingConfig>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2054,6 +2062,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   /// <summary>
   /// Config for Document OCR.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OcrConfig : pb::IMessage<OcrConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2553,6 +2562,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Hints for OCR Engine
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Hints : pb::IMessage<Hints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2742,6 +2752,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <summary>
       /// Configurations for premium OCR features.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PremiumFeatures : pb::IMessage<PremiumFeatures>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -46,6 +46,7 @@ namespace Google.Cloud.Iam.V1.Logging {
   /// as an `Any` type in the `ServiceData` message of an
   /// `AuditLog` message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AuditData : pb::IMessage<AuditData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

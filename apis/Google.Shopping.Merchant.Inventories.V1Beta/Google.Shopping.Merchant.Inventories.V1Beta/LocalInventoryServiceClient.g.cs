@@ -156,14 +156,14 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return LocalInventoryServiceClient.Create(callInvoker, Settings, Logger);
+            return LocalInventoryServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<LocalInventoryServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return LocalInventoryServiceClient.Create(callInvoker, Settings, Logger);
+            return LocalInventoryServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

@@ -82,6 +82,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// MITRE ATT&amp;CK tactics and techniques related to this finding.
   /// See: https://attack.mitre.org
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MitreAttack : pb::IMessage<MitreAttack>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

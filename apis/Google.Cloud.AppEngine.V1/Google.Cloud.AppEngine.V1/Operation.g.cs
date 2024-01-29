@@ -53,6 +53,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Metadata for the given [google.longrunning.Operation][google.longrunning.Operation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadataV1 : pb::IMessage<OperationMetadataV1>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -590,6 +591,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Metadata for the given [google.longrunning.Operation][google.longrunning.Operation] during a
   /// [google.appengine.v1.CreateVersionRequest][google.appengine.v1.CreateVersionRequest].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateVersionMetadataV1 : pb::IMessage<CreateVersionMetadataV1>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

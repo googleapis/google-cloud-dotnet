@@ -71,6 +71,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// Encapsulates progress related information for a Cloud Bigtable long
   /// running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationProgress : pb::IMessage<OperationProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

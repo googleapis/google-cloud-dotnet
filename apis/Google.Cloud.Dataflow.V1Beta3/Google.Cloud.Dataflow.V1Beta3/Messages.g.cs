@@ -145,6 +145,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A particular message pertaining to a Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobMessage : pb::IMessage<JobMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -471,6 +472,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// identifying the message, and structured data associated with the message for
   /// programmatic consumption.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructuredMessage : pb::IMessage<StructuredMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -739,6 +741,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// Structured data associated with this message.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Parameter : pb::IMessage<Parameter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -989,6 +992,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// A structured message reporting an autoscaling decision made by the Dataflow
   /// service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingEvent : pb::IMessage<AutoscalingEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1452,6 +1456,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// starting with the oldest messages first. If no time range is specified
   /// the results with start with the oldest message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobMessagesRequest : pb::IMessage<ListJobMessagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1953,6 +1958,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response to a request to list job messages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobMessagesResponse : pb::IMessage<ListJobMessagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

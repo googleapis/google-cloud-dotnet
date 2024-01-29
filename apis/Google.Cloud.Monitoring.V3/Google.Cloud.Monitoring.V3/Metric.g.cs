@@ -86,6 +86,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A single data point in a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Point : pb::IMessage<Point>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -350,6 +351,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// fully-specified monitored resource and a fully-specified metric.
   /// This type is used for both listing and creating time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -829,6 +831,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A descriptor for the labels and points in a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesDescriptor : pb::IMessage<TimeSeriesDescriptor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1045,6 +1048,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// A descriptor for the value columns in a data point.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ValueDescriptor : pb::IMessage<ValueDescriptor>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1369,6 +1373,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// Represents the values of a time series associated with a
   /// TimeSeriesDescriptor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesData : pb::IMessage<TimeSeriesData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1590,6 +1595,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// point values corresponding to the entries in `point_descriptors` field in
       /// the TimeSeriesDescriptor associated with this object.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PointData : pb::IMessage<PointData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1828,6 +1834,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A label value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelValue : pb::IMessage<LabelValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2181,6 +2188,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// An error associated with a query in the time series query language format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryError : pb::IMessage<QueryError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2445,6 +2453,7 @@ namespace Google.Cloud.Monitoring.V3 {
   ///
   /// refers to the part of the text: "fox".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextLocator : pb::IMessage<TextLocator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2844,6 +2853,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// The position of a byte within the text.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Position : pb::IMessage<Position>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

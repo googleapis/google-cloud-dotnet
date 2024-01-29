@@ -29,7 +29,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dvb2ds",
             "ZS9jbG91ZC90YXNrcy92MmJldGEzL3RhcmdldC5wcm90bxoeZ29vZ2xlL3By",
             "b3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIpwHCgVRdWV1ZRIMCgRuYW1lGAEgASgJEk8KFWFwcF9lbmdp",
+            "YW1wLnByb3RvIp4HCgVRdWV1ZRIMCgRuYW1lGAEgASgJEk8KFWFwcF9lbmdp",
             "bmVfaHR0cF9xdWV1ZRgDIAEoCzIuLmdvb2dsZS5jbG91ZC50YXNrcy52MmJl",
             "dGEzLkFwcEVuZ2luZUh0dHBRdWV1ZUgAEjsKC2h0dHBfdGFyZ2V0GA0gASgL",
             "MiYuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuSHR0cFRhcmdldBI7Cgty",
@@ -42,31 +42,31 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "Cg10b21ic3RvbmVfdHRsGAkgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
             "aW9uElgKGnN0YWNrZHJpdmVyX2xvZ2dpbmdfY29uZmlnGAogASgLMjQuZ29v",
             "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuU3RhY2tkcml2ZXJMb2dnaW5nQ29u",
-            "ZmlnEjkKBHR5cGUYCyABKA4yJi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
-            "My5RdWV1ZS5UeXBlQgPgQQUSOgoFc3RhdHMYDCABKAsyJi5nb29nbGUuY2xv",
-            "dWQudGFza3MudjJiZXRhMy5RdWV1ZVN0YXRzQgPgQQMiRQoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCgoGUEFVU0VEEAIS",
-            "DAoIRElTQUJMRUQQAyIwCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABII",
-            "CgRQVUxMEAESCAoEUFVTSBACOlzqQVkKH2Nsb3VkdGFza3MuZ29vZ2xlYXBp",
-            "cy5jb20vUXVldWUSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9xdWV1ZXMve3F1ZXVlfUIMCgpxdWV1ZV90eXBlImoKClJhdGVM",
-            "aW1pdHMSIQoZbWF4X2Rpc3BhdGNoZXNfcGVyX3NlY29uZBgBIAEoARIWCg5t",
-            "YXhfYnVyc3Rfc2l6ZRgCIAEoBRIhChltYXhfY29uY3VycmVudF9kaXNwYXRj",
-            "aGVzGAMgASgFItEBCgtSZXRyeUNvbmZpZxIUCgxtYXhfYXR0ZW1wdHMYASAB",
-            "KAUSNQoSbWF4X3JldHJ5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEi4KC21pbl9iYWNrb2ZmGAMgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEi4KC21heF9iYWNrb2ZmGAQgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAUiMgoY",
-            "U3RhY2tkcml2ZXJMb2dnaW5nQ29uZmlnEhYKDnNhbXBsaW5nX3JhdGlvGAEg",
-            "ASgBIugBCgpRdWV1ZVN0YXRzEhgKC3Rhc2tzX2NvdW50GAEgASgDQgPgQQMS",
-            "Rgodb2xkZXN0X2VzdGltYXRlZF9hcnJpdmFsX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSJwoaZXhlY3V0ZWRfbGFzdF9t",
-            "aW51dGVfY291bnQYAyABKANCA+BBAxIoChtjb25jdXJyZW50X2Rpc3BhdGNo",
-            "ZXNfY291bnQYBCABKANCA+BBAxIlChhlZmZlY3RpdmVfZXhlY3V0aW9uX3Jh",
-            "dGUYBSABKAFCA+BBA0JzCh5jb20uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0",
-            "YTNCClF1ZXVlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZHRh",
-            "c2tzL2FwaXYyYmV0YTMvY2xvdWR0YXNrc3BiO2Nsb3VkdGFza3NwYmIGcHJv",
-            "dG8z"));
+            "ZmlnEjoKBHR5cGUYCyABKA4yJi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRh",
+            "My5RdWV1ZS5UeXBlQgTiQQEFEjsKBXN0YXRzGAwgASgLMiYuZ29vZ2xlLmNs",
+            "b3VkLnRhc2tzLnYyYmV0YTMuUXVldWVTdGF0c0IE4kEBAyJFCgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARIKCgZQQVVTRUQQ",
+            "AhIMCghESVNBQkxFRBADIjAKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAA",
+            "EggKBFBVTEwQARIICgRQVVNIEAI6XOpBWQofY2xvdWR0YXNrcy5nb29nbGVh",
+            "cGlzLmNvbS9RdWV1ZRI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3F1ZXVlcy97cXVldWV9QgwKCnF1ZXVlX3R5cGUiagoKUmF0",
+            "ZUxpbWl0cxIhChltYXhfZGlzcGF0Y2hlc19wZXJfc2Vjb25kGAEgASgBEhYK",
+            "Dm1heF9idXJzdF9zaXplGAIgASgFEiEKGW1heF9jb25jdXJyZW50X2Rpc3Bh",
+            "dGNoZXMYAyABKAUi0QEKC1JldHJ5Q29uZmlnEhQKDG1heF9hdHRlbXB0cxgB",
+            "IAEoBRI1ChJtYXhfcmV0cnlfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SLgoLbWluX2JhY2tvZmYYAyABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SLgoLbWF4X2JhY2tvZmYYBCABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24SFQoNbWF4X2RvdWJsaW5ncxgFIAEoBSIy",
+            "ChhTdGFja2RyaXZlckxvZ2dpbmdDb25maWcSFgoOc2FtcGxpbmdfcmF0aW8Y",
+            "ASABKAEi7QEKClF1ZXVlU3RhdHMSGQoLdGFza3NfY291bnQYASABKANCBOJB",
+            "AQMSRwodb2xkZXN0X2VzdGltYXRlZF9hcnJpdmFsX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEigKGmV4ZWN1dGVkX2xh",
+            "c3RfbWludXRlX2NvdW50GAMgASgDQgTiQQEDEikKG2NvbmN1cnJlbnRfZGlz",
+            "cGF0Y2hlc19jb3VudBgEIAEoA0IE4kEBAxImChhlZmZlY3RpdmVfZXhlY3V0",
+            "aW9uX3JhdGUYBSABKAFCBOJBAQNCcwoeY29tLmdvb2dsZS5jbG91ZC50YXNr",
+            "cy52MmJldGEzQgpRdWV1ZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28v",
+            "Y2xvdWR0YXNrcy9hcGl2MmJldGEzL2Nsb3VkdGFza3NwYjtjbG91ZHRhc2tz",
+            "cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,6 +86,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// how those tasks are dispatched. Configurable properties include rate limits,
   /// retry options, queue types, and others.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Queue : pb::IMessage<Queue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1020,6 +1021,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// even if the queue has reached its
   /// [RateLimits][google.cloud.tasks.v2beta3.RateLimits].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RateLimits : pb::IMessage<RateLimits>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1352,6 +1354,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///
   /// These settings determine when a failed task attempt is retried.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetryConfig : pb::IMessage<RetryConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1820,6 +1823,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// Configuration options for writing logs to
   /// [Stackdriver Logging](https://cloud.google.com/logging/docs/).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StackdriverLoggingConfig : pb::IMessage<StackdriverLoggingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2018,6 +2022,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// <summary>
   /// Statistics for a queue.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueueStats : pb::IMessage<QueueStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

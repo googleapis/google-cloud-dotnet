@@ -26,23 +26,24 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           string.Concat(
             "CjBnb29nbGUvbWFwcy9mbGVldGVuZ2luZS9kZWxpdmVyeS92MS9oZWFkZXIu",
             "cHJvdG8SHG1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8isAQKFURlbGl2ZXJ5UmVxdWVzdEhl",
-            "YWRlchIVCg1sYW5ndWFnZV9jb2RlGAEgASgJEhgKC3JlZ2lvbl9jb2RlGAIg",
-            "ASgJQgPgQQISEwoLc2RrX3ZlcnNpb24YAyABKAkSEgoKb3NfdmVyc2lvbhgE",
-            "IAEoCRIUCgxkZXZpY2VfbW9kZWwYBSABKAkSTQoIc2RrX3R5cGUYBiABKA4y",
-            "Oy5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxLkRlbGl2ZXJ5UmVxdWVz",
-            "dEhlYWRlci5TZGtUeXBlEhgKEG1hcHNfc2RrX3ZlcnNpb24YByABKAkSFwoP",
-            "bmF2X3Nka192ZXJzaW9uGAggASgJEk4KCHBsYXRmb3JtGAkgASgOMjwubWFw",
-            "cy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJlcXVlc3RIZWFk",
-            "ZXIuUGxhdGZvcm0SFAoMbWFudWZhY3R1cmVyGAogASgJEhkKEWFuZHJvaWRf",
-            "YXBpX2xldmVsGAsgASgFEhAKCHRyYWNlX2lkGAwgASgJIk0KB1Nka1R5cGUS",
-            "GAoUU0RLX1RZUEVfVU5TUEVDSUZJRUQQABIMCghDT05TVU1FUhABEgoKBkRS",
-            "SVZFUhACEg4KCkpBVkFTQ1JJUFQQAyJDCghQbGF0Zm9ybRIYChRQTEFURk9S",
-            "TV9VTlNQRUNJRklFRBAAEgsKB0FORFJPSUQQARIHCgNJT1MQAhIHCgNXRUIQ",
-            "A0KoAQojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCB0hl",
-            "YWRlcnNQAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5l",
-            "L2RlbGl2ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSq",
-            "AiNHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJvdG8z"));
+            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8isQQKFURlbGl2ZXJ5UmVxdWVzdEhl",
+            "YWRlchIVCg1sYW5ndWFnZV9jb2RlGAEgASgJEhkKC3JlZ2lvbl9jb2RlGAIg",
+            "ASgJQgTiQQECEhMKC3Nka192ZXJzaW9uGAMgASgJEhIKCm9zX3ZlcnNpb24Y",
+            "BCABKAkSFAoMZGV2aWNlX21vZGVsGAUgASgJEk0KCHNka190eXBlGAYgASgO",
+            "MjsubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVJlcXVl",
+            "c3RIZWFkZXIuU2RrVHlwZRIYChBtYXBzX3Nka192ZXJzaW9uGAcgASgJEhcK",
+            "D25hdl9zZGtfdmVyc2lvbhgIIAEoCRJOCghwbGF0Zm9ybRgJIAEoDjI8Lm1h",
+            "cHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlSZXF1ZXN0SGVh",
+            "ZGVyLlBsYXRmb3JtEhQKDG1hbnVmYWN0dXJlchgKIAEoCRIZChFhbmRyb2lk",
+            "X2FwaV9sZXZlbBgLIAEoBRIQCgh0cmFjZV9pZBgMIAEoCSJNCgdTZGtUeXBl",
+            "EhgKFFNES19UWVBFX1VOU1BFQ0lGSUVEEAASDAoIQ09OU1VNRVIQARIKCgZE",
+            "UklWRVIQAhIOCgpKQVZBU0NSSVBUEAMiQwoIUGxhdGZvcm0SGAoUUExBVEZP",
+            "Uk1fVU5TUEVDSUZJRUQQABILCgdBTkRST0lEEAESBwoDSU9TEAISBwoDV0VC",
+            "EANCqAEKI2dvb2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQgdI",
+            "ZWFkZXJzUAFaSWNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9mbGVldGVuZ2lu",
+            "ZS9kZWxpdmVyeS9hcGl2MS9kZWxpdmVyeXBiO2RlbGl2ZXJ5cGKiAgRDRkVE",
+            "qgIjR29vZ2xlLk1hcHMuRmxlZXRFbmdpbmUuRGVsaXZlcnkuVjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -56,6 +57,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
   /// <summary>
   /// A RequestHeader contains fields common to all Delivery RPC requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeliveryRequestHeader : pb::IMessage<DeliveryRequestHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

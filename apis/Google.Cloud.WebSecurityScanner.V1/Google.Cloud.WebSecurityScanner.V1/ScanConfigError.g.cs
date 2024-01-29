@@ -82,6 +82,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   /// a ScanRunErrorTrace message if scan validation fails due to a scan
   /// configuration error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanConfigError : pb::IMessage<ScanConfigError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -57,6 +57,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Container of information about an image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImagePayload : pb::IMessage<ImagePayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -372,6 +373,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Container of information about a piece of text.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextPayload : pb::IMessage<TextPayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -567,6 +569,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Container of information of a video thumbnail.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoThumbnail : pb::IMessage<VideoThumbnail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -812,6 +815,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   /// <summary>
   /// Container of information of a video.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoPayload : pb::IMessage<VideoPayload>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

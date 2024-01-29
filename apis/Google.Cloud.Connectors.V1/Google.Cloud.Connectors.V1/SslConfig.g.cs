@@ -103,6 +103,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// Ssl config details of a connector version
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SslConfigTemplate : pb::IMessage<SslConfigTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -429,6 +430,7 @@ namespace Google.Cloud.Connectors.V1 {
   /// <summary>
   /// SSL Configuration of a connection
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SslConfig : pb::IMessage<SslConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

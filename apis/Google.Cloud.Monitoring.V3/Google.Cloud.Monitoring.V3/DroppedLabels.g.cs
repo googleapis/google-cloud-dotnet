@@ -62,6 +62,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// stream, and there may be duplicates.  It is up to clients to resolve any
   /// ambiguities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DroppedLabels : pb::IMessage<DroppedLabels>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

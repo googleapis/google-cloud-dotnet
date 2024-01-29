@@ -31,41 +31,41 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxo5Z29vZ2xlL2Nsb3VkL2NvbW1lcmNlL2NvbnN1bWVyL3By",
             "b2N1cmVtZW50L3YxL29yZGVyLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcv",
-            "b3BlcmF0aW9ucy5wcm90byLlAQoRUGxhY2VPcmRlclJlcXVlc3QSQgoGcGFy",
-            "ZW50GAEgASgJQjLgQQL6QSwKKmNsb3VkYmlsbGluZy5nb29nbGVhcGlzLmNv",
-            "bS9CaWxsaW5nQWNjb3VudBIZCgxkaXNwbGF5X25hbWUYBiABKAlCA+BBAhJY",
-            "Cg5saW5lX2l0ZW1faW5mbxgKIAMoCzI7Lmdvb2dsZS5jbG91ZC5jb21tZXJj",
-            "ZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5MaW5lSXRlbUluZm9CA+BBARIX",
-            "CgpyZXF1ZXN0X2lkGAcgASgJQgPgQQEiFAoSUGxhY2VPcmRlck1ldGFkYXRh",
-            "IiQKD0dldE9yZGVyUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiXwoRTGlz",
-            "dE9yZGVyc1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISEQoJcGFnZV9z",
-            "aXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJ",
-            "InMKEkxpc3RPcmRlcnNSZXNwb25zZRJECgZvcmRlcnMYASADKAsyNC5nb29n",
-            "bGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjEuT3Jk",
-            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMswFChpDb25zdW1lclByb2N1",
-            "cmVtZW50U2VydmljZRLDAQoKUGxhY2VPcmRlchJALmdvb2dsZS5jbG91ZC5j",
-            "b21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5QbGFjZU9yZGVyUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVILT5JMCMCIr",
-            "L3YxL3twYXJlbnQ9YmlsbGluZ0FjY291bnRzLyp9L29yZGVyczpwbGFjZToB",
-            "KspBGwoFT3JkZXISElBsYWNlT3JkZXJNZXRhZGF0YRK2AQoIR2V0T3JkZXIS",
-            "Pi5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQu",
-            "djEuR2V0T3JkZXJSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNv",
-            "bnN1bWVyLnByb2N1cmVtZW50LnYxLk9yZGVyIjSC0+STAicSJS92MS97bmFt",
-            "ZT1iaWxsaW5nQWNjb3VudHMvKi9vcmRlcnMvKn3aQQRuYW1lEskBCgpMaXN0",
-            "T3JkZXJzEkAuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNvbnN1bWVyLnByb2N1",
-            "cmVtZW50LnYxLkxpc3RPcmRlcnNSZXF1ZXN0GkEuZ29vZ2xlLmNsb3VkLmNv",
-            "bW1lcmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLkxpc3RPcmRlcnNSZXNw",
-            "b25zZSI2gtPkkwInEiUvdjEve3BhcmVudD1iaWxsaW5nQWNjb3VudHMvKn0v",
-            "b3JkZXJz2kEGcGFyZW50GmPKQS9jbG91ZGNvbW1lcmNlY29uc3VtZXJwcm9j",
-            "dXJlbWVudC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CnwIKMWNvbS5nb29nbGUuY2xv",
-            "dWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjFQAVpTY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9jb21tZXJjZS9jb25zdW1lci9wcm9jdXJlbWVudC9h",
-            "cGl2MS9wcm9jdXJlbWVudHBiO3Byb2N1cmVtZW50cGKqAi1Hb29nbGUuQ2xv",
-            "dWQuQ29tbWVyY2UuQ29uc3VtZXIuUHJvY3VyZW1lbnQuVjHKAi1Hb29nbGVc",
-            "Q2xvdWRcQ29tbWVyY2VcQ29uc3VtZXJcUHJvY3VyZW1lbnRcVjHqAjJHb29n",
-            "bGU6OkNsb3VkOjpDb21tZXJjZTo6Q29uc3VtZXI6OlByb2N1cmVtZW50OjpW",
-            "MWIGcHJvdG8z"));
+            "b3BlcmF0aW9ucy5wcm90byLpAQoRUGxhY2VPcmRlclJlcXVlc3QSQwoGcGFy",
+            "ZW50GAEgASgJQjPiQQEC+kEsCipjbG91ZGJpbGxpbmcuZ29vZ2xlYXBpcy5j",
+            "b20vQmlsbGluZ0FjY291bnQSGgoMZGlzcGxheV9uYW1lGAYgASgJQgTiQQEC",
+            "ElkKDmxpbmVfaXRlbV9pbmZvGAogAygLMjsuZ29vZ2xlLmNsb3VkLmNvbW1l",
+            "cmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLkxpbmVJdGVtSW5mb0IE4kEB",
+            "ARIYCgpyZXF1ZXN0X2lkGAcgASgJQgTiQQEBIhQKElBsYWNlT3JkZXJNZXRh",
+            "ZGF0YSIlCg9HZXRPcmRlclJlcXVlc3QSEgoEbmFtZRgBIAEoCUIE4kEBAiJg",
+            "ChFMaXN0T3JkZXJzUmVxdWVzdBIUCgZwYXJlbnQYASABKAlCBOJBAQISEQoJ",
+            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVy",
+            "GAQgASgJInMKEkxpc3RPcmRlcnNSZXNwb25zZRJECgZvcmRlcnMYASADKAsy",
+            "NC5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQu",
+            "djEuT3JkZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMswFChpDb25zdW1l",
+            "clByb2N1cmVtZW50U2VydmljZRLDAQoKUGxhY2VPcmRlchJALmdvb2dsZS5j",
+            "bG91ZC5jb21tZXJjZS5jb25zdW1lci5wcm9jdXJlbWVudC52MS5QbGFjZU9y",
+            "ZGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVMpB",
+            "GwoFT3JkZXISElBsYWNlT3JkZXJNZXRhZGF0YYLT5JMCMCIrL3YxL3twYXJl",
+            "bnQ9YmlsbGluZ0FjY291bnRzLyp9L29yZGVyczpwbGFjZToBKhK2AQoIR2V0",
+            "T3JkZXISPi5nb29nbGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3Vy",
+            "ZW1lbnQudjEuR2V0T3JkZXJSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmNvbW1l",
+            "cmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLk9yZGVyIjTaQQRuYW1lgtPk",
+            "kwInEiUvdjEve25hbWU9YmlsbGluZ0FjY291bnRzLyovb3JkZXJzLyp9EskB",
+            "CgpMaXN0T3JkZXJzEkAuZ29vZ2xlLmNsb3VkLmNvbW1lcmNlLmNvbnN1bWVy",
+            "LnByb2N1cmVtZW50LnYxLkxpc3RPcmRlcnNSZXF1ZXN0GkEuZ29vZ2xlLmNs",
+            "b3VkLmNvbW1lcmNlLmNvbnN1bWVyLnByb2N1cmVtZW50LnYxLkxpc3RPcmRl",
+            "cnNSZXNwb25zZSI22kEGcGFyZW50gtPkkwInEiUvdjEve3BhcmVudD1iaWxs",
+            "aW5nQWNjb3VudHMvKn0vb3JkZXJzGmPKQS9jbG91ZGNvbW1lcmNlY29uc3Vt",
+            "ZXJwcm9jdXJlbWVudC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CnwIKMWNvbS5nb29n",
+            "bGUuY2xvdWQuY29tbWVyY2UuY29uc3VtZXIucHJvY3VyZW1lbnQudjFQAVpT",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9jb21tZXJjZS9jb25zdW1lci9wcm9jdXJl",
+            "bWVudC9hcGl2MS9wcm9jdXJlbWVudHBiO3Byb2N1cmVtZW50cGKqAi1Hb29n",
+            "bGUuQ2xvdWQuQ29tbWVyY2UuQ29uc3VtZXIuUHJvY3VyZW1lbnQuVjHKAi1H",
+            "b29nbGVcQ2xvdWRcQ29tbWVyY2VcQ29uc3VtZXJcUHJvY3VyZW1lbnRcVjHq",
+            "AjJHb29nbGU6OkNsb3VkOjpDb21tZXJjZTo6Q29uc3VtZXI6OlByb2N1cmVt",
+            "ZW50OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Commerce.Consumer.Procurement.V1.OrderReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,6 +84,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
   /// Request message for
   /// [ConsumerProcurementService.PlaceOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.PlaceOrder].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlaceOrderRequest : pb::IMessage<PlaceOrderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -396,6 +397,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
   /// Message stored in the metadata field of the Operation returned by
   /// [ConsumerProcurementService.PlaceOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.PlaceOrder].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlaceOrderMetadata : pb::IMessage<PlaceOrderMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -552,6 +554,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
   /// Request message for
   /// [ConsumerProcurementService.GetOrder][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.GetOrder]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrderRequest : pb::IMessage<GetOrderRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -748,6 +751,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
   /// Request message for
   /// [ConsumerProcurementService.ListOrders][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.ListOrders].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrdersRequest : pb::IMessage<ListOrdersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1081,6 +1085,7 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1 {
   /// Response message for
   /// [ConsumerProcurementService.ListOrders][google.cloud.commerce.consumer.procurement.v1.ConsumerProcurementService.ListOrders].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrdersResponse : pb::IMessage<ListOrdersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

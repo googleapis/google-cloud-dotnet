@@ -148,14 +148,14 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContainerAnalysisClient.Create(callInvoker, Settings, Logger);
+            return ContainerAnalysisClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ContainerAnalysisClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContainerAnalysisClient.Create(callInvoker, Settings, Logger);
+            return ContainerAnalysisClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

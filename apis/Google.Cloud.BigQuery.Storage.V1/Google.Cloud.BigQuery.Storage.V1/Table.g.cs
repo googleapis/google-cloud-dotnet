@@ -28,26 +28,27 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8iUQoLVGFibGVTY2hlbWESQgoGZmll",
             "bGRzGAEgAygLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
-            "VGFibGVGaWVsZFNjaGVtYSKsBQoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
-            "GAEgASgJQgPgQQISSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRTY2hlbWEuVHlwZUID4EECEkoK",
-            "BG1vZGUYAyABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
-            "MS5UYWJsZUZpZWxkU2NoZW1hLk1vZGVCA+BBARJHCgZmaWVsZHMYBCADKAsy",
-            "Mi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxk",
-            "U2NoZW1hQgPgQQESGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBARIXCgptYXhf",
-            "bGVuZ3RoGAcgASgDQgPgQQESFgoJcHJlY2lzaW9uGAggASgDQgPgQQESEgoF",
-            "c2NhbGUYCSABKANCA+BBARIlChhkZWZhdWx0X3ZhbHVlX2V4cHJlc3Npb24Y",
-            "CiABKAlCA+BBASLVAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
-            "U1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VCTEUQAxIKCgZTVFJVQ1QQBBIJ",
-            "CgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1FU1RBTVAQBxIICgREQVRFEAgS",
-            "CAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJR0VPR1JBUEhZEAsSCwoHTlVN",
-            "RVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJTlRFUlZBTBAOEggKBEpTT04Q",
-            "DyJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghOVUxMQUJMRRAB",
-            "EgwKCFJFUVVJUkVEEAISDAoIUkVQRUFURUQQA0K6AQokY29tLmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpUYWJsZVByb3RvUAFaPmNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdl",
-            "cGI7c3RvcmFnZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2Uu",
-            "VjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "VGFibGVGaWVsZFNjaGVtYSK1BQoQVGFibGVGaWVsZFNjaGVtYRISCgRuYW1l",
+            "GAEgASgJQgTiQQECEksKBHR5cGUYAiABKA4yNy5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxkU2NoZW1hLlR5cGVCBOJBAQIS",
+            "SwoEbW9kZRgDIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdl",
+            "LnYxLlRhYmxlRmllbGRTY2hlbWEuTW9kZUIE4kEBARJICgZmaWVsZHMYBCAD",
+            "KAsyMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZp",
+            "ZWxkU2NoZW1hQgTiQQEBEhkKC2Rlc2NyaXB0aW9uGAYgASgJQgTiQQEBEhgK",
+            "Cm1heF9sZW5ndGgYByABKANCBOJBAQESFwoJcHJlY2lzaW9uGAggASgDQgTi",
+            "QQEBEhMKBXNjYWxlGAkgASgDQgTiQQEBEiYKGGRlZmF1bHRfdmFsdWVfZXhw",
+            "cmVzc2lvbhgKIAEoCUIE4kEBASLVAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCgoGU1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VCTEUQAxIKCgZT",
+            "VFJVQ1QQBBIJCgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1FU1RBTVAQBxII",
+            "CgREQVRFEAgSCAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJR0VPR1JBUEhZ",
+            "EAsSCwoHTlVNRVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJTlRFUlZBTBAO",
+            "EggKBEpTT04QDyJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghO",
+            "VUxMQUJMRRABEgwKCFJFUVVJUkVEEAISDAoIUkVQRUFURUQQA0K6AQokY29t",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpUYWJsZVByb3Rv",
+            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2",
+            "MS9zdG9yYWdlcGI7c3RvcmFnZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5",
+            "LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +65,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// google.cloud.bigquery.v2.TableSchema containing information necessary to
   /// generate valid message to write to BigQuery.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableSchema : pb::IMessage<TableSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -248,6 +250,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// TableFieldSchema defines a single field/column within a table schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableFieldSchema : pb::IMessage<TableFieldSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

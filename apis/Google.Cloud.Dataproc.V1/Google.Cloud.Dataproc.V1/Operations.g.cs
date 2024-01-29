@@ -37,45 +37,58 @@ namespace Google.Cloud.Dataproc.V1 {
             "LkJhdGNoT3BlcmF0aW9uTWV0YWRhdGEuTGFiZWxzRW50cnkSEAoId2Fybmlu",
             "Z3MYCSADKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
             "GAIgASgJOgI4ASJFChJCYXRjaE9wZXJhdGlvblR5cGUSJAogQkFUQ0hfT1BF",
-            "UkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVCQVRDSBABIokCChZDbHVz",
-            "dGVyT3BlcmF0aW9uU3RhdHVzEkoKBXN0YXRlGAEgASgOMjYuZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXMuU3RhdGVC",
-            "A+BBAxIYCgtpbm5lcl9zdGF0ZRgCIAEoCUID4EEDEhQKB2RldGFpbHMYAyAB",
-            "KAlCA+BBAxI5ChBzdGF0ZV9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDIjgKBVN0YXRlEgsKB1VOS05PV04QABIL",
-            "CgdQRU5ESU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAyLaAwoYQ2x1c3Rl",
-            "ck9wZXJhdGlvbk1ldGFkYXRhEhkKDGNsdXN0ZXJfbmFtZRgHIAEoCUID4EED",
-            "EhkKDGNsdXN0ZXJfdXVpZBgIIAEoCUID4EEDEkUKBnN0YXR1cxgJIAEoCzIw",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3Rh",
-            "dHVzQgPgQQMSTQoOc3RhdHVzX2hpc3RvcnkYCiADKAsyMC5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvblN0YXR1c0ID4EEDEhsK",
-            "Dm9wZXJhdGlvbl90eXBlGAsgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YDCAB",
-            "KAlCA+BBAxJTCgZsYWJlbHMYDSADKAsyPi5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhLkxhYmVsc0VudHJ5QgPg",
-            "QQMSFQoId2FybmluZ3MYDiADKAlCA+BBAxIgChNjaGlsZF9vcGVyYXRpb25f",
-            "aWRzGA8gAygJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASL6BAoaTm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRh",
-            "dGESGgoNbm9kZV9ncm91cF9pZBgBIAEoCUID4EEDEhkKDGNsdXN0ZXJfdXVp",
-            "ZBgCIAEoCUID4EEDEkUKBnN0YXR1cxgDIAEoCzIwLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3RhdHVzQgPgQQMSTQoOc3Rh",
-            "dHVzX2hpc3RvcnkYBCADKAsyMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "Q2x1c3Rlck9wZXJhdGlvblN0YXR1c0ID4EEDEmMKDm9wZXJhdGlvbl90eXBl",
-            "GAUgASgOMksuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk5vZGVHcm91cE9w",
-            "ZXJhdGlvbk1ldGFkYXRhLk5vZGVHcm91cE9wZXJhdGlvblR5cGUSGAoLZGVz",
-            "Y3JpcHRpb24YBiABKAlCA+BBAxJVCgZsYWJlbHMYByADKAsyQC5nb29nbGUu",
-            "Y2xvdWQuZGF0YXByb2MudjEuTm9kZUdyb3VwT3BlcmF0aW9uTWV0YWRhdGEu",
-            "TGFiZWxzRW50cnlCA+BBAxIVCgh3YXJuaW5ncxgIIAMoCUID4EEDGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEicwoW",
-            "Tm9kZUdyb3VwT3BlcmF0aW9uVHlwZRIpCiVOT0RFX0dST1VQX09QRVJBVElP",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAESCgoGVVBEQVRFEAIS",
-            "CgoGREVMRVRFEAMSCgoGUkVTSVpFEARCbgocY29tLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MUIPT3BlcmF0aW9uc1Byb3RvUAFaO2Nsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YXByb2MvdjIvYXBpdjEvZGF0YXByb2NwYjtkYXRhcHJvY3Bi",
-            "YgZwcm90bzM="));
+            "UkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVCQVRDSBABIo8EChhTZXNz",
+            "aW9uT3BlcmF0aW9uTWV0YWRhdGESDwoHc2Vzc2lvbhgBIAEoCRIUCgxzZXNz",
+            "aW9uX3V1aWQYAiABKAkSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEi0KCWRvbmVfdGltZRgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASXwoOb3BlcmF0aW9uX3R5cGUYBiABKA4y",
+            "Ry5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuU2Vzc2lvbk9wZXJhdGlvbk1l",
+            "dGFkYXRhLlNlc3Npb25PcGVyYXRpb25UeXBlEhMKC2Rlc2NyaXB0aW9uGAcg",
+            "ASgJEk4KBmxhYmVscxgIIAMoCzI+Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5TZXNzaW9uT3BlcmF0aW9uTWV0YWRhdGEuTGFiZWxzRW50cnkSEAoId2Fy",
+            "bmluZ3MYCSADKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ASJlChRTZXNzaW9uT3BlcmF0aW9uVHlwZRImCiJTRVNT",
+            "SU9OX09QRVJBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAES",
+            "DQoJVEVSTUlOQVRFEAISCgoGREVMRVRFEAMijQIKFkNsdXN0ZXJPcGVyYXRp",
+            "b25TdGF0dXMSSwoFc3RhdGUYASABKA4yNi5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuQ2x1c3Rlck9wZXJhdGlvblN0YXR1cy5TdGF0ZUIE4kEBAxIZCgtp",
+            "bm5lcl9zdGF0ZRgCIAEoCUIE4kEBAxIVCgdkZXRhaWxzGAMgASgJQgTiQQED",
+            "EjoKEHN0YXRlX3N0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgTiQQEDIjgKBVN0YXRlEgsKB1VOS05PV04QABILCgdQRU5E",
+            "SU5HEAESCwoHUlVOTklORxACEggKBERPTkUQAyLjAwoYQ2x1c3Rlck9wZXJh",
+            "dGlvbk1ldGFkYXRhEhoKDGNsdXN0ZXJfbmFtZRgHIAEoCUIE4kEBAxIaCgxj",
+            "bHVzdGVyX3V1aWQYCCABKAlCBOJBAQMSRgoGc3RhdHVzGAkgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXNC",
+            "BOJBAQMSTgoOc3RhdHVzX2hpc3RvcnkYCiADKAsyMC5nb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuQ2x1c3Rlck9wZXJhdGlvblN0YXR1c0IE4kEBAxIcCg5v",
+            "cGVyYXRpb25fdHlwZRgLIAEoCUIE4kEBAxIZCgtkZXNjcmlwdGlvbhgMIAEo",
+            "CUIE4kEBAxJUCgZsYWJlbHMYDSADKAsyPi5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuQ2x1c3Rlck9wZXJhdGlvbk1ldGFkYXRhLkxhYmVsc0VudHJ5QgTi",
+            "QQEDEhYKCHdhcm5pbmdzGA4gAygJQgTiQQEDEiEKE2NoaWxkX29wZXJhdGlv",
+            "bl9pZHMYDyADKAlCBOJBAQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASKBBQoaTm9kZUdyb3VwT3BlcmF0aW9uTWV0",
+            "YWRhdGESGwoNbm9kZV9ncm91cF9pZBgBIAEoCUIE4kEBAxIaCgxjbHVzdGVy",
+            "X3V1aWQYAiABKAlCBOJBAQMSRgoGc3RhdHVzGAMgASgLMjAuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXNCBOJBAQMS",
+            "TgoOc3RhdHVzX2hpc3RvcnkYBCADKAsyMC5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjEuQ2x1c3Rlck9wZXJhdGlvblN0YXR1c0IE4kEBAxJjCg5vcGVyYXRp",
+            "b25fdHlwZRgFIAEoDjJLLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ob2Rl",
+            "R3JvdXBPcGVyYXRpb25NZXRhZGF0YS5Ob2RlR3JvdXBPcGVyYXRpb25UeXBl",
+            "EhkKC2Rlc2NyaXB0aW9uGAYgASgJQgTiQQEDElYKBmxhYmVscxgHIAMoCzJA",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ob2RlR3JvdXBPcGVyYXRpb25N",
+            "ZXRhZGF0YS5MYWJlbHNFbnRyeUIE4kEBAxIWCgh3YXJuaW5ncxgIIAMoCUIE",
+            "4kEBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBInMKFk5vZGVHcm91cE9wZXJhdGlvblR5cGUSKQolTk9ERV9HUk9V",
+            "UF9PUEVSQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgoKBkNSRUFURRABEgoK",
+            "BlVQREFURRACEgoKBkRFTEVURRADEgoKBlJFU0laRRAEQm4KHGNvbS5nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjFCD09wZXJhdGlvbnNQcm90b1ABWjtjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2RhdGFwcm9jL3YyL2FwaXYxL2RhdGFwcm9jcGI7",
+            "ZGF0YXByb2NwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.BatchOperationMetadata), global::Google.Cloud.Dataproc.V1.BatchOperationMetadata.Parser, new[]{ "Batch", "BatchUuid", "CreateTime", "DoneTime", "OperationType", "Description", "Labels", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.BatchOperationMetadata.Types.BatchOperationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SessionOperationMetadata), global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Parser, new[]{ "Session", "SessionUuid", "CreateTime", "DoneTime", "OperationType", "Description", "Labels", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus), global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser, new[]{ "State", "InnerState", "Details", "StateStartTime" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings", "ChildOperationIds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata), global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata.Parser, new[]{ "NodeGroupId", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.NodeGroupOperationMetadata.Types.NodeGroupOperationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -88,6 +101,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Metadata describing the Batch operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchOperationMetadata : pb::IMessage<BatchOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -579,8 +593,511 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
+  /// Metadata describing the Session operation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SessionOperationMetadata : pb::IMessage<SessionOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SessionOperationMetadata> _parser = new pb::MessageParser<SessionOperationMetadata>(() => new SessionOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SessionOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionOperationMetadata(SessionOperationMetadata other) : this() {
+      session_ = other.session_;
+      sessionUuid_ = other.sessionUuid_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      doneTime_ = other.doneTime_ != null ? other.doneTime_.Clone() : null;
+      operationType_ = other.operationType_;
+      description_ = other.description_;
+      labels_ = other.labels_.Clone();
+      warnings_ = other.warnings_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SessionOperationMetadata Clone() {
+      return new SessionOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "session" field.</summary>
+    public const int SessionFieldNumber = 1;
+    private string session_ = "";
+    /// <summary>
+    /// Name of the session for the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Session {
+      get { return session_; }
+      set {
+        session_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "session_uuid" field.</summary>
+    public const int SessionUuidFieldNumber = 2;
+    private string sessionUuid_ = "";
+    /// <summary>
+    /// Session UUID for the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SessionUuid {
+      get { return sessionUuid_; }
+      set {
+        sessionUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time when the operation was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "done_time" field.</summary>
+    public const int DoneTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp doneTime_;
+    /// <summary>
+    /// The time when the operation was finished.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DoneTime {
+      get { return doneTime_; }
+      set {
+        doneTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operation_type" field.</summary>
+    public const int OperationTypeFieldNumber = 6;
+    private global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType operationType_ = global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified;
+    /// <summary>
+    /// The operation type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType OperationType {
+      get { return operationType_; }
+      set {
+        operationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 7;
+    private string description_ = "";
+    /// <summary>
+    /// Short description of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels associated with the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    /// <summary>Field number for the "warnings" field.</summary>
+    public const int WarningsFieldNumber = 9;
+    private static readonly pb::FieldCodec<string> _repeated_warnings_codec
+        = pb::FieldCodec.ForString(74);
+    private readonly pbc::RepeatedField<string> warnings_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Warnings encountered during operation execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Warnings {
+      get { return warnings_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SessionOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SessionOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Session != other.Session) return false;
+      if (SessionUuid != other.SessionUuid) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(DoneTime, other.DoneTime)) return false;
+      if (OperationType != other.OperationType) return false;
+      if (Description != other.Description) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      if(!warnings_.Equals(other.warnings_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Session.Length != 0) hash ^= Session.GetHashCode();
+      if (SessionUuid.Length != 0) hash ^= SessionUuid.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (doneTime_ != null) hash ^= DoneTime.GetHashCode();
+      if (OperationType != global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified) hash ^= OperationType.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      hash ^= warnings_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Session.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Session);
+      }
+      if (SessionUuid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SessionUuid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (doneTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DoneTime);
+      }
+      if (OperationType != global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OperationType);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Description);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      warnings_.WriteTo(output, _repeated_warnings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Session.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Session);
+      }
+      if (SessionUuid.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SessionUuid);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (doneTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DoneTime);
+      }
+      if (OperationType != global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OperationType);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Description);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      warnings_.WriteTo(ref output, _repeated_warnings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Session.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Session);
+      }
+      if (SessionUuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionUuid);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (doneTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DoneTime);
+      }
+      if (OperationType != global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationType);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      size += warnings_.CalculateSize(_repeated_warnings_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SessionOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Session.Length != 0) {
+        Session = other.Session;
+      }
+      if (other.SessionUuid.Length != 0) {
+        SessionUuid = other.SessionUuid;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.doneTime_ != null) {
+        if (doneTime_ == null) {
+          DoneTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DoneTime.MergeFrom(other.DoneTime);
+      }
+      if (other.OperationType != global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType.Unspecified) {
+        OperationType = other.OperationType;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      labels_.MergeFrom(other.labels_);
+      warnings_.Add(other.warnings_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Session = input.ReadString();
+            break;
+          }
+          case 18: {
+            SessionUuid = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (doneTime_ == null) {
+              DoneTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DoneTime);
+            break;
+          }
+          case 48: {
+            OperationType = (global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Description = input.ReadString();
+            break;
+          }
+          case 66: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 74: {
+            warnings_.AddEntriesFrom(input, _repeated_warnings_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Session = input.ReadString();
+            break;
+          }
+          case 18: {
+            SessionUuid = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (doneTime_ == null) {
+              DoneTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DoneTime);
+            break;
+          }
+          case 48: {
+            OperationType = (global::Google.Cloud.Dataproc.V1.SessionOperationMetadata.Types.SessionOperationType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Description = input.ReadString();
+            break;
+          }
+          case 66: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 74: {
+            warnings_.AddEntriesFrom(ref input, _repeated_warnings_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SessionOperationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Operation type for Session resources
+      /// </summary>
+      public enum SessionOperationType {
+        /// <summary>
+        /// Session operation type is unknown.
+        /// </summary>
+        [pbr::OriginalName("SESSION_OPERATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Create Session operation type.
+        /// </summary>
+        [pbr::OriginalName("CREATE")] Create = 1,
+        /// <summary>
+        /// Terminate Session operation type.
+        /// </summary>
+        [pbr::OriginalName("TERMINATE")] Terminate = 2,
+        /// <summary>
+        /// Delete Session operation type.
+        /// </summary>
+        [pbr::OriginalName("DELETE")] Delete = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The status of the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClusterOperationStatus : pb::IMessage<ClusterOperationStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -595,7 +1112,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -935,6 +1452,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Metadata describing the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClusterOperationMetadata : pb::IMessage<ClusterOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -949,7 +1467,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1415,6 +1933,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Metadata describing the node group operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeGroupOperationMetadata : pb::IMessage<NodeGroupOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1429,7 +1948,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

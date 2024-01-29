@@ -58,6 +58,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// User specified settings that are attached to the Security Command
   /// Center organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrganizationSettings : pb::IMessage<OrganizationSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -351,6 +352,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// The configuration used for Asset Discovery runs.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AssetDiscoveryConfig : pb::IMessage<AssetDiscoveryConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

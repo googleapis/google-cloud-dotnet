@@ -30,27 +30,27 @@ namespace Google.Cloud.AutoML.V1 {
             "LmNsb3VkLmF1dG9tbC52MS5HY3NTb3VyY2VIABI/CgZwYXJhbXMYAiADKAsy",
             "Ly5nb29nbGUuY2xvdWQuYXV0b21sLnYxLklucHV0Q29uZmlnLlBhcmFtc0Vu",
             "dHJ5Gi0KC1BhcmFtc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAFCCAoGc291cmNlImEKF0JhdGNoUHJlZGljdElucHV0Q29uZmlnEjwK",
+            "CToCOAFCCAoGc291cmNlImIKF0JhdGNoUHJlZGljdElucHV0Q29uZmlnEj0K",
             "Cmdjc19zb3VyY2UYASABKAsyIS5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdj",
-            "c1NvdXJjZUID4EECSABCCAoGc291cmNlIkwKE0RvY3VtZW50SW5wdXRDb25m",
-            "aWcSNQoKZ2NzX3NvdXJjZRgBIAEoCzIhLmdvb2dsZS5jbG91ZC5hdXRvbWwu",
-            "djEuR2NzU291cmNlImUKDE91dHB1dENvbmZpZxJGCg9nY3NfZGVzdGluYXRp",
-            "b24YASABKAsyJi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkdjc0Rlc3RpbmF0",
-            "aW9uQgPgQQJIAEINCgtkZXN0aW5hdGlvbiJxChhCYXRjaFByZWRpY3RPdXRw",
-            "dXRDb25maWcSRgoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNs",
-            "b3VkLmF1dG9tbC52MS5HY3NEZXN0aW5hdGlvbkID4EECSABCDQoLZGVzdGlu",
-            "YXRpb24iggIKF01vZGVsRXhwb3J0T3V0cHV0Q29uZmlnEkYKD2djc19kZXN0",
-            "aW5hdGlvbhgBIAEoCzImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2NzRGVz",
-            "dGluYXRpb25CA+BBAkgAEhQKDG1vZGVsX2Zvcm1hdBgEIAEoCRJLCgZwYXJh",
-            "bXMYAiADKAsyOy5nb29nbGUuY2xvdWQuYXV0b21sLnYxLk1vZGVsRXhwb3J0",
-            "T3V0cHV0Q29uZmlnLlBhcmFtc0VudHJ5Gi0KC1BhcmFtc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCDQoLZGVzdGluYXRpb24iJAoJ",
-            "R2NzU291cmNlEhcKCmlucHV0X3VyaXMYASADKAlCA+BBAiIwCg5HY3NEZXN0",
-            "aW5hdGlvbhIeChFvdXRwdXRfdXJpX3ByZWZpeBgBIAEoCUID4EECQqABChpj",
-            "b20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjJjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2F1dG9tbC9hcGl2MS9hdXRvbWxwYjthdXRvbWxwYqoCFkdvb2dsZS5D",
-            "bG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29v",
-            "Z2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
+            "c1NvdXJjZUIE4kEBAkgAQggKBnNvdXJjZSJMChNEb2N1bWVudElucHV0Q29u",
+            "ZmlnEjUKCmdjc19zb3VyY2UYASABKAsyIS5nb29nbGUuY2xvdWQuYXV0b21s",
+            "LnYxLkdjc1NvdXJjZSJmCgxPdXRwdXRDb25maWcSRwoPZ2NzX2Rlc3RpbmF0",
+            "aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5HY3NEZXN0aW5h",
+            "dGlvbkIE4kEBAkgAQg0KC2Rlc3RpbmF0aW9uInIKGEJhdGNoUHJlZGljdE91",
+            "dHB1dENvbmZpZxJHCg9nY3NfZGVzdGluYXRpb24YASABKAsyJi5nb29nbGUu",
+            "Y2xvdWQuYXV0b21sLnYxLkdjc0Rlc3RpbmF0aW9uQgTiQQECSABCDQoLZGVz",
+            "dGluYXRpb24igwIKF01vZGVsRXhwb3J0T3V0cHV0Q29uZmlnEkcKD2djc19k",
+            "ZXN0aW5hdGlvbhgBIAEoCzImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuR2Nz",
+            "RGVzdGluYXRpb25CBOJBAQJIABIUCgxtb2RlbF9mb3JtYXQYBCABKAkSSwoG",
+            "cGFyYW1zGAIgAygLMjsuZ29vZ2xlLmNsb3VkLmF1dG9tbC52MS5Nb2RlbEV4",
+            "cG9ydE91dHB1dENvbmZpZy5QYXJhbXNFbnRyeRotCgtQYXJhbXNFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQg0KC2Rlc3RpbmF0aW9u",
+            "IiUKCUdjc1NvdXJjZRIYCgppbnB1dF91cmlzGAEgAygJQgTiQQECIjEKDkdj",
+            "c0Rlc3RpbmF0aW9uEh8KEW91dHB1dF91cmlfcHJlZml4GAEgASgJQgTiQQEC",
+            "QqABChpjb20uZ29vZ2xlLmNsb3VkLmF1dG9tbC52MVABWjJjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2F1dG9tbC9hcGl2MS9hdXRvbWxwYjthdXRvbWxwYqoCFkdv",
+            "b2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx",
+            "6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -664,6 +664,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///  failures, up to a certain count cap, is listed in
   ///  Operation.metadata.partial_failures.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1215,6 +1216,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///  per-row failures, up to a certain count cap, will be listed in
   ///  Operation.metadata.partial_failures.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchPredictInputConfig : pb::IMessage<BatchPredictInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1453,6 +1455,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Input configuration of a [Document][google.cloud.automl.v1.Document].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentInputConfig : pb::IMessage<DocumentInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1689,6 +1692,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///           dataset a new table called `primary_table` will be created, and
   ///           filled with precisely the same data as this obtained on import.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2180,6 +2184,7 @@ namespace Google.Cloud.AutoML.V1 {
   ///           [`google.rpc.Status`](https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto)
   ///           represented as a STRUCT, and containing only `code` and `message`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchPredictOutputConfig : pb::IMessage<BatchPredictOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2419,6 +2424,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Output configuration for ModelExport Action.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelExportOutputConfig : pb::IMessage<ModelExportOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2770,6 +2776,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// The Google Cloud Storage location for the input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2956,6 +2963,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output is to be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

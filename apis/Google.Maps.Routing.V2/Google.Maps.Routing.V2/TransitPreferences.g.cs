@@ -55,6 +55,7 @@ namespace Google.Maps.Routing.V2 {
   /// Preferences for `TRANSIT` based routes that influence the route that is
   /// returned.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitPreferences : pb::IMessage<TransitPreferences>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

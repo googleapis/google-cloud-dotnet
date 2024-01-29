@@ -54,6 +54,7 @@ namespace Google.Maps.Routing.V2 {
   /// SpeedReadingInterval defines an interval and describes its traffic using the
   /// following categories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeedReadingInterval : pb::IMessage<SpeedReadingInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

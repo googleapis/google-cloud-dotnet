@@ -72,29 +72,29 @@ namespace Google.Cloud.Billing.V1 {
             "QUwQAyI8ChNMaXN0U2VydmljZXNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEo",
             "BRISCgpwYWdlX3Rva2VuGAIgASgJImMKFExpc3RTZXJ2aWNlc1Jlc3BvbnNl",
             "EjIKCHNlcnZpY2VzGAEgAygLMiAuZ29vZ2xlLmNsb3VkLmJpbGxpbmcudjEu",
-            "U2VydmljZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki6gEKD0xpc3RTa3Vz",
-            "UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJQojY2xvdWRiaWxsaW5n",
-            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USLgoKc3RhcnRfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWN1cnJlbmN5X2NvZGUY",
-            "BCABKAkSEQoJcGFnZV9zaXplGAUgASgFEhIKCnBhZ2VfdG9rZW4YBiABKAki",
-            "VwoQTGlzdFNrdXNSZXNwb25zZRIqCgRza3VzGAEgAygLMhwuZ29vZ2xlLmNs",
-            "b3VkLmJpbGxpbmcudjEuU2t1EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCTLe",
-            "AwoMQ2xvdWRDYXRhbG9nEoQBCgxMaXN0U2VydmljZXMSLC5nb29nbGUuY2xv",
-            "dWQuYmlsbGluZy52MS5MaXN0U2VydmljZXNSZXF1ZXN0Gi0uZ29vZ2xlLmNs",
-            "b3VkLmJpbGxpbmcudjEuTGlzdFNlcnZpY2VzUmVzcG9uc2UiF4LT5JMCDhIM",
-            "L3YxL3NlcnZpY2Vz2kEAEo4BCghMaXN0U2t1cxIoLmdvb2dsZS5jbG91ZC5i",
-            "aWxsaW5nLnYxLkxpc3RTa3VzUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5iaWxs",
-            "aW5nLnYxLkxpc3RTa3VzUmVzcG9uc2UiLYLT5JMCHhIcL3YxL3twYXJlbnQ9",
-            "c2VydmljZXMvKn0vc2t1c9pBBnBhcmVudBq1AcpBG2Nsb3VkYmlsbGluZy5n",
-            "b29nbGVhcGlzLmNvbdJBkwFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLWJpbGxpbmcsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1iaWxsaW5nLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CjQEKG2NvbS5nb29nbGUu",
-            "Y2xvdWQuYmlsbGluZy52MUIRQ2xvdWRDYXRhbG9nUHJvdG9QAVo1Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9iaWxsaW5nL2FwaXYxL2JpbGxpbmdwYjtiaWxsaW5n",
-            "cGKiAgdDTERDVExHqgIXR29vZ2xlLkNsb3VkLkJpbGxpbmcuVjFiBnByb3Rv",
-            "Mw=="));
+            "U2VydmljZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki6wEKD0xpc3RTa3Vz",
+            "UmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOJBAQL6QSUKI2Nsb3VkYmlsbGlu",
+            "Zy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEi4KCnN0YXJ0X3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAMgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1jdXJyZW5jeV9jb2Rl",
+            "GAQgASgJEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2VuGAYgASgJ",
+            "IlcKEExpc3RTa3VzUmVzcG9uc2USKgoEc2t1cxgBIAMoCzIcLmdvb2dsZS5j",
+            "bG91ZC5iaWxsaW5nLnYxLlNrdRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky",
+            "3gMKDENsb3VkQ2F0YWxvZxKEAQoMTGlzdFNlcnZpY2VzEiwuZ29vZ2xlLmNs",
+            "b3VkLmJpbGxpbmcudjEuTGlzdFNlcnZpY2VzUmVxdWVzdBotLmdvb2dsZS5j",
+            "bG91ZC5iaWxsaW5nLnYxLkxpc3RTZXJ2aWNlc1Jlc3BvbnNlIhfaQQCC0+ST",
+            "Ag4SDC92MS9zZXJ2aWNlcxKOAQoITGlzdFNrdXMSKC5nb29nbGUuY2xvdWQu",
+            "YmlsbGluZy52MS5MaXN0U2t1c1JlcXVlc3QaKS5nb29nbGUuY2xvdWQuYmls",
+            "bGluZy52MS5MaXN0U2t1c1Jlc3BvbnNlIi3aQQZwYXJlbnSC0+STAh4SHC92",
+            "MS97cGFyZW50PXNlcnZpY2VzLyp9L3NrdXMatQHKQRtjbG91ZGJpbGxpbmcu",
+            "Z29vZ2xlYXBpcy5jb23SQZMBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1iaWxsaW5nLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtYmlsbGluZy5yZWFkb25seSxodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQo0BChtjb20uZ29vZ2xl",
+            "LmNsb3VkLmJpbGxpbmcudjFCEUNsb3VkQ2F0YWxvZ1Byb3RvUAFaNWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlsbGluZy9hcGl2MS9iaWxsaW5ncGI7YmlsbGlu",
+            "Z3BiogIHQ0xEQ1RMR6oCF0dvb2dsZS5DbG91ZC5CaWxsaW5nLlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -118,6 +118,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Encapsulates a single service in Google Cloud Platform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -436,6 +437,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Encapsulates a single SKU in Google Cloud Platform
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sku : pb::IMessage<Sku>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -913,6 +915,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the category hierarchy of a SKU.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Category : pb::IMessage<Category>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1231,6 +1234,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the pricing information for a SKU at a single point of time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PricingInfo : pb::IMessage<PricingInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1633,6 +1637,7 @@ namespace Google.Cloud.Billing.V1 {
   /// next 80GB is priced at $10 per GB followed by $5 per GB for additional
   /// usage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PricingExpression : pb::IMessage<PricingExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2077,6 +2082,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <summary>
       /// The price rate indicating starting usage and its corresponding price.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TierRate : pb::IMessage<TierRate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2329,6 +2335,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Represents the aggregation level and interval for pricing of a single SKU.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregationInfo : pb::IMessage<AggregationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2630,6 +2637,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Encapsulates the geographic taxonomy data for a sku.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeoTaxonomy : pb::IMessage<GeoTaxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2887,6 +2895,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Request message for `ListServices`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3124,6 +3133,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Response message for `ListServices`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3350,6 +3360,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Request message for `ListSkus`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSkusRequest : pb::IMessage<ListSkusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3778,6 +3789,7 @@ namespace Google.Cloud.Billing.V1 {
   /// <summary>
   /// Response message for `ListSkus`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSkusResponse : pb::IMessage<ListSkusResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

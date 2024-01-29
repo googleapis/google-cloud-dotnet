@@ -53,6 +53,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A list of Kubernetes Namespaces
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Namespaces : pb::IMessage<Namespaces>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -237,6 +238,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A reference to a namespaced resource in Kubernetes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NamespacedName : pb::IMessage<NamespacedName>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -472,6 +474,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// A list of namespaced Kubernetes resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NamespacedNames : pb::IMessage<NamespacedNames>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -657,6 +660,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// Defined a customer managed encryption key that will be used to encrypt Backup
   /// artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionKey : pb::IMessage<EncryptionKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

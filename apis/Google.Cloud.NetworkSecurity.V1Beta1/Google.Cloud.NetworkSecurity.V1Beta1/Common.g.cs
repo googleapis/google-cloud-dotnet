@@ -27,19 +27,19 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             "CjFnb29nbGUvY2xvdWQvbmV0d29ya3NlY3VyaXR5L3YxYmV0YTEvY29tbW9u",
             "LnByb3RvEiRnb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8igAIKEU9wZXJhdGlvbk1ldGFkYXRhEjQK",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8ihwIKEU9wZXJhdGlvbk1ldGFkYXRhEjUK",
             "C2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjEKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEhMKBnRhcmdldBgDIAEoCUID4EEDEhEKBHZlcmIYBCAB",
-            "KAlCA+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgFIAEoCUID4EEDEiMKFnJlcXVl",
-            "c3RlZF9jYW5jZWxsYXRpb24YBiABKAhCA+BBAxIYCgthcGlfdmVyc2lvbhgH",
-            "IAEoCUID4EEDQoUCCihjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0",
-            "eS52MWJldGExQgtDb21tb25Qcm90b1ABWlJjbG91ZC5nb29nbGUuY29tL2dv",
-            "L25ldHdvcmtzZWN1cml0eS9hcGl2MWJldGExL25ldHdvcmtzZWN1cml0eXBi",
-            "O25ldHdvcmtzZWN1cml0eXBiqgIkR29vZ2xlLkNsb3VkLk5ldHdvcmtTZWN1",
-            "cml0eS5WMUJldGExygIkR29vZ2xlXENsb3VkXE5ldHdvcmtTZWN1cml0eVxW",
-            "MWJldGEx6gInR29vZ2xlOjpDbG91ZDo6TmV0d29ya1NlY3VyaXR5OjpWMWJl",
-            "dGExYgZwcm90bzM="));
+            "cEIE4kEBAxIyCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCBOJBAQMSFAoGdGFyZ2V0GAMgASgJQgTiQQEDEhIKBHZlcmIY",
+            "BCABKAlCBOJBAQMSHAoOc3RhdHVzX21lc3NhZ2UYBSABKAlCBOJBAQMSJAoW",
+            "cmVxdWVzdGVkX2NhbmNlbGxhdGlvbhgGIAEoCEIE4kEBAxIZCgthcGlfdmVy",
+            "c2lvbhgHIAEoCUIE4kEBA0KFAgooY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "c2VjdXJpdHkudjFiZXRhMUILQ29tbW9uUHJvdG9QAVpSY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9uZXR3b3Jrc2VjdXJpdHkvYXBpdjFiZXRhMS9uZXR3b3Jrc2Vj",
+            "dXJpdHlwYjtuZXR3b3Jrc2VjdXJpdHlwYqoCJEdvb2dsZS5DbG91ZC5OZXR3",
+            "b3JrU2VjdXJpdHkuVjFCZXRhMcoCJEdvb2dsZVxDbG91ZFxOZXR3b3JrU2Vj",
+            "dXJpdHlcVjFiZXRhMeoCJ0dvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtTZWN1cml0",
+            "eTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,6 +53,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

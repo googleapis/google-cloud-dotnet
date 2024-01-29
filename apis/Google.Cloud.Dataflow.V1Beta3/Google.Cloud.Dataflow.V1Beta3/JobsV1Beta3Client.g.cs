@@ -183,14 +183,14 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return JobsV1Beta3Client.Create(callInvoker, Settings, Logger);
+            return JobsV1Beta3Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<JobsV1Beta3Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return JobsV1Beta3Client.Create(callInvoker, Settings, Logger);
+            return JobsV1Beta3Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>

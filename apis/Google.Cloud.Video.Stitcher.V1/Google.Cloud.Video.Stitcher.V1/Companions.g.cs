@@ -67,6 +67,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for companion ads.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompanionAds : pb::IMessage<CompanionAds>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -321,6 +322,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for a companion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Companion : pb::IMessage<Companion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1022,6 +1024,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for an HTML ad resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HtmlAdResource : pb::IMessage<HtmlAdResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1217,6 +1220,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for an IFrame ad resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IframeAdResource : pb::IMessage<IframeAdResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1412,6 +1416,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for a static ad resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StaticAdResource : pb::IMessage<StaticAdResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
