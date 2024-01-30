@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.5.0, released 2024-01-30
+
+### Bug fixes
+
+- Use FirestoreSettings.BatchGetDocuments for batch timing ([commit ad580e0](https://github.com/googleapis/google-cloud-dotnet/commit/ad580e003e4fab2864f1fd916e5bd5da971e2201))
+- Allow an explicit MustExist precondition for update. Fixes [issue 11361](https://github.com/googleapis/google-cloud-dotnet/issues/11361) ([commit f9f39a5](https://github.com/googleapis/google-cloud-dotnet/commit/f9f39a522e38969f20f32f3bde840148067bb090))
+
+### New features
+
+- Multiple database support promoted to GA
+- Add configurable retry timing for RunTransactionAsync ([commit 4b1acf8](https://github.com/googleapis/google-cloud-dotnet/commit/4b1acf8f9f0eddcaa7e19a7531a5511b2f0c1e05))
+- All BatchGetDocuments RPCs to have customized retry settiings (per-FirestoreDb) ([commit ad580e0](https://github.com/googleapis/google-cloud-dotnet/commit/ad580e003e4fab2864f1fd916e5bd5da971e2201))
+
 ## Version 3.5.0-beta01, released 2023-11-29
 
 Note: this is a beta release as multiple database support in
