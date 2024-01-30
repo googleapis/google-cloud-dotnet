@@ -24,7 +24,24 @@ public class ConfigurationSnippets
     // Note: If you change this sample, please also change the sample
     // in Google.Cloud.Language.V1.Snippets.
     [Fact]
-    public void LanguageApiKey()
+    public void LanguageApiKey_Simple()
+    {
+        string apiKey = "some-api-key";
+
+        // Sample: ApiKey
+        // Create a LanguageServiceClient which uses the given API key
+        // instead of regular credentials.
+        LanguageServiceClient client = new LanguageServiceClientBuilder
+        {
+            ApiKey = apiKey
+        }.Build();
+        // End sample
+
+        Assert.NotNull(client);
+    }
+
+    [Fact]
+    public void LanguageApiKey_Manual()
     {
         string apiKey = "some-api-key";
 

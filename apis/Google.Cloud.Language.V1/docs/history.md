@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.4.0, released 2024-01-30
+
+### New features
+
+- Support API keys directly in the Language library ([commit 33aad2c](https://github.com/googleapis/google-cloud-dotnet/commit/33aad2ce86593aedf4ee4073952227bb82d35d38))
+
 ## Version 3.3.0, released 2023-05-26
 
 ### New features
