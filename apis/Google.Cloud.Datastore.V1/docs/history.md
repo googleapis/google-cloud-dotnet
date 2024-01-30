@@ -1,5 +1,18 @@
 # Version history
 
+## Version 4.7.0, released 2024-01-30
+
+### New features
+
+Multiple database support is now GA.
+
+### Bug fixes (from beta)
+
+- The new features released in 4.7.0-beta03 have been removed. This
+  is a breaking change, but the features were never available to
+  customers in terms of server interactions (only protos) and were
+  not published in a stable release.
+
 ## Version 4.7.0-beta03, released 2024-01-08
 
 ### New features
