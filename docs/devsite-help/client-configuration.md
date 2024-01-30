@@ -55,12 +55,25 @@ properties, and are rarely as useful as the ones above.
 ### API Keys
 
 Most Cloud APIs do not support API keys, instead requiring full credentials as described above. For this
-reason, the client libraries do not have *direct* support for API keys, but API keys can still be used
-for those APIs which support them. The API key should be specified in the `X-Goog-Api-Key` header on
-every request, and the gRPC channel should be built using `ChannelCredentials.SecureSsl`. For example,
-to create a client for the Language API using an API key, you could use the following code:
+reason, most client libraries do not have *direct* support for API keys, but API keys can still be used
+for those APIs which support them.
 
-[!code-cs[](../examples/help.Configuration.txt#ApiKey)]
+Where we are aware that API keys are supported, the client builder
+exposes an `ApiKey` property which can be set, leaving all other
+credential-related properties unset. For example, you can create a
+client for the Language API using an API key like this:
+
+[!code-cs[](../examples/help.Configuration.txt#ApiKey_Simple)]
+
+If you're using a library which doesn't expose an `ApiKey` property
+in the builder, but you wish to set one anyway, you can specify the
+API key in the `X-Goog-Api-Key` header on every request.
+Additionally, the gRPC channel should be built using
+`ChannelCredentials.SecureSsl`. For example, to manually specify the
+API key in a Language client (instead of using the built-in support)
+you could write code like this:
+
+[!code-cs[](../examples/help.Configuration.txt#ApiKey_Manual)]
 
 After building the client, it can be used like any other client.
 
