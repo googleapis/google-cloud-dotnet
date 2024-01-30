@@ -75,7 +75,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// See full explanation of fields at slsa.dev/provenance/v0.2.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlsaProvenanceZeroTwo : pb::IMessage<SlsaProvenanceZeroTwo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -482,7 +481,6 @@ namespace Grafeas.V1 {
       /// Identifies the entity that executed the recipe, which is trusted to have
       /// correctly performed the operation and populated this provenance.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaBuilder : pb::IMessage<SlsaBuilder>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -676,7 +674,6 @@ namespace Grafeas.V1 {
       /// The collection of artifacts that influenced the build including sources,
       /// dependencies, build tools, base images, and so on.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaMaterial : pb::IMessage<SlsaMaterial>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -895,7 +892,6 @@ namespace Grafeas.V1 {
       /// <summary>
       /// Identifies the event that kicked off the build.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaInvocation : pb::IMessage<SlsaInvocation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1190,7 +1186,6 @@ namespace Grafeas.V1 {
       /// Describes where the config file that kicked off the build came from.
       /// This is effectively a pointer to the source where buildConfig came from.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaConfigSource : pb::IMessage<SlsaConfigSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1446,7 +1441,6 @@ namespace Grafeas.V1 {
       /// <summary>
       /// Other properties of the build.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaMetadata : pb::IMessage<SlsaMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1815,7 +1809,6 @@ namespace Grafeas.V1 {
       /// Indicates that the builder claims certain fields in this message to be
       /// complete.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SlsaCompleteness : pb::IMessage<SlsaCompleteness>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

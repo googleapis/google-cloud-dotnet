@@ -31,54 +31,54 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvc2hvcHBp",
             "bmcvdHlwZS90eXBlcy5wcm90bxoaZ29vZ2xlL3R5cGUvaW50ZXJ2YWwucHJv",
-            "dG8ijQUKDkxvY2FsSW52ZW50b3J5EhIKBG5hbWUYASABKAlCBOJBAQMSFQoH",
-            "YWNjb3VudBgCIAEoA0IE4kEBAxIYCgpzdG9yZV9jb2RlGAMgASgJQgTiQQEC",
-            "EioKBXByaWNlGAQgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2US",
-            "LwoKc2FsZV9wcmljZRgFIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlBy",
-            "aWNlEjgKGXNhbGVfcHJpY2VfZWZmZWN0aXZlX2RhdGUYBiABKAsyFS5nb29n",
-            "bGUudHlwZS5JbnRlcnZhbBIZCgxhdmFpbGFiaWxpdHkYByABKAlIAIgBARIV",
-            "CghxdWFudGl0eRgIIAEoA0gBiAEBEhoKDXBpY2t1cF9tZXRob2QYCSABKAlI",
-            "AogBARIXCgpwaWNrdXBfc2xhGAogASgJSAOIAQESJQoYaW5zdG9yZV9wcm9k",
-            "dWN0X2xvY2F0aW9uGAsgASgJSASIAQESQAoRY3VzdG9tX2F0dHJpYnV0ZXMY",
-            "DCADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21BdHRyaWJ1dGU6",
-            "c+pBcAopbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vTG9jYWxJbnZlbnRv",
-            "cnkSQ2FjY291bnRzL3thY2NvdW50fS9wcm9kdWN0cy97cHJvZHVjdH0vbG9j",
-            "YWxJbnZlbnRvcmllcy97c3RvcmVfY29kZX1CDwoNX2F2YWlsYWJpbGl0eUIL",
-            "CglfcXVhbnRpdHlCEAoOX3BpY2t1cF9tZXRob2RCDQoLX3BpY2t1cF9zbGFC",
-            "GwoZX2luc3RvcmVfcHJvZHVjdF9sb2NhdGlvbiJaChtMaXN0TG9jYWxJbnZl",
-            "bnRvcmllc1JlcXVlc3QSFAoGcGFyZW50GAEgASgJQgTiQQECEhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIo8BChxMaXN0TG9jYWxJ",
-            "bnZlbnRvcmllc1Jlc3BvbnNlElYKEWxvY2FsX2ludmVudG9yaWVzGAEgAygL",
-            "MjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0",
-            "YS5Mb2NhbEludmVudG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkijwEK",
-            "G0luc2VydExvY2FsSW52ZW50b3J5UmVxdWVzdBIUCgZwYXJlbnQYASABKAlC",
-            "BOJBAQISWgoPbG9jYWxfaW52ZW50b3J5GAIgASgLMjsuZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0YS5Mb2NhbEludmVudG9y",
-            "eUIE4kEBAiJfChtEZWxldGVMb2NhbEludmVudG9yeVJlcXVlc3QSQAoEbmFt",
-            "ZRgBIAEoCUIy4kEBAvpBKwopbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYWxJbnZlbnRvcnkyuAYKFUxvY2FsSW52ZW50b3J5U2VydmljZRKBAgoU",
-            "TGlzdExvY2FsSW52ZW50b3JpZXMSSC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQuaW52ZW50b3JpZXMudjFiZXRhLkxpc3RMb2NhbEludmVudG9yaWVzUmVx",
-            "dWVzdBpJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52",
-            "MWJldGEuTGlzdExvY2FsSW52ZW50b3JpZXNSZXNwb25zZSJU2kEGcGFyZW50",
-            "gtPkkwJFEkMvaW52ZW50b3JpZXMvdjFiZXRhL3twYXJlbnQ9YWNjb3VudHMv",
-            "Ki9wcm9kdWN0cy8qfS9sb2NhbEludmVudG9yaWVzEoICChRJbnNlcnRMb2Nh",
-            "bEludmVudG9yeRJILmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRv",
-            "cmllcy52MWJldGEuSW5zZXJ0TG9jYWxJbnZlbnRvcnlSZXF1ZXN0GjsuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0YS5Mb2Nh",
-            "bEludmVudG9yeSJjgtPkkwJdIkovaW52ZW50b3JpZXMvdjFiZXRhL3twYXJl",
-            "bnQ9YWNjb3VudHMvKi9wcm9kdWN0cy8qfS9sb2NhbEludmVudG9yaWVzOmlu",
-            "c2VydDoPbG9jYWxfaW52ZW50b3J5EswBChREZWxldGVMb2NhbEludmVudG9y",
-            "eRJILmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MWJl",
-            "dGEuRGVsZXRlTG9jYWxJbnZlbnRvcnlSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IlLaQQRuYW1lgtPkkwJFKkMvaW52ZW50b3JpZXMvdjFiZXRh",
-            "L3tuYW1lPWFjY291bnRzLyovcHJvZHVjdHMvKi9sb2NhbEludmVudG9yaWVz",
-            "Lyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEKhAQovY29tLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmllcy52MWJldGFCE0xvY2Fs",
-            "SW52ZW50b3J5UHJvdG9QAVpXY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGlu",
-            "Zy9tZXJjaGFudC9pbnZlbnRvcmllcy9hcGl2MWJldGEvaW52ZW50b3JpZXNw",
-            "YjtpbnZlbnRvcmllc3BiYgZwcm90bzM="));
+            "dG8iigUKDkxvY2FsSW52ZW50b3J5EhEKBG5hbWUYASABKAlCA+BBAxIUCgdh",
+            "Y2NvdW50GAIgASgDQgPgQQMSFwoKc3RvcmVfY29kZRgDIAEoCUID4EECEioK",
+            "BXByaWNlGAQgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USLwoK",
+            "c2FsZV9wcmljZRgFIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
+            "EjgKGXNhbGVfcHJpY2VfZWZmZWN0aXZlX2RhdGUYBiABKAsyFS5nb29nbGUu",
+            "dHlwZS5JbnRlcnZhbBIZCgxhdmFpbGFiaWxpdHkYByABKAlIAIgBARIVCghx",
+            "dWFudGl0eRgIIAEoA0gBiAEBEhoKDXBpY2t1cF9tZXRob2QYCSABKAlIAogB",
+            "ARIXCgpwaWNrdXBfc2xhGAogASgJSAOIAQESJQoYaW5zdG9yZV9wcm9kdWN0",
+            "X2xvY2F0aW9uGAsgASgJSASIAQESQAoRY3VzdG9tX2F0dHJpYnV0ZXMYDCAD",
+            "KAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21BdHRyaWJ1dGU6c+pB",
+            "cAopbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vTG9jYWxJbnZlbnRvcnkS",
+            "Q2FjY291bnRzL3thY2NvdW50fS9wcm9kdWN0cy97cHJvZHVjdH0vbG9jYWxJ",
+            "bnZlbnRvcmllcy97c3RvcmVfY29kZX1CDwoNX2F2YWlsYWJpbGl0eUILCglf",
+            "cXVhbnRpdHlCEAoOX3BpY2t1cF9tZXRob2RCDQoLX3BpY2t1cF9zbGFCGwoZ",
+            "X2luc3RvcmVfcHJvZHVjdF9sb2NhdGlvbiJZChtMaXN0TG9jYWxJbnZlbnRv",
+            "cmllc1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISEQoJcGFnZV9zaXpl",
+            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkijwEKHExpc3RMb2NhbEludmVu",
+            "dG9yaWVzUmVzcG9uc2USVgoRbG9jYWxfaW52ZW50b3JpZXMYASADKAsyOy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjFiZXRhLkxv",
+            "Y2FsSW52ZW50b3J5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKNAQobSW5z",
+            "ZXJ0TG9jYWxJbnZlbnRvcnlSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EEC",
+            "ElkKD2xvY2FsX2ludmVudG9yeRgCIAEoCzI7Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5pbnZlbnRvcmllcy52MWJldGEuTG9jYWxJbnZlbnRvcnlCA+BB",
+            "AiJeChtEZWxldGVMb2NhbEludmVudG9yeVJlcXVlc3QSPwoEbmFtZRgBIAEo",
+            "CUIx4EEC+kErCiltZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9Mb2NhbElu",
+            "dmVudG9yeTK4BgoVTG9jYWxJbnZlbnRvcnlTZXJ2aWNlEoECChRMaXN0TG9j",
+            "YWxJbnZlbnRvcmllcxJILmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZl",
+            "bnRvcmllcy52MWJldGEuTGlzdExvY2FsSW52ZW50b3JpZXNSZXF1ZXN0Gkku",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0YS5M",
+            "aXN0TG9jYWxJbnZlbnRvcmllc1Jlc3BvbnNlIlSC0+STAkUSQy9pbnZlbnRv",
+            "cmllcy92MWJldGEve3BhcmVudD1hY2NvdW50cy8qL3Byb2R1Y3RzLyp9L2xv",
+            "Y2FsSW52ZW50b3JpZXPaQQZwYXJlbnQSggIKFEluc2VydExvY2FsSW52ZW50",
+            "b3J5EkguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYx",
+            "YmV0YS5JbnNlcnRMb2NhbEludmVudG9yeVJlcXVlc3QaOy5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjFiZXRhLkxvY2FsSW52ZW50",
+            "b3J5ImOC0+STAl0iSi9pbnZlbnRvcmllcy92MWJldGEve3BhcmVudD1hY2Nv",
+            "dW50cy8qL3Byb2R1Y3RzLyp9L2xvY2FsSW52ZW50b3JpZXM6aW5zZXJ0Og9s",
+            "b2NhbF9pbnZlbnRvcnkSzAEKFERlbGV0ZUxvY2FsSW52ZW50b3J5EkguZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0YS5EZWxl",
+            "dGVMb2NhbEludmVudG9yeVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiUoLT5JMCRSpDL2ludmVudG9yaWVzL3YxYmV0YS97bmFtZT1hY2NvdW50",
+            "cy8qL3Byb2R1Y3RzLyovbG9jYWxJbnZlbnRvcmllcy8qfdpBBG5hbWUaR8pB",
+            "Gm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jb250ZW50QqEBCi9jb20uZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LmludmVudG9yaWVzLnYxYmV0YUITTG9jYWxJbnZlbnRv",
+            "cnlQcm90b1ABWldjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNo",
+            "YW50L2ludmVudG9yaWVzL2FwaXYxYmV0YS9pbnZlbnRvcmllc3BiO2ludmVu",
+            "dG9yaWVzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -100,7 +100,6 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// For a list of all accepted attribute values, see the [local product inventory
   /// feed specification](https://support.google.com/merchants/answer/3061342).
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalInventory : pb::IMessage<LocalInventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -847,7 +846,6 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// <summary>
   /// Request message for the `ListLocalInventories` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLocalInventoriesRequest : pb::IMessage<ListLocalInventoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1135,7 +1133,6 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// <summary>
   /// Response message for the `ListLocalInventories` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLocalInventoriesResponse : pb::IMessage<ListLocalInventoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1362,7 +1359,6 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// <summary>
   /// Request message for the `InsertLocalInventory` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InsertLocalInventoryRequest : pb::IMessage<InsertLocalInventoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1610,7 +1606,6 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta {
   /// <summary>
   /// Request message for the `DeleteLocalInventory` method.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteLocalInventoryRequest : pb::IMessage<DeleteLocalInventoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

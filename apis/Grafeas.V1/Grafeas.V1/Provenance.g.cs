@@ -98,7 +98,6 @@ namespace Grafeas.V1 {
   /// Provenance of a build. Contains all information needed to verify the full
   /// details about the build from source to completion.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuildProvenance : pb::IMessage<BuildProvenance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -780,7 +779,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Source describes the location of the source used for the build.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Source : pb::IMessage<Source>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1095,7 +1093,6 @@ namespace Grafeas.V1 {
   /// Container message for hashes of byte content of files, used in source
   /// messages to verify integrity of source input to the build.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileHashes : pb::IMessage<FileHashes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1280,7 +1277,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Container message for hash values.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Hash : pb::IMessage<Hash>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1516,7 +1512,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Command describes a step performed as part of the build pipeline.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Command : pb::IMessage<Command>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1882,7 +1877,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Artifact describes a build product.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Artifact : pb::IMessage<Artifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2154,7 +2148,6 @@ namespace Grafeas.V1 {
   /// A SourceContext is a reference to a tree of files. A SourceContext together
   /// with a path point to a unique revision of a single file or directory.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceContext : pb::IMessage<SourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2534,7 +2527,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// An alias to a repo revision.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AliasContext : pb::IMessage<AliasContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2802,7 +2794,6 @@ namespace Grafeas.V1 {
   /// A CloudRepoSourceContext denotes a particular revision in a Google Cloud
   /// Source Repo.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudRepoSourceContext : pb::IMessage<CloudRepoSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3147,7 +3138,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// A SourceContext referring to a Gerrit project.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GerritSourceContext : pb::IMessage<GerritSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3526,7 +3516,6 @@ namespace Grafeas.V1 {
   /// A GitSourceContext denotes a particular revision in a third party Git
   /// repository (e.g., GitHub).
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitSourceContext : pb::IMessage<GitSourceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3762,7 +3751,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// A unique identifier for a Cloud Repo.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RepoId : pb::IMessage<RepoId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4059,7 +4047,6 @@ namespace Grafeas.V1 {
   /// Selects a repo using a Google Cloud Platform project ID (e.g.,
   /// winged-cargo-31) and a repo name within that project.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProjectRepoId : pb::IMessage<ProjectRepoId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -46,7 +46,6 @@ namespace Grafeas.V1 {
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DSSEAttestationNote : pb::IMessage<DSSEAttestationNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -260,7 +259,6 @@ namespace Grafeas.V1 {
       /// security sensitive contexts, such as when looking up attestations to
       /// verify.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DSSEHint : pb::IMessage<DSSEHint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -463,7 +461,6 @@ namespace Grafeas.V1 {
   /// Deprecated. Prefer to use a regular Occurrence, and populate the
   /// Envelope at the top level of the Occurrence.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DSSEAttestationOccurrence : pb::IMessage<DSSEAttestationOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

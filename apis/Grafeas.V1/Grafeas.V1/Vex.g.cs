@@ -83,7 +83,6 @@ namespace Grafeas.V1 {
   /// A single VulnerabilityAssessmentNote represents
   /// one particular product's vulnerability assessment for one CVE.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VulnerabilityAssessmentNote : pb::IMessage<VulnerabilityAssessmentNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -553,7 +552,6 @@ namespace Grafeas.V1 {
       /// (-- api-linter: core::0123::resource-annotation=disabled
       ///     aip.dev/not-precedent: Publisher is not a separate resource. --)
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Publisher : pb::IMessage<Publisher>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -838,7 +836,6 @@ namespace Grafeas.V1 {
       /// (-- api-linter: core::0123::resource-annotation=disabled
       ///     aip.dev/not-precedent: Product is not a separate resource. --)
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Product : pb::IMessage<Product>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1162,7 +1159,6 @@ namespace Grafeas.V1 {
       /// Assessment provides all information that is related to a single
       /// vulnerability for this product.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Assessment : pb::IMessage<Assessment>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1651,7 +1647,6 @@ namespace Grafeas.V1 {
           /// Justification provides the justification when the state of the
           /// assessment if NOT_AFFECTED.
           /// </summary>
-          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Justification : pb::IMessage<Justification>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1934,7 +1929,6 @@ namespace Grafeas.V1 {
           /// <summary>
           /// Specifies details on how to handle (and presumably, fix) a vulnerability.
           /// </summary>
-          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Remediation : pb::IMessage<Remediation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

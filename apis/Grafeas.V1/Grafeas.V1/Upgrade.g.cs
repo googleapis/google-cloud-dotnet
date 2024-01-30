@@ -67,7 +67,6 @@ namespace Grafeas.V1 {
   /// bash 4.1.2), there will be an Upgrade Note. For Windows, windows_update field
   /// represents the information related to the update.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeNote : pb::IMessage<UpgradeNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -393,7 +392,6 @@ namespace Grafeas.V1 {
   /// operating system (CPE). Some distributions have additional metadata around
   /// updates, classifying them into various categories and severities.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeDistribution : pb::IMessage<UpgradeDistribution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -705,7 +703,6 @@ namespace Grafeas.V1 {
   /// documented at
   /// https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WindowsUpdate : pb::IMessage<WindowsUpdate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1141,7 +1138,6 @@ namespace Grafeas.V1 {
       /// <summary>
       /// The unique identifier of the update.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Identity : pb::IMessage<Identity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1377,7 +1373,6 @@ namespace Grafeas.V1 {
       /// <summary>
       /// The category to which the update belongs.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Category : pb::IMessage<Category>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1622,7 +1617,6 @@ namespace Grafeas.V1 {
   /// For Windows, both distribution and windows_update contain information for the
   /// Windows update.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeOccurrence : pb::IMessage<UpgradeOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

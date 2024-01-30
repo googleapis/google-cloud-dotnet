@@ -54,7 +54,6 @@ namespace Grafeas.V1 {
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComplianceNote : pb::IMessage<ComplianceNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -522,7 +521,6 @@ namespace Grafeas.V1 {
       /// <summary>
       /// A compliance check that is a CIS benchmark.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CisBenchmark : pb::IMessage<CisBenchmark>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -758,7 +756,6 @@ namespace Grafeas.V1 {
   /// Describes the CIS benchmark version that is applicable to a given OS and
   /// os version.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComplianceVersion : pb::IMessage<ComplianceVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1038,7 +1035,6 @@ namespace Grafeas.V1 {
   /// An indication that the compliance checks in the associated ComplianceNote
   /// were not satisfied for particular resources or a specified reason.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ComplianceOccurrence : pb::IMessage<ComplianceOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1257,7 +1253,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Details about files that caused a compliance check to fail.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NonCompliantFile : pb::IMessage<NonCompliantFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
