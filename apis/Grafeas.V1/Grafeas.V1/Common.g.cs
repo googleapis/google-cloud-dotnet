@@ -117,7 +117,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Metadata for any related URL information.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedUrl : pb::IMessage<RelatedUrl>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -374,7 +373,6 @@ namespace Grafeas.V1 {
   /// this Signature, or the canonical serialization of the proto message that
   /// holds this signature).
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Signature : pb::IMessage<Signature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -633,7 +631,6 @@ namespace Grafeas.V1 {
   /// https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An
   /// authenticated message of arbitrary type.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Envelope : pb::IMessage<Envelope>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -886,7 +883,6 @@ namespace Grafeas.V1 {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvelopeSignature : pb::IMessage<EnvelopeSignature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1116,7 +1112,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Indicates the location at which a package was found.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileLocation : pb::IMessage<FileLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1313,7 +1308,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// License information.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class License : pb::IMessage<License>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1553,7 +1547,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Digest information.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Digest : pb::IMessage<Digest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -50,7 +50,6 @@ namespace Grafeas.V1 {
   /// Note holding the version of the provider's builder and the signature of the
   /// provenance message in the build details occurrence.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuildNote : pb::IMessage<BuildNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -246,7 +245,6 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Details of a build occurrence.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BuildOccurrence : pb::IMessage<BuildOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

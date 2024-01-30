@@ -56,7 +56,6 @@ namespace Grafeas.V1 {
   /// lookup to find all attached attestation occurrences, even if they don't all
   /// live in the same project.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttestationNote : pb::IMessage<AttestationNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -270,7 +269,6 @@ namespace Grafeas.V1 {
       /// security sensitive contexts, such as when looking up attestations to
       /// verify.
       /// </summary>
-      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Hint : pb::IMessage<Hint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -469,7 +467,6 @@ namespace Grafeas.V1 {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Jwt : pb::IMessage<Jwt>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -674,7 +671,6 @@ namespace Grafeas.V1 {
   /// verified) and intent (for which authority this attestation was intended to
   /// sign.
   /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttestationOccurrence : pb::IMessage<AttestationOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
