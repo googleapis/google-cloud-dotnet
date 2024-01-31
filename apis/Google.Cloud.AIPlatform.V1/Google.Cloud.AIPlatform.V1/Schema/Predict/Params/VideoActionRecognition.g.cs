@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
   /// <summary>
   /// Prediction model parameters for Video Action Recognition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoActionRecognitionPredictionParams : pb::IMessage<VideoActionRecognitionPredictionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

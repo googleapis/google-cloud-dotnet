@@ -122,6 +122,45 @@
         }
       }
     },
+    "DeploymentResourcePoolService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeploymentResourcePoolServiceClient",
+          "rpcs": {
+            "CreateDeploymentResourcePool": {
+              "methods": [
+                "CreateDeploymentResourcePool",
+                "CreateDeploymentResourcePoolAsync"
+              ]
+            },
+            "DeleteDeploymentResourcePool": {
+              "methods": [
+                "DeleteDeploymentResourcePool",
+                "DeleteDeploymentResourcePoolAsync"
+              ]
+            },
+            "GetDeploymentResourcePool": {
+              "methods": [
+                "GetDeploymentResourcePool",
+                "GetDeploymentResourcePoolAsync"
+              ]
+            },
+            "ListDeploymentResourcePools": {
+              "methods": [
+                "ListDeploymentResourcePools",
+                "ListDeploymentResourcePoolsAsync"
+              ]
+            },
+            "QueryDeployedModels": {
+              "methods": [
+                "QueryDeployedModels",
+                "QueryDeployedModelsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "EndpointService": {
       "clients": {
         "grpc": {
@@ -173,6 +212,177 @@
               "methods": [
                 "UpdateEndpoint",
                 "UpdateEndpointAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureOnlineStoreAdminService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureOnlineStoreAdminServiceClient",
+          "rpcs": {
+            "CreateFeatureOnlineStore": {
+              "methods": [
+                "CreateFeatureOnlineStore",
+                "CreateFeatureOnlineStoreAsync"
+              ]
+            },
+            "CreateFeatureView": {
+              "methods": [
+                "CreateFeatureView",
+                "CreateFeatureViewAsync"
+              ]
+            },
+            "DeleteFeatureOnlineStore": {
+              "methods": [
+                "DeleteFeatureOnlineStore",
+                "DeleteFeatureOnlineStoreAsync"
+              ]
+            },
+            "DeleteFeatureView": {
+              "methods": [
+                "DeleteFeatureView",
+                "DeleteFeatureViewAsync"
+              ]
+            },
+            "GetFeatureOnlineStore": {
+              "methods": [
+                "GetFeatureOnlineStore",
+                "GetFeatureOnlineStoreAsync"
+              ]
+            },
+            "GetFeatureView": {
+              "methods": [
+                "GetFeatureView",
+                "GetFeatureViewAsync"
+              ]
+            },
+            "GetFeatureViewSync": {
+              "methods": [
+                "GetFeatureViewSync",
+                "GetFeatureViewSyncAsync"
+              ]
+            },
+            "ListFeatureOnlineStores": {
+              "methods": [
+                "ListFeatureOnlineStores",
+                "ListFeatureOnlineStoresAsync"
+              ]
+            },
+            "ListFeatureViewSyncs": {
+              "methods": [
+                "ListFeatureViewSyncs",
+                "ListFeatureViewSyncsAsync"
+              ]
+            },
+            "ListFeatureViews": {
+              "methods": [
+                "ListFeatureViews",
+                "ListFeatureViewsAsync"
+              ]
+            },
+            "SyncFeatureView": {
+              "methods": [
+                "SyncFeatureView",
+                "SyncFeatureViewAsync"
+              ]
+            },
+            "UpdateFeatureOnlineStore": {
+              "methods": [
+                "UpdateFeatureOnlineStore",
+                "UpdateFeatureOnlineStoreAsync"
+              ]
+            },
+            "UpdateFeatureView": {
+              "methods": [
+                "UpdateFeatureView",
+                "UpdateFeatureViewAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureOnlineStoreService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureOnlineStoreServiceClient",
+          "rpcs": {
+            "FetchFeatureValues": {
+              "methods": [
+                "FetchFeatureValues",
+                "FetchFeatureValuesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureRegistryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureRegistryServiceClient",
+          "rpcs": {
+            "CreateFeature": {
+              "methods": [
+                "CreateFeature",
+                "CreateFeatureAsync"
+              ]
+            },
+            "CreateFeatureGroup": {
+              "methods": [
+                "CreateFeatureGroup",
+                "CreateFeatureGroupAsync"
+              ]
+            },
+            "DeleteFeature": {
+              "methods": [
+                "DeleteFeature",
+                "DeleteFeatureAsync"
+              ]
+            },
+            "DeleteFeatureGroup": {
+              "methods": [
+                "DeleteFeatureGroup",
+                "DeleteFeatureGroupAsync"
+              ]
+            },
+            "GetFeature": {
+              "methods": [
+                "GetFeature",
+                "GetFeatureAsync"
+              ]
+            },
+            "GetFeatureGroup": {
+              "methods": [
+                "GetFeatureGroup",
+                "GetFeatureGroupAsync"
+              ]
+            },
+            "ListFeatureGroups": {
+              "methods": [
+                "ListFeatureGroups",
+                "ListFeatureGroupsAsync"
+              ]
+            },
+            "ListFeatures": {
+              "methods": [
+                "ListFeatures",
+                "ListFeaturesAsync"
+              ]
+            },
+            "UpdateFeature": {
+              "methods": [
+                "UpdateFeature",
+                "UpdateFeatureAsync"
+              ]
+            },
+            "UpdateFeatureGroup": {
+              "methods": [
+                "UpdateFeatureGroup",
+                "UpdateFeatureGroupAsync"
               ]
             }
           }
@@ -668,6 +878,27 @@
         }
       }
     },
+    "LlmUtilityService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LlmUtilityServiceClient",
+          "rpcs": {
+            "ComputeTokens": {
+              "methods": [
+                "ComputeTokens",
+                "ComputeTokensAsync"
+              ]
+            },
+            "CountTokens": {
+              "methods": [
+                "CountTokens",
+                "CountTokensAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "MatchService": {
       "clients": {
         "grpc": {
@@ -1117,6 +1348,18 @@
         "grpc": {
           "libraryClient": "PredictionServiceClient",
           "rpcs": {
+            "DirectPredict": {
+              "methods": [
+                "DirectPredict",
+                "DirectPredictAsync"
+              ]
+            },
+            "DirectRawPredict": {
+              "methods": [
+                "DirectRawPredict",
+                "DirectRawPredictAsync"
+              ]
+            },
             "Explain": {
               "methods": [
                 "Explain",
@@ -1139,6 +1382,24 @@
               "methods": [
                 "ServerStreamingPredict",
                 "ServerStreamingPredictAsync"
+              ]
+            },
+            "StreamGenerateContent": {
+              "methods": [
+                "StreamGenerateContent",
+                "StreamGenerateContentAsync"
+              ]
+            },
+            "StreamingPredict": {
+              "methods": [
+                "StreamingPredict",
+                "StreamingPredictAsync"
+              ]
+            },
+            "StreamingRawPredict": {
+              "methods": [
+                "StreamingRawPredict",
+                "StreamingRawPredictAsync"
               ]
             }
           }

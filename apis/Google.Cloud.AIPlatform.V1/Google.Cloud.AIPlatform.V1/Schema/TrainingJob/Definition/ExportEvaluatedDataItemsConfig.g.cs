@@ -52,6 +52,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// Configuration for exporting test set predictions to a BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportEvaluatedDataItemsConfig : pb::IMessage<ExportEvaluatedDataItemsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

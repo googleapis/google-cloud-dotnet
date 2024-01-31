@@ -27,18 +27,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9kZXBsb3llZF9pbmRleF9y",
             "ZWYucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvInsKEERlcGxveWVkSW5kZXhSZWYSRwoOaW5kZXhfZW5kcG9pbnQY",
-            "ASABKAlCL+BBBfpBKQonYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9JbmRl",
-            "eEVuZHBvaW50Eh4KEWRlcGxveWVkX2luZGV4X2lkGAIgASgJQgPgQQVC0wEK",
-            "HmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIVRGVwbG95ZWRJbmRl",
-            "eFJlZlByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
-            "cGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3Vk",
-            "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
-            "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "LnByb3RvIpkBChBEZXBsb3llZEluZGV4UmVmEkgKDmluZGV4X2VuZHBvaW50",
+            "GAEgASgJQjDiQQEF+kEpCidhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0lu",
+            "ZGV4RW5kcG9pbnQSHwoRZGVwbG95ZWRfaW5kZXhfaWQYAiABKAlCBOJBAQUS",
+            "GgoMZGlzcGxheV9uYW1lGAMgASgJQgTiQQEDQtMBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCFURlcGxveWVkSW5kZXhSZWZQcm90b1ABWj5j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
+            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedIndexRef), global::Google.Cloud.AIPlatform.V1.DeployedIndexRef.Parser, new[]{ "IndexEndpoint", "DeployedIndexId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedIndexRef), global::Google.Cloud.AIPlatform.V1.DeployedIndexRef.Parser, new[]{ "IndexEndpoint", "DeployedIndexId", "DisplayName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -48,6 +49,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Points to a DeployedIndex.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployedIndexRef : pb::IMessage<DeployedIndexRef>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -84,6 +86,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public DeployedIndexRef(DeployedIndexRef other) : this() {
       indexEndpoint_ = other.indexEndpoint_;
       deployedIndexId_ = other.deployedIndexId_;
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +126,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// Output only. The display name of the DeployedIndex.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -140,6 +158,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (IndexEndpoint != other.IndexEndpoint) return false;
       if (DeployedIndexId != other.DeployedIndexId) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,6 +168,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (IndexEndpoint.Length != 0) hash ^= IndexEndpoint.GetHashCode();
       if (DeployedIndexId.Length != 0) hash ^= DeployedIndexId.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -175,6 +195,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(DeployedIndexId);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -193,6 +217,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(DeployedIndexId);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -208,6 +236,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (DeployedIndexId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeployedIndexId);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -226,6 +257,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.DeployedIndexId.Length != 0) {
         DeployedIndexId = other.DeployedIndexId;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -250,6 +284,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             DeployedIndexId = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -271,6 +309,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             DeployedIndexId = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
             break;
           }
         }

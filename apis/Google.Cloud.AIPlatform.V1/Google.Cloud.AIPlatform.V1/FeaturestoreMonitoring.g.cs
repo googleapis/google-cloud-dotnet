@@ -70,6 +70,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Configuration of how features in Featurestore are monitored.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeaturestoreMonitoringConfig : pb::IMessage<FeaturestoreMonitoringConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -435,6 +436,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// snapshot of the latest feature value of each entities every
       /// monitoring_interval.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SnapshotAnalysis : pb::IMessage<SnapshotAnalysis>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -727,6 +729,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues]
       /// operation.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ImportFeaturesAnalysis : pb::IMessage<ImportFeaturesAnalysis>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1032,6 +1035,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The config for Featurestore Monitoring threshold.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ThresholdConfig : pb::IMessage<ThresholdConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

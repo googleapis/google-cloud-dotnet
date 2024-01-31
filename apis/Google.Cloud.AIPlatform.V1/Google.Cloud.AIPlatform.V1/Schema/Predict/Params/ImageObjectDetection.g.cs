@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
   /// <summary>
   /// Prediction model parameters for Image Object Detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionPredictionParams : pb::IMessage<ImageObjectDetectionPredictionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

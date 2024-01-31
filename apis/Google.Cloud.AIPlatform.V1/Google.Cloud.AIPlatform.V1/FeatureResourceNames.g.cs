@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,9 +37,17 @@ namespace Google.Cloud.AIPlatform.V1
             /// .
             /// </summary>
             ProjectLocationFeaturestoreEntityTypeFeature = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>.
+            /// </summary>
+            ProjectLocationFeatureGroupFeature = 2,
         }
 
         private static gax::PathTemplate s_projectLocationFeaturestoreEntityTypeFeature = new gax::PathTemplate("projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}");
+
+        private static gax::PathTemplate s_projectLocationFeatureGroupFeature = new gax::PathTemplate("projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}");
 
         /// <summary>Creates a <see cref="FeatureName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -63,6 +71,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A new instance of <see cref="FeatureName"/> constructed from the provided ids.</returns>
         public static FeatureName FromProjectLocationFeaturestoreEntityTypeFeature(string projectId, string locationId, string featurestoreId, string entityTypeId, string featureId) =>
             new FeatureName(ResourceNameType.ProjectLocationFeaturestoreEntityTypeFeature, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), featurestoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)), entityTypeId: gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)), featureId: gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)));
+
+        /// <summary>
+        /// Creates a <see cref="FeatureName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="featureGroupId">The <c>FeatureGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="featureId">The <c>Feature</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FeatureName"/> constructed from the provided ids.</returns>
+        public static FeatureName FromProjectLocationFeatureGroupFeature(string projectId, string locationId, string featureGroupId, string featureId) =>
+            new FeatureName(ResourceNameType.ProjectLocationFeatureGroupFeature, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), featureGroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(featureGroupId, nameof(featureGroupId)), featureId: gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="FeatureName"/> with pattern
@@ -104,6 +124,21 @@ namespace Google.Cloud.AIPlatform.V1
         public static string FormatProjectLocationFeaturestoreEntityTypeFeature(string projectId, string locationId, string featurestoreId, string entityTypeId, string featureId) =>
             s_projectLocationFeaturestoreEntityTypeFeature.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)), gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FeatureName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="featureGroupId">The <c>FeatureGroup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="featureId">The <c>Feature</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FeatureName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>.
+        /// </returns>
+        public static string FormatProjectLocationFeatureGroupFeature(string projectId, string locationId, string featureGroupId, string featureId) =>
+            s_projectLocationFeatureGroupFeature.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(featureGroupId, nameof(featureGroupId)), gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="FeatureName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -112,6 +147,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -131,6 +171,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -158,6 +203,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="featureName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -178,6 +228,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -202,6 +257,11 @@ namespace Google.Cloud.AIPlatform.V1
                 result = FromProjectLocationFeaturestoreEntityTypeFeature(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
                 return true;
             }
+            if (s_projectLocationFeatureGroupFeature.TryParseName(featureName, out resourceName))
+            {
+                result = FromProjectLocationFeatureGroupFeature(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(featureName, out gax::UnparsedResourceName unparsedResourceName))
@@ -214,12 +274,13 @@ namespace Google.Cloud.AIPlatform.V1
             return false;
         }
 
-        private FeatureName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string featureId = null, string featurestoreId = null, string locationId = null, string projectId = null)
+        private FeatureName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string entityTypeId = null, string featureId = null, string featureGroupId = null, string featurestoreId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             EntityTypeId = entityTypeId;
             FeatureId = featureId;
+            FeatureGroupId = featureGroupId;
             FeaturestoreId = featurestoreId;
             LocationId = locationId;
             ProjectId = projectId;
@@ -249,28 +310,35 @@ namespace Google.Cloud.AIPlatform.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>EntityType</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>EntityType</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string EntityTypeId { get; }
 
         /// <summary>
-        /// The <c>Feature</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Feature</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string FeatureId { get; }
 
         /// <summary>
-        /// The <c>Featurestore</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>FeatureGroup</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string FeatureGroupId { get; }
+
+        /// <summary>
+        /// The <c>Featurestore</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string FeaturestoreId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -285,6 +353,7 @@ namespace Google.Cloud.AIPlatform.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationFeaturestoreEntityTypeFeature: return s_projectLocationFeaturestoreEntityTypeFeature.Expand(ProjectId, LocationId, FeaturestoreId, EntityTypeId, FeatureId);
+                case ResourceNameType.ProjectLocationFeatureGroupFeature: return s_projectLocationFeatureGroupFeature.Expand(ProjectId, LocationId, FeatureGroupId, FeatureId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -298,10 +367,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// <inheritdoc/>
         public bool Equals(FeatureName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(FeatureName a, FeatureName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(FeatureName a, FeatureName b) => !(a == b);
     }
 

@@ -26,14 +26,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cj9nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYW51YWxfYmF0Y2hfdHVu",
             "aW5nX3BhcmFtZXRlcnMucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIjYKG01hbnVh",
-            "bEJhdGNoVHVuaW5nUGFyYW1ldGVycxIXCgpiYXRjaF9zaXplGAEgASgFQgPg",
-            "QQVC3gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIgTWFudWFs",
-            "QmF0Y2hUdW5pbmdQYXJhbWV0ZXJzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
-            "cGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91",
-            "ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6",
-            "VjFiBnByb3RvMw=="));
+            "LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIjcKG01hbnVh",
+            "bEJhdGNoVHVuaW5nUGFyYW1ldGVycxIYCgpiYXRjaF9zaXplGAEgASgFQgTi",
+            "QQEFQt4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCIE1hbnVh",
+            "bEJhdGNoVHVuaW5nUGFyYW1ldGVyc1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,6 +47,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Manual batch tuning parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManualBatchTuningParameters : pb::IMessage<ManualBatchTuningParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

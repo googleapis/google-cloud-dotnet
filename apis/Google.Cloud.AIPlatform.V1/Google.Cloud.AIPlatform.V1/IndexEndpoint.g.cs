@@ -31,51 +31,52 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Yy5wcm90bxoyZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbWFjaGluZV9y",
             "ZXNvdXJjZXMucHJvdG8aM2dvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3Nl",
             "cnZpY2VfbmV0d29ya2luZy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byLIBgoNSW5kZXhFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24Y",
-            "AyABKAkSSAoQZGVwbG95ZWRfaW5kZXhlcxgEIAMoCzIpLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkRlcGxveWVkSW5kZXhCA+BBAxIMCgRldGFnGAUg",
-            "ASgJEkUKBmxhYmVscxgGIAMoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkluZGV4RW5kcG9pbnQuTGFiZWxzRW50cnkSNAoLY3JlYXRlX3RpbWUY",
-            "ByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
-            "YXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSFAoHbmV0d29yaxgJIAEoCUID4EEBEi0KHmVuYWJsZV9wcml2YXRlX3Nl",
-            "cnZpY2VfY29ubmVjdBgKIAEoCEIFGAHgQQESZAoecHJpdmF0ZV9zZXJ2aWNl",
-            "X2Nvbm5lY3RfY29uZmlnGAwgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuUHJpdmF0ZVNlcnZpY2VDb25uZWN0Q29uZmlnQgPgQQESJAoXcHVi",
-            "bGljX2VuZHBvaW50X2VuYWJsZWQYDSABKAhCA+BBARIoChtwdWJsaWNfZW5k",
-            "cG9pbnRfZG9tYWluX25hbWUYDiABKAlCA+BBAxJICg9lbmNyeXB0aW9uX3Nw",
-            "ZWMYDyABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0",
-            "aW9uU3BlY0ID4EEFGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAE6depBcgonYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9JbmRleEVuZHBvaW50Ekdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vaW5kZXhFbmRwb2ludHMve2luZGV4X2VuZHBvaW50fSKX",
-            "BQoNRGVwbG95ZWRJbmRleBIPCgJpZBgBIAEoCUID4EECEjYKBWluZGV4GAIg",
-            "ASgJQifgQQL6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vSW5kZXgS",
-            "FAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90aW1lGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElEKEXByaXZhdGVfZW5k",
-            "cG9pbnRzGAUgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5k",
-            "ZXhQcml2YXRlRW5kcG9pbnRzQgPgQQMSOAoPaW5kZXhfc3luY190aW1lGAYg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElAKE2F1dG9t",
-            "YXRpY19yZXNvdXJjZXMYByABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5BdXRvbWF0aWNSZXNvdXJjZXNCA+BBARJQChNkZWRpY2F0ZWRfcmVz",
-            "b3VyY2VzGBAgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVk",
-            "aWNhdGVkUmVzb3VyY2VzQgPgQQESIgoVZW5hYmxlX2FjY2Vzc19sb2dnaW5n",
-            "GAggASgIQgPgQQESXAoaZGVwbG95ZWRfaW5kZXhfYXV0aF9jb25maWcYCSAB",
-            "KAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZXBsb3llZEluZGV4",
-            "QXV0aENvbmZpZ0ID4EEBEh8KEnJlc2VydmVkX2lwX3JhbmdlcxgKIAMoCUID",
-            "4EEBEh0KEGRlcGxveW1lbnRfZ3JvdXAYCyABKAlCA+BBASKuAQoXRGVwbG95",
-            "ZWRJbmRleEF1dGhDb25maWcSVwoNYXV0aF9wcm92aWRlchgBIAEoCzJALmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveWVkSW5kZXhBdXRoQ29u",
-            "ZmlnLkF1dGhQcm92aWRlcho6CgxBdXRoUHJvdmlkZXISEQoJYXVkaWVuY2Vz",
-            "GAEgAygJEhcKD2FsbG93ZWRfaXNzdWVycxgCIAMoCSJZChVJbmRleFByaXZh",
-            "dGVFbmRwb2ludHMSHwoSbWF0Y2hfZ3JwY19hZGRyZXNzGAEgASgJQgPgQQMS",
-            "HwoSc2VydmljZV9hdHRhY2htZW50GAIgASgJQgPgQQNC0AEKHmNvbS5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUISSW5kZXhFbmRwb2ludFByb3RvUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
-            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
-            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "dGFtcC5wcm90byLTBgoNSW5kZXhFbmRwb2ludBISCgRuYW1lGAEgASgJQgTi",
+            "QQEDEhoKDGRpc3BsYXlfbmFtZRgCIAEoCUIE4kEBAhITCgtkZXNjcmlwdGlv",
+            "bhgDIAEoCRJJChBkZXBsb3llZF9pbmRleGVzGAQgAygLMikuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRJbmRleEIE4kEBAxIMCgRldGFn",
+            "GAUgASgJEkUKBmxhYmVscxgGIAMoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkluZGV4RW5kcG9pbnQuTGFiZWxzRW50cnkSNQoLY3JlYXRlX3Rp",
+            "bWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUK",
+            "C3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxIVCgduZXR3b3JrGAkgASgJQgTiQQEBEi4KHmVuYWJsZV9wcml2",
+            "YXRlX3NlcnZpY2VfY29ubmVjdBgKIAEoCEIGGAHiQQEBEmUKHnByaXZhdGVf",
+            "c2VydmljZV9jb25uZWN0X2NvbmZpZxgMIAEoCzI3Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlByaXZhdGVTZXJ2aWNlQ29ubmVjdENvbmZpZ0IE4kEB",
+            "ARIlChdwdWJsaWNfZW5kcG9pbnRfZW5hYmxlZBgNIAEoCEIE4kEBARIpChtw",
+            "dWJsaWNfZW5kcG9pbnRfZG9tYWluX25hbWUYDiABKAlCBOJBAQMSSQoPZW5j",
+            "cnlwdGlvbl9zcGVjGA8gASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuRW5jcnlwdGlvblNwZWNCBOJBAQUaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp16kFyCidhaXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL0luZGV4RW5kcG9pbnQSR3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbmRleEVuZHBvaW50cy97aW5kZXhf",
+            "ZW5kcG9pbnR9IqIFCg1EZXBsb3llZEluZGV4EhAKAmlkGAEgASgJQgTiQQEC",
+            "EjcKBWluZGV4GAIgASgJQijiQQEC+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL0luZGV4EhQKDGRpc3BsYXlfbmFtZRgDIAEoCRI1CgtjcmVhdGVf",
+            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMS",
+            "UgoRcHJpdmF0ZV9lbmRwb2ludHMYBSABKAsyMS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5JbmRleFByaXZhdGVFbmRwb2ludHNCBOJBAQMSOQoPaW5k",
+            "ZXhfc3luY190aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIE4kEBAxJRChNhdXRvbWF0aWNfcmVzb3VyY2VzGAcgASgLMi4uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuQXV0b21hdGljUmVzb3VyY2VzQgTiQQEB",
+            "ElEKE2RlZGljYXRlZF9yZXNvdXJjZXMYECABKAsyLi5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5EZWRpY2F0ZWRSZXNvdXJjZXNCBOJBAQESIwoVZW5h",
+            "YmxlX2FjY2Vzc19sb2dnaW5nGAggASgIQgTiQQEBEl0KGmRlcGxveWVkX2lu",
+            "ZGV4X2F1dGhfY29uZmlnGAkgASgLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuRGVwbG95ZWRJbmRleEF1dGhDb25maWdCBOJBAQESIAoScmVzZXJ2",
+            "ZWRfaXBfcmFuZ2VzGAogAygJQgTiQQEBEh4KEGRlcGxveW1lbnRfZ3JvdXAY",
+            "CyABKAlCBOJBAQEirgEKF0RlcGxveWVkSW5kZXhBdXRoQ29uZmlnElcKDWF1",
+            "dGhfcHJvdmlkZXIYASABKAsyQC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5EZXBsb3llZEluZGV4QXV0aENvbmZpZy5BdXRoUHJvdmlkZXIaOgoMQXV0",
+            "aFByb3ZpZGVyEhEKCWF1ZGllbmNlcxgBIAMoCRIXCg9hbGxvd2VkX2lzc3Vl",
+            "cnMYAiADKAkiWwoVSW5kZXhQcml2YXRlRW5kcG9pbnRzEiAKEm1hdGNoX2dy",
+            "cGNfYWRkcmVzcxgBIAEoCUIE4kEBAxIgChJzZXJ2aWNlX2F0dGFjaG1lbnQY",
+            "AiABKAlCBOJBAQNC0AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MUISSW5kZXhFbmRwb2ludFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIa",
+            "R29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQ",
+            "bGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,6 +94,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Indexes are deployed into it. An IndexEndpoint can have multiple
   /// DeployedIndexes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexEndpoint : pb::IMessage<IndexEndpoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -865,6 +867,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A deployment of an Index. IndexEndpoints contain one or more DeployedIndexes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployedIndex : pb::IMessage<DeployedIndex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1057,10 +1060,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.DedicatedResources dedicatedResources_;
     /// <summary>
     /// Optional. A description of resources that are dedicated to the
-    /// DeployedIndex, and that need a higher degree of manual configuration. If
-    /// min_replica_count is not set, the default value is 2 (we don't provide SLA
-    /// when min_replica_count=1). If max_replica_count is not set, the default
-    /// value is min_replica_count. The max allowed replica count is 1000.
+    /// DeployedIndex, and that need a higher degree of manual configuration. The
+    /// field min_replica_count must be set to a value strictly greater than 0, or
+    /// else validation will fail. We don't provide SLA when min_replica_count=1.
+    /// If max_replica_count is not set, the default value is min_replica_count.
+    /// The max allowed replica count is 1000.
     ///
     /// Available machine types for SMALL shard:
     /// e2-standard-2 and all machine types available for MEDIUM and LARGE shard.
@@ -1617,6 +1621,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Used to set up the auth on the DeployedIndex's private endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployedIndexAuthConfig : pb::IMessage<DeployedIndexAuthConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1826,6 +1831,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [JSON Web Token
       /// (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AuthProvider : pb::IMessage<AuthProvider>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2054,6 +2060,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// To send request via private service access, use match_grpc_address.
   /// To send request via private service connect, use service_attachment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexPrivateEndpoints : pb::IMessage<IndexPrivateEndpoints>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

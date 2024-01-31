@@ -49,6 +49,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
   /// <summary>
   /// Prediction model parameters for Image Segmentation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageSegmentationPredictionParams : pb::IMessage<ImageSegmentationPredictionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

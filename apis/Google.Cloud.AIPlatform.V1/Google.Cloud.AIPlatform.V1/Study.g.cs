@@ -28,141 +28,160 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2ds",
             "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0",
-            "cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKu",
-            "AwoFU3R1ZHkSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
-            "IAEoCUID4EECEj4KCnN0dWR5X3NwZWMYAyABKAsyJS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWNCA+BBAhI7CgVzdGF0ZRgEIAEoDjIn",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5LlN0YXRlQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSHAoPaW5hY3RpdmVfcmVhc29uGAYgASgJQgPgQQMiRwoFU3Rh",
-            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFD",
-            "VElWRRACEg0KCUNPTVBMRVRFRBADOl3qQVoKH2FpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vU3R1ZHkSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9zdHVkaWVzL3tzdHVkeX0i0AcKBVRyaWFsEhEKBG5hbWUY",
-            "ASABKAlCA+BBAxIPCgJpZBgCIAEoCUID4EEDEjsKBXN0YXRlGAMgASgOMicu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVHJpYWwuU3RhdGVCA+BBAxJE",
-            "CgpwYXJhbWV0ZXJzGAQgAygLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuVHJpYWwuUGFyYW1ldGVyQgPgQQMSRwoRZmluYWxfbWVhc3VyZW1lbnQY",
-            "BSABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NZWFzdXJlbWVu",
-            "dEID4EEDEkIKDG1lYXN1cmVtZW50cxgGIAMoCzInLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLk1lYXN1cmVtZW50QgPgQQMSMwoKc3RhcnRfdGltZRgH",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRf",
-            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIW",
-            "CgljbGllbnRfaWQYCSABKAlCA+BBAxIeChFpbmZlYXNpYmxlX3JlYXNvbhgK",
-            "IAEoCUID4EEDEj8KCmN1c3RvbV9qb2IYCyABKAlCK+BBA/pBJQojYWlwbGF0",
-            "Zm9ybS5nb29nbGVhcGlzLmNvbS9DdXN0b21Kb2ISUgoPd2ViX2FjY2Vzc191",
-            "cmlzGAwgAygLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVHJpYWwu",
-            "V2ViQWNjZXNzVXJpc0VudHJ5QgPgQQMaUgoJUGFyYW1ldGVyEhkKDHBhcmFt",
-            "ZXRlcl9pZBgBIAEoCUID4EEDEioKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLlZhbHVlQgPgQQMaNAoSV2ViQWNjZXNzVXJpc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiZgoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABINCglSRVFVRVNURUQQARIKCgZBQ1RJVkUQAhIMCghT",
-            "VE9QUElORxADEg0KCVNVQ0NFRURFRBAEEg4KCklORkVBU0lCTEUQBTps6kFp",
-            "Ch9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyaWFsEkZwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3R1ZGllcy97c3R1ZHl9",
-            "L3RyaWFscy97dHJpYWx9ImQKDFRyaWFsQ29udGV4dBITCgtkZXNjcmlwdGlv",
-            "bhgBIAEoCRI/CgpwYXJhbWV0ZXJzGAIgAygLMisuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuVHJpYWwuUGFyYW1ldGVyIv4cCglTdHVkeVNwZWMSagoZ",
-            "ZGVjYXlfY3VydmVfc3RvcHBpbmdfc3BlYxgEIAEoCzJFLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5EZWNheUN1cnZlQXV0b21hdGVk",
-            "U3RvcHBpbmdTcGVjSAASawoebWVkaWFuX2F1dG9tYXRlZF9zdG9wcGluZ19z",
-            "cGVjGAUgASgLMkEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlT",
-            "cGVjLk1lZGlhbkF1dG9tYXRlZFN0b3BwaW5nU3BlY0gAEmsKHmNvbnZleF9h",
-            "dXRvbWF0ZWRfc3RvcHBpbmdfc3BlYxgJIAEoCzJBLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Db252ZXhBdXRvbWF0ZWRTdG9wcGlu",
-            "Z1NwZWNIABJGCgdtZXRyaWNzGAEgAygLMjAuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuU3R1ZHlTcGVjLk1ldHJpY1NwZWNCA+BBAhJMCgpwYXJhbWV0",
-            "ZXJzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlT",
-            "cGVjLlBhcmFtZXRlclNwZWNCA+BBAhJCCglhbGdvcml0aG0YAyABKA4yLy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuQWxnb3JpdGht",
-            "ElEKEW9ic2VydmF0aW9uX25vaXNlGAYgASgOMjYuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuU3R1ZHlTcGVjLk9ic2VydmF0aW9uTm9pc2USYgoabWVh",
-            "c3VyZW1lbnRfc2VsZWN0aW9uX3R5cGUYByABKA4yPi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuTWVhc3VyZW1lbnRTZWxlY3Rpb25U",
-            "eXBlGq0DCgpNZXRyaWNTcGVjEhYKCW1ldHJpY19pZBgBIAEoCUID4EECEkwK",
-            "BGdvYWwYAiABKA4yOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVk",
-            "eVNwZWMuTWV0cmljU3BlYy5Hb2FsVHlwZUID4EECEl8KDXNhZmV0eV9jb25m",
-            "aWcYAyABKAsyQy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNw",
-            "ZWMuTWV0cmljU3BlYy5TYWZldHlNZXRyaWNDb25maWdIAIgBARqCAQoSU2Fm",
-            "ZXR5TWV0cmljQ29uZmlnEhgKEHNhZmV0eV90aHJlc2hvbGQYASABKAESLQog",
-            "ZGVzaXJlZF9taW5fc2FmZV90cmlhbHNfZnJhY3Rpb24YAiABKAFIAIgBAUIj",
-            "CiFfZGVzaXJlZF9taW5fc2FmZV90cmlhbHNfZnJhY3Rpb24iQQoIR29hbFR5",
-            "cGUSGQoVR09BTF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoITUFYSU1JWkUQARIM",
-            "CghNSU5JTUlaRRACQhAKDl9zYWZldHlfY29uZmlnGs0OCg1QYXJhbWV0ZXJT",
-            "cGVjEmAKEWRvdWJsZV92YWx1ZV9zcGVjGAIgASgLMkMuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuRG91Ymxl",
-            "VmFsdWVTcGVjSAASYgoSaW50ZWdlcl92YWx1ZV9zcGVjGAMgASgLMkQuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNw",
-            "ZWMuSW50ZWdlclZhbHVlU3BlY0gAEmoKFmNhdGVnb3JpY2FsX3ZhbHVlX3Nw",
-            "ZWMYBCABKAsySC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNw",
-            "ZWMuUGFyYW1ldGVyU3BlYy5DYXRlZ29yaWNhbFZhbHVlU3BlY0gAEmQKE2Rp",
-            "c2NyZXRlX3ZhbHVlX3NwZWMYBSABKAsyRS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5EaXNjcmV0ZVZhbHVl",
-            "U3BlY0gAEhkKDHBhcmFtZXRlcl9pZBgBIAEoCUID4EECElEKCnNjYWxlX3R5",
-            "cGUYBiABKA4yPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNw",
-            "ZWMuUGFyYW1ldGVyU3BlYy5TY2FsZVR5cGUScQobY29uZGl0aW9uYWxfcGFy",
-            "YW1ldGVyX3NwZWNzGAogAygLMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0",
-            "ZXJTcGVjGm8KD0RvdWJsZVZhbHVlU3BlYxIWCgltaW5fdmFsdWUYASABKAFC",
-            "A+BBAhIWCgltYXhfdmFsdWUYAiABKAFCA+BBAhIaCg1kZWZhdWx0X3ZhbHVl",
-            "GAQgASgBSACIAQFCEAoOX2RlZmF1bHRfdmFsdWUacAoQSW50ZWdlclZhbHVl",
-            "U3BlYxIWCgltaW5fdmFsdWUYASABKANCA+BBAhIWCgltYXhfdmFsdWUYAiAB",
-            "KANCA+BBAhIaCg1kZWZhdWx0X3ZhbHVlGAQgASgDSACIAQFCEAoOX2RlZmF1",
-            "bHRfdmFsdWUaWQoUQ2F0ZWdvcmljYWxWYWx1ZVNwZWMSEwoGdmFsdWVzGAEg",
-            "AygJQgPgQQISGgoNZGVmYXVsdF92YWx1ZRgDIAEoCUgAiAEBQhAKDl9kZWZh",
-            "dWx0X3ZhbHVlGlYKEURpc2NyZXRlVmFsdWVTcGVjEhMKBnZhbHVlcxgBIAMo",
-            "AUID4EECEhoKDWRlZmF1bHRfdmFsdWUYAyABKAFIAIgBAUIQCg5fZGVmYXVs",
-            "dF92YWx1ZRqkBQoYQ29uZGl0aW9uYWxQYXJhbWV0ZXJTcGVjEoUBChZwYXJl",
-            "bnRfZGlzY3JldGVfdmFsdWVzGAIgASgLMmMuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQ",
-            "YXJhbWV0ZXJTcGVjLkRpc2NyZXRlVmFsdWVDb25kaXRpb25IABJ7ChFwYXJl",
-            "bnRfaW50X3ZhbHVlcxgDIAEoCzJeLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1l",
-            "dGVyU3BlYy5JbnRWYWx1ZUNvbmRpdGlvbkgAEosBChlwYXJlbnRfY2F0ZWdv",
-            "cmljYWxfdmFsdWVzGAQgASgLMmYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuQ29uZGl0aW9uYWxQYXJhbWV0",
-            "ZXJTcGVjLkNhdGVnb3JpY2FsVmFsdWVDb25kaXRpb25IABJQCg5wYXJhbWV0",
-            "ZXJfc3BlYxgBIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0",
-            "dWR5U3BlYy5QYXJhbWV0ZXJTcGVjQgPgQQIaLQoWRGlzY3JldGVWYWx1ZUNv",
-            "bmRpdGlvbhITCgZ2YWx1ZXMYASADKAFCA+BBAhooChFJbnRWYWx1ZUNvbmRp",
-            "dGlvbhITCgZ2YWx1ZXMYASADKANCA+BBAhowChlDYXRlZ29yaWNhbFZhbHVl",
-            "Q29uZGl0aW9uEhMKBnZhbHVlcxgBIAMoCUID4EECQhgKFnBhcmVudF92YWx1",
-            "ZV9jb25kaXRpb24ibgoJU2NhbGVUeXBlEhoKFlNDQUxFX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIVChFVTklUX0xJTkVBUl9TQ0FMRRABEhIKDlVOSVRfTE9HX1ND",
-            "QUxFEAISGgoWVU5JVF9SRVZFUlNFX0xPR19TQ0FMRRADQhYKFHBhcmFtZXRl",
-            "cl92YWx1ZV9zcGVjGj8KH0RlY2F5Q3VydmVBdXRvbWF0ZWRTdG9wcGluZ1Nw",
-            "ZWMSHAoUdXNlX2VsYXBzZWRfZHVyYXRpb24YASABKAgaOwobTWVkaWFuQXV0",
-            "b21hdGVkU3RvcHBpbmdTcGVjEhwKFHVzZV9lbGFwc2VkX2R1cmF0aW9uGAEg",
-            "ASgIGvYBChtDb252ZXhBdXRvbWF0ZWRTdG9wcGluZ1NwZWMSFgoObWF4X3N0",
-            "ZXBfY291bnQYASABKAMSFgoObWluX3N0ZXBfY291bnQYAiABKAMSHQoVbWlu",
-            "X21lYXN1cmVtZW50X2NvdW50GAMgASgDEiQKHGxlYXJuaW5nX3JhdGVfcGFy",
-            "YW1ldGVyX25hbWUYBCABKAkSHAoUdXNlX2VsYXBzZWRfZHVyYXRpb24YBSAB",
-            "KAgSJgoZdXBkYXRlX2FsbF9zdG9wcGVkX3RyaWFscxgGIAEoCEgAiAEBQhwK",
-            "Gl91cGRhdGVfYWxsX3N0b3BwZWRfdHJpYWxzIkoKCUFsZ29yaXRobRIZChVB",
-            "TEdPUklUSE1fVU5TUEVDSUZJRUQQABIPCgtHUklEX1NFQVJDSBACEhEKDVJB",
-            "TkRPTV9TRUFSQ0gQAyJIChBPYnNlcnZhdGlvbk5vaXNlEiEKHU9CU0VSVkFU",
-            "SU9OX05PSVNFX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAESCAoESElHSBACInIK",
-            "GE1lYXN1cmVtZW50U2VsZWN0aW9uVHlwZRIqCiZNRUFTVVJFTUVOVF9TRUxF",
-            "Q1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEhQKEExBU1RfTUVBU1VSRU1FTlQQ",
-            "ARIUChBCRVNUX01FQVNVUkVNRU5UEAJCGQoXYXV0b21hdGVkX3N0b3BwaW5n",
-            "X3NwZWMi3AEKC01lYXN1cmVtZW50EjgKEGVsYXBzZWRfZHVyYXRpb24YASAB",
-            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxIXCgpzdGVwX2Nv",
-            "dW50GAIgASgDQgPgQQMSRAoHbWV0cmljcxgDIAMoCzIuLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLk1lYXN1cmVtZW50Lk1ldHJpY0ID4EEDGjQKBk1l",
-            "dHJpYxIWCgltZXRyaWNfaWQYASABKAlCA+BBAxISCgV2YWx1ZRgCIAEoAUID",
-            "4EEDQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClN0dWR5",
+            "cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIrQDCgVTdHVkeRISCgRu",
+            "YW1lGAEgASgJQgTiQQEDEhoKDGRpc3BsYXlfbmFtZRgCIAEoCUIE4kEBAhI/",
+            "CgpzdHVkeV9zcGVjGAMgASgLMiUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuU3R1ZHlTcGVjQgTiQQECEjwKBXN0YXRlGAQgASgOMicuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuU3R1ZHkuU3RhdGVCBOJBAQMSNQoLY3JlYXRl",
+            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQED",
+            "Eh0KD2luYWN0aXZlX3JlYXNvbhgGIAEoCUIE4kEBAyJHCgVTdGF0ZRIVChFT",
+            "VEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCElOQUNUSVZFEAIS",
+            "DQoJQ09NUExFVEVEEAM6XepBWgofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9TdHVkeRI3cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3N0dWRpZXMve3N0dWR5fSLeBwoFVHJpYWwSEgoEbmFtZRgBIAEoCUIE",
+            "4kEBAxIQCgJpZBgCIAEoCUIE4kEBAxI8CgVzdGF0ZRgDIAEoDjInLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRyaWFsLlN0YXRlQgTiQQEDEkUKCnBh",
+            "cmFtZXRlcnMYBCADKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5U",
+            "cmlhbC5QYXJhbWV0ZXJCBOJBAQMSSAoRZmluYWxfbWVhc3VyZW1lbnQYBSAB",
+            "KAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NZWFzdXJlbWVudEIE",
+            "4kEBAxJDCgxtZWFzdXJlbWVudHMYBiADKAsyJy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5NZWFzdXJlbWVudEIE4kEBAxI0CgpzdGFydF90aW1lGAcg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxIyCghlbmRf",
+            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMS",
+            "FwoJY2xpZW50X2lkGAkgASgJQgTiQQEDEh8KEWluZmVhc2libGVfcmVhc29u",
+            "GAogASgJQgTiQQEDEkAKCmN1c3RvbV9qb2IYCyABKAlCLOJBAQP6QSUKI2Fp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iElMKD3dlYl9hY2Nl",
+            "c3NfdXJpcxgMIAMoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRy",
+            "aWFsLldlYkFjY2Vzc1VyaXNFbnRyeUIE4kEBAxpUCglQYXJhbWV0ZXISGgoM",
+            "cGFyYW1ldGVyX2lkGAEgASgJQgTiQQEDEisKBXZhbHVlGAIgASgLMhYuZ29v",
+            "Z2xlLnByb3RvYnVmLlZhbHVlQgTiQQEDGjQKEldlYkFjY2Vzc1VyaXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImYKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDQoJUkVRVUVTVEVEEAESCgoGQUNUSVZF",
+            "EAISDAoIU1RPUFBJTkcQAxINCglTVUNDRUVERUQQBBIOCgpJTkZFQVNJQkxF",
+            "EAU6bOpBaQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9UcmlhbBJGcHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3N0dWRpZXMv",
+            "e3N0dWR5fS90cmlhbHMve3RyaWFsfSJkCgxUcmlhbENvbnRleHQSEwoLZGVz",
+            "Y3JpcHRpb24YASABKAkSPwoKcGFyYW1ldGVycxgCIAMoCzIrLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlRyaWFsLlBhcmFtZXRlciKGAQoTU3R1ZHlU",
+            "aW1lQ29uc3RyYWludBIxCgxtYXhfZHVyYXRpb24YASABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25IABIuCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBIAEIMCgpjb25zdHJhaW50IuYhCglTdHVk",
+            "eVNwZWMSagoZZGVjYXlfY3VydmVfc3RvcHBpbmdfc3BlYxgEIAEoCzJFLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5EZWNheUN1cnZl",
+            "QXV0b21hdGVkU3RvcHBpbmdTcGVjSAASawoebWVkaWFuX2F1dG9tYXRlZF9z",
+            "dG9wcGluZ19zcGVjGAUgASgLMkEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuU3R1ZHlTcGVjLk1lZGlhbkF1dG9tYXRlZFN0b3BwaW5nU3BlY0gAEmsK",
+            "HmNvbnZleF9hdXRvbWF0ZWRfc3RvcHBpbmdfc3BlYxgJIAEoCzJBLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Db252ZXhBdXRvbWF0",
+            "ZWRTdG9wcGluZ1NwZWNIABJHCgdtZXRyaWNzGAEgAygLMjAuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLk1ldHJpY1NwZWNCBOJBAQIS",
+            "TQoKcGFyYW1ldGVycxgCIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVjQgTiQQECEkIKCWFsZ29yaXRo",
+            "bRgDIAEoDjIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3Bl",
+            "Yy5BbGdvcml0aG0SUQoRb2JzZXJ2YXRpb25fbm9pc2UYBiABKA4yNi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuT2JzZXJ2YXRpb25O",
+            "b2lzZRJiChptZWFzdXJlbWVudF9zZWxlY3Rpb25fdHlwZRgHIAEoDjI+Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5NZWFzdXJlbWVu",
+            "dFNlbGVjdGlvblR5cGUSXQoVc3R1ZHlfc3RvcHBpbmdfY29uZmlnGAsgASgL",
+            "MjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlN0dWR5",
+            "U3RvcHBpbmdDb25maWdIAYgBARqvAwoKTWV0cmljU3BlYxIXCgltZXRyaWNf",
+            "aWQYASABKAlCBOJBAQISTQoEZ29hbBgCIAEoDjI5Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5NZXRyaWNTcGVjLkdvYWxUeXBlQgTi",
+            "QQECEl8KDXNhZmV0eV9jb25maWcYAyABKAsyQy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5TdHVkeVNwZWMuTWV0cmljU3BlYy5TYWZldHlNZXRyaWND",
+            "b25maWdIAIgBARqCAQoSU2FmZXR5TWV0cmljQ29uZmlnEhgKEHNhZmV0eV90",
+            "aHJlc2hvbGQYASABKAESLQogZGVzaXJlZF9taW5fc2FmZV90cmlhbHNfZnJh",
+            "Y3Rpb24YAiABKAFIAIgBAUIjCiFfZGVzaXJlZF9taW5fc2FmZV90cmlhbHNf",
+            "ZnJhY3Rpb24iQQoIR29hbFR5cGUSGQoVR09BTF9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASDAoITUFYSU1JWkUQARIMCghNSU5JTUlaRRACQhAKDl9zYWZldHlfY29u",
+            "ZmlnGtgOCg1QYXJhbWV0ZXJTcGVjEmAKEWRvdWJsZV92YWx1ZV9zcGVjGAIg",
+            "ASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBh",
+            "cmFtZXRlclNwZWMuRG91YmxlVmFsdWVTcGVjSAASYgoSaW50ZWdlcl92YWx1",
+            "ZV9zcGVjGAMgASgLMkQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3R1",
+            "ZHlTcGVjLlBhcmFtZXRlclNwZWMuSW50ZWdlclZhbHVlU3BlY0gAEmoKFmNh",
+            "dGVnb3JpY2FsX3ZhbHVlX3NwZWMYBCABKAsySC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3BlYy5DYXRlZ29yaWNh",
+            "bFZhbHVlU3BlY0gAEmQKE2Rpc2NyZXRlX3ZhbHVlX3NwZWMYBSABKAsyRS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVy",
+            "U3BlYy5EaXNjcmV0ZVZhbHVlU3BlY0gAEhoKDHBhcmFtZXRlcl9pZBgBIAEo",
+            "CUIE4kEBAhJRCgpzY2FsZV90eXBlGAYgASgOMj0uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuU3R1ZHlTcGVjLlBhcmFtZXRlclNwZWMuU2NhbGVUeXBl",
+            "EnEKG2NvbmRpdGlvbmFsX3BhcmFtZXRlcl9zcGVjcxgKIAMoCzJMLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0ZXJTcGVj",
+            "LkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYxpxCg9Eb3VibGVWYWx1ZVNwZWMS",
+            "FwoJbWluX3ZhbHVlGAEgASgBQgTiQQECEhcKCW1heF92YWx1ZRgCIAEoAUIE",
+            "4kEBAhIaCg1kZWZhdWx0X3ZhbHVlGAQgASgBSACIAQFCEAoOX2RlZmF1bHRf",
+            "dmFsdWUacgoQSW50ZWdlclZhbHVlU3BlYxIXCgltaW5fdmFsdWUYASABKANC",
+            "BOJBAQISFwoJbWF4X3ZhbHVlGAIgASgDQgTiQQECEhoKDWRlZmF1bHRfdmFs",
+            "dWUYBCABKANIAIgBAUIQCg5fZGVmYXVsdF92YWx1ZRpaChRDYXRlZ29yaWNh",
+            "bFZhbHVlU3BlYxIUCgZ2YWx1ZXMYASADKAlCBOJBAQISGgoNZGVmYXVsdF92",
+            "YWx1ZRgDIAEoCUgAiAEBQhAKDl9kZWZhdWx0X3ZhbHVlGlcKEURpc2NyZXRl",
+            "VmFsdWVTcGVjEhQKBnZhbHVlcxgBIAMoAUIE4kEBAhIaCg1kZWZhdWx0X3Zh",
+            "bHVlGAMgASgBSACIAQFCEAoOX2RlZmF1bHRfdmFsdWUaqAUKGENvbmRpdGlv",
+            "bmFsUGFyYW1ldGVyU3BlYxKFAQoWcGFyZW50X2Rpc2NyZXRlX3ZhbHVlcxgC",
+            "IAEoCzJjLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5Q",
+            "YXJhbWV0ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5EaXNjcmV0",
+            "ZVZhbHVlQ29uZGl0aW9uSAASewoRcGFyZW50X2ludF92YWx1ZXMYAyABKAsy",
+            "Xi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1l",
+            "dGVyU3BlYy5Db25kaXRpb25hbFBhcmFtZXRlclNwZWMuSW50VmFsdWVDb25k",
+            "aXRpb25IABKLAQoZcGFyZW50X2NhdGVnb3JpY2FsX3ZhbHVlcxgEIAEoCzJm",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlN0dWR5U3BlYy5QYXJhbWV0",
+            "ZXJTcGVjLkNvbmRpdGlvbmFsUGFyYW1ldGVyU3BlYy5DYXRlZ29yaWNhbFZh",
+            "bHVlQ29uZGl0aW9uSAASUQoOcGFyYW1ldGVyX3NwZWMYASABKAsyMy5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVNwZWMuUGFyYW1ldGVyU3Bl",
+            "Y0IE4kEBAhouChZEaXNjcmV0ZVZhbHVlQ29uZGl0aW9uEhQKBnZhbHVlcxgB",
+            "IAMoAUIE4kEBAhopChFJbnRWYWx1ZUNvbmRpdGlvbhIUCgZ2YWx1ZXMYASAD",
+            "KANCBOJBAQIaMQoZQ2F0ZWdvcmljYWxWYWx1ZUNvbmRpdGlvbhIUCgZ2YWx1",
+            "ZXMYASADKAlCBOJBAQJCGAoWcGFyZW50X3ZhbHVlX2NvbmRpdGlvbiJuCglT",
+            "Y2FsZVR5cGUSGgoWU0NBTEVfVFlQRV9VTlNQRUNJRklFRBAAEhUKEVVOSVRf",
+            "TElORUFSX1NDQUxFEAESEgoOVU5JVF9MT0dfU0NBTEUQAhIaChZVTklUX1JF",
+            "VkVSU0VfTE9HX1NDQUxFEANCFgoUcGFyYW1ldGVyX3ZhbHVlX3NwZWMaPwof",
+            "RGVjYXlDdXJ2ZUF1dG9tYXRlZFN0b3BwaW5nU3BlYxIcChR1c2VfZWxhcHNl",
+            "ZF9kdXJhdGlvbhgBIAEoCBo7ChtNZWRpYW5BdXRvbWF0ZWRTdG9wcGluZ1Nw",
+            "ZWMSHAoUdXNlX2VsYXBzZWRfZHVyYXRpb24YASABKAga9gEKG0NvbnZleEF1",
+            "dG9tYXRlZFN0b3BwaW5nU3BlYxIWCg5tYXhfc3RlcF9jb3VudBgBIAEoAxIW",
+            "Cg5taW5fc3RlcF9jb3VudBgCIAEoAxIdChVtaW5fbWVhc3VyZW1lbnRfY291",
+            "bnQYAyABKAMSJAocbGVhcm5pbmdfcmF0ZV9wYXJhbWV0ZXJfbmFtZRgEIAEo",
+            "CRIcChR1c2VfZWxhcHNlZF9kdXJhdGlvbhgFIAEoCBImChl1cGRhdGVfYWxs",
+            "X3N0b3BwZWRfdHJpYWxzGAYgASgISACIAQFCHAoaX3VwZGF0ZV9hbGxfc3Rv",
+            "cHBlZF90cmlhbHMa3QMKE1N0dWR5U3RvcHBpbmdDb25maWcSNAoQc2hvdWxk",
+            "X3N0b3BfYXNhcBgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUS",
+            "UwoabWluaW11bV9ydW50aW1lX2NvbnN0cmFpbnQYAiABKAsyLy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5TdHVkeVRpbWVDb25zdHJhaW50ElMKGm1h",
+            "eGltdW1fcnVudGltZV9jb25zdHJhaW50GAMgASgLMi8uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuU3R1ZHlUaW1lQ29uc3RyYWludBIzCg5taW5fbnVt",
+            "X3RyaWFscxgEIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEjMK",
+            "Dm1heF9udW1fdHJpYWxzGAUgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMy",
+            "VmFsdWUSPwoabWF4X251bV90cmlhbHNfbm9fcHJvZ3Jlc3MYBiABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRI7ChhtYXhfZHVyYXRpb25fbm9f",
+            "cHJvZ3Jlc3MYByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iSgoJ",
+            "QWxnb3JpdGhtEhkKFUFMR09SSVRITV9VTlNQRUNJRklFRBAAEg8KC0dSSURf",
+            "U0VBUkNIEAISEQoNUkFORE9NX1NFQVJDSBADIkgKEE9ic2VydmF0aW9uTm9p",
+            "c2USIQodT0JTRVJWQVRJT05fTk9JU0VfVU5TUEVDSUZJRUQQABIHCgNMT1cQ",
+            "ARIICgRISUdIEAIicgoYTWVhc3VyZW1lbnRTZWxlY3Rpb25UeXBlEioKJk1F",
+            "QVNVUkVNRU5UX1NFTEVDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQTEFT",
+            "VF9NRUFTVVJFTUVOVBABEhQKEEJFU1RfTUVBU1VSRU1FTlQQAkIZChdhdXRv",
+            "bWF0ZWRfc3RvcHBpbmdfc3BlY0IYChZfc3R1ZHlfc3RvcHBpbmdfY29uZmln",
+            "IuEBCgtNZWFzdXJlbWVudBI5ChBlbGFwc2VkX2R1cmF0aW9uGAEgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgTiQQEDEhgKCnN0ZXBfY291bnQY",
+            "AiABKANCBOJBAQMSRQoHbWV0cmljcxgDIAMoCzIuLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLk1lYXN1cmVtZW50Lk1ldHJpY0IE4kEBAxo2CgZNZXRy",
+            "aWMSFwoJbWV0cmljX2lkGAEgASgJQgTiQQEDEhMKBXZhbHVlGAIgASgBQgTi",
+            "QQEDQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCClN0dWR5",
             "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYx",
             "L2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQ",
             "bGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29v",
             "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Study), global::Google.Cloud.AIPlatform.V1.Study.Parser, new[]{ "Name", "DisplayName", "StudySpec", "State", "CreateTime", "InactiveReason" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Study.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Name", "Id", "State", "Parameters", "FinalMeasurement", "Measurements", "StartTime", "EndTime", "ClientId", "InfeasibleReason", "CustomJob", "WebAccessUris" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TrialContext), global::Google.Cloud.AIPlatform.V1.TrialContext.Parser, new[]{ "Description", "Parameters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "ConvexAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType" }, new[]{ "AutomatedStoppingSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal", "SafetyConfig" }, new[]{ "SafetyConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig.Parser, new[]{ "SafetyThreshold", "DesiredMinSafeTrialsFraction" }, new[]{ "DesiredMinSafeTrialsFraction" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint), global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint.Parser, new[]{ "MaxDuration", "EndTime" }, new[]{ "Constraint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Parser, new[]{ "DecayCurveStoppingSpec", "MedianAutomatedStoppingSpec", "ConvexAutomatedStoppingSpec", "Metrics", "Parameters", "Algorithm", "ObservationNoise", "MeasurementSelectionType", "StudyStoppingConfig" }, new[]{ "AutomatedStoppingSpec", "StudyStoppingConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise), typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Parser, new[]{ "MetricId", "Goal", "SafetyConfig" }, new[]{ "SafetyConfig" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.GoalType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MetricSpec.Types.SafetyMetricConfig.Parser, new[]{ "SafetyThreshold", "DesiredMinSafeTrialsFraction" }, new[]{ "DesiredMinSafeTrialsFraction" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Parser, new[]{ "DoubleValueSpec", "IntegerValueSpec", "CategoricalValueSpec", "DiscreteValueSpec", "ParameterId", "ScaleType", "ConditionalParameterSpecs" }, new[]{ "ParameterValueSpec" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ScaleType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.DoubleValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.IntegerValueSpec.Parser, new[]{ "MinValue", "MaxValue", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.CategoricalValueSpec.Parser, new[]{ "Values", "DefaultValue" }, new[]{ "DefaultValue" }, null, null, null),
@@ -172,7 +191,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ParameterSpec.Types.ConditionalParameterSpec.Types.CategoricalValueCondition.Parser, new[]{ "Values" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.DecayCurveAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MedianAutomatedStoppingSpec.Parser, new[]{ "UseElapsedDuration" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec.Parser, new[]{ "MaxStepCount", "MinStepCount", "MinMeasurementCount", "LearningRateParameterName", "UseElapsedDuration", "UpdateAllStoppedTrials" }, new[]{ "UpdateAllStoppedTrials" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ConvexAutomatedStoppingSpec.Parser, new[]{ "MaxStepCount", "MinStepCount", "MinMeasurementCount", "LearningRateParameterName", "UseElapsedDuration", "UpdateAllStoppedTrials" }, new[]{ "UpdateAllStoppedTrials" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig), global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig.Parser, new[]{ "ShouldStopAsap", "MinimumRuntimeConstraint", "MaximumRuntimeConstraint", "MinNumTrials", "MaxNumTrials", "MaxNumTrialsNoProgress", "MaxDurationNoProgress" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement), global::Google.Cloud.AIPlatform.V1.Measurement.Parser, new[]{ "ElapsedDuration", "StepCount", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric), global::Google.Cloud.AIPlatform.V1.Measurement.Types.Metric.Parser, new[]{ "MetricId", "Value" }, null, null, null, null)})
           }));
     }
@@ -183,6 +203,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A message representing a Study.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Study : pb::IMessage<Study>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -631,6 +652,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// that has been or will be evaluated, along with the objective metrics got by
   /// running the Trial.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trial : pb::IMessage<Trial>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1322,6 +1344,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// A message representing a parameter to be tuned.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Parameter : pb::IMessage<Parameter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1577,6 +1600,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Next ID: 3
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrialContext : pb::IMessage<TrialContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1808,8 +1832,304 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Time-based Constraint for Study
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StudyTimeConstraint : pb::IMessage<StudyTimeConstraint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StudyTimeConstraint> _parser = new pb::MessageParser<StudyTimeConstraint>(() => new StudyTimeConstraint());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StudyTimeConstraint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudyTimeConstraint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudyTimeConstraint(StudyTimeConstraint other) : this() {
+      switch (other.ConstraintCase) {
+        case ConstraintOneofCase.MaxDuration:
+          MaxDuration = other.MaxDuration.Clone();
+          break;
+        case ConstraintOneofCase.EndTime:
+          EndTime = other.EndTime.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudyTimeConstraint Clone() {
+      return new StudyTimeConstraint(this);
+    }
+
+    /// <summary>Field number for the "max_duration" field.</summary>
+    public const int MaxDurationFieldNumber = 1;
+    /// <summary>
+    /// Counts the wallclock time passed since the creation of this Study.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration MaxDuration {
+      get { return constraintCase_ == ConstraintOneofCase.MaxDuration ? (global::Google.Protobuf.WellKnownTypes.Duration) constraint_ : null; }
+      set {
+        constraint_ = value;
+        constraintCase_ = value == null ? ConstraintOneofCase.None : ConstraintOneofCase.MaxDuration;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    /// <summary>
+    /// Compares the wallclock time to this time. Must use UTC timezone.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return constraintCase_ == ConstraintOneofCase.EndTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) constraint_ : null; }
+      set {
+        constraint_ = value;
+        constraintCase_ = value == null ? ConstraintOneofCase.None : ConstraintOneofCase.EndTime;
+      }
+    }
+
+    private object constraint_;
+    /// <summary>Enum of possible cases for the "constraint" oneof.</summary>
+    public enum ConstraintOneofCase {
+      None = 0,
+      MaxDuration = 1,
+      EndTime = 2,
+    }
+    private ConstraintOneofCase constraintCase_ = ConstraintOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConstraintOneofCase ConstraintCase {
+      get { return constraintCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConstraint() {
+      constraintCase_ = ConstraintOneofCase.None;
+      constraint_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StudyTimeConstraint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StudyTimeConstraint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MaxDuration, other.MaxDuration)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ConstraintCase != other.ConstraintCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (constraintCase_ == ConstraintOneofCase.MaxDuration) hash ^= MaxDuration.GetHashCode();
+      if (constraintCase_ == ConstraintOneofCase.EndTime) hash ^= EndTime.GetHashCode();
+      hash ^= (int) constraintCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (constraintCase_ == ConstraintOneofCase.MaxDuration) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MaxDuration);
+      }
+      if (constraintCase_ == ConstraintOneofCase.EndTime) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (constraintCase_ == ConstraintOneofCase.MaxDuration) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MaxDuration);
+      }
+      if (constraintCase_ == ConstraintOneofCase.EndTime) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (constraintCase_ == ConstraintOneofCase.MaxDuration) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxDuration);
+      }
+      if (constraintCase_ == ConstraintOneofCase.EndTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StudyTimeConstraint other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ConstraintCase) {
+        case ConstraintOneofCase.MaxDuration:
+          if (MaxDuration == null) {
+            MaxDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+          }
+          MaxDuration.MergeFrom(other.MaxDuration);
+          break;
+        case ConstraintOneofCase.EndTime:
+          if (EndTime == null) {
+            EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          EndTime.MergeFrom(other.EndTime);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (constraintCase_ == ConstraintOneofCase.MaxDuration) {
+              subBuilder.MergeFrom(MaxDuration);
+            }
+            input.ReadMessage(subBuilder);
+            MaxDuration = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (constraintCase_ == ConstraintOneofCase.EndTime) {
+              subBuilder.MergeFrom(EndTime);
+            }
+            input.ReadMessage(subBuilder);
+            EndTime = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (constraintCase_ == ConstraintOneofCase.MaxDuration) {
+              subBuilder.MergeFrom(MaxDuration);
+            }
+            input.ReadMessage(subBuilder);
+            MaxDuration = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (constraintCase_ == ConstraintOneofCase.EndTime) {
+              subBuilder.MergeFrom(EndTime);
+            }
+            input.ReadMessage(subBuilder);
+            EndTime = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents specification of a Study.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StudySpec : pb::IMessage<StudySpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1824,7 +2144,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1849,6 +2169,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       algorithm_ = other.algorithm_;
       observationNoise_ = other.observationNoise_;
       measurementSelectionType_ = other.measurementSelectionType_;
+      studyStoppingConfig_ = other.studyStoppingConfig_ != null ? other.studyStoppingConfig_.Clone() : null;
       switch (other.AutomatedStoppingSpecCase) {
         case AutomatedStoppingSpecOneofCase.DecayCurveStoppingSpec:
           DecayCurveStoppingSpec = other.DecayCurveStoppingSpec.Clone();
@@ -1990,6 +2311,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "study_stopping_config" field.</summary>
+    public const int StudyStoppingConfigFieldNumber = 11;
+    private global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig studyStoppingConfig_;
+    /// <summary>
+    /// Conditions for automated stopping of a Study. Enable automated stopping by
+    /// configuring at least one condition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig StudyStoppingConfig {
+      get { return studyStoppingConfig_; }
+      set {
+        studyStoppingConfig_ = value;
+      }
+    }
+
     private object automatedStoppingSpec_;
     /// <summary>Enum of possible cases for the "automated_stopping_spec" oneof.</summary>
     public enum AutomatedStoppingSpecOneofCase {
@@ -2035,6 +2372,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Algorithm != other.Algorithm) return false;
       if (ObservationNoise != other.ObservationNoise) return false;
       if (MeasurementSelectionType != other.MeasurementSelectionType) return false;
+      if (!object.Equals(StudyStoppingConfig, other.StudyStoppingConfig)) return false;
       if (AutomatedStoppingSpecCase != other.AutomatedStoppingSpecCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2051,6 +2389,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Algorithm != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.Algorithm.Unspecified) hash ^= Algorithm.GetHashCode();
       if (ObservationNoise != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise.Unspecified) hash ^= ObservationNoise.GetHashCode();
       if (MeasurementSelectionType != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType.Unspecified) hash ^= MeasurementSelectionType.GetHashCode();
+      if (studyStoppingConfig_ != null) hash ^= StudyStoppingConfig.GetHashCode();
       hash ^= (int) automatedStoppingSpecCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2096,6 +2435,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ConvexAutomatedStoppingSpec);
       }
+      if (studyStoppingConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StudyStoppingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2132,6 +2475,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(ConvexAutomatedStoppingSpec);
       }
+      if (studyStoppingConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StudyStoppingConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2162,6 +2509,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MeasurementSelectionType != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MeasurementSelectionType);
       }
+      if (studyStoppingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StudyStoppingConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2184,6 +2534,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.MeasurementSelectionType != global::Google.Cloud.AIPlatform.V1.StudySpec.Types.MeasurementSelectionType.Unspecified) {
         MeasurementSelectionType = other.MeasurementSelectionType;
+      }
+      if (other.studyStoppingConfig_ != null) {
+        if (studyStoppingConfig_ == null) {
+          StudyStoppingConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig();
+        }
+        StudyStoppingConfig.MergeFrom(other.StudyStoppingConfig);
       }
       switch (other.AutomatedStoppingSpecCase) {
         case AutomatedStoppingSpecOneofCase.DecayCurveStoppingSpec:
@@ -2268,6 +2624,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             ConvexAutomatedStoppingSpec = subBuilder;
             break;
           }
+          case 90: {
+            if (studyStoppingConfig_ == null) {
+              StudyStoppingConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig();
+            }
+            input.ReadMessage(StudyStoppingConfig);
+            break;
+          }
         }
       }
     #endif
@@ -2328,6 +2691,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             ConvexAutomatedStoppingSpec = subBuilder;
+            break;
+          }
+          case 90: {
+            if (studyStoppingConfig_ == null) {
+              StudyStoppingConfig = new global::Google.Cloud.AIPlatform.V1.StudySpec.Types.StudyStoppingConfig();
+            }
+            input.ReadMessage(StudyStoppingConfig);
             break;
           }
         }
@@ -2418,6 +2788,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Represents a metric to optimize.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetricSpec : pb::IMessage<MetricSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2725,6 +3096,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Used in safe optimization to specify threshold levels and risk tolerance.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class SafetyMetricConfig : pb::IMessage<SafetyMetricConfig>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2988,6 +3360,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Represents a single parameter to optimize.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ParameterSpec : pb::IMessage<ParameterSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3538,6 +3911,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Value specification for a parameter in `DOUBLE` type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class DoubleValueSpec : pb::IMessage<DoubleValueSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3835,6 +4209,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Value specification for a parameter in `INTEGER` type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class IntegerValueSpec : pb::IMessage<IntegerValueSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4132,6 +4507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Value specification for a parameter in `CATEGORICAL` type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CategoricalValueSpec : pb::IMessage<CategoricalValueSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4375,6 +4751,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Value specification for a parameter in `DISCRETE` type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class DiscreteValueSpec : pb::IMessage<DiscreteValueSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4627,6 +5004,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Represents a parameter spec with condition from its parent parameter.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ConditionalParameterSpec : pb::IMessage<ConditionalParameterSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5032,6 +5410,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// <summary>
               /// Represents the spec to match discrete values from parent parameter.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class DiscreteValueCondition : pb::IMessage<DiscreteValueCondition>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5221,6 +5600,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// <summary>
               /// Represents the spec to match integer values from parent parameter.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class IntValueCondition : pb::IMessage<IntValueCondition>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5408,6 +5788,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// <summary>
               /// Represents the spec to match categorical values from parent parameter.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class CategoricalValueCondition : pb::IMessage<CategoricalValueCondition>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5608,6 +5989,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Trial. Early stopping is requested for the current Trial if there is very
       /// low probability to exceed the optimal value found so far.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DecayCurveAutomatedStoppingSpec : pb::IMessage<DecayCurveAutomatedStoppingSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5811,6 +6193,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Currently, 'performance' refers to the running average of the objective
       /// values reported by the Trial in each measurement.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MedianAutomatedStoppingSpec : pb::IMessage<MedianAutomatedStoppingSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6019,6 +6402,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// will be added to the pending trial with max_num_steps and predicted
       /// objective value from the autoregression model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConvexAutomatedStoppingSpec : pb::IMessage<ConvexAutomatedStoppingSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6455,6 +6839,533 @@ namespace Google.Cloud.AIPlatform.V1 {
 
       }
 
+      /// <summary>
+      /// The configuration (stopping conditions) for automated stopping of a Study.
+      /// Conditions include trial budgets, time budgets, and convergence detection.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StudyStoppingConfig : pb::IMessage<StudyStoppingConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StudyStoppingConfig> _parser = new pb::MessageParser<StudyStoppingConfig>(() => new StudyStoppingConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StudyStoppingConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.StudySpec.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StudyStoppingConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StudyStoppingConfig(StudyStoppingConfig other) : this() {
+          ShouldStopAsap = other.ShouldStopAsap;
+          minimumRuntimeConstraint_ = other.minimumRuntimeConstraint_ != null ? other.minimumRuntimeConstraint_.Clone() : null;
+          maximumRuntimeConstraint_ = other.maximumRuntimeConstraint_ != null ? other.maximumRuntimeConstraint_.Clone() : null;
+          MinNumTrials = other.MinNumTrials;
+          MaxNumTrials = other.MaxNumTrials;
+          MaxNumTrialsNoProgress = other.MaxNumTrialsNoProgress;
+          maxDurationNoProgress_ = other.maxDurationNoProgress_ != null ? other.maxDurationNoProgress_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StudyStoppingConfig Clone() {
+          return new StudyStoppingConfig(this);
+        }
+
+        /// <summary>Field number for the "should_stop_asap" field.</summary>
+        public const int ShouldStopAsapFieldNumber = 1;
+        private static readonly pb::FieldCodec<bool?> _single_shouldStopAsap_codec = pb::FieldCodec.ForStructWrapper<bool>(10);
+        private bool? shouldStopAsap_;
+        /// <summary>
+        /// If true, a Study enters STOPPING_ASAP whenever it would normally enters
+        /// STOPPING state.
+        ///
+        /// The bottom line is: set to true if you want to interrupt on-going
+        /// evaluations of Trials as soon as the study stopping condition is met.
+        /// (Please see Study.State documentation for the source of truth).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool? ShouldStopAsap {
+          get { return shouldStopAsap_; }
+          set {
+            shouldStopAsap_ = value;
+          }
+        }
+
+
+        /// <summary>Field number for the "minimum_runtime_constraint" field.</summary>
+        public const int MinimumRuntimeConstraintFieldNumber = 2;
+        private global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint minimumRuntimeConstraint_;
+        /// <summary>
+        /// Each "stopping rule" in this proto specifies an "if" condition. Before
+        /// Vizier would generate a new suggestion, it first checks each specified
+        /// stopping rule, from top to bottom in this list.
+        /// Note that the first few rules (e.g. minimum_runtime_constraint,
+        /// min_num_trials) will prevent other stopping rules from being evaluated
+        /// until they are met. For example, setting `min_num_trials=5` and
+        /// `always_stop_after= 1 hour` means that the Study will ONLY stop after it
+        /// has 5 COMPLETED trials, even if more than an hour has passed since its
+        /// creation. It follows the first applicable rule (whose "if" condition is
+        /// satisfied) to make a stopping decision. If none of the specified rules
+        /// are applicable, then Vizier decides that the study should not stop.
+        /// If Vizier decides that the study should stop, the study enters
+        /// STOPPING state (or STOPPING_ASAP if should_stop_asap = true).
+        /// IMPORTANT: The automatic study state transition happens precisely as
+        /// described above; that is, deleting trials or updating StudyConfig NEVER
+        /// automatically moves the study state back to ACTIVE. If you want to
+        /// _resume_ a Study that was stopped, 1) change the stopping conditions if
+        /// necessary, 2) activate the study, and then 3) ask for suggestions.
+        /// If the specified time or duration has not passed, do not stop the
+        /// study.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint MinimumRuntimeConstraint {
+          get { return minimumRuntimeConstraint_; }
+          set {
+            minimumRuntimeConstraint_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "maximum_runtime_constraint" field.</summary>
+        public const int MaximumRuntimeConstraintFieldNumber = 3;
+        private global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint maximumRuntimeConstraint_;
+        /// <summary>
+        /// If the specified time or duration has passed, stop the study.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint MaximumRuntimeConstraint {
+          get { return maximumRuntimeConstraint_; }
+          set {
+            maximumRuntimeConstraint_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_num_trials" field.</summary>
+        public const int MinNumTrialsFieldNumber = 4;
+        private static readonly pb::FieldCodec<int?> _single_minNumTrials_codec = pb::FieldCodec.ForStructWrapper<int>(34);
+        private int? minNumTrials_;
+        /// <summary>
+        /// If there are fewer than this many COMPLETED trials, do not stop the
+        /// study.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int? MinNumTrials {
+          get { return minNumTrials_; }
+          set {
+            minNumTrials_ = value;
+          }
+        }
+
+
+        /// <summary>Field number for the "max_num_trials" field.</summary>
+        public const int MaxNumTrialsFieldNumber = 5;
+        private static readonly pb::FieldCodec<int?> _single_maxNumTrials_codec = pb::FieldCodec.ForStructWrapper<int>(42);
+        private int? maxNumTrials_;
+        /// <summary>
+        /// If there are more than this many trials, stop the study.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int? MaxNumTrials {
+          get { return maxNumTrials_; }
+          set {
+            maxNumTrials_ = value;
+          }
+        }
+
+
+        /// <summary>Field number for the "max_num_trials_no_progress" field.</summary>
+        public const int MaxNumTrialsNoProgressFieldNumber = 6;
+        private static readonly pb::FieldCodec<int?> _single_maxNumTrialsNoProgress_codec = pb::FieldCodec.ForStructWrapper<int>(50);
+        private int? maxNumTrialsNoProgress_;
+        /// <summary>
+        /// If the objective value has not improved for this many consecutive
+        /// trials, stop the study.
+        ///
+        /// WARNING: Effective only for single-objective studies.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int? MaxNumTrialsNoProgress {
+          get { return maxNumTrialsNoProgress_; }
+          set {
+            maxNumTrialsNoProgress_ = value;
+          }
+        }
+
+
+        /// <summary>Field number for the "max_duration_no_progress" field.</summary>
+        public const int MaxDurationNoProgressFieldNumber = 7;
+        private global::Google.Protobuf.WellKnownTypes.Duration maxDurationNoProgress_;
+        /// <summary>
+        /// If the objective value has not improved for this much time, stop the
+        /// study.
+        ///
+        /// WARNING: Effective only for single-objective studies.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration MaxDurationNoProgress {
+          get { return maxDurationNoProgress_; }
+          set {
+            maxDurationNoProgress_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StudyStoppingConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StudyStoppingConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ShouldStopAsap != other.ShouldStopAsap) return false;
+          if (!object.Equals(MinimumRuntimeConstraint, other.MinimumRuntimeConstraint)) return false;
+          if (!object.Equals(MaximumRuntimeConstraint, other.MaximumRuntimeConstraint)) return false;
+          if (MinNumTrials != other.MinNumTrials) return false;
+          if (MaxNumTrials != other.MaxNumTrials) return false;
+          if (MaxNumTrialsNoProgress != other.MaxNumTrialsNoProgress) return false;
+          if (!object.Equals(MaxDurationNoProgress, other.MaxDurationNoProgress)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (shouldStopAsap_ != null) hash ^= ShouldStopAsap.GetHashCode();
+          if (minimumRuntimeConstraint_ != null) hash ^= MinimumRuntimeConstraint.GetHashCode();
+          if (maximumRuntimeConstraint_ != null) hash ^= MaximumRuntimeConstraint.GetHashCode();
+          if (minNumTrials_ != null) hash ^= MinNumTrials.GetHashCode();
+          if (maxNumTrials_ != null) hash ^= MaxNumTrials.GetHashCode();
+          if (maxNumTrialsNoProgress_ != null) hash ^= MaxNumTrialsNoProgress.GetHashCode();
+          if (maxDurationNoProgress_ != null) hash ^= MaxDurationNoProgress.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (shouldStopAsap_ != null) {
+            _single_shouldStopAsap_codec.WriteTagAndValue(output, ShouldStopAsap);
+          }
+          if (minimumRuntimeConstraint_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MinimumRuntimeConstraint);
+          }
+          if (maximumRuntimeConstraint_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(MaximumRuntimeConstraint);
+          }
+          if (minNumTrials_ != null) {
+            _single_minNumTrials_codec.WriteTagAndValue(output, MinNumTrials);
+          }
+          if (maxNumTrials_ != null) {
+            _single_maxNumTrials_codec.WriteTagAndValue(output, MaxNumTrials);
+          }
+          if (maxNumTrialsNoProgress_ != null) {
+            _single_maxNumTrialsNoProgress_codec.WriteTagAndValue(output, MaxNumTrialsNoProgress);
+          }
+          if (maxDurationNoProgress_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(MaxDurationNoProgress);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (shouldStopAsap_ != null) {
+            _single_shouldStopAsap_codec.WriteTagAndValue(ref output, ShouldStopAsap);
+          }
+          if (minimumRuntimeConstraint_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MinimumRuntimeConstraint);
+          }
+          if (maximumRuntimeConstraint_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(MaximumRuntimeConstraint);
+          }
+          if (minNumTrials_ != null) {
+            _single_minNumTrials_codec.WriteTagAndValue(ref output, MinNumTrials);
+          }
+          if (maxNumTrials_ != null) {
+            _single_maxNumTrials_codec.WriteTagAndValue(ref output, MaxNumTrials);
+          }
+          if (maxNumTrialsNoProgress_ != null) {
+            _single_maxNumTrialsNoProgress_codec.WriteTagAndValue(ref output, MaxNumTrialsNoProgress);
+          }
+          if (maxDurationNoProgress_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(MaxDurationNoProgress);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (shouldStopAsap_ != null) {
+            size += _single_shouldStopAsap_codec.CalculateSizeWithTag(ShouldStopAsap);
+          }
+          if (minimumRuntimeConstraint_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MinimumRuntimeConstraint);
+          }
+          if (maximumRuntimeConstraint_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaximumRuntimeConstraint);
+          }
+          if (minNumTrials_ != null) {
+            size += _single_minNumTrials_codec.CalculateSizeWithTag(MinNumTrials);
+          }
+          if (maxNumTrials_ != null) {
+            size += _single_maxNumTrials_codec.CalculateSizeWithTag(MaxNumTrials);
+          }
+          if (maxNumTrialsNoProgress_ != null) {
+            size += _single_maxNumTrialsNoProgress_codec.CalculateSizeWithTag(MaxNumTrialsNoProgress);
+          }
+          if (maxDurationNoProgress_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxDurationNoProgress);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StudyStoppingConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.shouldStopAsap_ != null) {
+            if (shouldStopAsap_ == null || other.ShouldStopAsap != false) {
+              ShouldStopAsap = other.ShouldStopAsap;
+            }
+          }
+          if (other.minimumRuntimeConstraint_ != null) {
+            if (minimumRuntimeConstraint_ == null) {
+              MinimumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+            }
+            MinimumRuntimeConstraint.MergeFrom(other.MinimumRuntimeConstraint);
+          }
+          if (other.maximumRuntimeConstraint_ != null) {
+            if (maximumRuntimeConstraint_ == null) {
+              MaximumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+            }
+            MaximumRuntimeConstraint.MergeFrom(other.MaximumRuntimeConstraint);
+          }
+          if (other.minNumTrials_ != null) {
+            if (minNumTrials_ == null || other.MinNumTrials != 0) {
+              MinNumTrials = other.MinNumTrials;
+            }
+          }
+          if (other.maxNumTrials_ != null) {
+            if (maxNumTrials_ == null || other.MaxNumTrials != 0) {
+              MaxNumTrials = other.MaxNumTrials;
+            }
+          }
+          if (other.maxNumTrialsNoProgress_ != null) {
+            if (maxNumTrialsNoProgress_ == null || other.MaxNumTrialsNoProgress != 0) {
+              MaxNumTrialsNoProgress = other.MaxNumTrialsNoProgress;
+            }
+          }
+          if (other.maxDurationNoProgress_ != null) {
+            if (maxDurationNoProgress_ == null) {
+              MaxDurationNoProgress = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            MaxDurationNoProgress.MergeFrom(other.MaxDurationNoProgress);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                bool? value = _single_shouldStopAsap_codec.Read(input);
+                if (shouldStopAsap_ == null || value != false) {
+                  ShouldStopAsap = value;
+                }
+                break;
+              }
+              case 18: {
+                if (minimumRuntimeConstraint_ == null) {
+                  MinimumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+                }
+                input.ReadMessage(MinimumRuntimeConstraint);
+                break;
+              }
+              case 26: {
+                if (maximumRuntimeConstraint_ == null) {
+                  MaximumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+                }
+                input.ReadMessage(MaximumRuntimeConstraint);
+                break;
+              }
+              case 34: {
+                int? value = _single_minNumTrials_codec.Read(input);
+                if (minNumTrials_ == null || value != 0) {
+                  MinNumTrials = value;
+                }
+                break;
+              }
+              case 42: {
+                int? value = _single_maxNumTrials_codec.Read(input);
+                if (maxNumTrials_ == null || value != 0) {
+                  MaxNumTrials = value;
+                }
+                break;
+              }
+              case 50: {
+                int? value = _single_maxNumTrialsNoProgress_codec.Read(input);
+                if (maxNumTrialsNoProgress_ == null || value != 0) {
+                  MaxNumTrialsNoProgress = value;
+                }
+                break;
+              }
+              case 58: {
+                if (maxDurationNoProgress_ == null) {
+                  MaxDurationNoProgress = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MaxDurationNoProgress);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                bool? value = _single_shouldStopAsap_codec.Read(ref input);
+                if (shouldStopAsap_ == null || value != false) {
+                  ShouldStopAsap = value;
+                }
+                break;
+              }
+              case 18: {
+                if (minimumRuntimeConstraint_ == null) {
+                  MinimumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+                }
+                input.ReadMessage(MinimumRuntimeConstraint);
+                break;
+              }
+              case 26: {
+                if (maximumRuntimeConstraint_ == null) {
+                  MaximumRuntimeConstraint = new global::Google.Cloud.AIPlatform.V1.StudyTimeConstraint();
+                }
+                input.ReadMessage(MaximumRuntimeConstraint);
+                break;
+              }
+              case 34: {
+                int? value = _single_minNumTrials_codec.Read(ref input);
+                if (minNumTrials_ == null || value != 0) {
+                  MinNumTrials = value;
+                }
+                break;
+              }
+              case 42: {
+                int? value = _single_maxNumTrials_codec.Read(ref input);
+                if (maxNumTrials_ == null || value != 0) {
+                  MaxNumTrials = value;
+                }
+                break;
+              }
+              case 50: {
+                int? value = _single_maxNumTrialsNoProgress_codec.Read(ref input);
+                if (maxNumTrialsNoProgress_ == null || value != 0) {
+                  MaxNumTrialsNoProgress = value;
+                }
+                break;
+              }
+              case 58: {
+                if (maxDurationNoProgress_ == null) {
+                  MaxDurationNoProgress = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MaxDurationNoProgress);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -6465,6 +7376,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// the Metrics got by executing a Trial using suggested hyperparameter
   /// values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Measurement : pb::IMessage<Measurement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6479,7 +7391,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6744,6 +7656,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// A message representing a metric in the measurement.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metric : pb::IMessage<Metric>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

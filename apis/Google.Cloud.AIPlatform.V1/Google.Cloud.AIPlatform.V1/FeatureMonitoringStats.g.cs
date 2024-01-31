@@ -59,6 +59,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// almost identical information with the raw stats in Vertex AI
   /// defined proto, for UI to display.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureStatsAnomaly : pb::IMessage<FeatureStatsAnomaly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -30,39 +30,39 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dXJjZS5wcm90bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFu",
             "YXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dv",
             "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1",
-            "Zi93cmFwcGVycy5wcm90byK8CQoUTW9kZWxFdmFsdWF0aW9uU2xpY2USEQoE",
-            "bmFtZRgBIAEoCUID4EEDEkoKBXNsaWNlGAIgASgLMjYuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uU2xpY2UuU2xpY2VCA+BB",
-            "AxIfChJtZXRyaWNzX3NjaGVtYV91cmkYAyABKAlCA+BBAxIsCgdtZXRyaWNz",
-            "GAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQMSNAoLY3JlYXRl",
-            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "TAoRbW9kZWxfZXhwbGFuYXRpb24YBiABKAsyLC5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5Nb2RlbEV4cGxhbmF0aW9uQgPgQQMa2gUKBVNsaWNlEhYK",
-            "CWRpbWVuc2lvbhgBIAEoCUID4EEDEhIKBXZhbHVlGAIgASgJQgPgQQMSWQoK",
-            "c2xpY2Vfc3BlYxgDIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "Lk1vZGVsRXZhbHVhdGlvblNsaWNlLlNsaWNlLlNsaWNlU3BlY0ID4EEDGskE",
-            "CglTbGljZVNwZWMSXgoHY29uZmlncxgBIAMoCzJNLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvblNsaWNlLlNsaWNlLlNsaWNl",
-            "U3BlYy5Db25maWdzRW50cnka+QEKC1NsaWNlQ29uZmlnElcKBXZhbHVlGAEg",
-            "ASgLMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxFdmFsdWF0",
-            "aW9uU2xpY2UuU2xpY2UuU2xpY2VTcGVjLlZhbHVlSAASVwoFcmFuZ2UYAiAB",
-            "KAsyRi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbEV2YWx1YXRp",
-            "b25TbGljZS5TbGljZS5TbGljZVNwZWMuUmFuZ2VIABIwCgphbGxfdmFsdWVz",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUgAQgYKBGtpbmQa",
-            "IgoFUmFuZ2USCwoDbG93GAEgASgCEgwKBGhpZ2gYAiABKAIaPgoFVmFsdWUS",
-            "FgoMc3RyaW5nX3ZhbHVlGAEgASgJSAASFQoLZmxvYXRfdmFsdWUYAiABKAJI",
-            "AEIGCgRraW5kGnwKDENvbmZpZ3NFbnRyeRILCgNrZXkYASABKAkSWwoFdmFs",
-            "dWUYAiABKAsyTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbEV2",
-            "YWx1YXRpb25TbGljZS5TbGljZS5TbGljZVNwZWMuU2xpY2VDb25maWc6AjgB",
-            "OpQB6kGQAQouYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbEV2YWx1",
-            "YXRpb25TbGljZRJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L21vZGVscy97bW9kZWx9L2V2YWx1YXRpb25zL3tldmFsdWF0aW9u",
-            "fS9zbGljZXMve3NsaWNlfULXAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxQhlNb2RlbEV2YWx1YXRpb25TbGljZVByb3RvUAFaPmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
-            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
-            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
-            "dGZvcm06OlYxYgZwcm90bzM="));
+            "Zi93cmFwcGVycy5wcm90byLFCQoUTW9kZWxFdmFsdWF0aW9uU2xpY2USEgoE",
+            "bmFtZRgBIAEoCUIE4kEBAxJLCgVzbGljZRgCIAEoCzI2Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvblNsaWNlLlNsaWNlQgTi",
+            "QQEDEiAKEm1ldHJpY3Nfc2NoZW1hX3VyaRgDIAEoCUIE4kEBAxItCgdtZXRy",
+            "aWNzGAQgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgTiQQEDEjUKC2Ny",
+            "ZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE",
+            "4kEBAxJNChFtb2RlbF9leHBsYW5hdGlvbhgGIAEoCzIsLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXhwbGFuYXRpb25CBOJBAQMa3QUKBVNs",
+            "aWNlEhcKCWRpbWVuc2lvbhgBIAEoCUIE4kEBAxITCgV2YWx1ZRgCIAEoCUIE",
+            "4kEBAxJaCgpzbGljZV9zcGVjGAMgASgLMkAuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTW9kZWxFdmFsdWF0aW9uU2xpY2UuU2xpY2UuU2xpY2VTcGVj",
+            "QgTiQQEDGskECglTbGljZVNwZWMSXgoHY29uZmlncxgBIAMoCzJNLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsRXZhbHVhdGlvblNsaWNlLlNs",
+            "aWNlLlNsaWNlU3BlYy5Db25maWdzRW50cnka+QEKC1NsaWNlQ29uZmlnElcK",
+            "BXZhbHVlGAEgASgLMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9k",
+            "ZWxFdmFsdWF0aW9uU2xpY2UuU2xpY2UuU2xpY2VTcGVjLlZhbHVlSAASVwoF",
+            "cmFuZ2UYAiABKAsyRi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2Rl",
+            "bEV2YWx1YXRpb25TbGljZS5TbGljZS5TbGljZVNwZWMuUmFuZ2VIABIwCgph",
+            "bGxfdmFsdWVzGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUgA",
+            "QgYKBGtpbmQaIgoFUmFuZ2USCwoDbG93GAEgASgCEgwKBGhpZ2gYAiABKAIa",
+            "PgoFVmFsdWUSFgoMc3RyaW5nX3ZhbHVlGAEgASgJSAASFQoLZmxvYXRfdmFs",
+            "dWUYAiABKAJIAEIGCgRraW5kGnwKDENvbmZpZ3NFbnRyeRILCgNrZXkYASAB",
+            "KAkSWwoFdmFsdWUYAiABKAsyTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5Nb2RlbEV2YWx1YXRpb25TbGljZS5TbGljZS5TbGljZVNwZWMuU2xpY2VD",
+            "b25maWc6AjgBOpQB6kGQAQouYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9N",
+            "b2RlbEV2YWx1YXRpb25TbGljZRJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L21vZGVscy97bW9kZWx9L2V2YWx1YXRpb25zL3tl",
+            "dmFsdWF0aW9ufS9zbGljZXMve3NsaWNlfULXAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxQhlNb2RlbEV2YWx1YXRpb25TbGljZVByb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
+            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,6 +80,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A collection of metrics calculated by comparing Model's predictions on a
   /// slice of the test data against ground truth annotations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelEvaluationSlice : pb::IMessage<ModelEvaluationSlice>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,6 +524,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Definition of a slice.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Slice : pb::IMessage<Slice>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -818,6 +820,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Specification for how the data should be sliced.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class SliceSpec : pb::IMessage<SliceSpec>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1062,6 +1065,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// "Canada" in another slice, and zip_code 12345 and country "Mexico" in
               /// another slice, totaling 3 slices.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class SliceConfig : pb::IMessage<SliceConfig>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1404,6 +1408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// A range of values for slice(s).
               /// `low` is inclusive, `high` is exclusive.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Range : pb::IMessage<Range>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -1639,6 +1644,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               /// <summary>
               /// Single value that supports strings and floats.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Value : pb::IMessage<Value>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage

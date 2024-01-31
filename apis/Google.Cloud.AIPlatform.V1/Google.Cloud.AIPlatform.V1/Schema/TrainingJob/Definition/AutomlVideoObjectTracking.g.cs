@@ -61,6 +61,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// A TrainingJob that trains and uploads an AutoML Video ObjectTracking Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlVideoObjectTracking : pb::IMessage<AutoMlVideoObjectTracking>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -262,6 +263,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlVideoObjectTrackingInputs : pb::IMessage<AutoMlVideoObjectTrackingInputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

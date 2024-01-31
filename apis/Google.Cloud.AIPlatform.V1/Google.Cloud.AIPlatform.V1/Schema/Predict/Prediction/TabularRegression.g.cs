@@ -51,6 +51,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
   /// <summary>
   /// Prediction output format for Tabular Regression.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TabularRegressionPredictionResult : pb::IMessage<TabularRegressionPredictionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -27,18 +27,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Cipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9vcGVyYXRpb24ucHJvdG8S",
             "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byK5AQoYR2VuZXJpY09wZXJh",
-            "dGlvbk1ldGFkYXRhEjEKEHBhcnRpYWxfZmFpbHVyZXMYASADKAsyEi5nb29n",
-            "bGUucnBjLlN0YXR1c0ID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDImkKF0RlbGV0",
-            "ZU9wZXJhdGlvbk1ldGFkYXRhEk4KEGdlbmVyaWNfbWV0YWRhdGEYASABKAsy",
-            "NC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmljT3BlcmF0aW9u",
-            "TWV0YWRhdGFCzAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIO",
-            "T3BlcmF0aW9uUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRm",
-            "b3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUu",
-            "Q2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3Jt",
-            "XFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byK8AQoYR2VuZXJpY09wZXJh",
+            "dGlvbk1ldGFkYXRhEjIKEHBhcnRpYWxfZmFpbHVyZXMYASADKAsyEi5nb29n",
+            "bGUucnBjLlN0YXR1c0IE4kEBAxI1CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoLdXBkYXRlX3RpbWUY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDImkKF0Rl",
+            "bGV0ZU9wZXJhdGlvbk1ldGFkYXRhEk4KEGdlbmVyaWNfbWV0YWRhdGEYASAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5lcmljT3BlcmF0",
+            "aW9uTWV0YWRhdGFCzAEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MUIOT3BlcmF0aW9uUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,6 +54,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Generic Metadata shared by all operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenericOperationMetadata : pb::IMessage<GenericOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -340,6 +342,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform deletes of any entities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

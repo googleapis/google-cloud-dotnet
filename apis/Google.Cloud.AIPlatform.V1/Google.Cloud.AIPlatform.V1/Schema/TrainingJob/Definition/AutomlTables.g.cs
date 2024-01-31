@@ -117,6 +117,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// A TrainingJob that trains and uploads an AutoML Tables Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTables : pb::IMessage<AutoMlTables>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -367,6 +368,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTablesInputs : pb::IMessage<AutoMlTablesInputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1065,6 +1067,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Transformation : pb::IMessage<Transformation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1675,6 +1678,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           /// Training pipeline will infer the proper transformation based on the
           /// statistic of dataset.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class AutoTransformation : pb::IMessage<AutoTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1876,6 +1880,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    considered a missing value.
           /// *  A boolean value that indicates whether the value is valid.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class NumericTransformation : pb::IMessage<NumericTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2119,6 +2124,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    treated as the "unknown" category. The "unknown" category gets its own
           ///    special lookup index and resulting embedding.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CategoricalTransformation : pb::IMessage<CategoricalTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2317,6 +2323,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    typical timestamp range, or are extreme values) receive no special
           ///    treatment and are not removed.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TimestampTransformation : pb::IMessage<TimestampTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2612,6 +2619,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           /// *  Missing values get their own lookup index and resulting embedding.
           /// *  Stop-words receive no special treatment and are not removed.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TextTransformation : pb::IMessage<TextTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2808,6 +2816,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    all elements.
           /// *  The average of empty arrays is treated as zero.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class NumericArrayTransformation : pb::IMessage<NumericArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3050,6 +3059,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    the mean.
           /// *  Empty arrays treated as an embedding of zeroes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CategoricalArrayTransformation : pb::IMessage<CategoricalArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3248,6 +3258,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    text value. Apply the transformations for Text columns.
           /// *  Empty arrays treated as an empty text.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TextArrayTransformation : pb::IMessage<TextArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3450,6 +3461,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// Model metadata specific to AutoML Tables.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTablesMetadata : pb::IMessage<AutoMlTablesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

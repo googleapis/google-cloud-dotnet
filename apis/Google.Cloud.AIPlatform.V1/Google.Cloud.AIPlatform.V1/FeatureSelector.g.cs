@@ -26,14 +26,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX3NlbGVjdG9y",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90byIdCglJZE1hdGNoZXISEAoDaWRzGAEg",
-            "AygJQgPgQQIiUQoPRmVhdHVyZVNlbGVjdG9yEj4KCmlkX21hdGNoZXIYASAB",
-            "KAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JZE1hdGNoZXJCA+BB",
-            "AkLSAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhRGZWF0dXJl",
-            "U2VsZWN0b3JQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
-            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
-            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "aS9maWVsZF9iZWhhdmlvci5wcm90byIeCglJZE1hdGNoZXISEQoDaWRzGAEg",
+            "AygJQgTiQQECIlIKD0ZlYXR1cmVTZWxlY3RvchI/CgppZF9tYXRjaGVyGAEg",
+            "ASgLMiUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSWRNYXRjaGVyQgTi",
+            "QQECQtIBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFEZlYXR1",
+            "cmVTZWxlY3RvclByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0",
+            "Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xl",
+            "LkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9y",
+            "bVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,6 +48,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Matcher for Features of an EntityType by Feature ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IdMatcher : pb::IMessage<IdMatcher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -237,6 +238,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Selector for Features of an EntityType.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureSelector : pb::IMessage<FeatureSelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

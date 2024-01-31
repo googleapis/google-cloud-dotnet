@@ -127,6 +127,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// The objective configuration for model monitoring, including the information
   /// needed to detect anomalies for one particular model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelMonitoringObjectiveConfig : pb::IMessage<ModelMonitoringObjectiveConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -482,6 +483,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Training Dataset information.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrainingDataset : pb::IMessage<TrainingDataset>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -978,6 +980,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// The config for Training &amp; Prediction data skew detection. It specifies the
       /// training dataset sources and the skew detection parameters.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrainingPredictionSkewDetectionConfig : pb::IMessage<TrainingPredictionSkewDetectionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1247,6 +1250,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The config for Prediction data drift detection.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PredictionDriftDetectionConfig : pb::IMessage<PredictionDriftDetectionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1516,6 +1520,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// The config for integrating with Vertex Explainable AI. Only applicable if
       /// the Model has explanation_spec populated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExplanationConfig : pb::IMessage<ExplanationConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1768,6 +1773,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// Model Monitoring baseline dataset, which can be used to generate baseline
           /// attribution scores.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ExplanationBaseline : pb::IMessage<ExplanationBaseline>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2135,6 +2141,10 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   }
 
+  /// <summary>
+  /// The alert config for model monitoring.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelMonitoringAlertConfig : pb::IMessage<ModelMonitoringAlertConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2451,6 +2461,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The config for email alert.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EmailAlertConfig : pb::IMessage<EmailAlertConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2640,6 +2651,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The config for feature monitoring threshold.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThresholdConfig : pb::IMessage<ThresholdConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2887,6 +2899,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Sampling Strategy for logging, can be for both training and prediction
   /// dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SamplingStrategy : pb::IMessage<SamplingStrategy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3094,6 +3107,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Requests are randomly selected.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RandomSampleConfig : pb::IMessage<RandomSampleConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

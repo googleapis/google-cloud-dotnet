@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -623,14 +623,14 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FeaturestoreServiceClient.Create(callInvoker, Settings, Logger);
+            return FeaturestoreServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<FeaturestoreServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FeaturestoreServiceClient.Create(callInvoker, Settings, Logger);
+            return FeaturestoreServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -2772,9 +2772,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2792,9 +2794,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2812,9 +2816,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2828,9 +2834,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2848,9 +2856,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2868,9 +2878,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2884,9 +2896,73 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, CreateFeatureOperationMetadata> CreateFeature(FeatureGroupName parent, Feature feature, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeature(new CreateFeatureRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(FeatureGroupName parent, Feature feature, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureAsync(new CreateFeatureRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(FeatureGroupName parent, Feature feature, st::CancellationToken cancellationToken) =>
+            CreateFeatureAsync(parent, feature, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2898,7 +2974,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2914,9 +2990,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2928,7 +3006,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2944,9 +3022,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2958,7 +3038,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2969,9 +3049,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -2983,7 +3065,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2999,9 +3081,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -3013,7 +3097,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3029,9 +3113,11 @@ namespace Google.Cloud.AIPlatform.V1
         /// Creates a new Feature in a given EntityType.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the EntityType to create a Feature.
-        /// Format:
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="feature">
         /// Required. The Feature to create.
@@ -3043,11 +3129,102 @@ namespace Google.Cloud.AIPlatform.V1
         /// This value may be up to 128 characters, and valid characters are
         /// `[a-z0-9_]`. The first character cannot be a number.
         /// 
-        /// The value must be unique within an EntityType.
+        /// The value must be unique within an EntityType/FeatureGroup.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(EntityTypeName parent, Feature feature, string featureId, st::CancellationToken cancellationToken) =>
+            CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
+        /// 
+        /// This value may be up to 128 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType/FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, CreateFeatureOperationMetadata> CreateFeature(FeatureGroupName parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeature(new CreateFeatureRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
+        /// 
+        /// This value may be up to 128 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType/FeatureGroup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(FeatureGroupName parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureAsync(new CreateFeatureRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType or FeatureGroup to create a
+        /// Feature. Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final
+        /// component of the Feature's resource name.
+        /// 
+        /// This value may be up to 128 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType/FeatureGroup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(FeatureGroupName parent, Feature feature, string featureId, st::CancellationToken cancellationToken) =>
             CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3284,8 +3461,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3300,8 +3479,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3316,8 +3497,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3329,8 +3512,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3345,8 +3530,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3361,8 +3548,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Feature resource.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3392,8 +3581,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location to list Features.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3418,8 +3609,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location to list Features.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3444,8 +3637,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location to list Features.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3470,8 +3665,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the Location to list Features.
-        /// Format:
+        /// Format for entity_type as parent:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3487,6 +3684,62 @@ namespace Google.Cloud.AIPlatform.V1
             ListFeaturesAsync(new ListFeaturesRequest
             {
                 ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Features in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list Features.
+        /// Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFeatures(new ListFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Features in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to list Features.
+        /// Format for entity_type as parent:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// Format for feature_group as parent:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(FeatureGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFeaturesAsync(new ListFeaturesRequest
+            {
+                ParentAsFeatureGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -3526,6 +3779,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// updated.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="updateMask">
         /// Field mask is used to specify the fields to be overwritten in the
@@ -3540,7 +3794,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring`
+        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3559,6 +3813,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// updated.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="updateMask">
         /// Field mask is used to specify the fields to be overwritten in the
@@ -3573,7 +3828,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring`
+        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3592,6 +3847,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// updated.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="updateMask">
         /// Field mask is used to specify the fields to be overwritten in the
@@ -3606,7 +3862,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// 
         /// * `description`
         /// * `labels`
-        /// * `disable_monitoring`
+        /// * `disable_monitoring` (Not supported for FeatureRegistry Feature)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3673,6 +3929,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3689,6 +3946,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3705,6 +3963,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3718,6 +3977,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3734,6 +3994,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3750,6 +4011,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// Required. The name of the Features to be deleted.
         /// Format:
         /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

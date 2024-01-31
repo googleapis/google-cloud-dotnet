@@ -65,6 +65,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A list of boolean values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BoolArray : pb::IMessage<BoolArray>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -251,6 +252,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A list of double values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DoubleArray : pb::IMessage<DoubleArray>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -437,6 +439,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A list of int64 values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Int64Array : pb::IMessage<Int64Array>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -623,6 +626,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A list of string values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StringArray : pb::IMessage<StringArray>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -807,6 +811,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A tensor value type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tensor : pb::IMessage<Tensor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

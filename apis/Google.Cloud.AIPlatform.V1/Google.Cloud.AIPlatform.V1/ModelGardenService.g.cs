@@ -29,26 +29,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
             "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MS9wdWJsaXNoZXJfbW9kZWwucHJvdG8iuQEKGEdldFB1Ymxpc2hlck1vZGVs",
-            "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29v",
-            "Z2xlYXBpcy5jb20vUHVibGlzaGVyTW9kZWwSGgoNbGFuZ3VhZ2VfY29kZRgC",
-            "IAEoCUID4EEBEkEKBHZpZXcYAyABKA4yLi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5QdWJsaXNoZXJNb2RlbFZpZXdCA+BBASqhAQoSUHVibGlzaGVy",
-            "TW9kZWxWaWV3EiQKIFBVQkxJU0hFUl9NT0RFTF9WSUVXX1VOU1BFQ0lGSUVE",
-            "EAASHgoaUFVCTElTSEVSX01PREVMX1ZJRVdfQkFTSUMQARIdChlQVUJMSVNI",
-            "RVJfTU9ERUxfVklFV19GVUxMEAISJgoiUFVCTElTSEVSX01PREVMX1ZFUlNJ",
-            "T05fVklFV19CQVNJQxADMowCChJNb2RlbEdhcmRlblNlcnZpY2USpgEKEUdl",
-            "dFB1Ymxpc2hlck1vZGVsEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "R2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuUHVibGlzaGVyTW9kZWwiL4LT5JMCIhIgL3YxL3tuYW1lPXB1",
-            "Ymxpc2hlcnMvKi9tb2RlbHMvKn3aQQRuYW1lGk3KQRlhaXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxQhdNb2RlbEdhcmRlblNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29n",
-            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxh",
-            "dGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
-            "b3JtOjpWMWIGcHJvdG8z"));
+            "MS9wdWJsaXNoZXJfbW9kZWwucHJvdG8ivAEKGEdldFB1Ymxpc2hlck1vZGVs",
+            "UmVxdWVzdBI/CgRuYW1lGAEgASgJQjHiQQEC+kEqCihhaXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL1B1Ymxpc2hlck1vZGVsEhsKDWxhbmd1YWdlX2NvZGUY",
+            "AiABKAlCBOJBAQESQgoEdmlldxgDIAEoDjIuLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlB1Ymxpc2hlck1vZGVsVmlld0IE4kEBASqhAQoSUHVibGlz",
+            "aGVyTW9kZWxWaWV3EiQKIFBVQkxJU0hFUl9NT0RFTF9WSUVXX1VOU1BFQ0lG",
+            "SUVEEAASHgoaUFVCTElTSEVSX01PREVMX1ZJRVdfQkFTSUMQARIdChlQVUJM",
+            "SVNIRVJfTU9ERUxfVklFV19GVUxMEAISJgoiUFVCTElTSEVSX01PREVMX1ZF",
+            "UlNJT05fVklFV19CQVNJQxADMowCChJNb2RlbEdhcmRlblNlcnZpY2USpgEK",
+            "EUdldFB1Ymxpc2hlck1vZGVsEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuR2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0GiouZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuUHVibGlzaGVyTW9kZWwiL9pBBG5hbWWC0+STAiISIC92",
+            "MS97bmFtZT1wdWJsaXNoZXJzLyovbW9kZWxzLyp9Gk3KQRlhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQhdNb2RlbEdhcmRlblNlcnZpY2VQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PublisherModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PublisherModelView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,6 +89,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [ModelGardenService.GetPublisherModel][google.cloud.aiplatform.v1.ModelGardenService.GetPublisherModel]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPublisherModelRequest : pb::IMessage<GetPublisherModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

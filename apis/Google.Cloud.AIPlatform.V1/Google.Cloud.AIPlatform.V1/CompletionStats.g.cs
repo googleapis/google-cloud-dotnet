@@ -26,15 +26,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9jb21wbGV0aW9uX3N0YXRz",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90byKYAQoPQ29tcGxldGlvblN0YXRzEh0K",
-            "EHN1Y2Nlc3NmdWxfY291bnQYASABKANCA+BBAxIZCgxmYWlsZWRfY291bnQY",
-            "AiABKANCA+BBAxIdChBpbmNvbXBsZXRlX2NvdW50GAMgASgDQgPgQQMSLAof",
-            "c3VjY2Vzc2Z1bF9mb3JlY2FzdF9wb2ludF9jb3VudBgFIAEoA0ID4EEDQtIB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFENvbXBsZXRpb25T",
-            "dGF0c1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9h",
-            "cGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3Vk",
-            "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
-            "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "aS9maWVsZF9iZWhhdmlvci5wcm90byKcAQoPQ29tcGxldGlvblN0YXRzEh4K",
+            "EHN1Y2Nlc3NmdWxfY291bnQYASABKANCBOJBAQMSGgoMZmFpbGVkX2NvdW50",
+            "GAIgASgDQgTiQQEDEh4KEGluY29tcGxldGVfY291bnQYAyABKANCBOJBAQMS",
+            "LQofc3VjY2Vzc2Z1bF9mb3JlY2FzdF9wb2ludF9jb3VudBgFIAEoA0IE4kEB",
+            "A0LSAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhRDb21wbGV0",
+            "aW9uU3RhdHNQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
+            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
+            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
+            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -49,6 +49,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Success and error statistics of processing multiple entities
   /// (for example, DataItems or structured data rows) in batch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionStats : pb::IMessage<CompletionStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -52,6 +52,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
   /// <summary>
   /// Prediction model parameters for Video Classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoClassificationPredictionParams : pb::IMessage<VideoClassificationPredictionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
