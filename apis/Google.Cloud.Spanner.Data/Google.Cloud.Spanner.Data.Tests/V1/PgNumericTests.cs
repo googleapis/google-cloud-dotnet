@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,13 +75,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             yield return new object[] { "-0.0000000000000009" };
             yield return new object[] { "1234567891234567891234567891234567891234567891234567891234567891234567891234567891234567891230.12345678912345678912345678912345678912345678" };
             yield return new object[] { "-1234567891234567891234567891234567891234567891234567891234567891234567891234567891234567891230.12345678912345678912345678912345678912345678" };
-            yield return new object[] { PgNumeric.MaxValue.ToString() };
-            yield return new object[] { PgNumeric.MinValue.ToString() };
-            yield return new object[] { (BigInteger.Pow(10, 147455) - 1).ToString() };
-            yield return new object[] { (-(BigInteger.Pow(10, 147455) - 1)).ToString() };
             yield return new object[] { MaxText };
             yield return new object[] { MinText };
-            yield return new object[] { PgNumeric.NaN.ToString() };
             yield return new object[] { "NaN" };
             yield return new object[] { "NAN" };
             yield return new object[] { "nan" };
@@ -129,10 +124,6 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             // The values are: string input1, string input2, and expected sign of comparision result.
             yield return new object[] { MaxText, "NaN", -1 };
-            yield return new object[] { PgNumeric.MaxValue.ToString(), "NaN", -1 };
-            yield return new object[] { (BigInteger.Pow(10, 147455) - 1).ToString(), "NaN", -1 };
-            yield return new object[] { (-(BigInteger.Pow(10, 147455) - 1)).ToString(), "NaN", -1 };
-            yield return new object[] { PgNumeric.MinValue.ToString(), "NaN", -1 };
             yield return new object[] { MinText, "NaN", -1 };
             yield return new object[] { "0", "NaN", -1 };
             yield return new object[] { "NaN", MaxText, 1 };
@@ -496,7 +487,10 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             Assert.Equal(MaxText, PgNumeric.MaxValue.ToString());
             Assert.Equal(MinText, PgNumeric.MinValue.ToString());
+            Assert.Equal(MaxText, (BigInteger.Pow(10, 147455) - 1).ToString());
+            Assert.Equal(MinText, (-(BigInteger.Pow(10, 147455) - 1)).ToString());
             Assert.Equal("0", PgNumeric.Zero.ToString());
+            Assert.Equal("NaN", PgNumeric.NaN.ToString());
             Assert.True(PgNumeric.Zero == default(PgNumeric));
             Assert.True(PgNumeric.Zero == new PgNumeric());
         }
