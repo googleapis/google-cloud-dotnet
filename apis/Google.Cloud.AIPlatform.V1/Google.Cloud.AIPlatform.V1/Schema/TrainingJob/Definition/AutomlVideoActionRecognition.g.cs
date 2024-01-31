@@ -61,6 +61,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// A TrainingJob that trains and uploads an AutoML Video Action Recognition
   /// Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlVideoActionRecognition : pb::IMessage<AutoMlVideoActionRecognition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -262,6 +263,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlVideoActionRecognitionInputs : pb::IMessage<AutoMlVideoActionRecognitionInputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

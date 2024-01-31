@@ -27,20 +27,20 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9kYXRhc2V0X3ZlcnNpb24u",
             "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItECCg5EYXRh",
-            "c2V0VmVyc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
-            "YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSDAoEZXRhZxgDIAEoCRIjChZiaWdfcXVlcnlfZGF0YXNldF9uYW1lGAQg",
-            "ASgJQgPgQQM6jAHqQYgBCihhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0Rh",
-            "dGFzZXRWZXJzaW9uElxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vZGF0YXNldHMve2RhdGFzZXR9L2RhdGFzZXRWZXJzaW9ucy97",
-            "ZGF0YXNldF92ZXJzaW9ufULRAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxQhNEYXRhc2V0VmVyc2lvblByb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
-            "bXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
-            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
-            "OlYxYgZwcm90bzM="));
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItUCCg5EYXRh",
+            "c2V0VmVyc2lvbhISCgRuYW1lGAEgASgJQgTiQQEDEjUKC2NyZWF0ZV90aW1l",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1Cgt1",
+            "cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "BOJBAQMSDAoEZXRhZxgDIAEoCRIkChZiaWdfcXVlcnlfZGF0YXNldF9uYW1l",
+            "GAQgASgJQgTiQQEDOowB6kGIAQooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhc2V0VmVyc2lvbhJccHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2RhdGFzZXRzL3tkYXRhc2V0fS9kYXRhc2V0VmVyc2lv",
+            "bnMve2RhdGFzZXRfdmVyc2lvbn1C0QEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MUITRGF0YXNldFZlcnNpb25Qcm90b1ABWj5jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxh",
+            "dGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
+            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
+            "b3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,6 +54,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Describes the dataset version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatasetVersion : pb::IMessage<DatasetVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

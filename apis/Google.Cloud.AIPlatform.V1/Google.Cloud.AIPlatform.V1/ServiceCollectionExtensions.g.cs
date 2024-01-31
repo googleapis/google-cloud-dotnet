@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -47,6 +47,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcav::DeploymentResourcePoolServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDeploymentResourcePoolServiceClient(this IServiceCollection services, sys::Action<gcav::DeploymentResourcePoolServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::DeploymentResourcePoolServiceClientBuilder builder = new gcav::DeploymentResourcePoolServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcav::EndpointServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -60,6 +78,60 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcav::EndpointServiceClientBuilder builder = new gcav::EndpointServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::FeatureOnlineStoreAdminServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFeatureOnlineStoreAdminServiceClient(this IServiceCollection services, sys::Action<gcav::FeatureOnlineStoreAdminServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::FeatureOnlineStoreAdminServiceClientBuilder builder = new gcav::FeatureOnlineStoreAdminServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::FeatureOnlineStoreServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFeatureOnlineStoreServiceClient(this IServiceCollection services, sys::Action<gcav::FeatureOnlineStoreServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::FeatureOnlineStoreServiceClientBuilder builder = new gcav::FeatureOnlineStoreServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::FeatureRegistryServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFeatureRegistryServiceClient(this IServiceCollection services, sys::Action<gcav::FeatureRegistryServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::FeatureRegistryServiceClientBuilder builder = new gcav::FeatureRegistryServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
@@ -146,6 +218,24 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gcav::JobServiceClientBuilder builder = new gcav::JobServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::LlmUtilityServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLlmUtilityServiceClient(this IServiceCollection services, sys::Action<gcav::LlmUtilityServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::LlmUtilityServiceClientBuilder builder = new gcav::LlmUtilityServiceClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });

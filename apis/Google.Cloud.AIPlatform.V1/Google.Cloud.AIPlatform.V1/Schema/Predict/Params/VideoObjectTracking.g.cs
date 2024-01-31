@@ -51,6 +51,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
   /// <summary>
   /// Prediction model parameters for Video Object Tracking.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoObjectTrackingPredictionParams : pb::IMessage<VideoObjectTrackingPredictionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

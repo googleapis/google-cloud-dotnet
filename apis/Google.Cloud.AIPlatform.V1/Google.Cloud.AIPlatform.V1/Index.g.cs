@@ -30,46 +30,56 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZS9jbG91ZC9haXBsYXRmb3JtL3YxL2RlcGxveWVkX2luZGV4X3JlZi5wcm90",
             "bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVj",
             "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuwGCgVJbmRleBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3Jp",
-            "cHRpb24YAyABKAkSIAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgEIAEoCUID4EEF",
-            "EigKCG1ldGFkYXRhGAYgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEksK",
-            "EGRlcGxveWVkX2luZGV4ZXMYByADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5EZXBsb3llZEluZGV4UmVmQgPgQQMSDAoEZXRhZxgIIAEoCRI9",
-            "CgZsYWJlbHMYCSADKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
-            "bmRleC5MYWJlbHNFbnRyeRI0CgtjcmVhdGVfdGltZRgKIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgLIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJACgtpbmRleF9z",
-            "dGF0cxgOIAEoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4",
-            "U3RhdHNCA+BBAxJVChNpbmRleF91cGRhdGVfbWV0aG9kGBAgASgOMjMuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXguSW5kZXhVcGRhdGVNZXRo",
-            "b2RCA+BBBRJICg9lbmNyeXB0aW9uX3NwZWMYESABKAsyKi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlY0ID4EEFGi0KC0xhYmVs",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXQoRSW5k",
-            "ZXhVcGRhdGVNZXRob2QSIwofSU5ERVhfVVBEQVRFX01FVEhPRF9VTlNQRUNJ",
-            "RklFRBAAEhAKDEJBVENIX1VQREFURRABEhEKDVNUUkVBTV9VUERBVEUQAjpd",
-            "6kFaCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4Ejdwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5kZXhlcy97aW5k",
-            "ZXh9It8CCg5JbmRleERhdGFwb2ludBIZCgxkYXRhcG9pbnRfaWQYASABKAlC",
-            "A+BBAhIbCg5mZWF0dXJlX3ZlY3RvchgCIAMoAkID4EECEk4KCXJlc3RyaWN0",
-            "cxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4RGF0",
-            "YXBvaW50LlJlc3RyaWN0aW9uQgPgQQESUQoMY3Jvd2RpbmdfdGFnGAUgASgL",
-            "MjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW5kZXhEYXRhcG9pbnQu",
-            "Q3Jvd2RpbmdUYWdCA+BBARpHCgtSZXN0cmljdGlvbhIRCgluYW1lc3BhY2UY",
-            "ASABKAkSEgoKYWxsb3dfbGlzdBgCIAMoCRIRCglkZW55X2xpc3QYAyADKAka",
-            "KQoLQ3Jvd2RpbmdUYWcSGgoSY3Jvd2RpbmdfYXR0cmlidXRlGAEgASgJIkMK",
-            "CkluZGV4U3RhdHMSGgoNdmVjdG9yc19jb3VudBgBIAEoA0ID4EEDEhkKDHNo",
-            "YXJkc19jb3VudBgCIAEoBUID4EEDQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCCkluZGV4UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvUGCgVJbmRleBISCgRuYW1lGAEg",
+            "ASgJQgTiQQEDEhoKDGRpc3BsYXlfbmFtZRgCIAEoCUIE4kEBAhITCgtkZXNj",
+            "cmlwdGlvbhgDIAEoCRIhChNtZXRhZGF0YV9zY2hlbWFfdXJpGAQgASgJQgTi",
+            "QQEFEigKCG1ldGFkYXRhGAYgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVl",
+            "EkwKEGRlcGxveWVkX2luZGV4ZXMYByADKAsyLC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5EZXBsb3llZEluZGV4UmVmQgTiQQEDEgwKBGV0YWcYCCAB",
+            "KAkSPQoGbGFiZWxzGAkgAygLMi0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuSW5kZXguTGFiZWxzRW50cnkSNQoLY3JlYXRlX3RpbWUYCiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgTiQQEDEjUKC3VwZGF0ZV90aW1l",
+            "GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxJBCgtp",
+            "bmRleF9zdGF0cxgOIAEoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkluZGV4U3RhdHNCBOJBAQMSVgoTaW5kZXhfdXBkYXRlX21ldGhvZBgQIAEo",
+            "DjIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkluZGV4LkluZGV4VXBk",
+            "YXRlTWV0aG9kQgTiQQEFEkkKD2VuY3J5cHRpb25fc3BlYxgRIAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25TcGVjQgTiQQEF",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiXQoRSW5kZXhVcGRhdGVNZXRob2QSIwofSU5ERVhfVVBEQVRFX01FVEhP",
+            "RF9VTlNQRUNJRklFRBAAEhAKDEJBVENIX1VQREFURRABEhEKDVNUUkVBTV9V",
+            "UERBVEUQAjpd6kFaCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0luZGV4",
+            "Ejdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5k",
+            "ZXhlcy97aW5kZXh9IvkFCg5JbmRleERhdGFwb2ludBIaCgxkYXRhcG9pbnRf",
+            "aWQYASABKAlCBOJBAQISHAoOZmVhdHVyZV92ZWN0b3IYAiADKAJCBOJBAQIS",
+            "TwoJcmVzdHJpY3RzGAQgAygLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuSW5kZXhEYXRhcG9pbnQuUmVzdHJpY3Rpb25CBOJBAQESXgoRbnVtZXJp",
+            "Y19yZXN0cmljdHMYBiADKAsyPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5JbmRleERhdGFwb2ludC5OdW1lcmljUmVzdHJpY3Rpb25CBOJBAQESUgoM",
+            "Y3Jvd2RpbmdfdGFnGAUgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuSW5kZXhEYXRhcG9pbnQuQ3Jvd2RpbmdUYWdCBOJBAQEaRwoLUmVzdHJp",
+            "Y3Rpb24SEQoJbmFtZXNwYWNlGAEgASgJEhIKCmFsbG93X2xpc3QYAiADKAkS",
+            "EQoJZGVueV9saXN0GAMgAygJGrMCChJOdW1lcmljUmVzdHJpY3Rpb24SEwoJ",
+            "dmFsdWVfaW50GAIgASgDSAASFQoLdmFsdWVfZmxvYXQYAyABKAJIABIWCgx2",
+            "YWx1ZV9kb3VibGUYBCABKAFIABIRCgluYW1lc3BhY2UYASABKAkSUgoCb3AY",
+            "BSABKA4yRi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleERhdGFw",
+            "b2ludC5OdW1lcmljUmVzdHJpY3Rpb24uT3BlcmF0b3IiaQoIT3BlcmF0b3IS",
+            "GAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABIICgRMRVNTEAESDgoKTEVTU19F",
+            "UVVBTBACEgkKBUVRVUFMEAMSEQoNR1JFQVRFUl9FUVVBTBAEEgsKB0dSRUFU",
+            "RVIQBUIHCgVWYWx1ZRopCgtDcm93ZGluZ1RhZxIaChJjcm93ZGluZ19hdHRy",
+            "aWJ1dGUYASABKAkiRQoKSW5kZXhTdGF0cxIbCg12ZWN0b3JzX2NvdW50GAEg",
+            "ASgDQgTiQQEDEhoKDHNoYXJkc19jb3VudBgCIAEoBUIE4kEBA0LIAQoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgpJbmRleFByb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHK",
+            "AhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedIndexRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Index), global::Google.Cloud.AIPlatform.V1.Index.Parser, new[]{ "Name", "DisplayName", "Description", "MetadataSchemaUri", "Metadata", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "IndexStats", "IndexUpdateMethod", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Index.Types.IndexUpdateMethod) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Parser, new[]{ "DatapointId", "FeatureVector", "Restricts", "CrowdingTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser, new[]{ "Namespace", "AllowList", "DenyList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Parser, new[]{ "DatapointId", "FeatureVector", "Restricts", "NumericRestricts", "CrowdingTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.Restriction.Parser, new[]{ "Namespace", "AllowList", "DenyList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Parser, new[]{ "ValueInt", "ValueFloat", "ValueDouble", "Namespace", "Op" }, new[]{ "Value" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag), global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag.Parser, new[]{ "CrowdingAttribute" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexStats), global::Google.Cloud.AIPlatform.V1.IndexStats.Parser, new[]{ "VectorsCount", "ShardsCount" }, null, null, null, null)
           }));
@@ -82,6 +92,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A representation of a collection of database items organized in a way that
   /// allows for approximate nearest neighbor (a.k.a ANN) algorithms search.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Index : pb::IMessage<Index>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -838,6 +849,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A datapoint of Index.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexDatapoint : pb::IMessage<IndexDatapoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -875,6 +887,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       datapointId_ = other.datapointId_;
       featureVector_ = other.featureVector_.Clone();
       restricts_ = other.restricts_.Clone();
+      numericRestricts_ = other.numericRestricts_.Clone();
       crowdingTag_ = other.crowdingTag_ != null ? other.crowdingTag_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -932,6 +945,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return restricts_; }
     }
 
+    /// <summary>Field number for the "numeric_restricts" field.</summary>
+    public const int NumericRestrictsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction> _repeated_numericRestricts_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction> numericRestricts_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction>();
+    /// <summary>
+    /// Optional. List of Restrict of the datapoint, used to perform "restricted
+    /// searches" where boolean rule are used to filter the subset of the database
+    /// eligible for matching. This uses numeric comparisons.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction> NumericRestricts {
+      get { return numericRestricts_; }
+    }
+
     /// <summary>Field number for the "crowding_tag" field.</summary>
     public const int CrowdingTagFieldNumber = 5;
     private global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag crowdingTag_;
@@ -966,6 +995,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DatapointId != other.DatapointId) return false;
       if(!featureVector_.Equals(other.featureVector_)) return false;
       if(!restricts_.Equals(other.restricts_)) return false;
+      if(!numericRestricts_.Equals(other.numericRestricts_)) return false;
       if (!object.Equals(CrowdingTag, other.CrowdingTag)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -977,6 +1007,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DatapointId.Length != 0) hash ^= DatapointId.GetHashCode();
       hash ^= featureVector_.GetHashCode();
       hash ^= restricts_.GetHashCode();
+      hash ^= numericRestricts_.GetHashCode();
       if (crowdingTag_ != null) hash ^= CrowdingTag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1006,6 +1037,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CrowdingTag);
       }
+      numericRestricts_.WriteTo(output, _repeated_numericRestricts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1026,6 +1058,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(CrowdingTag);
       }
+      numericRestricts_.WriteTo(ref output, _repeated_numericRestricts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1041,6 +1074,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       size += featureVector_.CalculateSize(_repeated_featureVector_codec);
       size += restricts_.CalculateSize(_repeated_restricts_codec);
+      size += numericRestricts_.CalculateSize(_repeated_numericRestricts_codec);
       if (crowdingTag_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CrowdingTag);
       }
@@ -1061,6 +1095,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       featureVector_.Add(other.featureVector_);
       restricts_.Add(other.restricts_);
+      numericRestricts_.Add(other.numericRestricts_);
       if (other.crowdingTag_ != null) {
         if (crowdingTag_ == null) {
           CrowdingTag = new global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.CrowdingTag();
@@ -1102,6 +1137,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(CrowdingTag);
             break;
           }
+          case 50: {
+            numericRestricts_.AddEntriesFrom(input, _repeated_numericRestricts_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1137,6 +1176,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(CrowdingTag);
             break;
           }
+          case 50: {
+            numericRestricts_.AddEntriesFrom(ref input, _repeated_numericRestricts_codec);
+            break;
+          }
         }
       }
     }
@@ -1151,6 +1194,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Restriction of a datapoint which describe its attributes(tokens) from each
       /// of several attribute categories(namespaces).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Restriction : pb::IMessage<Restriction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1402,10 +1446,489 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// This field allows restricts to be based on numeric comparisons rather
+      /// than categorical tokens.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NumericRestriction : pb::IMessage<NumericRestriction>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NumericRestriction> _parser = new pb::MessageParser<NumericRestriction>(() => new NumericRestriction());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NumericRestriction> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericRestriction() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericRestriction(NumericRestriction other) : this() {
+          namespace_ = other.namespace_;
+          op_ = other.op_;
+          switch (other.ValueCase) {
+            case ValueOneofCase.ValueInt:
+              ValueInt = other.ValueInt;
+              break;
+            case ValueOneofCase.ValueFloat:
+              ValueFloat = other.ValueFloat;
+              break;
+            case ValueOneofCase.ValueDouble:
+              ValueDouble = other.ValueDouble;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NumericRestriction Clone() {
+          return new NumericRestriction(this);
+        }
+
+        /// <summary>Field number for the "value_int" field.</summary>
+        public const int ValueIntFieldNumber = 2;
+        /// <summary>
+        /// Represents 64 bit integer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ValueInt {
+          get { return HasValueInt ? (long) value_ : 0L; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueInt;
+          }
+        }
+        /// <summary>Gets whether the "value_int" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueInt {
+          get { return valueCase_ == ValueOneofCase.ValueInt; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_int" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueInt() {
+          if (HasValueInt) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "value_float" field.</summary>
+        public const int ValueFloatFieldNumber = 3;
+        /// <summary>
+        /// Represents 32 bit float.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float ValueFloat {
+          get { return HasValueFloat ? (float) value_ : 0F; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueFloat;
+          }
+        }
+        /// <summary>Gets whether the "value_float" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueFloat {
+          get { return valueCase_ == ValueOneofCase.ValueFloat; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_float" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueFloat() {
+          if (HasValueFloat) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "value_double" field.</summary>
+        public const int ValueDoubleFieldNumber = 4;
+        /// <summary>
+        /// Represents 64 bit float.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double ValueDouble {
+          get { return HasValueDouble ? (double) value_ : 0D; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.ValueDouble;
+          }
+        }
+        /// <summary>Gets whether the "value_double" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValueDouble {
+          get { return valueCase_ == ValueOneofCase.ValueDouble; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "value_double" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValueDouble() {
+          if (HasValueDouble) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "namespace" field.</summary>
+        public const int NamespaceFieldNumber = 1;
+        private string namespace_ = "";
+        /// <summary>
+        /// The namespace of this restriction. e.g.: cost.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Namespace {
+          get { return namespace_; }
+          set {
+            namespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "op" field.</summary>
+        public const int OpFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator op_ = global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified;
+        /// <summary>
+        /// This MUST be specified for queries and must NOT be specified for
+        /// datapoints.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator Op {
+          get { return op_; }
+          set {
+            op_ = value;
+          }
+        }
+
+        private object value_;
+        /// <summary>Enum of possible cases for the "Value" oneof.</summary>
+        public enum ValueOneofCase {
+          None = 0,
+          ValueInt = 2,
+          ValueFloat = 3,
+          ValueDouble = 4,
+        }
+        private ValueOneofCase valueCase_ = ValueOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ValueOneofCase ValueCase {
+          get { return valueCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          valueCase_ = ValueOneofCase.None;
+          value_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NumericRestriction);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NumericRestriction other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ValueInt != other.ValueInt) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ValueFloat, other.ValueFloat)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ValueDouble, other.ValueDouble)) return false;
+          if (Namespace != other.Namespace) return false;
+          if (Op != other.Op) return false;
+          if (ValueCase != other.ValueCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValueInt) hash ^= ValueInt.GetHashCode();
+          if (HasValueFloat) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ValueFloat);
+          if (HasValueDouble) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ValueDouble);
+          if (Namespace.Length != 0) hash ^= Namespace.GetHashCode();
+          if (Op != global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
+          hash ^= (int) valueCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Namespace.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Namespace);
+          }
+          if (HasValueInt) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ValueInt);
+          }
+          if (HasValueFloat) {
+            output.WriteRawTag(29);
+            output.WriteFloat(ValueFloat);
+          }
+          if (HasValueDouble) {
+            output.WriteRawTag(33);
+            output.WriteDouble(ValueDouble);
+          }
+          if (Op != global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) Op);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Namespace.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Namespace);
+          }
+          if (HasValueInt) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ValueInt);
+          }
+          if (HasValueFloat) {
+            output.WriteRawTag(29);
+            output.WriteFloat(ValueFloat);
+          }
+          if (HasValueDouble) {
+            output.WriteRawTag(33);
+            output.WriteDouble(ValueDouble);
+          }
+          if (Op != global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) Op);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValueInt) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ValueInt);
+          }
+          if (HasValueFloat) {
+            size += 1 + 4;
+          }
+          if (HasValueDouble) {
+            size += 1 + 8;
+          }
+          if (Namespace.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Namespace);
+          }
+          if (Op != global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Op);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NumericRestriction other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Namespace.Length != 0) {
+            Namespace = other.Namespace;
+          }
+          if (other.Op != global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator.Unspecified) {
+            Op = other.Op;
+          }
+          switch (other.ValueCase) {
+            case ValueOneofCase.ValueInt:
+              ValueInt = other.ValueInt;
+              break;
+            case ValueOneofCase.ValueFloat:
+              ValueFloat = other.ValueFloat;
+              break;
+            case ValueOneofCase.ValueDouble:
+              ValueDouble = other.ValueDouble;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Namespace = input.ReadString();
+                break;
+              }
+              case 16: {
+                ValueInt = input.ReadInt64();
+                break;
+              }
+              case 29: {
+                ValueFloat = input.ReadFloat();
+                break;
+              }
+              case 33: {
+                ValueDouble = input.ReadDouble();
+                break;
+              }
+              case 40: {
+                Op = (global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Namespace = input.ReadString();
+                break;
+              }
+              case 16: {
+                ValueInt = input.ReadInt64();
+                break;
+              }
+              case 29: {
+                ValueFloat = input.ReadFloat();
+                break;
+              }
+              case 33: {
+                ValueDouble = input.ReadDouble();
+                break;
+              }
+              case 40: {
+                Op = (global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Types.NumericRestriction.Types.Operator) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the NumericRestriction message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Which comparison operator to use.  Should be specified for queries only;
+          /// specifying this for a datapoint is an error.
+          ///
+          /// Datapoints for which Operator is true relative to the query's Value
+          /// field will be allowlisted.
+          /// </summary>
+          public enum Operator {
+            /// <summary>
+            /// Default value of the enum.
+            /// </summary>
+            [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Datapoints are eligible iff their value is &lt; the query's.
+            /// </summary>
+            [pbr::OriginalName("LESS")] Less = 1,
+            /// <summary>
+            /// Datapoints are eligible iff their value is &lt;= the query's.
+            /// </summary>
+            [pbr::OriginalName("LESS_EQUAL")] LessEqual = 2,
+            /// <summary>
+            /// Datapoints are eligible iff their value is == the query's.
+            /// </summary>
+            [pbr::OriginalName("EQUAL")] Equal = 3,
+            /// <summary>
+            /// Datapoints are eligible iff their value is >= the query's.
+            /// </summary>
+            [pbr::OriginalName("GREATER_EQUAL")] GreaterEqual = 4,
+            /// <summary>
+            /// Datapoints are eligible iff their value is > the query's.
+            /// </summary>
+            [pbr::OriginalName("GREATER")] Greater = 5,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Crowding tag is a constraint on a neighbor list produced by nearest
       /// neighbor search requiring that no more than some value k' of the k
       /// neighbors returned have the same value of crowding_attribute.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CrowdingTag : pb::IMessage<CrowdingTag>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1420,7 +1943,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.AIPlatform.V1.IndexDatapoint.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1610,6 +2133,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Stats of the Index.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexStats : pb::IMessage<IndexStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -26,13 +26,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90byIvCgZFbnZWYXISEQoEbmFtZRgBIAEoCUID4EECEhIK",
-            "BXZhbHVlGAIgASgJQgPgQQJCyQEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MUILRW52VmFyUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9h",
-            "aXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpH",
-            "b29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnBy",
-            "b3RvMw=="));
+            "ZWhhdmlvci5wcm90byIxCgZFbnZWYXISEgoEbmFtZRgBIAEoCUIE4kEBAhIT",
+            "CgV2YWx1ZRgCIAEoCUIE4kEBAkLJAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxQgtFbnZWYXJQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
+            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
+            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -46,6 +46,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Represents an environment variable present in a Container or Python Module.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvVar : pb::IMessage<EnvVar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

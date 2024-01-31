@@ -28,41 +28,44 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo5Z29v",
             "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZmVhdHVyZV9tb25pdG9yaW5nX3N0",
-            "YXRzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIt8I",
-            "CgdGZWF0dXJlEhEKBG5hbWUYASABKAlCA+BBBRITCgtkZXNjcmlwdGlvbhgC",
-            "IAEoCRJJCgp2YWx1ZV90eXBlGAMgASgOMi0uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuRmVhdHVyZS5WYWx1ZVR5cGVCBuBBAuBBBRI0CgtjcmVhdGVf",
-            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
+            "YXRzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIu8J",
+            "CgdGZWF0dXJlEhIKBG5hbWUYASABKAlCBOJBAQUSEwoLZGVzY3JpcHRpb24Y",
+            "AiABKAkSRwoKdmFsdWVfdHlwZRgDIAEoDjItLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZlYXR1cmUuVmFsdWVUeXBlQgTiQQEFEjUKC2NyZWF0ZV90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIE4kEBAxI1",
             "Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxJECgZsYWJlbHMYBiADKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5GZWF0dXJlLkxhYmVsc0VudHJ5QgPgQQESDAoEZXRhZxgHIAEo",
-            "CRIfChJkaXNhYmxlX21vbml0b3JpbmcYDCABKAhCA+BBARJjChptb25pdG9y",
-            "aW5nX3N0YXRzX2Fub21hbGllcxgLIAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRzQW5vbWFseUID4EED",
-            "GqcCChZNb25pdG9yaW5nU3RhdHNBbm9tYWx5ElwKCW9iamVjdGl2ZRgBIAEo",
-            "DjJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRv",
-            "cmluZ1N0YXRzQW5vbWFseS5PYmplY3RpdmVCA+BBAxJTChVmZWF0dXJlX3N0",
-            "YXRzX2Fub21hbHkYAiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5GZWF0dXJlU3RhdHNBbm9tYWx5QgPgQQMiWgoJT2JqZWN0aXZlEhkKFU9C",
-            "SkVDVElWRV9VTlNQRUNJRklFRBAAEhsKF0lNUE9SVF9GRUFUVVJFX0FOQUxZ",
-            "U0lTEAESFQoRU05BUFNIT1RfQU5BTFlTSVMQAhotCgtMYWJlbHNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqQBCglWYWx1ZVR5cGUS",
-            "GgoWVkFMVUVfVFlQRV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIOCgpCT09M",
-            "X0FSUkFZEAISCgoGRE9VQkxFEAMSEAoMRE9VQkxFX0FSUkFZEAQSCQoFSU5U",
-            "NjQQCRIPCgtJTlQ2NF9BUlJBWRAKEgoKBlNUUklORxALEhAKDFNUUklOR19B",
-            "UlJBWRAMEgkKBUJZVEVTEA06mgHqQZYBCiFhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29tL0ZlYXR1cmUScXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9mZWF0dXJlc3RvcmVzL3tmZWF0dXJlc3RvcmV9L2VudGl0",
-            "eVR5cGVzL3tlbnRpdHlfdHlwZX0vZmVhdHVyZXMve2ZlYXR1cmV9QsoBCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDEZlYXR1cmVQcm90b1AB",
-            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "bXBCBOJBAQMSRQoGbGFiZWxzGAYgAygLMi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRmVhdHVyZS5MYWJlbHNFbnRyeUIE4kEBARIMCgRldGFnGAcg",
+            "ASgJEiAKEmRpc2FibGVfbW9uaXRvcmluZxgMIAEoCEIE4kEBARJkChptb25p",
+            "dG9yaW5nX3N0YXRzX2Fub21hbGllcxgLIAMoCzI6Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRzQW5vbWFseUIE",
+            "4kEBAxIbChN2ZXJzaW9uX2NvbHVtbl9uYW1lGGogASgJGqkCChZNb25pdG9y",
+            "aW5nU3RhdHNBbm9tYWx5El0KCW9iamVjdGl2ZRgBIAEoDjJELmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRzQW5v",
+            "bWFseS5PYmplY3RpdmVCBOJBAQMSVAoVZmVhdHVyZV9zdGF0c19hbm9tYWx5",
+            "GAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVN0",
+            "YXRzQW5vbWFseUIE4kEBAyJaCglPYmplY3RpdmUSGQoVT0JKRUNUSVZFX1VO",
+            "U1BFQ0lGSUVEEAASGwoXSU1QT1JUX0ZFQVRVUkVfQU5BTFlTSVMQARIVChFT",
+            "TkFQU0hPVF9BTkFMWVNJUxACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEipAEKCVZhbHVlVHlwZRIaChZWQUxVRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASCAoEQk9PTBABEg4KCkJPT0xfQVJSQVkQAhIK",
+            "CgZET1VCTEUQAxIQCgxET1VCTEVfQVJSQVkQBBIJCgVJTlQ2NBAJEg8KC0lO",
+            "VDY0X0FSUkFZEAoSCgoGU1RSSU5HEAsSEAoMU1RSSU5HX0FSUkFZEAwSCQoF",
+            "QllURVMQDTqHAupBgwIKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVh",
+            "dHVyZRJxcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2ZlYXR1cmVzdG9yZXMve2ZlYXR1cmVzdG9yZX0vZW50aXR5VHlwZXMve2Vu",
+            "dGl0eV90eXBlfS9mZWF0dXJlcy97ZmVhdHVyZX0SWHByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlR3JvdXBzL3tmZWF0",
+            "dXJlX2dyb3VwfS9mZWF0dXJlcy97ZmVhdHVyZX0qCGZlYXR1cmVzMgdmZWF0",
+            "dXJlQsoBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDEZlYXR1",
+            "cmVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
+            "djEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1H",
+            "b29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "DisableMonitoring", "MonitoringStatsAnomalies" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "DisableMonitoring", "MonitoringStatsAnomalies", "VersionColumnName" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
             null, })
           }));
     }
@@ -71,10 +74,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Feature Metadata information that describes an attribute of an entity type.
-  /// For example, apple is an entity type, and color is a feature that describes
-  /// apple.
+  /// Feature Metadata information.
+  /// For example, color is a feature that describes an apple.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -118,6 +121,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       etag_ = other.etag_;
       disableMonitoring_ = other.disableMonitoring_;
       monitoringStatsAnomalies_ = other.monitoringStatsAnomalies_.Clone();
+      versionColumnName_ = other.versionColumnName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -134,6 +138,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Immutable. Name of the Feature.
     /// Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
     ///
     /// The last part feature is assigned by the client. The feature can be up to
     /// 64 characters long and can consist only of ASCII Latin letters A-Z and a-z,
@@ -168,7 +173,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ValueTypeFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType valueType_ = global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType.Unspecified;
     /// <summary>
-    /// Required. Immutable. Type of Feature value.
+    /// Immutable. Only applicable for Vertex AI Feature Store (Legacy).
+    /// Type of Feature value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,7 +189,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Timestamp when this EntityType was created.
+    /// Output only. Only applicable for Vertex AI Feature Store (Legacy).
+    /// Timestamp when this EntityType was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -198,7 +205,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int UpdateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Timestamp when this EntityType was most recently updated.
+    /// Output only. Only applicable for Vertex AI Feature Store (Legacy).
+    /// Timestamp when this EntityType was most recently updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -253,8 +261,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int DisableMonitoringFieldNumber = 12;
     private bool disableMonitoring_;
     /// <summary>
-    /// Optional. If not set, use the monitoring_config defined for the EntityType
-    /// this Feature belongs to. Only Features with type
+    /// Optional. Only applicable for Vertex AI Feature Store (Legacy).
+    /// If not set, use the monitoring_config defined for the EntityType this
+    /// Feature belongs to.
+    /// Only Features with type
     /// ([Feature.ValueType][google.cloud.aiplatform.v1.Feature.ValueType]) BOOL,
     /// STRING, DOUBLE or INT64 can enable monitoring.
     ///
@@ -276,13 +286,30 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> monitoringStatsAnomalies_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly>();
     /// <summary>
-    /// Output only. The list of historical stats and anomalies with specified
-    /// objectives.
+    /// Output only. Only applicable for Vertex AI Feature Store (Legacy).
+    /// The list of historical stats and anomalies with specified objectives.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly> MonitoringStatsAnomalies {
       get { return monitoringStatsAnomalies_; }
+    }
+
+    /// <summary>Field number for the "version_column_name" field.</summary>
+    public const int VersionColumnNameFieldNumber = 106;
+    private string versionColumnName_ = "";
+    /// <summary>
+    /// Only applicable for Vertex AI Feature Store.
+    /// The name of the BigQuery Table/View column hosting data for this version.
+    /// If no value is provided, will use feature_id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VersionColumnName {
+      get { return versionColumnName_; }
+      set {
+        versionColumnName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -309,6 +336,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag != other.Etag) return false;
       if (DisableMonitoring != other.DisableMonitoring) return false;
       if(!monitoringStatsAnomalies_.Equals(other.monitoringStatsAnomalies_)) return false;
+      if (VersionColumnName != other.VersionColumnName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -325,6 +353,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (DisableMonitoring != false) hash ^= DisableMonitoring.GetHashCode();
       hash ^= monitoringStatsAnomalies_.GetHashCode();
+      if (VersionColumnName.Length != 0) hash ^= VersionColumnName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -373,6 +402,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(96);
         output.WriteBool(DisableMonitoring);
       }
+      if (VersionColumnName.Length != 0) {
+        output.WriteRawTag(210, 6);
+        output.WriteString(VersionColumnName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -413,6 +446,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(96);
         output.WriteBool(DisableMonitoring);
       }
+      if (VersionColumnName.Length != 0) {
+        output.WriteRawTag(210, 6);
+        output.WriteString(VersionColumnName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -446,6 +483,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + 1;
       }
       size += monitoringStatsAnomalies_.CalculateSize(_repeated_monitoringStatsAnomalies_codec);
+      if (VersionColumnName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VersionColumnName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -487,6 +527,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         DisableMonitoring = other.DisableMonitoring;
       }
       monitoringStatsAnomalies_.Add(other.monitoringStatsAnomalies_);
+      if (other.VersionColumnName.Length != 0) {
+        VersionColumnName = other.VersionColumnName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -542,6 +585,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 96: {
             DisableMonitoring = input.ReadBool();
+            break;
+          }
+          case 850: {
+            VersionColumnName = input.ReadString();
             break;
           }
         }
@@ -601,6 +648,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableMonitoring = input.ReadBool();
             break;
           }
+          case 850: {
+            VersionColumnName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -612,6 +663,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// Only applicable for Vertex AI Legacy Feature Store.
       /// An enum representing the value type of a feature.
       /// </summary>
       public enum ValueType {
@@ -666,6 +718,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// [FeatureStatsAnomaly.start_time][google.cloud.aiplatform.v1.FeatureStatsAnomaly.start_time]
       /// descending.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MonitoringStatsAnomaly : pb::IMessage<MonitoringStatsAnomaly>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

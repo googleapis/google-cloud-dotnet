@@ -52,6 +52,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
   /// <summary>
   /// Prediction output format for Text Extraction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextExtractionPredictionResult : pb::IMessage<TextExtractionPredictionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

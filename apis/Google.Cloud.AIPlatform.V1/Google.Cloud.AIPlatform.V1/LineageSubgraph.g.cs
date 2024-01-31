@@ -52,6 +52,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A subgraph of the overall lineage graph. Event edges connect Artifact and
   /// Execution nodes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LineageSubgraph : pb::IMessage<LineageSubgraph>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

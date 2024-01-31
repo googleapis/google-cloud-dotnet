@@ -63,6 +63,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
   /// <summary>
   /// Prediction output format for Video Object Tracking.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoObjectTrackingPredictionResult : pb::IMessage<VideoObjectTrackingPredictionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -487,6 +488,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
       /// AnnotationSpec. The coordinates are relative to the frame size, and the
       /// point 0,0 is in the top left of the frame.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Frame : pb::IMessage<Frame>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

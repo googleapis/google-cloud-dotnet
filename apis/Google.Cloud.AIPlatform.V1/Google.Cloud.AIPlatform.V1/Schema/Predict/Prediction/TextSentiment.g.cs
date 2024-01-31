@@ -50,6 +50,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
   /// <summary>
   /// Prediction output format for Text Sentiment
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSentimentPredictionResult : pb::IMessage<TextSentimentPredictionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

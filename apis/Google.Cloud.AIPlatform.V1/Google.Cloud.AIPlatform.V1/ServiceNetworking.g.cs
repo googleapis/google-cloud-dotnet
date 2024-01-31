@@ -26,16 +26,17 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25ldHdvcmtp",
             "bmcucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUv",
-            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvImUKG1ByaXZhdGVTZXJ2aWNlQ29u",
-            "bmVjdENvbmZpZxIrCh5lbmFibGVfcHJpdmF0ZV9zZXJ2aWNlX2Nvbm5lY3QY",
-            "ASABKAhCA+BBAhIZChFwcm9qZWN0X2FsbG93bGlzdBgCIAMoCULUAQoeY29t",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhZTZXJ2aWNlTmV0d29ya2lu",
-            "Z1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
-            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
-            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
-            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvImYKG1ByaXZhdGVTZXJ2aWNlQ29ubmVjdENvbmZpZxIsCh5lbmFi",
+            "bGVfcHJpdmF0ZV9zZXJ2aWNlX2Nvbm5lY3QYASABKAhCBOJBAQISGQoRcHJv",
+            "amVjdF9hbGxvd2xpc3QYAiADKAlC1AEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MUIWU2VydmljZU5ldHdvcmtpbmdQcm90b1ABWj5jbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist" }, null, null, null, null)
           }));
@@ -47,6 +48,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Represents configuration for private service connect.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrivateServiceConnectConfig : pb::IMessage<PrivateServiceConnectConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -27,23 +27,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90ZW5zb3Jib2FyZF9ydW4u",
             "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIt0DCg5UZW5z",
-            "b3Jib2FyZFJ1bhIRCgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1l",
-            "GAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YAyABKAkSNAoLY3JlYXRlX3Rp",
-            "bWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
-            "dXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSRgoGbGFiZWxzGAggAygLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuVGVuc29yYm9hcmRSdW4uTGFiZWxzRW50cnkSDAoEZXRhZxgJIAEo",
-            "CRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBOpYB6kGSAQooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9UZW5zb3Ji",
-            "b2FyZFJ1bhJmcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3RlbnNvcmJvYXJkcy97dGVuc29yYm9hcmR9L2V4cGVyaW1lbnRzL3tl",
-            "eHBlcmltZW50fS9ydW5zL3tydW59QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCE1RlbnNvcmJvYXJkUnVuUHJvdG9QAVo+Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBs",
-            "YXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
-            "Zm9ybTo6VjFiBnByb3RvMw=="));
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuEDCg5UZW5z",
+            "b3Jib2FyZFJ1bhISCgRuYW1lGAEgASgJQgTiQQEDEhoKDGRpc3BsYXlfbmFt",
+            "ZRgCIAEoCUIE4kEBAhITCgtkZXNjcmlwdGlvbhgDIAEoCRI1CgtjcmVhdGVf",
+            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMS",
+            "NQoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgTiQQEDEkYKBmxhYmVscxgIIAMoCzI2Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlRlbnNvcmJvYXJkUnVuLkxhYmVsc0VudHJ5EgwKBGV0YWcY",
+            "CSABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ATqWAepBkgEKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vVGVu",
+            "c29yYm9hcmRSdW4SZnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS90ZW5zb3Jib2FyZHMve3RlbnNvcmJvYXJkfS9leHBlcmltZW50",
+            "cy97ZXhwZXJpbWVudH0vcnVucy97cnVufULRAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxQhNUZW5zb3Jib2FyZFJ1blByb3RvUAFaPmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7",
+            "YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
+            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
+            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -58,6 +58,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// TensorboardRun maps to a specific execution of a training job with a given
   /// set of hyperparameter values, model definition, dataset, etc
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardRun : pb::IMessage<TensorboardRun>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

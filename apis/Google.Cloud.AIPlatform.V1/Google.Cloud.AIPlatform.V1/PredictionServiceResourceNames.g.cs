@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -52,6 +52,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class DirectPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DirectRawPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
     public partial class StreamingPredictRequest
     {
         /// <summary>
@@ -64,7 +88,31 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class StreamingRawPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ExplainRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CountTokensRequest
     {
         /// <summary>
         /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.

@@ -26,24 +26,24 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxIaZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
-            "b3IucHJvdG8iTAoKQXZyb1NvdXJjZRI+CgpnY3Nfc291cmNlGAEgASgLMiUu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzU291cmNlQgPgQQIiSwoJ",
-            "Q3N2U291cmNlEj4KCmdjc19zb3VyY2UYASABKAsyJS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5HY3NTb3VyY2VCA+BBAiIeCglHY3NTb3VyY2USEQoE",
-            "dXJpcxgBIAMoCUID4EECIjAKDkdjc0Rlc3RpbmF0aW9uEh4KEW91dHB1dF91",
-            "cmlfcHJlZml4GAEgASgJQgPgQQIiKAoOQmlnUXVlcnlTb3VyY2USFgoJaW5w",
-            "dXRfdXJpGAEgASgJQgPgQQIiLgoTQmlnUXVlcnlEZXN0aW5hdGlvbhIXCgpv",
-            "dXRwdXRfdXJpGAEgASgJQgPgQQIiWgoOQ3N2RGVzdGluYXRpb24SSAoPZ2Nz",
-            "X2Rlc3RpbmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuR2NzRGVzdGluYXRpb25CA+BBAiJfChNURlJlY29yZERlc3RpbmF0aW9u",
-            "EkgKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uQgPgQQIiNwocQ29udGFpbmVyUmVn",
-            "aXN0cnlEZXN0aW5hdGlvbhIXCgpvdXRwdXRfdXJpGAEgASgJQgPgQQJCxQEK",
-            "HmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIHSW9Qcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "b3IucHJvdG8iTQoKQXZyb1NvdXJjZRI/CgpnY3Nfc291cmNlGAEgASgLMiUu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzU291cmNlQgTiQQECIkwK",
+            "CUNzdlNvdXJjZRI/CgpnY3Nfc291cmNlGAEgASgLMiUuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuR2NzU291cmNlQgTiQQECIh8KCUdjc1NvdXJjZRIS",
+            "CgR1cmlzGAEgAygJQgTiQQECIjEKDkdjc0Rlc3RpbmF0aW9uEh8KEW91dHB1",
+            "dF91cmlfcHJlZml4GAEgASgJQgTiQQECIikKDkJpZ1F1ZXJ5U291cmNlEhcK",
+            "CWlucHV0X3VyaRgBIAEoCUIE4kEBAiIvChNCaWdRdWVyeURlc3RpbmF0aW9u",
+            "EhgKCm91dHB1dF91cmkYASABKAlCBOJBAQIiWwoOQ3N2RGVzdGluYXRpb24S",
+            "SQoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuR2NzRGVzdGluYXRpb25CBOJBAQIiYAoTVEZSZWNvcmREZXN0",
+            "aW5hdGlvbhJJCg9nY3NfZGVzdGluYXRpb24YASABKAsyKi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbkIE4kEBAiI4ChxDb250",
+            "YWluZXJSZWdpc3RyeURlc3RpbmF0aW9uEhgKCm91dHB1dF91cmkYASABKAlC",
+            "BOJBAQJCxQEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIHSW9Q",
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEv",
+            "YWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,6 +65,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The storage details for Avro input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AvroSource : pb::IMessage<AvroSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -269,6 +270,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The storage details for CSV input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CsvSource : pb::IMessage<CsvSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -473,6 +475,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The Google Cloud Storage location for the input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -659,6 +662,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output is to be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -857,6 +861,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The BigQuery location for the input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQuerySource : pb::IMessage<BigQuerySource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1055,6 +1060,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The BigQuery location for the output content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1260,6 +1266,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The storage details for CSV output content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CsvDestination : pb::IMessage<CsvDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1464,6 +1471,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The storage details for TFRecord output content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TFRecordDestination : pb::IMessage<TFRecordDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1668,6 +1676,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The Container Registry location for the container image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerRegistryDestination : pb::IMessage<ContainerRegistryDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

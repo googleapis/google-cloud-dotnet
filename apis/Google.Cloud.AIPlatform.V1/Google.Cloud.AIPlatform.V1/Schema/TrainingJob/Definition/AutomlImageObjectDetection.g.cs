@@ -73,6 +73,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// A TrainingJob that trains and uploads an AutoML Image Object Detection Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlImageObjectDetection : pb::IMessage<AutoMlImageObjectDetection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -323,6 +324,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlImageObjectDetectionInputs : pb::IMessage<AutoMlImageObjectDetectionInputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -658,6 +660,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlImageObjectDetectionMetadata : pb::IMessage<AutoMlImageObjectDetectionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

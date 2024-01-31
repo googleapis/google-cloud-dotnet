@@ -27,38 +27,38 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNl",
             "cy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8ijwEKC01hY2hpbmVTcGVj",
-            "EhkKDG1hY2hpbmVfdHlwZRgBIAEoCUID4EEFEkoKEGFjY2VsZXJhdG9yX3R5",
-            "cGUYAiABKA4yKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BY2NlbGVy",
-            "YXRvclR5cGVCA+BBBRIZChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBSL4AQoS",
-            "RGVkaWNhdGVkUmVzb3VyY2VzEkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hpbmVTcGVjQgbgQQLgQQUS",
-            "IQoRbWluX3JlcGxpY2FfY291bnQYAiABKAVCBuBBAuBBBRIeChFtYXhfcmVw",
-            "bGljYV9jb3VudBgDIAEoBUID4EEFElgKGGF1dG9zY2FsaW5nX21ldHJpY19z",
-            "cGVjcxgEIAMoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkF1dG9z",
-            "Y2FsaW5nTWV0cmljU3BlY0ID4EEFIlQKEkF1dG9tYXRpY1Jlc291cmNlcxIe",
-            "ChFtaW5fcmVwbGljYV9jb3VudBgBIAEoBUID4EEFEh4KEW1heF9yZXBsaWNh",
-            "X2NvdW50GAIgASgFQgPgQQUipQEKF0JhdGNoRGVkaWNhdGVkUmVzb3VyY2Vz",
-            "EkUKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLk1hY2hpbmVTcGVjQgbgQQLgQQUSIwoWc3RhcnRpbmdfcmVwbGlj",
-            "YV9jb3VudBgCIAEoBUID4EEFEh4KEW1heF9yZXBsaWNhX2NvdW50GAMgASgF",
-            "QgPgQQUiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGljYV9ob3VycxgB",
-            "IAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190eXBlGAEgASgJ",
-            "EhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNr",
-            "U3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIgASgD",
-            "IkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiAB",
-            "KAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2Fs",
-            "aW5nTWV0cmljU3BlYxIYCgttZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRh",
-            "cmdldBgCIAEoBULTAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "QhVNYWNoaW5lUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8irQEKC01hY2hpbmVTcGVj",
+            "EhoKDG1hY2hpbmVfdHlwZRgBIAEoCUIE4kEBBRJLChBhY2NlbGVyYXRvcl90",
+            "eXBlGAIgASgOMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQWNjZWxl",
+            "cmF0b3JUeXBlQgTiQQEFEhkKEWFjY2VsZXJhdG9yX2NvdW50GAMgASgFEhoK",
+            "DHRwdV90b3BvbG9neRgEIAEoCUIE4kEBBSL4AQoSRGVkaWNhdGVkUmVzb3Vy",
+            "Y2VzEkQKDG1hY2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLk1hY2hpbmVTcGVjQgXiQQICBRIgChFtaW5fcmVwbGljYV9j",
+            "b3VudBgCIAEoBUIF4kECAgUSHwoRbWF4X3JlcGxpY2FfY291bnQYAyABKAVC",
+            "BOJBAQUSWQoYYXV0b3NjYWxpbmdfbWV0cmljX3NwZWNzGAQgAygLMjEuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQXV0b3NjYWxpbmdNZXRyaWNTcGVj",
+            "QgTiQQEFIlYKEkF1dG9tYXRpY1Jlc291cmNlcxIfChFtaW5fcmVwbGljYV9j",
+            "b3VudBgBIAEoBUIE4kEBBRIfChFtYXhfcmVwbGljYV9jb3VudBgCIAEoBUIE",
+            "4kEBBSKmAQoXQmF0Y2hEZWRpY2F0ZWRSZXNvdXJjZXMSRAoMbWFjaGluZV9z",
+            "cGVjGAEgASgLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTWFjaGlu",
+            "ZVNwZWNCBeJBAgIFEiQKFnN0YXJ0aW5nX3JlcGxpY2FfY291bnQYAiABKAVC",
+            "BOJBAQUSHwoRbWF4X3JlcGxpY2FfY291bnQYAyABKAVCBOJBAQUiMAoRUmVz",
+            "b3VyY2VzQ29uc3VtZWQSGwoNcmVwbGljYV9ob3VycxgBIAEoAUIE4kEBAyI9",
+            "CghEaXNrU3BlYxIWCg5ib290X2Rpc2tfdHlwZRgBIAEoCRIZChFib290X2Rp",
+            "c2tfc2l6ZV9nYhgCIAEoBSI9ChJQZXJzaXN0ZW50RGlza1NwZWMSEQoJZGlz",
+            "a190eXBlGAEgASgJEhQKDGRpc2tfc2l6ZV9nYhgCIAEoAyJPCghOZnNNb3Vu",
+            "dBIUCgZzZXJ2ZXIYASABKAlCBOJBAQISEgoEcGF0aBgCIAEoCUIE4kEBAhIZ",
+            "Cgttb3VudF9wb2ludBgDIAEoCUIE4kEBAiJCChVBdXRvc2NhbGluZ01ldHJp",
+            "Y1NwZWMSGQoLbWV0cmljX25hbWUYASABKAlCBOJBAQISDgoGdGFyZ2V0GAIg",
+            "ASgFQtMBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFU1hY2hp",
+            "bmVSZXNvdXJjZXNQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
+            "dGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZv",
+            "cm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount", "TpuTopology" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutomaticResources), global::Google.Cloud.AIPlatform.V1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount" }, null, null, null, null),
@@ -76,6 +76,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Specification of a single machine.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MachineSpec : pb::IMessage<MachineSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -113,6 +114,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       machineType_ = other.machineType_;
       acceleratorType_ = other.acceleratorType_;
       acceleratorCount_ = other.acceleratorCount_;
+      tpuTopology_ = other.tpuTopology_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -181,6 +183,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "tpu_topology" field.</summary>
+    public const int TpuTopologyFieldNumber = 4;
+    private string tpuTopology_ = "";
+    /// <summary>
+    /// Immutable. The topology of the TPUs. Corresponds to the TPU topologies
+    /// available from GKE. (Example: tpu_topology: "2x2x1").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TpuTopology {
+      get { return tpuTopology_; }
+      set {
+        tpuTopology_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -199,6 +217,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MachineType != other.MachineType) return false;
       if (AcceleratorType != other.AcceleratorType) return false;
       if (AcceleratorCount != other.AcceleratorCount) return false;
+      if (TpuTopology != other.TpuTopology) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -209,6 +228,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
       if (AcceleratorType != global::Google.Cloud.AIPlatform.V1.AcceleratorType.Unspecified) hash ^= AcceleratorType.GetHashCode();
       if (AcceleratorCount != 0) hash ^= AcceleratorCount.GetHashCode();
+      if (TpuTopology.Length != 0) hash ^= TpuTopology.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -239,6 +259,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(AcceleratorCount);
       }
+      if (TpuTopology.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TpuTopology);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -261,6 +285,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(24);
         output.WriteInt32(AcceleratorCount);
       }
+      if (TpuTopology.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TpuTopology);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -279,6 +307,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (AcceleratorCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AcceleratorCount);
+      }
+      if (TpuTopology.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TpuTopology);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -300,6 +331,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.AcceleratorCount != 0) {
         AcceleratorCount = other.AcceleratorCount;
+      }
+      if (other.TpuTopology.Length != 0) {
+        TpuTopology = other.TpuTopology;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -326,6 +360,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 24: {
             AcceleratorCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            TpuTopology = input.ReadString();
             break;
           }
         }
@@ -355,6 +393,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             AcceleratorCount = input.ReadInt32();
             break;
           }
+          case 34: {
+            TpuTopology = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -366,6 +408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A description of resources that are dedicated to a DeployedModel, and
   /// that need a higher degree of manual configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DedicatedResources : pb::IMessage<DedicatedResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -723,6 +766,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// and require only a modest additional configuration.
   /// Each Model supporting these resources documents its specific guidelines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutomaticResources : pb::IMessage<AutomaticResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -972,6 +1016,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A description of resources that are used for performing batch operations, are
   /// dedicated to a Model, and need manual configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDedicatedResources : pb::IMessage<BatchDedicatedResources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1259,6 +1304,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Statistics information about resource consumption.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourcesConsumed : pb::IMessage<ResourcesConsumed>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1456,6 +1502,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Represents the spec of disk options.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiskSpec : pb::IMessage<DiskSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1694,6 +1741,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Represents the spec of [persistent
   /// disk][https://cloud.google.com/compute/docs/disks/persistent-disks] options.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersistentDiskSpec : pb::IMessage<PersistentDiskSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1933,6 +1981,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Represents a mount configuration for Network File System (NFS) to mount.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NfsMount : pb::IMessage<NfsMount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2213,6 +2262,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// (CPU utilization, accelerator's duty cycle, and so on) for calculating the
   /// desired replica count.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingMetricSpec : pb::IMessage<AutoscalingMetricSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

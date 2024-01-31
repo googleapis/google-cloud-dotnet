@@ -46,6 +46,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Value is the value of the field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Value : pb::IMessage<Value>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

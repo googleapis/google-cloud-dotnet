@@ -28,25 +28,25 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmll",
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
             "MGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3BlYy5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLGBAoLVGVu",
-            "c29yYm9hcmQSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
-            "IAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkMKD2VuY3J5cHRpb25f",
-            "c3BlYxgLIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5",
-            "cHRpb25TcGVjEiUKGGJsb2Jfc3RvcmFnZV9wYXRoX3ByZWZpeBgKIAEoCUID",
-            "4EEDEhYKCXJ1bl9jb3VudBgFIAEoBUID4EEDEjQKC2NyZWF0ZV90aW1lGAYg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EkMKBmxhYmVscxgIIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlRlbnNvcmJvYXJkLkxhYmVsc0VudHJ5EgwKBGV0YWcYCSABKAkSEgoKaXNf",
-            "ZGVmYXVsdBgMIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBOm7qQWsKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
-            "b20vVGVuc29yYm9hcmQSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS90ZW5zb3Jib2FyZHMve3RlbnNvcmJvYXJkfULOAQoeY29t",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhBUZW5zb3Jib2FyZFByb3Rv",
-            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
-            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLMBAoLVGVu",
+            "c29yYm9hcmQSEgoEbmFtZRgBIAEoCUIE4kEBAxIaCgxkaXNwbGF5X25hbWUY",
+            "AiABKAlCBOJBAQISEwoLZGVzY3JpcHRpb24YAyABKAkSQwoPZW5jcnlwdGlv",
+            "bl9zcGVjGAsgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5j",
+            "cnlwdGlvblNwZWMSJgoYYmxvYl9zdG9yYWdlX3BhdGhfcHJlZml4GAogASgJ",
+            "QgTiQQEDEhcKCXJ1bl9jb3VudBgFIAEoBUIE4kEBAxI1CgtjcmVhdGVfdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBOJBAQMSNQoL",
+            "dXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgTiQQEDEkMKBmxhYmVscxgIIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLlRlbnNvcmJvYXJkLkxhYmVsc0VudHJ5EgwKBGV0YWcYCSABKAkS",
+            "EgoKaXNfZGVmYXVsdBgMIAEoCBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBOm7qQWsKJWFpcGxhdGZvcm0uZ29vZ2xl",
+            "YXBpcy5jb20vVGVuc29yYm9hcmQSQnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS90ZW5zb3Jib2FyZHMve3RlbnNvcmJvYXJkfULO",
+            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhBUZW5zb3Jib2Fy",
+            "ZFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,6 +62,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A default Tensorboard is provided in each region of a Google Cloud project.
   /// If needed users can also create extra Tensorboards in their projects.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tensorboard : pb::IMessage<Tensorboard>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

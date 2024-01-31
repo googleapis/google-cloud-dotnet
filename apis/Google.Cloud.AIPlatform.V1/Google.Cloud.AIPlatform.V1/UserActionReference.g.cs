@@ -48,6 +48,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// References an API call. It contains more information about long running
   /// operation and Jobs that are triggered by the API call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserActionReference : pb::IMessage<UserActionReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
