@@ -1,5 +1,48 @@
 # Version history
 
+## Version 2.21.0, released 2024-01-31
+
+### New features
+
+- Add models to CustomJobSpec
+- Add Content
+- Add ExportUse and ExportFilterSplit to Dataset
+- Add data_stats to ExportDataResponse
+- Add display_name to DeployedIndex
+- Add DeploymentResourcePool
+- Add DeploymentResourcePoolService
+- Add shared_resources to DeployedModel
+- Add DataStats to Model
+- Add model and contents to PredictionService
+- Add Tool
+- Add data_stats to Model
+- Add data_stats to ExportDataResponse
+- Add filter_split to ExportDataConfig
+- Add saved_query_id to ExportDataConfig
+- Add annotation_schema_uri to ExportDataConfig
+- Add export_use to ExportDataConfig
+- Add grpc_ports to UploadModel ModelContainerSpec
+- Add DirectPredict to PredictionService
+- Add DirectRawPredict to PredictionService
+- Add StreamingPredict to PredictionService.
+- Add StreamingRawPredict to PredictionService.
+- Add deployment_timeout to UploadModel ModelContainerSpec
+- Add shared_memory_size_mb to UploadModel ModelContainerSpec
+- Add startup_probe, health_probe to UploadModel ModelContainerSpec
+- Add protected_artifact_location_id to CustomJob
+- Add value_type, version_column_name to Feature
+- Add FeatureGroup, FeatureOnlineStore, FeatureOnlineStoreAdminService, FeatureOnlineStoreService, FeatureRegistryService, FeatureView, FeatureViewSync
+- Add NumericRestriction to Index
+- Add tpu_topology to MachineSpec
+- Add CountTokensRequest to PredictionService
+- Add StudyTimeConstraint to Study
+- Add ComputeTokens and CountTokens API
+
+### Documentation improvements
+
+- Add comments for FeatureOnlineStoreService and ModelMonitoringAlertConfig
+- Update exported_files description in ExportDataResponse
+
 ## Version 2.20.0, released 2023-10-26
 
 ### New features
