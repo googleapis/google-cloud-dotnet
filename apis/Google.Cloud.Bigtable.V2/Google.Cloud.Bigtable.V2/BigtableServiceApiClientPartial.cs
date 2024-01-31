@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -205,14 +205,14 @@ namespace Google.Cloud.Bigtable.V2
         protected override CallInvoker CreateCallInvoker() => CallInvoker ?? CreateGcpCallInvoker();
 
         /// <summary>
-        ///
+        /// Creates a <see cref="GcpCallInvoker"/> which is a call invoker that can distribute calls across
+        /// different underlying channels based on request properties.
         /// </summary>
-        /// <returns></returns>
         public GcpCallInvoker CreateGcpCallInvoker()
         {
             GaxPreconditions.CheckState(CallInvoker is null,
                 "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
-            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var endpoint = EffectiveEndpoint;
             var channelOptions = GetChannelOptions();
             var apiConfig = Settings.CreateApiConfig();
             var grpcAdapter = EffectiveGrpcAdapter;
@@ -220,7 +220,7 @@ namespace Google.Cloud.Bigtable.V2
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions, apiConfig, grpcAdapter);
+                return CallInvokerPool.GetCallInvoker(EffectiveUniverseDomain, endpoint, channelOptions, apiConfig, grpcAdapter);
             }
             else
             {
@@ -245,14 +245,14 @@ namespace Google.Cloud.Bigtable.V2
             CallInvoker ?? await CreateGcpCallInvokerAsync(cancellationToken).ConfigureAwait(false);
 
         /// <summary>
-        ///
+        /// Creates a <see cref="GcpCallInvoker"/> which is a call invoker that can distribute calls across
+        /// different underlying channels based on request properties.
         /// </summary>
-        /// <returns></returns>
         public async Task<GcpCallInvoker> CreateGcpCallInvokerAsync(CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckState(CallInvoker is null,
                 "Cannot call {0} on a builder that already has {1} set.", nameof(CreateGcpCallInvoker), nameof(CallInvoker));
-            var endpoint = Endpoint ?? ServiceMetadata.DefaultEndpoint;
+            var endpoint = EffectiveEndpoint;
             var channelOptions = GetChannelOptions();
             var apiConfig = Settings.CreateApiConfig();
             var grpcAdapter = EffectiveGrpcAdapter;
@@ -260,7 +260,7 @@ namespace Google.Cloud.Bigtable.V2
             // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
             if (base.CanUseChannelPool)
             {
-                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions, apiConfig, grpcAdapter).ConfigureAwait(false);
+                return await CallInvokerPool.GetCallInvokerAsync(EffectiveUniverseDomain, endpoint, channelOptions, apiConfig, grpcAdapter, cancellationToken).ConfigureAwait(false);
             }
             else
             {
