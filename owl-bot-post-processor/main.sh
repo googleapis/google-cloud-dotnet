@@ -37,7 +37,7 @@ copy_one_api() {
   # the comment from the last commit in the local directory.
   GOOGLEAPIS_COMMIT=$(git show --format=%B -s \
      | grep "^Source-Link: https://github.com/googleapis/googleapis/commit/" \
-     | sed 's/.*\/commit\///g'
+     | sed 's/.*\/commit\///g' \
      | head -n 1)
 
   # We don't expect googleapis-gen to contain the right (or potentially
