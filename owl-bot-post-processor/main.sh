@@ -33,12 +33,13 @@ copy_one_api() {
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
 
-  # Determine the commit for googleapis to use based on the Source-Link in
+  # Determine the commit for googleapis to use based on the first Source-Link in
   # the comment from the last commit in the local directory.
   GOOGLEAPIS_COMMIT=$(git show --format=%B -s \
      | grep "^Source-Link: https://github.com/googleapis/googleapis/commit/" \
-     | sed 's/.*\/commit\///g')
-    
+     | sed 's/.*\/commit\///g'
+     | head -n 1)
+
   # We don't expect googleapis-gen to contain the right (or potentially
   # even valid) code for APIs which have pre/mid-generation tweak scripts,
   # or custom resource configurations - or a few other corner cases.
