@@ -209,6 +209,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The payload associated with Discovery data processing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoveryEvent : pb::IMessage<DiscoveryEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -914,6 +915,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Details about configuration events.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConfigDetails : pb::IMessage<ConfigDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1101,6 +1103,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Details about the entity.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityDetails : pb::IMessage<EntityDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1337,6 +1340,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Details about the partition.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PartitionDetails : pb::IMessage<PartitionDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1644,6 +1648,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Details about the action.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ActionDetails : pb::IMessage<ActionDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1846,6 +1851,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// The payload associated with Job logs that contains events describing jobs
   /// that have run within a Lake.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobEvent : pb::IMessage<JobEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2505,6 +2511,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// These messages contain information about sessions within an environment.
   /// The monitored resource is 'Environment'.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionEvent : pb::IMessage<SessionEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3064,6 +3071,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Execution details of the query.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QueryDetail : pb::IMessage<QueryDetail>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3499,6 +3507,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Payload associated with Governance related log events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GovernanceEvent : pb::IMessage<GovernanceEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3861,6 +3870,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Information about Entity resource that the log event is associated with.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entity : pb::IMessage<Entity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4131,6 +4141,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// The monitored resource is 'DataScan'
   /// Next ID: 13
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataScanEvent : pb::IMessage<DataScanEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5167,6 +5178,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Data profile result for data scan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataProfileResult : pb::IMessage<DataProfileResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5362,6 +5374,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Data quality result for data scan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataQualityResult : pb::IMessage<DataQualityResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5740,6 +5753,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Applied configs for data profile type data scan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataProfileAppliedConfigs : pb::IMessage<DataProfileAppliedConfigs>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6019,6 +6033,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Applied configs for data quality type data scan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataQualityAppliedConfigs : pb::IMessage<DataQualityAppliedConfigs>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6257,6 +6272,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Post scan actions result for data scan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PostScanActionsResult : pb::IMessage<PostScanActionsResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6464,6 +6480,7 @@ namespace Google.Cloud.Dataplex.V1 {
           /// <summary>
           /// The result of BigQuery export post scan action.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BigQueryExportResult : pb::IMessage<BigQueryExportResult>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -6741,6 +6758,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// Information about the result of a data quality rule for data quality scan.
   /// The monitored resource is 'DataScan'.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityScanRuleResult : pb::IMessage<DataQualityScanRuleResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

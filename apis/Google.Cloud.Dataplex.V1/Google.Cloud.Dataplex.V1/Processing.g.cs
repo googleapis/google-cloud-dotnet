@@ -26,21 +26,21 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvcHJvY2Vzc2luZy5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIr0BCgdU",
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIr4BCgdU",
             "cmlnZ2VyEj8KCW9uX2RlbWFuZBhkIAEoCzIqLmdvb2dsZS5jbG91ZC5kYXRh",
             "cGxleC52MS5UcmlnZ2VyLk9uRGVtYW5kSAASPgoIc2NoZWR1bGUYZSABKAsy",
             "Ki5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVHJpZ2dlci5TY2hlZHVsZUgA",
-            "GgoKCE9uRGVtYW5kGh0KCFNjaGVkdWxlEhEKBGNyb24YASABKAlCA+BBAkIG",
-            "CgRtb2RlImkKCkRhdGFTb3VyY2USOAoGZW50aXR5GGQgASgJQibgQQX6QSAK",
-            "HmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eUgAEhcKCHJlc291cmNl",
-            "GGUgASgJQgPgQQVIAEIICgZzb3VyY2UirwEKC1NjYW5uZWREYXRhElMKEWlu",
-            "Y3JlbWVudGFsX2ZpZWxkGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABo9ChBJbmNyZW1l",
-            "bnRhbEZpZWxkEg0KBWZpZWxkGAEgASgJEg0KBXN0YXJ0GAIgASgJEgsKA2Vu",
-            "ZBgDIAEoCUIMCgpkYXRhX3JhbmdlQmsKHGNvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJv",
-            "dG8z"));
+            "GgoKCE9uRGVtYW5kGh4KCFNjaGVkdWxlEhIKBGNyb24YASABKAlCBOJBAQJC",
+            "BgoEbW9kZSJrCgpEYXRhU291cmNlEjkKBmVudGl0eRhkIAEoCUIn4kEBBfpB",
+            "IAoeZGF0YXBsZXguZ29vZ2xlYXBpcy5jb20vRW50aXR5SAASGAoIcmVzb3Vy",
+            "Y2UYZSABKAlCBOJBAQVIAEIICgZzb3VyY2UirwEKC1NjYW5uZWREYXRhElMK",
+            "EWluY3JlbWVudGFsX2ZpZWxkGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABo9ChBJbmNy",
+            "ZW1lbnRhbEZpZWxkEg0KBWZpZWxkGAEgASgJEg0KBXN0YXJ0GAIgASgJEgsK",
+            "A2VuZBgDIAEoCUIMCgpkYXRhX3JhbmdlQmsKHGNvbS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,6 +57,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// DataScan scheduling and trigger settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trigger : pb::IMessage<Trigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -354,6 +355,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// The scan runs once via `RunDataScan` API.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OnDemand : pb::IMessage<OnDemand>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -509,6 +511,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// The scan is scheduled to run periodically.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -720,6 +723,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The data source for DataScan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataSource : pb::IMessage<DataSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1021,6 +1025,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The data scanned during processing (e.g. in incremental DataScan)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScannedData : pb::IMessage<ScannedData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1262,6 +1267,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// A data range denoted by a pair of start/end values of a field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IncrementalField : pb::IMessage<IncrementalField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
