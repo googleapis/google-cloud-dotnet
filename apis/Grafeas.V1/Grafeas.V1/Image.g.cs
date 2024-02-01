@@ -51,6 +51,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Layer holds metadata specific to a layer of a Docker image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Layer : pb::IMessage<Layer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -287,6 +288,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// A set of properties that uniquely identify a given Docker image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Fingerprint : pb::IMessage<Fingerprint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -559,6 +561,7 @@ namespace Grafeas.V1 {
   ///   FROM &lt;Basis.resource_url>
   /// Or an equivalent reference, e.g., a tag of the resource_url.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageNote : pb::IMessage<ImageNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -806,6 +809,7 @@ namespace Grafeas.V1 {
   /// image would be produced from a Dockerfile with FROM &lt;DockerImage.Basis in
   /// attached Note>.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageOccurrence : pb::IMessage<ImageOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

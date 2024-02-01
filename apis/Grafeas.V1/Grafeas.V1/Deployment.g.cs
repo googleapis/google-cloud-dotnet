@@ -50,6 +50,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// An artifact that can be deployed in some runtime.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeploymentNote : pb::IMessage<DeploymentNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -234,6 +235,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// The period during which some deployable was active in a runtime.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeploymentOccurrence : pb::IMessage<DeploymentOccurrence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
