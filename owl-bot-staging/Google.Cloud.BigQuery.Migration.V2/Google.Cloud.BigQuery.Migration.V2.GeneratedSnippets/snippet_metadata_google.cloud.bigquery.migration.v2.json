@@ -1,0 +1,2097 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.BigQuery.Migration.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.bigquery.migration.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_sync",
+      "title": "CreateMigrationWorkflowRequestObject",
+      "description": "Snippet for CreateMigrationWorkflow",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.CreateMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_async",
+      "title": "CreateMigrationWorkflowRequestObjectAsync",
+      "description": "Snippet for CreateMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.CreateMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_sync_flattened",
+      "title": "CreateMigrationWorkflow",
+      "description": "Snippet for CreateMigrationWorkflow",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_async_flattened",
+      "title": "CreateMigrationWorkflowAsync",
+      "description": "Snippet for CreateMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_sync_flattened_resourceNames",
+      "title": "CreateMigrationWorkflowResourceNames",
+      "description": "Snippet for CreateMigrationWorkflow",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_CreateMigrationWorkflow_async_flattened_resourceNames",
+      "title": "CreateMigrationWorkflowResourceNamesAsync",
+      "description": "Snippet for CreateMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.CreateMigrationWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.CreateMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+            "name": "migrationWorkflow"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.CreateMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_sync",
+      "title": "GetMigrationWorkflowRequestObject",
+      "description": "Snippet for GetMigrationWorkflow",
+      "file": "MigrationServiceClient.GetMigrationWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_async",
+      "title": "GetMigrationWorkflowRequestObjectAsync",
+      "description": "Snippet for GetMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.GetMigrationWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_sync_flattened",
+      "title": "GetMigrationWorkflow",
+      "description": "Snippet for GetMigrationWorkflow",
+      "file": "MigrationServiceClient.GetMigrationWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_async_flattened",
+      "title": "GetMigrationWorkflowAsync",
+      "description": "Snippet for GetMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.GetMigrationWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_sync_flattened_resourceNames",
+      "title": "GetMigrationWorkflowResourceNames",
+      "description": "Snippet for GetMigrationWorkflow",
+      "file": "MigrationServiceClient.GetMigrationWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationWorkflow_async_flattened_resourceNames",
+      "title": "GetMigrationWorkflowResourceNamesAsync",
+      "description": "Snippet for GetMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.GetMigrationWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_sync",
+      "title": "ListMigrationWorkflowsRequestObject",
+      "description": "Snippet for ListMigrationWorkflows",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflows",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_async",
+      "title": "ListMigrationWorkflowsRequestObjectAsync",
+      "description": "Snippet for ListMigrationWorkflowsAsync",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflowsAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_sync_flattened",
+      "title": "ListMigrationWorkflows",
+      "description": "Snippet for ListMigrationWorkflows",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflows",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_async_flattened",
+      "title": "ListMigrationWorkflowsAsync",
+      "description": "Snippet for ListMigrationWorkflowsAsync",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflowsAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_sync_flattened_resourceNames",
+      "title": "ListMigrationWorkflowsResourceNames",
+      "description": "Snippet for ListMigrationWorkflows",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflows",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflows",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationWorkflows_async_flattened_resourceNames",
+      "title": "ListMigrationWorkflowsResourceNamesAsync",
+      "description": "Snippet for ListMigrationWorkflowsAsync",
+      "file": "MigrationServiceClient.ListMigrationWorkflowsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationWorkflowsAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationWorkflowsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationWorkflowsResponse, Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationWorkflows",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationWorkflows",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_sync",
+      "title": "DeleteMigrationWorkflowRequestObject",
+      "description": "Snippet for DeleteMigrationWorkflow",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.DeleteMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_async",
+      "title": "DeleteMigrationWorkflowRequestObjectAsync",
+      "description": "Snippet for DeleteMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.DeleteMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_sync_flattened",
+      "title": "DeleteMigrationWorkflow",
+      "description": "Snippet for DeleteMigrationWorkflow",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_async_flattened",
+      "title": "DeleteMigrationWorkflowAsync",
+      "description": "Snippet for DeleteMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_sync_flattened_resourceNames",
+      "title": "DeleteMigrationWorkflowResourceNames",
+      "description": "Snippet for DeleteMigrationWorkflow",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_DeleteMigrationWorkflow_async_flattened_resourceNames",
+      "title": "DeleteMigrationWorkflowResourceNamesAsync",
+      "description": "Snippet for DeleteMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.DeleteMigrationWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.DeleteMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.DeleteMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_sync",
+      "title": "StartMigrationWorkflowRequestObject",
+      "description": "Snippet for StartMigrationWorkflow",
+      "file": "MigrationServiceClient.StartMigrationWorkflowRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.StartMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_async",
+      "title": "StartMigrationWorkflowRequestObjectAsync",
+      "description": "Snippet for StartMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.StartMigrationWorkflowRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.StartMigrationWorkflowRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_sync_flattened",
+      "title": "StartMigrationWorkflow",
+      "description": "Snippet for StartMigrationWorkflow",
+      "file": "MigrationServiceClient.StartMigrationWorkflowSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_async_flattened",
+      "title": "StartMigrationWorkflowAsync",
+      "description": "Snippet for StartMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.StartMigrationWorkflowAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_sync_flattened_resourceNames",
+      "title": "StartMigrationWorkflowResourceNames",
+      "description": "Snippet for StartMigrationWorkflow",
+      "file": "MigrationServiceClient.StartMigrationWorkflowResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflow",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflow",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_StartMigrationWorkflow_async_flattened_resourceNames",
+      "title": "StartMigrationWorkflowResourceNamesAsync",
+      "description": "Snippet for StartMigrationWorkflowAsync",
+      "file": "MigrationServiceClient.StartMigrationWorkflowResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationWorkflowAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.StartMigrationWorkflowAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "StartMigrationWorkflow",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.StartMigrationWorkflow",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_sync",
+      "title": "GetMigrationSubtaskRequestObject",
+      "description": "Snippet for GetMigrationSubtask",
+      "file": "MigrationServiceClient.GetMigrationSubtaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtask",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationSubtaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_async",
+      "title": "GetMigrationSubtaskRequestObjectAsync",
+      "description": "Snippet for GetMigrationSubtaskAsync",
+      "file": "MigrationServiceClient.GetMigrationSubtaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtaskAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.GetMigrationSubtaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_sync_flattened",
+      "title": "GetMigrationSubtask",
+      "description": "Snippet for GetMigrationSubtask",
+      "file": "MigrationServiceClient.GetMigrationSubtaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtask",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_async_flattened",
+      "title": "GetMigrationSubtaskAsync",
+      "description": "Snippet for GetMigrationSubtaskAsync",
+      "file": "MigrationServiceClient.GetMigrationSubtaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtaskAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_sync_flattened_resourceNames",
+      "title": "GetMigrationSubtaskResourceNames",
+      "description": "Snippet for GetMigrationSubtask",
+      "file": "MigrationServiceClient.GetMigrationSubtaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtask",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtask",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_GetMigrationSubtask_async_flattened_resourceNames",
+      "title": "GetMigrationSubtaskResourceNamesAsync",
+      "description": "Snippet for GetMigrationSubtaskAsync",
+      "file": "MigrationServiceClient.GetMigrationSubtaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMigrationSubtaskAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.GetMigrationSubtaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationSubtaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "GetMigrationSubtask",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.GetMigrationSubtask",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_sync",
+      "title": "ListMigrationSubtasksRequestObject",
+      "description": "Snippet for ListMigrationSubtasks",
+      "file": "MigrationServiceClient.ListMigrationSubtasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasks",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_async",
+      "title": "ListMigrationSubtasksRequestObjectAsync",
+      "description": "Snippet for ListMigrationSubtasksAsync",
+      "file": "MigrationServiceClient.ListMigrationSubtasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasksAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_sync_flattened",
+      "title": "ListMigrationSubtasks",
+      "description": "Snippet for ListMigrationSubtasks",
+      "file": "MigrationServiceClient.ListMigrationSubtasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasks",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_async_flattened",
+      "title": "ListMigrationSubtasksAsync",
+      "description": "Snippet for ListMigrationSubtasksAsync",
+      "file": "MigrationServiceClient.ListMigrationSubtasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasksAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_sync_flattened_resourceNames",
+      "title": "ListMigrationSubtasksResourceNames",
+      "description": "Snippet for ListMigrationSubtasks",
+      "file": "MigrationServiceClient.ListMigrationSubtasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasks",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerymigration_v2_generated_MigrationService_ListMigrationSubtasks_async_flattened_resourceNames",
+      "title": "ListMigrationSubtasksResourceNamesAsync",
+      "description": "Snippet for ListMigrationSubtasksAsync",
+      "file": "MigrationServiceClient.ListMigrationSubtasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMigrationSubtasksAsync",
+        "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient.ListMigrationSubtasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Migration.V2.MigrationWorkflowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Migration.V2.ListMigrationSubtasksResponse, Google.Cloud.BigQuery.Migration.V2.MigrationSubtask>",
+        "client": {
+          "shortName": "MigrationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Migration.V2.MigrationServiceClient"
+        },
+        "method": {
+          "shortName": "ListMigrationSubtasks",
+          "fullName": "google.cloud.bigquery.migration.v2.MigrationService.ListMigrationSubtasks",
+          "service": {
+            "shortName": "MigrationService",
+            "fullName": "google.cloud.bigquery.migration.v2.MigrationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

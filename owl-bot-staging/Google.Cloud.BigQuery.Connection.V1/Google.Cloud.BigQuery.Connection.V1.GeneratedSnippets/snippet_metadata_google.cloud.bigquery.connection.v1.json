@@ -1,0 +1,2451 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.BigQuery.Connection.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.bigquery.connection.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_sync",
+      "title": "CreateConnectionRequestObject",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectionServiceClient.CreateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_async",
+      "title": "CreateConnectionRequestObjectAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectionServiceClient.CreateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_sync_flattened",
+      "title": "CreateConnection",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectionServiceClient.CreateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_async_flattened",
+      "title": "CreateConnectionAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectionServiceClient.CreateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_sync_flattened_resourceNames",
+      "title": "CreateConnectionResourceNames",
+      "description": "Snippet for CreateConnection",
+      "file": "ConnectionServiceClient.CreateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_CreateConnection_async_flattened_resourceNames",
+      "title": "CreateConnectionResourceNamesAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "ConnectionServiceClient.CreateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.CreateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_sync",
+      "title": "GetConnectionRequestObject",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectionServiceClient.GetConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_async",
+      "title": "GetConnectionRequestObjectAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectionServiceClient.GetConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_sync_flattened",
+      "title": "GetConnection",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectionServiceClient.GetConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_async_flattened",
+      "title": "GetConnectionAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectionServiceClient.GetConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_sync_flattened_resourceNames",
+      "title": "GetConnectionResourceNames",
+      "description": "Snippet for GetConnection",
+      "file": "ConnectionServiceClient.GetConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetConnection_async_flattened_resourceNames",
+      "title": "GetConnectionResourceNamesAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "ConnectionServiceClient.GetConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse, Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_sync",
+      "title": "UpdateConnectionRequestObject",
+      "description": "Snippet for UpdateConnection",
+      "file": "ConnectionServiceClient.UpdateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_async",
+      "title": "UpdateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "ConnectionServiceClient.UpdateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_sync_flattened",
+      "title": "UpdateConnection",
+      "description": "Snippet for UpdateConnection",
+      "file": "ConnectionServiceClient.UpdateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_async_flattened",
+      "title": "UpdateConnectionAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "ConnectionServiceClient.UpdateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_sync_flattened_resourceNames",
+      "title": "UpdateConnectionResourceNames",
+      "description": "Snippet for UpdateConnection",
+      "file": "ConnectionServiceClient.UpdateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Connection.V1.Connection",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_UpdateConnection_async_flattened_resourceNames",
+      "title": "UpdateConnectionResourceNamesAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "ConnectionServiceClient.UpdateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Connection.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.UpdateConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_sync",
+      "title": "DeleteConnectionRequestObject",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectionServiceClient.DeleteConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_async",
+      "title": "DeleteConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectionServiceClient.DeleteConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_sync_flattened",
+      "title": "DeleteConnection",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectionServiceClient.DeleteConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_async_flattened",
+      "title": "DeleteConnectionAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectionServiceClient.DeleteConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_sync_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNames",
+      "description": "Snippet for DeleteConnection",
+      "file": "ConnectionServiceClient.DeleteConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_DeleteConnection_async_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "ConnectionServiceClient.DeleteConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Connection.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.DeleteConnection",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ConnectionServiceClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ConnectionServiceClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ConnectionServiceClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.GetPolicyOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ConnectionServiceClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.GetPolicyOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_sync_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNames",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ConnectionServiceClient.GetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.GetPolicyOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_GetIamPolicy_async_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNamesAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ConnectionServiceClient.GetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.GetPolicyOptions",
+            "name": "options"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.GetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ConnectionServiceClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ConnectionServiceClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ConnectionServiceClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ConnectionServiceClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_sync_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNames",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ConnectionServiceClient.SetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_SetIamPolicy_async_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNamesAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ConnectionServiceClient.SetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.SetIamPolicy",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "ConnectionServiceClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "ConnectionServiceClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_sync_flattened",
+      "title": "TestIamPermissions",
+      "description": "Snippet for TestIamPermissions",
+      "file": "ConnectionServiceClient.TestIamPermissionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_async_flattened",
+      "title": "TestIamPermissionsAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "ConnectionServiceClient.TestIamPermissionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_sync_flattened_resourceNames",
+      "title": "TestIamPermissionsResourceNames",
+      "description": "Snippet for TestIamPermissions",
+      "file": "ConnectionServiceClient.TestIamPermissionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryconnection_v1_generated_ConnectionService_TestIamPermissions_async_flattened_resourceNames",
+      "title": "TestIamPermissionsResourceNamesAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "ConnectionServiceClient.TestIamPermissionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "permissions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Connection.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.connection.v1.ConnectionService.TestIamPermissions",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.bigquery.connection.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
