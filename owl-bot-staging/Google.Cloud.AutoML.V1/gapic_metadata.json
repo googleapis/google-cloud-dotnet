@@ -1,0 +1,147 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.automl.v1",
+  "libraryPackage": "Google.Cloud.AutoML.V1",
+  "services": {
+    "AutoMl": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutoMlClient",
+          "rpcs": {
+            "CreateDataset": {
+              "methods": [
+                "CreateDataset",
+                "CreateDatasetAsync"
+              ]
+            },
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
+              ]
+            },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
+            "DeployModel": {
+              "methods": [
+                "DeployModel",
+                "DeployModelAsync"
+              ]
+            },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
+              ]
+            },
+            "ExportModel": {
+              "methods": [
+                "ExportModel",
+                "ExportModelAsync"
+              ]
+            },
+            "GetAnnotationSpec": {
+              "methods": [
+                "GetAnnotationSpec",
+                "GetAnnotationSpecAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
+              ]
+            },
+            "GetModelEvaluation": {
+              "methods": [
+                "GetModelEvaluation",
+                "GetModelEvaluationAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "ListModelEvaluations": {
+              "methods": [
+                "ListModelEvaluations",
+                "ListModelEvaluationsAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "UndeployModel": {
+              "methods": [
+                "UndeployModel",
+                "UndeployModelAsync"
+              ]
+            },
+            "UpdateDataset": {
+              "methods": [
+                "UpdateDataset",
+                "UpdateDatasetAsync"
+              ]
+            },
+            "UpdateModel": {
+              "methods": [
+                "UpdateModel",
+                "UpdateModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "BatchPredict": {
+              "methods": [
+                "BatchPredict",
+                "BatchPredictAsync"
+              ]
+            },
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
