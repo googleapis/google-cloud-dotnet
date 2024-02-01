@@ -1,0 +1,4250 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.NetworkSecurity.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.networksecurity.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_sync",
+      "title": "ListAuthorizationPoliciesRequestObject",
+      "description": "Snippet for ListAuthorizationPolicies",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_async",
+      "title": "ListAuthorizationPoliciesRequestObjectAsync",
+      "description": "Snippet for ListAuthorizationPoliciesAsync",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_sync_flattened",
+      "title": "ListAuthorizationPolicies",
+      "description": "Snippet for ListAuthorizationPolicies",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_async_flattened",
+      "title": "ListAuthorizationPoliciesAsync",
+      "description": "Snippet for ListAuthorizationPoliciesAsync",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_sync_flattened_resourceNames",
+      "title": "ListAuthorizationPoliciesResourceNames",
+      "description": "Snippet for ListAuthorizationPolicies",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_async_flattened_resourceNames",
+      "title": "ListAuthorizationPoliciesResourceNamesAsync",
+      "description": "Snippet for ListAuthorizationPoliciesAsync",
+      "file": "NetworkSecurityClient.ListAuthorizationPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthorizationPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListAuthorizationPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListAuthorizationPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListAuthorizationPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListAuthorizationPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_sync",
+      "title": "GetAuthorizationPolicyRequestObject",
+      "description": "Snippet for GetAuthorizationPolicy",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_async",
+      "title": "GetAuthorizationPolicyRequestObjectAsync",
+      "description": "Snippet for GetAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_sync_flattened",
+      "title": "GetAuthorizationPolicy",
+      "description": "Snippet for GetAuthorizationPolicy",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_async_flattened",
+      "title": "GetAuthorizationPolicyAsync",
+      "description": "Snippet for GetAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_sync_flattened_resourceNames",
+      "title": "GetAuthorizationPolicyResourceNames",
+      "description": "Snippet for GetAuthorizationPolicy",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_async_flattened_resourceNames",
+      "title": "GetAuthorizationPolicyResourceNamesAsync",
+      "description": "Snippet for GetAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.GetAuthorizationPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_sync",
+      "title": "CreateAuthorizationPolicyRequestObject",
+      "description": "Snippet for CreateAuthorizationPolicy",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_async",
+      "title": "CreateAuthorizationPolicyRequestObjectAsync",
+      "description": "Snippet for CreateAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_sync_flattened",
+      "title": "CreateAuthorizationPolicy",
+      "description": "Snippet for CreateAuthorizationPolicy",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "authorizationPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_async_flattened",
+      "title": "CreateAuthorizationPolicyAsync",
+      "description": "Snippet for CreateAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "authorizationPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_sync_flattened_resourceNames",
+      "title": "CreateAuthorizationPolicyResourceNames",
+      "description": "Snippet for CreateAuthorizationPolicy",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "authorizationPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_async_flattened_resourceNames",
+      "title": "CreateAuthorizationPolicyResourceNamesAsync",
+      "description": "Snippet for CreateAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.CreateAuthorizationPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "authorizationPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_sync",
+      "title": "UpdateAuthorizationPolicyRequestObject",
+      "description": "Snippet for UpdateAuthorizationPolicy",
+      "file": "NetworkSecurityClient.UpdateAuthorizationPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_async",
+      "title": "UpdateAuthorizationPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateAuthorizationPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_sync_flattened",
+      "title": "UpdateAuthorizationPolicy",
+      "description": "Snippet for UpdateAuthorizationPolicy",
+      "file": "NetworkSecurityClient.UpdateAuthorizationPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_async_flattened",
+      "title": "UpdateAuthorizationPolicyAsync",
+      "description": "Snippet for UpdateAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateAuthorizationPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy",
+            "name": "authorizationPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_sync",
+      "title": "DeleteAuthorizationPolicyRequestObject",
+      "description": "Snippet for DeleteAuthorizationPolicy",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_async",
+      "title": "DeleteAuthorizationPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteAuthorizationPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_sync_flattened",
+      "title": "DeleteAuthorizationPolicy",
+      "description": "Snippet for DeleteAuthorizationPolicy",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_async_flattened",
+      "title": "DeleteAuthorizationPolicyAsync",
+      "description": "Snippet for DeleteAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_sync_flattened_resourceNames",
+      "title": "DeleteAuthorizationPolicyResourceNames",
+      "description": "Snippet for DeleteAuthorizationPolicy",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_async_flattened_resourceNames",
+      "title": "DeleteAuthorizationPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteAuthorizationPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteAuthorizationPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthorizationPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteAuthorizationPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthorizationPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteAuthorizationPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_sync",
+      "title": "ListServerTlsPoliciesRequestObject",
+      "description": "Snippet for ListServerTlsPolicies",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_async",
+      "title": "ListServerTlsPoliciesRequestObjectAsync",
+      "description": "Snippet for ListServerTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_sync_flattened",
+      "title": "ListServerTlsPolicies",
+      "description": "Snippet for ListServerTlsPolicies",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_async_flattened",
+      "title": "ListServerTlsPoliciesAsync",
+      "description": "Snippet for ListServerTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_sync_flattened_resourceNames",
+      "title": "ListServerTlsPoliciesResourceNames",
+      "description": "Snippet for ListServerTlsPolicies",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_async_flattened_resourceNames",
+      "title": "ListServerTlsPoliciesResourceNamesAsync",
+      "description": "Snippet for ListServerTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListServerTlsPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServerTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListServerTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListServerTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListServerTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListServerTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_sync",
+      "title": "GetServerTlsPolicyRequestObject",
+      "description": "Snippet for GetServerTlsPolicy",
+      "file": "NetworkSecurityClient.GetServerTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_async",
+      "title": "GetServerTlsPolicyRequestObjectAsync",
+      "description": "Snippet for GetServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetServerTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_sync_flattened",
+      "title": "GetServerTlsPolicy",
+      "description": "Snippet for GetServerTlsPolicy",
+      "file": "NetworkSecurityClient.GetServerTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_async_flattened",
+      "title": "GetServerTlsPolicyAsync",
+      "description": "Snippet for GetServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetServerTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_sync_flattened_resourceNames",
+      "title": "GetServerTlsPolicyResourceNames",
+      "description": "Snippet for GetServerTlsPolicy",
+      "file": "NetworkSecurityClient.GetServerTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_async_flattened_resourceNames",
+      "title": "GetServerTlsPolicyResourceNamesAsync",
+      "description": "Snippet for GetServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetServerTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_sync",
+      "title": "CreateServerTlsPolicyRequestObject",
+      "description": "Snippet for CreateServerTlsPolicy",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_async",
+      "title": "CreateServerTlsPolicyRequestObjectAsync",
+      "description": "Snippet for CreateServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_sync_flattened",
+      "title": "CreateServerTlsPolicy",
+      "description": "Snippet for CreateServerTlsPolicy",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serverTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_async_flattened",
+      "title": "CreateServerTlsPolicyAsync",
+      "description": "Snippet for CreateServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serverTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_sync_flattened_resourceNames",
+      "title": "CreateServerTlsPolicyResourceNames",
+      "description": "Snippet for CreateServerTlsPolicy",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serverTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_async_flattened_resourceNames",
+      "title": "CreateServerTlsPolicyResourceNamesAsync",
+      "description": "Snippet for CreateServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateServerTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "serverTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_sync",
+      "title": "UpdateServerTlsPolicyRequestObject",
+      "description": "Snippet for UpdateServerTlsPolicy",
+      "file": "NetworkSecurityClient.UpdateServerTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_async",
+      "title": "UpdateServerTlsPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateServerTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_sync_flattened",
+      "title": "UpdateServerTlsPolicy",
+      "description": "Snippet for UpdateServerTlsPolicy",
+      "file": "NetworkSecurityClient.UpdateServerTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_async_flattened",
+      "title": "UpdateServerTlsPolicyAsync",
+      "description": "Snippet for UpdateServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateServerTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy",
+            "name": "serverTlsPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_sync",
+      "title": "DeleteServerTlsPolicyRequestObject",
+      "description": "Snippet for DeleteServerTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_async",
+      "title": "DeleteServerTlsPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteServerTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_sync_flattened",
+      "title": "DeleteServerTlsPolicy",
+      "description": "Snippet for DeleteServerTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_async_flattened",
+      "title": "DeleteServerTlsPolicyAsync",
+      "description": "Snippet for DeleteServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_sync_flattened_resourceNames",
+      "title": "DeleteServerTlsPolicyResourceNames",
+      "description": "Snippet for DeleteServerTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_async_flattened_resourceNames",
+      "title": "DeleteServerTlsPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteServerTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteServerTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServerTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteServerTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteServerTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteServerTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_sync",
+      "title": "ListClientTlsPoliciesRequestObject",
+      "description": "Snippet for ListClientTlsPolicies",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_async",
+      "title": "ListClientTlsPoliciesRequestObjectAsync",
+      "description": "Snippet for ListClientTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_sync_flattened",
+      "title": "ListClientTlsPolicies",
+      "description": "Snippet for ListClientTlsPolicies",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_async_flattened",
+      "title": "ListClientTlsPoliciesAsync",
+      "description": "Snippet for ListClientTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_sync_flattened_resourceNames",
+      "title": "ListClientTlsPoliciesResourceNames",
+      "description": "Snippet for ListClientTlsPolicies",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPolicies",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPolicies",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_async_flattened_resourceNames",
+      "title": "ListClientTlsPoliciesResourceNamesAsync",
+      "description": "Snippet for ListClientTlsPoliciesAsync",
+      "file": "NetworkSecurityClient.ListClientTlsPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClientTlsPoliciesAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.ListClientTlsPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListClientTlsPoliciesResponse, Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "ListClientTlsPolicies",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.ListClientTlsPolicies",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_sync",
+      "title": "GetClientTlsPolicyRequestObject",
+      "description": "Snippet for GetClientTlsPolicy",
+      "file": "NetworkSecurityClient.GetClientTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_async",
+      "title": "GetClientTlsPolicyRequestObjectAsync",
+      "description": "Snippet for GetClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetClientTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_sync_flattened",
+      "title": "GetClientTlsPolicy",
+      "description": "Snippet for GetClientTlsPolicy",
+      "file": "NetworkSecurityClient.GetClientTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_async_flattened",
+      "title": "GetClientTlsPolicyAsync",
+      "description": "Snippet for GetClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetClientTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_sync_flattened_resourceNames",
+      "title": "GetClientTlsPolicyResourceNames",
+      "description": "Snippet for GetClientTlsPolicy",
+      "file": "NetworkSecurityClient.GetClientTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_async_flattened_resourceNames",
+      "title": "GetClientTlsPolicyResourceNamesAsync",
+      "description": "Snippet for GetClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.GetClientTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.GetClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "GetClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.GetClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_sync",
+      "title": "CreateClientTlsPolicyRequestObject",
+      "description": "Snippet for CreateClientTlsPolicy",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_async",
+      "title": "CreateClientTlsPolicyRequestObjectAsync",
+      "description": "Snippet for CreateClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_sync_flattened",
+      "title": "CreateClientTlsPolicy",
+      "description": "Snippet for CreateClientTlsPolicy",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "clientTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_async_flattened",
+      "title": "CreateClientTlsPolicyAsync",
+      "description": "Snippet for CreateClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "clientTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_sync_flattened_resourceNames",
+      "title": "CreateClientTlsPolicyResourceNames",
+      "description": "Snippet for CreateClientTlsPolicy",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "clientTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_async_flattened_resourceNames",
+      "title": "CreateClientTlsPolicyResourceNamesAsync",
+      "description": "Snippet for CreateClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.CreateClientTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.CreateClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "clientTlsPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "CreateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.CreateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_sync",
+      "title": "UpdateClientTlsPolicyRequestObject",
+      "description": "Snippet for UpdateClientTlsPolicy",
+      "file": "NetworkSecurityClient.UpdateClientTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_async",
+      "title": "UpdateClientTlsPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateClientTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_sync_flattened",
+      "title": "UpdateClientTlsPolicy",
+      "description": "Snippet for UpdateClientTlsPolicy",
+      "file": "NetworkSecurityClient.UpdateClientTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_async_flattened",
+      "title": "UpdateClientTlsPolicyAsync",
+      "description": "Snippet for UpdateClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.UpdateClientTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.UpdateClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy",
+            "name": "clientTlsPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicy, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "UpdateClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.UpdateClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_sync",
+      "title": "DeleteClientTlsPolicyRequestObject",
+      "description": "Snippet for DeleteClientTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_async",
+      "title": "DeleteClientTlsPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteClientTlsPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_sync_flattened",
+      "title": "DeleteClientTlsPolicy",
+      "description": "Snippet for DeleteClientTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_async_flattened",
+      "title": "DeleteClientTlsPolicyAsync",
+      "description": "Snippet for DeleteClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_sync_flattened_resourceNames",
+      "title": "DeleteClientTlsPolicyResourceNames",
+      "description": "Snippet for DeleteClientTlsPolicy",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicy",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_async_flattened_resourceNames",
+      "title": "DeleteClientTlsPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteClientTlsPolicyAsync",
+      "file": "NetworkSecurityClient.DeleteClientTlsPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClientTlsPolicyAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient.DeleteClientTlsPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ClientTlsPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkSecurity.V1Beta1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkSecurityClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.NetworkSecurityClient"
+        },
+        "method": {
+          "shortName": "DeleteClientTlsPolicy",
+          "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity.DeleteClientTlsPolicy",
+          "service": {
+            "shortName": "NetworkSecurity",
+            "fullName": "google.cloud.networksecurity.v1beta1.NetworkSecurity"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
