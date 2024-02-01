@@ -1,0 +1,120 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.connectors.v1",
+  "libraryPackage": "Google.Cloud.Connectors.V1",
+  "services": {
+    "Connectors": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConnectorsClient",
+          "rpcs": {
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
+              ]
+            },
+            "GetConnectionSchemaMetadata": {
+              "methods": [
+                "GetConnectionSchemaMetadata",
+                "GetConnectionSchemaMetadataAsync"
+              ]
+            },
+            "GetConnector": {
+              "methods": [
+                "GetConnector",
+                "GetConnectorAsync"
+              ]
+            },
+            "GetConnectorVersion": {
+              "methods": [
+                "GetConnectorVersion",
+                "GetConnectorVersionAsync"
+              ]
+            },
+            "GetGlobalSettings": {
+              "methods": [
+                "GetGlobalSettings",
+                "GetGlobalSettingsAsync"
+              ]
+            },
+            "GetProvider": {
+              "methods": [
+                "GetProvider",
+                "GetProviderAsync"
+              ]
+            },
+            "GetRuntimeConfig": {
+              "methods": [
+                "GetRuntimeConfig",
+                "GetRuntimeConfigAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
+            "ListConnectorVersions": {
+              "methods": [
+                "ListConnectorVersions",
+                "ListConnectorVersionsAsync"
+              ]
+            },
+            "ListConnectors": {
+              "methods": [
+                "ListConnectors",
+                "ListConnectorsAsync"
+              ]
+            },
+            "ListProviders": {
+              "methods": [
+                "ListProviders",
+                "ListProvidersAsync"
+              ]
+            },
+            "ListRuntimeActionSchemas": {
+              "methods": [
+                "ListRuntimeActionSchemas",
+                "ListRuntimeActionSchemasAsync"
+              ]
+            },
+            "ListRuntimeEntitySchemas": {
+              "methods": [
+                "ListRuntimeEntitySchemas",
+                "ListRuntimeEntitySchemasAsync"
+              ]
+            },
+            "RefreshConnectionSchemaMetadata": {
+              "methods": [
+                "RefreshConnectionSchemaMetadata",
+                "RefreshConnectionSchemaMetadataAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
