@@ -1,0 +1,294 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.vmmigration.v1",
+  "libraryPackage": "Google.Cloud.VMMigration.V1",
+  "services": {
+    "VmMigration": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VmMigrationClient",
+          "rpcs": {
+            "AddGroupMigration": {
+              "methods": [
+                "AddGroupMigration",
+                "AddGroupMigrationAsync"
+              ]
+            },
+            "CancelCloneJob": {
+              "methods": [
+                "CancelCloneJob",
+                "CancelCloneJobAsync"
+              ]
+            },
+            "CancelCutoverJob": {
+              "methods": [
+                "CancelCutoverJob",
+                "CancelCutoverJobAsync"
+              ]
+            },
+            "CreateCloneJob": {
+              "methods": [
+                "CreateCloneJob",
+                "CreateCloneJobAsync"
+              ]
+            },
+            "CreateCutoverJob": {
+              "methods": [
+                "CreateCutoverJob",
+                "CreateCutoverJobAsync"
+              ]
+            },
+            "CreateDatacenterConnector": {
+              "methods": [
+                "CreateDatacenterConnector",
+                "CreateDatacenterConnectorAsync"
+              ]
+            },
+            "CreateGroup": {
+              "methods": [
+                "CreateGroup",
+                "CreateGroupAsync"
+              ]
+            },
+            "CreateMigratingVm": {
+              "methods": [
+                "CreateMigratingVm",
+                "CreateMigratingVmAsync"
+              ]
+            },
+            "CreateSource": {
+              "methods": [
+                "CreateSource",
+                "CreateSourceAsync"
+              ]
+            },
+            "CreateTargetProject": {
+              "methods": [
+                "CreateTargetProject",
+                "CreateTargetProjectAsync"
+              ]
+            },
+            "CreateUtilizationReport": {
+              "methods": [
+                "CreateUtilizationReport",
+                "CreateUtilizationReportAsync"
+              ]
+            },
+            "DeleteDatacenterConnector": {
+              "methods": [
+                "DeleteDatacenterConnector",
+                "DeleteDatacenterConnectorAsync"
+              ]
+            },
+            "DeleteGroup": {
+              "methods": [
+                "DeleteGroup",
+                "DeleteGroupAsync"
+              ]
+            },
+            "DeleteMigratingVm": {
+              "methods": [
+                "DeleteMigratingVm",
+                "DeleteMigratingVmAsync"
+              ]
+            },
+            "DeleteSource": {
+              "methods": [
+                "DeleteSource",
+                "DeleteSourceAsync"
+              ]
+            },
+            "DeleteTargetProject": {
+              "methods": [
+                "DeleteTargetProject",
+                "DeleteTargetProjectAsync"
+              ]
+            },
+            "DeleteUtilizationReport": {
+              "methods": [
+                "DeleteUtilizationReport",
+                "DeleteUtilizationReportAsync"
+              ]
+            },
+            "FetchInventory": {
+              "methods": [
+                "FetchInventory",
+                "FetchInventoryAsync"
+              ]
+            },
+            "FinalizeMigration": {
+              "methods": [
+                "FinalizeMigration",
+                "FinalizeMigrationAsync"
+              ]
+            },
+            "GetCloneJob": {
+              "methods": [
+                "GetCloneJob",
+                "GetCloneJobAsync"
+              ]
+            },
+            "GetCutoverJob": {
+              "methods": [
+                "GetCutoverJob",
+                "GetCutoverJobAsync"
+              ]
+            },
+            "GetDatacenterConnector": {
+              "methods": [
+                "GetDatacenterConnector",
+                "GetDatacenterConnectorAsync"
+              ]
+            },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
+            "GetMigratingVm": {
+              "methods": [
+                "GetMigratingVm",
+                "GetMigratingVmAsync"
+              ]
+            },
+            "GetReplicationCycle": {
+              "methods": [
+                "GetReplicationCycle",
+                "GetReplicationCycleAsync"
+              ]
+            },
+            "GetSource": {
+              "methods": [
+                "GetSource",
+                "GetSourceAsync"
+              ]
+            },
+            "GetTargetProject": {
+              "methods": [
+                "GetTargetProject",
+                "GetTargetProjectAsync"
+              ]
+            },
+            "GetUtilizationReport": {
+              "methods": [
+                "GetUtilizationReport",
+                "GetUtilizationReportAsync"
+              ]
+            },
+            "ListCloneJobs": {
+              "methods": [
+                "ListCloneJobs",
+                "ListCloneJobsAsync"
+              ]
+            },
+            "ListCutoverJobs": {
+              "methods": [
+                "ListCutoverJobs",
+                "ListCutoverJobsAsync"
+              ]
+            },
+            "ListDatacenterConnectors": {
+              "methods": [
+                "ListDatacenterConnectors",
+                "ListDatacenterConnectorsAsync"
+              ]
+            },
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "ListMigratingVms": {
+              "methods": [
+                "ListMigratingVms",
+                "ListMigratingVmsAsync"
+              ]
+            },
+            "ListReplicationCycles": {
+              "methods": [
+                "ListReplicationCycles",
+                "ListReplicationCyclesAsync"
+              ]
+            },
+            "ListSources": {
+              "methods": [
+                "ListSources",
+                "ListSourcesAsync"
+              ]
+            },
+            "ListTargetProjects": {
+              "methods": [
+                "ListTargetProjects",
+                "ListTargetProjectsAsync"
+              ]
+            },
+            "ListUtilizationReports": {
+              "methods": [
+                "ListUtilizationReports",
+                "ListUtilizationReportsAsync"
+              ]
+            },
+            "PauseMigration": {
+              "methods": [
+                "PauseMigration",
+                "PauseMigrationAsync"
+              ]
+            },
+            "RemoveGroupMigration": {
+              "methods": [
+                "RemoveGroupMigration",
+                "RemoveGroupMigrationAsync"
+              ]
+            },
+            "ResumeMigration": {
+              "methods": [
+                "ResumeMigration",
+                "ResumeMigrationAsync"
+              ]
+            },
+            "StartMigration": {
+              "methods": [
+                "StartMigration",
+                "StartMigrationAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
+              ]
+            },
+            "UpdateMigratingVm": {
+              "methods": [
+                "UpdateMigratingVm",
+                "UpdateMigratingVmAsync"
+              ]
+            },
+            "UpdateSource": {
+              "methods": [
+                "UpdateSource",
+                "UpdateSourceAsync"
+              ]
+            },
+            "UpdateTargetProject": {
+              "methods": [
+                "UpdateTargetProject",
+                "UpdateTargetProjectAsync"
+              ]
+            },
+            "UpgradeAppliance": {
+              "methods": [
+                "UpgradeAppliance",
+                "UpgradeApplianceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
