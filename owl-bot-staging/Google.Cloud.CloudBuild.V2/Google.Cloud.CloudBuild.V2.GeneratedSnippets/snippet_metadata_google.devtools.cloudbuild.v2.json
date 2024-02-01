@@ -1,0 +1,3899 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.CloudBuild.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.devtools.cloudbuild.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_sync",
+      "title": "CreateConnectionRequestObject",
+      "description": "Snippet for CreateConnection",
+      "file": "RepositoryManagerClient.CreateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_async",
+      "title": "CreateConnectionRequestObjectAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "RepositoryManagerClient.CreateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_sync_flattened",
+      "title": "CreateConnection",
+      "description": "Snippet for CreateConnection",
+      "file": "RepositoryManagerClient.CreateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_async_flattened",
+      "title": "CreateConnectionAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "RepositoryManagerClient.CreateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_sync_flattened_resourceNames",
+      "title": "CreateConnectionResourceNames",
+      "description": "Snippet for CreateConnection",
+      "file": "RepositoryManagerClient.CreateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateConnection_async_flattened_resourceNames",
+      "title": "CreateConnectionResourceNamesAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "RepositoryManagerClient.CreateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_sync",
+      "title": "GetConnectionRequestObject",
+      "description": "Snippet for GetConnection",
+      "file": "RepositoryManagerClient.GetConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Connection",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_async",
+      "title": "GetConnectionRequestObjectAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "RepositoryManagerClient.GetConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_sync_flattened",
+      "title": "GetConnection",
+      "description": "Snippet for GetConnection",
+      "file": "RepositoryManagerClient.GetConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Connection",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_async_flattened",
+      "title": "GetConnectionAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "RepositoryManagerClient.GetConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_sync_flattened_resourceNames",
+      "title": "GetConnectionResourceNames",
+      "description": "Snippet for GetConnection",
+      "file": "RepositoryManagerClient.GetConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Connection",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetConnection_async_flattened_resourceNames",
+      "title": "GetConnectionResourceNamesAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "RepositoryManagerClient.GetConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "RepositoryManagerClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "RepositoryManagerClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "RepositoryManagerClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "RepositoryManagerClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "RepositoryManagerClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "RepositoryManagerClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListConnectionsResponse, Google.Cloud.CloudBuild.V2.Connection>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListConnections",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_UpdateConnection_sync",
+      "title": "UpdateConnectionRequestObject",
+      "description": "Snippet for UpdateConnection",
+      "file": "RepositoryManagerClient.UpdateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.UpdateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_UpdateConnection_async",
+      "title": "UpdateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "RepositoryManagerClient.UpdateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.UpdateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_UpdateConnection_sync_flattened",
+      "title": "UpdateConnection",
+      "description": "Snippet for UpdateConnection",
+      "file": "RepositoryManagerClient.UpdateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.UpdateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_UpdateConnection_async_flattened",
+      "title": "UpdateConnectionAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "RepositoryManagerClient.UpdateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Connection, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.UpdateConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_sync",
+      "title": "DeleteConnectionRequestObject",
+      "description": "Snippet for DeleteConnection",
+      "file": "RepositoryManagerClient.DeleteConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_async",
+      "title": "DeleteConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "RepositoryManagerClient.DeleteConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_sync_flattened",
+      "title": "DeleteConnection",
+      "description": "Snippet for DeleteConnection",
+      "file": "RepositoryManagerClient.DeleteConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_async_flattened",
+      "title": "DeleteConnectionAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "RepositoryManagerClient.DeleteConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_sync_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNames",
+      "description": "Snippet for DeleteConnection",
+      "file": "RepositoryManagerClient.DeleteConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteConnection_async_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "RepositoryManagerClient.DeleteConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteConnection",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_sync",
+      "title": "CreateRepositoryRequestObject",
+      "description": "Snippet for CreateRepository",
+      "file": "RepositoryManagerClient.CreateRepositoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_async",
+      "title": "CreateRepositoryRequestObjectAsync",
+      "description": "Snippet for CreateRepositoryAsync",
+      "file": "RepositoryManagerClient.CreateRepositoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.CreateRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_sync_flattened",
+      "title": "CreateRepository",
+      "description": "Snippet for CreateRepository",
+      "file": "RepositoryManagerClient.CreateRepositorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_async_flattened",
+      "title": "CreateRepositoryAsync",
+      "description": "Snippet for CreateRepositoryAsync",
+      "file": "RepositoryManagerClient.CreateRepositoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_sync_flattened_resourceNames",
+      "title": "CreateRepositoryResourceNames",
+      "description": "Snippet for CreateRepository",
+      "file": "RepositoryManagerClient.CreateRepositoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_CreateRepository_async_flattened_resourceNames",
+      "title": "CreateRepositoryResourceNamesAsync",
+      "description": "Snippet for CreateRepositoryAsync",
+      "file": "RepositoryManagerClient.CreateRepositoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.CreateRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudBuild.V2.Repository",
+            "name": "repository"
+          },
+          {
+            "type": "System.String",
+            "name": "repositoryId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.Repository, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "CreateRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.CreateRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_sync",
+      "title": "BatchCreateRepositoriesRequestObject",
+      "description": "Snippet for BatchCreateRepositories",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_async",
+      "title": "BatchCreateRepositoriesRequestObjectAsync",
+      "description": "Snippet for BatchCreateRepositoriesAsync",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_sync_flattened",
+      "title": "BatchCreateRepositories",
+      "description": "Snippet for BatchCreateRepositories",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.CloudBuild.V2.CreateRepositoryRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_async_flattened",
+      "title": "BatchCreateRepositoriesAsync",
+      "description": "Snippet for BatchCreateRepositoriesAsync",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.CloudBuild.V2.CreateRepositoryRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_sync_flattened_resourceNames",
+      "title": "BatchCreateRepositoriesResourceNames",
+      "description": "Snippet for BatchCreateRepositories",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.CloudBuild.V2.CreateRepositoryRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_BatchCreateRepositories_async_flattened_resourceNames",
+      "title": "BatchCreateRepositoriesResourceNamesAsync",
+      "description": "Snippet for BatchCreateRepositoriesAsync",
+      "file": "RepositoryManagerClient.BatchCreateRepositoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.BatchCreateRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.CloudBuild.V2.CreateRepositoryRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CloudBuild.V2.BatchCreateRepositoriesResponse, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "BatchCreateRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.BatchCreateRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_sync",
+      "title": "GetRepositoryRequestObject",
+      "description": "Snippet for GetRepository",
+      "file": "RepositoryManagerClient.GetRepositoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Repository",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_async",
+      "title": "GetRepositoryRequestObjectAsync",
+      "description": "Snippet for GetRepositoryAsync",
+      "file": "RepositoryManagerClient.GetRepositoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.GetRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_sync_flattened",
+      "title": "GetRepository",
+      "description": "Snippet for GetRepository",
+      "file": "RepositoryManagerClient.GetRepositorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Repository",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_async_flattened",
+      "title": "GetRepositoryAsync",
+      "description": "Snippet for GetRepositoryAsync",
+      "file": "RepositoryManagerClient.GetRepositoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_sync_flattened_resourceNames",
+      "title": "GetRepositoryResourceNames",
+      "description": "Snippet for GetRepository",
+      "file": "RepositoryManagerClient.GetRepositoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.Repository",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_GetRepository_async_flattened_resourceNames",
+      "title": "GetRepositoryResourceNamesAsync",
+      "description": "Snippet for GetRepositoryAsync",
+      "file": "RepositoryManagerClient.GetRepositoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.GetRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "GetRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.GetRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_sync",
+      "title": "ListRepositoriesRequestObject",
+      "description": "Snippet for ListRepositories",
+      "file": "RepositoryManagerClient.ListRepositoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_async",
+      "title": "ListRepositoriesRequestObjectAsync",
+      "description": "Snippet for ListRepositoriesAsync",
+      "file": "RepositoryManagerClient.ListRepositoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ListRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_sync_flattened",
+      "title": "ListRepositories",
+      "description": "Snippet for ListRepositories",
+      "file": "RepositoryManagerClient.ListRepositoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_async_flattened",
+      "title": "ListRepositoriesAsync",
+      "description": "Snippet for ListRepositoriesAsync",
+      "file": "RepositoryManagerClient.ListRepositoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_sync_flattened_resourceNames",
+      "title": "ListRepositoriesResourceNames",
+      "description": "Snippet for ListRepositories",
+      "file": "RepositoryManagerClient.ListRepositoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_ListRepositories_async_flattened_resourceNames",
+      "title": "ListRepositoriesResourceNamesAsync",
+      "description": "Snippet for ListRepositoriesAsync",
+      "file": "RepositoryManagerClient.ListRepositoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.ListRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.ListRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "ListRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.ListRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_sync",
+      "title": "DeleteRepositoryRequestObject",
+      "description": "Snippet for DeleteRepository",
+      "file": "RepositoryManagerClient.DeleteRepositoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_async",
+      "title": "DeleteRepositoryRequestObjectAsync",
+      "description": "Snippet for DeleteRepositoryAsync",
+      "file": "RepositoryManagerClient.DeleteRepositoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.DeleteRepositoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_sync_flattened",
+      "title": "DeleteRepository",
+      "description": "Snippet for DeleteRepository",
+      "file": "RepositoryManagerClient.DeleteRepositorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_async_flattened",
+      "title": "DeleteRepositoryAsync",
+      "description": "Snippet for DeleteRepositoryAsync",
+      "file": "RepositoryManagerClient.DeleteRepositoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_sync_flattened_resourceNames",
+      "title": "DeleteRepositoryResourceNames",
+      "description": "Snippet for DeleteRepository",
+      "file": "RepositoryManagerClient.DeleteRepositoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepository",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepository",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_DeleteRepository_async_flattened_resourceNames",
+      "title": "DeleteRepositoryResourceNamesAsync",
+      "description": "Snippet for DeleteRepositoryAsync",
+      "file": "RepositoryManagerClient.DeleteRepositoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.DeleteRepositoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CloudBuild.V2.OperationMetadata>>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteRepository",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.DeleteRepository",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_sync",
+      "title": "FetchReadWriteTokenRequestObject",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchReadWriteTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_async",
+      "title": "FetchReadWriteTokenRequestObjectAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchReadWriteTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_sync_flattened",
+      "title": "FetchReadWriteToken",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_async_flattened",
+      "title": "FetchReadWriteTokenAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_sync_flattened_resourceNames",
+      "title": "FetchReadWriteTokenResourceNames",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadWriteToken_async_flattened_resourceNames",
+      "title": "FetchReadWriteTokenResourceNamesAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadWriteTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadWriteToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_sync",
+      "title": "FetchReadTokenRequestObject",
+      "description": "Snippet for FetchReadToken",
+      "file": "RepositoryManagerClient.FetchReadTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchReadTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_async",
+      "title": "FetchReadTokenRequestObjectAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchReadTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_sync_flattened",
+      "title": "FetchReadToken",
+      "description": "Snippet for FetchReadToken",
+      "file": "RepositoryManagerClient.FetchReadTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_async_flattened",
+      "title": "FetchReadTokenAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_sync_flattened_resourceNames",
+      "title": "FetchReadTokenResourceNames",
+      "description": "Snippet for FetchReadToken",
+      "file": "RepositoryManagerClient.FetchReadTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchReadTokenResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchReadToken_async_flattened_resourceNames",
+      "title": "FetchReadTokenResourceNamesAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "RepositoryManagerClient.FetchReadTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchReadToken",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchLinkableRepositories_sync",
+      "title": "FetchLinkableRepositoriesRequestObject",
+      "description": "Snippet for FetchLinkableRepositories",
+      "file": "RepositoryManagerClient.FetchLinkableRepositoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableRepositories",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchLinkableRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchLinkableRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchLinkableRepositories_async",
+      "title": "FetchLinkableRepositoriesRequestObjectAsync",
+      "description": "Snippet for FetchLinkableRepositoriesAsync",
+      "file": "RepositoryManagerClient.FetchLinkableRepositoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableRepositoriesAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchLinkableRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse, Google.Cloud.CloudBuild.V2.Repository>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableRepositories",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchLinkableRepositories",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync",
+      "title": "FetchGitRefsRequestObject",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async",
+      "title": "FetchGitRefsRequestObjectAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync_flattened",
+      "title": "FetchGitRefs",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async_flattened",
+      "title": "FetchGitRefsAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_sync_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNames",
+      "description": "Snippet for FetchGitRefs",
+      "file": "RepositoryManagerClient.FetchGitRefsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudBuild.V2.FetchGitRefsResponse",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudbuild_v2_generated_RepositoryManager_FetchGitRefs_async_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNamesAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "RepositoryManagerClient.FetchGitRefsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudBuild.V2.RepositoryName",
+            "name": "repository"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudBuild.V2.FetchGitRefsResponse>",
+        "client": {
+          "shortName": "RepositoryManagerClient",
+          "fullName": "Google.Cloud.CloudBuild.V2.RepositoryManagerClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.devtools.cloudbuild.v2.RepositoryManager.FetchGitRefs",
+          "service": {
+            "shortName": "RepositoryManager",
+            "fullName": "google.devtools.cloudbuild.v2.RepositoryManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

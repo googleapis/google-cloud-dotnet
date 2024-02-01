@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.datastore.v1",
+  "libraryPackage": "Google.Cloud.Datastore.V1",
+  "services": {
+    "Datastore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DatastoreClient",
+          "rpcs": {
+            "AllocateIds": {
+              "methods": [
+                "AllocateIds",
+                "AllocateIdsAsync"
+              ]
+            },
+            "BeginTransaction": {
+              "methods": [
+                "BeginTransaction",
+                "BeginTransactionAsync"
+              ]
+            },
+            "Commit": {
+              "methods": [
+                "Commit",
+                "CommitAsync"
+              ]
+            },
+            "Lookup": {
+              "methods": [
+                "Lookup",
+                "LookupAsync"
+              ]
+            },
+            "ReserveIds": {
+              "methods": [
+                "ReserveIds",
+                "ReserveIdsAsync"
+              ]
+            },
+            "Rollback": {
+              "methods": [
+                "Rollback",
+                "RollbackAsync"
+              ]
+            },
+            "RunAggregationQuery": {
+              "methods": [
+                "RunAggregationQuery",
+                "RunAggregationQueryAsync"
+              ]
+            },
+            "RunQuery": {
+              "methods": [
+                "RunQuery",
+                "RunQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
