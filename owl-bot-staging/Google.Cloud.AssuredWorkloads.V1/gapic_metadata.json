@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.assuredworkloads.v1",
+  "libraryPackage": "Google.Cloud.AssuredWorkloads.V1",
+  "services": {
+    "AssuredWorkloadsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AssuredWorkloadsServiceClient",
+          "rpcs": {
+            "AcknowledgeViolation": {
+              "methods": [
+                "AcknowledgeViolation",
+                "AcknowledgeViolationAsync"
+              ]
+            },
+            "CreateWorkload": {
+              "methods": [
+                "CreateWorkload",
+                "CreateWorkloadAsync"
+              ]
+            },
+            "DeleteWorkload": {
+              "methods": [
+                "DeleteWorkload",
+                "DeleteWorkloadAsync"
+              ]
+            },
+            "GetViolation": {
+              "methods": [
+                "GetViolation",
+                "GetViolationAsync"
+              ]
+            },
+            "GetWorkload": {
+              "methods": [
+                "GetWorkload",
+                "GetWorkloadAsync"
+              ]
+            },
+            "ListViolations": {
+              "methods": [
+                "ListViolations",
+                "ListViolationsAsync"
+              ]
+            },
+            "ListWorkloads": {
+              "methods": [
+                "ListWorkloads",
+                "ListWorkloadsAsync"
+              ]
+            },
+            "RestrictAllowedResources": {
+              "methods": [
+                "RestrictAllowedResources",
+                "RestrictAllowedResourcesAsync"
+              ]
+            },
+            "UpdateWorkload": {
+              "methods": [
+                "UpdateWorkload",
+                "UpdateWorkloadAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
