@@ -1,0 +1,2013 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.StorageInsights.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.storageinsights.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_sync",
+      "title": "ListReportConfigsRequestObject",
+      "description": "Snippet for ListReportConfigs",
+      "file": "StorageInsightsClient.ListReportConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListReportConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_async",
+      "title": "ListReportConfigsRequestObjectAsync",
+      "description": "Snippet for ListReportConfigsAsync",
+      "file": "StorageInsightsClient.ListReportConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListReportConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_sync_flattened",
+      "title": "ListReportConfigs",
+      "description": "Snippet for ListReportConfigs",
+      "file": "StorageInsightsClient.ListReportConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_async_flattened",
+      "title": "ListReportConfigsAsync",
+      "description": "Snippet for ListReportConfigsAsync",
+      "file": "StorageInsightsClient.ListReportConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_sync_flattened_resourceNames",
+      "title": "ListReportConfigsResourceNames",
+      "description": "Snippet for ListReportConfigs",
+      "file": "StorageInsightsClient.ListReportConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportConfigs_async_flattened_resourceNames",
+      "title": "ListReportConfigsResourceNamesAsync",
+      "description": "Snippet for ListReportConfigsAsync",
+      "file": "StorageInsightsClient.ListReportConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportConfigsResponse, Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_sync",
+      "title": "GetReportConfigRequestObject",
+      "description": "Snippet for GetReportConfig",
+      "file": "StorageInsightsClient.GetReportConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_async",
+      "title": "GetReportConfigRequestObjectAsync",
+      "description": "Snippet for GetReportConfigAsync",
+      "file": "StorageInsightsClient.GetReportConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_sync_flattened",
+      "title": "GetReportConfig",
+      "description": "Snippet for GetReportConfig",
+      "file": "StorageInsightsClient.GetReportConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_async_flattened",
+      "title": "GetReportConfigAsync",
+      "description": "Snippet for GetReportConfigAsync",
+      "file": "StorageInsightsClient.GetReportConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_sync_flattened_resourceNames",
+      "title": "GetReportConfigResourceNames",
+      "description": "Snippet for GetReportConfig",
+      "file": "StorageInsightsClient.GetReportConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportConfig_async_flattened_resourceNames",
+      "title": "GetReportConfigResourceNamesAsync",
+      "description": "Snippet for GetReportConfigAsync",
+      "file": "StorageInsightsClient.GetReportConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_sync",
+      "title": "CreateReportConfigRequestObject",
+      "description": "Snippet for CreateReportConfig",
+      "file": "StorageInsightsClient.CreateReportConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.CreateReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_async",
+      "title": "CreateReportConfigRequestObjectAsync",
+      "description": "Snippet for CreateReportConfigAsync",
+      "file": "StorageInsightsClient.CreateReportConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.CreateReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_sync_flattened",
+      "title": "CreateReportConfig",
+      "description": "Snippet for CreateReportConfig",
+      "file": "StorageInsightsClient.CreateReportConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_async_flattened",
+      "title": "CreateReportConfigAsync",
+      "description": "Snippet for CreateReportConfigAsync",
+      "file": "StorageInsightsClient.CreateReportConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_sync_flattened_resourceNames",
+      "title": "CreateReportConfigResourceNames",
+      "description": "Snippet for CreateReportConfig",
+      "file": "StorageInsightsClient.CreateReportConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateReportConfig_async_flattened_resourceNames",
+      "title": "CreateReportConfigResourceNamesAsync",
+      "description": "Snippet for CreateReportConfigAsync",
+      "file": "StorageInsightsClient.CreateReportConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateReportConfig_sync",
+      "title": "UpdateReportConfigRequestObject",
+      "description": "Snippet for UpdateReportConfig",
+      "file": "StorageInsightsClient.UpdateReportConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UpdateReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateReportConfig_async",
+      "title": "UpdateReportConfigRequestObjectAsync",
+      "description": "Snippet for UpdateReportConfigAsync",
+      "file": "StorageInsightsClient.UpdateReportConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UpdateReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateReportConfig_sync_flattened",
+      "title": "UpdateReportConfig",
+      "description": "Snippet for UpdateReportConfig",
+      "file": "StorageInsightsClient.UpdateReportConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateReportConfig_async_flattened",
+      "title": "UpdateReportConfigAsync",
+      "description": "Snippet for UpdateReportConfigAsync",
+      "file": "StorageInsightsClient.UpdateReportConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfig",
+            "name": "reportConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_sync",
+      "title": "DeleteReportConfigRequestObject",
+      "description": "Snippet for DeleteReportConfig",
+      "file": "StorageInsightsClient.DeleteReportConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DeleteReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_async",
+      "title": "DeleteReportConfigRequestObjectAsync",
+      "description": "Snippet for DeleteReportConfigAsync",
+      "file": "StorageInsightsClient.DeleteReportConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DeleteReportConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_sync_flattened",
+      "title": "DeleteReportConfig",
+      "description": "Snippet for DeleteReportConfig",
+      "file": "StorageInsightsClient.DeleteReportConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_async_flattened",
+      "title": "DeleteReportConfigAsync",
+      "description": "Snippet for DeleteReportConfigAsync",
+      "file": "StorageInsightsClient.DeleteReportConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_sync_flattened_resourceNames",
+      "title": "DeleteReportConfigResourceNames",
+      "description": "Snippet for DeleteReportConfig",
+      "file": "StorageInsightsClient.DeleteReportConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteReportConfig_async_flattened_resourceNames",
+      "title": "DeleteReportConfigResourceNamesAsync",
+      "description": "Snippet for DeleteReportConfigAsync",
+      "file": "StorageInsightsClient.DeleteReportConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReportConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteReportConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteReportConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteReportConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_sync",
+      "title": "ListReportDetailsRequestObject",
+      "description": "Snippet for ListReportDetails",
+      "file": "StorageInsightsClient.ListReportDetailsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetails",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListReportDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_async",
+      "title": "ListReportDetailsRequestObjectAsync",
+      "description": "Snippet for ListReportDetailsAsync",
+      "file": "StorageInsightsClient.ListReportDetailsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetailsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListReportDetailsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_sync_flattened",
+      "title": "ListReportDetails",
+      "description": "Snippet for ListReportDetails",
+      "file": "StorageInsightsClient.ListReportDetailsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetails",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetails",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_async_flattened",
+      "title": "ListReportDetailsAsync",
+      "description": "Snippet for ListReportDetailsAsync",
+      "file": "StorageInsightsClient.ListReportDetailsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetailsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_sync_flattened_resourceNames",
+      "title": "ListReportDetailsResourceNames",
+      "description": "Snippet for ListReportDetails",
+      "file": "StorageInsightsClient.ListReportDetailsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetails",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetails",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListReportDetails_async_flattened_resourceNames",
+      "title": "ListReportDetailsResourceNamesAsync",
+      "description": "Snippet for ListReportDetailsAsync",
+      "file": "StorageInsightsClient.ListReportDetailsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReportDetailsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListReportDetailsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListReportDetailsResponse, Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListReportDetails",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListReportDetails",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_sync",
+      "title": "GetReportDetailRequestObject",
+      "description": "Snippet for GetReportDetail",
+      "file": "StorageInsightsClient.GetReportDetailRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetail",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetReportDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportDetail",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_async",
+      "title": "GetReportDetailRequestObjectAsync",
+      "description": "Snippet for GetReportDetailAsync",
+      "file": "StorageInsightsClient.GetReportDetailRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetailAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetailAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetReportDetailRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_sync_flattened",
+      "title": "GetReportDetail",
+      "description": "Snippet for GetReportDetail",
+      "file": "StorageInsightsClient.GetReportDetailSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetail",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetail",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportDetail",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_async_flattened",
+      "title": "GetReportDetailAsync",
+      "description": "Snippet for GetReportDetailAsync",
+      "file": "StorageInsightsClient.GetReportDetailAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetailAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetailAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_sync_flattened_resourceNames",
+      "title": "GetReportDetailResourceNames",
+      "description": "Snippet for GetReportDetail",
+      "file": "StorageInsightsClient.GetReportDetailResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetail",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetail",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.ReportDetail",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetReportDetail_async_flattened_resourceNames",
+      "title": "GetReportDetailResourceNamesAsync",
+      "description": "Snippet for GetReportDetailAsync",
+      "file": "StorageInsightsClient.GetReportDetailResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReportDetailAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetReportDetailAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ReportDetailName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.ReportDetail>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetReportDetail",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetReportDetail",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
