@@ -27,88 +27,88 @@ namespace Google.Cloud.Dataplex.V1 {
             "Citnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9xdWFsaXR5LnByb3Rv",
             "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKWdv",
-            "b2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9jZXNzaW5nLnByb3RvIo0DCg9E",
-            "YXRhUXVhbGl0eVNwZWMSPQoFcnVsZXMYASADKAsyKS5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlQgPgQQISHQoQc2FtcGxpbmdf",
-            "cGVyY2VudBgEIAEoAkID4EEBEhcKCnJvd19maWx0ZXIYBSABKAlCA+BBARJZ",
-            "ChFwb3N0X3NjYW5fYWN0aW9ucxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5EYXRhUXVhbGl0eVNwZWMuUG9zdFNjYW5BY3Rpb25zQgPgQQEa",
-            "pwEKD1Bvc3RTY2FuQWN0aW9ucxJmCg9iaWdxdWVyeV9leHBvcnQYASABKAsy",
-            "SC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTcGVjLlBv",
-            "c3RTY2FuQWN0aW9ucy5CaWdRdWVyeUV4cG9ydEID4EEBGiwKDkJpZ1F1ZXJ5",
-            "RXhwb3J0EhoKDXJlc3VsdHNfdGFibGUYASABKAlCA+BBASLTBgoRRGF0YVF1",
-            "YWxpdHlSZXN1bHQSDgoGcGFzc2VkGAUgASgIEhcKBXNjb3JlGAkgASgCQgPg",
-            "QQNIAIgBARJICgpkaW1lbnNpb25zGAIgAygLMjQuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwbGV4LnYxLkRhdGFRdWFsaXR5RGltZW5zaW9uUmVzdWx0EkcKB2NvbHVt",
-            "bnMYCiADKAsyMS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxp",
-            "dHlDb2x1bW5SZXN1bHRCA+BBAxI+CgVydWxlcxgDIAMoCzIvLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGVSZXN1bHQSEQoJcm93",
-            "X2NvdW50GAQgASgDEjsKDHNjYW5uZWRfZGF0YRgHIAEoCzIlLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5TY2FubmVkRGF0YRJoChhwb3N0X3NjYW5fYWN0",
-            "aW9uc19yZXN1bHQYCCABKAsyQS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "RGF0YVF1YWxpdHlSZXN1bHQuUG9zdFNjYW5BY3Rpb25zUmVzdWx0QgPgQQMa",
-            "/QIKFVBvc3RTY2FuQWN0aW9uc1Jlc3VsdBJ7ChZiaWdxdWVyeV9leHBvcnRf",
-            "cmVzdWx0GAEgASgLMlYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFR",
-            "dWFsaXR5UmVzdWx0LlBvc3RTY2FuQWN0aW9uc1Jlc3VsdC5CaWdRdWVyeUV4",
-            "cG9ydFJlc3VsdEID4EEDGuYBChRCaWdRdWVyeUV4cG9ydFJlc3VsdBJwCgVz",
-            "dGF0ZRgBIAEoDjJcLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVh",
-            "bGl0eVJlc3VsdC5Qb3N0U2NhbkFjdGlvbnNSZXN1bHQuQmlnUXVlcnlFeHBv",
-            "cnRSZXN1bHQuU3RhdGVCA+BBAxIUCgdtZXNzYWdlGAIgASgJQgPgQQMiRgoF",
-            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABINCglTVUNDRUVERUQQARIK",
-            "CgZGQUlMRUQQAhILCgdTS0lQUEVEEANCCAoGX3Njb3JlItMBChVEYXRhUXVh",
-            "bGl0eVJ1bGVSZXN1bHQSNwoEcnVsZRgBIAEoCzIpLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUSDgoGcGFzc2VkGAcgASgIEhcK",
-            "D2V2YWx1YXRlZF9jb3VudBgJIAEoAxIUCgxwYXNzZWRfY291bnQYCCABKAMS",
-            "EgoKbnVsbF9jb3VudBgFIAEoAxISCgpwYXNzX3JhdGlvGAYgASgBEhoKEmZh",
-            "aWxpbmdfcm93c19xdWVyeRgKIAEoCSKXAQoaRGF0YVF1YWxpdHlEaW1lbnNp",
-            "b25SZXN1bHQSRgoJZGltZW5zaW9uGAEgASgLMi4uZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwbGV4LnYxLkRhdGFRdWFsaXR5RGltZW5zaW9uQgPgQQMSDgoGcGFzc2Vk",
-            "GAMgASgIEhcKBXNjb3JlGAQgASgCQgPgQQNIAIgBAUIICgZfc2NvcmUiJAoU",
-            "RGF0YVF1YWxpdHlEaW1lbnNpb24SDAoEbmFtZRgBIAEoCSL2DAoPRGF0YVF1",
-            "YWxpdHlSdWxlElcKEXJhbmdlX2V4cGVjdGF0aW9uGAEgASgLMjouZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVsZS5SYW5nZUV4cGVj",
-            "dGF0aW9uSAASXAoUbm9uX251bGxfZXhwZWN0YXRpb24YAiABKAsyPC5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLk5vbk51bGxF",
-            "eHBlY3RhdGlvbkgAElMKD3NldF9leHBlY3RhdGlvbhgDIAEoCzI4Lmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuU2V0RXhwZWN0",
-            "YXRpb25IABJXChFyZWdleF9leHBlY3RhdGlvbhgEIAEoCzI6Lmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuUmVnZXhFeHBlY3Rh",
-            "dGlvbkgAEmEKFnVuaXF1ZW5lc3NfZXhwZWN0YXRpb24YZCABKAsyPy5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlVuaXF1ZW5l",
-            "c3NFeHBlY3RhdGlvbkgAEmoKG3N0YXRpc3RpY19yYW5nZV9leHBlY3RhdGlv",
-            "bhhlIAEoCzJDLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0",
-            "eVJ1bGUuU3RhdGlzdGljUmFuZ2VFeHBlY3RhdGlvbkgAEmcKGXJvd19jb25k",
-            "aXRpb25fZXhwZWN0YXRpb24YyAEgASgLMkEuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkRhdGFRdWFsaXR5UnVsZS5Sb3dDb25kaXRpb25FeHBlY3RhdGlv",
-            "bkgAEmsKG3RhYmxlX2NvbmRpdGlvbl9leHBlY3RhdGlvbhjJASABKAsyQy5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlRhYmxl",
-            "Q29uZGl0aW9uRXhwZWN0YXRpb25IABIUCgZjb2x1bW4Y9AMgASgJQgPgQQES",
-            "GQoLaWdub3JlX251bGwY9QMgASgIQgPgQQESFwoJZGltZW5zaW9uGPYDIAEo",
-            "CUID4EECEhcKCXRocmVzaG9sZBj3AyABKAFCA+BBARISCgRuYW1lGPgDIAEo",
-            "CUID4EEBEhkKC2Rlc2NyaXB0aW9uGPkDIAEoCUID4EEBGoQBChBSYW5nZUV4",
-            "cGVjdGF0aW9uEhYKCW1pbl92YWx1ZRgBIAEoCUID4EEBEhYKCW1heF92YWx1",
-            "ZRgCIAEoCUID4EEBEh8KEnN0cmljdF9taW5fZW5hYmxlZBgDIAEoCEID4EEB",
-            "Eh8KEnN0cmljdF9tYXhfZW5hYmxlZBgEIAEoCEID4EEBGhQKEk5vbk51bGxF",
-            "eHBlY3RhdGlvbholCg5TZXRFeHBlY3RhdGlvbhITCgZ2YWx1ZXMYASADKAlC",
-            "A+BBARomChBSZWdleEV4cGVjdGF0aW9uEhIKBXJlZ2V4GAEgASgJQgPgQQEa",
-            "FwoVVW5pcXVlbmVzc0V4cGVjdGF0aW9uGsICChlTdGF0aXN0aWNSYW5nZUV4",
-            "cGVjdGF0aW9uEmsKCXN0YXRpc3RpYxgBIAEoDjJTLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuU3RhdGlzdGljUmFuZ2VFeHBl",
-            "Y3RhdGlvbi5Db2x1bW5TdGF0aXN0aWNCA+BBARIWCgltaW5fdmFsdWUYAiAB",
-            "KAlCA+BBARIWCgltYXhfdmFsdWUYAyABKAlCA+BBARIfChJzdHJpY3RfbWlu",
-            "X2VuYWJsZWQYBCABKAhCA+BBARIfChJzdHJpY3RfbWF4X2VuYWJsZWQYBSAB",
-            "KAhCA+BBASJGCg9Db2x1bW5TdGF0aXN0aWMSFwoTU1RBVElTVElDX1VOREVG",
-            "SU5FRBAAEggKBE1FQU4QARIHCgNNSU4QAhIHCgNNQVgQAxo2ChdSb3dDb25k",
-            "aXRpb25FeHBlY3RhdGlvbhIbCg5zcWxfZXhwcmVzc2lvbhgBIAEoCUID4EEB",
-            "GjgKGVRhYmxlQ29uZGl0aW9uRXhwZWN0YXRpb24SGwoOc3FsX2V4cHJlc3Np",
-            "b24YASABKAlCA+BBAUILCglydWxlX3R5cGUiUQoXRGF0YVF1YWxpdHlDb2x1",
-            "bW5SZXN1bHQSEwoGY29sdW1uGAEgASgJQgPgQQMSFwoFc2NvcmUYAiABKAJC",
-            "A+BBA0gAiAEBQggKBl9zY29yZULEAQocY29tLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MUIQRGF0YVF1YWxpdHlQcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYupBVQod",
-            "YmlncXVlcnkuZ29vZ2xlYXBpcy5jb20vVGFibGUSNHByb2plY3RzL3twcm9q",
-            "ZWN0fS9kYXRhc2V0cy97ZGF0YXNldH0vdGFibGVzL3t0YWJsZX1iBnByb3Rv",
-            "Mw=="));
+            "b2dsZS9jbG91ZC9kYXRhcGxleC92MS9wcm9jZXNzaW5nLnByb3RvIpMDCg9E",
+            "YXRhUXVhbGl0eVNwZWMSPgoFcnVsZXMYASADKAsyKS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlQgTiQQECEh4KEHNhbXBsaW5n",
+            "X3BlcmNlbnQYBCABKAJCBOJBAQESGAoKcm93X2ZpbHRlchgFIAEoCUIE4kEB",
+            "ARJaChFwb3N0X3NjYW5fYWN0aW9ucxgGIAEoCzI5Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5EYXRhUXVhbGl0eVNwZWMuUG9zdFNjYW5BY3Rpb25zQgTi",
+            "QQEBGqkBCg9Qb3N0U2NhbkFjdGlvbnMSZwoPYmlncXVlcnlfZXhwb3J0GAEg",
+            "ASgLMkguZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5U3Bl",
+            "Yy5Qb3N0U2NhbkFjdGlvbnMuQmlnUXVlcnlFeHBvcnRCBOJBAQEaLQoOQmln",
+            "UXVlcnlFeHBvcnQSGwoNcmVzdWx0c190YWJsZRgBIAEoCUIE4kEBASLZBgoR",
+            "RGF0YVF1YWxpdHlSZXN1bHQSDgoGcGFzc2VkGAUgASgIEhgKBXNjb3JlGAkg",
+            "ASgCQgTiQQEDSACIAQESSAoKZGltZW5zaW9ucxgCIAMoCzI0Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eURpbWVuc2lvblJlc3VsdBJI",
+            "Cgdjb2x1bW5zGAogAygLMjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRh",
+            "dGFRdWFsaXR5Q29sdW1uUmVzdWx0QgTiQQEDEj4KBXJ1bGVzGAMgAygLMi8u",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVsZVJlc3Vs",
+            "dBIRCglyb3dfY291bnQYBCABKAMSOwoMc2Nhbm5lZF9kYXRhGAcgASgLMiUu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLlNjYW5uZWREYXRhEmkKGHBvc3Rf",
+            "c2Nhbl9hY3Rpb25zX3Jlc3VsdBgIIAEoCzJBLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5EYXRhUXVhbGl0eVJlc3VsdC5Qb3N0U2NhbkFjdGlvbnNSZXN1",
+            "bHRCBOJBAQMagAMKFVBvc3RTY2FuQWN0aW9uc1Jlc3VsdBJ8ChZiaWdxdWVy",
+            "eV9leHBvcnRfcmVzdWx0GAEgASgLMlYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLkRhdGFRdWFsaXR5UmVzdWx0LlBvc3RTY2FuQWN0aW9uc1Jlc3VsdC5C",
+            "aWdRdWVyeUV4cG9ydFJlc3VsdEIE4kEBAxroAQoUQmlnUXVlcnlFeHBvcnRS",
+            "ZXN1bHQScQoFc3RhdGUYASABKA4yXC5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuRGF0YVF1YWxpdHlSZXN1bHQuUG9zdFNjYW5BY3Rpb25zUmVzdWx0LkJp",
+            "Z1F1ZXJ5RXhwb3J0UmVzdWx0LlN0YXRlQgTiQQEDEhUKB21lc3NhZ2UYAiAB",
+            "KAlCBOJBAQMiRgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABINCglT",
+            "VUNDRUVERUQQARIKCgZGQUlMRUQQAhILCgdTS0lQUEVEEANCCAoGX3Njb3Jl",
+            "ItMBChVEYXRhUXVhbGl0eVJ1bGVSZXN1bHQSNwoEcnVsZRgBIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUSDgoGcGFz",
+            "c2VkGAcgASgIEhcKD2V2YWx1YXRlZF9jb3VudBgJIAEoAxIUCgxwYXNzZWRf",
+            "Y291bnQYCCABKAMSEgoKbnVsbF9jb3VudBgFIAEoAxISCgpwYXNzX3JhdGlv",
+            "GAYgASgBEhoKEmZhaWxpbmdfcm93c19xdWVyeRgKIAEoCSKZAQoaRGF0YVF1",
+            "YWxpdHlEaW1lbnNpb25SZXN1bHQSRwoJZGltZW5zaW9uGAEgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5RGltZW5zaW9uQgTi",
+            "QQEDEg4KBnBhc3NlZBgDIAEoCBIYCgVzY29yZRgEIAEoAkIE4kEBA0gAiAEB",
+            "QggKBl9zY29yZSIkChREYXRhUXVhbGl0eURpbWVuc2lvbhIMCgRuYW1lGAEg",
+            "ASgJIokNCg9EYXRhUXVhbGl0eVJ1bGUSVwoRcmFuZ2VfZXhwZWN0YXRpb24Y",
+            "ASABKAsyOi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlS",
+            "dWxlLlJhbmdlRXhwZWN0YXRpb25IABJcChRub25fbnVsbF9leHBlY3RhdGlv",
+            "bhgCIAEoCzI8Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0",
+            "eVJ1bGUuTm9uTnVsbEV4cGVjdGF0aW9uSAASUwoPc2V0X2V4cGVjdGF0aW9u",
+            "GAMgASgLMjguZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5",
+            "UnVsZS5TZXRFeHBlY3RhdGlvbkgAElcKEXJlZ2V4X2V4cGVjdGF0aW9uGAQg",
+            "ASgLMjouZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVs",
+            "ZS5SZWdleEV4cGVjdGF0aW9uSAASYQoWdW5pcXVlbmVzc19leHBlY3RhdGlv",
+            "bhhkIAEoCzI/Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0",
+            "eVJ1bGUuVW5pcXVlbmVzc0V4cGVjdGF0aW9uSAASagobc3RhdGlzdGljX3Jh",
+            "bmdlX2V4cGVjdGF0aW9uGGUgASgLMkMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLkRhdGFRdWFsaXR5UnVsZS5TdGF0aXN0aWNSYW5nZUV4cGVjdGF0aW9u",
+            "SAASZwoZcm93X2NvbmRpdGlvbl9leHBlY3RhdGlvbhjIASABKAsyQS5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlJvd0NvbmRp",
+            "dGlvbkV4cGVjdGF0aW9uSAASawobdGFibGVfY29uZGl0aW9uX2V4cGVjdGF0",
+            "aW9uGMkBIAEoCzJDLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVh",
+            "bGl0eVJ1bGUuVGFibGVDb25kaXRpb25FeHBlY3RhdGlvbkgAEhUKBmNvbHVt",
+            "bhj0AyABKAlCBOJBAQESGgoLaWdub3JlX251bGwY9QMgASgIQgTiQQEBEhgK",
+            "CWRpbWVuc2lvbhj2AyABKAlCBOJBAQISGAoJdGhyZXNob2xkGPcDIAEoAUIE",
+            "4kEBARITCgRuYW1lGPgDIAEoCUIE4kEBARIaCgtkZXNjcmlwdGlvbhj5AyAB",
+            "KAlCBOJBAQEaiAEKEFJhbmdlRXhwZWN0YXRpb24SFwoJbWluX3ZhbHVlGAEg",
+            "ASgJQgTiQQEBEhcKCW1heF92YWx1ZRgCIAEoCUIE4kEBARIgChJzdHJpY3Rf",
+            "bWluX2VuYWJsZWQYAyABKAhCBOJBAQESIAoSc3RyaWN0X21heF9lbmFibGVk",
+            "GAQgASgIQgTiQQEBGhQKEk5vbk51bGxFeHBlY3RhdGlvbhomCg5TZXRFeHBl",
+            "Y3RhdGlvbhIUCgZ2YWx1ZXMYASADKAlCBOJBAQEaJwoQUmVnZXhFeHBlY3Rh",
+            "dGlvbhITCgVyZWdleBgBIAEoCUIE4kEBARoXChVVbmlxdWVuZXNzRXhwZWN0",
+            "YXRpb24axwIKGVN0YXRpc3RpY1JhbmdlRXhwZWN0YXRpb24SbAoJc3RhdGlz",
+            "dGljGAEgASgOMlMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFs",
+            "aXR5UnVsZS5TdGF0aXN0aWNSYW5nZUV4cGVjdGF0aW9uLkNvbHVtblN0YXRp",
+            "c3RpY0IE4kEBARIXCgltaW5fdmFsdWUYAiABKAlCBOJBAQESFwoJbWF4X3Zh",
+            "bHVlGAMgASgJQgTiQQEBEiAKEnN0cmljdF9taW5fZW5hYmxlZBgEIAEoCEIE",
+            "4kEBARIgChJzdHJpY3RfbWF4X2VuYWJsZWQYBSABKAhCBOJBAQEiRgoPQ29s",
+            "dW1uU3RhdGlzdGljEhcKE1NUQVRJU1RJQ19VTkRFRklORUQQABIICgRNRUFO",
+            "EAESBwoDTUlOEAISBwoDTUFYEAMaNwoXUm93Q29uZGl0aW9uRXhwZWN0YXRp",
+            "b24SHAoOc3FsX2V4cHJlc3Npb24YASABKAlCBOJBAQEaOQoZVGFibGVDb25k",
+            "aXRpb25FeHBlY3RhdGlvbhIcCg5zcWxfZXhwcmVzc2lvbhgBIAEoCUIE4kEB",
+            "AUILCglydWxlX3R5cGUiUwoXRGF0YVF1YWxpdHlDb2x1bW5SZXN1bHQSFAoG",
+            "Y29sdW1uGAEgASgJQgTiQQEDEhgKBXNjb3JlGAIgASgCQgTiQQEDSACIAQFC",
+            "CAoGX3Njb3JlQsQBChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQhBE",
+            "YXRhUXVhbGl0eVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBs",
+            "ZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBi6kFVCh1iaWdxdWVyeS5n",
+            "b29nbGVhcGlzLmNvbS9UYWJsZRI0cHJvamVjdHMve3Byb2plY3R9L2RhdGFz",
+            "ZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,6 +135,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// DataQualityScan related setting.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualitySpec : pb::IMessage<DataQualitySpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -461,6 +462,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// The configuration of post scan actions of DataQualityScan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PostScanActions : pb::IMessage<PostScanActions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -669,6 +671,7 @@ namespace Google.Cloud.Dataplex.V1 {
           /// <summary>
           /// The configuration of BigQuery export post scan action.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BigQueryExport : pb::IMessage<BigQueryExport>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -876,6 +879,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The output of a DataQualityScan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityResult : pb::IMessage<DataQualityResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1364,6 +1368,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// The result of post scan actions of DataQualityScan job.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PostScanActionsResult : pb::IMessage<PostScanActionsResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1571,6 +1576,7 @@ namespace Google.Cloud.Dataplex.V1 {
           /// <summary>
           /// The result of BigQuery export post scan action.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BigQueryExportResult : pb::IMessage<BigQueryExportResult>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1847,6 +1853,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// DataQualityRuleResult provides a more detailed, per-rule view of the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityRuleResult : pb::IMessage<DataQualityRuleResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2307,6 +2314,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// DataQualityDimensionResult provides a more detailed, per-dimension view of
   /// the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityDimensionResult : pb::IMessage<DataQualityDimensionResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2613,6 +2621,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// A dimension captures data quality intent about a defined subset of the rules
   /// specified.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityDimension : pb::IMessage<DataQualityDimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2810,6 +2819,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// A rule captures data quality intent about a data source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityRule : pb::IMessage<DataQualityRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3713,6 +3723,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether each column value lies between a specified range.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RangeExpectation : pb::IMessage<RangeExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4038,6 +4049,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether each column value is null.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NonNullExpectation : pb::IMessage<NonNullExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4193,6 +4205,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether each column value is contained by a specified set.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SetExpectation : pb::IMessage<SetExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4377,6 +4390,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether each column value matches a specified regex.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RegexExpectation : pb::IMessage<RegexExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4572,6 +4586,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether the column has duplicates.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UniquenessExpectation : pb::IMessage<UniquenessExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4728,6 +4743,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// Evaluates whether the column aggregate statistic lies between a specified
       /// range.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StatisticRangeExpectation : pb::IMessage<StatisticRangeExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5130,6 +5146,7 @@ namespace Google.Cloud.Dataplex.V1 {
       ///
       /// Example: col1 >= 0 AND col2 &lt; 10
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RowConditionExpectation : pb::IMessage<RowConditionExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5330,6 +5347,7 @@ namespace Google.Cloud.Dataplex.V1 {
       ///
       /// Example: MIN(col1) >= 0
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TableConditionExpectation : pb::IMessage<TableConditionExpectation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5531,6 +5549,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// DataQualityColumnResult provides a more detailed, per-column view of
   /// the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataQualityColumnResult : pb::IMessage<DataQualityColumnResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
