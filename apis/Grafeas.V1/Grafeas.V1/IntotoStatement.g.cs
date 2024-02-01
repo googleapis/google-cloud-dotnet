@@ -57,6 +57,7 @@ namespace Grafeas.V1 {
   /// serialized InTotoStatement will be stored as Envelope.payload.
   /// Envelope.payloadType is always "application/vnd.in-toto+json".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InTotoStatement : pb::IMessage<InTotoStatement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -501,6 +502,7 @@ namespace Grafeas.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Subject : pb::IMessage<Subject>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

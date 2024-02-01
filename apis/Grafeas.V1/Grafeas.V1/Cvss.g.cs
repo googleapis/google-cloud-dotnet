@@ -116,6 +116,7 @@ namespace Grafeas.V1 {
   /// Common Vulnerability Scoring System version 3.
   /// For details, see https://www.first.org/cvss/specification-document
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CVSSv3 : pb::IMessage<CVSSv3>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -737,6 +738,7 @@ namespace Grafeas.V1 {
   /// This is a message we will try to use for storing various versions of CVSS
   /// rather than making a separate proto for storing a specific version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CVSS : pb::IMessage<CVSS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
