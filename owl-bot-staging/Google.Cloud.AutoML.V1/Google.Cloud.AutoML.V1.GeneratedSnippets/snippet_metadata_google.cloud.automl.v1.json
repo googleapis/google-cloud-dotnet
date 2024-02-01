@@ -1,0 +1,5852 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AutoML.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.automl.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_sync",
+      "title": "CreateDatasetRequestObject",
+      "description": "Snippet for CreateDataset",
+      "file": "AutoMlClient.CreateDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_async",
+      "title": "CreateDatasetRequestObjectAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "AutoMlClient.CreateDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.CreateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_sync_flattened",
+      "title": "CreateDataset",
+      "description": "Snippet for CreateDataset",
+      "file": "AutoMlClient.CreateDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_async_flattened",
+      "title": "CreateDatasetAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "AutoMlClient.CreateDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_sync_flattened_resourceNames",
+      "title": "CreateDatasetResourceNames",
+      "description": "Snippet for CreateDataset",
+      "file": "AutoMlClient.CreateDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDataset",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateDataset_async_flattened_resourceNames",
+      "title": "CreateDatasetResourceNamesAsync",
+      "description": "Snippet for CreateDatasetAsync",
+      "file": "AutoMlClient.CreateDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Dataset, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_sync",
+      "title": "GetDatasetRequestObject",
+      "description": "Snippet for GetDataset",
+      "file": "AutoMlClient.GetDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Dataset",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_async",
+      "title": "GetDatasetRequestObjectAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "AutoMlClient.GetDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_sync_flattened",
+      "title": "GetDataset",
+      "description": "Snippet for GetDataset",
+      "file": "AutoMlClient.GetDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Dataset",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_async_flattened",
+      "title": "GetDatasetAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "AutoMlClient.GetDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_sync_flattened_resourceNames",
+      "title": "GetDatasetResourceNames",
+      "description": "Snippet for GetDataset",
+      "file": "AutoMlClient.GetDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Dataset",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetDataset_async_flattened_resourceNames",
+      "title": "GetDatasetResourceNamesAsync",
+      "description": "Snippet for GetDatasetAsync",
+      "file": "AutoMlClient.GetDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_sync",
+      "title": "ListDatasetsRequestObject",
+      "description": "Snippet for ListDatasets",
+      "file": "AutoMlClient.ListDatasetsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_async",
+      "title": "ListDatasetsRequestObjectAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "AutoMlClient.ListDatasetsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListDatasetsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_sync_flattened",
+      "title": "ListDatasets",
+      "description": "Snippet for ListDatasets",
+      "file": "AutoMlClient.ListDatasetsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_async_flattened",
+      "title": "ListDatasetsAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "AutoMlClient.ListDatasetsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_sync_flattened_resourceNames",
+      "title": "ListDatasetsResourceNames",
+      "description": "Snippet for ListDatasets",
+      "file": "AutoMlClient.ListDatasetsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasets",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasets",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListDatasets_async_flattened_resourceNames",
+      "title": "ListDatasetsResourceNamesAsync",
+      "description": "Snippet for ListDatasetsAsync",
+      "file": "AutoMlClient.ListDatasetsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListDatasetsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListDatasetsResponse, Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListDatasets",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListDatasets",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateDataset_sync",
+      "title": "UpdateDatasetRequestObject",
+      "description": "Snippet for UpdateDataset",
+      "file": "AutoMlClient.UpdateDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UpdateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Dataset",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateDataset_async",
+      "title": "UpdateDatasetRequestObjectAsync",
+      "description": "Snippet for UpdateDatasetAsync",
+      "file": "AutoMlClient.UpdateDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UpdateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateDataset_sync_flattened",
+      "title": "UpdateDataset",
+      "description": "Snippet for UpdateDataset",
+      "file": "AutoMlClient.UpdateDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Dataset",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateDataset_async_flattened",
+      "title": "UpdateDatasetAsync",
+      "description": "Snippet for UpdateDatasetAsync",
+      "file": "AutoMlClient.UpdateDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.Dataset",
+            "name": "dataset"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Dataset>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_sync",
+      "title": "DeleteDatasetRequestObject",
+      "description": "Snippet for DeleteDataset",
+      "file": "AutoMlClient.DeleteDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_async",
+      "title": "DeleteDatasetRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "AutoMlClient.DeleteDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeleteDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_sync_flattened",
+      "title": "DeleteDataset",
+      "description": "Snippet for DeleteDataset",
+      "file": "AutoMlClient.DeleteDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_async_flattened",
+      "title": "DeleteDatasetAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "AutoMlClient.DeleteDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_sync_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNames",
+      "description": "Snippet for DeleteDataset",
+      "file": "AutoMlClient.DeleteDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataset",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteDataset_async_flattened_resourceNames",
+      "title": "DeleteDatasetResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetAsync",
+      "file": "AutoMlClient.DeleteDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteDataset",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteDataset",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_sync",
+      "title": "ImportDataRequestObject",
+      "description": "Snippet for ImportData",
+      "file": "AutoMlClient.ImportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_async",
+      "title": "ImportDataRequestObjectAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "AutoMlClient.ImportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_sync_flattened",
+      "title": "ImportData",
+      "description": "Snippet for ImportData",
+      "file": "AutoMlClient.ImportDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_async_flattened",
+      "title": "ImportDataAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "AutoMlClient.ImportDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_sync_flattened_resourceNames",
+      "title": "ImportDataResourceNames",
+      "description": "Snippet for ImportData",
+      "file": "AutoMlClient.ImportDataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ImportData_async_flattened_resourceNames",
+      "title": "ImportDataResourceNamesAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "AutoMlClient.ImportDataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.InputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ImportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_sync",
+      "title": "ExportDataRequestObject",
+      "description": "Snippet for ExportData",
+      "file": "AutoMlClient.ExportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_async",
+      "title": "ExportDataRequestObjectAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "AutoMlClient.ExportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_sync_flattened",
+      "title": "ExportData",
+      "description": "Snippet for ExportData",
+      "file": "AutoMlClient.ExportDataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportData",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_async_flattened",
+      "title": "ExportDataAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "AutoMlClient.ExportDataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_sync_flattened_resourceNames",
+      "title": "ExportDataResourceNames",
+      "description": "Snippet for ExportData",
+      "file": "AutoMlClient.ExportDataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportData_async_flattened_resourceNames",
+      "title": "ExportDataResourceNamesAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "AutoMlClient.ExportDataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DatasetName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.OutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportData",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_sync",
+      "title": "GetAnnotationSpecRequestObject",
+      "description": "Snippet for GetAnnotationSpec",
+      "file": "AutoMlClient.GetAnnotationSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpec",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetAnnotationSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.AnnotationSpec",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_async",
+      "title": "GetAnnotationSpecRequestObjectAsync",
+      "description": "Snippet for GetAnnotationSpecAsync",
+      "file": "AutoMlClient.GetAnnotationSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpecAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetAnnotationSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.AnnotationSpec>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_sync_flattened",
+      "title": "GetAnnotationSpec",
+      "description": "Snippet for GetAnnotationSpec",
+      "file": "AutoMlClient.GetAnnotationSpecSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpec",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.AnnotationSpec",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_async_flattened",
+      "title": "GetAnnotationSpecAsync",
+      "description": "Snippet for GetAnnotationSpecAsync",
+      "file": "AutoMlClient.GetAnnotationSpecAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpecAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.AnnotationSpec>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_sync_flattened_resourceNames",
+      "title": "GetAnnotationSpecResourceNames",
+      "description": "Snippet for GetAnnotationSpec",
+      "file": "AutoMlClient.GetAnnotationSpecResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpec",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.AnnotationSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.AnnotationSpec",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetAnnotationSpec_async_flattened_resourceNames",
+      "title": "GetAnnotationSpecResourceNamesAsync",
+      "description": "Snippet for GetAnnotationSpecAsync",
+      "file": "AutoMlClient.GetAnnotationSpecResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAnnotationSpecAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetAnnotationSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.AnnotationSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.AnnotationSpec>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetAnnotationSpec",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetAnnotationSpec",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_sync",
+      "title": "CreateModelRequestObject",
+      "description": "Snippet for CreateModel",
+      "file": "AutoMlClient.CreateModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_async",
+      "title": "CreateModelRequestObjectAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "AutoMlClient.CreateModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.CreateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_sync_flattened",
+      "title": "CreateModel",
+      "description": "Snippet for CreateModel",
+      "file": "AutoMlClient.CreateModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_async_flattened",
+      "title": "CreateModelAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "AutoMlClient.CreateModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_sync_flattened_resourceNames",
+      "title": "CreateModelResourceNames",
+      "description": "Snippet for CreateModel",
+      "file": "AutoMlClient.CreateModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModel",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_CreateModel_async_flattened_resourceNames",
+      "title": "CreateModelResourceNamesAsync",
+      "description": "Snippet for CreateModelAsync",
+      "file": "AutoMlClient.CreateModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.CreateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.Model, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "CreateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.CreateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_sync",
+      "title": "GetModelRequestObject",
+      "description": "Snippet for GetModel",
+      "file": "AutoMlClient.GetModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Model",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_async",
+      "title": "GetModelRequestObjectAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "AutoMlClient.GetModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_sync_flattened",
+      "title": "GetModel",
+      "description": "Snippet for GetModel",
+      "file": "AutoMlClient.GetModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Model",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_async_flattened",
+      "title": "GetModelAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "AutoMlClient.GetModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_sync_flattened_resourceNames",
+      "title": "GetModelResourceNames",
+      "description": "Snippet for GetModel",
+      "file": "AutoMlClient.GetModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Model",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModel_async_flattened_resourceNames",
+      "title": "GetModelResourceNamesAsync",
+      "description": "Snippet for GetModelAsync",
+      "file": "AutoMlClient.GetModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_sync",
+      "title": "ListModelsRequestObject",
+      "description": "Snippet for ListModels",
+      "file": "AutoMlClient.ListModelsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_async",
+      "title": "ListModelsRequestObjectAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "AutoMlClient.ListModelsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListModelsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_sync_flattened",
+      "title": "ListModels",
+      "description": "Snippet for ListModels",
+      "file": "AutoMlClient.ListModelsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModels",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_async_flattened",
+      "title": "ListModelsAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "AutoMlClient.ListModelsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_sync_flattened_resourceNames",
+      "title": "ListModelsResourceNames",
+      "description": "Snippet for ListModels",
+      "file": "AutoMlClient.ListModelsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModels",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModels",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModels_async_flattened_resourceNames",
+      "title": "ListModelsResourceNamesAsync",
+      "description": "Snippet for ListModelsAsync",
+      "file": "AutoMlClient.ListModelsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelsResponse, Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModels",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModels",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_sync",
+      "title": "DeleteModelRequestObject",
+      "description": "Snippet for DeleteModel",
+      "file": "AutoMlClient.DeleteModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_async",
+      "title": "DeleteModelRequestObjectAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "AutoMlClient.DeleteModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeleteModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_sync_flattened",
+      "title": "DeleteModel",
+      "description": "Snippet for DeleteModel",
+      "file": "AutoMlClient.DeleteModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_async_flattened",
+      "title": "DeleteModelAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "AutoMlClient.DeleteModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_sync_flattened_resourceNames",
+      "title": "DeleteModelResourceNames",
+      "description": "Snippet for DeleteModel",
+      "file": "AutoMlClient.DeleteModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeleteModel_async_flattened_resourceNames",
+      "title": "DeleteModelResourceNamesAsync",
+      "description": "Snippet for DeleteModelAsync",
+      "file": "AutoMlClient.DeleteModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeleteModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeleteModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeleteModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateModel_sync",
+      "title": "UpdateModelRequestObject",
+      "description": "Snippet for UpdateModel",
+      "file": "AutoMlClient.UpdateModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UpdateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Model",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateModel_async",
+      "title": "UpdateModelRequestObjectAsync",
+      "description": "Snippet for UpdateModelAsync",
+      "file": "AutoMlClient.UpdateModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UpdateModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateModel_sync_flattened",
+      "title": "UpdateModel",
+      "description": "Snippet for UpdateModel",
+      "file": "AutoMlClient.UpdateModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.Model",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UpdateModel_async_flattened",
+      "title": "UpdateModelAsync",
+      "description": "Snippet for UpdateModelAsync",
+      "file": "AutoMlClient.UpdateModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UpdateModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.Model",
+            "name": "model"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.Model>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UpdateModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UpdateModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_sync",
+      "title": "DeployModelRequestObject",
+      "description": "Snippet for DeployModel",
+      "file": "AutoMlClient.DeployModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeployModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_async",
+      "title": "DeployModelRequestObjectAsync",
+      "description": "Snippet for DeployModelAsync",
+      "file": "AutoMlClient.DeployModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.DeployModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_sync_flattened",
+      "title": "DeployModel",
+      "description": "Snippet for DeployModel",
+      "file": "AutoMlClient.DeployModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_async_flattened",
+      "title": "DeployModelAsync",
+      "description": "Snippet for DeployModelAsync",
+      "file": "AutoMlClient.DeployModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_sync_flattened_resourceNames",
+      "title": "DeployModelResourceNames",
+      "description": "Snippet for DeployModel",
+      "file": "AutoMlClient.DeployModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_DeployModel_async_flattened_resourceNames",
+      "title": "DeployModelResourceNamesAsync",
+      "description": "Snippet for DeployModelAsync",
+      "file": "AutoMlClient.DeployModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.DeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "DeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.DeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_sync",
+      "title": "UndeployModelRequestObject",
+      "description": "Snippet for UndeployModel",
+      "file": "AutoMlClient.UndeployModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UndeployModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_async",
+      "title": "UndeployModelRequestObjectAsync",
+      "description": "Snippet for UndeployModelAsync",
+      "file": "AutoMlClient.UndeployModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.UndeployModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_sync_flattened",
+      "title": "UndeployModel",
+      "description": "Snippet for UndeployModel",
+      "file": "AutoMlClient.UndeployModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_async_flattened",
+      "title": "UndeployModelAsync",
+      "description": "Snippet for UndeployModelAsync",
+      "file": "AutoMlClient.UndeployModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_sync_flattened_resourceNames",
+      "title": "UndeployModelResourceNames",
+      "description": "Snippet for UndeployModel",
+      "file": "AutoMlClient.UndeployModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_UndeployModel_async_flattened_resourceNames",
+      "title": "UndeployModelResourceNamesAsync",
+      "description": "Snippet for UndeployModelAsync",
+      "file": "AutoMlClient.UndeployModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeployModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.UndeployModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "UndeployModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.UndeployModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_sync",
+      "title": "ExportModelRequestObject",
+      "description": "Snippet for ExportModel",
+      "file": "AutoMlClient.ExportModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ExportModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_async",
+      "title": "ExportModelRequestObjectAsync",
+      "description": "Snippet for ExportModelAsync",
+      "file": "AutoMlClient.ExportModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ExportModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_sync_flattened",
+      "title": "ExportModel",
+      "description": "Snippet for ExportModel",
+      "file": "AutoMlClient.ExportModelSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModel",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelExportOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_async_flattened",
+      "title": "ExportModelAsync",
+      "description": "Snippet for ExportModelAsync",
+      "file": "AutoMlClient.ExportModelAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelExportOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_sync_flattened_resourceNames",
+      "title": "ExportModelResourceNames",
+      "description": "Snippet for ExportModel",
+      "file": "AutoMlClient.ExportModelResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModel",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelExportOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ExportModel_async_flattened_resourceNames",
+      "title": "ExportModelResourceNamesAsync",
+      "description": "Snippet for ExportModelAsync",
+      "file": "AutoMlClient.ExportModelResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportModelAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ExportModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelExportOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ExportModel",
+          "fullName": "google.cloud.automl.v1.AutoMl.ExportModel",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_sync",
+      "title": "GetModelEvaluationRequestObject",
+      "description": "Snippet for GetModelEvaluation",
+      "file": "AutoMlClient.GetModelEvaluationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluation",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetModelEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.ModelEvaluation",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_async",
+      "title": "GetModelEvaluationRequestObjectAsync",
+      "description": "Snippet for GetModelEvaluationAsync",
+      "file": "AutoMlClient.GetModelEvaluationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluationAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.GetModelEvaluationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_sync_flattened",
+      "title": "GetModelEvaluation",
+      "description": "Snippet for GetModelEvaluation",
+      "file": "AutoMlClient.GetModelEvaluationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluation",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluation",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.ModelEvaluation",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_async_flattened",
+      "title": "GetModelEvaluationAsync",
+      "description": "Snippet for GetModelEvaluationAsync",
+      "file": "AutoMlClient.GetModelEvaluationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluationAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_sync_flattened_resourceNames",
+      "title": "GetModelEvaluationResourceNames",
+      "description": "Snippet for GetModelEvaluation",
+      "file": "AutoMlClient.GetModelEvaluationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluation",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluation",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.ModelEvaluation",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_GetModelEvaluation_async_flattened_resourceNames",
+      "title": "GetModelEvaluationResourceNamesAsync",
+      "description": "Snippet for GetModelEvaluationAsync",
+      "file": "AutoMlClient.GetModelEvaluationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetModelEvaluationAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.GetModelEvaluationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelEvaluationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "GetModelEvaluation",
+          "fullName": "google.cloud.automl.v1.AutoMl.GetModelEvaluation",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_sync",
+      "title": "ListModelEvaluationsRequestObject",
+      "description": "Snippet for ListModelEvaluations",
+      "file": "AutoMlClient.ListModelEvaluationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluations",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListModelEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_async",
+      "title": "ListModelEvaluationsRequestObjectAsync",
+      "description": "Snippet for ListModelEvaluationsAsync",
+      "file": "AutoMlClient.ListModelEvaluationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluationsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ListModelEvaluationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_sync_flattened",
+      "title": "ListModelEvaluations",
+      "description": "Snippet for ListModelEvaluations",
+      "file": "AutoMlClient.ListModelEvaluationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluations",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_async_flattened",
+      "title": "ListModelEvaluationsAsync",
+      "description": "Snippet for ListModelEvaluationsAsync",
+      "file": "AutoMlClient.ListModelEvaluationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluationsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_sync_flattened_resourceNames",
+      "title": "ListModelEvaluationsResourceNames",
+      "description": "Snippet for ListModelEvaluations",
+      "file": "AutoMlClient.ListModelEvaluationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluations",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_AutoMl_ListModelEvaluations_async_flattened_resourceNames",
+      "title": "ListModelEvaluationsResourceNamesAsync",
+      "description": "Snippet for ListModelEvaluationsAsync",
+      "file": "AutoMlClient.ListModelEvaluationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelEvaluationsAsync",
+        "fullName": "Google.Cloud.AutoML.V1.AutoMlClient.ListModelEvaluationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "filter"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AutoML.V1.ListModelEvaluationsResponse, Google.Cloud.AutoML.V1.ModelEvaluation>",
+        "client": {
+          "shortName": "AutoMlClient",
+          "fullName": "Google.Cloud.AutoML.V1.AutoMlClient"
+        },
+        "method": {
+          "shortName": "ListModelEvaluations",
+          "fullName": "google.cloud.automl.v1.AutoMl.ListModelEvaluations",
+          "service": {
+            "shortName": "AutoMl",
+            "fullName": "google.cloud.automl.v1.AutoMl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync",
+      "title": "PredictRequestObject",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async",
+      "title": "PredictRequestObjectAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.PredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened",
+      "title": "Predict",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ExamplePayload",
+            "name": "payload"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened",
+      "title": "PredictAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ExamplePayload",
+            "name": "payload"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_sync_flattened_resourceNames",
+      "title": "PredictResourceNames",
+      "description": "Snippet for Predict",
+      "file": "PredictionServiceClient.PredictResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Predict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.Predict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ExamplePayload",
+            "name": "payload"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AutoML.V1.PredictResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_Predict_async_flattened_resourceNames",
+      "title": "PredictResourceNamesAsync",
+      "description": "Snippet for PredictAsync",
+      "file": "PredictionServiceClient.PredictResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.PredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.ExamplePayload",
+            "name": "payload"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AutoML.V1.PredictResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "Predict",
+          "fullName": "google.cloud.automl.v1.PredictionService.Predict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync",
+      "title": "BatchPredictRequestObject",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async",
+      "title": "BatchPredictRequestObjectAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened",
+      "title": "BatchPredict",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened",
+      "title": "BatchPredictAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_sync_flattened_resourceNames",
+      "title": "BatchPredictResourceNames",
+      "description": "Snippet for BatchPredict",
+      "file": "PredictionServiceClient.BatchPredictResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredict",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredict",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "automl_v1_generated_PredictionService_BatchPredict_async_flattened_resourceNames",
+      "title": "BatchPredictResourceNamesAsync",
+      "description": "Snippet for BatchPredictAsync",
+      "file": "PredictionServiceClient.BatchPredictResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchPredictAsync",
+        "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient.BatchPredictAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AutoML.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictInputConfig",
+            "name": "inputConfig"
+          },
+          {
+            "type": "Google.Cloud.AutoML.V1.BatchPredictOutputConfig",
+            "name": "outputConfig"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "params"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AutoML.V1.BatchPredictResult, Google.Cloud.AutoML.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AutoML.V1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchPredict",
+          "fullName": "google.cloud.automl.v1.PredictionService.BatchPredict",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.automl.v1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
