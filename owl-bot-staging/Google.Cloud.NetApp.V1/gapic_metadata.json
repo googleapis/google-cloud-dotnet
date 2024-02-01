@@ -1,0 +1,324 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.netapp.v1",
+  "libraryPackage": "Google.Cloud.NetApp.V1",
+  "services": {
+    "NetApp": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetAppClient",
+          "rpcs": {
+            "CreateActiveDirectory": {
+              "methods": [
+                "CreateActiveDirectory",
+                "CreateActiveDirectoryAsync"
+              ]
+            },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "CreateBackupPolicy": {
+              "methods": [
+                "CreateBackupPolicy",
+                "CreateBackupPolicyAsync"
+              ]
+            },
+            "CreateBackupVault": {
+              "methods": [
+                "CreateBackupVault",
+                "CreateBackupVaultAsync"
+              ]
+            },
+            "CreateKmsConfig": {
+              "methods": [
+                "CreateKmsConfig",
+                "CreateKmsConfigAsync"
+              ]
+            },
+            "CreateReplication": {
+              "methods": [
+                "CreateReplication",
+                "CreateReplicationAsync"
+              ]
+            },
+            "CreateSnapshot": {
+              "methods": [
+                "CreateSnapshot",
+                "CreateSnapshotAsync"
+              ]
+            },
+            "CreateStoragePool": {
+              "methods": [
+                "CreateStoragePool",
+                "CreateStoragePoolAsync"
+              ]
+            },
+            "CreateVolume": {
+              "methods": [
+                "CreateVolume",
+                "CreateVolumeAsync"
+              ]
+            },
+            "DeleteActiveDirectory": {
+              "methods": [
+                "DeleteActiveDirectory",
+                "DeleteActiveDirectoryAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteBackupPolicy": {
+              "methods": [
+                "DeleteBackupPolicy",
+                "DeleteBackupPolicyAsync"
+              ]
+            },
+            "DeleteBackupVault": {
+              "methods": [
+                "DeleteBackupVault",
+                "DeleteBackupVaultAsync"
+              ]
+            },
+            "DeleteKmsConfig": {
+              "methods": [
+                "DeleteKmsConfig",
+                "DeleteKmsConfigAsync"
+              ]
+            },
+            "DeleteReplication": {
+              "methods": [
+                "DeleteReplication",
+                "DeleteReplicationAsync"
+              ]
+            },
+            "DeleteSnapshot": {
+              "methods": [
+                "DeleteSnapshot",
+                "DeleteSnapshotAsync"
+              ]
+            },
+            "DeleteStoragePool": {
+              "methods": [
+                "DeleteStoragePool",
+                "DeleteStoragePoolAsync"
+              ]
+            },
+            "DeleteVolume": {
+              "methods": [
+                "DeleteVolume",
+                "DeleteVolumeAsync"
+              ]
+            },
+            "EncryptVolumes": {
+              "methods": [
+                "EncryptVolumes",
+                "EncryptVolumesAsync"
+              ]
+            },
+            "GetActiveDirectory": {
+              "methods": [
+                "GetActiveDirectory",
+                "GetActiveDirectoryAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupPolicy": {
+              "methods": [
+                "GetBackupPolicy",
+                "GetBackupPolicyAsync"
+              ]
+            },
+            "GetBackupVault": {
+              "methods": [
+                "GetBackupVault",
+                "GetBackupVaultAsync"
+              ]
+            },
+            "GetKmsConfig": {
+              "methods": [
+                "GetKmsConfig",
+                "GetKmsConfigAsync"
+              ]
+            },
+            "GetReplication": {
+              "methods": [
+                "GetReplication",
+                "GetReplicationAsync"
+              ]
+            },
+            "GetSnapshot": {
+              "methods": [
+                "GetSnapshot",
+                "GetSnapshotAsync"
+              ]
+            },
+            "GetStoragePool": {
+              "methods": [
+                "GetStoragePool",
+                "GetStoragePoolAsync"
+              ]
+            },
+            "GetVolume": {
+              "methods": [
+                "GetVolume",
+                "GetVolumeAsync"
+              ]
+            },
+            "ListActiveDirectories": {
+              "methods": [
+                "ListActiveDirectories",
+                "ListActiveDirectoriesAsync"
+              ]
+            },
+            "ListBackupPolicies": {
+              "methods": [
+                "ListBackupPolicies",
+                "ListBackupPoliciesAsync"
+              ]
+            },
+            "ListBackupVaults": {
+              "methods": [
+                "ListBackupVaults",
+                "ListBackupVaultsAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "ListKmsConfigs": {
+              "methods": [
+                "ListKmsConfigs",
+                "ListKmsConfigsAsync"
+              ]
+            },
+            "ListReplications": {
+              "methods": [
+                "ListReplications",
+                "ListReplicationsAsync"
+              ]
+            },
+            "ListSnapshots": {
+              "methods": [
+                "ListSnapshots",
+                "ListSnapshotsAsync"
+              ]
+            },
+            "ListStoragePools": {
+              "methods": [
+                "ListStoragePools",
+                "ListStoragePoolsAsync"
+              ]
+            },
+            "ListVolumes": {
+              "methods": [
+                "ListVolumes",
+                "ListVolumesAsync"
+              ]
+            },
+            "ResumeReplication": {
+              "methods": [
+                "ResumeReplication",
+                "ResumeReplicationAsync"
+              ]
+            },
+            "ReverseReplicationDirection": {
+              "methods": [
+                "ReverseReplicationDirection",
+                "ReverseReplicationDirectionAsync"
+              ]
+            },
+            "RevertVolume": {
+              "methods": [
+                "RevertVolume",
+                "RevertVolumeAsync"
+              ]
+            },
+            "StopReplication": {
+              "methods": [
+                "StopReplication",
+                "StopReplicationAsync"
+              ]
+            },
+            "UpdateActiveDirectory": {
+              "methods": [
+                "UpdateActiveDirectory",
+                "UpdateActiveDirectoryAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupPolicy": {
+              "methods": [
+                "UpdateBackupPolicy",
+                "UpdateBackupPolicyAsync"
+              ]
+            },
+            "UpdateBackupVault": {
+              "methods": [
+                "UpdateBackupVault",
+                "UpdateBackupVaultAsync"
+              ]
+            },
+            "UpdateKmsConfig": {
+              "methods": [
+                "UpdateKmsConfig",
+                "UpdateKmsConfigAsync"
+              ]
+            },
+            "UpdateReplication": {
+              "methods": [
+                "UpdateReplication",
+                "UpdateReplicationAsync"
+              ]
+            },
+            "UpdateSnapshot": {
+              "methods": [
+                "UpdateSnapshot",
+                "UpdateSnapshotAsync"
+              ]
+            },
+            "UpdateStoragePool": {
+              "methods": [
+                "UpdateStoragePool",
+                "UpdateStoragePoolAsync"
+              ]
+            },
+            "UpdateVolume": {
+              "methods": [
+                "UpdateVolume",
+                "UpdateVolumeAsync"
+              ]
+            },
+            "VerifyKmsConfig": {
+              "methods": [
+                "VerifyKmsConfig",
+                "VerifyKmsConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
