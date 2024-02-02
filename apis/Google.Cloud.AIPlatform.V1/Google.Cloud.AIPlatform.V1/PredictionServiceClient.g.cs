@@ -50,14 +50,20 @@ namespace Google.Cloud.AIPlatform.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             PredictSettings = existing.PredictSettings;
             RawPredictSettings = existing.RawPredictSettings;
+            StreamRawPredictSettings = existing.StreamRawPredictSettings;
             DirectPredictSettings = existing.DirectPredictSettings;
             DirectRawPredictSettings = existing.DirectRawPredictSettings;
+            StreamDirectPredictSettings = existing.StreamDirectPredictSettings;
+            StreamDirectPredictStreamingSettings = existing.StreamDirectPredictStreamingSettings;
+            StreamDirectRawPredictSettings = existing.StreamDirectRawPredictSettings;
+            StreamDirectRawPredictStreamingSettings = existing.StreamDirectRawPredictStreamingSettings;
             StreamingPredictSettings = existing.StreamingPredictSettings;
             StreamingPredictStreamingSettings = existing.StreamingPredictStreamingSettings;
             ServerStreamingPredictSettings = existing.ServerStreamingPredictSettings;
             StreamingRawPredictSettings = existing.StreamingRawPredictSettings;
             StreamingRawPredictStreamingSettings = existing.StreamingRawPredictStreamingSettings;
             ExplainSettings = existing.ExplainSettings;
+            GenerateContentSettings = existing.GenerateContentSettings;
             StreamGenerateContentSettings = existing.StreamGenerateContentSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -92,6 +98,18 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.StreamRawPredict</c> and <c>PredictionServiceClient.StreamRawPredictAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamRawPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>PredictionServiceClient.DirectPredict</c> and <c>PredictionServiceClient.DirectPredictAsync</c>.
         /// </summary>
         /// <remarks>
@@ -113,6 +131,48 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DirectRawPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.StreamDirectPredict</c> and <c>PredictionServiceClient.StreamDirectPredictAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamDirectPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>PredictionServiceClient.StreamDirectPredict</c> and <c>PredictionServiceClient.StreamDirectPredictAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamDirectPredictStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.StreamDirectRawPredict</c> and
+        /// <c>PredictionServiceClient.StreamDirectRawPredictAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StreamDirectRawPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to
+        /// <c>PredictionServiceClient.StreamDirectRawPredict</c> and
+        /// <c>PredictionServiceClient.StreamDirectRawPredictAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings StreamDirectRawPredictStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -178,6 +238,18 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ExplainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.GenerateContent</c> and <c>PredictionServiceClient.GenerateContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateContentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -908,8 +980,64 @@ namespace Google.Cloud.AIPlatform.V1
             RawPredictAsync(endpoint, httpBody, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform an unary online prediction request for Vertex first-party products
-        /// and frameworks.
+        /// Server streaming methods for <see cref="StreamRawPredict(StreamRawPredictRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamRawPredictStream : gaxgrpc::ServerStreamingBase<ga::HttpBody>
+        {
+        }
+
+        /// <summary>
+        /// Perform a streaming online prediction with an arbitrary HTTP payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamRawPredictStream StreamRawPredict(StreamRawPredictRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform a streaming online prediction with an arbitrary HTTP payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamRawPredictStream StreamRawPredict(string endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            StreamRawPredict(new StreamRawPredictRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform a streaming online prediction with an arbitrary HTTP payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamRawPredictStream StreamRawPredict(EndpointName endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            StreamRawPredict(new StreamRawPredictRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -918,8 +1046,8 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an unary online prediction request for Vertex first-party products
-        /// and frameworks.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -928,8 +1056,8 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an unary online prediction request for Vertex first-party products
-        /// and frameworks.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -938,7 +1066,8 @@ namespace Google.Cloud.AIPlatform.V1
             DirectPredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform an online prediction request through gRPC.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// custom containers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -947,7 +1076,8 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an online prediction request through gRPC.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// custom containers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -956,13 +1086,50 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an online prediction request through gRPC.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// custom containers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DirectRawPredictResponse> DirectRawPredictAsync(DirectRawPredictRequest request, st::CancellationToken cancellationToken) =>
             DirectRawPredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamDirectPredict(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamDirectPredictStream : gaxgrpc::BidirectionalStreamingBase<StreamDirectPredictRequest, StreamDirectPredictResponse>
+        {
+        }
+
+        /// <summary>
+        /// Perform a streaming online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamDirectPredictStream StreamDirectPredict(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="StreamDirectRawPredict(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamDirectRawPredictStream : gaxgrpc::BidirectionalStreamingBase<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse>
+        {
+        }
+
+        /// <summary>
+        /// Perform a streaming online prediction request to a gRPC model server for
+        /// custom containers.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual StreamDirectRawPredictStream StreamDirectRawPredict(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Bidirectional streaming methods for
@@ -1387,6 +1554,107 @@ namespace Google.Cloud.AIPlatform.V1
             ExplainAsync(endpoint, instances, parameters, deployedModelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateContentResponse GenerateContent(GenerateContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateContentResponse> GenerateContentAsync(GenerateContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateContentResponse> GenerateContentAsync(GenerateContentRequest request, st::CancellationToken cancellationToken) =>
+            GenerateContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="contents">
+        /// Required. The content of the current conversation with the model.
+        /// 
+        /// For single-turn queries, this is a single instance. For multi-turn queries,
+        /// this is a repeated field that contains conversation history + latest
+        /// request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateContentResponse GenerateContent(string model, scg::IEnumerable<Content> contents, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateContent(new GenerateContentRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+                Contents =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contents, nameof(contents)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="contents">
+        /// Required. The content of the current conversation with the model.
+        /// 
+        /// For single-turn queries, this is a single instance. For multi-turn queries,
+        /// this is a repeated field that contains conversation history + latest
+        /// request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateContentResponse> GenerateContentAsync(string model, scg::IEnumerable<Content> contents, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateContentAsync(new GenerateContentRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+                Contents =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contents, nameof(contents)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The name of the publisher model requested to serve the
+        /// prediction. Format:
+        /// `projects/{project}/locations/{location}/publishers/*/models/*`
+        /// </param>
+        /// <param name="contents">
+        /// Required. The content of the current conversation with the model.
+        /// 
+        /// For single-turn queries, this is a single instance. For multi-turn queries,
+        /// this is a repeated field that contains conversation history + latest
+        /// request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateContentResponse> GenerateContentAsync(string model, scg::IEnumerable<Content> contents, st::CancellationToken cancellationToken) =>
+            GenerateContentAsync(model, contents, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Server streaming methods for
         /// <see cref="StreamGenerateContent(GenerateContentRequest,gaxgrpc::CallSettings)"/>.
         /// </summary>
@@ -1441,9 +1709,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> _callRawPredict;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<StreamRawPredictRequest, ga::HttpBody> _callStreamRawPredict;
+
         private readonly gaxgrpc::ApiCall<DirectPredictRequest, DirectPredictResponse> _callDirectPredict;
 
         private readonly gaxgrpc::ApiCall<DirectRawPredictRequest, DirectRawPredictResponse> _callDirectRawPredict;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamDirectPredictRequest, StreamDirectPredictResponse> _callStreamDirectPredict;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse> _callStreamDirectRawPredict;
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingPredictRequest, StreamingPredictResponse> _callStreamingPredict;
 
@@ -1452,6 +1726,8 @@ namespace Google.Cloud.AIPlatform.V1
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingRawPredictRequest, StreamingRawPredictResponse> _callStreamingRawPredict;
 
         private readonly gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> _callExplain;
+
+        private readonly gaxgrpc::ApiCall<GenerateContentRequest, GenerateContentResponse> _callGenerateContent;
 
         private readonly gaxgrpc::ApiServerStreamingCall<GenerateContentRequest, GenerateContentResponse> _callStreamGenerateContent;
 
@@ -1474,12 +1750,21 @@ namespace Google.Cloud.AIPlatform.V1
             _callRawPredict = clientHelper.BuildApiCall<RawPredictRequest, ga::HttpBody>("RawPredict", grpcClient.RawPredictAsync, grpcClient.RawPredict, effectiveSettings.RawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callRawPredict);
             Modify_RawPredictApiCall(ref _callRawPredict);
+            _callStreamRawPredict = clientHelper.BuildApiCall<StreamRawPredictRequest, ga::HttpBody>("StreamRawPredict", grpcClient.StreamRawPredict, effectiveSettings.StreamRawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            Modify_ApiCall(ref _callStreamRawPredict);
+            Modify_StreamRawPredictApiCall(ref _callStreamRawPredict);
             _callDirectPredict = clientHelper.BuildApiCall<DirectPredictRequest, DirectPredictResponse>("DirectPredict", grpcClient.DirectPredictAsync, grpcClient.DirectPredict, effectiveSettings.DirectPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callDirectPredict);
             Modify_DirectPredictApiCall(ref _callDirectPredict);
             _callDirectRawPredict = clientHelper.BuildApiCall<DirectRawPredictRequest, DirectRawPredictResponse>("DirectRawPredict", grpcClient.DirectRawPredictAsync, grpcClient.DirectRawPredict, effectiveSettings.DirectRawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callDirectRawPredict);
             Modify_DirectRawPredictApiCall(ref _callDirectRawPredict);
+            _callStreamDirectPredict = clientHelper.BuildApiCall<StreamDirectPredictRequest, StreamDirectPredictResponse>("StreamDirectPredict", grpcClient.StreamDirectPredict, effectiveSettings.StreamDirectPredictSettings, effectiveSettings.StreamDirectPredictStreamingSettings);
+            Modify_ApiCall(ref _callStreamDirectPredict);
+            Modify_StreamDirectPredictApiCall(ref _callStreamDirectPredict);
+            _callStreamDirectRawPredict = clientHelper.BuildApiCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse>("StreamDirectRawPredict", grpcClient.StreamDirectRawPredict, effectiveSettings.StreamDirectRawPredictSettings, effectiveSettings.StreamDirectRawPredictStreamingSettings);
+            Modify_ApiCall(ref _callStreamDirectRawPredict);
+            Modify_StreamDirectRawPredictApiCall(ref _callStreamDirectRawPredict);
             _callStreamingPredict = clientHelper.BuildApiCall<StreamingPredictRequest, StreamingPredictResponse>("StreamingPredict", grpcClient.StreamingPredict, effectiveSettings.StreamingPredictSettings, effectiveSettings.StreamingPredictStreamingSettings);
             Modify_ApiCall(ref _callStreamingPredict);
             Modify_StreamingPredictApiCall(ref _callStreamingPredict);
@@ -1492,6 +1777,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callExplain = clientHelper.BuildApiCall<ExplainRequest, ExplainResponse>("Explain", grpcClient.ExplainAsync, grpcClient.Explain, effectiveSettings.ExplainSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callExplain);
             Modify_ExplainApiCall(ref _callExplain);
+            _callGenerateContent = clientHelper.BuildApiCall<GenerateContentRequest, GenerateContentResponse>("GenerateContent", grpcClient.GenerateContentAsync, grpcClient.GenerateContent, effectiveSettings.GenerateContentSettings).WithGoogleRequestParam("model", request => request.Model);
+            Modify_ApiCall(ref _callGenerateContent);
+            Modify_GenerateContentApiCall(ref _callGenerateContent);
             _callStreamGenerateContent = clientHelper.BuildApiCall<GenerateContentRequest, GenerateContentResponse>("StreamGenerateContent", grpcClient.StreamGenerateContent, effectiveSettings.StreamGenerateContentSettings).WithGoogleRequestParam("model", request => request.Model);
             Modify_ApiCall(ref _callStreamGenerateContent);
             Modify_StreamGenerateContentApiCall(ref _callStreamGenerateContent);
@@ -1508,9 +1796,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_RawPredictApiCall(ref gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> call);
 
+        partial void Modify_StreamRawPredictApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamRawPredictRequest, ga::HttpBody> call);
+
         partial void Modify_DirectPredictApiCall(ref gaxgrpc::ApiCall<DirectPredictRequest, DirectPredictResponse> call);
 
         partial void Modify_DirectRawPredictApiCall(ref gaxgrpc::ApiCall<DirectRawPredictRequest, DirectRawPredictResponse> call);
+
+        partial void Modify_StreamDirectPredictApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamDirectPredictRequest, StreamDirectPredictResponse> call);
+
+        partial void Modify_StreamDirectRawPredictApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse> call);
 
         partial void Modify_StreamingPredictApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingPredictRequest, StreamingPredictResponse> call);
 
@@ -1519,6 +1813,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_StreamingRawPredictApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingRawPredictRequest, StreamingRawPredictResponse> call);
 
         partial void Modify_ExplainApiCall(ref gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> call);
+
+        partial void Modify_GenerateContentApiCall(ref gaxgrpc::ApiCall<GenerateContentRequest, GenerateContentResponse> call);
 
         partial void Modify_StreamGenerateContentApiCall(ref gaxgrpc::ApiServerStreamingCall<GenerateContentRequest, GenerateContentResponse> call);
 
@@ -1537,9 +1833,19 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_RawPredictRequest(ref RawPredictRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_StreamRawPredictRequest(ref StreamRawPredictRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DirectPredictRequest(ref DirectPredictRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DirectRawPredictRequest(ref DirectRawPredictRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamDirectPredictRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamDirectPredictRequestRequest(ref StreamDirectPredictRequest request);
+
+        partial void Modify_StreamDirectRawPredictRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StreamDirectRawPredictRequestRequest(ref StreamDirectRawPredictRequest request);
 
         partial void Modify_StreamingPredictRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
@@ -1623,9 +1929,30 @@ namespace Google.Cloud.AIPlatform.V1
             return _callRawPredict.Async(request, callSettings);
         }
 
+        internal sealed partial class StreamRawPredictStreamImpl : StreamRawPredictStream
+        {
+            /// <summary>Construct the server streaming method for <c>StreamRawPredict</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public StreamRawPredictStreamImpl(grpccore::AsyncServerStreamingCall<ga::HttpBody> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<ga::HttpBody> GrpcCall { get; }
+        }
+
         /// <summary>
-        /// Perform an unary online prediction request for Vertex first-party products
-        /// and frameworks.
+        /// Perform a streaming online prediction with an arbitrary HTTP payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override PredictionServiceClient.StreamRawPredictStream StreamRawPredict(StreamRawPredictRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StreamRawPredictRequest(ref request, ref callSettings);
+            return new StreamRawPredictStreamImpl(_callStreamRawPredict.Call(request, callSettings));
+        }
+
+        /// <summary>
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1637,8 +1964,8 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
-        /// Perform an unary online prediction request for Vertex first-party products
-        /// and frameworks.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1650,7 +1977,8 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
-        /// Perform an online prediction request through gRPC.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// custom containers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1662,7 +1990,8 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
-        /// Perform an online prediction request through gRPC.
+        /// Perform an unary online prediction request to a gRPC model server for
+        /// custom containers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1671,6 +2000,128 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DirectRawPredictRequest(ref request, ref callSettings);
             return _callDirectRawPredict.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamDirectPredictStreamImpl : StreamDirectPredictStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamDirectPredict</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamDirectPredictRequest}"/> instance associated
+            /// with this streaming call.
+            /// </param>
+            public StreamDirectPredictStreamImpl(PredictionServiceClientImpl service, grpccore::AsyncDuplexStreamingCall<StreamDirectPredictRequest, StreamDirectPredictResponse> call, gaxgrpc::BufferedClientStreamWriter<StreamDirectPredictRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private PredictionServiceClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<StreamDirectPredictRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<StreamDirectPredictRequest, StreamDirectPredictResponse> GrpcCall { get; }
+
+            private StreamDirectPredictRequest ModifyRequest(StreamDirectPredictRequest request)
+            {
+                _service.Modify_StreamDirectPredictRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(StreamDirectPredictRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(StreamDirectPredictRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(StreamDirectPredictRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(StreamDirectPredictRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Perform a streaming online prediction request to a gRPC model server for
+        /// Vertex first-party products and frameworks.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override PredictionServiceClient.StreamDirectPredictStream StreamDirectPredict(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamDirectPredictRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamDirectPredict.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<StreamDirectPredictRequest, StreamDirectPredictResponse> call = _callStreamDirectPredict.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<StreamDirectPredictRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamDirectPredictRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamDirectPredictStreamImpl(this, call, writeBuffer);
+        }
+
+        internal sealed partial class StreamDirectRawPredictStreamImpl : StreamDirectRawPredictStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>StreamDirectRawPredict</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{StreamDirectRawPredictRequest}"/> instance associated
+            /// with this streaming call.
+            /// </param>
+            public StreamDirectRawPredictStreamImpl(PredictionServiceClientImpl service, grpccore::AsyncDuplexStreamingCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse> call, gaxgrpc::BufferedClientStreamWriter<StreamDirectRawPredictRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private PredictionServiceClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<StreamDirectRawPredictRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse> GrpcCall { get; }
+
+            private StreamDirectRawPredictRequest ModifyRequest(StreamDirectRawPredictRequest request)
+            {
+                _service.Modify_StreamDirectRawPredictRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(StreamDirectRawPredictRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(StreamDirectRawPredictRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(StreamDirectRawPredictRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(StreamDirectRawPredictRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Perform a streaming online prediction request to a gRPC model server for
+        /// custom containers.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override PredictionServiceClient.StreamDirectRawPredictStream StreamDirectRawPredict(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamDirectRawPredictRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callStreamDirectRawPredict.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<StreamDirectRawPredictRequest, StreamDirectRawPredictResponse> call = _callStreamDirectRawPredict.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<StreamDirectRawPredictRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<StreamDirectRawPredictRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamDirectRawPredictStreamImpl(this, call, writeBuffer);
         }
 
         internal sealed partial class StreamingPredictStreamImpl : StreamingPredictStream
@@ -1858,6 +2309,30 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_ExplainRequest(ref request, ref callSettings);
             return _callExplain.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateContentResponse GenerateContent(GenerateContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateContentRequest(ref request, ref callSettings);
+            return _callGenerateContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generate content with multimodal inputs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateContentResponse> GenerateContentAsync(GenerateContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateContentRequest(ref request, ref callSettings);
+            return _callGenerateContent.Async(request, callSettings);
         }
 
         internal sealed partial class StreamGenerateContentStreamImpl : StreamGenerateContentStream
