@@ -52,6 +52,18 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class StreamRawPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DirectPredictRequest
     {
         /// <summary>
@@ -65,6 +77,30 @@ namespace Google.Cloud.AIPlatform.V1
     }
 
     public partial class DirectRawPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StreamDirectPredictRequest
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
+        /// </summary>
+        public EndpointName EndpointAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
+            set => Endpoint = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StreamDirectRawPredictRequest
     {
         /// <summary>
         /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.

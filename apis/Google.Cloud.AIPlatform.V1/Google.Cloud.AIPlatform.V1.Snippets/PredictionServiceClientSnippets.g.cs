@@ -221,6 +221,81 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for StreamRawPredict</summary>
+        public async Task StreamRawPredictRequestObject()
+        {
+            // Snippet: StreamRawPredict(StreamRawPredictRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            StreamRawPredictRequest request = new StreamRawPredictRequest
+            {
+                EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                HttpBody = new HttpBody(),
+            };
+            // Make the request, returning a streaming response
+            using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<HttpBody> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                HttpBody responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamRawPredict</summary>
+        public async Task StreamRawPredict()
+        {
+            // Snippet: StreamRawPredict(string, HttpBody, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            HttpBody httpBody = new HttpBody();
+            // Make the request, returning a streaming response
+            using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(endpoint, httpBody);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<HttpBody> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                HttpBody responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamRawPredict</summary>
+        public async Task StreamRawPredictResourceNames()
+        {
+            // Snippet: StreamRawPredict(EndpointName, HttpBody, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            HttpBody httpBody = new HttpBody();
+            // Make the request, returning a streaming response
+            using PredictionServiceClient.StreamRawPredictStream response = predictionServiceClient.StreamRawPredict(endpoint, httpBody);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<HttpBody> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                HttpBody responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for DirectPredict</summary>
         public void DirectPredictRequestObject()
         {
@@ -292,6 +367,104 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             DirectRawPredictResponse response = await predictionServiceClient.DirectRawPredictAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamDirectPredict</summary>
+        public async Task StreamDirectPredict()
+        {
+            // Snippet: StreamDirectPredict(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using PredictionServiceClient.StreamDirectPredictStream response = predictionServiceClient.StreamDirectPredict();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<StreamDirectPredictResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    StreamDirectPredictResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                StreamDirectPredictRequest request = new StreamDirectPredictRequest
+                {
+                    EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                    Inputs = { new Tensor(), },
+                    Parameters = new Tensor(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamDirectRawPredict</summary>
+        public async Task StreamDirectRawPredict()
+        {
+            // Snippet: StreamDirectRawPredict(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using PredictionServiceClient.StreamDirectRawPredictStream response = predictionServiceClient.StreamDirectRawPredict();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<StreamDirectRawPredictResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    StreamDirectRawPredictResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                StreamDirectRawPredictRequest request = new StreamDirectRawPredictRequest
+                {
+                    EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                    MethodName = "",
+                    Input = ByteString.Empty,
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
             // End snippet
         }
 
@@ -525,6 +698,82 @@ namespace GoogleCSharpSnippets
             string deployedModelId = "";
             // Make the request
             ExplainResponse response = await predictionServiceClient.ExplainAsync(endpoint, instances, parameters, deployedModelId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateContent</summary>
+        public void GenerateContentRequestObject()
+        {
+            // Snippet: GenerateContent(GenerateContentRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateContentRequest request = new GenerateContentRequest
+            {
+                Contents = { new Content(), },
+                SafetySettings =
+                {
+                    new SafetySetting(),
+                },
+                GenerationConfig = new GenerationConfig(),
+                Model = "",
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            GenerateContentResponse response = predictionServiceClient.GenerateContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateContentAsync</summary>
+        public async Task GenerateContentRequestObjectAsync()
+        {
+            // Snippet: GenerateContentAsync(GenerateContentRequest, CallSettings)
+            // Additional: GenerateContentAsync(GenerateContentRequest, CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateContentRequest request = new GenerateContentRequest
+            {
+                Contents = { new Content(), },
+                SafetySettings =
+                {
+                    new SafetySetting(),
+                },
+                GenerationConfig = new GenerationConfig(),
+                Model = "",
+                Tools = { new Tool(), },
+            };
+            // Make the request
+            GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateContent</summary>
+        public void GenerateContent()
+        {
+            // Snippet: GenerateContent(string, IEnumerable<Content>, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            string model = "";
+            IEnumerable<Content> contents = new Content[] { new Content(), };
+            // Make the request
+            GenerateContentResponse response = predictionServiceClient.GenerateContent(model, contents);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateContentAsync</summary>
+        public async Task GenerateContentAsync()
+        {
+            // Snippet: GenerateContentAsync(string, IEnumerable<Content>, CallSettings)
+            // Additional: GenerateContentAsync(string, IEnumerable<Content>, CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string model = "";
+            IEnumerable<Content> contents = new Content[] { new Content(), };
+            // Make the request
+            GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(model, contents);
             // End snippet
         }
 

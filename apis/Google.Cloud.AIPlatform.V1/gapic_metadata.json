@@ -1366,6 +1366,12 @@
                 "ExplainAsync"
               ]
             },
+            "GenerateContent": {
+              "methods": [
+                "GenerateContent",
+                "GenerateContentAsync"
+              ]
+            },
             "Predict": {
               "methods": [
                 "Predict",
@@ -1384,10 +1390,28 @@
                 "ServerStreamingPredictAsync"
               ]
             },
+            "StreamDirectPredict": {
+              "methods": [
+                "StreamDirectPredict",
+                "StreamDirectPredictAsync"
+              ]
+            },
+            "StreamDirectRawPredict": {
+              "methods": [
+                "StreamDirectRawPredict",
+                "StreamDirectRawPredictAsync"
+              ]
+            },
             "StreamGenerateContent": {
               "methods": [
                 "StreamGenerateContent",
                 "StreamGenerateContentAsync"
+              ]
+            },
+            "StreamRawPredict": {
+              "methods": [
+                "StreamRawPredict",
+                "StreamRawPredictAsync"
               ]
             },
             "StreamingPredict": {
