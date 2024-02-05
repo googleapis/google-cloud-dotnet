@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -85,6 +86,19 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var pool = await manager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString)));
             Assert.Same(customSettings, pool.Client.Settings);
+        }
+
+        [Fact]
+        public async Task DefaultClientFactory_UsesEnableLeaderRouting()
+        {
+            var manager = new SessionPoolManager(new SessionPoolOptions(), new SpannerSettings(), Logger.DefaultLogger, SessionPoolManager.CreateClientAsync);
+
+            var pool = await manager.AcquireSessionPoolAsync(
+                new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString, GoogleCredential.FromAccessToken("token"))
+                {
+                    EnableLeaderRouting = false,
+                }));
+            Assert.False(pool.Client.Settings.LeaderRoutingEnabled);
         }
 
         [Fact]

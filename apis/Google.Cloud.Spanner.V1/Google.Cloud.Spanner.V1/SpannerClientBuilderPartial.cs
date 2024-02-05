@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,6 +34,16 @@ namespace Google.Cloud.Spanner.V1
             get => base.EmulatorDetection;
             set => base.EmulatorDetection = value;
         }
+
+        /// <summary>
+        /// Specifies whether leader routing is enabled or not. This is true by default.
+        /// </summary>
+        /// <remarks>
+        /// If this value is true some operations will always be explicitly routed to the leader,
+        /// some operations will never be explicitly routed to the leader, and some operations will
+        /// be routed to the leader depending on the transaction type they are using.
+        /// </remarks>
+        public bool LeaderRoutingEnabled { get; set; } = true;
 
         private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
         private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
@@ -75,6 +86,18 @@ namespace Google.Cloud.Spanner.V1
             };
             builder.CopySettingsForEmulator(this);
             return builder;
+        }
+
+        internal new T GetEffectiveSettings<T>(T settings) where T : ServiceSettingsBase, new()
+        {
+            settings = base.GetEffectiveSettings<T>(settings);
+            settings ??= new T();
+
+            // settings will always be a SpannerSettings here.
+            var spannerSettings = settings as SpannerSettings;
+            spannerSettings.LeaderRoutingEnabled = LeaderRoutingEnabled;
+
+            return settings;
         }
     }
 }

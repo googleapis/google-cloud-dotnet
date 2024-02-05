@@ -55,6 +55,7 @@ namespace Google.Cloud.Spanner.Data
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
         private const string DatabaseRoleKeyword = "DatabaseRole";
+        private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -434,6 +435,20 @@ namespace Google.Cloud.Spanner.Data
                 GaxPreconditions.CheckEnumValue(value, nameof(value));
                 this[EmulatorDetectionKeyword] = value.ToString();
             }
+        }
+
+        /// <summary>
+        /// Options to control leader routing. This is true by default.
+        /// </summary>
+        /// <remarks>
+        /// If this value is true some operations will always be explicitly routed to the leader,
+        /// some operations will never be explicitly routed to the leader, and some operations will
+        /// be routed to the leader depending on the transaction type they are using.
+        /// </remarks>
+        public bool EnableLeaderRouting
+        {
+            get => GetValueOrDefault(EnableLeaderRoutingKeyword, "True").Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[EnableLeaderRoutingKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         // Credential overrides: at most one will be non-null.

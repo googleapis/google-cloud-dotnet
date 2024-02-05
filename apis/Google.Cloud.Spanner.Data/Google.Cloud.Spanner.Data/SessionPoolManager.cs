@@ -319,8 +319,8 @@ namespace Google.Cloud.Spanner.Data
             }
         };
 
-        /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
+        // Internal for testing.
+        internal static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions clientCreationOptions, SpannerSettings spannerSettings, Logger logger)
         {
             var credentials = await clientCreationOptions.GetCredentialsAsync().ConfigureAwait(false);
 
@@ -338,7 +338,8 @@ namespace Google.Cloud.Spanner.Data
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
-                Settings = spannerSettings
+                Settings = spannerSettings,
+                LeaderRoutingEnabled = clientCreationOptions.LeaderRoutingEnabled
             }.Build();
         }
     }

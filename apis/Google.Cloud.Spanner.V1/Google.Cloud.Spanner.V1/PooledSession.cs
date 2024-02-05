@@ -761,6 +761,7 @@ namespace Google.Cloud.Spanner.V1
 
             request.SessionAsSessionName = SessionName;
             SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);
+            Client.MaybeApplyRouteToLeaderHeader(ref callSettings, TransactionMode);
 
             ResultStream stream = new ResultStream(Client, request, this, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
@@ -789,7 +790,11 @@ namespace Google.Cloud.Spanner.V1
 
             void SetCommandTransaction(TransactionSelector transactionSelector) => request.Transaction = transactionSelector;
 
-            Task<ResultSet> ExecuteSqlAsync() => RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, callSettings));
+            Task<ResultSet> ExecuteSqlAsync()
+            {
+                Client.MaybeApplyRouteToLeaderHeader(ref callSettings, TransactionMode);
+                return RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, callSettings));
+            }
 
             Transaction GetInlinedTransaction(ResultSet response) => response?.Metadata?.Transaction;
         }

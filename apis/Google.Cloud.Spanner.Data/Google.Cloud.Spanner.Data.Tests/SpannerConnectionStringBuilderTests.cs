@@ -203,6 +203,21 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void LeaderRoutingEnabledByDefault() =>
+            Assert.True(new SpannerConnectionStringBuilder().EnableLeaderRouting);
+
+        [Fact]
+        public void EnableLeaderRouting()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("EnableLeaderRouting=false");
+            Assert.False(connectionStringBuilder.EnableLeaderRouting);
+            connectionStringBuilder.EnableLeaderRouting = true;
+            Assert.True(connectionStringBuilder.EnableLeaderRouting);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("enableleaderrouting=True", connectionStringBuilder.ToString());
+        }
+
+        [Fact]
         public void WithDatabase()
         {
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");
