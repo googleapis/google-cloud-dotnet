@@ -12,14 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
-using System;
 
 namespace Google.Cloud.Spanner.V1
 {
-    // Partial class to set up resource-based routing.
+    public partial class SpannerClient
+    {
+        /// <summary>
+        /// Returns the effective <see cref="SpannerSettings"/> used for each API call.
+        /// This can be used to create a modified instance of <see cref="SpannerSettings"/> to pass
+        /// for a single API request.
+        /// </summary>
+        public virtual SpannerSettings Settings { get; protected set; }
+    }
+
     public partial class SpannerClientImpl
     {
         /// <summary>
@@ -34,6 +41,11 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="CallSettingsExtensions.WithHeader(CallSettings, string, string)"/> extension method.
         /// </remarks>
         public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+
+        partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper)
+        {
+            Settings = effectiveSettings;
+        }
 
         partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
@@ -62,7 +74,7 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
 
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)=>
+        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
 
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings) =>
