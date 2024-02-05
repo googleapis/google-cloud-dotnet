@@ -19,7 +19,6 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1
 {
-    // Partial class to support emulators
     public partial class SpannerClientBuilder
     {
         /// <summary>
