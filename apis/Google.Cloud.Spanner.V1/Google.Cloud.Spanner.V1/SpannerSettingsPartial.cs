@@ -22,6 +22,7 @@ public sealed partial class SpannerSettings
     partial void OnCopy(SpannerSettings existing)
     {
         Logger = existing.Logger;
+        LeaderRoutingEnabled = existing.LeaderRoutingEnabled;
     }
 
     private Logger _logger = Logger.DefaultLogger;
@@ -34,4 +35,14 @@ public sealed partial class SpannerSettings
         get => _logger;
         set => _logger = GaxPreconditions.CheckNotNull(value, nameof(value));
     }
+
+    /// <summary>
+    /// Specifies whether leader routing is enabled or not. This is true by default.
+    /// </summary>
+    /// <remarks>
+    /// If this value is true some operations will always be explicitly routed to the leader,
+    /// some operations will never be explicitly routed to the leader, and some operations will
+    /// be routed to the leader depending on the transaction type they are using.
+    /// </remarks>
+    internal bool LeaderRoutingEnabled { get; set; } = true;
 }

@@ -61,6 +61,8 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool UsesEmulator { get; }
 
+        internal bool LeaderRoutingEnabled { get; }
+
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
 
@@ -89,6 +91,7 @@ namespace Google.Cloud.Spanner.Data
             _googleCredential = builder.GoogleCredential;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
+            LeaderRoutingEnabled = builder.EnableLeaderRouting;
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
@@ -105,6 +108,7 @@ namespace Google.Cloud.Spanner.Data
             UsesEmulator == other.UsesEmulator &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
+            LeaderRoutingEnabled == other.LeaderRoutingEnabled &&
             GrpcAdapter.Equals(other.GrpcAdapter);
 
         public override int GetHashCode()
@@ -119,6 +123,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + UsesEmulator.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
+                hash = hash * 23 + LeaderRoutingEnabled.GetHashCode();
                 hash = hash * 23 + GrpcAdapter.GetHashCode();
                 return hash;
             }
@@ -144,6 +149,9 @@ namespace Google.Cloud.Spanner.Data
                 builder.Append($"; GoogleCredential: True");
             }
             builder.Append($"; UsesEmulator: {UsesEmulator}");
+            builder.Append($"; MaximumGrpcChannels: {MaximumGrpcChannels}");
+            builder.Append($"; MaximumConcurrentStreamsLowWatermark: {MaximumConcurrentStreamsLowWatermark}");
+            builder.Append($"; LeaderRoutingEnabled: {LeaderRoutingEnabled}");
             builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
             return builder.ToString();
         }
