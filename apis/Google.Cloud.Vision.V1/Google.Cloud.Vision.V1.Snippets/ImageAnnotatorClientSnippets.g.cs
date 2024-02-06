@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
@@ -59,6 +60,7 @@ namespace GoogleCSharpSnippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
@@ -112,6 +114,7 @@ namespace GoogleCSharpSnippets
                     new AnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(request);
@@ -133,6 +136,7 @@ namespace GoogleCSharpSnippets
                     new AnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateFilesResponse response = await imageAnnotatorClient.BatchAnnotateFilesAsync(request);
@@ -187,6 +191,7 @@ namespace GoogleCSharpSnippets
                 },
                 OutputConfig = new OutputConfig(),
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateImages(request);
@@ -225,6 +230,7 @@ namespace GoogleCSharpSnippets
                 },
                 OutputConfig = new OutputConfig(),
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(request);
@@ -328,6 +334,7 @@ namespace GoogleCSharpSnippets
                     new AsyncAnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateFiles(request);
@@ -365,6 +372,7 @@ namespace GoogleCSharpSnippets
                     new AsyncAnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(request);

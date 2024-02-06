@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 },
                 OutputConfig = new OutputConfig(),
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(request);
