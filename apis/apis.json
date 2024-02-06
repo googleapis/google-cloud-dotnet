@@ -4313,9 +4313,12 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Security Center Management",
-      "productUrl": "https://cloud.google.com/securitycentermanagement/docs/overview",
-      "description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
-      "tags": [],
+      "productUrl": "https://cloud.google.com/security-command-center/docs/reference/security-center-management/rest",
+      "description": "Recommended Google client library to access the Google Cloud Security Command Center Management API, a built-in security and risk management solution for Google Cloud.",
+      "tags": [
+        "management",
+        "security"
+      ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.0.0",
         "Google.Cloud.Location": "2.0.0"
