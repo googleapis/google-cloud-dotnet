@@ -118,133 +118,145 @@ namespace Google.Cloud.Vision.V1 {
             "bmNlGAIgASgCEhsKE2ltcG9ydGFuY2VfZnJhY3Rpb24YAyABKAIiSwoTQ3Jv",
             "cEhpbnRzQW5ub3RhdGlvbhI0Cgpjcm9wX2hpbnRzGAEgAygLMiAuZ29vZ2xl",
             "LmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludCIoCg9Dcm9wSGludHNQYXJhbXMS",
-            "FQoNYXNwZWN0X3JhdGlvcxgBIAMoAiIxChJXZWJEZXRlY3Rpb25QYXJhbXMS",
-            "GwoTaW5jbHVkZV9nZW9fcmVzdWx0cxgCIAEoCCJjChNUZXh0RGV0ZWN0aW9u",
-            "UGFyYW1zEi4KJmVuYWJsZV90ZXh0X2RldGVjdGlvbl9jb25maWRlbmNlX3Nj",
-            "b3JlGAkgASgIEhwKFGFkdmFuY2VkX29jcl9vcHRpb25zGAsgAygJIogDCgxJ",
-            "bWFnZUNvbnRleHQSOgoNbGF0X2xvbmdfcmVjdBgBIAEoCzIjLmdvb2dsZS5j",
-            "bG91ZC52aXNpb24udjEuTGF0TG9uZ1JlY3QSFgoObGFuZ3VhZ2VfaGludHMY",
-            "AiADKAkSQgoRY3JvcF9oaW50c19wYXJhbXMYBCABKAsyJy5nb29nbGUuY2xv",
-            "dWQudmlzaW9uLnYxLkNyb3BIaW50c1BhcmFtcxJKChVwcm9kdWN0X3NlYXJj",
-            "aF9wYXJhbXMYBSABKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlByb2R1",
-            "Y3RTZWFyY2hQYXJhbXMSSAoUd2ViX2RldGVjdGlvbl9wYXJhbXMYBiABKAsy",
-            "Ki5nb29nbGUuY2xvdWQudmlzaW9uLnYxLldlYkRldGVjdGlvblBhcmFtcxJK",
-            "ChV0ZXh0X2RldGVjdGlvbl9wYXJhbXMYDCABKAsyKy5nb29nbGUuY2xvdWQu",
-            "dmlzaW9uLnYxLlRleHREZXRlY3Rpb25QYXJhbXMitAEKFEFubm90YXRlSW1h",
-            "Z2VSZXF1ZXN0EiwKBWltYWdlGAEgASgLMh0uZ29vZ2xlLmNsb3VkLnZpc2lv",
-            "bi52MS5JbWFnZRIxCghmZWF0dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjEuRmVhdHVyZRI7Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5JbWFnZUNvbnRleHQiOgoWSW1hZ2VBbm5v",
-            "dGF0aW9uQ29udGV4dBILCgN1cmkYASABKAkSEwoLcGFnZV9udW1iZXIYAiAB",
-            "KAUi5AcKFUFubm90YXRlSW1hZ2VSZXNwb25zZRJAChBmYWNlX2Fubm90YXRp",
-            "b25zGAEgAygLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GYWNlQW5ub3Rh",
-            "dGlvbhJGChRsYW5kbWFya19hbm5vdGF0aW9ucxgCIAMoCzIoLmdvb2dsZS5j",
-            "bG91ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJCChBsb2dvX2Fubm90",
-            "YXRpb25zGAMgAygLMiguZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5FbnRpdHlB",
-            "bm5vdGF0aW9uEkMKEWxhYmVsX2Fubm90YXRpb25zGAQgAygLMiguZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5FbnRpdHlBbm5vdGF0aW9uElcKHGxvY2FsaXpl",
-            "ZF9vYmplY3RfYW5ub3RhdGlvbnMYFiADKAsyMS5nb29nbGUuY2xvdWQudmlz",
-            "aW9uLnYxLkxvY2FsaXplZE9iamVjdEFubm90YXRpb24SQgoQdGV4dF9hbm5v",
-            "dGF0aW9ucxgFIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5",
-            "QW5ub3RhdGlvbhJEChRmdWxsX3RleHRfYW5ub3RhdGlvbhgMIAEoCzImLmdv",
-            "b2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24STAoWc2FmZV9z",
-            "ZWFyY2hfYW5ub3RhdGlvbhgGIAEoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24u",
-            "djEuU2FmZVNlYXJjaEFubm90YXRpb24STAobaW1hZ2VfcHJvcGVydGllc19h",
-            "bm5vdGF0aW9uGAggASgLMicuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbWFn",
-            "ZVByb3BlcnRpZXMSSgoVY3JvcF9oaW50c19hbm5vdGF0aW9uGAsgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludHNBbm5vdGF0aW9uEjsK",
-            "DXdlYl9kZXRlY3Rpb24YDSABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
-            "LldlYkRldGVjdGlvbhJMChZwcm9kdWN0X3NlYXJjaF9yZXN1bHRzGA4gASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Qcm9kdWN0U2VhcmNoUmVzdWx0",
-            "cxIhCgVlcnJvchgJIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEj8KB2NvbnRl",
-            "eHQYFSABKAsyLi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkltYWdlQW5ub3Rh",
-            "dGlvbkNvbnRleHQicgoaQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QSRAoI",
-            "cmVxdWVzdHMYASADKAsyLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90",
-            "YXRlSW1hZ2VSZXF1ZXN0QgTiQQECEg4KBnBhcmVudBgEIAEoCSJfChtCYXRj",
-            "aEFubm90YXRlSW1hZ2VzUmVzcG9uc2USQAoJcmVzcG9uc2VzGAEgAygLMi0u",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9uc2Ui",
-            "zwEKE0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEgASgL",
-            "MiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghmZWF0",
-            "dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVyZRI7",
-            "Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5JbWFnZUNvbnRleHQSDQoFcGFnZXMYBCADKAUiywEKFEFubm90YXRlRmls",
-            "ZVJlc3BvbnNlEjkKDGlucHV0X2NvbmZpZxgBIAEoCzIjLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjEuSW5wdXRDb25maWcSQAoJcmVzcG9uc2VzGAIgAygLMi0u",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9uc2US",
-            "EwoLdG90YWxfcGFnZXMYAyABKAUSIQoFZXJyb3IYBCABKAsyEi5nb29nbGUu",
-            "cnBjLlN0YXR1cyJwChlCYXRjaEFubm90YXRlRmlsZXNSZXF1ZXN0EkMKCHJl",
-            "cXVlc3RzGAEgAygLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0",
-            "ZUZpbGVSZXF1ZXN0QgTiQQECEg4KBnBhcmVudBgDIAEoCSJdChpCYXRjaEFu",
-            "bm90YXRlRmlsZXNSZXNwb25zZRI/CglyZXNwb25zZXMYASADKAsyLC5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlRmlsZVJlc3BvbnNlIoICChhB",
-            "c3luY0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEgASgL",
-            "MiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghmZWF0",
-            "dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVyZRI7",
-            "Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5JbWFnZUNvbnRleHQSOwoNb3V0cHV0X2NvbmZpZxgEIAEoCzIkLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIlgKGUFzeW5jQW5ub3Rh",
-            "dGVGaWxlUmVzcG9uc2USOwoNb3V0cHV0X2NvbmZpZxgBIAEoCzIkLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIroBCh9Bc3luY0JhdGNo",
-            "QW5ub3RhdGVJbWFnZXNSZXF1ZXN0EkQKCHJlcXVlc3RzGAEgAygLMiwuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVxdWVzdEIE4kEB",
-            "AhJBCg1vdXRwdXRfY29uZmlnGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
-            "bi52MS5PdXRwdXRDb25maWdCBOJBAQISDgoGcGFyZW50GAQgASgJIl8KIEFz",
-            "eW5jQmF0Y2hBbm5vdGF0ZUltYWdlc1Jlc3BvbnNlEjsKDW91dHB1dF9jb25m",
-            "aWcYASABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZp",
-            "ZyJ6Ch5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QSSAoIcmVxdWVz",
-            "dHMYASADKAsyMC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQW5ub3Rh",
-            "dGVGaWxlUmVxdWVzdEIE4kEBAhIOCgZwYXJlbnQYBCABKAkiZwofQXN5bmNC",
-            "YXRjaEFubm90YXRlRmlsZXNSZXNwb25zZRJECglyZXNwb25zZXMYASADKAsy",
-            "MS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQW5ub3RhdGVGaWxlUmVz",
-            "cG9uc2UiaAoLSW5wdXRDb25maWcSNQoKZ2NzX3NvdXJjZRgBIAEoCzIhLmdv",
-            "b2dsZS5jbG91ZC52aXNpb24udjEuR2NzU291cmNlEg8KB2NvbnRlbnQYAyAB",
-            "KAwSEQoJbWltZV90eXBlGAIgASgJImMKDE91dHB1dENvbmZpZxI/Cg9nY3Nf",
-            "ZGVzdGluYXRpb24YASABKAsyJi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkdj",
-            "c0Rlc3RpbmF0aW9uEhIKCmJhdGNoX3NpemUYAiABKAUiGAoJR2NzU291cmNl",
-            "EgsKA3VyaRgBIAEoCSIdCg5HY3NEZXN0aW5hdGlvbhILCgN1cmkYASABKAki",
-            "iAIKEU9wZXJhdGlvbk1ldGFkYXRhEj4KBXN0YXRlGAEgASgOMi8uZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5PcGVyYXRpb25NZXRhZGF0YS5TdGF0ZRIvCgtj",
-            "cmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "LwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wIlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRF",
-            "RBABEgsKB1JVTk5JTkcQAhIICgRET05FEAMSDQoJQ0FOQ0VMTEVEEAQqZQoK",
-            "TGlrZWxpaG9vZBILCgdVTktOT1dOEAASEQoNVkVSWV9VTkxJS0VMWRABEgwK",
-            "CFVOTElLRUxZEAISDAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIPCgtWRVJZ",
-            "X0xJS0VMWRAFMvUKCg5JbWFnZUFubm90YXRvchKTAgoTQmF0Y2hBbm5vdGF0",
-            "ZUltYWdlcxIyLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQmF0Y2hBbm5vdGF0",
-            "ZUltYWdlc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNo",
-            "QW5ub3RhdGVJbWFnZXNSZXNwb25zZSKSAdpBCHJlcXVlc3RzgtPkkwKAASIT",
-            "L3YxL2ltYWdlczphbm5vdGF0ZToBKlo4IjMvdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qfS9pbWFnZXM6YW5ub3RhdGU6ASpaLCInL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKn0vaW1hZ2VzOmFubm90YXRlOgEqEowCChJCYXRj",
-            "aEFubm90YXRlRmlsZXMSMS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNo",
-            "QW5ub3RhdGVGaWxlc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
-            "LkJhdGNoQW5ub3RhdGVGaWxlc1Jlc3BvbnNlIo4B2kEIcmVxdWVzdHOC0+ST",
-            "An0iEi92MS9maWxlczphbm5vdGF0ZToBKlo3IjIvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9maWxlczphbm5vdGF0ZToBKlorIiYvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qfS9maWxlczphbm5vdGF0ZToBKhLrAgoYQXN5",
-            "bmNCYXRjaEFubm90YXRlSW1hZ2VzEjcuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5Bc3luY0JhdGNoQW5ub3RhdGVJbWFnZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiL2AcpBNQogQXN5bmNCYXRjaEFubm90YXRl",
-            "SW1hZ2VzUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRh2kEWcmVxdWVzdHMs",
-            "b3V0cHV0X2NvbmZpZ4LT5JMCngEiHS92MS9pbWFnZXM6YXN5bmNCYXRjaEFu",
-            "bm90YXRlOgEqWkIiPS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3RhdGU6ASpaNiIxL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vaW1hZ2VzOmFzeW5jQmF0Y2hBbm5vdGF0ZToBKhLX",
-            "AgoXQXN5bmNCYXRjaEFubm90YXRlRmlsZXMSNi5nb29nbGUuY2xvdWQudmlz",
-            "aW9uLnYxLkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24i5AHKQTQKH0FzeW5jQmF0Y2hBbm5v",
-            "dGF0ZUZpbGVzUmVzcG9uc2USEU9wZXJhdGlvbk1ldGFkYXRh2kEIcmVxdWVz",
-            "dHOC0+STApsBIhwvdjEvZmlsZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWkEi",
-            "PC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2ZpbGVzOmFz",
-            "eW5jQmF0Y2hBbm5vdGF0ZToBKlo1IjAvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9maWxlczphc3luY0JhdGNoQW5ub3RhdGU6ASoadspBFXZpc2lvbi5nb29n",
-            "bGVhcGlzLmNvbdJBW2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC12aXNpb25CdAoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFC",
-            "E0ltYWdlQW5ub3RhdG9yUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby92",
-            "aXNpb24vdjIvYXBpdjEvdmlzaW9ucGI7dmlzaW9ucGL4AQGiAgRHQ1ZOYgZw",
-            "cm90bzM="));
+            "FQoNYXNwZWN0X3JhdGlvcxgBIAMoAiI1ChJXZWJEZXRlY3Rpb25QYXJhbXMS",
+            "HwoTaW5jbHVkZV9nZW9fcmVzdWx0cxgCIAEoCEICGAEiYwoTVGV4dERldGVj",
+            "dGlvblBhcmFtcxIuCiZlbmFibGVfdGV4dF9kZXRlY3Rpb25fY29uZmlkZW5j",
+            "ZV9zY29yZRgJIAEoCBIcChRhZHZhbmNlZF9vY3Jfb3B0aW9ucxgLIAMoCSKI",
+            "AwoMSW1hZ2VDb250ZXh0EjoKDWxhdF9sb25nX3JlY3QYASABKAsyIy5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkxhdExvbmdSZWN0EhYKDmxhbmd1YWdlX2hp",
+            "bnRzGAIgAygJEkIKEWNyb3BfaGludHNfcGFyYW1zGAQgASgLMicuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludHNQYXJhbXMSSgoVcHJvZHVjdF9z",
+            "ZWFyY2hfcGFyYW1zGAUgASgLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Q",
+            "cm9kdWN0U2VhcmNoUGFyYW1zEkgKFHdlYl9kZXRlY3Rpb25fcGFyYW1zGAYg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5XZWJEZXRlY3Rpb25QYXJh",
+            "bXMSSgoVdGV4dF9kZXRlY3Rpb25fcGFyYW1zGAwgASgLMisuZ29vZ2xlLmNs",
+            "b3VkLnZpc2lvbi52MS5UZXh0RGV0ZWN0aW9uUGFyYW1zIrQBChRBbm5vdGF0",
+            "ZUltYWdlUmVxdWVzdBIsCgVpbWFnZRgBIAEoCzIdLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjEuSW1hZ2USMQoIZmVhdHVyZXMYAiADKAsyHy5nb29nbGUuY2xv",
+            "dWQudmlzaW9uLnYxLkZlYXR1cmUSOwoNaW1hZ2VfY29udGV4dBgDIAEoCzIk",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1hZ2VDb250ZXh0IjoKFkltYWdl",
+            "QW5ub3RhdGlvbkNvbnRleHQSCwoDdXJpGAEgASgJEhMKC3BhZ2VfbnVtYmVy",
+            "GAIgASgFIuQHChVBbm5vdGF0ZUltYWdlUmVzcG9uc2USQAoQZmFjZV9hbm5v",
+            "dGF0aW9ucxgBIAMoCzImLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmFjZUFu",
+            "bm90YXRpb24SRgoUbGFuZG1hcmtfYW5ub3RhdGlvbnMYAiADKAsyKC5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkVudGl0eUFubm90YXRpb24SQgoQbG9nb19h",
+            "bm5vdGF0aW9ucxgDIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50",
+            "aXR5QW5ub3RhdGlvbhJDChFsYWJlbF9hbm5vdGF0aW9ucxgEIAMoCzIoLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJXChxsb2Nh",
+            "bGl6ZWRfb2JqZWN0X2Fubm90YXRpb25zGBYgAygLMjEuZ29vZ2xlLmNsb3Vk",
+            "LnZpc2lvbi52MS5Mb2NhbGl6ZWRPYmplY3RBbm5vdGF0aW9uEkIKEHRleHRf",
+            "YW5ub3RhdGlvbnMYBSADKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkVu",
+            "dGl0eUFubm90YXRpb24SRAoUZnVsbF90ZXh0X2Fubm90YXRpb24YDCABKAsy",
+            "Ji5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlRleHRBbm5vdGF0aW9uEkwKFnNh",
+            "ZmVfc2VhcmNoX2Fubm90YXRpb24YBiABKAsyLC5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxLlNhZmVTZWFyY2hBbm5vdGF0aW9uEkwKG2ltYWdlX3Byb3BlcnRp",
+            "ZXNfYW5ub3RhdGlvbhgIIAEoCzInLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "SW1hZ2VQcm9wZXJ0aWVzEkoKFWNyb3BfaGludHNfYW5ub3RhdGlvbhgLIAEo",
+            "CzIrLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQ3JvcEhpbnRzQW5ub3RhdGlv",
+            "bhI7Cg13ZWJfZGV0ZWN0aW9uGA0gASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5XZWJEZXRlY3Rpb24STAoWcHJvZHVjdF9zZWFyY2hfcmVzdWx0cxgO",
+            "IAEoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdFNlYXJjaFJl",
+            "c3VsdHMSIQoFZXJyb3IYCSABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI/Cgdj",
+            "b250ZXh0GBUgASgLMi4uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbWFnZUFu",
+            "bm90YXRpb25Db250ZXh0IvcBChpCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVz",
+            "dBJECghyZXF1ZXN0cxgBIAMoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "QW5ub3RhdGVJbWFnZVJlcXVlc3RCBOJBAQISDgoGcGFyZW50GAQgASgJElQK",
+            "BmxhYmVscxgFIAMoCzI+Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQmF0Y2hB",
+            "bm5vdGF0ZUltYWdlc1JlcXVlc3QuTGFiZWxzRW50cnlCBOJBAQEaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJfChtC",
+            "YXRjaEFubm90YXRlSW1hZ2VzUmVzcG9uc2USQAoJcmVzcG9uc2VzGAEgAygL",
+            "Mi0uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9u",
+            "c2UizwEKE0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEg",
+            "ASgLMiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghm",
+            "ZWF0dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVy",
+            "ZRI7Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5JbWFnZUNvbnRleHQSDQoFcGFnZXMYBCADKAUiywEKFEFubm90YXRl",
+            "RmlsZVJlc3BvbnNlEjkKDGlucHV0X2NvbmZpZxgBIAEoCzIjLmdvb2dsZS5j",
+            "bG91ZC52aXNpb24udjEuSW5wdXRDb25maWcSQAoJcmVzcG9uc2VzGAIgAygL",
+            "Mi0uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVzcG9u",
+            "c2USEwoLdG90YWxfcGFnZXMYAyABKAUSIQoFZXJyb3IYBCABKAsyEi5nb29n",
+            "bGUucnBjLlN0YXR1cyL0AQoZQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBJD",
+            "CghyZXF1ZXN0cxgBIAMoCzIrLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQW5u",
+            "b3RhdGVGaWxlUmVxdWVzdEIE4kEBAhIOCgZwYXJlbnQYAyABKAkSUwoGbGFi",
+            "ZWxzGAUgAygLMj0uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90",
+            "YXRlRmlsZXNSZXF1ZXN0LkxhYmVsc0VudHJ5QgTiQQEBGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXQoaQmF0Y2hB",
+            "bm5vdGF0ZUZpbGVzUmVzcG9uc2USPwoJcmVzcG9uc2VzGAEgAygLMiwuZ29v",
+            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUZpbGVSZXNwb25zZSKCAgoY",
+            "QXN5bmNBbm5vdGF0ZUZpbGVSZXF1ZXN0EjkKDGlucHV0X2NvbmZpZxgBIAEo",
+            "CzIjLmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW5wdXRDb25maWcSMQoIZmVh",
+            "dHVyZXMYAiADKAsyHy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUS",
+            "OwoNaW1hZ2VfY29udGV4dBgDIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24u",
+            "djEuSW1hZ2VDb250ZXh0EjsKDW91dHB1dF9jb25maWcYBCABKAsyJC5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyJYChlBc3luY0Fubm90",
+            "YXRlRmlsZVJlc3BvbnNlEjsKDW91dHB1dF9jb25maWcYASABKAsyJC5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyLEAgofQXN5bmNCYXRj",
+            "aEFubm90YXRlSW1hZ2VzUmVxdWVzdBJECghyZXF1ZXN0cxgBIAMoCzIsLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjEuQW5ub3RhdGVJbWFnZVJlcXVlc3RCBOJB",
+            "AQISQQoNb3V0cHV0X2NvbmZpZxgCIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNp",
+            "b24udjEuT3V0cHV0Q29uZmlnQgTiQQECEg4KBnBhcmVudBgEIAEoCRJZCgZs",
+            "YWJlbHMYBSADKAsyQy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQmF0",
+            "Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QuTGFiZWxzRW50cnlCBOJBAQEaLQoL",
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJf",
+            "CiBBc3luY0JhdGNoQW5ub3RhdGVJbWFnZXNSZXNwb25zZRI7Cg1vdXRwdXRf",
+            "Y29uZmlnGAEgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5PdXRwdXRD",
+            "b25maWcigwIKHkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBJICghy",
+            "ZXF1ZXN0cxgBIAMoCzIwLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQXN5bmNB",
+            "bm5vdGF0ZUZpbGVSZXF1ZXN0QgTiQQECEg4KBnBhcmVudBgEIAEoCRJYCgZs",
+            "YWJlbHMYBSADKAsyQi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQmF0",
+            "Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdC5MYWJlbHNFbnRyeUIE4kEBARotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImcK",
+            "H0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVzcG9uc2USRAoJcmVzcG9uc2Vz",
+            "GAEgAygLMjEuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0Fubm90YXRl",
+            "RmlsZVJlc3BvbnNlImgKC0lucHV0Q29uZmlnEjUKCmdjc19zb3VyY2UYASAB",
+            "KAsyIS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkdjc1NvdXJjZRIPCgdjb250",
+            "ZW50GAMgASgMEhEKCW1pbWVfdHlwZRgCIAEoCSJjCgxPdXRwdXRDb25maWcS",
+            "PwoPZ2NzX2Rlc3RpbmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5HY3NEZXN0aW5hdGlvbhISCgpiYXRjaF9zaXplGAIgASgFIhgKCUdj",
+            "c1NvdXJjZRILCgN1cmkYASABKAkiHQoOR2NzRGVzdGluYXRpb24SCwoDdXJp",
+            "GAEgASgJIogCChFPcGVyYXRpb25NZXRhZGF0YRI+CgVzdGF0ZRgBIAEoDjIv",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuT3BlcmF0aW9uTWV0YWRhdGEuU3Rh",
+            "dGUSLwoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCJRCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
+            "B0NSRUFURUQQARILCgdSVU5OSU5HEAISCAoERE9ORRADEg0KCUNBTkNFTExF",
+            "RBAEKmUKCkxpa2VsaWhvb2QSCwoHVU5LTk9XThAAEhEKDVZFUllfVU5MSUtF",
+            "TFkQARIMCghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQS",
+            "DwoLVkVSWV9MSUtFTFkQBTL1CgoOSW1hZ2VBbm5vdGF0b3ISkwIKE0JhdGNo",
+            "QW5ub3RhdGVJbWFnZXMSMi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNo",
+            "QW5ub3RhdGVJbWFnZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5CYXRjaEFubm90YXRlSW1hZ2VzUmVzcG9uc2UikgHaQQhyZXF1ZXN0c4LT",
+            "5JMCgAEiEy92MS9pbWFnZXM6YW5ub3RhdGU6ASpaOCIzL3YxL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW1hZ2VzOmFubm90YXRlOgEqWiwi",
+            "Jy92MS97cGFyZW50PXByb2plY3RzLyp9L2ltYWdlczphbm5vdGF0ZToBKhKM",
+            "AgoSQmF0Y2hBbm5vdGF0ZUZpbGVzEjEuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5CYXRjaEFubm90YXRlRmlsZXNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnZp",
+            "c2lvbi52MS5CYXRjaEFubm90YXRlRmlsZXNSZXNwb25zZSKOAdpBCHJlcXVl",
+            "c3RzgtPkkwJ9IhIvdjEvZmlsZXM6YW5ub3RhdGU6ASpaNyIyL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZmlsZXM6YW5ub3RhdGU6ASpa",
+            "KyImL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vZmlsZXM6YW5ub3RhdGU6ASoS",
+            "6wIKGEFzeW5jQmF0Y2hBbm5vdGF0ZUltYWdlcxI3Lmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjEuQXN5bmNCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i9gHKQTUKIEFzeW5jQmF0Y2hB",
+            "bm5vdGF0ZUltYWdlc1Jlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YdpBFnJl",
+            "cXVlc3RzLG91dHB1dF9jb25maWeC0+STAp4BIh0vdjEvaW1hZ2VzOmFzeW5j",
+            "QmF0Y2hBbm5vdGF0ZToBKlpCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9pbWFnZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWjYiMS92",
+            "MS97cGFyZW50PXByb2plY3RzLyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3Rh",
+            "dGU6ASoS1wIKF0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzEjYuZ29vZ2xlLmNs",
+            "b3VkLnZpc2lvbi52MS5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIuQBykE0Ch9Bc3luY0Jh",
+            "dGNoQW5ub3RhdGVGaWxlc1Jlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YdpB",
+            "CHJlcXVlc3RzgtPkkwKbASIcL3YxL2ZpbGVzOmFzeW5jQmF0Y2hBbm5vdGF0",
+            "ZToBKlpBIjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9m",
+            "aWxlczphc3luY0JhdGNoQW5ub3RhdGU6ASpaNSIwL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKn0vZmlsZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqGnbKQRV2aXNp",
+            "b24uZ29vZ2xlYXBpcy5jb23SQVtodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtdmlzaW9uQnQKGmNvbS5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxQhNJbWFnZUFubm90YXRvclByb3RvUAFaNWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vdmlzaW9uL3YyL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIE",
+            "R0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchReflection.Descriptor, global::Google.Cloud.Vision.V1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1.WebDetectionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -270,17 +282,17 @@ namespace Google.Cloud.Vision.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageRequest), global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageAnnotationContext), global::Google.Cloud.Vision.V1.ImageAnnotationContext.Parser, new[]{ "Uri", "PageNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "LocalizedObjectAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "ProductSearchResults", "Error", "Context" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileRequest), global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "Pages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileResponse), global::Google.Cloud.Vision.V1.AnnotateFileResponse.Parser, new[]{ "InputConfig", "Responses", "TotalPages", "Error" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest), global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "OutputConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse), global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.InputConfig), global::Google.Cloud.Vision.V1.InputConfig.Parser, new[]{ "GcsSource", "Content", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OutputConfig), global::Google.Cloud.Vision.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BatchSize" }, null, null, null, null),
@@ -3862,7 +3874,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int ViolenceFieldNumber = 4;
     private global::Google.Cloud.Vision.V1.Likelihood violence_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
-    /// Likelihood that this image contains violent content.
+    /// Likelihood that this image contains violent content. Violent content may
+    /// include death, serious harm, or injury to individuals or groups of
+    /// individuals.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5767,8 +5781,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int IncludeGeoResultsFieldNumber = 2;
     private bool includeGeoResults_;
     /// <summary>
-    /// Whether to include results derived from the geo information in the image.
+    /// This field has no effect on results.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeGeoResults {
@@ -5984,7 +5999,13 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> advancedOcrOptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of advanced OCR options to fine-tune OCR behavior.
+    /// A list of advanced OCR options to further fine-tune OCR behavior.
+    /// Current valid values are:
+    ///
+    /// - `legacy_layout`: a heuristics layout detection algorithm, which serves as
+    /// an alternative to the current ML-based layout detection algorithm.
+    /// Customers can choose the best suitable layout algorithm based on their
+    /// situation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7867,6 +7888,7 @@ namespace Google.Cloud.Vision.V1 {
     public BatchAnnotateImagesRequest(BatchAnnotateImagesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7916,6 +7938,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7933,6 +7974,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7942,6 +7984,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7965,6 +8008,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7980,6 +8024,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7994,6 +8039,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8010,6 +8056,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8033,6 +8080,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -8054,6 +8105,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }
@@ -8941,6 +8996,7 @@ namespace Google.Cloud.Vision.V1 {
     public BatchAnnotateFilesRequest(BatchAnnotateFilesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8956,8 +9012,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateFileRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateFileRequest>();
     /// <summary>
-    /// Required. The list of file annotation requests. Right now we support only one
-    /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+    /// Required. The list of file annotation requests. Right now we support only
+    /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8991,6 +9047,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9008,6 +9083,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9017,6 +9093,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9040,6 +9117,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(26);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9055,6 +9133,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(26);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9069,6 +9148,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9085,6 +9165,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9108,6 +9189,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -9129,6 +9214,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }
@@ -9902,6 +9991,7 @@ namespace Google.Cloud.Vision.V1 {
       requests_ = other.requests_.Clone();
       outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9966,6 +10056,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9984,6 +10093,7 @@ namespace Google.Cloud.Vision.V1 {
       if(!requests_.Equals(other.requests_)) return false;
       if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9994,6 +10104,7 @@ namespace Google.Cloud.Vision.V1 {
       hash ^= requests_.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10021,6 +10132,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10040,6 +10152,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10057,6 +10170,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10079,6 +10193,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10109,6 +10224,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -10137,6 +10256,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }
@@ -10392,6 +10515,7 @@ namespace Google.Cloud.Vision.V1 {
     public AsyncBatchAnnotateFilesRequest(AsyncBatchAnnotateFilesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10441,6 +10565,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10458,6 +10601,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10467,6 +10611,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10490,6 +10635,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10505,6 +10651,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10519,6 +10666,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10535,6 +10683,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10558,6 +10707,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -10579,6 +10732,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
         }

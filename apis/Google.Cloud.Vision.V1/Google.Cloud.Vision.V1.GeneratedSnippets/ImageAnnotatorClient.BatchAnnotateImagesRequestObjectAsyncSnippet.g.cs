@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);

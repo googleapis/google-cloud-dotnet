@@ -367,10 +367,11 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductCategoryFieldNumber = 4;
     private string productCategory_ = "";
     /// <summary>
-    /// Immutable. The category for the product identified by the reference image. This should
-    /// be one of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or
-    /// "general-v1". The legacy categories "homegoods", "apparel", and "toys" are
-    /// still supported, but these should not be used for new products.
+    /// Immutable. The category for the product identified by the reference image.
+    /// This should be one of "homegoods-v2", "apparel-v2", "toys-v2",
+    /// "packagedgoods-v1" or "general-v1". The legacy categories "homegoods",
+    /// "apparel", and "toys" are still supported, but these should not be used for
+    /// new products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1316,8 +1317,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.BoundingPoly.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.BoundingPoly> boundingPolys_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.BoundingPoly>();
     /// <summary>
-    /// Optional. Bounding polygons around the areas of interest in the reference image.
-    /// If this field is empty, the system will try to detect regions of
+    /// Optional. Bounding polygons around the areas of interest in the reference
+    /// image. If this field is empty, the system will try to detect regions of
     /// interest. At most 10 bounding polygons will be used.
     ///
     /// The provided shape is converted into a non-rotated rectangle. Once
@@ -4458,7 +4459,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the product in which to create the reference image.
+    /// Required. Resource name of the product in which to create the reference
+    /// image.
     ///
     /// Format is
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -5954,7 +5956,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductFieldNumber = 2;
     private string product_ = "";
     /// <summary>
-    /// Required. The resource name for the Product to be removed from this ProductSet.
+    /// Required. The resource name for the Product to be removed from this
+    /// ProductSet.
     ///
     /// Format is:
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -6708,15 +6711,17 @@ namespace Google.Cloud.Vision.V1 {
     /// `product-display-name` column refers to
     /// [display_name][google.cloud.vision.v1.Product.display_name], the
     /// `product-category` column refers to
-    /// [product_category][google.cloud.vision.v1.Product.product_category], and the
-    /// `labels` column refers to [product_labels][google.cloud.vision.v1.Product.product_labels].
+    /// [product_category][google.cloud.vision.v1.Product.product_category], and
+    /// the `labels` column refers to
+    /// [product_labels][google.cloud.vision.v1.Product.product_labels].
     ///
     /// The `image-id` column is optional but must be unique if provided. If it is
     /// empty, the system will automatically assign a unique id to the image.
     ///
     /// The `product-display-name` column is optional. If it is empty, the system
-    /// sets the [display_name][google.cloud.vision.v1.Product.display_name] field for the product to a
-    /// space (" "). You can update the `display_name` later by using the API.
+    /// sets the [display_name][google.cloud.vision.v1.Product.display_name] field
+    /// for the product to a space (" "). You can update the `display_name` later
+    /// by using the API.
     ///
     /// If a `Product` with the specified `product-id` already exists, then the
     /// system ignores the `product-display-name`, `product-category`, and `labels`
@@ -7378,8 +7383,10 @@ namespace Google.Cloud.Vision.V1 {
   /// Response message for the `ImportProductSets` method.
   ///
   /// This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+  /// method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductSetsResponse : pb::IMessage<ImportProductSetsResponse>
@@ -7685,7 +7692,8 @@ namespace Google.Cloud.Vision.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// The time when the batch request is finished and
-    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is set to true.
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

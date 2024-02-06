@@ -549,16 +549,18 @@ namespace Google.Cloud.Vision.V1
     /// Manages Products and ProductSets of reference images for use in product
     /// search. It uses the following resource model:
     /// 
-    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
-    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
-    /// products into groups to limit identification.
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet]
+    /// resources, named `projects/*/locations/*/productSets/*`, which acts as a way
+    /// to put different products into groups to limit identification.
     /// 
     /// In parallel,
     /// 
-    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product]
+    /// resources, named
     /// `projects/*/locations/*/products/*`
     /// 
-    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of
+    /// [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
     /// `projects/*/locations/*/products/*/referenceImages/*`
     /// </remarks>
     public abstract partial class ProductSearchClient
@@ -2451,7 +2453,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2498,7 +2501,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2545,7 +2549,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2587,7 +2592,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2634,7 +2640,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -2681,7 +2688,8 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the product in which to create the reference image.
+        /// Required. Resource name of the product in which to create the reference
+        /// image.
         /// 
         /// Format is
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
@@ -3462,7 +3470,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3486,7 +3495,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3510,7 +3520,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3530,7 +3541,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3554,7 +3566,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3578,7 +3591,8 @@ namespace Google.Cloud.Vision.V1
         /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="product">
-        /// Required. The resource name for the Product to be removed from this ProductSet.
+        /// Required. The resource name for the Product to be removed from this
+        /// ProductSet.
         /// 
         /// Format is:
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
@@ -3754,8 +3768,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3773,8 +3787,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3792,8 +3806,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3838,8 +3852,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3868,8 +3882,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3898,8 +3912,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3924,8 +3938,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3954,8 +3968,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -3984,8 +3998,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -4028,8 +4042,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4060,8 +4074,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4092,8 +4106,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4150,8 +4164,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4189,8 +4203,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4228,8 +4242,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4264,8 +4278,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4303,8 +4317,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4342,8 +4356,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="parent">
@@ -4362,16 +4376,18 @@ namespace Google.Cloud.Vision.V1
     /// Manages Products and ProductSets of reference images for use in product
     /// search. It uses the following resource model:
     /// 
-    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
-    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
-    /// products into groups to limit identification.
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet]
+    /// resources, named `projects/*/locations/*/productSets/*`, which acts as a way
+    /// to put different products into groups to limit identification.
     /// 
     /// In parallel,
     /// 
-    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product]
+    /// resources, named
     /// `projects/*/locations/*/products/*`
     /// 
-    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of
+    /// [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
     /// `projects/*/locations/*/products/*/referenceImages/*`
     /// </remarks>
     public sealed partial class ProductSearchClientImpl : ProductSearchClient
@@ -5193,8 +5209,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -5215,8 +5231,8 @@ namespace Google.Cloud.Vision.V1
         /// Asynchronous API that imports a list of reference images to specified
         /// product sets based on a list of image information.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// `Operation.response` contains `ImportProductSetsResponse`. (results)
         /// 
@@ -5258,8 +5274,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5293,8 +5309,8 @@ namespace Google.Cloud.Vision.V1
         /// ProductSet, you must wait until the PurgeProducts operation has finished
         /// for that ProductSet.
         /// 
-        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be used to keep track of the
-        /// progress and results of the request.
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
         /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

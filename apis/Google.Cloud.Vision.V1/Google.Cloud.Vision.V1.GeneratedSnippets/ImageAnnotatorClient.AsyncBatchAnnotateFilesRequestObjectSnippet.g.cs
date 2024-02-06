@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                     new AsyncAnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateFiles(request);
