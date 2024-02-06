@@ -46,7 +46,7 @@ public sealed class UpdateMixinsCommand : CommandBase
         }
 
         bool updated = false;
-        foreach (var mixin in targetApiFromIndex.GetMixinPackages())
+        foreach (var mixin in targetApiFromIndex.GetMixinPackages().Except(new[] { id }))
         {
             if (!api.Dependencies.ContainsKey(mixin))
             {
