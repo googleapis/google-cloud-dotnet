@@ -515,10 +515,9 @@ namespace Google.Cloud.Storage.V2 {
       }
 
       /// <summary>
-      /// Gets the IAM policy for a specified bucket or object.
+      /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -530,10 +529,9 @@ namespace Google.Cloud.Storage.V2 {
       }
 
       /// <summary>
-      /// Updates an IAM policy for the specified bucket or object.
+      /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1224,10 +1222,9 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_LockBucketRetentionPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM policy for a specified bucket or object.
+      /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1240,10 +1237,9 @@ namespace Google.Cloud.Storage.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM policy for a specified bucket or object.
+      /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1254,10 +1250,9 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the IAM policy for a specified bucket or object.
+      /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1270,10 +1265,9 @@ namespace Google.Cloud.Storage.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the IAM policy for a specified bucket or object.
+      /// Gets the IAM policy for a specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1284,10 +1278,9 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Updates an IAM policy for the specified bucket or object.
+      /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1300,10 +1293,9 @@ namespace Google.Cloud.Storage.V2 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an IAM policy for the specified bucket or object.
+      /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1314,10 +1306,9 @@ namespace Google.Cloud.Storage.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Updates an IAM policy for the specified bucket or object.
+      /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1330,10 +1321,9 @@ namespace Google.Cloud.Storage.V2 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an IAM policy for the specified bucket or object.
+      /// Updates an IAM policy for the specified bucket.
       /// The `resource` field in the request should be
-      /// `projects/_/buckets/{bucket}` for a bucket or
-      /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+      /// `projects/_/buckets/{bucket}`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

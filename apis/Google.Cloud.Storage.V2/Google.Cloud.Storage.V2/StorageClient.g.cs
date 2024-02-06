@@ -93,20 +93,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteBucketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.GetBucket</c>
@@ -114,20 +105,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetBucketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.CreateBucket</c>
@@ -135,20 +117,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateBucketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ListBuckets</c>
@@ -156,20 +129,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListBucketsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListBucketsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -177,20 +141,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings LockBucketRetentionPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings LockBucketRetentionPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.GetIamPolicy</c>
@@ -198,20 +153,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.SetIamPolicy</c>
@@ -219,20 +165,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -240,20 +177,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.UpdateBucket</c>
@@ -261,20 +189,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateBucketSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -282,20 +201,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -303,20 +213,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -324,20 +225,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateNotificationConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateNotificationConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -345,20 +237,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListNotificationConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListNotificationConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ComposeObject</c>
@@ -366,20 +249,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ComposeObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ComposeObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.DeleteObject</c>
@@ -387,20 +261,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.RestoreObject</c>
@@ -408,20 +273,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RestoreObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings RestoreObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -429,20 +285,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CancelResumableWriteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CancelResumableWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.GetObject</c>
@@ -450,27 +297,23 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ReadObject</c>
         ///  and <c>StorageClient.ReadObjectAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 60 seconds.</remarks>
-        public gaxgrpc::CallSettings ReadObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.UpdateObject</c>
@@ -478,20 +321,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.WriteObject</c>
@@ -499,20 +333,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings WriteObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings WriteObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::ClientStreamingSettings"/> for calls to <c>StorageClient.WriteObject</c> and
@@ -525,8 +350,13 @@ namespace Google.Cloud.Storage.V2
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>StorageClient.BidiWriteObject</c> and <c>StorageClient.BidiWriteObjectAsync</c>.
         /// </summary>
-        /// <remarks>Timeout: 60 seconds.</remarks>
-        public gaxgrpc::CallSettings BidiWriteObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BidiWriteObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>StorageClient.BidiWriteObject</c> and
@@ -541,20 +371,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListObjectsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListObjectsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.RewriteObject</c>
@@ -562,20 +383,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RewriteObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings RewriteObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -583,20 +395,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings StartResumableWriteSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings StartResumableWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -604,20 +407,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings QueryWriteStatusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings QueryWriteStatusSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -625,20 +419,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetServiceAccountSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.CreateHmacKey</c>
@@ -646,20 +431,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateHmacKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.DeleteHmacKey</c>
@@ -667,20 +443,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteHmacKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.GetHmacKey</c>
@@ -688,20 +455,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetHmacKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.ListHmacKeys</c>
@@ -709,20 +467,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListHmacKeysSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListHmacKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.UpdateHmacKey</c>
@@ -730,20 +479,11 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 2</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
-        /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateHmacKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateHmacKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageSettings"/> object.</returns>
@@ -1539,10 +1279,9 @@ namespace Google.Cloud.Storage.V2
             LockBucketRetentionPolicyAsync(bucket, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1551,10 +1290,9 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1563,10 +1301,9 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1575,10 +1312,9 @@ namespace Google.Cloud.Storage.V2
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1593,10 +1329,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1611,10 +1346,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1626,10 +1360,9 @@ namespace Google.Cloud.Storage.V2
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1644,10 +1377,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1662,10 +1394,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
@@ -1677,10 +1408,9 @@ namespace Google.Cloud.Storage.V2
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1689,10 +1419,9 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1701,10 +1430,9 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1713,10 +1441,9 @@ namespace Google.Cloud.Storage.V2
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1738,10 +1465,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1763,10 +1489,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1784,10 +1509,9 @@ namespace Google.Cloud.Storage.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1809,10 +1533,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1834,10 +1557,9 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -5040,10 +4762,10 @@ namespace Google.Cloud.Storage.V2
             _callLockBucketRetentionPolicy = clientHelper.BuildApiCall<LockBucketRetentionPolicyRequest, Bucket>("LockBucketRetentionPolicy", grpcClient.LockBucketRetentionPolicyAsync, grpcClient.LockBucketRetentionPolicy, effectiveSettings.LockBucketRetentionPolicySettings).WithGoogleRequestParam("bucket", request => request.Bucket);
             Modify_ApiCall(ref _callLockBucketRetentionPolicy);
             Modify_LockBucketRetentionPolicyApiCall(ref _callLockBucketRetentionPolicy);
-            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::GetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource));
+            _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("bucket", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
-            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::SetIamPolicyRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource));
+            _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("bucket", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource));
@@ -5390,10 +5112,9 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5405,10 +5126,9 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Gets the IAM policy for a specified bucket or object.
+        /// Gets the IAM policy for a specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5420,10 +5140,9 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5435,10 +5154,9 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Updates an IAM policy for the specified bucket or object.
+        /// Updates an IAM policy for the specified bucket.
         /// The `resource` field in the request should be
-        /// `projects/_/buckets/{bucket}` for a bucket or
-        /// `projects/_/buckets/{bucket}/objects/{object}` for an object.
+        /// `projects/_/buckets/{bucket}`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
