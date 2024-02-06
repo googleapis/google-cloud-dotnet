@@ -35,13 +35,13 @@ namespace Google.Cloud.Video.Stitcher.V1 {
             "ZXlIABIMCgRuYW1lGAEgASgJEhAKCGhvc3RuYW1lGAQgASgJOmPqQWAKI3Zp",
             "ZGVvc3RpdGNoZXIuZ29vZ2xlYXBpcy5jb20vQ2RuS2V5Ejlwcm9qZWN0cy97",
             "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2RuS2V5cy97Y2RuX2tl",
-            "eX1CEAoOY2RuX2tleV9jb25maWciOwoMR29vZ2xlQ2RuS2V5EhkKC3ByaXZh",
-            "dGVfa2V5GAEgASgMQgTiQQEEEhAKCGtleV9uYW1lGAIgASgJIicKDEFrYW1h",
-            "aUNkbktleRIXCgl0b2tlbl9rZXkYASABKAxCBOJBAQQiOgoLTWVkaWFDZG5L",
-            "ZXkSGQoLcHJpdmF0ZV9rZXkYASABKAxCBOJBAQQSEAoIa2V5X25hbWUYAiAB",
-            "KAlCdAoiY29tLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIMQ2Ru",
-            "S2V5c1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3RpdGNo",
-            "ZXIvYXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
+            "eX1CEAoOY2RuX2tleV9jb25maWciOgoMR29vZ2xlQ2RuS2V5EhgKC3ByaXZh",
+            "dGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAkiJgoMQWthbWFp",
+            "Q2RuS2V5EhYKCXRva2VuX2tleRgBIAEoDEID4EEEIjkKC01lZGlhQ2RuS2V5",
+            "EhgKC3ByaXZhdGVfa2V5GAEgASgMQgPgQQQSEAoIa2V5X25hbWUYAiABKAlC",
+            "dAoiY29tLmdvb2dsZS5jbG91ZC52aWRlby5zdGl0Y2hlci52MUIMQ2RuS2V5",
+            "c1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vdmlkZW8vc3RpdGNoZXIv",
+            "YXBpdjEvc3RpdGNoZXJwYjtzdGl0Y2hlcnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
