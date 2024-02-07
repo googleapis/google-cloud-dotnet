@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Apps.Meet.V2",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Apps.Meet.V2/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "meet"
+}
