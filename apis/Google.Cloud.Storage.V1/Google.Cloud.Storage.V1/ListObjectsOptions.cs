@@ -38,6 +38,12 @@ namespace Google.Cloud.Storage.V1
         public bool? IncludeTrailingDelimiter { get; set; }
 
         /// <summary>
+        /// If true, will also include folders and managed folders, besides objects, in the returned prefixes.
+        /// Only applicable if delimiter is set to '/'.
+        /// </summary>
+        public bool? IncludeFoldersAsPrefixes { get; set; }
+
+        /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;
         /// it does not affect the total number of results returned.)
         /// </summary>
@@ -120,6 +126,10 @@ namespace Google.Cloud.Storage.V1
             if (IncludeTrailingDelimiter != null)
             {
                 request.IncludeTrailingDelimiter = IncludeTrailingDelimiter;
+            }
+            if (IncludeFoldersAsPrefixes != null)
+            {
+                request.IncludeFoldersAsPrefixes = IncludeFoldersAsPrefixes;
             }
             if (Versions != null)
             {
