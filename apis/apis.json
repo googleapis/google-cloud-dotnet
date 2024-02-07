@@ -60,6 +60,26 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Apps.Meet.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Meet",
+      "productUrl": "https://developers.google.com/meet/api/guides/overview",
+      "description": "Recommended Google client library to create and manage meetings in Google Meet.",
+      "tags": [
+        "meet",
+        "collaboration"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/apps/meet/v2",
+      "includeCommonResourcesProto": true,
+      "shortName": "meet",
+      "serviceConfigFile": "meet_v2.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Apps.Meet.V2Beta",
       "version": "1.0.0-beta02",
       "type": "grpc",
