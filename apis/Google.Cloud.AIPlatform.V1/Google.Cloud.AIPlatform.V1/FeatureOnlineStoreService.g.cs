@@ -47,28 +47,66 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aXJMaXN0LkZlYXR1cmVOYW1lVmFsdWVQYWlyGmcKFEZlYXR1cmVOYW1lVmFs",
             "dWVQYWlyEjkKBXZhbHVlGAIgASgLMiguZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjEuRmVhdHVyZVZhbHVlSAASDAoEbmFtZRgBIAEoCUIGCgRkYXRhQggK",
-            "BmZvcm1hdCpiChVGZWF0dXJlVmlld0RhdGFGb3JtYXQSKAokRkVBVFVSRV9W",
-            "SUVXX0RBVEFfRk9STUFUX1VOU1BFQ0lGSUVEEAASDQoJS0VZX1ZBTFVFEAES",
-            "EAoMUFJPVE9fU1RSVUNUEAIy+AIKGUZlYXR1cmVPbmxpbmVTdG9yZVNlcnZp",
-            "Y2USiwIKEkZldGNoRmVhdHVyZVZhbHVlcxI1Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkZldGNoRmVhdHVyZVZhbHVlc1JlcXVlc3QaNi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5GZXRjaEZlYXR1cmVWYWx1ZXNSZXNwb25z",
-            "ZSKFAdpBFmZlYXR1cmVfdmlldywgZGF0YV9rZXmC0+STAmYiYS92MS97ZmVh",
-            "dHVyZV92aWV3PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZU9ubGlu",
-            "ZVN0b3Jlcy8qL2ZlYXR1cmVWaWV3cy8qfTpmZXRjaEZlYXR1cmVWYWx1ZXM6",
-            "ASoaTcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtwBCh5jb20u",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCHkZlYXR1cmVPbmxpbmVTdG9y",
-            "ZVNlcnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
-            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
-            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "BmZvcm1hdCLzBAoUTmVhcmVzdE5laWdoYm9yUXVlcnkSGAoJZW50aXR5X2lk",
+            "GAEgASgJQgPgQQFIABJUCgllbWJlZGRpbmcYAiABKAsyOi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5OZWFyZXN0TmVpZ2hib3JRdWVyeS5FbWJlZGRp",
+            "bmdCA+BBAUgAEhsKDm5laWdoYm9yX2NvdW50GAMgASgFQgPgQQESWgoOc3Ry",
+            "aW5nX2ZpbHRlcnMYBCADKAsyPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5OZWFyZXN0TmVpZ2hib3JRdWVyeS5TdHJpbmdGaWx0ZXJCA+BBARIyCiVw",
+            "ZXJfY3Jvd2RpbmdfYXR0cmlidXRlX25laWdoYm9yX2NvdW50GAUgASgFQgPg",
+            "QQESVAoKcGFyYW1ldGVycxgHIAEoCzI7Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLk5lYXJlc3ROZWlnaGJvclF1ZXJ5LlBhcmFtZXRlcnNCA+BBARof",
+            "CglFbWJlZGRpbmcSEgoFdmFsdWUYASADKAJCA+BBARpWCgxTdHJpbmdGaWx0",
+            "ZXISEQoEbmFtZRgBIAEoCUID4EECEhkKDGFsbG93X3Rva2VucxgCIAMoCUID",
+            "4EEBEhgKC2RlbnlfdG9rZW5zGAMgAygJQgPgQQEaYwoKUGFyYW1ldGVycxIs",
+            "Ch9hcHByb3hpbWF0ZV9uZWlnaGJvcl9jYW5kaWRhdGVzGAEgASgFQgPgQQES",
+            "JwoabGVhZl9ub2Rlc19zZWFyY2hfZnJhY3Rpb24YAiABKAFCA+BBAUIKCghp",
+            "bnN0YW5jZSLKAQocU2VhcmNoTmVhcmVzdEVudGl0aWVzUmVxdWVzdBJDCgxm",
+            "ZWF0dXJlX3ZpZXcYASABKAlCLeBBAvpBJwolYWlwbGF0Zm9ybS5nb29nbGVh",
+            "cGlzLmNvbS9GZWF0dXJlVmlldxJECgVxdWVyeRgCIAEoCzIwLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLk5lYXJlc3ROZWlnaGJvclF1ZXJ5QgPgQQIS",
+            "HwoScmV0dXJuX2Z1bGxfZW50aXR5GAMgASgIQgPgQQEi4QEKEE5lYXJlc3RO",
+            "ZWlnaGJvcnMSSAoJbmVpZ2hib3JzGAEgAygLMjUuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuTmVhcmVzdE5laWdoYm9ycy5OZWlnaGJvchqCAQoITmVp",
+            "Z2hib3ISEQoJZW50aXR5X2lkGAEgASgJEhAKCGRpc3RhbmNlGAIgASgBElEK",
+            "EWVudGl0eV9rZXlfdmFsdWVzGAMgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRmV0Y2hGZWF0dXJlVmFsdWVzUmVzcG9uc2UiaAodU2VhcmNo",
+            "TmVhcmVzdEVudGl0aWVzUmVzcG9uc2USRwoRbmVhcmVzdF9uZWlnaGJvcnMY",
+            "ASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5OZWFyZXN0TmVp",
+            "Z2hib3JzKmIKFUZlYXR1cmVWaWV3RGF0YUZvcm1hdBIoCiRGRUFUVVJFX1ZJ",
+            "RVdfREFUQV9GT1JNQVRfVU5TUEVDSUZJRUQQABINCglLRVlfVkFMVUUQARIQ",
+            "CgxQUk9UT19TVFJVQ1QQAjL4BAoZRmVhdHVyZU9ubGluZVN0b3JlU2Vydmlj",
+            "ZRKLAgoSRmV0Y2hGZWF0dXJlVmFsdWVzEjUuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRmV0Y2hGZWF0dXJlVmFsdWVzUmVxdWVzdBo2Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkZldGNoRmVhdHVyZVZhbHVlc1Jlc3BvbnNl",
+            "IoUB2kEWZmVhdHVyZV92aWV3LCBkYXRhX2tleYLT5JMCZiJhL3YxL3tmZWF0",
+            "dXJlX3ZpZXc9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlT25saW5l",
+            "U3RvcmVzLyovZmVhdHVyZVZpZXdzLyp9OmZldGNoRmVhdHVyZVZhbHVlczoB",
+            "KhL9AQoVU2VhcmNoTmVhcmVzdEVudGl0aWVzEjguZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuU2VhcmNoTmVhcmVzdEVudGl0aWVzUmVxdWVzdBo5Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNlYXJjaE5lYXJlc3RFbnRpdGll",
+            "c1Jlc3BvbnNlIm+C0+STAmkiZC92MS97ZmVhdHVyZV92aWV3PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZmVhdHVyZU9ubGluZVN0b3Jlcy8qL2ZlYXR1cmVW",
+            "aWV3cy8qfTpzZWFyY2hOZWFyZXN0RW50aXRpZXM6ASoaTcpBGWFpcGxhdGZv",
+            "cm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtwBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCHkZlYXR1cmVPbmxpbmVTdG9yZVNlcnZpY2VQcm90b1AB",
+            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
+            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
+            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
+            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreOnlineServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewDataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey), global::Google.Cloud.AIPlatform.V1.FeatureViewDataKey.Parser, new[]{ "Key" }, new[]{ "KeyOneof" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest.Parser, new[]{ "FeatureView", "DataKey", "DataFormat" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Parser, new[]{ "KeyValues", "ProtoStruct" }, new[]{ "Format" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Parser, new[]{ "Features" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair.Parser, new[]{ "Value", "Name" }, new[]{ "Data" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Parser, new[]{ "KeyValues", "ProtoStruct" }, new[]{ "Format" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Parser, new[]{ "Features" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair), global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Types.FeatureNameValuePairList.Types.FeatureNameValuePair.Parser, new[]{ "Value", "Name" }, new[]{ "Data" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Parser, new[]{ "EntityId", "Embedding", "NeighborCount", "StringFilters", "PerCrowdingAttributeNeighborCount", "Parameters" }, new[]{ "Instance" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding.Parser, new[]{ "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter.Parser, new[]{ "Name", "AllowTokens", "DenyTokens" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters), global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters.Parser, new[]{ "ApproximateNeighborCandidates", "LeafNodesSearchFraction" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest), global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest.Parser, new[]{ "FeatureView", "Query", "ReturnFullEntity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighbors), global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Parser, new[]{ "Neighbors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor), global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor.Parser, new[]{ "EntityId", "Distance", "EntityKeyValues" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse), global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse.Parser, new[]{ "NearestNeighbors" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1400,6 +1438,2141 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// A query to find a number of similar entities.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NearestNeighborQuery : pb::IMessage<NearestNeighborQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NearestNeighborQuery> _parser = new pb::MessageParser<NearestNeighborQuery>(() => new NearestNeighborQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NearestNeighborQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighborQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighborQuery(NearestNeighborQuery other) : this() {
+      neighborCount_ = other.neighborCount_;
+      stringFilters_ = other.stringFilters_.Clone();
+      perCrowdingAttributeNeighborCount_ = other.perCrowdingAttributeNeighborCount_;
+      parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
+      switch (other.InstanceCase) {
+        case InstanceOneofCase.EntityId:
+          EntityId = other.EntityId;
+          break;
+        case InstanceOneofCase.Embedding:
+          Embedding = other.Embedding.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighborQuery Clone() {
+      return new NearestNeighborQuery(this);
+    }
+
+    /// <summary>Field number for the "entity_id" field.</summary>
+    public const int EntityIdFieldNumber = 1;
+    /// <summary>
+    /// Optional. The entity id whose similar entities should be searched for.
+    /// If embedding is set, search will use embedding instead of
+    /// entity_id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntityId {
+      get { return HasEntityId ? (string) instance_ : ""; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        instanceCase_ = InstanceOneofCase.EntityId;
+      }
+    }
+    /// <summary>Gets whether the "entity_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityId {
+      get { return instanceCase_ == InstanceOneofCase.EntityId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityId() {
+      if (HasEntityId) {
+        ClearInstance();
+      }
+    }
+
+    /// <summary>Field number for the "embedding" field.</summary>
+    public const int EmbeddingFieldNumber = 2;
+    /// <summary>
+    /// Optional. The embedding vector that be used for similar search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding Embedding {
+      get { return instanceCase_ == InstanceOneofCase.Embedding ? (global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding) instance_ : null; }
+      set {
+        instance_ = value;
+        instanceCase_ = value == null ? InstanceOneofCase.None : InstanceOneofCase.Embedding;
+      }
+    }
+
+    /// <summary>Field number for the "neighbor_count" field.</summary>
+    public const int NeighborCountFieldNumber = 3;
+    private int neighborCount_;
+    /// <summary>
+    /// Optional. The number of similar entities to be retrieved from feature view
+    /// for each query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NeighborCount {
+      get { return neighborCount_; }
+      set {
+        neighborCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "string_filters" field.</summary>
+    public const int StringFiltersFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter> _repeated_stringFilters_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter> stringFilters_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter>();
+    /// <summary>
+    /// Optional. The list of string filters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.StringFilter> StringFilters {
+      get { return stringFilters_; }
+    }
+
+    /// <summary>Field number for the "per_crowding_attribute_neighbor_count" field.</summary>
+    public const int PerCrowdingAttributeNeighborCountFieldNumber = 5;
+    private int perCrowdingAttributeNeighborCount_;
+    /// <summary>
+    /// Optional. Crowding is a constraint on a neighbor list produced by nearest
+    /// neighbor search requiring that no more than
+    /// sper_crowding_attribute_neighbor_count of the k neighbors returned have the
+    /// same value of crowding_attribute. It's used for improving result diversity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PerCrowdingAttributeNeighborCount {
+      get { return perCrowdingAttributeNeighborCount_; }
+      set {
+        perCrowdingAttributeNeighborCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "parameters" field.</summary>
+    public const int ParametersFieldNumber = 7;
+    private global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters parameters_;
+    /// <summary>
+    /// Optional. Parameters that can be set to tune query on the fly.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters Parameters {
+      get { return parameters_; }
+      set {
+        parameters_ = value;
+      }
+    }
+
+    private object instance_;
+    /// <summary>Enum of possible cases for the "instance" oneof.</summary>
+    public enum InstanceOneofCase {
+      None = 0,
+      EntityId = 1,
+      Embedding = 2,
+    }
+    private InstanceOneofCase instanceCase_ = InstanceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstanceOneofCase InstanceCase {
+      get { return instanceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstance() {
+      instanceCase_ = InstanceOneofCase.None;
+      instance_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NearestNeighborQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NearestNeighborQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EntityId != other.EntityId) return false;
+      if (!object.Equals(Embedding, other.Embedding)) return false;
+      if (NeighborCount != other.NeighborCount) return false;
+      if(!stringFilters_.Equals(other.stringFilters_)) return false;
+      if (PerCrowdingAttributeNeighborCount != other.PerCrowdingAttributeNeighborCount) return false;
+      if (!object.Equals(Parameters, other.Parameters)) return false;
+      if (InstanceCase != other.InstanceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasEntityId) hash ^= EntityId.GetHashCode();
+      if (instanceCase_ == InstanceOneofCase.Embedding) hash ^= Embedding.GetHashCode();
+      if (NeighborCount != 0) hash ^= NeighborCount.GetHashCode();
+      hash ^= stringFilters_.GetHashCode();
+      if (PerCrowdingAttributeNeighborCount != 0) hash ^= PerCrowdingAttributeNeighborCount.GetHashCode();
+      if (parameters_ != null) hash ^= Parameters.GetHashCode();
+      hash ^= (int) instanceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasEntityId) {
+        output.WriteRawTag(10);
+        output.WriteString(EntityId);
+      }
+      if (instanceCase_ == InstanceOneofCase.Embedding) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Embedding);
+      }
+      if (NeighborCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(NeighborCount);
+      }
+      stringFilters_.WriteTo(output, _repeated_stringFilters_codec);
+      if (PerCrowdingAttributeNeighborCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PerCrowdingAttributeNeighborCount);
+      }
+      if (parameters_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Parameters);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasEntityId) {
+        output.WriteRawTag(10);
+        output.WriteString(EntityId);
+      }
+      if (instanceCase_ == InstanceOneofCase.Embedding) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Embedding);
+      }
+      if (NeighborCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(NeighborCount);
+      }
+      stringFilters_.WriteTo(ref output, _repeated_stringFilters_codec);
+      if (PerCrowdingAttributeNeighborCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PerCrowdingAttributeNeighborCount);
+      }
+      if (parameters_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Parameters);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasEntityId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityId);
+      }
+      if (instanceCase_ == InstanceOneofCase.Embedding) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Embedding);
+      }
+      if (NeighborCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NeighborCount);
+      }
+      size += stringFilters_.CalculateSize(_repeated_stringFilters_codec);
+      if (PerCrowdingAttributeNeighborCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PerCrowdingAttributeNeighborCount);
+      }
+      if (parameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Parameters);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NearestNeighborQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NeighborCount != 0) {
+        NeighborCount = other.NeighborCount;
+      }
+      stringFilters_.Add(other.stringFilters_);
+      if (other.PerCrowdingAttributeNeighborCount != 0) {
+        PerCrowdingAttributeNeighborCount = other.PerCrowdingAttributeNeighborCount;
+      }
+      if (other.parameters_ != null) {
+        if (parameters_ == null) {
+          Parameters = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters();
+        }
+        Parameters.MergeFrom(other.Parameters);
+      }
+      switch (other.InstanceCase) {
+        case InstanceOneofCase.EntityId:
+          EntityId = other.EntityId;
+          break;
+        case InstanceOneofCase.Embedding:
+          if (Embedding == null) {
+            Embedding = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding();
+          }
+          Embedding.MergeFrom(other.Embedding);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EntityId = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding subBuilder = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding();
+            if (instanceCase_ == InstanceOneofCase.Embedding) {
+              subBuilder.MergeFrom(Embedding);
+            }
+            input.ReadMessage(subBuilder);
+            Embedding = subBuilder;
+            break;
+          }
+          case 24: {
+            NeighborCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            stringFilters_.AddEntriesFrom(input, _repeated_stringFilters_codec);
+            break;
+          }
+          case 40: {
+            PerCrowdingAttributeNeighborCount = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            if (parameters_ == null) {
+              Parameters = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters();
+            }
+            input.ReadMessage(Parameters);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EntityId = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding subBuilder = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Embedding();
+            if (instanceCase_ == InstanceOneofCase.Embedding) {
+              subBuilder.MergeFrom(Embedding);
+            }
+            input.ReadMessage(subBuilder);
+            Embedding = subBuilder;
+            break;
+          }
+          case 24: {
+            NeighborCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            stringFilters_.AddEntriesFrom(ref input, _repeated_stringFilters_codec);
+            break;
+          }
+          case 40: {
+            PerCrowdingAttributeNeighborCount = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            if (parameters_ == null) {
+              Parameters = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Types.Parameters();
+            }
+            input.ReadMessage(Parameters);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NearestNeighborQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The embedding vector.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Embedding : pb::IMessage<Embedding>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Embedding> _parser = new pb::MessageParser<Embedding>(() => new Embedding());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Embedding> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Embedding() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Embedding(Embedding other) : this() {
+          value_ = other.value_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Embedding Clone() {
+          return new Embedding(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private static readonly pb::FieldCodec<float> _repeated_value_codec
+            = pb::FieldCodec.ForFloat(10);
+        private readonly pbc::RepeatedField<float> value_ = new pbc::RepeatedField<float>();
+        /// <summary>
+        /// Optional. Individual value in the embedding.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<float> Value {
+          get { return value_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Embedding);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Embedding other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!value_.Equals(other.value_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= value_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          value_.WriteTo(output, _repeated_value_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          value_.WriteTo(ref output, _repeated_value_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += value_.CalculateSize(_repeated_value_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Embedding other) {
+          if (other == null) {
+            return;
+          }
+          value_.Add(other.value_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 13: {
+                value_.AddEntriesFrom(input, _repeated_value_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 13: {
+                value_.AddEntriesFrom(ref input, _repeated_value_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// String filter is used to search a subset of the entities by using boolean
+      /// rules on string columns.
+      /// For example: if a query specifies string filter
+      /// with 'name = color, allow_tokens = {red, blue}, deny_tokens = {purple}','
+      /// then that query will match entities that are red or blue, but if those
+      /// points are also purple, then they will be excluded even if they are
+      /// red/blue. Only string filter is supported for now, numeric filter will be
+      /// supported in the near future.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StringFilter : pb::IMessage<StringFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StringFilter> _parser = new pb::MessageParser<StringFilter>(() => new StringFilter());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StringFilter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StringFilter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StringFilter(StringFilter other) : this() {
+          name_ = other.name_;
+          allowTokens_ = other.allowTokens_.Clone();
+          denyTokens_ = other.denyTokens_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StringFilter Clone() {
+          return new StringFilter(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. Column names in BigQuery that used as filters.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allow_tokens" field.</summary>
+        public const int AllowTokensFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_allowTokens_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> allowTokens_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. The allowed tokens.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> AllowTokens {
+          get { return allowTokens_; }
+        }
+
+        /// <summary>Field number for the "deny_tokens" field.</summary>
+        public const int DenyTokensFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_denyTokens_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> denyTokens_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. The denied tokens.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> DenyTokens {
+          get { return denyTokens_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StringFilter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StringFilter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if(!allowTokens_.Equals(other.allowTokens_)) return false;
+          if(!denyTokens_.Equals(other.denyTokens_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= allowTokens_.GetHashCode();
+          hash ^= denyTokens_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          allowTokens_.WriteTo(output, _repeated_allowTokens_codec);
+          denyTokens_.WriteTo(output, _repeated_denyTokens_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          allowTokens_.WriteTo(ref output, _repeated_allowTokens_codec);
+          denyTokens_.WriteTo(ref output, _repeated_denyTokens_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += allowTokens_.CalculateSize(_repeated_allowTokens_codec);
+          size += denyTokens_.CalculateSize(_repeated_denyTokens_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StringFilter other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          allowTokens_.Add(other.allowTokens_);
+          denyTokens_.Add(other.denyTokens_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                allowTokens_.AddEntriesFrom(input, _repeated_allowTokens_codec);
+                break;
+              }
+              case 26: {
+                denyTokens_.AddEntriesFrom(input, _repeated_denyTokens_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                allowTokens_.AddEntriesFrom(ref input, _repeated_allowTokens_codec);
+                break;
+              }
+              case 26: {
+                denyTokens_.AddEntriesFrom(ref input, _repeated_denyTokens_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Parameters that can be overrided in each query to tune query latency and
+      /// recall.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Parameters : pb::IMessage<Parameters>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Parameters> _parser = new pb::MessageParser<Parameters>(() => new Parameters());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Parameters> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters(Parameters other) : this() {
+          approximateNeighborCandidates_ = other.approximateNeighborCandidates_;
+          leafNodesSearchFraction_ = other.leafNodesSearchFraction_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Parameters Clone() {
+          return new Parameters(this);
+        }
+
+        /// <summary>Field number for the "approximate_neighbor_candidates" field.</summary>
+        public const int ApproximateNeighborCandidatesFieldNumber = 1;
+        private int approximateNeighborCandidates_;
+        /// <summary>
+        /// Optional. The number of neighbors to find via approximate search before
+        /// exact reordering is performed; if set, this value must be >
+        /// neighbor_count.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ApproximateNeighborCandidates {
+          get { return approximateNeighborCandidates_; }
+          set {
+            approximateNeighborCandidates_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "leaf_nodes_search_fraction" field.</summary>
+        public const int LeafNodesSearchFractionFieldNumber = 2;
+        private double leafNodesSearchFraction_;
+        /// <summary>
+        /// Optional. The fraction of the number of leaves to search, set at query
+        /// time allows user to tune search performance. This value increase result
+        /// in both search accuracy and latency increase. The value should be between
+        /// 0.0 and 1.0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double LeafNodesSearchFraction {
+          get { return leafNodesSearchFraction_; }
+          set {
+            leafNodesSearchFraction_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Parameters);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Parameters other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ApproximateNeighborCandidates != other.ApproximateNeighborCandidates) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(LeafNodesSearchFraction, other.LeafNodesSearchFraction)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ApproximateNeighborCandidates != 0) hash ^= ApproximateNeighborCandidates.GetHashCode();
+          if (LeafNodesSearchFraction != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LeafNodesSearchFraction);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ApproximateNeighborCandidates != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ApproximateNeighborCandidates);
+          }
+          if (LeafNodesSearchFraction != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(LeafNodesSearchFraction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ApproximateNeighborCandidates != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ApproximateNeighborCandidates);
+          }
+          if (LeafNodesSearchFraction != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(LeafNodesSearchFraction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ApproximateNeighborCandidates != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ApproximateNeighborCandidates);
+          }
+          if (LeafNodesSearchFraction != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Parameters other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ApproximateNeighborCandidates != 0) {
+            ApproximateNeighborCandidates = other.ApproximateNeighborCandidates;
+          }
+          if (other.LeafNodesSearchFraction != 0D) {
+            LeafNodesSearchFraction = other.LeafNodesSearchFraction;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ApproximateNeighborCandidates = input.ReadInt32();
+                break;
+              }
+              case 17: {
+                LeafNodesSearchFraction = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ApproximateNeighborCandidates = input.ReadInt32();
+                break;
+              }
+              case 17: {
+                LeafNodesSearchFraction = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// [FeatureOnlineStoreService.SearchNearestEntities][google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SearchNearestEntitiesRequest : pb::IMessage<SearchNearestEntitiesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchNearestEntitiesRequest> _parser = new pb::MessageParser<SearchNearestEntitiesRequest>(() => new SearchNearestEntitiesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchNearestEntitiesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesRequest(SearchNearestEntitiesRequest other) : this() {
+      featureView_ = other.featureView_;
+      query_ = other.query_ != null ? other.query_.Clone() : null;
+      returnFullEntity_ = other.returnFullEntity_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesRequest Clone() {
+      return new SearchNearestEntitiesRequest(this);
+    }
+
+    /// <summary>Field number for the "feature_view" field.</summary>
+    public const int FeatureViewFieldNumber = 1;
+    private string featureView_ = "";
+    /// <summary>
+    /// Required. FeatureView resource format
+    /// `projects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{featureView}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FeatureView {
+      get { return featureView_; }
+      set {
+        featureView_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "query" field.</summary>
+    public const int QueryFieldNumber = 2;
+    private global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery query_;
+    /// <summary>
+    /// Required. The query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery Query {
+      get { return query_; }
+      set {
+        query_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "return_full_entity" field.</summary>
+    public const int ReturnFullEntityFieldNumber = 3;
+    private bool returnFullEntity_;
+    /// <summary>
+    /// Optional. If set to true, the full entities (including all vector values
+    /// and metadata) of the nearest neighbors are returned; otherwise only entity
+    /// id of the nearest neighbors will be returned. Note that returning full
+    /// entities will significantly increase the latency and cost of the query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnFullEntity {
+      get { return returnFullEntity_; }
+      set {
+        returnFullEntity_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchNearestEntitiesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchNearestEntitiesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FeatureView != other.FeatureView) return false;
+      if (!object.Equals(Query, other.Query)) return false;
+      if (ReturnFullEntity != other.ReturnFullEntity) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FeatureView.Length != 0) hash ^= FeatureView.GetHashCode();
+      if (query_ != null) hash ^= Query.GetHashCode();
+      if (ReturnFullEntity != false) hash ^= ReturnFullEntity.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FeatureView.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeatureView);
+      }
+      if (query_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Query);
+      }
+      if (ReturnFullEntity != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReturnFullEntity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FeatureView.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FeatureView);
+      }
+      if (query_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Query);
+      }
+      if (ReturnFullEntity != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReturnFullEntity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FeatureView.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FeatureView);
+      }
+      if (query_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Query);
+      }
+      if (ReturnFullEntity != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchNearestEntitiesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FeatureView.Length != 0) {
+        FeatureView = other.FeatureView;
+      }
+      if (other.query_ != null) {
+        if (query_ == null) {
+          Query = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery();
+        }
+        Query.MergeFrom(other.Query);
+      }
+      if (other.ReturnFullEntity != false) {
+        ReturnFullEntity = other.ReturnFullEntity;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FeatureView = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (query_ == null) {
+              Query = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery();
+            }
+            input.ReadMessage(Query);
+            break;
+          }
+          case 24: {
+            ReturnFullEntity = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FeatureView = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (query_ == null) {
+              Query = new global::Google.Cloud.AIPlatform.V1.NearestNeighborQuery();
+            }
+            input.ReadMessage(Query);
+            break;
+          }
+          case 24: {
+            ReturnFullEntity = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Nearest neighbors for one query.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NearestNeighbors : pb::IMessage<NearestNeighbors>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NearestNeighbors> _parser = new pb::MessageParser<NearestNeighbors>(() => new NearestNeighbors());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NearestNeighbors> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighbors() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighbors(NearestNeighbors other) : this() {
+      neighbors_ = other.neighbors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NearestNeighbors Clone() {
+      return new NearestNeighbors(this);
+    }
+
+    /// <summary>Field number for the "neighbors" field.</summary>
+    public const int NeighborsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor> _repeated_neighbors_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor> neighbors_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor>();
+    /// <summary>
+    /// All its neighbors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Types.Neighbor> Neighbors {
+      get { return neighbors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NearestNeighbors);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NearestNeighbors other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!neighbors_.Equals(other.neighbors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= neighbors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      neighbors_.WriteTo(output, _repeated_neighbors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      neighbors_.WriteTo(ref output, _repeated_neighbors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += neighbors_.CalculateSize(_repeated_neighbors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NearestNeighbors other) {
+      if (other == null) {
+        return;
+      }
+      neighbors_.Add(other.neighbors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            neighbors_.AddEntriesFrom(input, _repeated_neighbors_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            neighbors_.AddEntriesFrom(ref input, _repeated_neighbors_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NearestNeighbors message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A neighbor of the query vector.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Neighbor : pb::IMessage<Neighbor>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Neighbor> _parser = new pb::MessageParser<Neighbor>(() => new Neighbor());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Neighbor> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.NearestNeighbors.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Neighbor() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Neighbor(Neighbor other) : this() {
+          entityId_ = other.entityId_;
+          distance_ = other.distance_;
+          entityKeyValues_ = other.entityKeyValues_ != null ? other.entityKeyValues_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Neighbor Clone() {
+          return new Neighbor(this);
+        }
+
+        /// <summary>Field number for the "entity_id" field.</summary>
+        public const int EntityIdFieldNumber = 1;
+        private string entityId_ = "";
+        /// <summary>
+        /// The id of the similar entity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EntityId {
+          get { return entityId_; }
+          set {
+            entityId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "distance" field.</summary>
+        public const int DistanceFieldNumber = 2;
+        private double distance_;
+        /// <summary>
+        /// The distance between the neighbor and the query vector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Distance {
+          get { return distance_; }
+          set {
+            distance_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "entity_key_values" field.</summary>
+        public const int EntityKeyValuesFieldNumber = 3;
+        private global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse entityKeyValues_;
+        /// <summary>
+        /// The attributes of the neighbor, e.g. filters, crowding and metadata
+        /// Note that full entities are returned only when "return_full_entity"
+        /// is set to true. Otherwise, only the "entity_id" and "distance" fields
+        /// are populated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse EntityKeyValues {
+          get { return entityKeyValues_; }
+          set {
+            entityKeyValues_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Neighbor);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Neighbor other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EntityId != other.EntityId) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Distance, other.Distance)) return false;
+          if (!object.Equals(EntityKeyValues, other.EntityKeyValues)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EntityId.Length != 0) hash ^= EntityId.GetHashCode();
+          if (Distance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Distance);
+          if (entityKeyValues_ != null) hash ^= EntityKeyValues.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EntityId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EntityId);
+          }
+          if (Distance != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Distance);
+          }
+          if (entityKeyValues_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(EntityKeyValues);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EntityId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EntityId);
+          }
+          if (Distance != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Distance);
+          }
+          if (entityKeyValues_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(EntityKeyValues);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EntityId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityId);
+          }
+          if (Distance != 0D) {
+            size += 1 + 8;
+          }
+          if (entityKeyValues_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityKeyValues);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Neighbor other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EntityId.Length != 0) {
+            EntityId = other.EntityId;
+          }
+          if (other.Distance != 0D) {
+            Distance = other.Distance;
+          }
+          if (other.entityKeyValues_ != null) {
+            if (entityKeyValues_ == null) {
+              EntityKeyValues = new global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse();
+            }
+            EntityKeyValues.MergeFrom(other.EntityKeyValues);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                EntityId = input.ReadString();
+                break;
+              }
+              case 17: {
+                Distance = input.ReadDouble();
+                break;
+              }
+              case 26: {
+                if (entityKeyValues_ == null) {
+                  EntityKeyValues = new global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse();
+                }
+                input.ReadMessage(EntityKeyValues);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                EntityId = input.ReadString();
+                break;
+              }
+              case 17: {
+                Distance = input.ReadDouble();
+                break;
+              }
+              case 26: {
+                if (entityKeyValues_ == null) {
+                  EntityKeyValues = new global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse();
+                }
+                input.ReadMessage(EntityKeyValues);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [FeatureOnlineStoreService.SearchNearestEntities][google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SearchNearestEntitiesResponse : pb::IMessage<SearchNearestEntitiesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchNearestEntitiesResponse> _parser = new pb::MessageParser<SearchNearestEntitiesResponse>(() => new SearchNearestEntitiesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchNearestEntitiesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesResponse(SearchNearestEntitiesResponse other) : this() {
+      nearestNeighbors_ = other.nearestNeighbors_ != null ? other.nearestNeighbors_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchNearestEntitiesResponse Clone() {
+      return new SearchNearestEntitiesResponse(this);
+    }
+
+    /// <summary>Field number for the "nearest_neighbors" field.</summary>
+    public const int NearestNeighborsFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.NearestNeighbors nearestNeighbors_;
+    /// <summary>
+    /// The nearest neighbors of the query entity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.NearestNeighbors NearestNeighbors {
+      get { return nearestNeighbors_; }
+      set {
+        nearestNeighbors_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchNearestEntitiesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchNearestEntitiesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(NearestNeighbors, other.NearestNeighbors)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (nearestNeighbors_ != null) hash ^= NearestNeighbors.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (nearestNeighbors_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NearestNeighbors);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (nearestNeighbors_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NearestNeighbors);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (nearestNeighbors_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NearestNeighbors);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchNearestEntitiesResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.nearestNeighbors_ != null) {
+        if (nearestNeighbors_ == null) {
+          NearestNeighbors = new global::Google.Cloud.AIPlatform.V1.NearestNeighbors();
+        }
+        NearestNeighbors.MergeFrom(other.NearestNeighbors);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (nearestNeighbors_ == null) {
+              NearestNeighbors = new global::Google.Cloud.AIPlatform.V1.NearestNeighbors();
+            }
+            input.ReadMessage(NearestNeighbors);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (nearestNeighbors_ == null) {
+              NearestNeighbors = new global::Google.Cloud.AIPlatform.V1.NearestNeighbors();
+            }
+            input.ReadMessage(NearestNeighbors);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

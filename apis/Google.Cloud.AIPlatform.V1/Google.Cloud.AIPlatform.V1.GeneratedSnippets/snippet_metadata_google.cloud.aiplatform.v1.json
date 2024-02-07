@@ -13155,6 +13155,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_FeatureOnlineStoreService_SearchNearestEntities_sync",
+      "title": "SearchNearestEntitiesRequestObject",
+      "description": "Snippet for SearchNearestEntities",
+      "file": "FeatureOnlineStoreServiceClient.SearchNearestEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchNearestEntities",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient.SearchNearestEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "SearchNearestEntities",
+          "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_FeatureOnlineStoreService_SearchNearestEntities_async",
+      "title": "SearchNearestEntitiesRequestObjectAsync",
+      "description": "Snippet for SearchNearestEntitiesAsync",
+      "file": "FeatureOnlineStoreServiceClient.SearchNearestEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchNearestEntitiesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient.SearchNearestEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse>",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "SearchNearestEntities",
+          "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_FeatureRegistryService_CreateFeatureGroup_sync",
       "title": "CreateFeatureGroupRequestObject",
       "description": "Snippet for CreateFeatureGroup",

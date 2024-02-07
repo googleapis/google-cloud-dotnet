@@ -315,6 +315,12 @@
                 "FetchFeatureValues",
                 "FetchFeatureValuesAsync"
               ]
+            },
+            "SearchNearestEntities": {
+              "methods": [
+                "SearchNearestEntities",
+                "SearchNearestEntitiesAsync"
+              ]
             }
           }
         }

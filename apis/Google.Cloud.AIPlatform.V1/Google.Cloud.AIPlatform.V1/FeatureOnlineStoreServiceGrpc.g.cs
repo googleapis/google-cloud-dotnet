@@ -67,6 +67,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest> __Marshaller_google_cloud_aiplatform_v1_FetchFeatureValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse> __Marshaller_google_cloud_aiplatform_v1_FetchFeatureValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest> __Marshaller_google_cloud_aiplatform_v1_SearchNearestEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse> __Marshaller_google_cloud_aiplatform_v1_SearchNearestEntitiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse> __Method_FetchFeatureValues = new grpc::Method<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse>(
@@ -75,6 +79,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "FetchFeatureValues",
         __Marshaller_google_cloud_aiplatform_v1_FetchFeatureValuesRequest,
         __Marshaller_google_cloud_aiplatform_v1_FetchFeatureValuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest, global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse> __Method_SearchNearestEntities = new grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest, global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchNearestEntities",
+        __Marshaller_google_cloud_aiplatform_v1_SearchNearestEntitiesRequest,
+        __Marshaller_google_cloud_aiplatform_v1_SearchNearestEntitiesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +106,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse> FetchFeatureValues(global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Search the nearest entities under a FeatureView.
+      /// Search only works for indexable feature view; if a feature view isn't
+      /// indexable, returns Invalid argument response.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse> SearchNearestEntities(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +201,62 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchFeatureValues, null, options, request);
       }
+      /// <summary>
+      /// Search the nearest entities under a FeatureView.
+      /// Search only works for indexable feature view; if a feature view isn't
+      /// indexable, returns Invalid argument response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse SearchNearestEntities(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchNearestEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search the nearest entities under a FeatureView.
+      /// Search only works for indexable feature view; if a feature view isn't
+      /// indexable, returns Invalid argument response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse SearchNearestEntities(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchNearestEntities, null, options, request);
+      }
+      /// <summary>
+      /// Search the nearest entities under a FeatureView.
+      /// Search only works for indexable feature view; if a feature view isn't
+      /// indexable, returns Invalid argument response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse> SearchNearestEntitiesAsync(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchNearestEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search the nearest entities under a FeatureView.
+      /// Search only works for indexable feature view; if a feature view isn't
+      /// indexable, returns Invalid argument response.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse> SearchNearestEntitiesAsync(global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchNearestEntities, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FeatureOnlineStoreServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +271,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public static grpc::ServerServiceDefinition BindService(FeatureOnlineStoreServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_FetchFeatureValues, serviceImpl.FetchFeatureValues).Build();
+          .AddMethod(__Method_FetchFeatureValues, serviceImpl.FetchFeatureValues)
+          .AddMethod(__Method_SearchNearestEntities, serviceImpl.SearchNearestEntities).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +283,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, FeatureOnlineStoreServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_FetchFeatureValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesRequest, global::Google.Cloud.AIPlatform.V1.FetchFeatureValuesResponse>(serviceImpl.FetchFeatureValues));
+      serviceBinder.AddMethod(__Method_SearchNearestEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesRequest, global::Google.Cloud.AIPlatform.V1.SearchNearestEntitiesResponse>(serviceImpl.SearchNearestEntities));
     }
 
   }
