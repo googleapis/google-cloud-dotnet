@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.1.0, released 2024-02-07
+
+### New features
+
+- Adding ManagementDnsZoneBinding, DnsBindPermission, DnsForwarding, ExternalAccessRule, ExternalAddress, LoggingServer, NetworkPeering, Node and stretched PC features ([commit 11e1be8](https://github.com/googleapis/google-cloud-dotnet/commit/11e1be85ad44b9ba4ef2178c50bd8a6b7a424cf1))
+
+### Documentation improvements
+
+- Clarified wording around private cloud and update cluster ([commit 11e1be8](https://github.com/googleapis/google-cloud-dotnet/commit/11e1be85ad44b9ba4ef2178c50bd8a6b7a424cf1))
+
 ## Version 1.0.0, released 2023-11-01
 
 No API surface changes; just dependency updates and promotion to GA.
