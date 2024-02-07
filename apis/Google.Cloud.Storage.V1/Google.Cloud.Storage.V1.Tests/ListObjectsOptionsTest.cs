@@ -28,6 +28,7 @@ namespace Google.Cloud.Storage.V1.Tests
             options.ModifyRequest(request);
             Assert.Null(request.Delimiter);
             Assert.Null(request.IncludeTrailingDelimiter);
+            Assert.Null(request.IncludeFoldersAsPrefixes);
             Assert.Null(request.Projection);
             Assert.Null(request.MaxResults);
             Assert.Null(request.Versions);
@@ -47,6 +48,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 PageSize = 10,
                 Delimiter = "/",
                 IncludeTrailingDelimiter = true,
+                IncludeFoldersAsPrefixes = true,
                 Projection = Projection.Full,
                 Versions = true,
                 UserProject = "proj",
@@ -60,6 +62,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(10, request.MaxResults);
             Assert.Equal("/", request.Delimiter);
             Assert.True(request.IncludeTrailingDelimiter);
+            Assert.True(request.IncludeFoldersAsPrefixes);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.True(request.Versions);
             Assert.Equal("proj", request.UserProject);
