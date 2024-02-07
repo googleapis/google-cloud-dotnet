@@ -1536,8 +1536,8 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="assetTypes">
         /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
+        /// it will search all the asset types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
         /// 
         /// Regular expressions are also supported. For example:
         /// 
@@ -1677,8 +1677,8 @@ namespace Google.Cloud.Asset.V1
         /// </param>
         /// <param name="assetTypes">
         /// Optional. A list of asset types that this request searches for. If empty,
-        /// it will search all the [searchable asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
+        /// it will search all the asset types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
         /// 
         /// Regular expressions are also supported. For example:
         /// 
@@ -3426,9 +3426,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3455,9 +3454,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3485,9 +3483,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="scope">
@@ -3570,9 +3567,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="scope">
@@ -4538,9 +4534,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4570,9 +4565,8 @@ namespace Google.Cloud.Asset.V1
         /// * compute.requireOsLogin
         /// * compute.disableNestedVirtualization
         /// 
-        /// This RPC only returns either resources of types supported by [searchable
-        /// asset
-        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types),
+        /// This RPC only returns either resources of types [supported by search
+        /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
         /// or IAM policies.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
