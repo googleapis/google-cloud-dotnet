@@ -116,5 +116,42 @@ namespace GoogleCSharpSnippets
             FetchFeatureValuesResponse response = await featureOnlineStoreServiceClient.FetchFeatureValuesAsync(featureView, dataKey);
             // End snippet
         }
+
+        /// <summary>Snippet for SearchNearestEntities</summary>
+        public void SearchNearestEntitiesRequestObject()
+        {
+            // Snippet: SearchNearestEntities(SearchNearestEntitiesRequest, CallSettings)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = FeatureOnlineStoreServiceClient.Create();
+            // Initialize request argument(s)
+            SearchNearestEntitiesRequest request = new SearchNearestEntitiesRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+                Query = new NearestNeighborQuery(),
+                ReturnFullEntity = false,
+            };
+            // Make the request
+            SearchNearestEntitiesResponse response = featureOnlineStoreServiceClient.SearchNearestEntities(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchNearestEntitiesAsync</summary>
+        public async Task SearchNearestEntitiesRequestObjectAsync()
+        {
+            // Snippet: SearchNearestEntitiesAsync(SearchNearestEntitiesRequest, CallSettings)
+            // Additional: SearchNearestEntitiesAsync(SearchNearestEntitiesRequest, CancellationToken)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = await FeatureOnlineStoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchNearestEntitiesRequest request = new SearchNearestEntitiesRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+                Query = new NearestNeighborQuery(),
+                ReturnFullEntity = false,
+            };
+            // Make the request
+            SearchNearestEntitiesResponse response = await featureOnlineStoreServiceClient.SearchNearestEntitiesAsync(request);
+            // End snippet
+        }
     }
 }

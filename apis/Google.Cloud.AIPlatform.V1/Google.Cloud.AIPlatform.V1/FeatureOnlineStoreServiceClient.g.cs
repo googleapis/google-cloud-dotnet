@@ -49,6 +49,7 @@ namespace Google.Cloud.AIPlatform.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             FetchFeatureValuesSettings = existing.FetchFeatureValuesSettings;
+            SearchNearestEntitiesSettings = existing.SearchNearestEntitiesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -68,6 +69,19 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FetchFeatureValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureOnlineStoreServiceClient.SearchNearestEntities</c> and
+        /// <c>FeatureOnlineStoreServiceClient.SearchNearestEntitiesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchNearestEntitiesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -361,6 +375,39 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<FetchFeatureValuesResponse> FetchFeatureValuesAsync(FeatureViewName featureView, FeatureViewDataKey dataKey, st::CancellationToken cancellationToken) =>
             FetchFeatureValuesAsync(featureView, dataKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Search the nearest entities under a FeatureView.
+        /// Search only works for indexable feature view; if a feature view isn't
+        /// indexable, returns Invalid argument response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SearchNearestEntitiesResponse SearchNearestEntities(SearchNearestEntitiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search the nearest entities under a FeatureView.
+        /// Search only works for indexable feature view; if a feature view isn't
+        /// indexable, returns Invalid argument response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchNearestEntitiesResponse> SearchNearestEntitiesAsync(SearchNearestEntitiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search the nearest entities under a FeatureView.
+        /// Search only works for indexable feature view; if a feature view isn't
+        /// indexable, returns Invalid argument response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SearchNearestEntitiesResponse> SearchNearestEntitiesAsync(SearchNearestEntitiesRequest request, st::CancellationToken cancellationToken) =>
+            SearchNearestEntitiesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>FeatureOnlineStoreService client wrapper implementation, for convenient use.</summary>
@@ -370,6 +417,8 @@ namespace Google.Cloud.AIPlatform.V1
     public sealed partial class FeatureOnlineStoreServiceClientImpl : FeatureOnlineStoreServiceClient
     {
         private readonly gaxgrpc::ApiCall<FetchFeatureValuesRequest, FetchFeatureValuesResponse> _callFetchFeatureValues;
+
+        private readonly gaxgrpc::ApiCall<SearchNearestEntitiesRequest, SearchNearestEntitiesResponse> _callSearchNearestEntities;
 
         /// <summary>
         /// Constructs a client wrapper for the FeatureOnlineStoreService service, with the specified gRPC client and
@@ -390,12 +439,17 @@ namespace Google.Cloud.AIPlatform.V1
             _callFetchFeatureValues = clientHelper.BuildApiCall<FetchFeatureValuesRequest, FetchFeatureValuesResponse>("FetchFeatureValues", grpcClient.FetchFeatureValuesAsync, grpcClient.FetchFeatureValues, effectiveSettings.FetchFeatureValuesSettings).WithGoogleRequestParam("feature_view", request => request.FeatureView);
             Modify_ApiCall(ref _callFetchFeatureValues);
             Modify_FetchFeatureValuesApiCall(ref _callFetchFeatureValues);
+            _callSearchNearestEntities = clientHelper.BuildApiCall<SearchNearestEntitiesRequest, SearchNearestEntitiesResponse>("SearchNearestEntities", grpcClient.SearchNearestEntitiesAsync, grpcClient.SearchNearestEntities, effectiveSettings.SearchNearestEntitiesSettings).WithGoogleRequestParam("feature_view", request => request.FeatureView);
+            Modify_ApiCall(ref _callSearchNearestEntities);
+            Modify_SearchNearestEntitiesApiCall(ref _callSearchNearestEntities);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_FetchFeatureValuesApiCall(ref gaxgrpc::ApiCall<FetchFeatureValuesRequest, FetchFeatureValuesResponse> call);
+
+        partial void Modify_SearchNearestEntitiesApiCall(ref gaxgrpc::ApiCall<SearchNearestEntitiesRequest, SearchNearestEntitiesResponse> call);
 
         partial void OnConstruction(FeatureOnlineStoreService.FeatureOnlineStoreServiceClient grpcClient, FeatureOnlineStoreServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -409,6 +463,8 @@ namespace Google.Cloud.AIPlatform.V1
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_FetchFeatureValuesRequest(ref FetchFeatureValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchNearestEntitiesRequest(ref SearchNearestEntitiesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Fetch feature values under a FeatureView.
@@ -432,6 +488,34 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_FetchFeatureValuesRequest(ref request, ref callSettings);
             return _callFetchFeatureValues.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Search the nearest entities under a FeatureView.
+        /// Search only works for indexable feature view; if a feature view isn't
+        /// indexable, returns Invalid argument response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SearchNearestEntitiesResponse SearchNearestEntities(SearchNearestEntitiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchNearestEntitiesRequest(ref request, ref callSettings);
+            return _callSearchNearestEntities.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Search the nearest entities under a FeatureView.
+        /// Search only works for indexable feature view; if a feature view isn't
+        /// indexable, returns Invalid argument response.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SearchNearestEntitiesResponse> SearchNearestEntitiesAsync(SearchNearestEntitiesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchNearestEntitiesRequest(ref request, ref callSettings);
+            return _callSearchNearestEntities.Async(request, callSettings);
         }
     }
 
