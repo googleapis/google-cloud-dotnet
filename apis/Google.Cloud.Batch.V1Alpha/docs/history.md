@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-alpha21, released 2024-02-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove deprecated field enableOslogin ([commit 1531c7e](https://github.com/googleapis/google-cloud-dotnet/commit/1531c7e3583a7d79a410bc09269a457397300ea9))
+
+### Documentation improvements
+
+- Polish the field descriptions for enableImageStreaming and CloudLoggingOptions ([commit 5570490](https://github.com/googleapis/google-cloud-dotnet/commit/5570490e3463093b35864e64ff7b1187a50546f3))
+
 ## Version 1.0.0-alpha20, released 2024-01-16
 
 ### New features
