@@ -79,6 +79,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ExportEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ImportEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType> __Method_GetEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType>(
@@ -119,6 +125,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "ListEntityTypes",
         __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest, global::Google.LongRunning.Operation> __Method_ExportEntityTypes = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportEntityTypes",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ExportEntityTypesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest, global::Google.LongRunning.Operation> __Method_ImportEntityTypes = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportEntityTypes",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ImportEntityTypesRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -198,6 +220,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> ListEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports the selected entity types.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports the specified entitytypes into the agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -519,6 +565,102 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntityTypes, null, options, request);
       }
+      /// <summary>
+      /// Exports the selected entity types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEntityTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the selected entity types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportEntityTypes, null, options, request);
+      }
+      /// <summary>
+      /// Exports the selected entity types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEntityTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports the selected entity types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportEntityTypes, null, options, request);
+      }
+      /// <summary>
+      /// Imports the specified entitytypes into the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportEntityTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified entitytypes into the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportEntityTypes, null, options, request);
+      }
+      /// <summary>
+      /// Imports the specified entitytypes into the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportEntityTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports the specified entitytypes into the agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportEntityTypes, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EntityTypesClient NewInstance(ClientBaseConfiguration configuration)
@@ -537,7 +679,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_CreateEntityType, serviceImpl.CreateEntityType)
           .AddMethod(__Method_UpdateEntityType, serviceImpl.UpdateEntityType)
           .AddMethod(__Method_DeleteEntityType, serviceImpl.DeleteEntityType)
-          .AddMethod(__Method_ListEntityTypes, serviceImpl.ListEntityTypes).Build();
+          .AddMethod(__Method_ListEntityTypes, serviceImpl.ListEntityTypes)
+          .AddMethod(__Method_ExportEntityTypes, serviceImpl.ExportEntityTypes)
+          .AddMethod(__Method_ImportEntityTypes, serviceImpl.ImportEntityTypes).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -552,6 +696,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_UpdateEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType>(serviceImpl.UpdateEntityType));
       serviceBinder.AddMethod(__Method_DeleteEntityType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEntityType));
       serviceBinder.AddMethod(__Method_ListEntityTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse>(serviceImpl.ListEntityTypes));
+      serviceBinder.AddMethod(__Method_ExportEntityTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEntityTypes));
+      serviceBinder.AddMethod(__Method_ImportEntityTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportEntityTypes));
     }
 
   }

@@ -5090,6 +5090,200 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ExportEntityTypes_sync",
+      "title": "ExportEntityTypesRequestObject",
+      "description": "Snippet for ExportEntityTypes",
+      "file": "EntityTypesClient.ExportEntityTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ExportEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ExportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ExportEntityTypes_async",
+      "title": "ExportEntityTypesRequestObjectAsync",
+      "description": "Snippet for ExportEntityTypesAsync",
+      "file": "EntityTypesClient.ExportEntityTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ExportEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata>>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ExportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ImportEntityTypes_sync",
+      "title": "ImportEntityTypesRequestObject",
+      "description": "Snippet for ImportEntityTypes",
+      "file": "EntityTypesClient.ImportEntityTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ImportEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ImportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ImportEntityTypes_async",
+      "title": "ImportEntityTypesRequestObjectAsync",
+      "description": "Snippet for ImportEntityTypesAsync",
+      "file": "EntityTypesClient.ImportEntityTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ImportEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata>>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ImportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v3_generated_Environments_ListEnvironments_sync",
       "title": "ListEnvironmentsRequestObject",
       "description": "Snippet for ListEnvironments",
@@ -18791,6 +18985,54 @@
         {
           "start": 35,
           "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Sessions_ServerStreamingDetectIntent_sync",
+      "title": "ServerStreamingDetectIntentRequestObject",
+      "description": "Snippet for ServerStreamingDetectIntent",
+      "file": "SessionsClient.ServerStreamingDetectIntentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ServerStreamingDetectIntent",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient.ServerStreamingDetectIntent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient+ServerStreamingDetectIntentStream",
+        "client": {
+          "shortName": "SessionsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient"
+        },
+        "method": {
+          "shortName": "ServerStreamingDetectIntent",
+          "fullName": "google.cloud.dialogflow.cx.v3.Sessions.ServerStreamingDetectIntent",
+          "service": {
+            "shortName": "Sessions",
+            "fullName": "google.cloud.dialogflow.cx.v3.Sessions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]

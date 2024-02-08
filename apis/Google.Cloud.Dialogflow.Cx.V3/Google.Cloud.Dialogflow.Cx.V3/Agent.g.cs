@@ -626,7 +626,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Immutable. Name of the start flow in this agent. A start flow will be
     /// automatically created when the agent is created, and can only be deleted by
     /// deleting the agent. Format: `projects/&lt;Project ID>/locations/&lt;Location
-    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>`.
+    /// ID>/agents/&lt;Agent ID>/flows/&lt;Flow ID>`. Currently only the default start
+    /// flow with id "00000000-0000-0000-0000-000000000000" is allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

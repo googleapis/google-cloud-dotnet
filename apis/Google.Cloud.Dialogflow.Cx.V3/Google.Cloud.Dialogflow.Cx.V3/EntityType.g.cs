@@ -28,79 +28,129 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "cm90bxIdZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMaHGdvb2dsZS9h",
             "cGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3Rv",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
-            "L3Jlc291cmNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8a",
-            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIpoGCgpFbnRpdHlU",
-            "eXBlEgwKBG5hbWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
-            "QQoEa2luZBgDIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "LkVudGl0eVR5cGUuS2luZEID4EECElgKE2F1dG9fZXhwYW5zaW9uX21vZGUY",
-            "BCABKA4yOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRpdHlU",
-            "eXBlLkF1dG9FeHBhbnNpb25Nb2RlEkIKCGVudGl0aWVzGAUgAygLMjAuZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRW50aXR5VHlwZS5FbnRpdHkS",
-            "UgoQZXhjbHVkZWRfcGhyYXNlcxgGIAMoCzI4Lmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LmN4LnYzLkVudGl0eVR5cGUuRXhjbHVkZWRQaHJhc2USHwoXZW5h",
-            "YmxlX2Z1enp5X2V4dHJhY3Rpb24YByABKAgSDgoGcmVkYWN0GAkgASgIGjMK",
-            "BkVudGl0eRISCgV2YWx1ZRgBIAEoCUID4EECEhUKCHN5bm9ueW1zGAIgAygJ",
-            "QgPgQQIaJAoORXhjbHVkZWRQaHJhc2USEgoFdmFsdWUYASABKAlCA+BBAiJK",
-            "CgRLaW5kEhQKEEtJTkRfVU5TUEVDSUZJRUQQABIMCghLSU5EX01BUBABEg0K",
-            "CUtJTkRfTElTVBACEg8KC0tJTkRfUkVHRVhQEAMiWQoRQXV0b0V4cGFuc2lv",
-            "bk1vZGUSIwofQVVUT19FWFBBTlNJT05fTU9ERV9VTlNQRUNJRklFRBAAEh8K",
-            "G0FVVE9fRVhQQU5TSU9OX01PREVfREVGQVVMVBABOnvqQXgKJGRpYWxvZ2Zs",
-            "b3cuZ29vZ2xlYXBpcy5jb20vRW50aXR5VHlwZRJQcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2FnZW50cy97YWdlbnR9L2VudGl0",
-            "eVR5cGVzL3tlbnRpdHlfdHlwZX0ilAEKFkxpc3RFbnRpdHlUeXBlc1JlcXVl",
-            "c3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYSJGRpYWxvZ2Zsb3cuZ29vZ2xl",
-            "YXBpcy5jb20vRW50aXR5VHlwZRIVCg1sYW5ndWFnZV9jb2RlGAIgASgJEhEK",
-            "CXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJInMKF0xpc3RF",
-            "bnRpdHlUeXBlc1Jlc3BvbnNlEj8KDGVudGl0eV90eXBlcxgBIAMoCzIpLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkVudGl0eVR5cGUSFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJImkKFEdldEVudGl0eVR5cGVSZXF1ZXN0EjoK",
-            "BG5hbWUYASABKAlCLOBBAvpBJgokZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
-            "bS9FbnRpdHlUeXBlEhUKDWxhbmd1YWdlX2NvZGUYAiABKAkiswEKF0NyZWF0",
-            "ZUVudGl0eVR5cGVSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC+kEmEiRk",
-            "aWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0VudGl0eVR5cGUSQwoLZW50aXR5",
-            "X3R5cGUYAiABKAsyKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5F",
-            "bnRpdHlUeXBlQgPgQQISFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCSKmAQoXVXBk",
-            "YXRlRW50aXR5VHlwZVJlcXVlc3QSQwoLZW50aXR5X3R5cGUYASABKAsyKS5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRpdHlUeXBlQgPgQQIS",
-            "FQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIvCgt1cGRhdGVfbWFzaxgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siZAoXRGVsZXRlRW50aXR5VHlw",
-            "ZVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRkaWFsb2dmbG93Lmdv",
-            "b2dsZWFwaXMuY29tL0VudGl0eVR5cGUSDQoFZm9yY2UYAiABKAgyhwkKC0Vu",
-            "dGl0eVR5cGVzErgBCg1HZXRFbnRpdHlUeXBlEjMuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cuY3gudjMuR2V0RW50aXR5VHlwZVJlcXVlc3QaKS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRpdHlUeXBlIkfaQQRuYW1lgtPk",
-            "kwI6EjgvdjMve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMv",
-            "Ki9lbnRpdHlUeXBlcy8qfRLZAQoQQ3JlYXRlRW50aXR5VHlwZRI2Lmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkNyZWF0ZUVudGl0eVR5cGVSZXF1",
-            "ZXN0GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRW50aXR5VHlw",
-            "ZSJi2kEScGFyZW50LGVudGl0eV90eXBlgtPkkwJHIjgvdjMve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qfS9lbnRpdHlUeXBlczoL",
-            "ZW50aXR5X3R5cGUS6gEKEFVwZGF0ZUVudGl0eVR5cGUSNi5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy5jeC52My5VcGRhdGVFbnRpdHlUeXBlUmVxdWVzdBop",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkVudGl0eVR5cGUic9pB",
-            "F2VudGl0eV90eXBlLHVwZGF0ZV9tYXNrgtPkkwJTMkQvdjMve2VudGl0eV90",
-            "eXBlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKi9lbnRp",
-            "dHlUeXBlcy8qfToLZW50aXR5X3R5cGUSqwEKEERlbGV0ZUVudGl0eVR5cGUS",
-            "Ni5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5EZWxldGVFbnRpdHlU",
-            "eXBlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJH2kEEbmFtZYLT",
-            "5JMCOio4L3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRz",
-            "LyovZW50aXR5VHlwZXMvKn0SywEKD0xpc3RFbnRpdHlUeXBlcxI1Lmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkxpc3RFbnRpdHlUeXBlc1JlcXVl",
-            "c3QaNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0RW50aXR5",
-            "VHlwZXNSZXNwb25zZSJJ2kEGcGFyZW50gtPkkwI6EjgvdjMve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8qfS9lbnRpdHlUeXBlcxp4",
-            "ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrUBCiFjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCD0VudGl0eVR5cGVQcm90b1ABWjFj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hwYjtj",
-            "eHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5WM+oC",
-            "IUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
+            "L3Jlc291cmNlLnByb3RvGipnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92",
+            "My9pbmxpbmUucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
+            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9w",
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvIpoGCgpFbnRpdHlUeXBlEgwKBG5h",
+            "bWUYASABKAkSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISQQoEa2luZBgD",
+            "IAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkVudGl0eVR5",
+            "cGUuS2luZEID4EECElgKE2F1dG9fZXhwYW5zaW9uX21vZGUYBCABKA4yOy5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRpdHlUeXBlLkF1dG9F",
+            "eHBhbnNpb25Nb2RlEkIKCGVudGl0aWVzGAUgAygLMjAuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cuY3gudjMuRW50aXR5VHlwZS5FbnRpdHkSUgoQZXhjbHVk",
+            "ZWRfcGhyYXNlcxgGIAMoCzI4Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzLkVudGl0eVR5cGUuRXhjbHVkZWRQaHJhc2USHwoXZW5hYmxlX2Z1enp5",
+            "X2V4dHJhY3Rpb24YByABKAgSDgoGcmVkYWN0GAkgASgIGjMKBkVudGl0eRIS",
+            "CgV2YWx1ZRgBIAEoCUID4EECEhUKCHN5bm9ueW1zGAIgAygJQgPgQQIaJAoO",
+            "RXhjbHVkZWRQaHJhc2USEgoFdmFsdWUYASABKAlCA+BBAiJKCgRLaW5kEhQK",
+            "EEtJTkRfVU5TUEVDSUZJRUQQABIMCghLSU5EX01BUBABEg0KCUtJTkRfTElT",
+            "VBACEg8KC0tJTkRfUkVHRVhQEAMiWQoRQXV0b0V4cGFuc2lvbk1vZGUSIwof",
+            "QVVUT19FWFBBTlNJT05fTU9ERV9VTlNQRUNJRklFRBAAEh8KG0FVVE9fRVhQ",
+            "QU5TSU9OX01PREVfREVGQVVMVBABOnvqQXgKJGRpYWxvZ2Zsb3cuZ29vZ2xl",
+            "YXBpcy5jb20vRW50aXR5VHlwZRJQcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2FnZW50cy97YWdlbnR9L2VudGl0eVR5cGVzL3tl",
+            "bnRpdHlfdHlwZX0ikAMKGEV4cG9ydEVudGl0eVR5cGVzUmVxdWVzdBI8CgZw",
+            "YXJlbnQYASABKAlCLOBBAvpBJhIkZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNv",
+            "bS9FbnRpdHlUeXBlEhkKDGVudGl0eV90eXBlcxgCIAMoCUID4EECEh8KEGVu",
+            "dGl0eV90eXBlc191cmkYAyABKAlCA+BBAUgAEioKG2VudGl0eV90eXBlc19j",
+            "b250ZW50X2lubGluZRgEIAEoCEID4EEBSAASXAoLZGF0YV9mb3JtYXQYBSAB",
+            "KA4yQi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FeHBvcnRFbnRp",
+            "dHlUeXBlc1JlcXVlc3QuRGF0YUZvcm1hdEID4EEBEhoKDWxhbmd1YWdlX2Nv",
+            "ZGUYBiABKAlCA+BBASJFCgpEYXRhRm9ybWF0EhsKF0RBVEFfRk9STUFUX1VO",
+            "U1BFQ0lGSUVEEAASCAoEQkxPQhABEhAKDEpTT05fUEFDS0FHRRAFQg0KC2Rl",
+            "c3RpbmF0aW9uIqIBChlFeHBvcnRFbnRpdHlUeXBlc1Jlc3BvbnNlEhoKEGVu",
+            "dGl0eV90eXBlc191cmkYASABKAlIABJQChRlbnRpdHlfdHlwZXNfY29udGVu",
+            "dBgCIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLklubGlu",
+            "ZURlc3RpbmF0aW9uSABCFwoVZXhwb3J0ZWRfZW50aXR5X3R5cGVzIhsKGUV4",
+            "cG9ydEVudGl0eVR5cGVzTWV0YWRhdGEi6wMKGEltcG9ydEVudGl0eVR5cGVz",
+            "UmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkZGlhbG9nZmxvdy5n",
+            "b29nbGVhcGlzLmNvbS9FbnRpdHlUeXBlEhoKEGVudGl0eV90eXBlc191cmkY",
+            "AiABKAlIABJLChRlbnRpdHlfdHlwZXNfY29udGVudBgDIAEoCzIrLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLklubGluZVNvdXJjZUgAEl4KDG1l",
+            "cmdlX29wdGlvbhgEIAEoDjJDLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4",
+            "LnYzLkltcG9ydEVudGl0eVR5cGVzUmVxdWVzdC5NZXJnZU9wdGlvbkID4EEC",
+            "EkgKEnRhcmdldF9lbnRpdHlfdHlwZRgFIAEoCUIs4EEB+kEmCiRkaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL0VudGl0eVR5cGUibgoLTWVyZ2VPcHRpb24S",
+            "HAoYTUVSR0VfT1BUSU9OX1VOU1BFQ0lGSUVEEAASCwoHUkVQTEFDRRABEgkK",
+            "BU1FUkdFEAISCgoGUkVOQU1FEAMSEwoPUkVQT1JUX0NPTkZMSUNUEAQSCAoE",
+            "S0VFUBAFQg4KDGVudGl0eV90eXBlcyKjAgoZSW1wb3J0RW50aXR5VHlwZXNS",
+            "ZXNwb25zZRI/CgxlbnRpdHlfdHlwZXMYASADKAlCKfpBJgokZGlhbG9nZmxv",
+            "dy5nb29nbGVhcGlzLmNvbS9FbnRpdHlUeXBlEmwKFWNvbmZsaWN0aW5nX3Jl",
+            "c291cmNlcxgCIAEoCzJNLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkltcG9ydEVudGl0eVR5cGVzUmVzcG9uc2UuQ29uZmxpY3RpbmdSZXNvdXJj",
+            "ZXMaVwoUQ29uZmxpY3RpbmdSZXNvdXJjZXMSIQoZZW50aXR5X3R5cGVfZGlz",
+            "cGxheV9uYW1lcxgBIAMoCRIcChRlbnRpdHlfZGlzcGxheV9uYW1lcxgCIAMo",
+            "CSIbChlJbXBvcnRFbnRpdHlUeXBlc01ldGFkYXRhIpQBChZMaXN0RW50aXR5",
+            "VHlwZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC+kEmEiRkaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL0VudGl0eVR5cGUSFQoNbGFuZ3VhZ2VfY29k",
+            "ZRgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEo",
+            "CSJzChdMaXN0RW50aXR5VHlwZXNSZXNwb25zZRI/CgxlbnRpdHlfdHlwZXMY",
+            "ASADKAsyKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRpdHlU",
+            "eXBlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJpChRHZXRFbnRpdHlUeXBl",
+            "UmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGRpYWxvZ2Zsb3cuZ29v",
+            "Z2xlYXBpcy5jb20vRW50aXR5VHlwZRIVCg1sYW5ndWFnZV9jb2RlGAIgASgJ",
+            "IrMBChdDcmVhdGVFbnRpdHlUeXBlUmVxdWVzdBI8CgZwYXJlbnQYASABKAlC",
+            "LOBBAvpBJhIkZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9FbnRpdHlUeXBl",
+            "EkMKC2VudGl0eV90eXBlGAIgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuRW50aXR5VHlwZUID4EECEhUKDWxhbmd1YWdlX2NvZGUYAyAB",
+            "KAkipgEKF1VwZGF0ZUVudGl0eVR5cGVSZXF1ZXN0EkMKC2VudGl0eV90eXBl",
+            "GAEgASgLMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRW50aXR5",
+            "VHlwZUID4EECEhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSLwoLdXBkYXRlX21h",
+            "c2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrImQKF0RlbGV0",
+            "ZUVudGl0eVR5cGVSZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokZGlh",
+            "bG9nZmxvdy5nb29nbGVhcGlzLmNvbS9FbnRpdHlUeXBlEg0KBWZvcmNlGAIg",
+            "ASgIMu8MCgtFbnRpdHlUeXBlcxK4AQoNR2V0RW50aXR5VHlwZRIzLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkdldEVudGl0eVR5cGVSZXF1ZXN0",
+            "GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRW50aXR5VHlwZSJH",
+            "2kEEbmFtZYLT5JMCOhI4L3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovYWdlbnRzLyovZW50aXR5VHlwZXMvKn0S2QEKEENyZWF0ZUVudGl0eVR5",
+            "cGUSNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5DcmVhdGVFbnRp",
+            "dHlUeXBlUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
+            "LkVudGl0eVR5cGUiYtpBEnBhcmVudCxlbnRpdHlfdHlwZYLT5JMCRyI4L3Yz",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKn0vZW50",
+            "aXR5VHlwZXM6C2VudGl0eV90eXBlEuoBChBVcGRhdGVFbnRpdHlUeXBlEjYu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuVXBkYXRlRW50aXR5VHlw",
+            "ZVJlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5FbnRp",
+            "dHlUeXBlInPaQRdlbnRpdHlfdHlwZSx1cGRhdGVfbWFza4LT5JMCUzJEL3Yz",
+            "L3tlbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdl",
+            "bnRzLyovZW50aXR5VHlwZXMvKn06C2VudGl0eV90eXBlEqsBChBEZWxldGVF",
+            "bnRpdHlUeXBlEjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRGVs",
+            "ZXRlRW50aXR5VHlwZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "R9pBBG5hbWWC0+STAjoqOC92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2FnZW50cy8qL2VudGl0eVR5cGVzLyp9EssBCg9MaXN0RW50aXR5VHlw",
+            "ZXMSNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0RW50aXR5",
+            "VHlwZXNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
+            "TGlzdEVudGl0eVR5cGVzUmVzcG9uc2UiSdpBBnBhcmVudILT5JMCOhI4L3Yz",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudHMvKn0vZW50",
+            "aXR5VHlwZXMS8QEKEUV4cG9ydEVudGl0eVR5cGVzEjcuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cuY3gudjMuRXhwb3J0RW50aXR5VHlwZXNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKDAcpBNgoZRXhwb3J0RW50",
+            "aXR5VHlwZXNSZXNwb25zZRIZRXhwb3J0RW50aXR5VHlwZXNNZXRhZGF0YYLT",
+            "5JMCRCI/L3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2Vu",
+            "dHMvKn0vZW50aXR5VHlwZXM6ZXhwb3J0OgEqEvEBChFJbXBvcnRFbnRpdHlU",
+            "eXBlcxI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkltcG9ydEVu",
+            "dGl0eVR5cGVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24igwHKQTYKGUltcG9ydEVudGl0eVR5cGVzUmVzcG9uc2USGUltcG9ydEVu",
+            "dGl0eVR5cGVzTWV0YWRhdGGC0+STAkQiPy92My97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovYWdlbnRzLyp9L2VudGl0eVR5cGVzOmltcG9ydDoB",
+            "Khp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QrUBCiFjb20uZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjNCD0VudGl0eVR5cGVQcm90b1AB",
+            "WjFjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvY3gvYXBpdjMvY3hw",
+            "YjtjeHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5DeC5W",
+            "M+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNYOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.InlineReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.EntityType), global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Parser, new[]{ "Name", "DisplayName", "Kind", "AutoExpansionMode", "Entities", "ExcludedPhrases", "EnableFuzzyExtraction", "Redact" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Kind), typeof(global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.AutoExpansionMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Entity), global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.Entity.Parser, new[]{ "Value", "Synonyms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.ExcludedPhrase), global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Types.ExcludedPhrase.Parser, new[]{ "Value" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest), global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypes", "EntityTypesUri", "EntityTypesContentInline", "DataFormat", "LanguageCode" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse), global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse.Parser, new[]{ "EntityTypesUri", "EntityTypesContent" }, new[]{ "ExportedEntityTypes" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata), global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest), global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Parser, new[]{ "Parent", "EntityTypesUri", "EntityTypesContent", "MergeOption", "TargetEntityType" }, new[]{ "EntityTypes" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse), global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Parser, new[]{ "EntityTypes", "ConflictingResources" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources), global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources.Parser, new[]{ "EntityTypeDisplayNames", "EntityDisplayNames" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata), global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest.Parser, new[]{ "Parent", "LanguageCode", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse.Parser, new[]{ "EntityTypes", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest.Parser, new[]{ "Name", "LanguageCode" }, null, null, null, null),
@@ -1097,6 +1147,2060 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
   /// <summary>
   /// The request message for
+  /// [EntityTypes.ExportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExportEntityTypesRequest : pb::IMessage<ExportEntityTypesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportEntityTypesRequest> _parser = new pb::MessageParser<ExportEntityTypesRequest>(() => new ExportEntityTypesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExportEntityTypesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesRequest(ExportEntityTypesRequest other) : this() {
+      parent_ = other.parent_;
+      entityTypes_ = other.entityTypes_.Clone();
+      dataFormat_ = other.dataFormat_;
+      languageCode_ = other.languageCode_;
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case DestinationOneofCase.EntityTypesContentInline:
+          EntityTypesContentInline = other.EntityTypesContentInline;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesRequest Clone() {
+      return new ExportEntityTypesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the parent agent to export entity types.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entity_types" field.</summary>
+    public const int EntityTypesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_entityTypes_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> entityTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The name of the entity types to export.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/entityTypes/&lt;EntityType ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> EntityTypes {
+      get { return entityTypes_; }
+    }
+
+    /// <summary>Field number for the "entity_types_uri" field.</summary>
+    public const int EntityTypesUriFieldNumber = 3;
+    /// <summary>
+    /// Optional. The [Google Cloud
+    /// Storage](https://cloud.google.com/storage/docs/) URI to export the entity
+    /// types to. The format of this URI must be
+    /// `gs://&lt;bucket-name>/&lt;object-name>`.
+    ///
+    /// Dialogflow performs a write operation for the Cloud Storage object
+    /// on the caller's behalf, so your request authentication must
+    /// have write permissions for the object. For more information, see
+    /// [Dialogflow access
+    /// control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntityTypesUri {
+      get { return HasEntityTypesUri ? (string) destination_ : ""; }
+      set {
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        destinationCase_ = DestinationOneofCase.EntityTypesUri;
+      }
+    }
+    /// <summary>Gets whether the "entity_types_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypesUri {
+      get { return destinationCase_ == DestinationOneofCase.EntityTypesUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_types_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypesUri() {
+      if (HasEntityTypesUri) {
+        ClearDestination();
+      }
+    }
+
+    /// <summary>Field number for the "entity_types_content_inline" field.</summary>
+    public const int EntityTypesContentInlineFieldNumber = 4;
+    /// <summary>
+    /// Optional. The option to return the serialized entity types inline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EntityTypesContentInline {
+      get { return HasEntityTypesContentInline ? (bool) destination_ : false; }
+      set {
+        destination_ = value;
+        destinationCase_ = DestinationOneofCase.EntityTypesContentInline;
+      }
+    }
+    /// <summary>Gets whether the "entity_types_content_inline" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypesContentInline {
+      get { return destinationCase_ == DestinationOneofCase.EntityTypesContentInline; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_types_content_inline" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypesContentInline() {
+      if (HasEntityTypesContentInline) {
+        ClearDestination();
+      }
+    }
+
+    /// <summary>Field number for the "data_format" field.</summary>
+    public const int DataFormatFieldNumber = 5;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat dataFormat_ = global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified;
+    /// <summary>
+    /// Optional. The data format of the exported entity types. If not specified,
+    /// `BLOB` is assumed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat DataFormat {
+      get { return dataFormat_; }
+      set {
+        dataFormat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 6;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The language to retrieve the entity type for. The following
+    /// fields are language dependent:
+    ///
+    /// *   `EntityType.entities.value`
+    /// *   `EntityType.entities.synonyms`
+    /// *   `EntityType.excluded_phrases.value`
+    ///
+    /// If not specified, all language dependent fields will be retrieved.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// are supported.
+    /// Note: languages must be enabled in the agent before they can be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      EntityTypesUri = 3,
+      EntityTypesContentInline = 4,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExportEntityTypesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExportEntityTypesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!entityTypes_.Equals(other.entityTypes_)) return false;
+      if (EntityTypesUri != other.EntityTypesUri) return false;
+      if (EntityTypesContentInline != other.EntityTypesContentInline) return false;
+      if (DataFormat != other.DataFormat) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= entityTypes_.GetHashCode();
+      if (HasEntityTypesUri) hash ^= EntityTypesUri.GetHashCode();
+      if (HasEntityTypesContentInline) hash ^= EntityTypesContentInline.GetHashCode();
+      if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified) hash ^= DataFormat.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      entityTypes_.WriteTo(output, _repeated_entityTypes_codec);
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(26);
+        output.WriteString(EntityTypesUri);
+      }
+      if (HasEntityTypesContentInline) {
+        output.WriteRawTag(32);
+        output.WriteBool(EntityTypesContentInline);
+      }
+      if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) DataFormat);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      entityTypes_.WriteTo(ref output, _repeated_entityTypes_codec);
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(26);
+        output.WriteString(EntityTypesUri);
+      }
+      if (HasEntityTypesContentInline) {
+        output.WriteRawTag(32);
+        output.WriteBool(EntityTypesContentInline);
+      }
+      if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) DataFormat);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += entityTypes_.CalculateSize(_repeated_entityTypes_codec);
+      if (HasEntityTypesUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityTypesUri);
+      }
+      if (HasEntityTypesContentInline) {
+        size += 1 + 1;
+      }
+      if (DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataFormat);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExportEntityTypesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      entityTypes_.Add(other.entityTypes_);
+      if (other.DataFormat != global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat.Unspecified) {
+        DataFormat = other.DataFormat;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case DestinationOneofCase.EntityTypesContentInline:
+          EntityTypesContentInline = other.EntityTypesContentInline;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            entityTypes_.AddEntriesFrom(input, _repeated_entityTypes_codec);
+            break;
+          }
+          case 26: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 32: {
+            EntityTypesContentInline = input.ReadBool();
+            break;
+          }
+          case 40: {
+            DataFormat = (global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            entityTypes_.AddEntriesFrom(ref input, _repeated_entityTypes_codec);
+            break;
+          }
+          case 26: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 32: {
+            EntityTypesContentInline = input.ReadBool();
+            break;
+          }
+          case 40: {
+            DataFormat = (global::Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest.Types.DataFormat) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExportEntityTypesRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Data format of the exported entity types.
+      /// </summary>
+      public enum DataFormat {
+        /// <summary>
+        /// Unspecified format. Treated as `BLOB`.
+        /// </summary>
+        [pbr::OriginalName("DATA_FORMAT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// EntityTypes will be exported as raw bytes.
+        /// </summary>
+        [pbr::OriginalName("BLOB")] Blob = 1,
+        /// <summary>
+        /// EntityTypes will be exported in JSON Package format.
+        /// </summary>
+        [pbr::OriginalName("JSON_PACKAGE")] JsonPackage = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// [EntityTypes.ExportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExportEntityTypesResponse : pb::IMessage<ExportEntityTypesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportEntityTypesResponse> _parser = new pb::MessageParser<ExportEntityTypesResponse>(() => new ExportEntityTypesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExportEntityTypesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesResponse(ExportEntityTypesResponse other) : this() {
+      switch (other.ExportedEntityTypesCase) {
+        case ExportedEntityTypesOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case ExportedEntityTypesOneofCase.EntityTypesContent:
+          EntityTypesContent = other.EntityTypesContent.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesResponse Clone() {
+      return new ExportEntityTypesResponse(this);
+    }
+
+    /// <summary>Field number for the "entity_types_uri" field.</summary>
+    public const int EntityTypesUriFieldNumber = 1;
+    /// <summary>
+    /// The URI to a file containing the exported entity types. This field is
+    /// populated only if `entity_types_uri` is specified in
+    /// [ExportEntityTypesRequest][google.cloud.dialogflow.cx.v3.ExportEntityTypesRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntityTypesUri {
+      get { return HasEntityTypesUri ? (string) exportedEntityTypes_ : ""; }
+      set {
+        exportedEntityTypes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        exportedEntityTypesCase_ = ExportedEntityTypesOneofCase.EntityTypesUri;
+      }
+    }
+    /// <summary>Gets whether the "entity_types_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypesUri {
+      get { return exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_types_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypesUri() {
+      if (HasEntityTypesUri) {
+        ClearExportedEntityTypes();
+      }
+    }
+
+    /// <summary>Field number for the "entity_types_content" field.</summary>
+    public const int EntityTypesContentFieldNumber = 2;
+    /// <summary>
+    /// Uncompressed byte content for entity types. This field is populated only
+    /// if `entity_types_content_inline` is set to true in
+    /// [ExportEntityTypesRequest][google.cloud.dialogflow.cx.v3.ExportEntityTypesRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination EntityTypesContent {
+      get { return exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent ? (global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination) exportedEntityTypes_ : null; }
+      set {
+        exportedEntityTypes_ = value;
+        exportedEntityTypesCase_ = value == null ? ExportedEntityTypesOneofCase.None : ExportedEntityTypesOneofCase.EntityTypesContent;
+      }
+    }
+
+    private object exportedEntityTypes_;
+    /// <summary>Enum of possible cases for the "exported_entity_types" oneof.</summary>
+    public enum ExportedEntityTypesOneofCase {
+      None = 0,
+      EntityTypesUri = 1,
+      EntityTypesContent = 2,
+    }
+    private ExportedEntityTypesOneofCase exportedEntityTypesCase_ = ExportedEntityTypesOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportedEntityTypesOneofCase ExportedEntityTypesCase {
+      get { return exportedEntityTypesCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExportedEntityTypes() {
+      exportedEntityTypesCase_ = ExportedEntityTypesOneofCase.None;
+      exportedEntityTypes_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExportEntityTypesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExportEntityTypesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EntityTypesUri != other.EntityTypesUri) return false;
+      if (!object.Equals(EntityTypesContent, other.EntityTypesContent)) return false;
+      if (ExportedEntityTypesCase != other.ExportedEntityTypesCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasEntityTypesUri) hash ^= EntityTypesUri.GetHashCode();
+      if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) hash ^= EntityTypesContent.GetHashCode();
+      hash ^= (int) exportedEntityTypesCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(10);
+        output.WriteString(EntityTypesUri);
+      }
+      if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EntityTypesContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(10);
+        output.WriteString(EntityTypesUri);
+      }
+      if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EntityTypesContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasEntityTypesUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityTypesUri);
+      }
+      if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityTypesContent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExportEntityTypesResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ExportedEntityTypesCase) {
+        case ExportedEntityTypesOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case ExportedEntityTypesOneofCase.EntityTypesContent:
+          if (EntityTypesContent == null) {
+            EntityTypesContent = new global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination();
+          }
+          EntityTypesContent.MergeFrom(other.EntityTypesContent);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination();
+            if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) {
+              subBuilder.MergeFrom(EntityTypesContent);
+            }
+            input.ReadMessage(subBuilder);
+            EntityTypesContent = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.InlineDestination();
+            if (exportedEntityTypesCase_ == ExportedEntityTypesOneofCase.EntityTypesContent) {
+              subBuilder.MergeFrom(EntityTypesContent);
+            }
+            input.ReadMessage(subBuilder);
+            EntityTypesContent = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata returned for the
+  /// [EntityTypes.ExportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes]
+  /// long running operation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExportEntityTypesMetadata : pb::IMessage<ExportEntityTypesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportEntityTypesMetadata> _parser = new pb::MessageParser<ExportEntityTypesMetadata>(() => new ExportEntityTypesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExportEntityTypesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesMetadata(ExportEntityTypesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportEntityTypesMetadata Clone() {
+      return new ExportEntityTypesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExportEntityTypesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExportEntityTypesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExportEntityTypesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// [EntityTypes.ImportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImportEntityTypesRequest : pb::IMessage<ImportEntityTypesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportEntityTypesRequest> _parser = new pb::MessageParser<ImportEntityTypesRequest>(() => new ImportEntityTypesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImportEntityTypesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesRequest(ImportEntityTypesRequest other) : this() {
+      parent_ = other.parent_;
+      mergeOption_ = other.mergeOption_;
+      targetEntityType_ = other.targetEntityType_;
+      switch (other.EntityTypesCase) {
+        case EntityTypesOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case EntityTypesOneofCase.EntityTypesContent:
+          EntityTypesContent = other.EntityTypesContent.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesRequest Clone() {
+      return new ImportEntityTypesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The agent to import the entity types into.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entity_types_uri" field.</summary>
+    public const int EntityTypesUriFieldNumber = 2;
+    /// <summary>
+    /// The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI
+    /// to import entity types from. The format of this URI must be
+    /// `gs://&lt;bucket-name>/&lt;object-name>`.
+    ///
+    /// Dialogflow performs a read operation for the Cloud Storage object
+    /// on the caller's behalf, so your request authentication must
+    /// have read permissions for the object. For more information, see
+    /// [Dialogflow access
+    /// control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EntityTypesUri {
+      get { return HasEntityTypesUri ? (string) entityTypes_ : ""; }
+      set {
+        entityTypes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        entityTypesCase_ = EntityTypesOneofCase.EntityTypesUri;
+      }
+    }
+    /// <summary>Gets whether the "entity_types_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntityTypesUri {
+      get { return entityTypesCase_ == EntityTypesOneofCase.EntityTypesUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity_types_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypesUri() {
+      if (HasEntityTypesUri) {
+        ClearEntityTypes();
+      }
+    }
+
+    /// <summary>Field number for the "entity_types_content" field.</summary>
+    public const int EntityTypesContentFieldNumber = 3;
+    /// <summary>
+    /// Uncompressed byte content of entity types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.InlineSource EntityTypesContent {
+      get { return entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent ? (global::Google.Cloud.Dialogflow.Cx.V3.InlineSource) entityTypes_ : null; }
+      set {
+        entityTypes_ = value;
+        entityTypesCase_ = value == null ? EntityTypesOneofCase.None : EntityTypesOneofCase.EntityTypesContent;
+      }
+    }
+
+    /// <summary>Field number for the "merge_option" field.</summary>
+    public const int MergeOptionFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption mergeOption_ = global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified;
+    /// <summary>
+    /// Required. Merge option for importing entity types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption MergeOption {
+      get { return mergeOption_; }
+      set {
+        mergeOption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "target_entity_type" field.</summary>
+    public const int TargetEntityTypeFieldNumber = 5;
+    private string targetEntityType_ = "";
+    /// <summary>
+    /// Optional. The target entity type to import into.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/entity_types/&lt;EntityType ID>`.
+    /// If set, there should be only one entity type included in
+    /// [entity_types][google.cloud.dialogflow.cx.v3.ImportEntityTypesRequest.entity_types],
+    /// of which the type should match the type of the target entity type. All
+    /// [entities][google.cloud.dialogflow.cx.v3.EntityType.entities] in the
+    /// imported entity type will be added to the target entity type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetEntityType {
+      get { return targetEntityType_; }
+      set {
+        targetEntityType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object entityTypes_;
+    /// <summary>Enum of possible cases for the "entity_types" oneof.</summary>
+    public enum EntityTypesOneofCase {
+      None = 0,
+      EntityTypesUri = 2,
+      EntityTypesContent = 3,
+    }
+    private EntityTypesOneofCase entityTypesCase_ = EntityTypesOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityTypesOneofCase EntityTypesCase {
+      get { return entityTypesCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntityTypes() {
+      entityTypesCase_ = EntityTypesOneofCase.None;
+      entityTypes_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImportEntityTypesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImportEntityTypesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (EntityTypesUri != other.EntityTypesUri) return false;
+      if (!object.Equals(EntityTypesContent, other.EntityTypesContent)) return false;
+      if (MergeOption != other.MergeOption) return false;
+      if (TargetEntityType != other.TargetEntityType) return false;
+      if (EntityTypesCase != other.EntityTypesCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (HasEntityTypesUri) hash ^= EntityTypesUri.GetHashCode();
+      if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) hash ^= EntityTypesContent.GetHashCode();
+      if (MergeOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified) hash ^= MergeOption.GetHashCode();
+      if (TargetEntityType.Length != 0) hash ^= TargetEntityType.GetHashCode();
+      hash ^= (int) entityTypesCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(18);
+        output.WriteString(EntityTypesUri);
+      }
+      if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EntityTypesContent);
+      }
+      if (MergeOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MergeOption);
+      }
+      if (TargetEntityType.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TargetEntityType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (HasEntityTypesUri) {
+        output.WriteRawTag(18);
+        output.WriteString(EntityTypesUri);
+      }
+      if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EntityTypesContent);
+      }
+      if (MergeOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MergeOption);
+      }
+      if (TargetEntityType.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TargetEntityType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (HasEntityTypesUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntityTypesUri);
+      }
+      if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityTypesContent);
+      }
+      if (MergeOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MergeOption);
+      }
+      if (TargetEntityType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetEntityType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImportEntityTypesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.MergeOption != global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption.Unspecified) {
+        MergeOption = other.MergeOption;
+      }
+      if (other.TargetEntityType.Length != 0) {
+        TargetEntityType = other.TargetEntityType;
+      }
+      switch (other.EntityTypesCase) {
+        case EntityTypesOneofCase.EntityTypesUri:
+          EntityTypesUri = other.EntityTypesUri;
+          break;
+        case EntityTypesOneofCase.EntityTypesContent:
+          if (EntityTypesContent == null) {
+            EntityTypesContent = new global::Google.Cloud.Dialogflow.Cx.V3.InlineSource();
+          }
+          EntityTypesContent.MergeFrom(other.EntityTypesContent);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dialogflow.Cx.V3.InlineSource subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.InlineSource();
+            if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) {
+              subBuilder.MergeFrom(EntityTypesContent);
+            }
+            input.ReadMessage(subBuilder);
+            EntityTypesContent = subBuilder;
+            break;
+          }
+          case 32: {
+            MergeOption = (global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            TargetEntityType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            EntityTypesUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dialogflow.Cx.V3.InlineSource subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.InlineSource();
+            if (entityTypesCase_ == EntityTypesOneofCase.EntityTypesContent) {
+              subBuilder.MergeFrom(EntityTypesContent);
+            }
+            input.ReadMessage(subBuilder);
+            EntityTypesContent = subBuilder;
+            break;
+          }
+          case 32: {
+            MergeOption = (global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest.Types.MergeOption) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            TargetEntityType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImportEntityTypesRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Merge option when display name conflicts exist during import.
+      /// </summary>
+      public enum MergeOption {
+        /// <summary>
+        /// Unspecified. If used, system uses REPORT_CONFLICT as default.
+        /// </summary>
+        [pbr::OriginalName("MERGE_OPTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Replace the original entity type in the agent with the new entity type
+        /// when display name conflicts exist.
+        /// </summary>
+        [pbr::OriginalName("REPLACE")] Replace = 1,
+        /// <summary>
+        /// Merge the original entity type with the new entity type when display name
+        /// conflicts exist.
+        /// </summary>
+        [pbr::OriginalName("MERGE")] Merge = 2,
+        /// <summary>
+        /// Create new entity types with new display names to differentiate them from
+        /// the existing entity types when display name conflicts exist.
+        /// </summary>
+        [pbr::OriginalName("RENAME")] Rename = 3,
+        /// <summary>
+        /// Report conflict information if display names conflict is detected.
+        /// Otherwise, import entity types.
+        /// </summary>
+        [pbr::OriginalName("REPORT_CONFLICT")] ReportConflict = 4,
+        /// <summary>
+        /// Keep the original entity type and discard the conflicting new entity type
+        /// when display name conflicts exist.
+        /// </summary>
+        [pbr::OriginalName("KEEP")] Keep = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// [EntityTypes.ImportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImportEntityTypesResponse : pb::IMessage<ImportEntityTypesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportEntityTypesResponse> _parser = new pb::MessageParser<ImportEntityTypesResponse>(() => new ImportEntityTypesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImportEntityTypesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesResponse(ImportEntityTypesResponse other) : this() {
+      entityTypes_ = other.entityTypes_.Clone();
+      conflictingResources_ = other.conflictingResources_ != null ? other.conflictingResources_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesResponse Clone() {
+      return new ImportEntityTypesResponse(this);
+    }
+
+    /// <summary>Field number for the "entity_types" field.</summary>
+    public const int EntityTypesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_entityTypes_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> entityTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The unique identifier of the imported entity types.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/agents/&lt;Agent
+    /// ID>/entity_types/&lt;EntityType ID>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> EntityTypes {
+      get { return entityTypes_; }
+    }
+
+    /// <summary>Field number for the "conflicting_resources" field.</summary>
+    public const int ConflictingResourcesFieldNumber = 2;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources conflictingResources_;
+    /// <summary>
+    /// Info which resources have conflicts when
+    /// [REPORT_CONFLICT][ImportEntityTypesResponse.REPORT_CONFLICT] merge_option
+    /// is set in ImportEntityTypesRequest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources ConflictingResources {
+      get { return conflictingResources_; }
+      set {
+        conflictingResources_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImportEntityTypesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImportEntityTypesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entityTypes_.Equals(other.entityTypes_)) return false;
+      if (!object.Equals(ConflictingResources, other.ConflictingResources)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entityTypes_.GetHashCode();
+      if (conflictingResources_ != null) hash ^= ConflictingResources.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entityTypes_.WriteTo(output, _repeated_entityTypes_codec);
+      if (conflictingResources_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ConflictingResources);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entityTypes_.WriteTo(ref output, _repeated_entityTypes_codec);
+      if (conflictingResources_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ConflictingResources);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += entityTypes_.CalculateSize(_repeated_entityTypes_codec);
+      if (conflictingResources_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConflictingResources);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImportEntityTypesResponse other) {
+      if (other == null) {
+        return;
+      }
+      entityTypes_.Add(other.entityTypes_);
+      if (other.conflictingResources_ != null) {
+        if (conflictingResources_ == null) {
+          ConflictingResources = new global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources();
+        }
+        ConflictingResources.MergeFrom(other.ConflictingResources);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entityTypes_.AddEntriesFrom(input, _repeated_entityTypes_codec);
+            break;
+          }
+          case 18: {
+            if (conflictingResources_ == null) {
+              ConflictingResources = new global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources();
+            }
+            input.ReadMessage(ConflictingResources);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entityTypes_.AddEntriesFrom(ref input, _repeated_entityTypes_codec);
+            break;
+          }
+          case 18: {
+            if (conflictingResources_ == null) {
+              ConflictingResources = new global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Types.ConflictingResources();
+            }
+            input.ReadMessage(ConflictingResources);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImportEntityTypesResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Conflicting resources detected during the import process. Only filled when
+      /// [REPORT_CONFLICT][ImportEntityTypesResponse.REPORT_CONFLICT] is set in the
+      /// request and there are conflicts in the display names.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConflictingResources : pb::IMessage<ConflictingResources>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConflictingResources> _parser = new pb::MessageParser<ConflictingResources>(() => new ConflictingResources());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConflictingResources> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConflictingResources() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConflictingResources(ConflictingResources other) : this() {
+          entityTypeDisplayNames_ = other.entityTypeDisplayNames_.Clone();
+          entityDisplayNames_ = other.entityDisplayNames_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConflictingResources Clone() {
+          return new ConflictingResources(this);
+        }
+
+        /// <summary>Field number for the "entity_type_display_names" field.</summary>
+        public const int EntityTypeDisplayNamesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_entityTypeDisplayNames_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> entityTypeDisplayNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Display names of conflicting entity types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> EntityTypeDisplayNames {
+          get { return entityTypeDisplayNames_; }
+        }
+
+        /// <summary>Field number for the "entity_display_names" field.</summary>
+        public const int EntityDisplayNamesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_entityDisplayNames_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> entityDisplayNames_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Display names of conflicting entities.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> EntityDisplayNames {
+          get { return entityDisplayNames_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConflictingResources);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConflictingResources other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!entityTypeDisplayNames_.Equals(other.entityTypeDisplayNames_)) return false;
+          if(!entityDisplayNames_.Equals(other.entityDisplayNames_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= entityTypeDisplayNames_.GetHashCode();
+          hash ^= entityDisplayNames_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          entityTypeDisplayNames_.WriteTo(output, _repeated_entityTypeDisplayNames_codec);
+          entityDisplayNames_.WriteTo(output, _repeated_entityDisplayNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          entityTypeDisplayNames_.WriteTo(ref output, _repeated_entityTypeDisplayNames_codec);
+          entityDisplayNames_.WriteTo(ref output, _repeated_entityDisplayNames_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += entityTypeDisplayNames_.CalculateSize(_repeated_entityTypeDisplayNames_codec);
+          size += entityDisplayNames_.CalculateSize(_repeated_entityDisplayNames_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConflictingResources other) {
+          if (other == null) {
+            return;
+          }
+          entityTypeDisplayNames_.Add(other.entityTypeDisplayNames_);
+          entityDisplayNames_.Add(other.entityDisplayNames_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                entityTypeDisplayNames_.AddEntriesFrom(input, _repeated_entityTypeDisplayNames_codec);
+                break;
+              }
+              case 18: {
+                entityDisplayNames_.AddEntriesFrom(input, _repeated_entityDisplayNames_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                entityTypeDisplayNames_.AddEntriesFrom(ref input, _repeated_entityTypeDisplayNames_codec);
+                break;
+              }
+              case 18: {
+                entityDisplayNames_.AddEntriesFrom(ref input, _repeated_entityDisplayNames_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Metadata returned for the
+  /// [EntityTypes.ImportEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes]
+  /// long running operation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ImportEntityTypesMetadata : pb::IMessage<ImportEntityTypesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ImportEntityTypesMetadata> _parser = new pb::MessageParser<ImportEntityTypesMetadata>(() => new ImportEntityTypesMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ImportEntityTypesMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesMetadata(ImportEntityTypesMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ImportEntityTypesMetadata Clone() {
+      return new ImportEntityTypesMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ImportEntityTypesMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ImportEntityTypesMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ImportEntityTypesMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
   /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1114,7 +3218,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1444,7 +3548,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1672,7 +3776,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1922,7 +4026,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2219,7 +4323,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2524,7 +4628,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dialogflow.Cx.V3.EntityTypeReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

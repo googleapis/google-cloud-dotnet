@@ -96,6 +96,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Method_ServerStreamingDetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ServerStreamingDetectIntent",
+        __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> __Method_StreamingDetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -152,6 +160,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> DetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Processes a natural language query and returns structured, actionable data
+      /// as a result through server-side streaming. Server-side streaming allows
+      /// Dialogflow to send [partial
+      /// responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+      /// earlier in a single request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ServerStreamingDetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -323,6 +348,38 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> DetectIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DetectIntent, null, options, request);
+      }
+      /// <summary>
+      /// Processes a natural language query and returns structured, actionable data
+      /// as a result through server-side streaming. Server-side streaming allows
+      /// Dialogflow to send [partial
+      /// responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+      /// earlier in a single request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> ServerStreamingDetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ServerStreamingDetectIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Processes a natural language query and returns structured, actionable data
+      /// as a result through server-side streaming. Server-side streaming allows
+      /// Dialogflow to send [partial
+      /// responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+      /// earlier in a single request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> ServerStreamingDetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ServerStreamingDetectIntent, null, options, request);
       }
       /// <summary>
       /// Processes a natural language query in audio format in a streaming fashion
@@ -549,6 +606,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_DetectIntent, serviceImpl.DetectIntent)
+          .AddMethod(__Method_ServerStreamingDetectIntent, serviceImpl.ServerStreamingDetectIntent)
           .AddMethod(__Method_StreamingDetectIntent, serviceImpl.StreamingDetectIntent)
           .AddMethod(__Method_MatchIntent, serviceImpl.MatchIntent)
           .AddMethod(__Method_FulfillIntent, serviceImpl.FulfillIntent)
@@ -563,6 +621,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SessionsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DetectIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(serviceImpl.DetectIntent));
+      serviceBinder.AddMethod(__Method_ServerStreamingDetectIntent, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(serviceImpl.ServerStreamingDetectIntent));
       serviceBinder.AddMethod(__Method_StreamingDetectIntent, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse>(serviceImpl.StreamingDetectIntent));
       serviceBinder.AddMethod(__Method_MatchIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse>(serviceImpl.MatchIntent));
       serviceBinder.AddMethod(__Method_FulfillIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse>(serviceImpl.FulfillIntent));
