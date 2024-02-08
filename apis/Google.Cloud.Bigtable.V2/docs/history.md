@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0-beta01, released 2024-02-08
+
+### New features
+
+- Bigtable supports universe domain ([commit c3610f9](https://github.com/googleapis/google-cloud-dotnet/commit/c3610f97235f1582376e3a124b9531dc01a43a77))
+
 ## Version 3.9.0, released 2024-01-08
 
 ### New features
