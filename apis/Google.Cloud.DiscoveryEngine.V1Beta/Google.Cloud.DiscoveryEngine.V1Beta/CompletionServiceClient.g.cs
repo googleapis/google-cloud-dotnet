@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -46,6 +47,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CompleteQuerySettings = existing.CompleteQuerySettings;
+            ImportSuggestionDenyListEntriesSettings = existing.ImportSuggestionDenyListEntriesSettings;
+            ImportSuggestionDenyListEntriesOperationsSettings = existing.ImportSuggestionDenyListEntriesOperationsSettings.Clone();
+            PurgeSuggestionDenyListEntriesSettings = existing.PurgeSuggestionDenyListEntriesSettings;
+            PurgeSuggestionDenyListEntriesOperationsSettings = existing.PurgeSuggestionDenyListEntriesOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -69,6 +74,80 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CompleteQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompletionServiceClient.ImportSuggestionDenyListEntries</c> and
+        /// <c>CompletionServiceClient.ImportSuggestionDenyListEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportSuggestionDenyListEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CompletionServiceClient.ImportSuggestionDenyListEntries</c>
+        /// and <c>CompletionServiceClient.ImportSuggestionDenyListEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportSuggestionDenyListEntriesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompletionServiceClient.PurgeSuggestionDenyListEntries</c> and
+        /// <c>CompletionServiceClient.PurgeSuggestionDenyListEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PurgeSuggestionDenyListEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CompletionServiceClient.PurgeSuggestionDenyListEntries</c>
+        /// and <c>CompletionServiceClient.PurgeSuggestionDenyListEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PurgeSuggestionDenyListEntriesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -245,6 +324,126 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CompleteQueryResponse> CompleteQueryAsync(CompleteQueryRequest request, st::CancellationToken cancellationToken) =>
             CompleteQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata> ImportSuggestionDenyListEntries(ImportSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>> ImportSuggestionDenyListEntriesAsync(ImportSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>> ImportSuggestionDenyListEntriesAsync(ImportSuggestionDenyListEntriesRequest request, st::CancellationToken cancellationToken) =>
+            ImportSuggestionDenyListEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportSuggestionDenyListEntries</c>.</summary>
+        public virtual lro::OperationsClient ImportSuggestionDenyListEntriesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportSuggestionDenyListEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata> PollOnceImportSuggestionDenyListEntries(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportSuggestionDenyListEntriesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportSuggestionDenyListEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>> PollOnceImportSuggestionDenyListEntriesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportSuggestionDenyListEntriesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Permanently deletes all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata> PurgeSuggestionDenyListEntries(PurgeSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>> PurgeSuggestionDenyListEntriesAsync(PurgeSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>> PurgeSuggestionDenyListEntriesAsync(PurgeSuggestionDenyListEntriesRequest request, st::CancellationToken cancellationToken) =>
+            PurgeSuggestionDenyListEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PurgeSuggestionDenyListEntries</c>.</summary>
+        public virtual lro::OperationsClient PurgeSuggestionDenyListEntriesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeSuggestionDenyListEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata> PollOncePurgeSuggestionDenyListEntries(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeSuggestionDenyListEntriesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PurgeSuggestionDenyListEntries</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>> PollOncePurgeSuggestionDenyListEntriesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeSuggestionDenyListEntriesOperationsClient, callSettings);
     }
 
     /// <summary>CompletionService client wrapper implementation, for convenient use.</summary>
@@ -254,6 +453,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
     public sealed partial class CompletionServiceClientImpl : CompletionServiceClient
     {
         private readonly gaxgrpc::ApiCall<CompleteQueryRequest, CompleteQueryResponse> _callCompleteQuery;
+
+        private readonly gaxgrpc::ApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation> _callImportSuggestionDenyListEntries;
+
+        private readonly gaxgrpc::ApiCall<PurgeSuggestionDenyListEntriesRequest, lro::Operation> _callPurgeSuggestionDenyListEntries;
 
         /// <summary>
         /// Constructs a client wrapper for the CompletionService service, with the specified gRPC client and settings.
@@ -266,16 +469,28 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             GrpcClient = grpcClient;
             CompletionServiceSettings effectiveSettings = settings ?? CompletionServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ImportSuggestionDenyListEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportSuggestionDenyListEntriesOperationsSettings, logger);
+            PurgeSuggestionDenyListEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeSuggestionDenyListEntriesOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>("CompleteQuery", grpcClient.CompleteQueryAsync, grpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings).WithGoogleRequestParam("data_store", request => request.DataStore);
             Modify_ApiCall(ref _callCompleteQuery);
             Modify_CompleteQueryApiCall(ref _callCompleteQuery);
+            _callImportSuggestionDenyListEntries = clientHelper.BuildApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation>("ImportSuggestionDenyListEntries", grpcClient.ImportSuggestionDenyListEntriesAsync, grpcClient.ImportSuggestionDenyListEntries, effectiveSettings.ImportSuggestionDenyListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportSuggestionDenyListEntries);
+            Modify_ImportSuggestionDenyListEntriesApiCall(ref _callImportSuggestionDenyListEntries);
+            _callPurgeSuggestionDenyListEntries = clientHelper.BuildApiCall<PurgeSuggestionDenyListEntriesRequest, lro::Operation>("PurgeSuggestionDenyListEntries", grpcClient.PurgeSuggestionDenyListEntriesAsync, grpcClient.PurgeSuggestionDenyListEntries, effectiveSettings.PurgeSuggestionDenyListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPurgeSuggestionDenyListEntries);
+            Modify_PurgeSuggestionDenyListEntriesApiCall(ref _callPurgeSuggestionDenyListEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_CompleteQueryApiCall(ref gaxgrpc::ApiCall<CompleteQueryRequest, CompleteQueryResponse> call);
+
+        partial void Modify_ImportSuggestionDenyListEntriesApiCall(ref gaxgrpc::ApiCall<ImportSuggestionDenyListEntriesRequest, lro::Operation> call);
+
+        partial void Modify_PurgeSuggestionDenyListEntriesApiCall(ref gaxgrpc::ApiCall<PurgeSuggestionDenyListEntriesRequest, lro::Operation> call);
 
         partial void OnConstruction(CompletionService.CompletionServiceClient grpcClient, CompletionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -286,6 +501,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CompleteQueryRequest(ref CompleteQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportSuggestionDenyListEntriesRequest(ref ImportSuggestionDenyListEntriesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PurgeSuggestionDenyListEntriesRequest(ref PurgeSuggestionDenyListEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Completes the specified user input with keyword suggestions.
@@ -309,6 +528,82 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_CompleteQueryRequest(ref request, ref callSettings);
             return _callCompleteQuery.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportSuggestionDenyListEntries</c>.</summary>
+        public override lro::OperationsClient ImportSuggestionDenyListEntriesOperationsClient { get; }
+
+        /// <summary>
+        /// Imports all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata> ImportSuggestionDenyListEntries(ImportSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportSuggestionDenyListEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>(_callImportSuggestionDenyListEntries.Sync(request, callSettings), ImportSuggestionDenyListEntriesOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>> ImportSuggestionDenyListEntriesAsync(ImportSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportSuggestionDenyListEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportSuggestionDenyListEntriesResponse, ImportSuggestionDenyListEntriesMetadata>(await _callImportSuggestionDenyListEntries.Async(request, callSettings).ConfigureAwait(false), ImportSuggestionDenyListEntriesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PurgeSuggestionDenyListEntries</c>.</summary>
+        public override lro::OperationsClient PurgeSuggestionDenyListEntriesOperationsClient { get; }
+
+        /// <summary>
+        /// Permanently deletes all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata> PurgeSuggestionDenyListEntries(PurgeSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeSuggestionDenyListEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>(_callPurgeSuggestionDenyListEntries.Sync(request, callSettings), PurgeSuggestionDenyListEntriesOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes all
+        /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1beta.SuggestionDenyListEntry]
+        /// for a DataStore.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>> PurgeSuggestionDenyListEntriesAsync(PurgeSuggestionDenyListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PurgeSuggestionDenyListEntriesRequest(ref request, ref callSettings);
+            return new lro::Operation<PurgeSuggestionDenyListEntriesResponse, PurgeSuggestionDenyListEntriesMetadata>(await _callPurgeSuggestionDenyListEntries.Async(request, callSettings).ConfigureAwait(false), PurgeSuggestionDenyListEntriesOperationsClient);
+        }
+    }
+
+    public static partial class CompletionService
+    {
+        public partial class CompletionServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

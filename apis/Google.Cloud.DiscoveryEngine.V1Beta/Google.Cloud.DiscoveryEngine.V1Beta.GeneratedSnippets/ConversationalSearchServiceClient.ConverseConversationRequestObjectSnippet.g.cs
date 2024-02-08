@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 SafeSearch = false,
                 UserLabels = { { "", "" }, },
                 SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
+                Filter = "",
             };
             // Make the request
             ConverseConversationResponse response = conversationalSearchServiceClient.ConverseConversation(request);
