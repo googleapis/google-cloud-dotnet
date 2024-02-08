@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.7.0, released 2024-02-08
+
+### New features
+
+- Add `run_as_non_root` field to allow user's runnable be executed as non root ([commit 7529915](https://github.com/googleapis/google-cloud-dotnet/commit/7529915e746cb6831a93ae0b6ca7a2a929dab233))
+- Add `tags` field in Job's AllocationPolicy field in v1 ([commit 7529915](https://github.com/googleapis/google-cloud-dotnet/commit/7529915e746cb6831a93ae0b6ca7a2a929dab233))
+- Add Batch Image Streaming support for v1 ([commit 7529915](https://github.com/googleapis/google-cloud-dotnet/commit/7529915e746cb6831a93ae0b6ca7a2a929dab233))
+
+### Documentation improvements
+
+- Polish the field descriptions for enableImageStreaming and CloudLoggingOptions ([commit 7529915](https://github.com/googleapis/google-cloud-dotnet/commit/7529915e746cb6831a93ae0b6ca7a2a929dab233))
+
 ## Version 2.6.0, released 2023-12-05
 
 ### New features
