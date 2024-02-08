@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Dialogflow.Cx.V3;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -640,6 +641,150 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEntityTypes</summary>
+        public void ExportEntityTypesRequestObject()
+        {
+            // Snippet: ExportEntityTypes(ExportEntityTypesRequest, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            ExportEntityTypesRequest request = new ExportEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                EntityTypes = { "", },
+                EntityTypesUri = "",
+                DataFormat = ExportEntityTypesRequest.Types.DataFormat.Unspecified,
+                LanguageCode = "",
+            };
+            // Make the request
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> response = entityTypesClient.ExportEntityTypes(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEntityTypesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> retrievedResponse = entityTypesClient.PollOnceExportEntityTypes(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEntityTypesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEntityTypesAsync</summary>
+        public async Task ExportEntityTypesRequestObjectAsync()
+        {
+            // Snippet: ExportEntityTypesAsync(ExportEntityTypesRequest, CallSettings)
+            // Additional: ExportEntityTypesAsync(ExportEntityTypesRequest, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportEntityTypesRequest request = new ExportEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                EntityTypes = { "", },
+                EntityTypesUri = "",
+                DataFormat = ExportEntityTypesRequest.Types.DataFormat.Unspecified,
+                LanguageCode = "",
+            };
+            // Make the request
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> response = await entityTypesClient.ExportEntityTypesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEntityTypesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> retrievedResponse = await entityTypesClient.PollOnceExportEntityTypesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEntityTypesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportEntityTypes</summary>
+        public void ImportEntityTypesRequestObject()
+        {
+            // Snippet: ImportEntityTypes(ImportEntityTypesRequest, CallSettings)
+            // Create client
+            EntityTypesClient entityTypesClient = EntityTypesClient.Create();
+            // Initialize request argument(s)
+            ImportEntityTypesRequest request = new ImportEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                EntityTypesUri = "",
+                MergeOption = ImportEntityTypesRequest.Types.MergeOption.Unspecified,
+                TargetEntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationAgentEntityType("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENTITY_TYPE]"),
+            };
+            // Make the request
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> response = entityTypesClient.ImportEntityTypes(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportEntityTypesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> retrievedResponse = entityTypesClient.PollOnceImportEntityTypes(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportEntityTypesResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportEntityTypesAsync</summary>
+        public async Task ImportEntityTypesRequestObjectAsync()
+        {
+            // Snippet: ImportEntityTypesAsync(ImportEntityTypesRequest, CallSettings)
+            // Additional: ImportEntityTypesAsync(ImportEntityTypesRequest, CancellationToken)
+            // Create client
+            EntityTypesClient entityTypesClient = await EntityTypesClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportEntityTypesRequest request = new ImportEntityTypesRequest
+            {
+                ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                EntityTypesUri = "",
+                MergeOption = ImportEntityTypesRequest.Types.MergeOption.Unspecified,
+                TargetEntityTypeAsEntityTypeName = EntityTypeName.FromProjectLocationAgentEntityType("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENTITY_TYPE]"),
+            };
+            // Make the request
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> response = await entityTypesClient.ImportEntityTypesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportEntityTypesResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> retrievedResponse = await entityTypesClient.PollOnceImportEntityTypesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportEntityTypesResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

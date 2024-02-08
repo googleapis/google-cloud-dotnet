@@ -139,10 +139,22 @@
                 "DeleteEntityTypeAsync"
               ]
             },
+            "ExportEntityTypes": {
+              "methods": [
+                "ExportEntityTypes",
+                "ExportEntityTypesAsync"
+              ]
+            },
             "GetEntityType": {
               "methods": [
                 "GetEntityType",
                 "GetEntityTypeAsync"
+              ]
+            },
+            "ImportEntityTypes": {
+              "methods": [
+                "ImportEntityTypes",
+                "ImportEntityTypesAsync"
               ]
             },
             "ListEntityTypes": {
@@ -572,6 +584,12 @@
               "methods": [
                 "MatchIntent",
                 "MatchIntentAsync"
+              ]
+            },
+            "ServerStreamingDetectIntent": {
+              "methods": [
+                "ServerStreamingDetectIntent",
+                "ServerStreamingDetectIntentAsync"
               ]
             },
             "StreamingDetectIntent": {

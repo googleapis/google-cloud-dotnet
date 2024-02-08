@@ -303,6 +303,46 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class ExportEntityTypesRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportEntityTypesRequest
+    {
+        /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AgentName ParentAsAgentName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AgentName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EntityTypeName"/>-typed view over the <see cref="TargetEntityType"/> resource name property.
+        /// </summary>
+        public EntityTypeName TargetEntityTypeAsEntityTypeName
+        {
+            get => string.IsNullOrEmpty(TargetEntityType) ? null : EntityTypeName.Parse(TargetEntityType, allowUnparsed: true);
+            set => TargetEntityType = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportEntityTypesResponse
+    {
+        /// <summary>
+        /// <see cref="EntityTypeName"/>-typed view over the <see cref="EntityTypes"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EntityTypeName> EntityTypesAsEntityTypeNames
+        {
+            get => new gax::ResourceNameList<EntityTypeName>(EntityTypes, s => string.IsNullOrEmpty(s) ? null : EntityTypeName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class ListEntityTypesRequest
     {
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>

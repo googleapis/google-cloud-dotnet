@@ -63,6 +63,35 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ServerStreamingDetectIntent</summary>
+        public async Task ServerStreamingDetectIntentRequestObject()
+        {
+            // Snippet: ServerStreamingDetectIntent(DetectIntentRequest, CallSettings)
+            // Create client
+            SessionsClient sessionsClient = SessionsClient.Create();
+            // Initialize request argument(s)
+            DetectIntentRequest request = new DetectIntentRequest
+            {
+                SessionAsSessionName = SessionName.FromProjectLocationAgentSession("[PROJECT]", "[LOCATION]", "[AGENT]", "[SESSION]"),
+                QueryParams = new QueryParameters(),
+                QueryInput = new QueryInput(),
+                OutputAudioConfig = new OutputAudioConfig(),
+            };
+            // Make the request, returning a streaming response
+            using SessionsClient.ServerStreamingDetectIntentStream response = sessionsClient.ServerStreamingDetectIntent(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<DetectIntentResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                DetectIntentResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for StreamingDetectIntent</summary>
         public async Task StreamingDetectIntent()
         {

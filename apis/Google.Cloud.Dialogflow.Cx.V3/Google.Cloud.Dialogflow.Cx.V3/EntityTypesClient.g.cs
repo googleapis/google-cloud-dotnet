@@ -18,6 +18,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -52,6 +53,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateEntityTypeSettings = existing.UpdateEntityTypeSettings;
             DeleteEntityTypeSettings = existing.DeleteEntityTypeSettings;
             ListEntityTypesSettings = existing.ListEntityTypesSettings;
+            ExportEntityTypesSettings = existing.ExportEntityTypesSettings;
+            ExportEntityTypesOperationsSettings = existing.ExportEntityTypesOperationsSettings.Clone();
+            ImportEntityTypesSettings = existing.ImportEntityTypesSettings;
+            ImportEntityTypesOperationsSettings = existing.ImportEntityTypesOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -147,6 +152,78 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListEntityTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EntityTypesClient.ExportEntityTypes</c> and <c>EntityTypesClient.ExportEntityTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportEntityTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EntityTypesClient.ExportEntityTypes</c> and
+        /// <c>EntityTypesClient.ExportEntityTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportEntityTypesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EntityTypesClient.ImportEntityTypes</c> and <c>EntityTypesClient.ImportEntityTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportEntityTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EntityTypesClient.ImportEntityTypes</c> and
+        /// <c>EntityTypesClient.ImportEntityTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportEntityTypesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -955,6 +1032,114 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Exports the selected entity types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> ExportEntityTypes(ExportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the selected entity types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>> ExportEntityTypesAsync(ExportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports the selected entity types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>> ExportEntityTypesAsync(ExportEntityTypesRequest request, st::CancellationToken cancellationToken) =>
+            ExportEntityTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportEntityTypes</c>.</summary>
+        public virtual lro::OperationsClient ExportEntityTypesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportEntityTypes</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> PollOnceExportEntityTypes(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportEntityTypesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportEntityTypes</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>> PollOnceExportEntityTypesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportEntityTypesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports the specified entitytypes into the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> ImportEntityTypes(ImportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified entitytypes into the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>> ImportEntityTypesAsync(ImportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports the specified entitytypes into the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>> ImportEntityTypesAsync(ImportEntityTypesRequest request, st::CancellationToken cancellationToken) =>
+            ImportEntityTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportEntityTypes</c>.</summary>
+        public virtual lro::OperationsClient ImportEntityTypesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportEntityTypes</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> PollOnceImportEntityTypes(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntityTypesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportEntityTypes</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>> PollOnceImportEntityTypesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntityTypesOperationsClient, callSettings);
     }
 
     /// <summary>EntityTypes client wrapper implementation, for convenient use.</summary>
@@ -973,6 +1158,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         private readonly gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> _callListEntityTypes;
 
+        private readonly gaxgrpc::ApiCall<ExportEntityTypesRequest, lro::Operation> _callExportEntityTypes;
+
+        private readonly gaxgrpc::ApiCall<ImportEntityTypesRequest, lro::Operation> _callImportEntityTypes;
+
         /// <summary>
         /// Constructs a client wrapper for the EntityTypes service, with the specified gRPC client and settings.
         /// </summary>
@@ -984,6 +1173,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GrpcClient = grpcClient;
             EntityTypesSettings effectiveSettings = settings ?? EntityTypesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            ExportEntityTypesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportEntityTypesOperationsSettings, logger);
+            ImportEntityTypesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntityTypesOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>("GetEntityType", grpcClient.GetEntityTypeAsync, grpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetEntityType);
@@ -1000,6 +1191,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>("ListEntityTypes", grpcClient.ListEntityTypesAsync, grpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEntityTypes);
             Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
+            _callExportEntityTypes = clientHelper.BuildApiCall<ExportEntityTypesRequest, lro::Operation>("ExportEntityTypes", grpcClient.ExportEntityTypesAsync, grpcClient.ExportEntityTypes, effectiveSettings.ExportEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callExportEntityTypes);
+            Modify_ExportEntityTypesApiCall(ref _callExportEntityTypes);
+            _callImportEntityTypes = clientHelper.BuildApiCall<ImportEntityTypesRequest, lro::Operation>("ImportEntityTypes", grpcClient.ImportEntityTypesAsync, grpcClient.ImportEntityTypes, effectiveSettings.ImportEntityTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportEntityTypes);
+            Modify_ImportEntityTypesApiCall(ref _callImportEntityTypes);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1014,6 +1211,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_DeleteEntityTypeApiCall(ref gaxgrpc::ApiCall<DeleteEntityTypeRequest, wkt::Empty> call);
 
         partial void Modify_ListEntityTypesApiCall(ref gaxgrpc::ApiCall<ListEntityTypesRequest, ListEntityTypesResponse> call);
+
+        partial void Modify_ExportEntityTypesApiCall(ref gaxgrpc::ApiCall<ExportEntityTypesRequest, lro::Operation> call);
+
+        partial void Modify_ImportEntityTypesApiCall(ref gaxgrpc::ApiCall<ImportEntityTypesRequest, lro::Operation> call);
 
         partial void OnConstruction(EntityTypes.EntityTypesClient grpcClient, EntityTypesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1032,6 +1233,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_DeleteEntityTypeRequest(ref DeleteEntityTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListEntityTypesRequest(ref ListEntityTypesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportEntityTypesRequest(ref ExportEntityTypesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportEntityTypesRequest(ref ImportEntityTypesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves the specified entity type.
@@ -1176,6 +1381,60 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             Modify_ListEntityTypesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEntityTypesRequest, ListEntityTypesResponse, EntityType>(_callListEntityTypes, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>ExportEntityTypes</c>.</summary>
+        public override lro::OperationsClient ExportEntityTypesOperationsClient { get; }
+
+        /// <summary>
+        /// Exports the selected entity types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata> ExportEntityTypes(ExportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportEntityTypesRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>(_callExportEntityTypes.Sync(request, callSettings), ExportEntityTypesOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports the selected entity types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>> ExportEntityTypesAsync(ExportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportEntityTypesRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportEntityTypesResponse, ExportEntityTypesMetadata>(await _callExportEntityTypes.Async(request, callSettings).ConfigureAwait(false), ExportEntityTypesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportEntityTypes</c>.</summary>
+        public override lro::OperationsClient ImportEntityTypesOperationsClient { get; }
+
+        /// <summary>
+        /// Imports the specified entitytypes into the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata> ImportEntityTypes(ImportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportEntityTypesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>(_callImportEntityTypes.Sync(request, callSettings), ImportEntityTypesOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports the specified entitytypes into the agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>> ImportEntityTypesAsync(ImportEntityTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportEntityTypesRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportEntityTypesResponse, ImportEntityTypesMetadata>(await _callImportEntityTypes.Async(request, callSettings).ConfigureAwait(false), ImportEntityTypesOperationsClient);
+        }
     }
 
     public partial class ListEntityTypesRequest : gaxgrpc::IPageRequest
@@ -1188,6 +1447,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public scg::IEnumerator<EntityType> GetEnumerator() => EntityTypes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class EntityTypes
+    {
+        public partial class EntityTypesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class EntityTypes

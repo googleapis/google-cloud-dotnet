@@ -36,36 +36,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "b2dzGAEgAygLMiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuQ2hh",
             "bmdlbG9nEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJQChNHZXRDaGFuZ2Vs",
             "b2dSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZGlhbG9nZmxvdy5n",
-            "b29nbGVhcGlzLmNvbS9DaGFuZ2Vsb2cinQIKCUNoYW5nZWxvZxIMCgRuYW1l",
+            "b29nbGVhcGlzLmNvbS9DaGFuZ2Vsb2citAIKCUNoYW5nZWxvZxIMCgRuYW1l",
             "GAEgASgJEhIKCnVzZXJfZW1haWwYAiABKAkSFAoMZGlzcGxheV9uYW1lGAcg",
             "ASgJEg4KBmFjdGlvbhgLIAEoCRIMCgR0eXBlGAggASgJEhAKCHJlc291cmNl",
             "GAMgASgJEi8KC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcDp36kF0CiNkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0No",
-            "YW5nZWxvZxJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2FnZW50cy97YWdlbnR9L2NoYW5nZWxvZ3Mve2NoYW5nZWxvZ30yhwQK",
-            "CkNoYW5nZWxvZ3MSxwEKDkxpc3RDaGFuZ2Vsb2dzEjQuZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cuY3gudjMuTGlzdENoYW5nZWxvZ3NSZXF1ZXN0GjUuZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuTGlzdENoYW5nZWxvZ3NSZXNw",
-            "b25zZSJI2kEGcGFyZW50gtPkkwI5EjcvdjMve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2FnZW50cy8qfS9jaGFuZ2Vsb2dzErQBCgxHZXRDaGFu",
-            "Z2Vsb2cSMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5HZXRDaGFu",
-            "Z2Vsb2dSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
-            "Q2hhbmdlbG9nIkbaQQRuYW1lgtPkkwI5EjcvdjMve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hZ2VudHMvKi9jaGFuZ2Vsb2dzLyp9GnjKQRlkaWFs",
-            "b2dmbG93Lmdvb2dsZWFwaXMuY29t0kFZaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2RpYWxvZ2Zsb3dCtAEKIWNvbS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52M0IOQ2hhbmdlbG9nUHJvdG9QAVoxY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaIC",
-            "AkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6",
-            "OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3RvMw=="));
+            "LlRpbWVzdGFtcBIVCg1sYW5ndWFnZV9jb2RlGA4gASgJOnfqQXQKI2RpYWxv",
+            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ2hhbmdlbG9nEk1wcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnRzL3thZ2VudH0vY2hh",
+            "bmdlbG9ncy97Y2hhbmdlbG9nfTKHBAoKQ2hhbmdlbG9ncxLHAQoOTGlzdENo",
+            "YW5nZWxvZ3MSNC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5MaXN0",
+            "Q2hhbmdlbG9nc1JlcXVlc3QaNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5j",
+            "eC52My5MaXN0Q2hhbmdlbG9nc1Jlc3BvbnNlIkjaQQZwYXJlbnSC0+STAjkS",
+            "Ny92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnRzLyp9",
+            "L2NoYW5nZWxvZ3MStAEKDEdldENoYW5nZWxvZxIyLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LmN4LnYzLkdldENoYW5nZWxvZ1JlcXVlc3QaKC5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5DaGFuZ2Vsb2ciRtpBBG5hbWWC0+ST",
+            "AjkSNy92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50cy8q",
+            "L2NoYW5nZWxvZ3MvKn0aeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb23S",
+            "QVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlhbG9nZmxv",
+            "d0K0AQohY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzQg5DaGFu",
+            "Z2Vsb2dQcm90b1ABWjFjbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cv",
+            "Y3gvYXBpdjMvY3hwYjtjeHBi+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlh",
+            "bG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNY",
+            "OjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListChangelogsRequest), global::Google.Cloud.Dialogflow.Cx.V3.ListChangelogsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ListChangelogsResponse), global::Google.Cloud.Dialogflow.Cx.V3.ListChangelogsResponse.Parser, new[]{ "Changelogs", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GetChangelogRequest), global::Google.Cloud.Dialogflow.Cx.V3.GetChangelogRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Changelog), global::Google.Cloud.Dialogflow.Cx.V3.Changelog.Parser, new[]{ "Name", "UserEmail", "DisplayName", "Action", "Type", "Resource", "CreateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.Changelog), global::Google.Cloud.Dialogflow.Cx.V3.Changelog.Parser, new[]{ "Name", "UserEmail", "DisplayName", "Action", "Type", "Resource", "CreateTime", "LanguageCode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -883,6 +884,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       type_ = other.type_;
       resource_ = other.resource_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      languageCode_ = other.languageCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -999,6 +1001,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 14;
+    private string languageCode_ = "";
+    /// <summary>
+    /// The affected language code of the change.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1021,6 +1038,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Type != other.Type) return false;
       if (Resource != other.Resource) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1035,6 +1053,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Resource.Length != 0) hash ^= Resource.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1081,6 +1100,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(90);
         output.WriteString(Action);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(LanguageCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1119,6 +1142,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(90);
         output.WriteString(Action);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(LanguageCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1149,6 +1176,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1185,6 +1215,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1232,6 +1265,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Action = input.ReadString();
             break;
           }
+          case 114: {
+            LanguageCode = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1276,6 +1313,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 90: {
             Action = input.ReadString();
+            break;
+          }
+          case 114: {
+            LanguageCode = input.ReadString();
             break;
           }
         }

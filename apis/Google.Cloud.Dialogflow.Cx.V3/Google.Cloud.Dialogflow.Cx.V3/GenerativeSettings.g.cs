@@ -27,7 +27,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "Cjdnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9nZW5lcmF0aXZlX3Nl",
             "dHRpbmdzLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxozZ29vZ2xlL2Nsb3VkL2RpYWxv",
-            "Z2Zsb3cvY3gvdjMvc2FmZXR5X3NldHRpbmdzLnByb3RvItYGChJHZW5lcmF0",
+            "Z2Zsb3cvY3gvdjMvc2FmZXR5X3NldHRpbmdzLnByb3RvIvsGChJHZW5lcmF0",
             "aXZlU2V0dGluZ3MSDAoEbmFtZRgFIAEoCRJdChFmYWxsYmFja19zZXR0aW5n",
             "cxgBIAEoCzJCLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkdlbmVy",
             "YXRpdmVTZXR0aW5ncy5GYWxsYmFja1NldHRpbmdzElEKGmdlbmVyYXRpdmVf",
@@ -40,23 +40,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "dGVzGAQgAygLMlEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuR2Vu",
             "ZXJhdGl2ZVNldHRpbmdzLkZhbGxiYWNrU2V0dGluZ3MuUHJvbXB0VGVtcGxh",
             "dGUaSwoOUHJvbXB0VGVtcGxhdGUSFAoMZGlzcGxheV9uYW1lGAEgASgJEhMK",
-            "C3Byb21wdF90ZXh0GAIgASgJEg4KBmZyb3plbhgDIAEoCBqIAQoaS25vd2xl",
+            "C3Byb21wdF90ZXh0GAIgASgJEg4KBmZyb3plbhgDIAEoCBqtAQoaS25vd2xl",
             "ZGdlQ29ubmVjdG9yU2V0dGluZ3MSEAoIYnVzaW5lc3MYASABKAkSDQoFYWdl",
             "bnQYAiABKAkSFgoOYWdlbnRfaWRlbnRpdHkYAyABKAkSHAoUYnVzaW5lc3Nf",
-            "ZGVzY3JpcHRpb24YBCABKAkSEwoLYWdlbnRfc2NvcGUYBSABKAk6gQHqQX4K",
-            "MWRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnRHZW5lcmF0aXZlU2V0",
-            "dGluZ3MSSXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9hZ2VudHMve2FnZW50fS9nZW5lcmF0aXZlU2V0dGluZ3NCvQEKIWNvbS5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IXR2VuZXJhdGl2ZVNldHRp",
-            "bmdzUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4",
-            "L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxv",
-            "Z2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6",
-            "VjNiBnByb3RvMw=="));
+            "ZGVzY3JpcHRpb24YBCABKAkSEwoLYWdlbnRfc2NvcGUYBSABKAkSIwobZGlz",
+            "YWJsZV9kYXRhX3N0b3JlX2ZhbGxiYWNrGAggASgIOoEB6kF+CjFkaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL0FnZW50R2VuZXJhdGl2ZVNldHRpbmdzEklw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYWdlbnRz",
+            "L3thZ2VudH0vZ2VuZXJhdGl2ZVNldHRpbmdzQr0BCiFjb20uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cuY3gudjNCF0dlbmVyYXRpdmVTZXR0aW5nc1Byb3Rv",
+            "UAFaMWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9j",
+            "eHBiO2N4cGL4AQGiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4",
+            "LlYz6gIhR29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SafetySettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings), global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Parser, new[]{ "Name", "FallbackSettings", "GenerativeSafetySettings", "KnowledgeConnectorSettings", "LanguageCode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.FallbackSettings), global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.FallbackSettings.Parser, new[]{ "SelectedPrompt", "PromptTemplates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.FallbackSettings.Types.PromptTemplate), global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.FallbackSettings.Types.PromptTemplate.Parser, new[]{ "DisplayName", "PromptText", "Frozen" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.KnowledgeConnectorSettings), global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.KnowledgeConnectorSettings.Parser, new[]{ "Business", "Agent", "AgentIdentity", "BusinessDescription", "AgentScope" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.KnowledgeConnectorSettings), global::Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings.Types.KnowledgeConnectorSettings.Parser, new[]{ "Business", "Agent", "AgentIdentity", "BusinessDescription", "AgentScope", "DisableDataStoreFallback" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1009,6 +1010,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           agentIdentity_ = other.agentIdentity_;
           businessDescription_ = other.businessDescription_;
           agentScope_ = other.agentScope_;
+          disableDataStoreFallback_ = other.disableDataStoreFallback_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1097,6 +1099,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
         }
 
+        /// <summary>Field number for the "disable_data_store_fallback" field.</summary>
+        public const int DisableDataStoreFallbackFieldNumber = 8;
+        private bool disableDataStoreFallback_;
+        /// <summary>
+        /// Whether to disable fallback to Data Store search results (in case the LLM
+        /// couldn't pick a proper answer). Per default the feature is enabled.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DisableDataStoreFallback {
+          get { return disableDataStoreFallback_; }
+          set {
+            disableDataStoreFallback_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1117,6 +1135,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           if (AgentIdentity != other.AgentIdentity) return false;
           if (BusinessDescription != other.BusinessDescription) return false;
           if (AgentScope != other.AgentScope) return false;
+          if (DisableDataStoreFallback != other.DisableDataStoreFallback) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1129,6 +1148,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           if (AgentIdentity.Length != 0) hash ^= AgentIdentity.GetHashCode();
           if (BusinessDescription.Length != 0) hash ^= BusinessDescription.GetHashCode();
           if (AgentScope.Length != 0) hash ^= AgentScope.GetHashCode();
+          if (DisableDataStoreFallback != false) hash ^= DisableDataStoreFallback.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1167,6 +1187,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             output.WriteRawTag(42);
             output.WriteString(AgentScope);
           }
+          if (DisableDataStoreFallback != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(DisableDataStoreFallback);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1197,6 +1221,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             output.WriteRawTag(42);
             output.WriteString(AgentScope);
           }
+          if (DisableDataStoreFallback != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(DisableDataStoreFallback);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1221,6 +1249,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           if (AgentScope.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentScope);
+          }
+          if (DisableDataStoreFallback != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1248,6 +1279,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           if (other.AgentScope.Length != 0) {
             AgentScope = other.AgentScope;
+          }
+          if (other.DisableDataStoreFallback != false) {
+            DisableDataStoreFallback = other.DisableDataStoreFallback;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1284,6 +1318,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 AgentScope = input.ReadString();
                 break;
               }
+              case 64: {
+                DisableDataStoreFallback = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1317,6 +1355,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
               }
               case 42: {
                 AgentScope = input.ReadString();
+                break;
+              }
+              case 64: {
+                DisableDataStoreFallback = input.ReadBool();
                 break;
               }
             }

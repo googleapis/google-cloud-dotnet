@@ -46,6 +46,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             DetectIntentSettings = existing.DetectIntentSettings;
+            ServerStreamingDetectIntentSettings = existing.ServerStreamingDetectIntentSettings;
             StreamingDetectIntentSettings = existing.StreamingDetectIntentSettings;
             StreamingDetectIntentStreamingSettings = existing.StreamingDetectIntentStreamingSettings;
             MatchIntentSettings = existing.MatchIntentSettings;
@@ -74,6 +75,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DetectIntentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(220000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SessionsClient.ServerStreamingDetectIntent</c> and <c>SessionsClient.ServerStreamingDetectIntentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 220 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ServerStreamingDetectIntentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(220000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -350,6 +364,27 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DetectIntentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Server streaming methods for
+        /// <see cref="ServerStreamingDetectIntent(DetectIntentRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class ServerStreamingDetectIntentStream : gaxgrpc::ServerStreamingBase<DetectIntentResponse>
+        {
+        }
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result through server-side streaming. Server-side streaming allows
+        /// Dialogflow to send [partial
+        /// responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+        /// earlier in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ServerStreamingDetectIntentStream ServerStreamingDetectIntent(DetectIntentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Bidirectional streaming methods for
         /// <see cref="StreamingDetectIntent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
         /// </summary>
@@ -489,6 +524,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
     {
         private readonly gaxgrpc::ApiCall<DetectIntentRequest, DetectIntentResponse> _callDetectIntent;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<DetectIntentRequest, DetectIntentResponse> _callServerStreamingDetectIntent;
+
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse> _callStreamingDetectIntent;
 
         private readonly gaxgrpc::ApiCall<MatchIntentRequest, MatchIntentResponse> _callMatchIntent;
@@ -512,6 +549,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>("DetectIntent", grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callDetectIntent);
             Modify_DetectIntentApiCall(ref _callDetectIntent);
+            _callServerStreamingDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>("ServerStreamingDetectIntent", grpcClient.ServerStreamingDetectIntent, effectiveSettings.ServerStreamingDetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
+            Modify_ApiCall(ref _callServerStreamingDetectIntent);
+            Modify_ServerStreamingDetectIntentApiCall(ref _callServerStreamingDetectIntent);
             _callStreamingDetectIntent = clientHelper.BuildApiCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse>("StreamingDetectIntent", grpcClient.StreamingDetectIntent, effectiveSettings.StreamingDetectIntentSettings, effectiveSettings.StreamingDetectIntentStreamingSettings);
             Modify_ApiCall(ref _callStreamingDetectIntent);
             Modify_StreamingDetectIntentApiCall(ref _callStreamingDetectIntent);
@@ -531,7 +571,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_DetectIntentApiCall(ref gaxgrpc::ApiCall<DetectIntentRequest, DetectIntentResponse> call);
+
+        partial void Modify_ServerStreamingDetectIntentApiCall(ref gaxgrpc::ApiServerStreamingCall<DetectIntentRequest, DetectIntentResponse> call);
 
         partial void Modify_StreamingDetectIntentApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<StreamingDetectIntentRequest, StreamingDetectIntentResponse> call);
 
@@ -597,6 +641,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_DetectIntentRequest(ref request, ref callSettings);
             return _callDetectIntent.Async(request, callSettings);
+        }
+
+        internal sealed partial class ServerStreamingDetectIntentStreamImpl : ServerStreamingDetectIntentStream
+        {
+            /// <summary>Construct the server streaming method for <c>ServerStreamingDetectIntent</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public ServerStreamingDetectIntentStreamImpl(grpccore::AsyncServerStreamingCall<DetectIntentResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<DetectIntentResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result through server-side streaming. Server-side streaming allows
+        /// Dialogflow to send [partial
+        /// responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
+        /// earlier in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SessionsClient.ServerStreamingDetectIntentStream ServerStreamingDetectIntent(DetectIntentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DetectIntentRequest(ref request, ref callSettings);
+            return new ServerStreamingDetectIntentStreamImpl(_callServerStreamingDetectIntent.Call(request, callSettings));
         }
 
         internal sealed partial class StreamingDetectIntentStreamImpl : StreamingDetectIntentStream
