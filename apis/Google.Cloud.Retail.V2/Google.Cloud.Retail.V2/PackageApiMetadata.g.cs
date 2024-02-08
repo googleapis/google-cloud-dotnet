@@ -47,12 +47,14 @@ namespace Google.Cloud.Retail.V2
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return gcl::LocationsReflection.Descriptor;
+            yield return AnalyticsServiceReflection.Descriptor;
             yield return CatalogReflection.Descriptor;
             yield return CatalogServiceReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return CompletionServiceReflection.Descriptor;
             yield return ControlReflection.Descriptor;
             yield return ControlServiceReflection.Descriptor;
+            yield return ExportConfigReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return ModelReflection.Descriptor;
             yield return ModelServiceReflection.Descriptor;

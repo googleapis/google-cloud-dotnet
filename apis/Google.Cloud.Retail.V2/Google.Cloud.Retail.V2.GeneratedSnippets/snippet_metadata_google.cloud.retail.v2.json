@@ -11,6 +11,103 @@
   },
   "snippets": [
     {
+      "regionTag": "retail_v2_generated_AnalyticsService_ExportAnalyticsMetrics_sync",
+      "title": "ExportAnalyticsMetricsRequestObject",
+      "description": "Snippet for ExportAnalyticsMetrics",
+      "file": "AnalyticsServiceClient.ExportAnalyticsMetricsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportAnalyticsMetrics",
+        "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient.ExportAnalyticsMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ExportAnalyticsMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.ExportAnalyticsMetricsResponse, Google.Cloud.Retail.V2.ExportMetadata>",
+        "client": {
+          "shortName": "AnalyticsServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient"
+        },
+        "method": {
+          "shortName": "ExportAnalyticsMetrics",
+          "fullName": "google.cloud.retail.v2.AnalyticsService.ExportAnalyticsMetrics",
+          "service": {
+            "shortName": "AnalyticsService",
+            "fullName": "google.cloud.retail.v2.AnalyticsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_AnalyticsService_ExportAnalyticsMetrics_async",
+      "title": "ExportAnalyticsMetricsRequestObjectAsync",
+      "description": "Snippet for ExportAnalyticsMetricsAsync",
+      "file": "AnalyticsServiceClient.ExportAnalyticsMetricsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportAnalyticsMetricsAsync",
+        "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient.ExportAnalyticsMetricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ExportAnalyticsMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.ExportAnalyticsMetricsResponse, Google.Cloud.Retail.V2.ExportMetadata>>",
+        "client": {
+          "shortName": "AnalyticsServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient"
+        },
+        "method": {
+          "shortName": "ExportAnalyticsMetrics",
+          "fullName": "google.cloud.retail.v2.AnalyticsService.ExportAnalyticsMetrics",
+          "service": {
+            "shortName": "AnalyticsService",
+            "fullName": "google.cloud.retail.v2.AnalyticsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "retail_v2_generated_CatalogService_ListCatalogs_sync",
       "title": "ListCatalogsRequestObject",
       "description": "Snippet for ListCatalogs",
