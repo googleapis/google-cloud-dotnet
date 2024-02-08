@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.21.0, released 2024-02-08
+
+### New features
+
+- Added configuration for the StatefulHA addon to the AddonsConfig ([commit 8372d78](https://github.com/googleapis/google-cloud-dotnet/commit/8372d78ce1752529bcb1e98a6a9f801f20f18929))
+- Add fields desired_in_transit_encryption_config and in_transit_encryption_config ([commit 3995d17](https://github.com/googleapis/google-cloud-dotnet/commit/3995d1733e2d50c0a72826988b3f102e8b9c41ba))
+
+### Documentation improvements
+
+- Remove Not GA comments for GetOpenIDConfig and GetJSONWebKeys in v1alpha1/v1beta1/v1 ([commit 3995d17](https://github.com/googleapis/google-cloud-dotnet/commit/3995d1733e2d50c0a72826988b3f102e8b9c41ba))
+
 ## Version 3.20.0, released 2023-12-04
 
 ### New features
