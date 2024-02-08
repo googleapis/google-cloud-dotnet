@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.22.0, released 2024-02-08
+
+### New features
+
+- Add SearchNearestEntities rpc to FeatureOnlineStoreService in aiplatform v1 ([commit 2572a76](https://github.com/googleapis/google-cloud-dotnet/commit/2572a7605aaf4d4270ef12d900e4580c6ad08ff8))
+- Add generateContent Unary API for aiplatform_v1 ([commit d0ece95](https://github.com/googleapis/google-cloud-dotnet/commit/d0ece9564685912690966b80fb05b533ca2ae3b8))
+
+### Documentation improvements
+
+- Update comment for DirectPredict and DirectRawPredict ([commit d0ece95](https://github.com/googleapis/google-cloud-dotnet/commit/d0ece9564685912690966b80fb05b533ca2ae3b8))
+
 ## Version 2.21.0, released 2024-01-31
 
 ### New features
