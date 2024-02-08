@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.12.0, released 2024-02-08
+
+### New features
+
+- Add Conversation QualityMetadata ([commit 2d19ea5](https://github.com/googleapis/google-cloud-dotnet/commit/2d19ea59d50517ee78226de36995e13661f7c037))
+
+### Documentation improvements
+
+- Clarify usage of agent and customer channel fields in IngestConversationsRequest ([commit 2d19ea5](https://github.com/googleapis/google-cloud-dotnet/commit/2d19ea59d50517ee78226de36995e13661f7c037))
+- Update IngestConversations and BulkAnalyzeConversations comments ([commit 891d0b4](https://github.com/googleapis/google-cloud-dotnet/commit/891d0b4a222fd1de35dbc8e13ec4f89bc1e57d7d))
+
 ## Version 2.11.0, released 2023-11-07
 
 ### New features
