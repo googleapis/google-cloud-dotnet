@@ -1483,6 +1483,12 @@
                 "ListReferrersAsync"
               ]
             },
+            "PerformMaintenance": {
+              "methods": [
+                "PerformMaintenance",
+                "PerformMaintenanceAsync"
+              ]
+            },
             "RemoveResourcePolicies": {
               "methods": [
                 "RemoveResourcePolicies",
@@ -3851,6 +3857,21 @@
               "methods": [
                 "Validate",
                 "ValidateAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionZones": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionZonesClient",
+          "rpcs": {
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
               ]
             }
           }

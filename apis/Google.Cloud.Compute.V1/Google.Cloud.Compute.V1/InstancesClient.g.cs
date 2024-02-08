@@ -72,6 +72,8 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             ListReferrersSettings = existing.ListReferrersSettings;
+            PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
+            PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
             RemoveResourcePoliciesSettings = existing.RemoveResourcePoliciesSettings;
             RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
             ResetSettings = existing.ResetSettings;
@@ -582,6 +584,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListReferrersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.PerformMaintenance</c> and <c>InstancesClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PerformMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.PerformMaintenance</c> and
+        /// <c>InstancesClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PerformMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3386,6 +3418,121 @@ namespace Google.Cloud.Compute.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceInstanceRequest request, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public virtual lro::OperationsClient PerformMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PerformMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePerformMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PerformMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePerformMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenance(new PerformMaintenanceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenanceAsync(new PerformMaintenanceInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Removes resource policies from an instance.
@@ -6936,6 +7083,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListReferrersInstancesRequest, InstanceListReferrers> _callListReferrers;
 
+        private readonly gaxgrpc::ApiCall<PerformMaintenanceInstanceRequest, Operation> _callPerformMaintenance;
+
         private readonly gaxgrpc::ApiCall<RemoveResourcePoliciesInstanceRequest, Operation> _callRemoveResourcePolicies;
 
         private readonly gaxgrpc::ApiCall<ResetInstanceRequest, Operation> _callReset;
@@ -7013,6 +7162,7 @@ namespace Google.Cloud.Compute.V1
             DeleteAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteAccessConfigOperationsSettings, logger);
             DetachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachDiskOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings, logger);
             ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings, logger);
             ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResumeOperationsSettings, logger);
@@ -7093,6 +7243,9 @@ namespace Google.Cloud.Compute.V1
             _callListReferrers = clientHelper.BuildApiCall<ListReferrersInstancesRequest, InstanceListReferrers>("ListReferrers", grpcClient.ListReferrersAsync, grpcClient.ListReferrers, effectiveSettings.ListReferrersSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callListReferrers);
             Modify_ListReferrersApiCall(ref _callListReferrers);
+            _callPerformMaintenance = clientHelper.BuildApiCall<PerformMaintenanceInstanceRequest, Operation>("PerformMaintenance", grpcClient.PerformMaintenanceAsync, grpcClient.PerformMaintenance, effectiveSettings.PerformMaintenanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callPerformMaintenance);
+            Modify_PerformMaintenanceApiCall(ref _callPerformMaintenance);
             _callRemoveResourcePolicies = clientHelper.BuildApiCall<RemoveResourcePoliciesInstanceRequest, Operation>("RemoveResourcePolicies", grpcClient.RemoveResourcePoliciesAsync, grpcClient.RemoveResourcePolicies, effectiveSettings.RemoveResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callRemoveResourcePolicies);
             Modify_RemoveResourcePoliciesApiCall(ref _callRemoveResourcePolicies);
@@ -7221,6 +7374,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListReferrersApiCall(ref gaxgrpc::ApiCall<ListReferrersInstancesRequest, InstanceListReferrers> call);
 
+        partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceInstanceRequest, Operation> call);
+
         partial void Modify_RemoveResourcePoliciesApiCall(ref gaxgrpc::ApiCall<RemoveResourcePoliciesInstanceRequest, Operation> call);
 
         partial void Modify_ResetApiCall(ref gaxgrpc::ApiCall<ResetInstanceRequest, Operation> call);
@@ -7319,6 +7474,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReferrersInstancesRequest(ref ListReferrersInstancesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PerformMaintenanceInstanceRequest(ref PerformMaintenanceInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveResourcePoliciesInstanceRequest(ref RemoveResourcePoliciesInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7882,6 +8039,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListReferrersInstancesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReferrersInstancesRequest, InstanceListReferrers, Reference>(_callListReferrers, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public override lro::OperationsClient PerformMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceInstanceRequest(ref request, ref callSettings);
+            Operation response = _callPerformMaintenance.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Perform a manual maintenance on the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callPerformMaintenance.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RemoveResourcePolicies</c>.</summary>

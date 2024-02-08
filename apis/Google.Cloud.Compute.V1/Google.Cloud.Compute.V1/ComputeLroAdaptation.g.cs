@@ -801,6 +801,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PerformMaintenanceInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class RemoveResourcePoliciesInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
