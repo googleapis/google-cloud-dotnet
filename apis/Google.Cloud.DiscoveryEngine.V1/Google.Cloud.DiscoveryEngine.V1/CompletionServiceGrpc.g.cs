@@ -67,6 +67,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest> __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest> __Marshaller_google_cloud_discoveryengine_v1_ImportSuggestionDenyListEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest> __Marshaller_google_cloud_discoveryengine_v1_PurgeSuggestionDenyListEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> __Method_CompleteQuery = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse>(
@@ -75,6 +81,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "CompleteQuery",
         __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryRequest,
         __Marshaller_google_cloud_discoveryengine_v1_CompleteQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation> __Method_ImportSuggestionDenyListEntries = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportSuggestionDenyListEntries",
+        __Marshaller_google_cloud_discoveryengine_v1_ImportSuggestionDenyListEntriesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation> __Method_PurgeSuggestionDenyListEntries = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PurgeSuggestionDenyListEntries",
+        __Marshaller_google_cloud_discoveryengine_v1_PurgeSuggestionDenyListEntriesRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +116,34 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse> CompleteQuery(global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Permanently deletes all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +225,118 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CompleteQuery, null, options, request);
       }
+      /// <summary>
+      /// Imports all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportSuggestionDenyListEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportSuggestionDenyListEntries, null, options, request);
+      }
+      /// <summary>
+      /// Imports all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportSuggestionDenyListEntriesAsync(global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportSuggestionDenyListEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportSuggestionDenyListEntriesAsync(global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportSuggestionDenyListEntries, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeSuggestionDenyListEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PurgeSuggestionDenyListEntries(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PurgeSuggestionDenyListEntries, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeSuggestionDenyListEntriesAsync(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PurgeSuggestionDenyListEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes all
+      /// [SuggestionDenyListEntry][google.cloud.discoveryengine.v1.SuggestionDenyListEntry]
+      /// for a DataStore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeSuggestionDenyListEntriesAsync(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PurgeSuggestionDenyListEntries, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CompletionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +351,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static grpc::ServerServiceDefinition BindService(CompletionServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_CompleteQuery, serviceImpl.CompleteQuery).Build();
+          .AddMethod(__Method_CompleteQuery, serviceImpl.CompleteQuery)
+          .AddMethod(__Method_ImportSuggestionDenyListEntries, serviceImpl.ImportSuggestionDenyListEntries)
+          .AddMethod(__Method_PurgeSuggestionDenyListEntries, serviceImpl.PurgeSuggestionDenyListEntries).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +364,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CompletionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CompleteQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryRequest, global::Google.Cloud.DiscoveryEngine.V1.CompleteQueryResponse>(serviceImpl.CompleteQuery));
+      serviceBinder.AddMethod(__Method_ImportSuggestionDenyListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportSuggestionDenyListEntries));
+      serviceBinder.AddMethod(__Method_PurgeSuggestionDenyListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeSuggestionDenyListEntries));
     }
 
   }

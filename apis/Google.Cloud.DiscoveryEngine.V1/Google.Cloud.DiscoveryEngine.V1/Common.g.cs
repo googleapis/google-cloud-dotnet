@@ -31,31 +31,40 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ASgBSAESGwoRZXhjbHVzaXZlX21heGltdW0YBCABKAFIAUIFCgNtaW5CBQoD",
             "bWF4IjAKD0N1c3RvbUF0dHJpYnV0ZRIMCgR0ZXh0GAEgAygJEg8KB251bWJl",
             "cnMYAiADKAEiLwoIVXNlckluZm8SDwoHdXNlcl9pZBgBIAEoCRISCgp1c2Vy",
-            "X2FnZW50GAIgASgJQr4HCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MUILQ29tbW9uUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "aXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292",
-            "ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQu",
-            "RGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
-            "Z2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjHq",
-            "QeYBCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQnJhbmNoElFw",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0",
-            "b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0SanByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97",
-            "Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMv",
-            "e2JyYW5jaH3qQcUBCihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YVN0b3JlEj9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0SWHByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVj",
-            "dGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX3qQYkCCixkaXNjb3Zlcnll",
-            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vU2VydmluZ0NvbmZpZxJfcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2Rh",
-            "dGFfc3RvcmV9L3NlcnZpbmdDb25maWdzL3tzZXJ2aW5nX2NvbmZpZ30SeHBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0",
-            "aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vy",
-            "dmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmlnfWIGcHJvdG8z"));
+            "X2FnZW50GAIgASgJKk0KEEluZHVzdHJ5VmVydGljYWwSIQodSU5EVVNUUllf",
+            "VkVSVElDQUxfVU5TUEVDSUZJRUQQABILCgdHRU5FUklDEAESCQoFTUVESUEQ",
+            "AiqBAQoMU29sdXRpb25UeXBlEh0KGVNPTFVUSU9OX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIgChxTT0xVVElPTl9UWVBFX1JFQ09NTUVOREFUSU9OEAESGAoUU09M",
+            "VVRJT05fVFlQRV9TRUFSQ0gQAhIWChJTT0xVVElPTl9UWVBFX0NIQVQQAypf",
+            "CgpTZWFyY2hUaWVyEhsKF1NFQVJDSF9USUVSX1VOU1BFQ0lGSUVEEAASGAoU",
+            "U0VBUkNIX1RJRVJfU1RBTkRBUkQQARIaChZTRUFSQ0hfVElFUl9FTlRFUlBS",
+            "SVNFEAIqQwoLU2VhcmNoQWRkT24SHQoZU0VBUkNIX0FERF9PTl9VTlNQRUNJ",
+            "RklFRBAAEhUKEVNFQVJDSF9BRERfT05fTExNEAFC2AcKI2NvbS5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQgtDb21tb25Qcm90b1ABWk1jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3Zl",
+            "cnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lO",
+            "RaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVc",
+            "Q2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlz",
+            "Y292ZXJ5RW5naW5lOjpWMepB5gEKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVh",
+            "cGlzLmNvbS9CcmFuY2gSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97",
+            "YnJhbmNofRJqcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
+            "X3N0b3JlfS9icmFuY2hlcy97YnJhbmNofepBbQopZGlzY292ZXJ5ZW5naW5l",
+            "Lmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24SQHByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlv",
+            "bn3qQfwCCixkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vU2Vydmlu",
+            "Z0NvbmZpZxJfcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NlcnZpbmdDb25maWdzL3tz",
+            "ZXJ2aW5nX2NvbmZpZ30SeHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jl",
+            "cy97ZGF0YV9zdG9yZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmln",
+            "fRJxcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nv",
+            "bGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVzL3tlbmdpbmV9L3NlcnZp",
+            "bmdDb25maWdzL3tzZXJ2aW5nX2NvbmZpZ31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical), typeof(global::Google.Cloud.DiscoveryEngine.V1.SolutionType), typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchTier), typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchAddOn), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Interval), global::Google.Cloud.DiscoveryEngine.V1.Interval.Parser, new[]{ "Minimum", "ExclusiveMinimum", "Maximum", "ExclusiveMaximum" }, new[]{ "Min", "Max" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CustomAttribute), global::Google.Cloud.DiscoveryEngine.V1.CustomAttribute.Parser, new[]{ "Text", "Numbers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserInfo), global::Google.Cloud.DiscoveryEngine.V1.UserInfo.Parser, new[]{ "UserId", "UserAgent" }, null, null, null, null)
@@ -64,6 +73,84 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The industry vertical associated with the
+  /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+  /// </summary>
+  public enum IndustryVertical {
+    /// <summary>
+    /// Value used when unset.
+    /// </summary>
+    [pbr::OriginalName("INDUSTRY_VERTICAL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The generic vertical for documents that are not specific to any industry
+    /// vertical.
+    /// </summary>
+    [pbr::OriginalName("GENERIC")] Generic = 1,
+    /// <summary>
+    /// The media industry vertical.
+    /// </summary>
+    [pbr::OriginalName("MEDIA")] Media = 2,
+  }
+
+  /// <summary>
+  /// The type of solution.
+  /// </summary>
+  public enum SolutionType {
+    /// <summary>
+    /// Default value.
+    /// </summary>
+    [pbr::OriginalName("SOLUTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Used for Recommendations AI.
+    /// </summary>
+    [pbr::OriginalName("SOLUTION_TYPE_RECOMMENDATION")] Recommendation = 1,
+    /// <summary>
+    /// Used for Discovery Search.
+    /// </summary>
+    [pbr::OriginalName("SOLUTION_TYPE_SEARCH")] Search = 2,
+    /// <summary>
+    /// Used for use cases related to the Generative AI agent.
+    /// </summary>
+    [pbr::OriginalName("SOLUTION_TYPE_CHAT")] Chat = 3,
+  }
+
+  /// <summary>
+  /// Tiers of search features. Different tiers might have different
+  /// pricing. To learn more, please check the pricing documentation.
+  /// </summary>
+  public enum SearchTier {
+    /// <summary>
+    /// Default value when the enum is unspecified. This is invalid to use.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_TIER_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Standard tier.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_TIER_STANDARD")] Standard = 1,
+    /// <summary>
+    /// Enterprise tier.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_TIER_ENTERPRISE")] Enterprise = 2,
+  }
+
+  /// <summary>
+  /// Add-on that provides additional functionality for search.
+  /// </summary>
+  public enum SearchAddOn {
+    /// <summary>
+    /// Default value when the enum is unspecified. This is invalid to use.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_ADD_ON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Large language model add-on.
+    /// </summary>
+    [pbr::OriginalName("SEARCH_ADD_ON_LLM")] Llm = 1,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A floating point interval.
