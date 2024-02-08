@@ -1341,7 +1341,7 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendBucket">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendBucket resource to which the security policy should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1363,7 +1363,7 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendBucket">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendBucket resource to which the security policy should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1385,7 +1385,7 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendBucket">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendBucket resource to which the security policy should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request

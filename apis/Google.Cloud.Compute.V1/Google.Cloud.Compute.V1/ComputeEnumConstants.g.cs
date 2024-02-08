@@ -168,6 +168,42 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation"/> message.</summary>
+        public static class AllocationAggregateReservation
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily"/> enum.</summary>
+            public static class VmFamily
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.UndefinedVmFamily"/>.</summary>
+                public const string UndefinedVmFamily = "UNDEFINED_VM_FAMILY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuLiteDeviceCt5L"/>.</summary>
+                public const string CloudTpuLiteDeviceCt5L = "VM_FAMILY_CLOUD_TPU_LITE_DEVICE_CT5L";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuLitePodSliceCt5Lp"/>.</summary>
+                public const string CloudTpuLitePodSliceCt5Lp = "VM_FAMILY_CLOUD_TPU_LITE_POD_SLICE_CT5LP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuPodSliceCt4P"/>.</summary>
+                public const string CloudTpuPodSliceCt4P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT4P";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.WorkloadType"/> enum.</summary>
+            public static class WorkloadType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.WorkloadType.UndefinedWorkloadType"/>.</summary>
+                public const string UndefinedWorkloadType = "UNDEFINED_WORKLOAD_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.WorkloadType.Batch"/>.</summary>
+                public const string Batch = "BATCH";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.WorkloadType.Serving"/>.</summary>
+                public const string Serving = "SERVING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.WorkloadType.Unspecified"/>.</summary>
+                public const string Unspecified = "UNSPECIFIED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk"/> message.</summary>
         public static class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk
         {
@@ -1078,6 +1114,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedM3"/>.</summary>
                 public const string MemoryOptimizedM3 = "MEMORY_OPTIMIZED_M3";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.StorageOptimizedZ3"/>.</summary>
+                public const string StorageOptimizedZ3 = "STORAGE_OPTIMIZED_Z3";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.Unspecified"/>.</summary>
                 public const string Unspecified = "TYPE_UNSPECIFIED";
             }
@@ -1587,6 +1626,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.Gvnic"/>.</summary>
                 public const string Gvnic = "GVNIC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.Idpf"/>.</summary>
+                public const string Idpf = "IDPF";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.GuestOsFeature.Types.Type.MultiIpSubnet"/>.</summary>
                 public const string MultiIpSubnet = "MULTI_IP_SUBNET";
@@ -3997,6 +4039,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaA100Gpus"/>.</summary>
                 public const string CommittedNvidiaA100Gpus = "COMMITTED_NVIDIA_A100_GPUS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaH100Gpus"/>.</summary>
+                public const string CommittedNvidiaH100Gpus = "COMMITTED_NVIDIA_H100_GPUS";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedNvidiaK80Gpus"/>.</summary>
                 public const string CommittedNvidiaK80Gpus = "COMMITTED_NVIDIA_K80_GPUS";
 
@@ -4020,6 +4065,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedT2DCpus"/>.</summary>
                 public const string CommittedT2DCpus = "COMMITTED_T2D_CPUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.CommittedZ3Cpus"/>.</summary>
+                public const string CommittedZ3Cpus = "COMMITTED_Z3_CPUS";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.Cpus"/>.</summary>
                 public const string Cpus = "CPUS";
@@ -4222,6 +4270,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaA100Gpus"/>.</summary>
                 public const string PreemptibleNvidiaA100Gpus = "PREEMPTIBLE_NVIDIA_A100_GPUS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaH100Gpus"/>.</summary>
+                public const string PreemptibleNvidiaH100Gpus = "PREEMPTIBLE_NVIDIA_H100_GPUS";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaK80Gpus"/>.</summary>
                 public const string PreemptibleNvidiaK80Gpus = "PREEMPTIBLE_NVIDIA_K80_GPUS";
 
@@ -4248,6 +4299,15 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleNvidiaV100Gpus"/>.</summary>
                 public const string PreemptibleNvidiaV100Gpus = "PREEMPTIBLE_NVIDIA_V100_GPUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleTpuLiteDeviceV5"/>.</summary>
+                public const string PreemptibleTpuLiteDeviceV5 = "PREEMPTIBLE_TPU_LITE_DEVICE_V5";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleTpuLitePodsliceV5"/>.</summary>
+                public const string PreemptibleTpuLitePodsliceV5 = "PREEMPTIBLE_TPU_LITE_PODSLICE_V5";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PreemptibleTpuPodsliceV4"/>.</summary>
+                public const string PreemptibleTpuPodsliceV4 = "PREEMPTIBLE_TPU_PODSLICE_V4";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.PscIlbConsumerForwardingRulesPerProducerNetwork"/>.</summary>
                 public const string PscIlbConsumerForwardingRulesPerProducerNetwork = "PSC_ILB_CONSUMER_FORWARDING_RULES_PER_PRODUCER_NETWORK";
@@ -4359,6 +4419,15 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.TargetVpnGateways"/>.</summary>
                 public const string TargetVpnGateways = "TARGET_VPN_GATEWAYS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.TpuLiteDeviceV5"/>.</summary>
+                public const string TpuLiteDeviceV5 = "TPU_LITE_DEVICE_V5";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.TpuLitePodsliceV5"/>.</summary>
+                public const string TpuLitePodsliceV5 = "TPU_LITE_PODSLICE_V5";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.TpuPodsliceV4"/>.</summary>
+                public const string TpuPodsliceV4 = "TPU_PODSLICE_V4";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.UrlMaps"/>.</summary>
                 public const string UrlMaps = "URL_MAPS";
@@ -5386,6 +5455,12 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.Sni"/>.</summary>
                 public const string Sni = "SNI";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.TlsJa3Fingerprint"/>.</summary>
+                public const string TlsJa3Fingerprint = "TLS_JA3_FINGERPRINT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.UserIp"/>.</summary>
+                public const string UserIp = "USER_IP";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.XffIp"/>.</summary>
                 public const string XffIp = "XFF_IP";
             }
@@ -5420,6 +5495,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.Sni"/>.</summary>
                 public const string Sni = "SNI";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.TlsJa3Fingerprint"/>.</summary>
+                public const string TlsJa3Fingerprint = "TLS_JA3_FINGERPRINT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.UserIp"/>.</summary>
+                public const string UserIp = "USER_IP";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.XffIp"/>.</summary>
                 public const string XffIp = "XFF_IP";

@@ -22,7 +22,6 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using sys = System;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -483,13 +482,5 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
-    }
-
-    public partial class ZoneList : gaxgrpc::IPageResponse<Zone>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Zone> GetEnumerator() => Items.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

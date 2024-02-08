@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Instance = "",
                 RequestId = "",
                 Project = "",
+                WithExtendedNotifications = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SimulateMaintenanceEventAsync(request);
