@@ -735,7 +735,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         /// <summary>
         /// The URI of the content. Only Cloud Storage URIs (e.g.
         /// `gs://bucket-name/path/to/file`) are supported. The maximum file size
-        /// is 100 MB.
+        /// is 2.5 MB for text-based formats, 100 MB for other formats.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

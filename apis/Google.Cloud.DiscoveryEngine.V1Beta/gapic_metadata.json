@@ -15,6 +15,18 @@
                 "CompleteQuery",
                 "CompleteQueryAsync"
               ]
+            },
+            "ImportSuggestionDenyListEntries": {
+              "methods": [
+                "ImportSuggestionDenyListEntries",
+                "ImportSuggestionDenyListEntriesAsync"
+              ]
+            },
+            "PurgeSuggestionDenyListEntries": {
+              "methods": [
+                "PurgeSuggestionDenyListEntries",
+                "PurgeSuggestionDenyListEntriesAsync"
+              ]
             }
           }
         }
@@ -59,6 +71,45 @@
               "methods": [
                 "UpdateConversation",
                 "UpdateConversationAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DataStoreService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataStoreServiceClient",
+          "rpcs": {
+            "CreateDataStore": {
+              "methods": [
+                "CreateDataStore",
+                "CreateDataStoreAsync"
+              ]
+            },
+            "DeleteDataStore": {
+              "methods": [
+                "DeleteDataStore",
+                "DeleteDataStoreAsync"
+              ]
+            },
+            "GetDataStore": {
+              "methods": [
+                "GetDataStore",
+                "GetDataStoreAsync"
+              ]
+            },
+            "ListDataStores": {
+              "methods": [
+                "ListDataStores",
+                "ListDataStoresAsync"
+              ]
+            },
+            "UpdateDataStore": {
+              "methods": [
+                "UpdateDataStore",
+                "UpdateDataStoreAsync"
               ]
             }
           }
@@ -110,6 +161,45 @@
               "methods": [
                 "UpdateDocument",
                 "UpdateDocumentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EngineService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EngineServiceClient",
+          "rpcs": {
+            "CreateEngine": {
+              "methods": [
+                "CreateEngine",
+                "CreateEngineAsync"
+              ]
+            },
+            "DeleteEngine": {
+              "methods": [
+                "DeleteEngine",
+                "DeleteEngineAsync"
+              ]
+            },
+            "GetEngine": {
+              "methods": [
+                "GetEngine",
+                "GetEngineAsync"
+              ]
+            },
+            "ListEngines": {
+              "methods": [
+                "ListEngines",
+                "ListEnginesAsync"
+              ]
+            },
+            "UpdateEngine": {
+              "methods": [
+                "UpdateEngine",
+                "UpdateEngineAsync"
               ]
             }
           }
@@ -179,6 +269,114 @@
               "methods": [
                 "Search",
                 "SearchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ServingConfigService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServingConfigServiceClient",
+          "rpcs": {
+            "GetServingConfig": {
+              "methods": [
+                "GetServingConfig",
+                "GetServingConfigAsync"
+              ]
+            },
+            "ListServingConfigs": {
+              "methods": [
+                "ListServingConfigs",
+                "ListServingConfigsAsync"
+              ]
+            },
+            "UpdateServingConfig": {
+              "methods": [
+                "UpdateServingConfig",
+                "UpdateServingConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SiteSearchEngineService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SiteSearchEngineServiceClient",
+          "rpcs": {
+            "BatchCreateTargetSites": {
+              "methods": [
+                "BatchCreateTargetSites",
+                "BatchCreateTargetSitesAsync"
+              ]
+            },
+            "BatchVerifyTargetSites": {
+              "methods": [
+                "BatchVerifyTargetSites",
+                "BatchVerifyTargetSitesAsync"
+              ]
+            },
+            "CreateTargetSite": {
+              "methods": [
+                "CreateTargetSite",
+                "CreateTargetSiteAsync"
+              ]
+            },
+            "DeleteTargetSite": {
+              "methods": [
+                "DeleteTargetSite",
+                "DeleteTargetSiteAsync"
+              ]
+            },
+            "DisableAdvancedSiteSearch": {
+              "methods": [
+                "DisableAdvancedSiteSearch",
+                "DisableAdvancedSiteSearchAsync"
+              ]
+            },
+            "EnableAdvancedSiteSearch": {
+              "methods": [
+                "EnableAdvancedSiteSearch",
+                "EnableAdvancedSiteSearchAsync"
+              ]
+            },
+            "FetchDomainVerificationStatus": {
+              "methods": [
+                "FetchDomainVerificationStatus",
+                "FetchDomainVerificationStatusAsync"
+              ]
+            },
+            "GetSiteSearchEngine": {
+              "methods": [
+                "GetSiteSearchEngine",
+                "GetSiteSearchEngineAsync"
+              ]
+            },
+            "GetTargetSite": {
+              "methods": [
+                "GetTargetSite",
+                "GetTargetSiteAsync"
+              ]
+            },
+            "ListTargetSites": {
+              "methods": [
+                "ListTargetSites",
+                "ListTargetSitesAsync"
+              ]
+            },
+            "RecrawlUris": {
+              "methods": [
+                "RecrawlUris",
+                "RecrawlUrisAsync"
+              ]
+            },
+            "UpdateTargetSite": {
+              "methods": [
+                "UpdateTargetSite",
+                "UpdateTargetSiteAsync"
               ]
             }
           }

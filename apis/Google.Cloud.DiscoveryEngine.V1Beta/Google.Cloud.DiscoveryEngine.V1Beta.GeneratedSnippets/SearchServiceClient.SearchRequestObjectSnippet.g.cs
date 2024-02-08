@@ -61,6 +61,7 @@ namespace GoogleCSharpSnippets
                 EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 RankingExpression = "",
+                CanonicalFilter = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

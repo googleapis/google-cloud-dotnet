@@ -39,4 +39,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => new gax::ResourceNameList<DocumentName>(PurgeSample, s => string.IsNullOrEmpty(s) ? null : DocumentName.Parse(s, allowUnparsed: true));
         }
     }
+
+    public partial class PurgeSuggestionDenyListEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
