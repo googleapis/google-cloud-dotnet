@@ -31,126 +31,158 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVy",
             "eWVuZ2luZS92MS9jb21tb24ucHJvdG8aLmdvb2dsZS9jbG91ZC9kaXNjb3Zl",
             "cnllbmdpbmUvdjEvZG9jdW1lbnQucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8i5RQKDVNlYXJjaFJlcXVlc3QSTAoOc2VydmluZ19jb25m",
+            "dHJ1Y3QucHJvdG8ipxcKDVNlYXJjaFJlcXVlc3QSTAoOc2VydmluZ19jb25m",
             "aWcYASABKAlCNOBBAvpBLgosZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
             "Y29tL1NlcnZpbmdDb25maWcSOgoGYnJhbmNoGAIgASgJQir6QScKJWRpc2Nv",
             "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9CcmFuY2gSDQoFcXVlcnkYAyAB",
             "KAkSTgoLaW1hZ2VfcXVlcnkYEyABKAsyOS5nb29nbGUuY2xvdWQuZGlzY292",
             "ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuSW1hZ2VRdWVyeRIRCglwYWdl",
             "X3NpemUYBCABKAUSEgoKcGFnZV90b2tlbhgFIAEoCRIOCgZvZmZzZXQYBiAB",
-            "KAUSDgoGZmlsdGVyGAcgASgJEhAKCG9yZGVyX2J5GAggASgJEjwKCXVzZXJf",
-            "aW5mbxgVIAEoCzIpLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
-            "VXNlckluZm8STQoLZmFjZXRfc3BlY3MYCSADKAsyOC5nb29nbGUuY2xvdWQu",
-            "ZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuRmFjZXRTcGVjEkwK",
-            "CmJvb3N0X3NwZWMYCiABKAsyOC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxLlNlYXJjaFJlcXVlc3QuQm9vc3RTcGVjEkoKBnBhcmFtcxgLIAMo",
-            "CzI6Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVx",
-            "dWVzdC5QYXJhbXNFbnRyeRJfChRxdWVyeV9leHBhbnNpb25fc3BlYxgNIAEo",
-            "CzJBLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVx",
-            "dWVzdC5RdWVyeUV4cGFuc2lvblNwZWMSYQoVc3BlbGxfY29ycmVjdGlvbl9z",
-            "cGVjGA4gASgLMkIuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5T",
-            "ZWFyY2hSZXF1ZXN0LlNwZWxsQ29ycmVjdGlvblNwZWMSFgoOdXNlcl9wc2V1",
-            "ZG9faWQYDyABKAkSXQoTY29udGVudF9zZWFyY2hfc3BlYxgYIAEoCzJALmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5D",
-            "b250ZW50U2VhcmNoU3BlYxITCgtzYWZlX3NlYXJjaBgUIAEoCBJTCgt1c2Vy",
-            "X2xhYmVscxgWIAMoCzI+Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djEuU2VhcmNoUmVxdWVzdC5Vc2VyTGFiZWxzRW50cnkaLAoKSW1hZ2VRdWVy",
-            "eRIVCgtpbWFnZV9ieXRlcxgBIAEoCUgAQgcKBWltYWdlGvwCCglGYWNldFNw",
-            "ZWMSWQoJZmFjZXRfa2V5GAEgASgLMkEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkZhY2V0U3BlYy5GYWNldEtleUID",
-            "4EECEg0KBWxpbWl0GAIgASgFEhwKFGV4Y2x1ZGVkX2ZpbHRlcl9rZXlzGAMg",
-            "AygJEh8KF2VuYWJsZV9keW5hbWljX3Bvc2l0aW9uGAQgASgIGsUBCghGYWNl",
-            "dEtleRIQCgNrZXkYASABKAlCA+BBAhI8CglpbnRlcnZhbHMYAiADKAsyKS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkludGVydmFsEhkKEXJl",
-            "c3RyaWN0ZWRfdmFsdWVzGAMgAygJEhAKCHByZWZpeGVzGAQgAygJEhAKCGNv",
-            "bnRhaW5zGAUgAygJEhgKEGNhc2VfaW5zZW5zaXRpdmUYBiABKAgSEAoIb3Jk",
-            "ZXJfYnkYByABKAkarwEKCUJvb3N0U3BlYxJqChVjb25kaXRpb25fYm9vc3Rf",
-            "c3BlY3MYASADKAsySy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "LlNlYXJjaFJlcXVlc3QuQm9vc3RTcGVjLkNvbmRpdGlvbkJvb3N0U3BlYxo2",
-            "ChJDb25kaXRpb25Cb29zdFNwZWMSEQoJY29uZGl0aW9uGAEgASgJEg0KBWJv",
-            "b3N0GAIgASgCGtQBChJRdWVyeUV4cGFuc2lvblNwZWMSXgoJY29uZGl0aW9u",
-            "GAEgASgOMksuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFy",
-            "Y2hSZXF1ZXN0LlF1ZXJ5RXhwYW5zaW9uU3BlYy5Db25kaXRpb24SHgoWcGlu",
-            "X3VuZXhwYW5kZWRfcmVzdWx0cxgCIAEoCCI+CglDb25kaXRpb24SGQoVQ09O",
-            "RElUSU9OX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQARIICgRBVVRPEAIa",
-            "qQEKE1NwZWxsQ29ycmVjdGlvblNwZWMSVQoEbW9kZRgBIAEoDjJHLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5TcGVs",
-            "bENvcnJlY3Rpb25TcGVjLk1vZGUiOwoETW9kZRIUChBNT0RFX1VOU1BFQ0lG",
-            "SUVEEAASEwoPU1VHR0VTVElPTl9PTkxZEAESCAoEQVVUTxACGukDChFDb250",
-            "ZW50U2VhcmNoU3BlYxJiCgxzbmlwcGV0X3NwZWMYASABKAsyTC5nb29nbGUu",
-            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuQ29udGVu",
-            "dFNlYXJjaFNwZWMuU25pcHBldFNwZWMSYgoMc3VtbWFyeV9zcGVjGAIgASgL",
-            "MkwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1",
-            "ZXN0LkNvbnRlbnRTZWFyY2hTcGVjLlN1bW1hcnlTcGVjGmAKC1NuaXBwZXRT",
-            "cGVjEh0KEW1heF9zbmlwcGV0X2NvdW50GAEgASgFQgIYARIaCg5yZWZlcmVu",
-            "Y2Vfb25seRgCIAEoCEICGAESFgoOcmV0dXJuX3NuaXBwZXQYAyABKAgaqQEK",
-            "C1N1bW1hcnlTcGVjEhwKFHN1bW1hcnlfcmVzdWx0X2NvdW50GAEgASgFEhkK",
-            "EWluY2x1ZGVfY2l0YXRpb25zGAIgASgIEiAKGGlnbm9yZV9hZHZlcnNhcmlh",
-            "bF9xdWVyeRgDIAEoCBIoCiBpZ25vcmVfbm9uX3N1bW1hcnlfc2Vla2luZ19x",
-            "dWVyeRgEIAEoCBIVCg1sYW5ndWFnZV9jb2RlGAYgASgJGkUKC1BhcmFtc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90",
-            "b2J1Zi5WYWx1ZToCOAEaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAEi+goKDlNlYXJjaFJlc3BvbnNlEk0KB3Jl",
-            "c3VsdHMYASADKAsyPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "LlNlYXJjaFJlc3BvbnNlLlNlYXJjaFJlc3VsdBJFCgZmYWNldHMYAiADKAsy",
-            "NS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3Bv",
-            "bnNlLkZhY2V0EhIKCnRvdGFsX3NpemUYAyABKAUSGQoRYXR0cmlidXRpb25f",
-            "dG9rZW4YBCABKAkSFAoMcmVkaXJlY3RfdXJpGAwgASgJEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgFIAEoCRIXCg9jb3JyZWN0ZWRfcXVlcnkYByABKAkSSAoHc3Vt",
-            "bWFyeRgJIAEoCzI3Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
-            "U2VhcmNoUmVzcG9uc2UuU3VtbWFyeRJgChRxdWVyeV9leHBhbnNpb25faW5m",
-            "bxgOIAEoCzJCLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2Vh",
-            "cmNoUmVzcG9uc2UuUXVlcnlFeHBhbnNpb25JbmZvGlcKDFNlYXJjaFJlc3Vs",
-            "dBIKCgJpZBgBIAEoCRI7Cghkb2N1bWVudBgCIAEoCzIpLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnQa+QEKBUZhY2V0EgsKA2tl",
-            "eRgBIAEoCRJQCgZ2YWx1ZXMYAiADKAsyQC5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlc3BvbnNlLkZhY2V0LkZhY2V0VmFsdWUS",
-            "FQoNZHluYW1pY19mYWNldBgDIAEoCBp6CgpGYWNldFZhbHVlEg8KBXZhbHVl",
-            "GAEgASgJSAASPQoIaW50ZXJ2YWwYAiABKAsyKS5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxLkludGVydmFsSAASDQoFY291bnQYAyABKANCDQoL",
-            "ZmFjZXRfdmFsdWUajgQKB1N1bW1hcnkSFAoMc3VtbWFyeV90ZXh0GAEgASgJ",
-            "Em0KF3N1bW1hcnlfc2tpcHBlZF9yZWFzb25zGAIgAygOMkwuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5",
-            "LlN1bW1hcnlTa2lwcGVkUmVhc29uEmMKEXNhZmV0eV9hdHRyaWJ1dGVzGAMg",
-            "ASgLMkguZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hS",
-            "ZXNwb25zZS5TdW1tYXJ5LlNhZmV0eUF0dHJpYnV0ZXMaNgoQU2FmZXR5QXR0",
-            "cmlidXRlcxISCgpjYXRlZ29yaWVzGAEgAygJEg4KBnNjb3JlcxgCIAMoAiLg",
-            "AQoUU3VtbWFyeVNraXBwZWRSZWFzb24SJgoiU1VNTUFSWV9TS0lQUEVEX1JF",
-            "QVNPTl9VTlNQRUNJRklFRBAAEh0KGUFEVkVSU0FSSUFMX1FVRVJZX0lHTk9S",
-            "RUQQARIlCiFOT05fU1VNTUFSWV9TRUVLSU5HX1FVRVJZX0lHTk9SRUQQAhIf",
-            "ChtPVVRfT0ZfRE9NQUlOX1FVRVJZX0lHTk9SRUQQAxIeChpQT1RFTlRJQUxf",
-            "UE9MSUNZX1ZJT0xBVElPThAEEhkKFUxMTV9BRERPTl9OT1RfRU5BQkxFRBAF",
-            "GkkKElF1ZXJ5RXhwYW5zaW9uSW5mbxIWCg5leHBhbmRlZF9xdWVyeRgBIAEo",
-            "CBIbChNwaW5uZWRfcmVzdWx0X2NvdW50GAIgASgDMpMDCg1TZWFyY2hTZXJ2",
-            "aWNlEq0CCgZTZWFyY2gSLi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLlNlYXJjaFJlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxLlNlYXJjaFJlc3BvbnNlIsEBgtPkkwK6ASJQL3YxL3tzZXJ2aW5n",
-            "X2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKi9z",
-            "ZXJ2aW5nQ29uZmlncy8qfTpzZWFyY2g6ASpaYyJeL3YxL3tzZXJ2aW5nX2Nv",
-            "bmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0",
-            "YVN0b3Jlcy8qL3NlcnZpbmdDb25maWdzLyp9OnNlYXJjaDoBKhpSykEeZGlz",
-            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKFAgojY29tLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCElNlYXJjaFNlcnZpY2VQcm90",
-            "b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2",
-            "MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NP",
-            "VkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHK",
-            "Ah9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpD",
-            "bG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "KAUSDgoGZmlsdGVyGAcgASgJEhgKEGNhbm9uaWNhbF9maWx0ZXIYHSABKAkS",
+            "EAoIb3JkZXJfYnkYCCABKAkSPAoJdXNlcl9pbmZvGBUgASgLMikuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Vc2VySW5mbxJNCgtmYWNldF9z",
+            "cGVjcxgJIAMoCzI4Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
+            "U2VhcmNoUmVxdWVzdC5GYWNldFNwZWMSTAoKYm9vc3Rfc3BlYxgKIAEoCzI4",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVz",
+            "dC5Cb29zdFNwZWMSSgoGcGFyYW1zGAsgAygLMjouZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlBhcmFtc0VudHJ5El8K",
+            "FHF1ZXJ5X2V4cGFuc2lvbl9zcGVjGA0gASgLMkEuZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlF1ZXJ5RXhwYW5zaW9u",
+            "U3BlYxJhChVzcGVsbF9jb3JyZWN0aW9uX3NwZWMYDiABKAsyQi5nb29nbGUu",
+            "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuU3BlbGxD",
+            "b3JyZWN0aW9uU3BlYxIWCg51c2VyX3BzZXVkb19pZBgPIAEoCRJdChNjb250",
+            "ZW50X3NlYXJjaF9zcGVjGBggASgLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVjEhMK",
+            "C3NhZmVfc2VhcmNoGBQgASgIElMKC3VzZXJfbGFiZWxzGBYgAygLMj4uZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0LlVz",
+            "ZXJMYWJlbHNFbnRyeRosCgpJbWFnZVF1ZXJ5EhUKC2ltYWdlX2J5dGVzGAEg",
+            "ASgJSABCBwoFaW1hZ2Ua/AIKCUZhY2V0U3BlYxJZCglmYWNldF9rZXkYASAB",
+            "KAsyQS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJl",
+            "cXVlc3QuRmFjZXRTcGVjLkZhY2V0S2V5QgPgQQISDQoFbGltaXQYAiABKAUS",
+            "HAoUZXhjbHVkZWRfZmlsdGVyX2tleXMYAyADKAkSHwoXZW5hYmxlX2R5bmFt",
+            "aWNfcG9zaXRpb24YBCABKAgaxQEKCEZhY2V0S2V5EhAKA2tleRgBIAEoCUID",
+            "4EECEjwKCWludGVydmFscxgCIAMoCzIpLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuSW50ZXJ2YWwSGQoRcmVzdHJpY3RlZF92YWx1ZXMYAyAD",
+            "KAkSEAoIcHJlZml4ZXMYBCADKAkSEAoIY29udGFpbnMYBSADKAkSGAoQY2Fz",
+            "ZV9pbnNlbnNpdGl2ZRgGIAEoCBIQCghvcmRlcl9ieRgHIAEoCRqvAQoJQm9v",
+            "c3RTcGVjEmoKFWNvbmRpdGlvbl9ib29zdF9zcGVjcxgBIAMoCzJLLmdvb2ds",
+            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVxdWVzdC5Cb29z",
+            "dFNwZWMuQ29uZGl0aW9uQm9vc3RTcGVjGjYKEkNvbmRpdGlvbkJvb3N0U3Bl",
+            "YxIRCgljb25kaXRpb24YASABKAkSDQoFYm9vc3QYAiABKAIa1AEKElF1ZXJ5",
+            "RXhwYW5zaW9uU3BlYxJeCgljb25kaXRpb24YASABKA4ySy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuUXVlcnlFeHBh",
+            "bnNpb25TcGVjLkNvbmRpdGlvbhIeChZwaW5fdW5leHBhbmRlZF9yZXN1bHRz",
+            "GAIgASgIIj4KCUNvbmRpdGlvbhIZChVDT05ESVRJT05fVU5TUEVDSUZJRUQQ",
+            "ABIMCghESVNBQkxFRBABEggKBEFVVE8QAhqpAQoTU3BlbGxDb3JyZWN0aW9u",
+            "U3BlYxJVCgRtb2RlGAEgASgOMkcuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5TZWFyY2hSZXF1ZXN0LlNwZWxsQ29ycmVjdGlvblNwZWMuTW9k",
+            "ZSI7CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABITCg9TVUdHRVNUSU9O",
+            "X09OTFkQARIICgRBVVRPEAIakQYKEUNvbnRlbnRTZWFyY2hTcGVjEmIKDHNu",
+            "aXBwZXRfc3BlYxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjEuU2VhcmNoUmVxdWVzdC5Db250ZW50U2VhcmNoU3BlYy5TbmlwcGV0",
+            "U3BlYxJiCgxzdW1tYXJ5X3NwZWMYAiABKAsyTC5nb29nbGUuY2xvdWQuZGlz",
+            "Y292ZXJ5ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNw",
+            "ZWMuU3VtbWFyeVNwZWMaYAoLU25pcHBldFNwZWMSHQoRbWF4X3NuaXBwZXRf",
+            "Y291bnQYASABKAVCAhgBEhoKDnJlZmVyZW5jZV9vbmx5GAIgASgIQgIYARIW",
+            "Cg5yZXR1cm5fc25pcHBldBgDIAEoCBrRAwoLU3VtbWFyeVNwZWMSHAoUc3Vt",
+            "bWFyeV9yZXN1bHRfY291bnQYASABKAUSGQoRaW5jbHVkZV9jaXRhdGlvbnMY",
+            "AiABKAgSIAoYaWdub3JlX2FkdmVyc2FyaWFsX3F1ZXJ5GAMgASgIEigKIGln",
+            "bm9yZV9ub25fc3VtbWFyeV9zZWVraW5nX3F1ZXJ5GAQgASgIEncKEW1vZGVs",
+            "X3Byb21wdF9zcGVjGAUgASgLMlwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRTZWFyY2hTcGVjLlN1bW1h",
+            "cnlTcGVjLk1vZGVsUHJvbXB0U3BlYxIVCg1sYW5ndWFnZV9jb2RlGAYgASgJ",
+            "EmoKCm1vZGVsX3NwZWMYByABKAsyVi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLlNlYXJjaFJlcXVlc3QuQ29udGVudFNlYXJjaFNwZWMuU3Vt",
+            "bWFyeVNwZWMuTW9kZWxTcGVjGiMKD01vZGVsUHJvbXB0U3BlYxIQCghwcmVh",
+            "bWJsZRgBIAEoCRocCglNb2RlbFNwZWMSDwoHdmVyc2lvbhgBIAEoCRpFCgtQ",
+            "YXJhbXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29n",
+            "bGUucHJvdG9idWYuVmFsdWU6AjgBGjEKD1VzZXJMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBItkQCg5TZWFyY2hSZXNwb25z",
+            "ZRJNCgdyZXN1bHRzGAEgAygLMjwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5TZWFyY2hSZXNwb25zZS5TZWFyY2hSZXN1bHQSRQoGZmFjZXRz",
+            "GAIgAygLMjUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFy",
+            "Y2hSZXNwb25zZS5GYWNldBISCgp0b3RhbF9zaXplGAMgASgFEhkKEWF0dHJp",
+            "YnV0aW9uX3Rva2VuGAQgASgJEhQKDHJlZGlyZWN0X3VyaRgMIAEoCRIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YBSABKAkSFwoPY29ycmVjdGVkX3F1ZXJ5GAcgASgJ",
+            "EkgKB3N1bW1hcnkYCSABKAsyNy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxLlNlYXJjaFJlc3BvbnNlLlN1bW1hcnkSYAoUcXVlcnlfZXhwYW5z",
+            "aW9uX2luZm8YDiABKAsyQi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLlNlYXJjaFJlc3BvbnNlLlF1ZXJ5RXhwYW5zaW9uSW5mbxpXCgxTZWFy",
+            "Y2hSZXN1bHQSCgoCaWQYASABKAkSOwoIZG9jdW1lbnQYAiABKAsyKS5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkRvY3VtZW50GvkBCgVGYWNl",
+            "dBILCgNrZXkYASABKAkSUAoGdmFsdWVzGAIgAygLMkAuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5GYWNldC5GYWNl",
+            "dFZhbHVlEhUKDWR5bmFtaWNfZmFjZXQYAyABKAgaegoKRmFjZXRWYWx1ZRIP",
+            "CgV2YWx1ZRgBIAEoCUgAEj0KCGludGVydmFsGAIgASgLMikuZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5JbnRlcnZhbEgAEg0KBWNvdW50GAMg",
+            "ASgDQg0KC2ZhY2V0X3ZhbHVlGu0JCgdTdW1tYXJ5EhQKDHN1bW1hcnlfdGV4",
+            "dBgBIAEoCRJtChdzdW1tYXJ5X3NraXBwZWRfcmVhc29ucxgCIAMoDjJMLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2Uu",
+            "U3VtbWFyeS5TdW1tYXJ5U2tpcHBlZFJlYXNvbhJjChFzYWZldHlfYXR0cmli",
+            "dXRlcxgDIAEoCzJILmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
+            "U2VhcmNoUmVzcG9uc2UuU3VtbWFyeS5TYWZldHlBdHRyaWJ1dGVzEmoKFXN1",
+            "bW1hcnlfd2l0aF9tZXRhZGF0YRgEIAEoCzJLLmdvb2dsZS5jbG91ZC5kaXNj",
+            "b3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9uc2UuU3VtbWFyeS5TdW1tYXJ5",
+            "V2l0aE1ldGFkYXRhGjYKEFNhZmV0eUF0dHJpYnV0ZXMSEgoKY2F0ZWdvcmll",
+            "cxgBIAMoCRIOCgZzY29yZXMYAiADKAIaZwoQQ2l0YXRpb25NZXRhZGF0YRJT",
+            "CgljaXRhdGlvbnMYASADKAsyQC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxLlNlYXJjaFJlc3BvbnNlLlN1bW1hcnkuQ2l0YXRpb24aiwEKCENp",
+            "dGF0aW9uEhMKC3N0YXJ0X2luZGV4GAEgASgDEhEKCWVuZF9pbmRleBgCIAEo",
+            "AxJXCgdzb3VyY2VzGAMgAygLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5TZWFyY2hSZXNwb25zZS5TdW1tYXJ5LkNpdGF0aW9uU291cmNl",
+            "GikKDkNpdGF0aW9uU291cmNlEhcKD3JlZmVyZW5jZV9pbmRleBgEIAEoAxpq",
+            "CglSZWZlcmVuY2USDQoFdGl0bGUYASABKAkSQQoIZG9jdW1lbnQYAiABKAlC",
+            "L+BBAvpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RvY3Vt",
+            "ZW50EgsKA3VyaRgDIAEoCRriAQoTU3VtbWFyeVdpdGhNZXRhZGF0YRIPCgdz",
+            "dW1tYXJ5GAEgASgJEmMKEWNpdGF0aW9uX21ldGFkYXRhGAIgASgLMkguZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZS5T",
+            "dW1tYXJ5LkNpdGF0aW9uTWV0YWRhdGESVQoKcmVmZXJlbmNlcxgDIAMoCzJB",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoUmVzcG9u",
+            "c2UuU3VtbWFyeS5SZWZlcmVuY2Ui4AEKFFN1bW1hcnlTa2lwcGVkUmVhc29u",
+            "EiYKIlNVTU1BUllfU0tJUFBFRF9SRUFTT05fVU5TUEVDSUZJRUQQABIdChlB",
+            "RFZFUlNBUklBTF9RVUVSWV9JR05PUkVEEAESJQohTk9OX1NVTU1BUllfU0VF",
+            "S0lOR19RVUVSWV9JR05PUkVEEAISHwobT1VUX09GX0RPTUFJTl9RVUVSWV9J",
+            "R05PUkVEEAMSHgoaUE9URU5USUFMX1BPTElDWV9WSU9MQVRJT04QBBIZChVM",
+            "TE1fQURET05fTk9UX0VOQUJMRUQQBRpJChJRdWVyeUV4cGFuc2lvbkluZm8S",
+            "FgoOZXhwYW5kZWRfcXVlcnkYASABKAgSGwoTcGlubmVkX3Jlc3VsdF9jb3Vu",
+            "dBgCIAEoAzL1AwoNU2VhcmNoU2VydmljZRKPAwoGU2VhcmNoEi4uZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXF1ZXN0Gi8uZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hSZXNwb25zZSKj",
+            "AoLT5JMCnAIiUC92MS97c2VydmluZ19jb25maWc9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9kYXRhU3RvcmVzLyovc2VydmluZ0NvbmZpZ3MvKn06c2VhcmNo",
+            "OgEqWmMiXi92MS97c2VydmluZ19jb25maWc9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9zZXJ2aW5nQ29uZmln",
+            "cy8qfTpzZWFyY2g6ASpaYCJbL3YxL3tzZXJ2aW5nX2NvbmZpZz1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZW5naW5lcy8qL3NlcnZp",
+            "bmdDb25maWdzLyp9OnNlYXJjaDoBKhpSykEeZGlzY292ZXJ5ZW5naW5lLmdv",
+            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybUKFAgojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjFCElNlYXJjaFNlcnZpY2VQcm90b1ABWk1jbG91ZC5nb29n",
+            "bGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3Zlcnllbmdp",
+            "bmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dv",
+            "b2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRc",
+            "RGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5",
+            "RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Parser, new[]{ "ServingConfig", "Branch", "Query", "ImageQuery", "PageSize", "PageToken", "Offset", "Filter", "OrderBy", "UserInfo", "FacetSpecs", "BoostSpec", "Params", "QueryExpansionSpec", "SpellCorrectionSpec", "UserPseudoId", "ContentSearchSpec", "SafeSearch", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery.Parser, new[]{ "ImageBytes" }, new[]{ "Image" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Parser, new[]{ "ServingConfig", "Branch", "Query", "ImageQuery", "PageSize", "PageToken", "Offset", "Filter", "CanonicalFilter", "OrderBy", "UserInfo", "FacetSpecs", "BoostSpec", "Params", "QueryExpansionSpec", "SpellCorrectionSpec", "UserPseudoId", "ContentSearchSpec", "SafeSearch", "UserLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ImageQuery.Parser, new[]{ "ImageBytes" }, new[]{ "Image" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Parser, new[]{ "FacetKey", "Limit", "ExcludedFilterKeys", "EnableDynamicPosition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Types.FacetKey), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.FacetSpec.Types.FacetKey.Parser, new[]{ "Key", "Intervals", "RestrictedValues", "Prefixes", "Contains", "CaseInsensitive", "OrderBy" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Parser, new[]{ "ConditionBoostSpecs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec.Parser, new[]{ "Condition", "Boost" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec.Parser, new[]{ "Condition", "PinUnexpandedResults" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.QueryExpansionSpec.Types.Condition) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.SpellCorrectionSpec.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Parser, new[]{ "SnippetSpec", "SummarySpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SnippetSpec.Parser, new[]{ "MaxSnippetCount", "ReferenceOnly", "ReturnSnippet" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Parser, new[]{ "SummaryResultCount", "IncludeCitations", "IgnoreAdversarialQuery", "IgnoreNonSummarySeekingQuery", "LanguageCode" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Parser, new[]{ "SummaryResultCount", "IncludeCitations", "IgnoreAdversarialQuery", "IgnoreNonSummarySeekingQuery", "ModelPromptSpec", "LanguageCode", "ModelSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec.Parser, new[]{ "Preamble" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec), global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec.Parser, new[]{ "Version" }, null, null, null, null)})}),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "AttributionToken", "RedirectUri", "NextPageToken", "CorrectedQuery", "Summary", "QueryExpansionInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Parser, new[]{ "Key", "Values", "DynamicFacet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Types.FacetValue), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Facet.Types.FacetValue.Parser, new[]{ "Value", "Interval", "Count" }, new[]{ "FacetValue" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Parser, new[]{ "SummaryText", "SummarySkippedReasons", "SafetyAttributes" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummarySkippedReason) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes.Parser, new[]{ "Categories", "Scores" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Parser, new[]{ "SummaryText", "SummarySkippedReasons", "SafetyAttributes", "SummaryWithMetadata" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummarySkippedReason) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes.Parser, new[]{ "Categories", "Scores" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata.Parser, new[]{ "Citations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation.Parser, new[]{ "StartIndex", "EndIndex", "Sources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource.Parser, new[]{ "ReferenceIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference.Parser, new[]{ "Title", "Document", "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata.Parser, new[]{ "Summary", "CitationMetadata", "References" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.QueryExpansionInfo.Parser, new[]{ "ExpandedQuery", "PinnedResultCount" }, null, null, null, null)})
           }));
     }
@@ -206,6 +238,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       pageToken_ = other.pageToken_;
       offset_ = other.offset_;
       filter_ = other.filter_;
+      canonicalFilter_ = other.canonicalFilter_;
       orderBy_ = other.orderBy_;
       userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
       facetSpecs_ = other.facetSpecs_.Clone();
@@ -231,6 +264,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private string servingConfig_ = "";
     /// <summary>
     /// Required. The resource name of the Search serving config, such as
+    /// `projects/*/locations/global/collections/default_collection/engines/*/servingConfigs/default_serving_config`,
+    /// or
     /// `projects/*/locations/global/collections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_config`.
     /// This field is used to identify the serving configuration name, set
     /// of models used to make the search.
@@ -365,6 +400,16 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// expression is case-sensitive.
     ///
     /// If this field is unrecognizable, an  `INVALID_ARGUMENT`  is returned.
+    ///
+    /// Filtering in Vertex AI Search is done by mapping the LHS filter key to a
+    /// key property defined in the Vertex AI Search backend -- this mapping is
+    /// defined by the customer in their schema. For example a media customer might
+    /// have a field 'name' in their schema. In this case the filter would look
+    /// like this: filter --> name:'ANY("king kong")'
+    ///
+    /// For more information about filtering including syntax and filter
+    /// operators, see
+    /// [Filter](https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -375,6 +420,32 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "canonical_filter" field.</summary>
+    public const int CanonicalFilterFieldNumber = 29;
+    private string canonicalFilter_ = "";
+    /// <summary>
+    /// The default filter that is applied when a user performs a search without
+    /// checking any filters on the search page.
+    ///
+    /// The filter applied to every search request when quality improvement such as
+    /// query expansion is needed. In the case a query does not have a sufficient
+    /// amount of results this filter will be used to determine whether or not to
+    /// enable the query expansion flow. The original filter will still be used for
+    /// the query expanded search.
+    /// This field is strongly recommended to achieve high search quality.
+    ///
+    /// For more information about filter syntax, see
+    /// [SearchRequest.filter][google.cloud.discoveryengine.v1.SearchRequest.filter].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CanonicalFilter {
+      get { return canonicalFilter_; }
+      set {
+        canonicalFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "order_by" field.</summary>
     public const int OrderByFieldNumber = 8;
     private string orderBy_ = "";
@@ -382,7 +453,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// The order in which documents are returned. Documents can be ordered by
     /// a field in an [Document][google.cloud.discoveryengine.v1.Document] object.
     /// Leave it unset if ordered by relevance. `order_by` expression is
-    /// case-sensitive.
+    /// case-sensitive. For more information on ordering, see
+    /// [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order)
     ///
     /// If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
     /// </summary>
@@ -435,6 +507,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec boostSpec_;
     /// <summary>
     /// Boost specification to boost certain documents.
+    /// For more information on boosting, see
+    /// [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -457,9 +531,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///
     /// * `user_country_code`: string. Default empty. If set to non-empty, results
     ///    are restricted or boosted based on the location provided.
+    ///    Example:
+    ///    user_country_code: "au"
+    ///
+    ///    For available codes see [Country
+    ///    Codes](https://developers.google.com/custom-search/docs/json_api_reference#countryCodes)
+    ///
     /// * `search_type`: double. Default empty. Enables non-webpage searching
-    ///   depending on the value. The only valid non-default value is 1,
-    ///   which enables image searching.
+    ///    depending on the value. The only valid non-default value is 1,
+    ///    which enables image searching.
+    ///    Example:
+    ///    search_type: 1
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -611,6 +693,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (PageToken != other.PageToken) return false;
       if (Offset != other.Offset) return false;
       if (Filter != other.Filter) return false;
+      if (CanonicalFilter != other.CanonicalFilter) return false;
       if (OrderBy != other.OrderBy) return false;
       if (!object.Equals(UserInfo, other.UserInfo)) return false;
       if(!facetSpecs_.Equals(other.facetSpecs_)) return false;
@@ -637,6 +720,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (CanonicalFilter.Length != 0) hash ^= CanonicalFilter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
       hash ^= facetSpecs_.GetHashCode();
@@ -733,6 +817,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ContentSearchSpec);
       }
+      if (CanonicalFilter.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CanonicalFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -810,6 +898,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(194, 1);
         output.WriteMessage(ContentSearchSpec);
       }
+      if (CanonicalFilter.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CanonicalFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -843,6 +935,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (CanonicalFilter.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CanonicalFilter);
       }
       if (OrderBy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
@@ -909,6 +1004,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
+      }
+      if (other.CanonicalFilter.Length != 0) {
+        CanonicalFilter = other.CanonicalFilter;
       }
       if (other.OrderBy.Length != 0) {
         OrderBy = other.OrderBy;
@@ -1061,6 +1159,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(ContentSearchSpec);
             break;
           }
+          case 234: {
+            CanonicalFilter = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1168,6 +1270,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               ContentSearchSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec();
             }
             input.ReadMessage(ContentSearchSpec);
+            break;
+          }
+          case 234: {
+            CanonicalFilter = input.ReadString();
             break;
           }
         }
@@ -3769,7 +3875,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               includeCitations_ = other.includeCitations_;
               ignoreAdversarialQuery_ = other.ignoreAdversarialQuery_;
               ignoreNonSummarySeekingQuery_ = other.ignoreNonSummarySeekingQuery_;
+              modelPromptSpec_ = other.modelPromptSpec_ != null ? other.modelPromptSpec_.Clone() : null;
               languageCode_ = other.languageCode_;
+              modelSpec_ = other.modelSpec_ != null ? other.modelSpec_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -3878,12 +3986,29 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
             }
 
+            /// <summary>Field number for the "model_prompt_spec" field.</summary>
+            public const int ModelPromptSpecFieldNumber = 5;
+            private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec modelPromptSpec_;
+            /// <summary>
+            /// If specified, the spec will be used to modify the prompt provided to
+            /// the LLM.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec ModelPromptSpec {
+              get { return modelPromptSpec_; }
+              set {
+                modelPromptSpec_ = value;
+              }
+            }
+
             /// <summary>Field number for the "language_code" field.</summary>
             public const int LanguageCodeFieldNumber = 6;
             private string languageCode_ = "";
             /// <summary>
             /// Language code for Summary. Use language tags defined by
-            /// [BCP47][https://www.rfc-editor.org/rfc/bcp/bcp47.txt].
+            /// [BCP47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt).
+            /// Note: This is an experimental feature.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3891,6 +4016,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               get { return languageCode_; }
               set {
                 languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "model_spec" field.</summary>
+            public const int ModelSpecFieldNumber = 7;
+            private global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec modelSpec_;
+            /// <summary>
+            /// If specified, the spec will be used to modify the model specification
+            /// provided to the LLM.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec ModelSpec {
+              get { return modelSpec_; }
+              set {
+                modelSpec_ = value;
               }
             }
 
@@ -3913,7 +4054,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (IncludeCitations != other.IncludeCitations) return false;
               if (IgnoreAdversarialQuery != other.IgnoreAdversarialQuery) return false;
               if (IgnoreNonSummarySeekingQuery != other.IgnoreNonSummarySeekingQuery) return false;
+              if (!object.Equals(ModelPromptSpec, other.ModelPromptSpec)) return false;
               if (LanguageCode != other.LanguageCode) return false;
+              if (!object.Equals(ModelSpec, other.ModelSpec)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -3925,7 +4068,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (IncludeCitations != false) hash ^= IncludeCitations.GetHashCode();
               if (IgnoreAdversarialQuery != false) hash ^= IgnoreAdversarialQuery.GetHashCode();
               if (IgnoreNonSummarySeekingQuery != false) hash ^= IgnoreNonSummarySeekingQuery.GetHashCode();
+              if (modelPromptSpec_ != null) hash ^= ModelPromptSpec.GetHashCode();
               if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+              if (modelSpec_ != null) hash ^= ModelSpec.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -3960,9 +4105,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(32);
                 output.WriteBool(IgnoreNonSummarySeekingQuery);
               }
+              if (modelPromptSpec_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(ModelPromptSpec);
+              }
               if (LanguageCode.Length != 0) {
                 output.WriteRawTag(50);
                 output.WriteString(LanguageCode);
+              }
+              if (modelSpec_ != null) {
+                output.WriteRawTag(58);
+                output.WriteMessage(ModelSpec);
               }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
@@ -3990,9 +4143,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 output.WriteRawTag(32);
                 output.WriteBool(IgnoreNonSummarySeekingQuery);
               }
+              if (modelPromptSpec_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(ModelPromptSpec);
+              }
               if (LanguageCode.Length != 0) {
                 output.WriteRawTag(50);
                 output.WriteString(LanguageCode);
+              }
+              if (modelSpec_ != null) {
+                output.WriteRawTag(58);
+                output.WriteMessage(ModelSpec);
               }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
@@ -4016,8 +4177,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (IgnoreNonSummarySeekingQuery != false) {
                 size += 1 + 1;
               }
+              if (modelPromptSpec_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelPromptSpec);
+              }
               if (LanguageCode.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+              }
+              if (modelSpec_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelSpec);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -4043,8 +4210,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               if (other.IgnoreNonSummarySeekingQuery != false) {
                 IgnoreNonSummarySeekingQuery = other.IgnoreNonSummarySeekingQuery;
               }
+              if (other.modelPromptSpec_ != null) {
+                if (modelPromptSpec_ == null) {
+                  ModelPromptSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec();
+                }
+                ModelPromptSpec.MergeFrom(other.ModelPromptSpec);
+              }
               if (other.LanguageCode.Length != 0) {
                 LanguageCode = other.LanguageCode;
+              }
+              if (other.modelSpec_ != null) {
+                if (modelSpec_ == null) {
+                  ModelSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec();
+                }
+                ModelSpec.MergeFrom(other.ModelSpec);
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -4077,8 +4256,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     IgnoreNonSummarySeekingQuery = input.ReadBool();
                     break;
                   }
+                  case 42: {
+                    if (modelPromptSpec_ == null) {
+                      ModelPromptSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec();
+                    }
+                    input.ReadMessage(ModelPromptSpec);
+                    break;
+                  }
                   case 50: {
                     LanguageCode = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    if (modelSpec_ == null) {
+                      ModelSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec();
+                    }
+                    input.ReadMessage(ModelSpec);
                     break;
                   }
                 }
@@ -4112,14 +4305,438 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                     IgnoreNonSummarySeekingQuery = input.ReadBool();
                     break;
                   }
+                  case 42: {
+                    if (modelPromptSpec_ == null) {
+                      ModelPromptSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelPromptSpec();
+                    }
+                    input.ReadMessage(ModelPromptSpec);
+                    break;
+                  }
                   case 50: {
                     LanguageCode = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    if (modelSpec_ == null) {
+                      ModelSpec = new global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Types.ModelSpec();
+                    }
+                    input.ReadMessage(ModelSpec);
                     break;
                   }
                 }
               }
             }
             #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the SummarySpec message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Specification of the prompt to use with the model.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ModelPromptSpec : pb::IMessage<ModelPromptSpec>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ModelPromptSpec> _parser = new pb::MessageParser<ModelPromptSpec>(() => new ModelPromptSpec());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ModelPromptSpec> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelPromptSpec() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelPromptSpec(ModelPromptSpec other) : this() {
+                  preamble_ = other.preamble_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelPromptSpec Clone() {
+                  return new ModelPromptSpec(this);
+                }
+
+                /// <summary>Field number for the "preamble" field.</summary>
+                public const int PreambleFieldNumber = 1;
+                private string preamble_ = "";
+                /// <summary>
+                /// Text at the beginning of the prompt that instructs the assistant.
+                /// Examples are available in the user guide.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Preamble {
+                  get { return preamble_; }
+                  set {
+                    preamble_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ModelPromptSpec);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ModelPromptSpec other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Preamble != other.Preamble) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Preamble.Length != 0) hash ^= Preamble.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Preamble.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Preamble);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Preamble.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Preamble);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Preamble.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Preamble);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ModelPromptSpec other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Preamble.Length != 0) {
+                    Preamble = other.Preamble;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Preamble = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Preamble = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Specification of the model.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ModelSpec : pb::IMessage<ModelSpec>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ModelSpec> _parser = new pb::MessageParser<ModelSpec>(() => new ModelSpec());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ModelSpec> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.ContentSearchSpec.Types.SummarySpec.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelSpec() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelSpec(ModelSpec other) : this() {
+                  version_ = other.version_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ModelSpec Clone() {
+                  return new ModelSpec(this);
+                }
+
+                /// <summary>Field number for the "version" field.</summary>
+                public const int VersionFieldNumber = 1;
+                private string version_ = "";
+                /// <summary>
+                /// The model version used to generate the summary.
+                ///
+                /// Supported values are:
+                ///
+                /// * `stable`: string. Default value when no value is specified. Uses a
+                ///   generally available, fine-tuned version of the text-bison@001
+                ///   model.
+                /// * `preview`: string. (Public preview) Uses a fine-tuned version of
+                ///   the text-bison@002 model. This model works only for summaries in
+                ///   English.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Version {
+                  get { return version_; }
+                  set {
+                    version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ModelSpec);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ModelSpec other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Version != other.Version) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Version.Length != 0) hash ^= Version.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Version.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Version);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Version.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Version);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Version.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ModelSpec other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Version.Length != 0) {
+                    Version = other.Version;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Version = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Version = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
 
           }
 
@@ -5570,6 +6187,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           summaryText_ = other.summaryText_;
           summarySkippedReasons_ = other.summarySkippedReasons_.Clone();
           safetyAttributes_ = other.safetyAttributes_ != null ? other.safetyAttributes_.Clone() : null;
+          summaryWithMetadata_ = other.summaryWithMetadata_ != null ? other.summaryWithMetadata_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5625,6 +6243,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "summary_with_metadata" field.</summary>
+        public const int SummaryWithMetadataFieldNumber = 4;
+        private global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata summaryWithMetadata_;
+        /// <summary>
+        /// Summary with metadata information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata SummaryWithMetadata {
+          get { return summaryWithMetadata_; }
+          set {
+            summaryWithMetadata_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5643,6 +6276,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (SummaryText != other.SummaryText) return false;
           if(!summarySkippedReasons_.Equals(other.summarySkippedReasons_)) return false;
           if (!object.Equals(SafetyAttributes, other.SafetyAttributes)) return false;
+          if (!object.Equals(SummaryWithMetadata, other.SummaryWithMetadata)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5653,6 +6287,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           if (SummaryText.Length != 0) hash ^= SummaryText.GetHashCode();
           hash ^= summarySkippedReasons_.GetHashCode();
           if (safetyAttributes_ != null) hash ^= SafetyAttributes.GetHashCode();
+          if (summaryWithMetadata_ != null) hash ^= SummaryWithMetadata.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5680,6 +6315,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SafetyAttributes);
           }
+          if (summaryWithMetadata_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(SummaryWithMetadata);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5699,6 +6338,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SafetyAttributes);
           }
+          if (summaryWithMetadata_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(SummaryWithMetadata);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5715,6 +6358,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           size += summarySkippedReasons_.CalculateSize(_repeated_summarySkippedReasons_codec);
           if (safetyAttributes_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(SafetyAttributes);
+          }
+          if (summaryWithMetadata_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SummaryWithMetadata);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5737,6 +6383,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               SafetyAttributes = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes();
             }
             SafetyAttributes.MergeFrom(other.SafetyAttributes);
+          }
+          if (other.summaryWithMetadata_ != null) {
+            if (summaryWithMetadata_ == null) {
+              SummaryWithMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata();
+            }
+            SummaryWithMetadata.MergeFrom(other.SummaryWithMetadata);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5769,6 +6421,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 input.ReadMessage(SafetyAttributes);
                 break;
               }
+              case 34: {
+                if (summaryWithMetadata_ == null) {
+                  SummaryWithMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata();
+                }
+                input.ReadMessage(SummaryWithMetadata);
+                break;
+              }
             }
           }
         #endif
@@ -5798,6 +6457,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   SafetyAttributes = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SafetyAttributes();
                 }
                 input.ReadMessage(SafetyAttributes);
+                break;
+              }
+              case 34: {
+                if (summaryWithMetadata_ == null) {
+                  SummaryWithMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.SummaryWithMetadata();
+                }
+                input.ReadMessage(SummaryWithMetadata);
                 break;
               }
             }
@@ -6066,6 +6732,1207 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                   case 18:
                   case 21: {
                     scores_.AddEntriesFrom(ref input, _repeated_scores_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Citation metadata.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CitationMetadata : pb::IMessage<CitationMetadata>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CitationMetadata> _parser = new pb::MessageParser<CitationMetadata>(() => new CitationMetadata());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CitationMetadata> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationMetadata() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationMetadata(CitationMetadata other) : this() {
+              citations_ = other.citations_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationMetadata Clone() {
+              return new CitationMetadata(this);
+            }
+
+            /// <summary>Field number for the "citations" field.</summary>
+            public const int CitationsFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation> _repeated_citations_codec
+                = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation> citations_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation>();
+            /// <summary>
+            /// Citations for segments.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Citation> Citations {
+              get { return citations_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CitationMetadata);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CitationMetadata other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!citations_.Equals(other.citations_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= citations_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              citations_.WriteTo(output, _repeated_citations_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              citations_.WriteTo(ref output, _repeated_citations_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += citations_.CalculateSize(_repeated_citations_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CitationMetadata other) {
+              if (other == null) {
+                return;
+              }
+              citations_.Add(other.citations_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    citations_.AddEntriesFrom(input, _repeated_citations_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    citations_.AddEntriesFrom(ref input, _repeated_citations_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Citation info for a segment.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Citation : pb::IMessage<Citation>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Citation> _parser = new pb::MessageParser<Citation>(() => new Citation());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Citation> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Citation() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Citation(Citation other) : this() {
+              startIndex_ = other.startIndex_;
+              endIndex_ = other.endIndex_;
+              sources_ = other.sources_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Citation Clone() {
+              return new Citation(this);
+            }
+
+            /// <summary>Field number for the "start_index" field.</summary>
+            public const int StartIndexFieldNumber = 1;
+            private long startIndex_;
+            /// <summary>
+            /// Index indicates the start of the segment, measured in bytes/unicode.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long StartIndex {
+              get { return startIndex_; }
+              set {
+                startIndex_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "end_index" field.</summary>
+            public const int EndIndexFieldNumber = 2;
+            private long endIndex_;
+            /// <summary>
+            /// End of the attributed segment, exclusive.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long EndIndex {
+              get { return endIndex_; }
+              set {
+                endIndex_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "sources" field.</summary>
+            public const int SourcesFieldNumber = 3;
+            private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource> _repeated_sources_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource> sources_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource>();
+            /// <summary>
+            /// Citation sources for the attributed segment.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationSource> Sources {
+              get { return sources_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Citation);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Citation other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (StartIndex != other.StartIndex) return false;
+              if (EndIndex != other.EndIndex) return false;
+              if(!sources_.Equals(other.sources_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (StartIndex != 0L) hash ^= StartIndex.GetHashCode();
+              if (EndIndex != 0L) hash ^= EndIndex.GetHashCode();
+              hash ^= sources_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (StartIndex != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(StartIndex);
+              }
+              if (EndIndex != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EndIndex);
+              }
+              sources_.WriteTo(output, _repeated_sources_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (StartIndex != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(StartIndex);
+              }
+              if (EndIndex != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EndIndex);
+              }
+              sources_.WriteTo(ref output, _repeated_sources_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (StartIndex != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartIndex);
+              }
+              if (EndIndex != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndIndex);
+              }
+              size += sources_.CalculateSize(_repeated_sources_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Citation other) {
+              if (other == null) {
+                return;
+              }
+              if (other.StartIndex != 0L) {
+                StartIndex = other.StartIndex;
+              }
+              if (other.EndIndex != 0L) {
+                EndIndex = other.EndIndex;
+              }
+              sources_.Add(other.sources_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    StartIndex = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    EndIndex = input.ReadInt64();
+                    break;
+                  }
+                  case 26: {
+                    sources_.AddEntriesFrom(input, _repeated_sources_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    StartIndex = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    EndIndex = input.ReadInt64();
+                    break;
+                  }
+                  case 26: {
+                    sources_.AddEntriesFrom(ref input, _repeated_sources_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Citation source.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class CitationSource : pb::IMessage<CitationSource>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<CitationSource> _parser = new pb::MessageParser<CitationSource>(() => new CitationSource());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<CitationSource> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationSource() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationSource(CitationSource other) : this() {
+              referenceIndex_ = other.referenceIndex_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public CitationSource Clone() {
+              return new CitationSource(this);
+            }
+
+            /// <summary>Field number for the "reference_index" field.</summary>
+            public const int ReferenceIndexFieldNumber = 4;
+            private long referenceIndex_;
+            /// <summary>
+            /// Document reference index from SummaryWithMetadata.references.
+            /// It is 0-indexed and the value will be zero if the reference_index is
+            /// not set explicitly.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long ReferenceIndex {
+              get { return referenceIndex_; }
+              set {
+                referenceIndex_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as CitationSource);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(CitationSource other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ReferenceIndex != other.ReferenceIndex) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ReferenceIndex != 0L) hash ^= ReferenceIndex.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ReferenceIndex != 0L) {
+                output.WriteRawTag(32);
+                output.WriteInt64(ReferenceIndex);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ReferenceIndex != 0L) {
+                output.WriteRawTag(32);
+                output.WriteInt64(ReferenceIndex);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ReferenceIndex != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReferenceIndex);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(CitationSource other) {
+              if (other == null) {
+                return;
+              }
+              if (other.ReferenceIndex != 0L) {
+                ReferenceIndex = other.ReferenceIndex;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 32: {
+                    ReferenceIndex = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 32: {
+                    ReferenceIndex = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Document reference.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class Reference : pb::IMessage<Reference>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Reference> _parser = new pb::MessageParser<Reference>(() => new Reference());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Reference> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Descriptor.NestedTypes[4]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Reference() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Reference(Reference other) : this() {
+              title_ = other.title_;
+              document_ = other.document_;
+              uri_ = other.uri_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Reference Clone() {
+              return new Reference(this);
+            }
+
+            /// <summary>Field number for the "title" field.</summary>
+            public const int TitleFieldNumber = 1;
+            private string title_ = "";
+            /// <summary>
+            /// Title of the document.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Title {
+              get { return title_; }
+              set {
+                title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "document" field.</summary>
+            public const int DocumentFieldNumber = 2;
+            private string document_ = "";
+            /// <summary>
+            /// Required.
+            /// [Document.name][google.cloud.discoveryengine.v1.Document.name] of the
+            /// document. Full resource name of the referenced document, in the format
+            /// `projects/*/locations/*/collections/*/dataStores/*/branches/*/documents/*`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Document {
+              get { return document_; }
+              set {
+                document_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "uri" field.</summary>
+            public const int UriFieldNumber = 3;
+            private string uri_ = "";
+            /// <summary>
+            /// Cloud Storage or HTTP uri for the document.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Uri {
+              get { return uri_; }
+              set {
+                uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Reference);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Reference other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Title != other.Title) return false;
+              if (Document != other.Document) return false;
+              if (Uri != other.Uri) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Title.Length != 0) hash ^= Title.GetHashCode();
+              if (Document.Length != 0) hash ^= Document.GetHashCode();
+              if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Title.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Title);
+              }
+              if (Document.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Document);
+              }
+              if (Uri.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Title.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Title);
+              }
+              if (Document.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Document);
+              }
+              if (Uri.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Uri);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Title.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+              }
+              if (Document.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Document);
+              }
+              if (Uri.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Reference other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Title.Length != 0) {
+                Title = other.Title;
+              }
+              if (other.Document.Length != 0) {
+                Document = other.Document;
+              }
+              if (other.Uri.Length != 0) {
+                Uri = other.Uri;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Title = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Document = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Title = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Document = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    Uri = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Summary with metadata information.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SummaryWithMetadata : pb::IMessage<SummaryWithMetadata>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SummaryWithMetadata> _parser = new pb::MessageParser<SummaryWithMetadata>(() => new SummaryWithMetadata());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SummaryWithMetadata> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Descriptor.NestedTypes[5]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SummaryWithMetadata() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SummaryWithMetadata(SummaryWithMetadata other) : this() {
+              summary_ = other.summary_;
+              citationMetadata_ = other.citationMetadata_ != null ? other.citationMetadata_.Clone() : null;
+              references_ = other.references_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SummaryWithMetadata Clone() {
+              return new SummaryWithMetadata(this);
+            }
+
+            /// <summary>Field number for the "summary" field.</summary>
+            public const int SummaryFieldNumber = 1;
+            private string summary_ = "";
+            /// <summary>
+            /// Summary text with no citation information.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Summary {
+              get { return summary_; }
+              set {
+                summary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "citation_metadata" field.</summary>
+            public const int CitationMetadataFieldNumber = 2;
+            private global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata citationMetadata_;
+            /// <summary>
+            /// Citation metadata for given summary.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata CitationMetadata {
+              get { return citationMetadata_; }
+              set {
+                citationMetadata_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "references" field.</summary>
+            public const int ReferencesFieldNumber = 3;
+            private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference> _repeated_references_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference> references_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference>();
+            /// <summary>
+            /// Document References.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.Reference> References {
+              get { return references_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SummaryWithMetadata);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SummaryWithMetadata other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Summary != other.Summary) return false;
+              if (!object.Equals(CitationMetadata, other.CitationMetadata)) return false;
+              if(!references_.Equals(other.references_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Summary.Length != 0) hash ^= Summary.GetHashCode();
+              if (citationMetadata_ != null) hash ^= CitationMetadata.GetHashCode();
+              hash ^= references_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Summary.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Summary);
+              }
+              if (citationMetadata_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(CitationMetadata);
+              }
+              references_.WriteTo(output, _repeated_references_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Summary.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Summary);
+              }
+              if (citationMetadata_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(CitationMetadata);
+              }
+              references_.WriteTo(ref output, _repeated_references_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Summary.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Summary);
+              }
+              if (citationMetadata_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(CitationMetadata);
+              }
+              size += references_.CalculateSize(_repeated_references_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SummaryWithMetadata other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Summary.Length != 0) {
+                Summary = other.Summary;
+              }
+              if (other.citationMetadata_ != null) {
+                if (citationMetadata_ == null) {
+                  CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata();
+                }
+                CitationMetadata.MergeFrom(other.CitationMetadata);
+              }
+              references_.Add(other.references_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Summary = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (citationMetadata_ == null) {
+                      CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata();
+                    }
+                    input.ReadMessage(CitationMetadata);
+                    break;
+                  }
+                  case 26: {
+                    references_.AddEntriesFrom(input, _repeated_references_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Summary = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (citationMetadata_ == null) {
+                      CitationMetadata = new global::Google.Cloud.DiscoveryEngine.V1.SearchResponse.Types.Summary.Types.CitationMetadata();
+                    }
+                    input.ReadMessage(CitationMetadata);
+                    break;
+                  }
+                  case 26: {
+                    references_.AddEntriesFrom(ref input, _repeated_references_codec);
                     break;
                   }
                 }

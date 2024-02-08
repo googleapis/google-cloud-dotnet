@@ -840,7 +840,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// [Conversation][google.cloud.discoveryengine.v1.Conversation] to update. The
         /// following are NOT supported:
         /// 
-        /// * [conversation.name][]
+        /// * [Conversation.name][google.cloud.discoveryengine.v1.Conversation.name]
         /// 
         /// If not set or empty, all supported fields are updated.
         /// </param>
@@ -869,7 +869,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// [Conversation][google.cloud.discoveryengine.v1.Conversation] to update. The
         /// following are NOT supported:
         /// 
-        /// * [conversation.name][]
+        /// * [Conversation.name][google.cloud.discoveryengine.v1.Conversation.name]
         /// 
         /// If not set or empty, all supported fields are updated.
         /// </param>
@@ -898,7 +898,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// [Conversation][google.cloud.discoveryengine.v1.Conversation] to update. The
         /// following are NOT supported:
         /// 
-        /// * [conversation.name][]
+        /// * [Conversation.name][google.cloud.discoveryengine.v1.Conversation.name]
         /// 
         /// If not set or empty, all supported fields are updated.
         /// </param>

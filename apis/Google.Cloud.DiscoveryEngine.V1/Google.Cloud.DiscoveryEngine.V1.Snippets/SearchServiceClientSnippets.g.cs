@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 UserInfo = new UserInfo(),
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
+                CanonicalFilter = "",
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -122,6 +123,7 @@ namespace GoogleCSharpSnippets
                 UserInfo = new UserInfo(),
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
+                CanonicalFilter = "",
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);

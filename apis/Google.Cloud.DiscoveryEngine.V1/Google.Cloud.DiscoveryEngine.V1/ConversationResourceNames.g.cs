@@ -43,11 +43,21 @@ namespace Google.Cloud.DiscoveryEngine.V1
             /// .
             /// </summary>
             ProjectLocationCollectionDataStoreConversation = 2,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
+            /// .
+            /// </summary>
+            ProjectLocationCollectionEngineConversation = 3,
         }
 
         private static gax::PathTemplate s_projectLocationDataStoreConversation = new gax::PathTemplate("projects/{project}/locations/{location}/dataStores/{data_store}/conversations/{conversation}");
 
         private static gax::PathTemplate s_projectLocationCollectionDataStoreConversation = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/conversations/{conversation}");
+
+        private static gax::PathTemplate s_projectLocationCollectionEngineConversation = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}");
 
         /// <summary>Creates a <see cref="ConversationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -84,6 +94,21 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <returns>A new instance of <see cref="ConversationName"/> constructed from the provided ids.</returns>
         public static ConversationName FromProjectLocationCollectionDataStoreConversation(string projectId, string locationId, string collectionId, string dataStoreId, string conversationId) =>
             new ConversationName(ResourceNameType.ProjectLocationCollectionDataStoreConversation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), dataStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
+
+        /// <summary>
+        /// Creates a <see cref="ConversationName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="engineId">The <c>Engine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ConversationName"/> constructed from the provided ids.</returns>
+        public static ConversationName FromProjectLocationCollectionEngineConversation(string projectId, string locationId, string collectionId, string engineId, string conversationId) =>
+            new ConversationName(ResourceNameType.ProjectLocationCollectionEngineConversation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), engineId: gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConversationName"/> with pattern
@@ -135,6 +160,26 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public static string FormatProjectLocationCollectionDataStoreConversation(string projectId, string locationId, string collectionId, string dataStoreId, string conversationId) =>
             s_projectLocationCollectionDataStoreConversation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dataStoreId, nameof(dataStoreId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConversationName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="engineId">The <c>Engine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConversationName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationCollectionEngineConversation(string projectId, string locationId, string collectionId, string engineId, string conversationId) =>
+            s_projectLocationCollectionEngineConversation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="ConversationName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -148,6 +193,12 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/conversations/{conversation}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -172,6 +223,12 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/conversations/{conversation}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -204,6 +261,12 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/conversations/{conversation}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="conversationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -230,6 +293,12 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// <description>
         /// <c>
         /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/conversations/{conversation}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/conversations/{conversation}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -259,6 +328,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
                 result = FromProjectLocationCollectionDataStoreConversation(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
                 return true;
             }
+            if (s_projectLocationCollectionEngineConversation.TryParseName(conversationName, out resourceName))
+            {
+                result = FromProjectLocationCollectionEngineConversation(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(conversationName, out gax::UnparsedResourceName unparsedResourceName))
@@ -271,13 +345,14 @@ namespace Google.Cloud.DiscoveryEngine.V1
             return false;
         }
 
-        private ConversationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collectionId = null, string conversationId = null, string dataStoreId = null, string locationId = null, string projectId = null)
+        private ConversationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collectionId = null, string conversationId = null, string dataStoreId = null, string engineId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             CollectionId = collectionId;
             ConversationId = conversationId;
             DataStoreId = dataStoreId;
+            EngineId = engineId;
             LocationId = locationId;
             ProjectId = projectId;
         }
@@ -321,6 +396,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         public string DataStoreId { get; }
 
         /// <summary>
+        /// The <c>Engine</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string EngineId { get; }
+
+        /// <summary>
         /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
@@ -342,6 +422,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationDataStoreConversation: return s_projectLocationDataStoreConversation.Expand(ProjectId, LocationId, DataStoreId, ConversationId);
                 case ResourceNameType.ProjectLocationCollectionDataStoreConversation: return s_projectLocationCollectionDataStoreConversation.Expand(ProjectId, LocationId, CollectionId, DataStoreId, ConversationId);
+                case ResourceNameType.ProjectLocationCollectionEngineConversation: return s_projectLocationCollectionEngineConversation.Expand(ProjectId, LocationId, CollectionId, EngineId, ConversationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

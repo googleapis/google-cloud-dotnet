@@ -108,6 +108,200 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_CompletionService_ImportSuggestionDenyListEntries_sync",
+      "title": "ImportSuggestionDenyListEntriesRequestObject",
+      "description": "Snippet for ImportSuggestionDenyListEntries",
+      "file": "CompletionServiceClient.ImportSuggestionDenyListEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportSuggestionDenyListEntries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient.ImportSuggestionDenyListEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesResponse, Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesMetadata>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "ImportSuggestionDenyListEntries",
+          "fullName": "google.cloud.discoveryengine.v1.CompletionService.ImportSuggestionDenyListEntries",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CompletionService_ImportSuggestionDenyListEntries_async",
+      "title": "ImportSuggestionDenyListEntriesRequestObjectAsync",
+      "description": "Snippet for ImportSuggestionDenyListEntriesAsync",
+      "file": "CompletionServiceClient.ImportSuggestionDenyListEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportSuggestionDenyListEntriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient.ImportSuggestionDenyListEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesResponse, Google.Cloud.DiscoveryEngine.V1.ImportSuggestionDenyListEntriesMetadata>>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "ImportSuggestionDenyListEntries",
+          "fullName": "google.cloud.discoveryengine.v1.CompletionService.ImportSuggestionDenyListEntries",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CompletionService_PurgeSuggestionDenyListEntries_sync",
+      "title": "PurgeSuggestionDenyListEntriesRequestObject",
+      "description": "Snippet for PurgeSuggestionDenyListEntries",
+      "file": "CompletionServiceClient.PurgeSuggestionDenyListEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeSuggestionDenyListEntries",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient.PurgeSuggestionDenyListEntries",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesResponse, Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesMetadata>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeSuggestionDenyListEntries",
+          "fullName": "google.cloud.discoveryengine.v1.CompletionService.PurgeSuggestionDenyListEntries",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_CompletionService_PurgeSuggestionDenyListEntries_async",
+      "title": "PurgeSuggestionDenyListEntriesRequestObjectAsync",
+      "description": "Snippet for PurgeSuggestionDenyListEntriesAsync",
+      "file": "CompletionServiceClient.PurgeSuggestionDenyListEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeSuggestionDenyListEntriesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient.PurgeSuggestionDenyListEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesResponse, Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesMetadata>>",
+        "client": {
+          "shortName": "CompletionServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.CompletionServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeSuggestionDenyListEntries",
+          "fullName": "google.cloud.discoveryengine.v1.CompletionService.PurgeSuggestionDenyListEntries",
+          "service": {
+            "shortName": "CompletionService",
+            "fullName": "google.cloud.discoveryengine.v1.CompletionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_ConverseConversation_sync",
       "title": "ConverseConversationRequestObject",
       "description": "Snippet for ConverseConversation",
@@ -145,12 +339,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 48,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -194,12 +388,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -1804,6 +1998,1418 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_sync",
+      "title": "CreateDataStoreRequestObject",
+      "description": "Snippet for CreateDataStore",
+      "file": "DataStoreServiceClient.CreateDataStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_async",
+      "title": "CreateDataStoreRequestObjectAsync",
+      "description": "Snippet for CreateDataStoreAsync",
+      "file": "DataStoreServiceClient.CreateDataStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_sync_flattened",
+      "title": "CreateDataStore",
+      "description": "Snippet for CreateDataStore",
+      "file": "DataStoreServiceClient.CreateDataStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "System.String",
+            "name": "dataStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_async_flattened",
+      "title": "CreateDataStoreAsync",
+      "description": "Snippet for CreateDataStoreAsync",
+      "file": "DataStoreServiceClient.CreateDataStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "System.String",
+            "name": "dataStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_sync_flattened_resourceNames",
+      "title": "CreateDataStoreResourceNames",
+      "description": "Snippet for CreateDataStore",
+      "file": "DataStoreServiceClient.CreateDataStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "System.String",
+            "name": "dataStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_CreateDataStore_async_flattened_resourceNames",
+      "title": "CreateDataStoreResourceNamesAsync",
+      "description": "Snippet for CreateDataStoreAsync",
+      "file": "DataStoreServiceClient.CreateDataStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.CreateDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "System.String",
+            "name": "dataStoreId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DataStore, Google.Cloud.DiscoveryEngine.V1.CreateDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.CreateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_sync",
+      "title": "GetDataStoreRequestObject",
+      "description": "Snippet for GetDataStore",
+      "file": "DataStoreServiceClient.GetDataStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_async",
+      "title": "GetDataStoreRequestObjectAsync",
+      "description": "Snippet for GetDataStoreAsync",
+      "file": "DataStoreServiceClient.GetDataStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_sync_flattened",
+      "title": "GetDataStore",
+      "description": "Snippet for GetDataStore",
+      "file": "DataStoreServiceClient.GetDataStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_async_flattened",
+      "title": "GetDataStoreAsync",
+      "description": "Snippet for GetDataStoreAsync",
+      "file": "DataStoreServiceClient.GetDataStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_sync_flattened_resourceNames",
+      "title": "GetDataStoreResourceNames",
+      "description": "Snippet for GetDataStore",
+      "file": "DataStoreServiceClient.GetDataStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_GetDataStore_async_flattened_resourceNames",
+      "title": "GetDataStoreResourceNamesAsync",
+      "description": "Snippet for GetDataStoreAsync",
+      "file": "DataStoreServiceClient.GetDataStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.GetDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.GetDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_sync",
+      "title": "ListDataStoresRequestObject",
+      "description": "Snippet for ListDataStores",
+      "file": "DataStoreServiceClient.ListDataStoresRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListDataStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_async",
+      "title": "ListDataStoresRequestObjectAsync",
+      "description": "Snippet for ListDataStoresAsync",
+      "file": "DataStoreServiceClient.ListDataStoresRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListDataStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_sync_flattened",
+      "title": "ListDataStores",
+      "description": "Snippet for ListDataStores",
+      "file": "DataStoreServiceClient.ListDataStoresSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_async_flattened",
+      "title": "ListDataStoresAsync",
+      "description": "Snippet for ListDataStoresAsync",
+      "file": "DataStoreServiceClient.ListDataStoresAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_sync_flattened_resourceNames",
+      "title": "ListDataStoresResourceNames",
+      "description": "Snippet for ListDataStores",
+      "file": "DataStoreServiceClient.ListDataStoresResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStores",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_ListDataStores_async_flattened_resourceNames",
+      "title": "ListDataStoresResourceNamesAsync",
+      "description": "Snippet for ListDataStoresAsync",
+      "file": "DataStoreServiceClient.ListDataStoresResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDataStoresAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.ListDataStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListDataStoresResponse, Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListDataStores",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.ListDataStores",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_sync",
+      "title": "DeleteDataStoreRequestObject",
+      "description": "Snippet for DeleteDataStore",
+      "file": "DataStoreServiceClient.DeleteDataStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_async",
+      "title": "DeleteDataStoreRequestObjectAsync",
+      "description": "Snippet for DeleteDataStoreAsync",
+      "file": "DataStoreServiceClient.DeleteDataStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_sync_flattened",
+      "title": "DeleteDataStore",
+      "description": "Snippet for DeleteDataStore",
+      "file": "DataStoreServiceClient.DeleteDataStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_async_flattened",
+      "title": "DeleteDataStoreAsync",
+      "description": "Snippet for DeleteDataStoreAsync",
+      "file": "DataStoreServiceClient.DeleteDataStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_sync_flattened_resourceNames",
+      "title": "DeleteDataStoreResourceNames",
+      "description": "Snippet for DeleteDataStore",
+      "file": "DataStoreServiceClient.DeleteDataStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_DeleteDataStore_async_flattened_resourceNames",
+      "title": "DeleteDataStoreResourceNamesAsync",
+      "description": "Snippet for DeleteDataStoreAsync",
+      "file": "DataStoreServiceClient.DeleteDataStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.DeleteDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteDataStoreMetadata>>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.DeleteDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_UpdateDataStore_sync",
+      "title": "UpdateDataStoreRequestObject",
+      "description": "Snippet for UpdateDataStore",
+      "file": "DataStoreServiceClient.UpdateDataStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.UpdateDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.UpdateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_UpdateDataStore_async",
+      "title": "UpdateDataStoreRequestObjectAsync",
+      "description": "Snippet for UpdateDataStoreAsync",
+      "file": "DataStoreServiceClient.UpdateDataStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.UpdateDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateDataStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.UpdateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_UpdateDataStore_sync_flattened",
+      "title": "UpdateDataStore",
+      "description": "Snippet for UpdateDataStore",
+      "file": "DataStoreServiceClient.UpdateDataStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataStore",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.UpdateDataStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.UpdateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_DataStoreService_UpdateDataStore_async_flattened",
+      "title": "UpdateDataStoreAsync",
+      "description": "Snippet for UpdateDataStoreAsync",
+      "file": "DataStoreServiceClient.UpdateDataStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDataStoreAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient.UpdateDataStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DataStore",
+            "name": "dataStore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.DataStore>",
+        "client": {
+          "shortName": "DataStoreServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.DataStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDataStore",
+          "fullName": "google.cloud.discoveryengine.v1.DataStoreService.UpdateDataStore",
+          "service": {
+            "shortName": "DataStoreService",
+            "fullName": "google.cloud.discoveryengine.v1.DataStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_DocumentService_GetDocument_sync",
       "title": "GetDocumentRequestObject",
       "description": "Snippet for GetDocument",
@@ -3304,6 +4910,1418 @@
       ]
     },
     {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_sync",
+      "title": "CreateEngineRequestObject",
+      "description": "Snippet for CreateEngine",
+      "file": "EngineServiceClient.CreateEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_async",
+      "title": "CreateEngineRequestObjectAsync",
+      "description": "Snippet for CreateEngineAsync",
+      "file": "EngineServiceClient.CreateEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_sync_flattened",
+      "title": "CreateEngine",
+      "description": "Snippet for CreateEngine",
+      "file": "EngineServiceClient.CreateEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "System.String",
+            "name": "engineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_async_flattened",
+      "title": "CreateEngineAsync",
+      "description": "Snippet for CreateEngineAsync",
+      "file": "EngineServiceClient.CreateEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "System.String",
+            "name": "engineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_sync_flattened_resourceNames",
+      "title": "CreateEngineResourceNames",
+      "description": "Snippet for CreateEngine",
+      "file": "EngineServiceClient.CreateEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "System.String",
+            "name": "engineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_CreateEngine_async_flattened_resourceNames",
+      "title": "CreateEngineResourceNamesAsync",
+      "description": "Snippet for CreateEngineAsync",
+      "file": "EngineServiceClient.CreateEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.CreateEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "System.String",
+            "name": "engineId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Engine, Google.Cloud.DiscoveryEngine.V1.CreateEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.CreateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_sync",
+      "title": "DeleteEngineRequestObject",
+      "description": "Snippet for DeleteEngine",
+      "file": "EngineServiceClient.DeleteEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_async",
+      "title": "DeleteEngineRequestObjectAsync",
+      "description": "Snippet for DeleteEngineAsync",
+      "file": "EngineServiceClient.DeleteEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_sync_flattened",
+      "title": "DeleteEngine",
+      "description": "Snippet for DeleteEngine",
+      "file": "EngineServiceClient.DeleteEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_async_flattened",
+      "title": "DeleteEngineAsync",
+      "description": "Snippet for DeleteEngineAsync",
+      "file": "EngineServiceClient.DeleteEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_sync_flattened_resourceNames",
+      "title": "DeleteEngineResourceNames",
+      "description": "Snippet for DeleteEngine",
+      "file": "EngineServiceClient.DeleteEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_DeleteEngine_async_flattened_resourceNames",
+      "title": "DeleteEngineResourceNamesAsync",
+      "description": "Snippet for DeleteEngineAsync",
+      "file": "EngineServiceClient.DeleteEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.DeleteEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteEngineMetadata>>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.DeleteEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_UpdateEngine_sync",
+      "title": "UpdateEngineRequestObject",
+      "description": "Snippet for UpdateEngine",
+      "file": "EngineServiceClient.UpdateEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.UpdateEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Engine",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.UpdateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_UpdateEngine_async",
+      "title": "UpdateEngineRequestObjectAsync",
+      "description": "Snippet for UpdateEngineAsync",
+      "file": "EngineServiceClient.UpdateEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.UpdateEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.UpdateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_UpdateEngine_sync_flattened",
+      "title": "UpdateEngine",
+      "description": "Snippet for UpdateEngine",
+      "file": "EngineServiceClient.UpdateEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.UpdateEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Engine",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.UpdateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_UpdateEngine_async_flattened",
+      "title": "UpdateEngineAsync",
+      "description": "Snippet for UpdateEngineAsync",
+      "file": "EngineServiceClient.UpdateEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.UpdateEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Engine",
+            "name": "engine"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.UpdateEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_sync",
+      "title": "GetEngineRequestObject",
+      "description": "Snippet for GetEngine",
+      "file": "EngineServiceClient.GetEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Engine",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_async",
+      "title": "GetEngineRequestObjectAsync",
+      "description": "Snippet for GetEngineAsync",
+      "file": "EngineServiceClient.GetEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_sync_flattened",
+      "title": "GetEngine",
+      "description": "Snippet for GetEngine",
+      "file": "EngineServiceClient.GetEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Engine",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_async_flattened",
+      "title": "GetEngineAsync",
+      "description": "Snippet for GetEngineAsync",
+      "file": "EngineServiceClient.GetEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_sync_flattened_resourceNames",
+      "title": "GetEngineResourceNames",
+      "description": "Snippet for GetEngine",
+      "file": "EngineServiceClient.GetEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.Engine",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_GetEngine_async_flattened_resourceNames",
+      "title": "GetEngineResourceNamesAsync",
+      "description": "Snippet for GetEngineAsync",
+      "file": "EngineServiceClient.GetEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.GetEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetEngine",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.GetEngine",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_sync",
+      "title": "ListEnginesRequestObject",
+      "description": "Snippet for ListEngines",
+      "file": "EngineServiceClient.ListEnginesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEngines",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEngines",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListEnginesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_async",
+      "title": "ListEnginesRequestObjectAsync",
+      "description": "Snippet for ListEnginesAsync",
+      "file": "EngineServiceClient.ListEnginesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnginesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListEnginesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_sync_flattened",
+      "title": "ListEngines",
+      "description": "Snippet for ListEngines",
+      "file": "EngineServiceClient.ListEnginesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEngines",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEngines",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_async_flattened",
+      "title": "ListEnginesAsync",
+      "description": "Snippet for ListEnginesAsync",
+      "file": "EngineServiceClient.ListEnginesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnginesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_sync_flattened_resourceNames",
+      "title": "ListEnginesResourceNames",
+      "description": "Snippet for ListEngines",
+      "file": "EngineServiceClient.ListEnginesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEngines",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEngines",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_EngineService_ListEngines_async_flattened_resourceNames",
+      "title": "ListEnginesResourceNamesAsync",
+      "description": "Snippet for ListEnginesAsync",
+      "file": "EngineServiceClient.ListEnginesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEnginesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient.ListEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CollectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListEnginesResponse, Google.Cloud.DiscoveryEngine.V1.Engine>",
+        "client": {
+          "shortName": "EngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.EngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListEngines",
+          "fullName": "google.cloud.discoveryengine.v1.EngineService.ListEngines",
+          "service": {
+            "shortName": "EngineService",
+            "fullName": "google.cloud.discoveryengine.v1.EngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "discoveryengine_v1_generated_SchemaService_GetSchema_sync",
       "title": "GetSchemaRequestObject",
       "description": "Snippet for GetSchema",
@@ -4650,12 +7668,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 98,
+          "end": 99,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 96,
+          "end": 97,
           "type": "SHORT"
         }
       ]
@@ -4699,12 +7717,2269 @@
       "segments": [
         {
           "start": 20,
-          "end": 100,
+          "end": 101,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 98,
+          "end": 99,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_sync",
+      "title": "GetSiteSearchEngineRequestObject",
+      "description": "Snippet for GetSiteSearchEngine",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetSiteSearchEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_async",
+      "title": "GetSiteSearchEngineRequestObjectAsync",
+      "description": "Snippet for GetSiteSearchEngineAsync",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetSiteSearchEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_sync_flattened",
+      "title": "GetSiteSearchEngine",
+      "description": "Snippet for GetSiteSearchEngine",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_async_flattened",
+      "title": "GetSiteSearchEngineAsync",
+      "description": "Snippet for GetSiteSearchEngineAsync",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_sync_flattened_resourceNames",
+      "title": "GetSiteSearchEngineResourceNames",
+      "description": "Snippet for GetSiteSearchEngine",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngine",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetSiteSearchEngine_async_flattened_resourceNames",
+      "title": "GetSiteSearchEngineResourceNamesAsync",
+      "description": "Snippet for GetSiteSearchEngineAsync",
+      "file": "SiteSearchEngineServiceClient.GetSiteSearchEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSiteSearchEngineAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetSiteSearchEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetSiteSearchEngine",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetSiteSearchEngine",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_sync",
+      "title": "CreateTargetSiteRequestObject",
+      "description": "Snippet for CreateTargetSite",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_async",
+      "title": "CreateTargetSiteRequestObjectAsync",
+      "description": "Snippet for CreateTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_sync_flattened",
+      "title": "CreateTargetSite",
+      "description": "Snippet for CreateTargetSite",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_async_flattened",
+      "title": "CreateTargetSiteAsync",
+      "description": "Snippet for CreateTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_sync_flattened_resourceNames",
+      "title": "CreateTargetSiteResourceNames",
+      "description": "Snippet for CreateTargetSite",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateTargetSite_async_flattened_resourceNames",
+      "title": "CreateTargetSiteResourceNamesAsync",
+      "description": "Snippet for CreateTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.CreateTargetSiteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.CreateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_BatchCreateTargetSites_sync",
+      "title": "BatchCreateTargetSitesRequestObject",
+      "description": "Snippet for BatchCreateTargetSites",
+      "file": "SiteSearchEngineServiceClient.BatchCreateTargetSitesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTargetSites",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.BatchCreateTargetSites",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.BatchCreateTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_BatchCreateTargetSites_async",
+      "title": "BatchCreateTargetSitesRequestObjectAsync",
+      "description": "Snippet for BatchCreateTargetSitesAsync",
+      "file": "SiteSearchEngineServiceClient.BatchCreateTargetSitesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateTargetSitesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.BatchCreateTargetSitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.BatchCreateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.BatchCreateTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_sync",
+      "title": "GetTargetSiteRequestObject",
+      "description": "Snippet for GetTargetSite",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_async",
+      "title": "GetTargetSiteRequestObjectAsync",
+      "description": "Snippet for GetTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.GetTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_sync_flattened",
+      "title": "GetTargetSite",
+      "description": "Snippet for GetTargetSite",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_async_flattened",
+      "title": "GetTargetSiteAsync",
+      "description": "Snippet for GetTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_sync_flattened_resourceNames",
+      "title": "GetTargetSiteResourceNames",
+      "description": "Snippet for GetTargetSite",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_GetTargetSite_async_flattened_resourceNames",
+      "title": "GetTargetSiteResourceNamesAsync",
+      "description": "Snippet for GetTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.GetTargetSiteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.GetTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.GetTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_UpdateTargetSite_sync",
+      "title": "UpdateTargetSiteRequestObject",
+      "description": "Snippet for UpdateTargetSite",
+      "file": "SiteSearchEngineServiceClient.UpdateTargetSiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.UpdateTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.UpdateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_UpdateTargetSite_async",
+      "title": "UpdateTargetSiteRequestObjectAsync",
+      "description": "Snippet for UpdateTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.UpdateTargetSiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.UpdateTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.UpdateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_UpdateTargetSite_sync_flattened",
+      "title": "UpdateTargetSite",
+      "description": "Snippet for UpdateTargetSite",
+      "file": "SiteSearchEngineServiceClient.UpdateTargetSiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.UpdateTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.UpdateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_UpdateTargetSite_async_flattened",
+      "title": "UpdateTargetSiteAsync",
+      "description": "Snippet for UpdateTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.UpdateTargetSiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.UpdateTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSite",
+            "name": "targetSite"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.TargetSite, Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.UpdateTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_sync",
+      "title": "DeleteTargetSiteRequestObject",
+      "description": "Snippet for DeleteTargetSite",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_async",
+      "title": "DeleteTargetSiteRequestObjectAsync",
+      "description": "Snippet for DeleteTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_sync_flattened",
+      "title": "DeleteTargetSite",
+      "description": "Snippet for DeleteTargetSite",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_async_flattened",
+      "title": "DeleteTargetSiteAsync",
+      "description": "Snippet for DeleteTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_sync_flattened_resourceNames",
+      "title": "DeleteTargetSiteResourceNames",
+      "description": "Snippet for DeleteTargetSite",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSite",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteTargetSite_async_flattened_resourceNames",
+      "title": "DeleteTargetSiteResourceNamesAsync",
+      "description": "Snippet for DeleteTargetSiteAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteTargetSiteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTargetSiteAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteTargetSiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.TargetSiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTargetSite",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteTargetSite",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_sync",
+      "title": "ListTargetSitesRequestObject",
+      "description": "Snippet for ListTargetSites",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSites",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSites",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_async",
+      "title": "ListTargetSitesRequestObjectAsync",
+      "description": "Snippet for ListTargetSitesAsync",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSitesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.ListTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_sync_flattened",
+      "title": "ListTargetSites",
+      "description": "Snippet for ListTargetSites",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSites",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSites",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_async_flattened",
+      "title": "ListTargetSitesAsync",
+      "description": "Snippet for ListTargetSitesAsync",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSitesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_sync_flattened_resourceNames",
+      "title": "ListTargetSitesResourceNames",
+      "description": "Snippet for ListTargetSites",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSites",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSites",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_ListTargetSites_async_flattened_resourceNames",
+      "title": "ListTargetSitesResourceNamesAsync",
+      "description": "Snippet for ListTargetSitesAsync",
+      "file": "SiteSearchEngineServiceClient.ListTargetSitesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTargetSitesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.ListTargetSitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.ListTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_EnableAdvancedSiteSearch_sync",
+      "title": "EnableAdvancedSiteSearchRequestObject",
+      "description": "Snippet for EnableAdvancedSiteSearch",
+      "file": "SiteSearchEngineServiceClient.EnableAdvancedSiteSearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableAdvancedSiteSearch",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.EnableAdvancedSiteSearch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchResponse, Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "EnableAdvancedSiteSearch",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.EnableAdvancedSiteSearch",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_EnableAdvancedSiteSearch_async",
+      "title": "EnableAdvancedSiteSearchRequestObjectAsync",
+      "description": "Snippet for EnableAdvancedSiteSearchAsync",
+      "file": "SiteSearchEngineServiceClient.EnableAdvancedSiteSearchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableAdvancedSiteSearchAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.EnableAdvancedSiteSearchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchResponse, Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "EnableAdvancedSiteSearch",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.EnableAdvancedSiteSearch",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DisableAdvancedSiteSearch_sync",
+      "title": "DisableAdvancedSiteSearchRequestObject",
+      "description": "Snippet for DisableAdvancedSiteSearch",
+      "file": "SiteSearchEngineServiceClient.DisableAdvancedSiteSearchRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAdvancedSiteSearch",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DisableAdvancedSiteSearch",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchResponse, Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DisableAdvancedSiteSearch",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DisableAdvancedSiteSearch",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DisableAdvancedSiteSearch_async",
+      "title": "DisableAdvancedSiteSearchRequestObjectAsync",
+      "description": "Snippet for DisableAdvancedSiteSearchAsync",
+      "file": "SiteSearchEngineServiceClient.DisableAdvancedSiteSearchRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableAdvancedSiteSearchAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DisableAdvancedSiteSearchAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchResponse, Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DisableAdvancedSiteSearch",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DisableAdvancedSiteSearch",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_RecrawlUris_sync",
+      "title": "RecrawlUrisRequestObject",
+      "description": "Snippet for RecrawlUris",
+      "file": "SiteSearchEngineServiceClient.RecrawlUrisRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecrawlUris",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.RecrawlUris",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.RecrawlUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.RecrawlUrisResponse, Google.Cloud.DiscoveryEngine.V1.RecrawlUrisMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "RecrawlUris",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.RecrawlUris",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_RecrawlUris_async",
+      "title": "RecrawlUrisRequestObjectAsync",
+      "description": "Snippet for RecrawlUrisAsync",
+      "file": "SiteSearchEngineServiceClient.RecrawlUrisRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecrawlUrisAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.RecrawlUrisAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.RecrawlUrisRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.RecrawlUrisResponse, Google.Cloud.DiscoveryEngine.V1.RecrawlUrisMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "RecrawlUris",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.RecrawlUris",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_BatchVerifyTargetSites_sync",
+      "title": "BatchVerifyTargetSitesRequestObject",
+      "description": "Snippet for BatchVerifyTargetSites",
+      "file": "SiteSearchEngineServiceClient.BatchVerifyTargetSitesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchVerifyTargetSites",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.BatchVerifyTargetSites",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchVerifyTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.BatchVerifyTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_BatchVerifyTargetSites_async",
+      "title": "BatchVerifyTargetSitesRequestObjectAsync",
+      "description": "Snippet for BatchVerifyTargetSitesAsync",
+      "file": "SiteSearchEngineServiceClient.BatchVerifyTargetSitesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchVerifyTargetSitesAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.BatchVerifyTargetSitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesResponse, Google.Cloud.DiscoveryEngine.V1.BatchVerifyTargetSitesMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchVerifyTargetSites",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.BatchVerifyTargetSites",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchDomainVerificationStatus_sync",
+      "title": "FetchDomainVerificationStatusRequestObject",
+      "description": "Snippet for FetchDomainVerificationStatus",
+      "file": "SiteSearchEngineServiceClient.FetchDomainVerificationStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDomainVerificationStatus",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchDomainVerificationStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.FetchDomainVerificationStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DiscoveryEngine.V1.FetchDomainVerificationStatusResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchDomainVerificationStatus",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchDomainVerificationStatus",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchDomainVerificationStatus_async",
+      "title": "FetchDomainVerificationStatusRequestObjectAsync",
+      "description": "Snippet for FetchDomainVerificationStatusAsync",
+      "file": "SiteSearchEngineServiceClient.FetchDomainVerificationStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchDomainVerificationStatusAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchDomainVerificationStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.FetchDomainVerificationStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DiscoveryEngine.V1.FetchDomainVerificationStatusResponse, Google.Cloud.DiscoveryEngine.V1.TargetSite>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchDomainVerificationStatus",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchDomainVerificationStatus",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
           "type": "SHORT"
         }
       ]
