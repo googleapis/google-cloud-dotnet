@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.0.0-alpha16, released 2024-02-08
+
+### New features
+
+- Add `GetCalculatedMetric`, `CreateCalculatedMetric`, `ListCalculatedMetrics`, `UpdateCalculatedMetric`, `DeleteCalculatedMetric` methods to the Admin API v1alpha ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `CALCULATED_METRIC` option to the `ChangeHistoryResourceType` enum ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `calculated_metric` field to the `ChangeHistoryResource.resource` oneof field ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `CalculatedMetric` resource ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+
 ## Version 2.0.0-alpha15, released 2024-01-08
 
 ### Bug fixes
