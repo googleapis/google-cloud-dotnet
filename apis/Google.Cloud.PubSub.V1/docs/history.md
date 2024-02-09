@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.10.0-beta01, released 2024-02-09
+
+### New features
+
+- Add enforce_in_transit fields and optional annotations ([commit 43c6cd3](https://github.com/googleapis/google-cloud-dotnet/commit/43c6cd3d59c575deed21a1b9de81de66ed6eeee1))
+- Add `ingestion_data_source_settings` field to `Topic` ([commit 06f6c30](https://github.com/googleapis/google-cloud-dotnet/commit/06f6c303967d7c433041f7f8c659fe85285eaded))
+
 ## Version 3.9.1, released 2024-01-03
 
 ### Bug fixes
