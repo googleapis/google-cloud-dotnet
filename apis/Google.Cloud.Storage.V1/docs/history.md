@@ -1,5 +1,12 @@
 # Version history
 
+## Version 4.8.0, released 2024-02-09
+
+### New features
+
+- Support the include folders option for listing objects. ([commit 28b9cb6](https://github.com/googleapis/google-cloud-dotnet/commit/28b9cb6c01105763b1564811e4d41d412f82fdac))
+- Add support for the Firebase Storage emulator ([commit a454073](https://github.com/googleapis/google-cloud-dotnet/commit/a454073e1264092ab5c8ae7c8f1420e14216c7c4))
+
 ## Version 4.7.0, released 2023-10-31
 
 No API surface changes; just dependency updates.
