@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.11.0, released 2024-02-09
+
+### New features
+
+- Expose model_type in v1 processor, so that user can see the model_type after get or list processor version ([commit 307fadd](https://github.com/googleapis/google-cloud-dotnet/commit/307fadd18a9a0e4c8ae7184061b6d6fd4a90f295))
+
+### Documentation improvements
+
+- Clarify Properties documentation ([commit 89e17b5](https://github.com/googleapis/google-cloud-dotnet/commit/89e17b50c34e72c421ac3eebb0b2078f009ea066))
+- Updated comments ([commit 86a7453](https://github.com/googleapis/google-cloud-dotnet/commit/86a745358ae56aac9b878ad0e68560210b1e3bc7))
+- Minor comment update ([commit 4c3b325](https://github.com/googleapis/google-cloud-dotnet/commit/4c3b3257925feb320332f19764bf4a6c75a5cbc8))
+
 ## Version 3.10.0, released 2023-09-26
 
 ### Bug fixes
