@@ -24,11 +24,11 @@ public class ConfigurationSnippets
     // Note: If you change this sample, please also change the sample
     // in Google.Cloud.Language.V1.Snippets.
     [Fact]
-    public void LanguageApiKey_Simple()
+    public void ApiKey_Simple()
     {
         string apiKey = "some-api-key";
 
-        // Sample: ApiKey
+        // Sample: ApiKey_Simple
         // Create a LanguageServiceClient which uses the given API key
         // instead of regular credentials.
         LanguageServiceClient client = new LanguageServiceClientBuilder
@@ -41,11 +41,11 @@ public class ConfigurationSnippets
     }
 
     [Fact]
-    public void LanguageApiKey_Manual()
+    public void ApiKey_Manual()
     {
         string apiKey = "some-api-key";
 
-        // Sample: ApiKey
+        // Sample: ApiKey_Manual
         // Create a LanguageServiceSettings that applies the X-Goog-Api-Key
         // header on every request
         LanguageServiceSettings settings = new LanguageServiceSettings
