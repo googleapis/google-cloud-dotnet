@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.4.0, released 2024-02-09
+
+### New features
+
+- Added option for user to set labels ([commit 75fe94f](https://github.com/googleapis/google-cloud-dotnet/commit/75fe94fea8db8bcc6802314592f3fa42acf02c86))
+
+### Documentation improvements
+
+- Updated various comments ([commit 75fe94f](https://github.com/googleapis/google-cloud-dotnet/commit/75fe94fea8db8bcc6802314592f3fa42acf02c86))
+
 ## Version 3.3.0, released 2023-01-11
 
 This is primarily a promotion of the previous beta, which includes
