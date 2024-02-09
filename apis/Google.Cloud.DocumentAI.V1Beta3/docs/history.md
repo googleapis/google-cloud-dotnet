@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta14, released 2024-02-09
+
+### New features
+
+- Add model_type in v1beta3 processor proto ([commit ec4dfb3](https://github.com/googleapis/google-cloud-dotnet/commit/ec4dfb38e20d9892acbdd5b3965b3846e18392a6))
+
 ## Version 2.0.0-beta13, released 2023-09-26
 
 ### New features
