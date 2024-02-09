@@ -68,9 +68,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZWRJbmRleEF1dGhDb25maWcSVwoNYXV0aF9wcm92aWRlchgBIAEoCzJALmdv",
             "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveWVkSW5kZXhBdXRoQ29u",
             "ZmlnLkF1dGhQcm92aWRlcho6CgxBdXRoUHJvdmlkZXISEQoJYXVkaWVuY2Vz",
-            "GAEgAygJEhcKD2FsbG93ZWRfaXNzdWVycxgCIAMoCSJZChVJbmRleFByaXZh",
-            "dGVFbmRwb2ludHMSHwoSbWF0Y2hfZ3JwY19hZGRyZXNzGAEgASgJQgPgQQMS",
-            "HwoSc2VydmljZV9hdHRhY2htZW50GAIgASgJQgPgQQNC0AEKHmNvbS5nb29n",
+            "GAEgAygJEhcKD2FsbG93ZWRfaXNzdWVycxgCIAMoCSKyAQoVSW5kZXhQcml2",
+            "YXRlRW5kcG9pbnRzEh8KEm1hdGNoX2dycGNfYWRkcmVzcxgBIAEoCUID4EED",
+            "Eh8KEnNlcnZpY2VfYXR0YWNobWVudBgCIAEoCUID4EEDElcKF3BzY19hdXRv",
+            "bWF0ZWRfZW5kcG9pbnRzGAMgAygLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuUHNjQXV0b21hdGVkRW5kcG9pbnRzQgPgQQNC0AEKHmNvbS5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUISSW5kZXhFbmRwb2ludFByb3RvUAFa",
             "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
             "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
@@ -82,7 +84,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexEndpoint), global::Google.Cloud.AIPlatform.V1.IndexEndpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedIndexes", "Etag", "Labels", "CreateTime", "UpdateTime", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "PublicEndpointEnabled", "PublicEndpointDomainName", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedIndex), global::Google.Cloud.AIPlatform.V1.DeployedIndex.Parser, new[]{ "Id", "Index", "DisplayName", "CreateTime", "PrivateEndpoints", "IndexSyncTime", "AutomaticResources", "DedicatedResources", "EnableAccessLogging", "DeployedIndexAuthConfig", "ReservedIpRanges", "DeploymentGroup" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedIndexAuthConfig), global::Google.Cloud.AIPlatform.V1.DeployedIndexAuthConfig.Parser, new[]{ "AuthProvider" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedIndexAuthConfig.Types.AuthProvider), global::Google.Cloud.AIPlatform.V1.DeployedIndexAuthConfig.Types.AuthProvider.Parser, new[]{ "Audiences", "AllowedIssuers" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexPrivateEndpoints), global::Google.Cloud.AIPlatform.V1.IndexPrivateEndpoints.Parser, new[]{ "MatchGrpcAddress", "ServiceAttachment" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IndexPrivateEndpoints), global::Google.Cloud.AIPlatform.V1.IndexPrivateEndpoints.Parser, new[]{ "MatchGrpcAddress", "ServiceAttachment", "PscAutomatedEndpoints" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2096,6 +2098,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public IndexPrivateEndpoints(IndexPrivateEndpoints other) : this() {
       matchGrpcAddress_ = other.matchGrpcAddress_;
       serviceAttachment_ = other.serviceAttachment_;
+      pscAutomatedEndpoints_ = other.pscAutomatedEndpoints_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2136,6 +2139,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "psc_automated_endpoints" field.</summary>
+    public const int PscAutomatedEndpointsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints> _repeated_pscAutomatedEndpoints_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints> pscAutomatedEndpoints_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints>();
+    /// <summary>
+    /// Output only. PscAutomatedEndpoints is populated if private service connect
+    /// is enabled if PscAutomatedConfig is set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints> PscAutomatedEndpoints {
+      get { return pscAutomatedEndpoints_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2153,6 +2171,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (MatchGrpcAddress != other.MatchGrpcAddress) return false;
       if (ServiceAttachment != other.ServiceAttachment) return false;
+      if(!pscAutomatedEndpoints_.Equals(other.pscAutomatedEndpoints_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2162,6 +2181,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (MatchGrpcAddress.Length != 0) hash ^= MatchGrpcAddress.GetHashCode();
       if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
+      hash ^= pscAutomatedEndpoints_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2188,6 +2208,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAttachment);
       }
+      pscAutomatedEndpoints_.WriteTo(output, _repeated_pscAutomatedEndpoints_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2206,6 +2227,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(ServiceAttachment);
       }
+      pscAutomatedEndpoints_.WriteTo(ref output, _repeated_pscAutomatedEndpoints_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2222,6 +2244,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAttachment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
       }
+      size += pscAutomatedEndpoints_.CalculateSize(_repeated_pscAutomatedEndpoints_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2240,6 +2263,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.ServiceAttachment.Length != 0) {
         ServiceAttachment = other.ServiceAttachment;
       }
+      pscAutomatedEndpoints_.Add(other.pscAutomatedEndpoints_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2263,6 +2287,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             ServiceAttachment = input.ReadString();
             break;
           }
+          case 26: {
+            pscAutomatedEndpoints_.AddEntriesFrom(input, _repeated_pscAutomatedEndpoints_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2284,6 +2312,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             ServiceAttachment = input.ReadString();
+            break;
+          }
+          case 26: {
+            pscAutomatedEndpoints_.AddEntriesFrom(ref input, _repeated_pscAutomatedEndpoints_codec);
             break;
           }
         }

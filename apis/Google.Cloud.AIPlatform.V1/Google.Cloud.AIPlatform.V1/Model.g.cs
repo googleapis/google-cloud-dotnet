@@ -103,21 +103,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             "A+BBBRI9Cg1zdGFydHVwX3Byb2JlGAwgASgLMiEuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjEuUHJvYmVCA+BBBRI8CgxoZWFsdGhfcHJvYmUYDSABKAsy",
             "IS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9iZUID4EEFIh4KBFBv",
-            "cnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUiggIKD01vZGVsU291cmNlSW5m",
+            "cnQSFgoOY29udGFpbmVyX3BvcnQYAyABKAUikwIKD01vZGVsU291cmNlSW5m",
             "bxJQCgtzb3VyY2VfdHlwZRgBIAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxLk1vZGVsU291cmNlSW5mby5Nb2RlbFNvdXJjZVR5cGUSDAoEY29w",
-            "eRgCIAEoCCKOAQoPTW9kZWxTb3VyY2VUeXBlEiEKHU1PREVMX1NPVVJDRV9U",
+            "eRgCIAEoCCKfAQoPTW9kZWxTb3VyY2VUeXBlEiEKHU1PREVMX1NPVVJDRV9U",
             "WVBFX1VOU1BFQ0lGSUVEEAASCgoGQVVUT01MEAESCgoGQ1VTVE9NEAISCAoE",
             "QlFNTBADEhAKDE1PREVMX0dBUkRFThAEEgkKBUdFTklFEAUSGQoVQ1VTVE9N",
-            "X1RFWFRfRU1CRURESU5HEAYiowEKBVByb2JlEjwKBGV4ZWMYASABKAsyLC5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9iZS5FeGVjQWN0aW9uSAAS",
-            "FgoOcGVyaW9kX3NlY29uZHMYAiABKAUSFwoPdGltZW91dF9zZWNvbmRzGAMg",
-            "ASgFGh0KCkV4ZWNBY3Rpb24SDwoHY29tbWFuZBgBIAMoCUIMCgpwcm9iZV90",
-            "eXBlQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCCk1vZGVs",
-            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYx",
-            "L2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQ",
-            "bGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29v",
-            "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "X1RFWFRfRU1CRURESU5HEAYSDwoLTUFSS0VUUExBQ0UQByKjAQoFUHJvYmUS",
+            "PAoEZXhlYxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBy",
+            "b2JlLkV4ZWNBY3Rpb25IABIWCg5wZXJpb2Rfc2Vjb25kcxgCIAEoBRIXCg90",
+            "aW1lb3V0X3NlY29uZHMYAyABKAUaHQoKRXhlY0FjdGlvbhIPCgdjb21tYW5k",
+            "GAEgAygJQgwKCnByb2JlX3R5cGVCyAEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MUIKTW9kZWxQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
+            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
+            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
+            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -462,7 +463,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// deploying this Model. The specification is ingested upon
     /// [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel],
     /// and all binaries it contains are copied and stored internally by Vertex AI.
-    /// Not present for AutoML Models or Large Models.
+    /// Not required for AutoML Models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -478,7 +479,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string artifactUri_ = "";
     /// <summary>
     /// Immutable. The path to the directory containing the Model artifact and any
-    /// of its supporting files. Not present for AutoML Models or Large Models.
+    /// of its supporting files. Not required for AutoML Models.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -792,7 +793,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.ModelSourceInfo modelSourceInfo_;
     /// <summary>
     /// Output only. Source of a model. It can either be automl training pipeline,
-    /// custom training pipeline, BigQuery ML, or existing Vertex AI Model.
+    /// custom training pipeline, BigQuery ML, or saved and tuned from Genie or
+    /// Model Garden.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4388,6 +4390,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public static partial class Types {
       /// <summary>
       /// Source of the model.
+      /// Different from `objective` field, this `ModelSourceType` enum
+      /// indicates the source from which the model was accessed or obtained,
+      /// whereas the `objective` indicates the overall aim or function of this
+      /// model.
       /// </summary>
       public enum ModelSourceType {
         /// <summary>
@@ -4418,6 +4424,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Model is uploaded by text embedding finetuning pipeline.
         /// </summary>
         [pbr::OriginalName("CUSTOM_TEXT_EMBEDDING")] CustomTextEmbedding = 6,
+        /// <summary>
+        /// The Model is saved or tuned from Marketplace.
+        /// </summary>
+        [pbr::OriginalName("MARKETPLACE")] Marketplace = 7,
       }
 
     }
