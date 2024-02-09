@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2024-02-09
+
+### Bug fixes
+
+- Extend timeouts for deleting snapshots, backups and tables ([commit b6d9f8f](https://github.com/googleapis/google-cloud-dotnet/commit/b6d9f8fbf570108511cd7c46bb47f099d45b7a20))
+
 ## Version 3.8.0, released 2024-01-08
 
 ### New features
