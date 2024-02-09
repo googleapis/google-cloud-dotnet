@@ -911,6 +911,7 @@ namespace GoogleCSharpSnippets
                 {
                     new gcav::IndexDatapoint(),
                 },
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             gcav::UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);
@@ -932,6 +933,7 @@ namespace GoogleCSharpSnippets
                 {
                     new gcav::IndexDatapoint(),
                 },
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             gcav::UpsertDatapointsResponse response = await indexServiceClient.UpsertDatapointsAsync(request);

@@ -84,16 +84,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXhlY3V0b3JfaW1hZ2VfdXJpGAEgASgJQgPgQQISGQoMcGFja2FnZV91cmlz",
             "GAIgAygJQgPgQQISGgoNcHl0aG9uX21vZHVsZRgDIAEoCUID4EECEgwKBGFy",
             "Z3MYBCADKAkSLwoDZW52GAUgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuRW52VmFyIrgBCgpTY2hlZHVsaW5nEioKB3RpbWVvdXQYASABKAsy",
-            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SJQodcmVzdGFydF9qb2Jfb25f",
-            "d29ya2VyX3Jlc3RhcnQYAyABKAgSHAoPZGlzYWJsZV9yZXRyaWVzGAUgASgI",
-            "QgPgQQESOQoRbWF4X3dhaXRfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25CA+BBAULMAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxQg5DdXN0b21Kb2JQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWIGcHJvdG8z"));
+            "cm0udjEuRW52VmFyIn0KClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9vbl93",
+            "b3JrZXJfcmVzdGFydBgDIAEoCBIcCg9kaXNhYmxlX3JldHJpZXMYBSABKAhC",
+            "A+BBAULMAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg5DdXN0",
+            "b21Kb2JQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91",
+            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
+            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,7 +100,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "DisableRetries", "MaxWaitDuration" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "DisableRetries" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2680,7 +2678,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       restartJobOnWorkerRestart_ = other.restartJobOnWorkerRestart_;
       disableRetries_ = other.disableRetries_;
-      maxWaitDuration_ = other.maxWaitDuration_ != null ? other.maxWaitDuration_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2739,22 +2736,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
-    /// <summary>Field number for the "max_wait_duration" field.</summary>
-    public const int MaxWaitDurationFieldNumber = 6;
-    private global::Google.Protobuf.WellKnownTypes.Duration maxWaitDuration_;
-    /// <summary>
-    /// Optional. This is the maximum time a user will wait in the QRM queue for
-    /// resources. Default is 1 day
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Duration MaxWaitDuration {
-      get { return maxWaitDuration_; }
-      set {
-        maxWaitDuration_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2773,7 +2754,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (RestartJobOnWorkerRestart != other.RestartJobOnWorkerRestart) return false;
       if (DisableRetries != other.DisableRetries) return false;
-      if (!object.Equals(MaxWaitDuration, other.MaxWaitDuration)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2784,7 +2764,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (RestartJobOnWorkerRestart != false) hash ^= RestartJobOnWorkerRestart.GetHashCode();
       if (DisableRetries != false) hash ^= DisableRetries.GetHashCode();
-      if (maxWaitDuration_ != null) hash ^= MaxWaitDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2815,10 +2794,6 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
       }
-      if (maxWaitDuration_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(MaxWaitDuration);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2841,10 +2816,6 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(40);
         output.WriteBool(DisableRetries);
       }
-      if (maxWaitDuration_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(MaxWaitDuration);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2863,9 +2834,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (DisableRetries != false) {
         size += 1 + 1;
-      }
-      if (maxWaitDuration_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaxWaitDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2890,12 +2858,6 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.DisableRetries != false) {
         DisableRetries = other.DisableRetries;
-      }
-      if (other.maxWaitDuration_ != null) {
-        if (maxWaitDuration_ == null) {
-          MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-        }
-        MaxWaitDuration.MergeFrom(other.MaxWaitDuration);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2927,13 +2889,6 @@ namespace Google.Cloud.AIPlatform.V1 {
             DisableRetries = input.ReadBool();
             break;
           }
-          case 50: {
-            if (maxWaitDuration_ == null) {
-              MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-            }
-            input.ReadMessage(MaxWaitDuration);
-            break;
-          }
         }
       }
     #endif
@@ -2962,13 +2917,6 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 40: {
             DisableRetries = input.ReadBool();
-            break;
-          }
-          case 50: {
-            if (maxWaitDuration_ == null) {
-              MaxWaitDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
-            }
-            input.ReadMessage(MaxWaitDuration);
             break;
           }
         }

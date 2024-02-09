@@ -1400,6 +1400,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Updatable fields:
     ///
     ///   * `big_query_source`
+    ///   * `bigtable`
     ///   * `labels`
     ///   * `sync_config`
     /// </summary>
@@ -3067,6 +3068,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Updatable fields:
     ///
     ///   * `labels`
+    ///   * `serviceAgentType`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

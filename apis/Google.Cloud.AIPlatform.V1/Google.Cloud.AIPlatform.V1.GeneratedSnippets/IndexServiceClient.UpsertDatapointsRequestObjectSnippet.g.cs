@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_IndexService_UpsertDatapoints_sync]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedIndexServiceClientSnippets
     {
@@ -41,6 +42,7 @@ namespace GoogleCSharpSnippets
                 {
                     new IndexDatapoint(),
                 },
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             UpsertDatapointsResponse response = indexServiceClient.UpsertDatapoints(request);
