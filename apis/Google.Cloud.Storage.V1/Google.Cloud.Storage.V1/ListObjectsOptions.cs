@@ -23,9 +23,6 @@ namespace Google.Cloud.Storage.V1
     /// </summary>
     public sealed class ListObjectsOptions
     {
-        // TODO: We can't currently return both objects *and* prefixes. Should we have a separate ListPrefixes method?
-        // Something more complex? It's unclear how common this is.
-
         /// <summary>
         /// Used to list in "directory mode". Only objects whose names (aside from the prefix) do not contain the delimiter
         /// will be returned.
