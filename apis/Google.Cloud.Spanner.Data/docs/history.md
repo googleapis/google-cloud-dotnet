@@ -1,5 +1,38 @@
 # Version history
 
+## Version 5.0.0-beta01, released 2024-02-09
+
+### Bug fixes
+
+- Have SpannerTransaction check if it has been disposed before executing commands. ([commit c97a70a](https://github.com/googleapis/google-cloud-dotnet/commit/c97a70adaf559f68b7b980bd018485d99fa080a7))
+
+### New features
+
+- Add leader routing support. ([commit eb2157a](https://github.com/googleapis/google-cloud-dotnet/commit/eb2157ac35bff3f4424bc443b2067474755bf26c))
+- Add FLOAT32 enum to TypeCode ([commit 18e6491](https://github.com/googleapis/google-cloud-dotnet/commit/18e6491b92ee1042550bb20632acf14be52e43c0))
+- Add proto descriptors for proto and enum types in create/update/get database ddl requests ([commit 7085e3f](https://github.com/googleapis/google-cloud-dotnet/commit/7085e3fb785d8cd342145c716a80680ab5e1b98a))
+- Add max_commit_delay API ([commit 3984609](https://github.com/googleapis/google-cloud-dotnet/commit/39846090bcb63a4608f378ab340b0384bd7d892e))
+- Add proto and enum types ([commit ea75989](https://github.com/googleapis/google-cloud-dotnet/commit/ea7598963d2967bed059c897973a9e62544442d8))
+- **BREAKING CHANGE** Support inline transactions. ([#11360](https://github.com/googleapis/google-cloud-dotnet/pull/11360))
+- Add directed_read_option in spanner.proto ([commit 3b374e0](https://github.com/googleapis/google-cloud-dotnet/commit/3b374e03f91e267ad2ed52fdb5814d4be95c2ae6))
+- Add PG.OID type cod annotation ([commit a8662dc](https://github.com/googleapis/google-cloud-dotnet/commit/a8662dc1e7153f5657f64860396d3504c14cb7a0))
+- Add autoscaling config to the instance proto ([commit 07022a6](https://github.com/googleapis/google-cloud-dotnet/commit/07022a6249358c9dba35fbedebc44068e86413f0))
+- Add BatchWrite API ([commit 7a127d0](https://github.com/googleapis/google-cloud-dotnet/commit/7a127d0b59cb7a86bb4b14e489ad0f1ba2b70455))
+
+### Documentation improvements
+
+- Update the comment regarding eligible SQL shapes for PartitionQuery ([commit 1eb3d3e](https://github.com/googleapis/google-cloud-dotnet/commit/1eb3d3eca7d973633374f4e6cd56fe4a60995a63))
+- Updated comment formatting ([commit 3b374e0](https://github.com/googleapis/google-cloud-dotnet/commit/3b374e03f91e267ad2ed52fdb5814d4be95c2ae6))
+
+BREAKING CHANGE: In supporting inline transactions the main breaking change is behavioral: transactions are not prewarmed, instead they are acquired
+as needed, mainly through inlining transaction creation in the first command that attempts to use a transaction. The method
+`Google.Cloud.Spanner.V1.PooledSession.WithFreshTransactionOrNewAsync` has been removed, as a transaction is not created by the session until command execution.
+Use instead `Google.Cloud.Spanner.V1.PooledSession.RefreshedOrNewAsync` which returns a new PooledSession instance that either represents the same
+session but with no transaction associated to it or a newly acquired session. Since transactions are not prewarmed, the session pool does not need
+to distinguish between read-only and read-write session/transaction pairs. In the statistics classes that may be used for diagnostic purposes all
+properties distinguising between read-only and read-write statistics have been removed. Similarly, `Google.Cloud.Spanner.V1.SessionPoolOptions.WriteSessionsFraction`
+has bee removed.
+
 ## Version 4.6.0, released 2023-06-26
 
 ### Bug fixes
