@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.3.0, released 2024-02-09
+
+### New features
+
+- Updated description for `docker_registry` to reflect transition to Artifact Registry ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Fields for automatic runtime updates ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Additional optional parameter `version_id` added to `GetFunctionRequest` ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Reflects deprecation of `network` field ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+- Minor updates in comments throughout ([commit 9a4683f](https://github.com/googleapis/google-cloud-dotnet/commit/9a4683f9311e6e7357f63a204cd7dbef08494f24))
+
 ## Version 2.2.0, released 2023-05-11
 
 ### New features
