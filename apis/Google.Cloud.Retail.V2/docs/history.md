@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2024-02-09
+
+### New features
+
+- Add analytics service ([commit b0ce542](https://github.com/googleapis/google-cloud-dotnet/commit/b0ce542a6a76c172106f485baa007f2f514e5b04))
+
 ## Version 2.5.0, released 2023-04-12
 
 ### New features
