@@ -1,5 +1,40 @@
 # Version history
 
+## Version 2.15.0, released 2024-02-09
+
+### New features
+
+- A new field `opt_out_conformer_model_migration` is added to message `.google.cloud.dialogflow.cx.v3.InputAudioConfig` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `language_code` is added to message `.google.cloud.dialogflow.cx.v3.Changelog` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new method `ExportEntityTypes` is added to service `EntityTypes` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new method `ImportEntityTypes` is added to service `EntityTypes` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ExportEntityTypesRequest` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ExportEntityTypesResponse` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ExportEntityTypesMetadata` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ImportEntityTypesRequest` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ImportEntityTypesResponse` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new message `ImportEntityTypesMetadata` is added ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `disable_data_store_fallback` is added to message `.google.cloud.dialogflow.cx.v3.GenerativeSettings` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `description` is added to message `.google.cloud.dialogflow.cx.v3.Page` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new method `ServerStreamingDetectIntent` is added to service `Sessions` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `webhook_ids` is added to message `.google.cloud.dialogflow.cx.v3.QueryResult` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `webhook_display_names` is added to message `.google.cloud.dialogflow.cx.v3.QueryResult` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `webhook_latencies` is added to message `.google.cloud.dialogflow.cx.v3.QueryResult` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `webhook_tags` is added to message `.google.cloud.dialogflow.cx.v3.QueryResult` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A new field `current_flow` is added to message `.google.cloud.dialogflow.cx.v3.QueryResult` ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+
+### Documentation improvements
+
+- A comment for field `start_flow` in message `.google.cloud.dialogflow.cx.v3.Agent` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for enum value `USE_BEST_AVAILABLE` in enum `SpeechModelVariant` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for enum value `USE_ENHANCED` in enum `SpeechModelVariant` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for field `model` in message `.google.cloud.dialogflow.cx.v3.InputAudioConfig` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for enum value `END_OF_SINGLE_UTTERANCE` in enum `MessageType` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for field `session_ttl` in message `.google.cloud.dialogflow.cx.v3.QueryParameters` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for message `QueryInput` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- A comment for field `text` in message `.google.cloud.dialogflow.cx.v3.TextInput` is changed ([commit f21d994](https://github.com/googleapis/google-cloud-dotnet/commit/f21d994a91ab23a255f903c694e214b0ed32b4cf))
+- Fix formatting due to unclosed backtick ([commit 334ef80](https://github.com/googleapis/google-cloud-dotnet/commit/334ef80628dbb31a49d27b330749feed4fccea91))
+
 ## Version 2.14.0, released 2023-12-04
 
 ### New features
