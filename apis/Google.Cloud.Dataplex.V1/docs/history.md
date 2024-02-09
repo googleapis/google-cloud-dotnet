@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.12.0, released 2024-02-09
+
+### Documentation improvements
+
+- Fix typo in comment ([commit 84266b6](https://github.com/googleapis/google-cloud-dotnet/commit/84266b6099a52b845e28fae19300d1fa034309fc))
 ## Version 2.11.0, released 2024-01-08
 
 ### New features
