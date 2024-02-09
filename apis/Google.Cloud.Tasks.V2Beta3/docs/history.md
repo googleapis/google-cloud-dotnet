@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta04, released 2024-02-09
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove BufferTask method which cannot be called from client libraries ([commit 41c1707](https://github.com/googleapis/google-cloud-dotnet/commit/41c170792d0bb39fdceddfcee7938ebb06bb4588))
+
 ## Version 3.0.0-beta03, released 2023-08-04
 
 ### New features
