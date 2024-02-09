@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2024-02-09
+
+### New features
+
+- Add data store, engine, serving config and site search engine services ([commit b2d79e6](https://github.com/googleapis/google-cloud-dotnet/commit/b2d79e656b728a64b703dea17721df3677426421))
+- Support search summarization with citations and references ([commit b2d79e6](https://github.com/googleapis/google-cloud-dotnet/commit/b2d79e656b728a64b703dea17721df3677426421))
+- Add suggestion deny list import/purge APIs ([commit b2d79e6](https://github.com/googleapis/google-cloud-dotnet/commit/b2d79e656b728a64b703dea17721df3677426421))
+- Add engine support for multi-turn search and search APIs ([commit b2d79e6](https://github.com/googleapis/google-cloud-dotnet/commit/b2d79e656b728a64b703dea17721df3677426421))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit b2d79e6](https://github.com/googleapis/google-cloud-dotnet/commit/b2d79e656b728a64b703dea17721df3677426421))
+
 ## Version 1.0.0-beta08, released 2023-09-06
 
 ### New features
