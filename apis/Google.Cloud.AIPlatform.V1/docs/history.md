@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.23.0, released 2024-02-12
+
+Note: including a breaking change in a minor version is highly
+unusual, and violates Semantic Versioning. We have chosen to do so
+for this release, as the property in question
+(`Scheduling.MaxWaitDuration`) was introduced less than two weeks
+before this release. We don't expect this removal to affect many
+customers (if any), whereas a new major version would call for due
+diligence of *all* customers. We believe violating Semantic
+Versioning will therefore be less disruptive for customers overall.
+We do not take Semantic Versioning violations lightly, and would
+welcome feedback if this decision has caused you any problems.
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove field `max_wait_duration` from message Scheduling ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+
+### New features
+
+- Add psc_automated_endpoints to IndexPrivateEndpoints ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+- Add request_response_logging_schema_version to ModelDeploymentMonitoringBigQueryTable ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+- Add resource_title, resource_use_case, resource_description to RegionalResourceReferences ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+- Add deploy_gke, open_tine_tuning_pipelines, open_notebooks to CallToAction ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+
+### Documentation improvements
+
+- Deprecate use_case and description in ResourceReference ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+- Minor changes to comments ([commit 61d419e](https://github.com/googleapis/google-cloud-dotnet/commit/61d419ed90fb29d73368d56f898db3e74e81aaac))
+
 ## Version 2.22.0, released 2024-02-08
 
 ### New features
