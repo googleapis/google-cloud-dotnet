@@ -81,7 +81,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Empty(rows);
         }
 
-        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/11403")]
+        [Fact]
         public void ImplicitPagingWithStartIndex()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
