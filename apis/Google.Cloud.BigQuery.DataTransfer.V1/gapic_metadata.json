@@ -94,6 +94,12 @@
                 "StartManualTransferRunsAsync"
               ]
             },
+            "UnenrollDataSources": {
+              "methods": [
+                "UnenrollDataSources",
+                "UnenrollDataSourcesAsync"
+              ]
+            },
             "UpdateTransferConfig": {
               "methods": [
                 "UpdateTransferConfig",

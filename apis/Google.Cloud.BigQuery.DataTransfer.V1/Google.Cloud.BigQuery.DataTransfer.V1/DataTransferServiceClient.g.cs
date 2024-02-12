@@ -63,6 +63,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferLogsSettings = existing.ListTransferLogsSettings;
             CheckValidCredsSettings = existing.CheckValidCredsSettings;
             EnrollDataSourcesSettings = existing.EnrollDataSourcesSettings;
+            UnenrollDataSourcesSettings = existing.UnenrollDataSourcesSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -349,6 +350,19 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings EnrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.UnenrollDataSources</c> and
+        /// <c>DataTransferServiceClient.UnenrollDataSourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UnenrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2435,6 +2449,42 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task EnrollDataSourcesAsync(EnrollDataSourcesRequest request, st::CancellationToken cancellationToken) =>
             EnrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void UnenrollDataSources(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, st::CancellationToken cancellationToken) =>
+            UnenrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataTransferService client wrapper implementation, for convenient use.</summary>
@@ -2472,6 +2522,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         private readonly gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> _callCheckValidCreds;
 
         private readonly gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> _callEnrollDataSources;
+
+        private readonly gaxgrpc::ApiCall<UnenrollDataSourcesRequest, wkt::Empty> _callUnenrollDataSources;
 
         /// <summary>
         /// Constructs a client wrapper for the DataTransferService service, with the specified gRPC client and
@@ -2533,6 +2585,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             _callEnrollDataSources = clientHelper.BuildApiCall<EnrollDataSourcesRequest, wkt::Empty>("EnrollDataSources", grpcClient.EnrollDataSourcesAsync, grpcClient.EnrollDataSources, effectiveSettings.EnrollDataSourcesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEnrollDataSources);
             Modify_EnrollDataSourcesApiCall(ref _callEnrollDataSources);
+            _callUnenrollDataSources = clientHelper.BuildApiCall<UnenrollDataSourcesRequest, wkt::Empty>("UnenrollDataSources", grpcClient.UnenrollDataSourcesAsync, grpcClient.UnenrollDataSources, effectiveSettings.UnenrollDataSourcesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUnenrollDataSources);
+            Modify_UnenrollDataSourcesApiCall(ref _callUnenrollDataSources);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2567,6 +2622,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_CheckValidCredsApiCall(ref gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);
 
         partial void Modify_EnrollDataSourcesApiCall(ref gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> call);
+
+        partial void Modify_UnenrollDataSourcesApiCall(ref gaxgrpc::ApiCall<UnenrollDataSourcesRequest, wkt::Empty> call);
 
         partial void OnConstruction(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2605,6 +2662,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_CheckValidCredsRequest(ref CheckValidCredsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EnrollDataSourcesRequest(ref EnrollDataSourcesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UnenrollDataSourcesRequest(ref UnenrollDataSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a supported data source and returns its settings.
@@ -3002,6 +3061,36 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             Modify_EnrollDataSourcesRequest(ref request, ref callSettings);
             return _callEnrollDataSources.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void UnenrollDataSources(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnenrollDataSourcesRequest(ref request, ref callSettings);
+            _callUnenrollDataSources.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unenroll data sources in a user project. This allows users to remove
+        /// transfer configurations for these data sources. They will no longer appear
+        /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+        /// UI](https://console.cloud.google.com/bigquery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task UnenrollDataSourcesAsync(UnenrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnenrollDataSourcesRequest(ref request, ref callSettings);
+            return _callUnenrollDataSources.Async(request, callSettings);
         }
     }
 

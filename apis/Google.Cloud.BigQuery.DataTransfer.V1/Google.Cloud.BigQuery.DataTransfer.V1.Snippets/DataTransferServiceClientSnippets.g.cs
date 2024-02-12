@@ -2231,5 +2231,40 @@ namespace GoogleCSharpSnippets
             await dataTransferServiceClient.EnrollDataSourcesAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for UnenrollDataSources</summary>
+        public void UnenrollDataSourcesRequestObject()
+        {
+            // Snippet: UnenrollDataSources(UnenrollDataSourcesRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            UnenrollDataSourcesRequest request = new UnenrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            dataTransferServiceClient.UnenrollDataSources(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnenrollDataSourcesAsync</summary>
+        public async Task UnenrollDataSourcesRequestObjectAsync()
+        {
+            // Snippet: UnenrollDataSourcesAsync(UnenrollDataSourcesRequest, CallSettings)
+            // Additional: UnenrollDataSourcesAsync(UnenrollDataSourcesRequest, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UnenrollDataSourcesRequest request = new UnenrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            await dataTransferServiceClient.UnenrollDataSourcesAsync(request);
+            // End snippet
+        }
     }
 }
