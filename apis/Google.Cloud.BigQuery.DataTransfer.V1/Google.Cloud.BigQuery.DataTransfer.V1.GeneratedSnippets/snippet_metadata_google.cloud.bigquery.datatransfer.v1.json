@@ -4341,6 +4341,102 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "bigquerydatatransfer_v1_generated_DataTransferService_UnenrollDataSources_sync",
+      "title": "UnenrollDataSourcesRequestObject",
+      "description": "Snippet for UnenrollDataSources",
+      "file": "DataTransferServiceClient.UnenrollDataSourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnenrollDataSources",
+        "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UnenrollDataSources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UnenrollDataSources",
+          "fullName": "google.cloud.bigquery.datatransfer.v1.DataTransferService.UnenrollDataSources",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.bigquery.datatransfer.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigquerydatatransfer_v1_generated_DataTransferService_UnenrollDataSources_async",
+      "title": "UnenrollDataSourcesRequestObjectAsync",
+      "description": "Snippet for UnenrollDataSourcesAsync",
+      "file": "DataTransferServiceClient.UnenrollDataSourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnenrollDataSourcesAsync",
+        "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient.UnenrollDataSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.BigQuery.DataTransfer.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UnenrollDataSources",
+          "fullName": "google.cloud.bigquery.datatransfer.v1.DataTransferService.UnenrollDataSources",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.bigquery.datatransfer.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

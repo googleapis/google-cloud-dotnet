@@ -115,6 +115,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_EnrollDataSourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_UnenrollDataSourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> __Method_GetDataSource = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource>(
@@ -234,6 +236,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __ServiceName,
         "EnrollDataSources",
         __Marshaller_google_cloud_bigquery_datatransfer_v1_EnrollDataSourcesRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UnenrollDataSources = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UnenrollDataSources",
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_UnenrollDataSourcesRequest,
         __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -441,6 +451,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EnrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Unenroll data sources in a user project. This allows users to remove
+      /// transfer configurations for these data sources. They will no longer appear
+      /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+      /// UI](https://console.cloud.google.com/bigquery).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UnenrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1270,6 +1295,66 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_EnrollDataSources, null, options, request);
       }
+      /// <summary>
+      /// Unenroll data sources in a user project. This allows users to remove
+      /// transfer configurations for these data sources. They will no longer appear
+      /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+      /// UI](https://console.cloud.google.com/bigquery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UnenrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnenrollDataSources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unenroll data sources in a user project. This allows users to remove
+      /// transfer configurations for these data sources. They will no longer appear
+      /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+      /// UI](https://console.cloud.google.com/bigquery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty UnenrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UnenrollDataSources, null, options, request);
+      }
+      /// <summary>
+      /// Unenroll data sources in a user project. This allows users to remove
+      /// transfer configurations for these data sources. They will no longer appear
+      /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+      /// UI](https://console.cloud.google.com/bigquery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UnenrollDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnenrollDataSourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unenroll data sources in a user project. This allows users to remove
+      /// transfer configurations for these data sources. They will no longer appear
+      /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
+      /// UI](https://console.cloud.google.com/bigquery).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UnenrollDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UnenrollDataSources, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataTransferServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -1298,7 +1383,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           .AddMethod(__Method_ListTransferRuns, serviceImpl.ListTransferRuns)
           .AddMethod(__Method_ListTransferLogs, serviceImpl.ListTransferLogs)
           .AddMethod(__Method_CheckValidCreds, serviceImpl.CheckValidCreds)
-          .AddMethod(__Method_EnrollDataSources, serviceImpl.EnrollDataSources).Build();
+          .AddMethod(__Method_EnrollDataSources, serviceImpl.EnrollDataSources)
+          .AddMethod(__Method_UnenrollDataSources, serviceImpl.UnenrollDataSources).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1323,6 +1409,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       serviceBinder.AddMethod(__Method_ListTransferLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse>(serviceImpl.ListTransferLogs));
       serviceBinder.AddMethod(__Method_CheckValidCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>(serviceImpl.CheckValidCreds));
       serviceBinder.AddMethod(__Method_EnrollDataSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EnrollDataSources));
+      serviceBinder.AddMethod(__Method_UnenrollDataSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.UnenrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.UnenrollDataSources));
     }
 
   }
