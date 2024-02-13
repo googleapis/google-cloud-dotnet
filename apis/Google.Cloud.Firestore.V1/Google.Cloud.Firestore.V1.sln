@@ -3,18 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1", "Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{F9CE8ABD-FB0E-437E-B03A-27F52D7A9F9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1", "Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{F9CE8ABD-FB0E-437E-B03A-27F52D7A9F9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1.GeneratedSnippets", "Google.Cloud.Firestore.V1.GeneratedSnippets\Google.Cloud.Firestore.V1.GeneratedSnippets.csproj", "{F841636E-5304-4C09-B151-7B1DDB0618C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.GeneratedSnippets", "Google.Cloud.Firestore.V1.GeneratedSnippets\Google.Cloud.Firestore.V1.GeneratedSnippets.csproj", "{F841636E-5304-4C09-B151-7B1DDB0618C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{99487E3D-9DFC-419B-95AC-F8D5BEE8A3A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{99487E3D-9DFC-419B-95AC-F8D5BEE8A3A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1.Snippets", "Google.Cloud.Firestore.V1.Snippets\Google.Cloud.Firestore.V1.Snippets.csproj", "{4357F6C5-8599-41D7-84EF-ED59E32B54DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.Snippets", "Google.Cloud.Firestore.V1.Snippets\Google.Cloud.Firestore.V1.Snippets.csproj", "{4357F6C5-8599-41D7-84EF-ED59E32B54DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1.Tests", "Google.Cloud.Firestore.V1.Tests\Google.Cloud.Firestore.V1.Tests.csproj", "{8C638D13-3585-4344-B597-DA0EA0266688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F9CE8ABD-FB0E-437E-B03A-27F52D7A9F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,11 +38,9 @@ Global
 		{4357F6C5-8599-41D7-84EF-ED59E32B54DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4357F6C5-8599-41D7-84EF-ED59E32B54DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4357F6C5-8599-41D7-84EF-ED59E32B54DF}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A454C46B-D941-47B5-A3BD-218EC33797BE}
+		{8C638D13-3585-4344-B597-DA0EA0266688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C638D13-3585-4344-B597-DA0EA0266688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C638D13-3585-4344-B597-DA0EA0266688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C638D13-3585-4344-B597-DA0EA0266688}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

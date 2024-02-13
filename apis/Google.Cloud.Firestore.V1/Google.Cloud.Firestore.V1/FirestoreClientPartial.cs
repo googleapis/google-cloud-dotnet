@@ -54,6 +54,100 @@ namespace Google.Cloud.Firestore.V1
         [Obsolete("This header is obsolete; x-goog-request-params should now be used instead. " +
             "This constant will be removed in a future version")]
         public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+
+        partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Database);
+
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Database);
+
+        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Database);
+
+        partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Name);
+
+        partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_ListDocumentsRequest(ref ListDocumentsRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Database);
+
+        partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Parent);
+
+        partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings) =>
+            ApplyResourcePrefixHeader(ref settings, request.Document?.Name);
+
+        private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
+        {
+            // If we haven't been given a resource name, just let the request as it is.
+            if (string.IsNullOrEmpty(resource))
+            {
+                return;
+            }
+            string database = GetDatabaseResourceName(resource);
+#pragma warning disable CS0618 // Type or member is obsolete
+            settings = settings.WithHeader(ResourcePrefixHeader, database);
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+
+        // Visible for testing
+
+        /// <summary>
+        /// Retrieves the database resource name from a full resource name.
+        /// Validation is performed as far as the database ID but no further; the database ID is deemed to end at the first slash.
+        /// </summary>
+        /// <param name="resource">The resource name, which must start with projects/{project_id}/databases/{database_id}</param>
+        /// <returns>The database resource name</returns>
+        internal static string GetDatabaseResourceName(string resource)
+        {
+            const string projectsPrefix = "projects/";
+            const string databasesPrefix = "databases/";
+            if (string.CompareOrdinal(resource, 0, projectsPrefix, 0, projectsPrefix.Length) != 0)
+            {
+                // "projects/" doesn't match
+                ThrowInvalidResource();
+            }
+            int endOfProjectId = resource.IndexOf('/', projectsPrefix.Length);
+            if (endOfProjectId == -1 || endOfProjectId == projectsPrefix.Length)
+            {
+                // Empty project ID or no slash at the end of it
+                ThrowInvalidResource();
+            }
+            if (string.CompareOrdinal(resource, endOfProjectId + 1, databasesPrefix, 0, databasesPrefix.Length) != 0)
+            {
+                // "databases/" doesn't match
+                ThrowInvalidResource();
+            }
+            int startOfDatabaseId = endOfProjectId + 1 + databasesPrefix.Length;
+            if (startOfDatabaseId == resource.Length)
+            {
+                // No database ID
+                ThrowInvalidResource();
+            }
+            int endOfDatabaseId = resource.IndexOf('/', startOfDatabaseId);
+            if (endOfDatabaseId == startOfDatabaseId)
+            {
+                ThrowInvalidResource();
+            }
+            // It's valid for the whole resource name to be the database name
+            return endOfDatabaseId == -1 ? resource : resource.Substring(0, endOfDatabaseId);
+
+            void ThrowInvalidResource() => throw new ArgumentException($"{resource} is not a valid Firestore resource name", nameof(resource));
+        }
     }
 
     // Support for FirestoreDbBuilder.
