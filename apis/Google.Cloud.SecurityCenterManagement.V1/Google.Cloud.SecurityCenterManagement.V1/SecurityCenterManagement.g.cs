@@ -1035,7 +1035,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The value returned by the last call indicating a continuation
+    /// Optional. The value returned by the last call indicating a continuation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
