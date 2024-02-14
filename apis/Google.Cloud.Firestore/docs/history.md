@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.1, released 2024-02-14
+
+### Bug fixes
+
+- Restore the use of "legacy" routing headers until the newer header is fully supported in the Firestore emulator. ([commit 6a5e369](https://github.com/googleapis/google-cloud-dotnet/commit/6a5e3696c4101fd1c33b5febdf4d75602415889c))
+
 ## Version 3.5.0, released 2024-01-30
 
 ### Bug fixes
