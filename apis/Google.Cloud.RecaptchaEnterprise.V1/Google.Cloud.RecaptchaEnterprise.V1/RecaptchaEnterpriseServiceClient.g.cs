@@ -64,6 +64,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             GetFirewallPolicySettings = existing.GetFirewallPolicySettings;
             UpdateFirewallPolicySettings = existing.UpdateFirewallPolicySettings;
             DeleteFirewallPolicySettings = existing.DeleteFirewallPolicySettings;
+            ReorderFirewallPoliciesSettings = existing.ReorderFirewallPoliciesSettings;
             ListRelatedAccountGroupsSettings = existing.ListRelatedAccountGroupsSettings;
             ListRelatedAccountGroupMembershipsSettings = existing.ListRelatedAccountGroupMembershipsSettings;
             SearchRelatedAccountGroupMembershipsSettings = existing.SearchRelatedAccountGroupMembershipsSettings;
@@ -264,6 +265,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteFirewallPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.ReorderFirewallPolicies</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReorderFirewallPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -2151,6 +2165,157 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             DeleteFirewallPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReorderFirewallPoliciesResponse ReorderFirewallPolicies(ReorderFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest request, st::CancellationToken cancellationToken) =>
+            ReorderFirewallPoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReorderFirewallPoliciesResponse ReorderFirewallPolicies(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            ReorderFirewallPolicies(new ReorderFirewallPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            ReorderFirewallPoliciesAsync(new ReorderFirewallPoliciesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            ReorderFirewallPoliciesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReorderFirewallPoliciesResponse ReorderFirewallPolicies(gagr::ProjectName parent, scg::IEnumerable<FirewallPolicyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            ReorderFirewallPolicies(new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FirewallPolicyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(gagr::ProjectName parent, scg::IEnumerable<FirewallPolicyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            ReorderFirewallPoliciesAsync(new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FirewallPolicyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list the policies for, in the format
+        /// `projects/{project}`.
+        /// </param>
+        /// <param name="names">
+        /// Required. A list containing all policy names, in the new order. Each name
+        /// is in the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(gagr::ProjectName parent, scg::IEnumerable<FirewallPolicyName> names, st::CancellationToken cancellationToken) =>
+            ReorderFirewallPoliciesAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// List groups of related accounts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2593,6 +2758,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         private readonly gaxgrpc::ApiCall<DeleteFirewallPolicyRequest, wkt::Empty> _callDeleteFirewallPolicy;
 
+        private readonly gaxgrpc::ApiCall<ReorderFirewallPoliciesRequest, ReorderFirewallPoliciesResponse> _callReorderFirewallPolicies;
+
         private readonly gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> _callListRelatedAccountGroups;
 
         private readonly gaxgrpc::ApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse> _callListRelatedAccountGroupMemberships;
@@ -2658,6 +2825,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callDeleteFirewallPolicy = clientHelper.BuildApiCall<DeleteFirewallPolicyRequest, wkt::Empty>("DeleteFirewallPolicy", grpcClient.DeleteFirewallPolicyAsync, grpcClient.DeleteFirewallPolicy, effectiveSettings.DeleteFirewallPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFirewallPolicy);
             Modify_DeleteFirewallPolicyApiCall(ref _callDeleteFirewallPolicy);
+            _callReorderFirewallPolicies = clientHelper.BuildApiCall<ReorderFirewallPoliciesRequest, ReorderFirewallPoliciesResponse>("ReorderFirewallPolicies", grpcClient.ReorderFirewallPoliciesAsync, grpcClient.ReorderFirewallPolicies, effectiveSettings.ReorderFirewallPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callReorderFirewallPolicies);
+            Modify_ReorderFirewallPoliciesApiCall(ref _callReorderFirewallPolicies);
             _callListRelatedAccountGroups = clientHelper.BuildApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse>("ListRelatedAccountGroups", grpcClient.ListRelatedAccountGroupsAsync, grpcClient.ListRelatedAccountGroups, effectiveSettings.ListRelatedAccountGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRelatedAccountGroups);
             Modify_ListRelatedAccountGroupsApiCall(ref _callListRelatedAccountGroups);
@@ -2702,6 +2872,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_DeleteFirewallPolicyApiCall(ref gaxgrpc::ApiCall<DeleteFirewallPolicyRequest, wkt::Empty> call);
 
+        partial void Modify_ReorderFirewallPoliciesApiCall(ref gaxgrpc::ApiCall<ReorderFirewallPoliciesRequest, ReorderFirewallPoliciesResponse> call);
+
         partial void Modify_ListRelatedAccountGroupsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> call);
 
         partial void Modify_ListRelatedAccountGroupMembershipsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse> call);
@@ -2742,6 +2914,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_UpdateFirewallPolicyRequest(ref UpdateFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteFirewallPolicyRequest(ref DeleteFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReorderFirewallPoliciesRequest(ref ReorderFirewallPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRelatedAccountGroupsRequest(ref ListRelatedAccountGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3129,6 +3303,30 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_DeleteFirewallPolicyRequest(ref request, ref callSettings);
             return _callDeleteFirewallPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReorderFirewallPoliciesResponse ReorderFirewallPolicies(ReorderFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReorderFirewallPoliciesRequest(ref request, ref callSettings);
+            return _callReorderFirewallPolicies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Reorders all firewall policies.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReorderFirewallPoliciesRequest(ref request, ref callSettings);
+            return _callReorderFirewallPolicies.Async(request, callSettings);
         }
 
         /// <summary>

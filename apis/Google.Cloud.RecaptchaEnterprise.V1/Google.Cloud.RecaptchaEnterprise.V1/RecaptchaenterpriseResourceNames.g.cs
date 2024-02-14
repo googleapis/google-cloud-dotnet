@@ -1612,6 +1612,26 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         }
     }
 
+    public partial class ReorderFirewallPoliciesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FirewallPolicyName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<FirewallPolicyName> FirewallPolicyNames
+        {
+            get => new gax::ResourceNameList<FirewallPolicyName>(Names, s => string.IsNullOrEmpty(s) ? null : FirewallPolicyName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class MigrateKeyRequest
     {
         /// <summary>

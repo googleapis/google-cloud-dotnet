@@ -94,6 +94,12 @@
                 "MigrateKeyAsync"
               ]
             },
+            "ReorderFirewallPolicies": {
+              "methods": [
+                "ReorderFirewallPolicies",
+                "ReorderFirewallPoliciesAsync"
+              ]
+            },
             "RetrieveLegacySecretKey": {
               "methods": [
                 "RetrieveLegacySecretKey",
