@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Issue11653", "Issue11653.csproj", "{EA671BB5-4237-451B-A2C4-D43BA8F73029}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore", "..\..\apis\Google.Cloud.Firestore\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj", "{878FE01A-0A45-42BE-9102-D98A774A9C6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1", "..\..\apis\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{9C45BF80-1B7A-4DAE-8E3D-C21421AFDC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EA671BB5-4237-451B-A2C4-D43BA8F73029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA671BB5-4237-451B-A2C4-D43BA8F73029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA671BB5-4237-451B-A2C4-D43BA8F73029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878FE01A-0A45-42BE-9102-D98A774A9C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878FE01A-0A45-42BE-9102-D98A774A9C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878FE01A-0A45-42BE-9102-D98A774A9C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878FE01A-0A45-42BE-9102-D98A774A9C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C45BF80-1B7A-4DAE-8E3D-C21421AFDC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C45BF80-1B7A-4DAE-8E3D-C21421AFDC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C45BF80-1B7A-4DAE-8E3D-C21421AFDC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C45BF80-1B7A-4DAE-8E3D-C21421AFDC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
