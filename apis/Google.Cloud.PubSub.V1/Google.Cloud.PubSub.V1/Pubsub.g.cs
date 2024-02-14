@@ -1575,7 +1575,7 @@ namespace Google.Cloud.PubSub.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Possible states for managed ingestion from Amazon Kinesis Data Streams.
+          /// Possible states for ingestion from Amazon Kinesis Data Streams.
           /// </summary>
           public enum State {
             /// <summary>
@@ -1823,8 +1823,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int IngestionDataSourceSettingsFieldNumber = 10;
     private global::Google.Cloud.PubSub.V1.IngestionDataSourceSettings ingestionDataSourceSettings_;
     /// <summary>
-    /// Optional. Settings for managed ingestion from a data source into this
-    /// topic.
+    /// Optional. Settings for ingestion from a data source into this topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
