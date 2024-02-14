@@ -16,6 +16,18 @@
                 "CreateEnvironmentAsync"
               ]
             },
+            "CreateUserWorkloadsConfigMap": {
+              "methods": [
+                "CreateUserWorkloadsConfigMap",
+                "CreateUserWorkloadsConfigMapAsync"
+              ]
+            },
+            "CreateUserWorkloadsSecret": {
+              "methods": [
+                "CreateUserWorkloadsSecret",
+                "CreateUserWorkloadsSecretAsync"
+              ]
+            },
             "DatabaseFailover": {
               "methods": [
                 "DatabaseFailover",
@@ -26,6 +38,18 @@
               "methods": [
                 "DeleteEnvironment",
                 "DeleteEnvironmentAsync"
+              ]
+            },
+            "DeleteUserWorkloadsConfigMap": {
+              "methods": [
+                "DeleteUserWorkloadsConfigMap",
+                "DeleteUserWorkloadsConfigMapAsync"
+              ]
+            },
+            "DeleteUserWorkloadsSecret": {
+              "methods": [
+                "DeleteUserWorkloadsSecret",
+                "DeleteUserWorkloadsSecretAsync"
               ]
             },
             "ExecuteAirflowCommand": {
@@ -46,10 +70,40 @@
                 "GetEnvironmentAsync"
               ]
             },
+            "GetUserWorkloadsConfigMap": {
+              "methods": [
+                "GetUserWorkloadsConfigMap",
+                "GetUserWorkloadsConfigMapAsync"
+              ]
+            },
+            "GetUserWorkloadsSecret": {
+              "methods": [
+                "GetUserWorkloadsSecret",
+                "GetUserWorkloadsSecretAsync"
+              ]
+            },
             "ListEnvironments": {
               "methods": [
                 "ListEnvironments",
                 "ListEnvironmentsAsync"
+              ]
+            },
+            "ListUserWorkloadsConfigMaps": {
+              "methods": [
+                "ListUserWorkloadsConfigMaps",
+                "ListUserWorkloadsConfigMapsAsync"
+              ]
+            },
+            "ListUserWorkloadsSecrets": {
+              "methods": [
+                "ListUserWorkloadsSecrets",
+                "ListUserWorkloadsSecretsAsync"
+              ]
+            },
+            "ListWorkloads": {
+              "methods": [
+                "ListWorkloads",
+                "ListWorkloadsAsync"
               ]
             },
             "LoadSnapshot": {
@@ -80,6 +134,18 @@
               "methods": [
                 "UpdateEnvironment",
                 "UpdateEnvironmentAsync"
+              ]
+            },
+            "UpdateUserWorkloadsConfigMap": {
+              "methods": [
+                "UpdateUserWorkloadsConfigMap",
+                "UpdateUserWorkloadsConfigMapAsync"
+              ]
+            },
+            "UpdateUserWorkloadsSecret": {
+              "methods": [
+                "UpdateUserWorkloadsSecret",
+                "UpdateUserWorkloadsSecretAsync"
               ]
             }
           }

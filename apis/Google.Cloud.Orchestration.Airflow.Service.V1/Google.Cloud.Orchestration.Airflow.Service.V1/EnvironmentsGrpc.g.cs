@@ -92,6 +92,40 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_CreateUserWorkloadsSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsSecret = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_GetUserWorkloadsSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsSecretsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsSecretsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_UpdateUserWorkloadsSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteUserWorkloadsSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_CreateUserWorkloadsConfigMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsConfigMap = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_GetUserWorkloadsConfigMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsConfigMapsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse> __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsConfigMapsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_UpdateUserWorkloadsConfigMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteUserWorkloadsConfigMapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_SaveSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest> __Marshaller_google_cloud_orchestration_airflow_service_v1_LoadSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest.Parser));
@@ -165,6 +199,94 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         "PollAirflowCommand",
         __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandRequest,
         __Marshaller_google_cloud_orchestration_airflow_service_v1_PollAirflowCommandResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> __Method_ListWorkloads = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListWorkloads",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListWorkloadsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Method_CreateUserWorkloadsSecret = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUserWorkloadsSecret",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_CreateUserWorkloadsSecretRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsSecret);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Method_GetUserWorkloadsSecret = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserWorkloadsSecret",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_GetUserWorkloadsSecretRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsSecret);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse> __Method_ListUserWorkloadsSecrets = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUserWorkloadsSecrets",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsSecretsRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsSecretsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> __Method_UpdateUserWorkloadsSecret = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUserWorkloadsSecret",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UpdateUserWorkloadsSecretRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsSecret);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserWorkloadsSecret = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUserWorkloadsSecret",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteUserWorkloadsSecretRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> __Method_CreateUserWorkloadsConfigMap = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUserWorkloadsConfigMap",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_CreateUserWorkloadsConfigMapRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsConfigMap);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> __Method_GetUserWorkloadsConfigMap = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserWorkloadsConfigMap",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_GetUserWorkloadsConfigMapRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsConfigMap);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse> __Method_ListUserWorkloadsConfigMaps = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUserWorkloadsConfigMaps",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsConfigMapsRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_ListUserWorkloadsConfigMapsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> __Method_UpdateUserWorkloadsConfigMap = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateUserWorkloadsConfigMap",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UpdateUserWorkloadsConfigMapRequest,
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_UserWorkloadsConfigMap);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserWorkloadsConfigMap = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUserWorkloadsConfigMap",
+        __Marshaller_google_cloud_orchestration_airflow_service_v1_DeleteUserWorkloadsConfigMapRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation> __Method_SaveSnapshot = new grpc::Method<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(
@@ -300,6 +422,173 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse> PollAirflowCommand(global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+      /// runs a single Composer component.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> ListWorkloads(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> CreateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an existing user workloads Secret.
+      /// Values of the "data" field in the response are cleared.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> GetUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists user workloads Secrets.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse> ListUserWorkloadsSecrets(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> UpdateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> CreateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an existing user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> GetUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists user workloads ConfigMaps.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse> ListUserWorkloadsConfigMaps(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -772,6 +1061,674 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_PollAirflowCommand, null, options, request);
       }
       /// <summary>
+      /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+      /// runs a single Composer component.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse ListWorkloads(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWorkloads(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+      /// runs a single Composer component.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse ListWorkloads(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListWorkloads, null, options, request);
+      }
+      /// <summary>
+      /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+      /// runs a single Composer component.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> ListWorkloadsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWorkloadsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+      /// runs a single Composer component.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse> ListWorkloadsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListWorkloads, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret CreateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserWorkloadsSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret CreateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserWorkloadsSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Gets an existing user workloads Secret.
+      /// Values of the "data" field in the response are cleared.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret GetUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserWorkloadsSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an existing user workloads Secret.
+      /// Values of the "data" field in the response are cleared.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret GetUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Gets an existing user workloads Secret.
+      /// Values of the "data" field in the response are cleared.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> GetUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserWorkloadsSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an existing user workloads Secret.
+      /// Values of the "data" field in the response are cleared.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> GetUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Lists user workloads Secrets.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse ListUserWorkloadsSecrets(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserWorkloadsSecrets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists user workloads Secrets.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse ListUserWorkloadsSecrets(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUserWorkloadsSecrets, null, options, request);
+      }
+      /// <summary>
+      /// Lists user workloads Secrets.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse> ListUserWorkloadsSecretsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserWorkloadsSecretsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists user workloads Secrets.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse> ListUserWorkloadsSecretsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUserWorkloadsSecrets, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret UpdateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserWorkloadsSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret UpdateUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserWorkloadsSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserWorkloadsSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserWorkloadsSecret(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserWorkloadsSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user workloads Secret.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsSecretAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserWorkloadsSecret, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserWorkloadsConfigMap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Creates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserWorkloadsConfigMapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Gets an existing user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap GetUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserWorkloadsConfigMap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an existing user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap GetUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Gets an existing user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserWorkloadsConfigMapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an existing user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Lists user workloads ConfigMaps.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse ListUserWorkloadsConfigMaps(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserWorkloadsConfigMaps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists user workloads ConfigMaps.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse ListUserWorkloadsConfigMaps(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUserWorkloadsConfigMaps, null, options, request);
+      }
+      /// <summary>
+      /// Lists user workloads ConfigMaps.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse> ListUserWorkloadsConfigMapsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserWorkloadsConfigMapsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists user workloads ConfigMaps.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse> ListUserWorkloadsConfigMapsAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUserWorkloadsConfigMaps, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserWorkloadsConfigMap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateUserWorkloadsConfigMapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserWorkloadsConfigMap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserWorkloadsConfigMap(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserWorkloadsConfigMapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user workloads ConfigMap.
+      ///
+      /// This method is supported for Cloud Composer environments in versions
+      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserWorkloadsConfigMapAsync(global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserWorkloadsConfigMap, null, options, request);
+      }
+      /// <summary>
       /// Creates a snapshots of a Cloud Composer environment.
       ///
       /// As a result of this operation, snapshot of environment's state is stored
@@ -1009,6 +1966,17 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
           .AddMethod(__Method_ExecuteAirflowCommand, serviceImpl.ExecuteAirflowCommand)
           .AddMethod(__Method_StopAirflowCommand, serviceImpl.StopAirflowCommand)
           .AddMethod(__Method_PollAirflowCommand, serviceImpl.PollAirflowCommand)
+          .AddMethod(__Method_ListWorkloads, serviceImpl.ListWorkloads)
+          .AddMethod(__Method_CreateUserWorkloadsSecret, serviceImpl.CreateUserWorkloadsSecret)
+          .AddMethod(__Method_GetUserWorkloadsSecret, serviceImpl.GetUserWorkloadsSecret)
+          .AddMethod(__Method_ListUserWorkloadsSecrets, serviceImpl.ListUserWorkloadsSecrets)
+          .AddMethod(__Method_UpdateUserWorkloadsSecret, serviceImpl.UpdateUserWorkloadsSecret)
+          .AddMethod(__Method_DeleteUserWorkloadsSecret, serviceImpl.DeleteUserWorkloadsSecret)
+          .AddMethod(__Method_CreateUserWorkloadsConfigMap, serviceImpl.CreateUserWorkloadsConfigMap)
+          .AddMethod(__Method_GetUserWorkloadsConfigMap, serviceImpl.GetUserWorkloadsConfigMap)
+          .AddMethod(__Method_ListUserWorkloadsConfigMaps, serviceImpl.ListUserWorkloadsConfigMaps)
+          .AddMethod(__Method_UpdateUserWorkloadsConfigMap, serviceImpl.UpdateUserWorkloadsConfigMap)
+          .AddMethod(__Method_DeleteUserWorkloadsConfigMap, serviceImpl.DeleteUserWorkloadsConfigMap)
           .AddMethod(__Method_SaveSnapshot, serviceImpl.SaveSnapshot)
           .AddMethod(__Method_LoadSnapshot, serviceImpl.LoadSnapshot)
           .AddMethod(__Method_DatabaseFailover, serviceImpl.DatabaseFailover)
@@ -1030,6 +1998,17 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       serviceBinder.AddMethod(__Method_ExecuteAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ExecuteAirflowCommandResponse>(serviceImpl.ExecuteAirflowCommand));
       serviceBinder.AddMethod(__Method_StopAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.StopAirflowCommandResponse>(serviceImpl.StopAirflowCommand));
       serviceBinder.AddMethod(__Method_PollAirflowCommand, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.PollAirflowCommandResponse>(serviceImpl.PollAirflowCommand));
+      serviceBinder.AddMethod(__Method_ListWorkloads, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse>(serviceImpl.ListWorkloads));
+      serviceBinder.AddMethod(__Method_CreateUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(serviceImpl.CreateUserWorkloadsSecret));
+      serviceBinder.AddMethod(__Method_GetUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(serviceImpl.GetUserWorkloadsSecret));
+      serviceBinder.AddMethod(__Method_ListUserWorkloadsSecrets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse>(serviceImpl.ListUserWorkloadsSecrets));
+      serviceBinder.AddMethod(__Method_UpdateUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>(serviceImpl.UpdateUserWorkloadsSecret));
+      serviceBinder.AddMethod(__Method_DeleteUserWorkloadsSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserWorkloadsSecret));
+      serviceBinder.AddMethod(__Method_CreateUserWorkloadsConfigMap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(serviceImpl.CreateUserWorkloadsConfigMap));
+      serviceBinder.AddMethod(__Method_GetUserWorkloadsConfigMap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(serviceImpl.GetUserWorkloadsConfigMap));
+      serviceBinder.AddMethod(__Method_ListUserWorkloadsConfigMaps, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse>(serviceImpl.ListUserWorkloadsConfigMaps));
+      serviceBinder.AddMethod(__Method_UpdateUserWorkloadsConfigMap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest, global::Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>(serviceImpl.UpdateUserWorkloadsConfigMap));
+      serviceBinder.AddMethod(__Method_DeleteUserWorkloadsConfigMap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserWorkloadsConfigMap));
       serviceBinder.AddMethod(__Method_SaveSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.SaveSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.SaveSnapshot));
       serviceBinder.AddMethod(__Method_LoadSnapshot, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.LoadSnapshotRequest, global::Google.LongRunning.Operation>(serviceImpl.LoadSnapshot));
       serviceBinder.AddMethod(__Method_DatabaseFailover, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseFailoverRequest, global::Google.LongRunning.Operation>(serviceImpl.DatabaseFailover));
