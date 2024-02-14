@@ -34,9 +34,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
-            // There is no DbType that will map automatically to SpannerDbType.Json or SpannerDbType.PgJsonb.
+            // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb
+            // or SpannerDbType.PgOid.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
             yield return new object[] { SpannerDbType.PgJsonb, DbType.String, false };
+            yield return new object[] { SpannerDbType.PgOid, DbType.Int64, false };
         }
 
         [Theory]
@@ -126,6 +128,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Date, 0 };
             yield return new object[] { SpannerDbType.Float64, 0 };
             yield return new object[] { SpannerDbType.Int64, 0 };
+            yield return new object[] { SpannerDbType.PgOid, 0 };
             yield return new object[] { SpannerDbType.Timestamp, 0 };
             yield return new object[] { SpannerDbType.Json, 0 };
             yield return new object[] { SpannerDbType.PgJsonb, 0 };
@@ -155,6 +158,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Date };
             yield return new object[] { SpannerDbType.Float64 };
             yield return new object[] { SpannerDbType.Int64 };
+            yield return new object[] { SpannerDbType.PgOid };
             yield return new object[] { SpannerDbType.Numeric };
             yield return new object[] { SpannerDbType.PgNumeric };
             yield return new object[] { SpannerDbType.Timestamp };
@@ -166,6 +170,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Date) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Float64) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Int64) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgOid) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Numeric) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgNumeric) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };

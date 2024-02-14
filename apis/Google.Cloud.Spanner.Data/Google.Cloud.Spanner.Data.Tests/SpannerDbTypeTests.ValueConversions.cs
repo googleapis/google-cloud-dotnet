@@ -58,13 +58,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "NumericField", SpannerDbType.Numeric, SpannerNumeric.MaxValue },
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
-            { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" }
+            { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
+            { "PgOidField", SpannerDbType.PgOid, 3L }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -334,6 +335,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
             {
                 new List<int>(GetIntsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Int64),
+                "[ \"4\", \"5\", \"6\" ]"
+            };
+            yield return new object[]
+            {
+                new List<int>(GetIntsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgOid),
                 "[ \"4\", \"5\", \"6\" ]"
             };
             yield return new object[]

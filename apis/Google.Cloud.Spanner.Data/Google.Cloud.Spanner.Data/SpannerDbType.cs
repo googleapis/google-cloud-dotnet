@@ -91,6 +91,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType PgNumeric { get; } = new SpannerDbType(TypeCode.Numeric, TypeAnnotationCode.PgNumeric);
 
+        /// <summary>
+        /// Representation of PostgreSQL OID type.
+        /// </summary>
+        public static SpannerDbType PgOid { get; } = new SpannerDbType(TypeCode.Int64, TypeAnnotationCode.PgOid);
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -105,7 +110,8 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Json }, Json },
                 { new V1.Type { Code = TypeCode.Json, TypeAnnotation = TypeAnnotationCode.PgJsonb }, PgJsonb },
                 { new V1.Type { Code = TypeCode.Numeric }, Numeric },
-                { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric }
+                { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric },
+                { new V1.Type { Code = TypeCode.Int64, TypeAnnotation = TypeAnnotationCode.PgOid }, PgOid }
             };
 
         internal static SpannerDbType FromType(V1.Type type) =>
@@ -161,6 +167,7 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Bool:
                         return DbType.Boolean;
                     case TypeCode.Int64:
+                        // This handles PG.OID as well.
                         return DbType.Int64;
                     case TypeCode.Float64:
                         return DbType.Double;
