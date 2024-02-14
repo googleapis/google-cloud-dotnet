@@ -1420,6 +1420,7 @@ namespace GoogleCSharpSnippets
                 {
                     new gcsv::BatchWriteRequest.Types.MutationGroup(),
                 },
+                ExcludeTxnFromChangeStreams = false,
             };
             // Make the request, returning a streaming response
             using gcsv::SpannerClient.BatchWriteStream response = spannerClient.BatchWrite(request);

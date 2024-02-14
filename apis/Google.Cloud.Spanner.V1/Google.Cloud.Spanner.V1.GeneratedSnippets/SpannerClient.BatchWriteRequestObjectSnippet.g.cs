@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 {
                     new BatchWriteRequest.Types.MutationGroup(),
                 },
+                ExcludeTxnFromChangeStreams = false,
             };
             // Make the request, returning a streaming response
             using SpannerClient.BatchWriteStream response = spannerClient.BatchWrite(request);
