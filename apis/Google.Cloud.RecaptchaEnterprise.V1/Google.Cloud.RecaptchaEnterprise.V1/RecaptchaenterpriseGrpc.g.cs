@@ -112,6 +112,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteFirewallPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse.Parser));
@@ -243,6 +247,14 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         "DeleteFirewallPolicy",
         __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteFirewallPolicyRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> __Method_ReorderFirewallPolicies = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReorderFirewallPolicies",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ReorderFirewallPoliciesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> __Method_ListRelatedAccountGroups = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(
@@ -465,6 +477,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFirewallPolicy(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1299,6 +1323,54 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFirewallPolicy, null, options, request);
       }
       /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderFirewallPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse ReorderFirewallPolicies(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReorderFirewallPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderFirewallPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reorders all firewall policies.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse> ReorderFirewallPoliciesAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReorderFirewallPolicies, null, options, request);
+      }
+      /// <summary>
       /// List groups of related accounts.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1471,6 +1543,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_GetFirewallPolicy, serviceImpl.GetFirewallPolicy)
           .AddMethod(__Method_UpdateFirewallPolicy, serviceImpl.UpdateFirewallPolicy)
           .AddMethod(__Method_DeleteFirewallPolicy, serviceImpl.DeleteFirewallPolicy)
+          .AddMethod(__Method_ReorderFirewallPolicies, serviceImpl.ReorderFirewallPolicies)
           .AddMethod(__Method_ListRelatedAccountGroups, serviceImpl.ListRelatedAccountGroups)
           .AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl.ListRelatedAccountGroupMemberships)
           .AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl.SearchRelatedAccountGroupMemberships).Build();
@@ -1498,6 +1571,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_GetFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.GetFirewallPolicy));
       serviceBinder.AddMethod(__Method_UpdateFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateFirewallPolicyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.FirewallPolicy>(serviceImpl.UpdateFirewallPolicy));
       serviceBinder.AddMethod(__Method_DeleteFirewallPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteFirewallPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFirewallPolicy));
+      serviceBinder.AddMethod(__Method_ReorderFirewallPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ReorderFirewallPoliciesResponse>(serviceImpl.ReorderFirewallPolicies));
       serviceBinder.AddMethod(__Method_ListRelatedAccountGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(serviceImpl.ListRelatedAccountGroups));
       serviceBinder.AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse>(serviceImpl.ListRelatedAccountGroupMemberships));
       serviceBinder.AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse>(serviceImpl.SearchRelatedAccountGroupMemberships));

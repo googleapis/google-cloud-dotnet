@@ -22,6 +22,7 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1648,6 +1649,117 @@ namespace GoogleCSharpSnippets
             FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
             // Make the request
             await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPoliciesRequestObject()
+        {
+            // Snippet: ReorderFirewallPolicies(ReorderFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ReorderFirewallPoliciesRequest request = new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicyNames =
+                {
+                    FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+                },
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesRequestObjectAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReorderFirewallPoliciesRequest request = new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicyNames =
+                {
+                    FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+                },
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPolicies()
+        {
+            // Snippet: ReorderFirewallPolicies(string, IEnumerable<string>, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]",
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]",
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPoliciesResourceNames()
+        {
+            // Snippet: ReorderFirewallPolicies(ProjectName, IEnumerable<FirewallPolicyName>, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<FirewallPolicyName> names = new FirewallPolicyName[]
+            {
+                FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesResourceNamesAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(ProjectName, IEnumerable<FirewallPolicyName>, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(ProjectName, IEnumerable<FirewallPolicyName>, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<FirewallPolicyName> names = new FirewallPolicyName[]
+            {
+                FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(parent, names);
             // End snippet
         }
 
