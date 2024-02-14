@@ -143,7 +143,8 @@ namespace Google.Cloud.Spanner.Data
             }
 
             var trimmedComplexName = complexName.Trim();
-            // Special handling for NUMERIC{PG} and JSONB{PG}, as other types are just based on TypeCode and we need to keep the code backward compatible.
+            // Special handling for NUMERIC{PG}, JSONB{PG} and OID{PG}, as other types are just based on
+            // TypeCode and we need to keep the code backward compatible.
             if (string.Equals(trimmedComplexName, "NUMERIC{PG}", StringComparison.OrdinalIgnoreCase))
             {
                 type.Code = TypeCode.Numeric;
@@ -154,6 +155,12 @@ namespace Google.Cloud.Spanner.Data
             {
                 type.Code = TypeCode.Json;
                 type.TypeAnnotation = TypeAnnotationCode.PgJsonb;
+                return true;
+            }
+            else if (string.Equals(trimmedComplexName, "OID{PG}", StringComparison.OrdinalIgnoreCase))
+            {
+                type.Code = TypeCode.Int64;
+                type.TypeAnnotation = TypeAnnotationCode.PgOid;
                 return true;
             }
 
@@ -221,6 +228,10 @@ namespace Google.Cloud.Spanner.Data
             else if (TypeAnnotationCode == TypeAnnotationCode.PgJsonb)
             {
                 return "JSONB{PG}";
+            }
+            else if (TypeAnnotationCode == TypeAnnotationCode.PgOid)
+            {
+                return "OID{PG}";
             }
 
             return Size.HasValue ? $"{TypeCode.GetOriginalName()}({Size})" : TypeCode.GetOriginalName();
