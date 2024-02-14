@@ -58,6 +58,17 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             ExecuteAirflowCommandSettings = existing.ExecuteAirflowCommandSettings;
             StopAirflowCommandSettings = existing.StopAirflowCommandSettings;
             PollAirflowCommandSettings = existing.PollAirflowCommandSettings;
+            ListWorkloadsSettings = existing.ListWorkloadsSettings;
+            CreateUserWorkloadsSecretSettings = existing.CreateUserWorkloadsSecretSettings;
+            GetUserWorkloadsSecretSettings = existing.GetUserWorkloadsSecretSettings;
+            ListUserWorkloadsSecretsSettings = existing.ListUserWorkloadsSecretsSettings;
+            UpdateUserWorkloadsSecretSettings = existing.UpdateUserWorkloadsSecretSettings;
+            DeleteUserWorkloadsSecretSettings = existing.DeleteUserWorkloadsSecretSettings;
+            CreateUserWorkloadsConfigMapSettings = existing.CreateUserWorkloadsConfigMapSettings;
+            GetUserWorkloadsConfigMapSettings = existing.GetUserWorkloadsConfigMapSettings;
+            ListUserWorkloadsConfigMapsSettings = existing.ListUserWorkloadsConfigMapsSettings;
+            UpdateUserWorkloadsConfigMapSettings = existing.UpdateUserWorkloadsConfigMapSettings;
+            DeleteUserWorkloadsConfigMapSettings = existing.DeleteUserWorkloadsConfigMapSettings;
             SaveSnapshotSettings = existing.SaveSnapshotSettings;
             SaveSnapshotOperationsSettings = existing.SaveSnapshotOperationsSettings.Clone();
             LoadSnapshotSettings = existing.LoadSnapshotSettings;
@@ -219,6 +230,147 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings PollAirflowCommandSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.ListWorkloads</c> and <c>EnvironmentsClient.ListWorkloadsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWorkloadsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.CreateUserWorkloadsSecret</c> and <c>EnvironmentsClient.CreateUserWorkloadsSecretAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateUserWorkloadsSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.GetUserWorkloadsSecret</c> and <c>EnvironmentsClient.GetUserWorkloadsSecretAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserWorkloadsSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.ListUserWorkloadsSecrets</c> and <c>EnvironmentsClient.ListUserWorkloadsSecretsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUserWorkloadsSecretsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.UpdateUserWorkloadsSecret</c> and <c>EnvironmentsClient.UpdateUserWorkloadsSecretAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateUserWorkloadsSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.DeleteUserWorkloadsSecret</c> and <c>EnvironmentsClient.DeleteUserWorkloadsSecretAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserWorkloadsSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.CreateUserWorkloadsConfigMap</c> and
+        /// <c>EnvironmentsClient.CreateUserWorkloadsConfigMapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateUserWorkloadsConfigMapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.GetUserWorkloadsConfigMap</c> and <c>EnvironmentsClient.GetUserWorkloadsConfigMapAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserWorkloadsConfigMapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.ListUserWorkloadsConfigMaps</c> and
+        /// <c>EnvironmentsClient.ListUserWorkloadsConfigMapsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUserWorkloadsConfigMapsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.UpdateUserWorkloadsConfigMap</c> and
+        /// <c>EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateUserWorkloadsConfigMapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EnvironmentsClient.DeleteUserWorkloadsConfigMap</c> and
+        /// <c>EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserWorkloadsConfigMapSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1360,6 +1512,1481 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             PollAirflowCommandAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(ListWorkloadsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(ListWorkloadsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to get workloads for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkloads(new ListWorkloadsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to get workloads for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkloadsAsync(new ListWorkloadsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to get workloads for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkloads(new ListWorkloadsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to get workloads for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListWorkloadsAsync(new ListWorkloadsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret CreateUserWorkloadsSecret(CreateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest request, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret CreateUserWorkloadsSecret(string parent, UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsSecret(new CreateUserWorkloadsSecretRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserWorkloadsSecret = gax::GaxPreconditions.CheckNotNull(userWorkloadsSecret, nameof(userWorkloadsSecret)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(string parent, UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsSecretAsync(new CreateUserWorkloadsSecretRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserWorkloadsSecret = gax::GaxPreconditions.CheckNotNull(userWorkloadsSecret, nameof(userWorkloadsSecret)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(string parent, UserWorkloadsSecret userWorkloadsSecret, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsSecretAsync(parent, userWorkloadsSecret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret CreateUserWorkloadsSecret(EnvironmentName parent, UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsSecret(new CreateUserWorkloadsSecretRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserWorkloadsSecret = gax::GaxPreconditions.CheckNotNull(userWorkloadsSecret, nameof(userWorkloadsSecret)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(EnvironmentName parent, UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsSecretAsync(new CreateUserWorkloadsSecretRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserWorkloadsSecret = gax::GaxPreconditions.CheckNotNull(userWorkloadsSecret, nameof(userWorkloadsSecret)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a Secret for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsSecret">
+        /// Required. User workloads Secret to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(EnvironmentName parent, UserWorkloadsSecret userWorkloadsSecret, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsSecretAsync(parent, userWorkloadsSecret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret GetUserWorkloadsSecret(GetUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest request, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret GetUserWorkloadsSecret(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsSecret(new GetUserWorkloadsSecretRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsSecretAsync(new GetUserWorkloadsSecretRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret GetUserWorkloadsSecret(UserWorkloadsSecretName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsSecret(new GetUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecretName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(UserWorkloadsSecretName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsSecretAsync(new GetUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecretName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Secret to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(UserWorkloadsSecretName name, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(ListUserWorkloadsSecretsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(ListUserWorkloadsSecretsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List Secrets in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsSecrets(new ListUserWorkloadsSecretsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List Secrets in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsSecretsAsync(new ListUserWorkloadsSecretsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List Secrets in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsSecrets(new ListUserWorkloadsSecretsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List Secrets in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsSecretsAsync(new ListUserWorkloadsSecretsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret UpdateUserWorkloadsSecret(UpdateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest request, st::CancellationToken cancellationToken) =>
+            UpdateUserWorkloadsSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsSecret">
+        /// Optional. User workloads Secret to override.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsSecret UpdateUserWorkloadsSecret(UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserWorkloadsSecret(new UpdateUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecret = userWorkloadsSecret,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsSecret">
+        /// Optional. User workloads Secret to override.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UserWorkloadsSecret userWorkloadsSecret, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserWorkloadsSecretAsync(new UpdateUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecret = userWorkloadsSecret,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsSecret">
+        /// Optional. User workloads Secret to override.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UserWorkloadsSecret userWorkloadsSecret, st::CancellationToken cancellationToken) =>
+            UpdateUserWorkloadsSecretAsync(userWorkloadsSecret, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsSecret(DeleteUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsSecret(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsSecret(new DeleteUserWorkloadsSecretRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsSecretAsync(new DeleteUserWorkloadsSecretRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsSecret(UserWorkloadsSecretName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsSecret(new DeleteUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecretName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(UserWorkloadsSecretName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsSecretAsync(new DeleteUserWorkloadsSecretRequest
+            {
+                UserWorkloadsSecretName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Secret to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsSecrets/{userWorkloadsSecretId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsSecretAsync(UserWorkloadsSecretName name, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(CreateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest request, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsConfigMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(string parent, UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsConfigMap(new CreateUserWorkloadsConfigMapRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserWorkloadsConfigMap = gax::GaxPreconditions.CheckNotNull(userWorkloadsConfigMap, nameof(userWorkloadsConfigMap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(string parent, UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsConfigMapAsync(new CreateUserWorkloadsConfigMapRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserWorkloadsConfigMap = gax::GaxPreconditions.CheckNotNull(userWorkloadsConfigMap, nameof(userWorkloadsConfigMap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(string parent, UserWorkloadsConfigMap userWorkloadsConfigMap, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsConfigMapAsync(parent, userWorkloadsConfigMap, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(EnvironmentName parent, UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsConfigMap(new CreateUserWorkloadsConfigMapRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserWorkloadsConfigMap = gax::GaxPreconditions.CheckNotNull(userWorkloadsConfigMap, nameof(userWorkloadsConfigMap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(EnvironmentName parent, UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserWorkloadsConfigMapAsync(new CreateUserWorkloadsConfigMapRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserWorkloadsConfigMap = gax::GaxPreconditions.CheckNotNull(userWorkloadsConfigMap, nameof(userWorkloadsConfigMap)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The environment name to create a ConfigMap for, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="userWorkloadsConfigMap">
+        /// Required. User workloads ConfigMap to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(EnvironmentName parent, UserWorkloadsConfigMap userWorkloadsConfigMap, st::CancellationToken cancellationToken) =>
+            CreateUserWorkloadsConfigMapAsync(parent, userWorkloadsConfigMap, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap GetUserWorkloadsConfigMap(GetUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest request, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsConfigMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap GetUserWorkloadsConfigMap(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsConfigMap(new GetUserWorkloadsConfigMapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsConfigMapAsync(new GetUserWorkloadsConfigMapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsConfigMapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap GetUserWorkloadsConfigMap(UserWorkloadsConfigMapName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsConfigMap(new GetUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserWorkloadsConfigMapAsync(new GetUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ConfigMap to get, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName name, st::CancellationToken cancellationToken) =>
+            GetUserWorkloadsConfigMapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(ListUserWorkloadsConfigMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(ListUserWorkloadsConfigMapsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List ConfigMaps in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsConfigMaps(new ListUserWorkloadsConfigMapsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List ConfigMaps in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsConfigMapsAsync(new ListUserWorkloadsConfigMapsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List ConfigMaps in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsConfigMaps(new ListUserWorkloadsConfigMapsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. List ConfigMaps in the given environment, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(EnvironmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserWorkloadsConfigMapsAsync(new ListUserWorkloadsConfigMapsRequest
+            {
+                ParentAsEnvironmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(UpdateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest request, st::CancellationToken cancellationToken) =>
+            UpdateUserWorkloadsConfigMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsConfigMap">
+        /// Optional. User workloads ConfigMap to override.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserWorkloadsConfigMap(new UpdateUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMap = userWorkloadsConfigMap,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsConfigMap">
+        /// Optional. User workloads ConfigMap to override.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UserWorkloadsConfigMap userWorkloadsConfigMap, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateUserWorkloadsConfigMapAsync(new UpdateUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMap = userWorkloadsConfigMap,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="userWorkloadsConfigMap">
+        /// Optional. User workloads ConfigMap to override.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UserWorkloadsConfigMap userWorkloadsConfigMap, st::CancellationToken cancellationToken) =>
+            UpdateUserWorkloadsConfigMapAsync(userWorkloadsConfigMap, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsConfigMap(DeleteUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsConfigMapAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsConfigMap(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsConfigMap(new DeleteUserWorkloadsConfigMapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsConfigMapAsync(new DeleteUserWorkloadsConfigMapRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsConfigMapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserWorkloadsConfigMap(UserWorkloadsConfigMapName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsConfigMap(new DeleteUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserWorkloadsConfigMapAsync(new DeleteUserWorkloadsConfigMapRequest
+            {
+                UserWorkloadsConfigMapName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ConfigMap to delete, in the form:
+        /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsConfigMaps/{userWorkloadsConfigMapId}"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserWorkloadsConfigMapAsync(UserWorkloadsConfigMapName name, st::CancellationToken cancellationToken) =>
+            DeleteUserWorkloadsConfigMapAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a snapshots of a Cloud Composer environment.
         /// 
         /// As a result of this operation, snapshot of environment's state is stored
@@ -1586,6 +3213,28 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         private readonly gaxgrpc::ApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse> _callPollAirflowCommand;
 
+        private readonly gaxgrpc::ApiCall<ListWorkloadsRequest, ListWorkloadsResponse> _callListWorkloads;
+
+        private readonly gaxgrpc::ApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret> _callCreateUserWorkloadsSecret;
+
+        private readonly gaxgrpc::ApiCall<GetUserWorkloadsSecretRequest, UserWorkloadsSecret> _callGetUserWorkloadsSecret;
+
+        private readonly gaxgrpc::ApiCall<ListUserWorkloadsSecretsRequest, ListUserWorkloadsSecretsResponse> _callListUserWorkloadsSecrets;
+
+        private readonly gaxgrpc::ApiCall<UpdateUserWorkloadsSecretRequest, UserWorkloadsSecret> _callUpdateUserWorkloadsSecret;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserWorkloadsSecretRequest, wkt::Empty> _callDeleteUserWorkloadsSecret;
+
+        private readonly gaxgrpc::ApiCall<CreateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> _callCreateUserWorkloadsConfigMap;
+
+        private readonly gaxgrpc::ApiCall<GetUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> _callGetUserWorkloadsConfigMap;
+
+        private readonly gaxgrpc::ApiCall<ListUserWorkloadsConfigMapsRequest, ListUserWorkloadsConfigMapsResponse> _callListUserWorkloadsConfigMaps;
+
+        private readonly gaxgrpc::ApiCall<UpdateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> _callUpdateUserWorkloadsConfigMap;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserWorkloadsConfigMapRequest, wkt::Empty> _callDeleteUserWorkloadsConfigMap;
+
         private readonly gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> _callSaveSnapshot;
 
         private readonly gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> _callLoadSnapshot;
@@ -1635,6 +3284,39 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             _callPollAirflowCommand = clientHelper.BuildApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse>("PollAirflowCommand", grpcClient.PollAirflowCommandAsync, grpcClient.PollAirflowCommand, effectiveSettings.PollAirflowCommandSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callPollAirflowCommand);
             Modify_PollAirflowCommandApiCall(ref _callPollAirflowCommand);
+            _callListWorkloads = clientHelper.BuildApiCall<ListWorkloadsRequest, ListWorkloadsResponse>("ListWorkloads", grpcClient.ListWorkloadsAsync, grpcClient.ListWorkloads, effectiveSettings.ListWorkloadsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListWorkloads);
+            Modify_ListWorkloadsApiCall(ref _callListWorkloads);
+            _callCreateUserWorkloadsSecret = clientHelper.BuildApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret>("CreateUserWorkloadsSecret", grpcClient.CreateUserWorkloadsSecretAsync, grpcClient.CreateUserWorkloadsSecret, effectiveSettings.CreateUserWorkloadsSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateUserWorkloadsSecret);
+            Modify_CreateUserWorkloadsSecretApiCall(ref _callCreateUserWorkloadsSecret);
+            _callGetUserWorkloadsSecret = clientHelper.BuildApiCall<GetUserWorkloadsSecretRequest, UserWorkloadsSecret>("GetUserWorkloadsSecret", grpcClient.GetUserWorkloadsSecretAsync, grpcClient.GetUserWorkloadsSecret, effectiveSettings.GetUserWorkloadsSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserWorkloadsSecret);
+            Modify_GetUserWorkloadsSecretApiCall(ref _callGetUserWorkloadsSecret);
+            _callListUserWorkloadsSecrets = clientHelper.BuildApiCall<ListUserWorkloadsSecretsRequest, ListUserWorkloadsSecretsResponse>("ListUserWorkloadsSecrets", grpcClient.ListUserWorkloadsSecretsAsync, grpcClient.ListUserWorkloadsSecrets, effectiveSettings.ListUserWorkloadsSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUserWorkloadsSecrets);
+            Modify_ListUserWorkloadsSecretsApiCall(ref _callListUserWorkloadsSecrets);
+            _callUpdateUserWorkloadsSecret = clientHelper.BuildApiCall<UpdateUserWorkloadsSecretRequest, UserWorkloadsSecret>("UpdateUserWorkloadsSecret", grpcClient.UpdateUserWorkloadsSecretAsync, grpcClient.UpdateUserWorkloadsSecret, effectiveSettings.UpdateUserWorkloadsSecretSettings).WithGoogleRequestParam("user_workloads_secret.name", request => request.UserWorkloadsSecret?.Name);
+            Modify_ApiCall(ref _callUpdateUserWorkloadsSecret);
+            Modify_UpdateUserWorkloadsSecretApiCall(ref _callUpdateUserWorkloadsSecret);
+            _callDeleteUserWorkloadsSecret = clientHelper.BuildApiCall<DeleteUserWorkloadsSecretRequest, wkt::Empty>("DeleteUserWorkloadsSecret", grpcClient.DeleteUserWorkloadsSecretAsync, grpcClient.DeleteUserWorkloadsSecret, effectiveSettings.DeleteUserWorkloadsSecretSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUserWorkloadsSecret);
+            Modify_DeleteUserWorkloadsSecretApiCall(ref _callDeleteUserWorkloadsSecret);
+            _callCreateUserWorkloadsConfigMap = clientHelper.BuildApiCall<CreateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap>("CreateUserWorkloadsConfigMap", grpcClient.CreateUserWorkloadsConfigMapAsync, grpcClient.CreateUserWorkloadsConfigMap, effectiveSettings.CreateUserWorkloadsConfigMapSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateUserWorkloadsConfigMap);
+            Modify_CreateUserWorkloadsConfigMapApiCall(ref _callCreateUserWorkloadsConfigMap);
+            _callGetUserWorkloadsConfigMap = clientHelper.BuildApiCall<GetUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap>("GetUserWorkloadsConfigMap", grpcClient.GetUserWorkloadsConfigMapAsync, grpcClient.GetUserWorkloadsConfigMap, effectiveSettings.GetUserWorkloadsConfigMapSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserWorkloadsConfigMap);
+            Modify_GetUserWorkloadsConfigMapApiCall(ref _callGetUserWorkloadsConfigMap);
+            _callListUserWorkloadsConfigMaps = clientHelper.BuildApiCall<ListUserWorkloadsConfigMapsRequest, ListUserWorkloadsConfigMapsResponse>("ListUserWorkloadsConfigMaps", grpcClient.ListUserWorkloadsConfigMapsAsync, grpcClient.ListUserWorkloadsConfigMaps, effectiveSettings.ListUserWorkloadsConfigMapsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUserWorkloadsConfigMaps);
+            Modify_ListUserWorkloadsConfigMapsApiCall(ref _callListUserWorkloadsConfigMaps);
+            _callUpdateUserWorkloadsConfigMap = clientHelper.BuildApiCall<UpdateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap>("UpdateUserWorkloadsConfigMap", grpcClient.UpdateUserWorkloadsConfigMapAsync, grpcClient.UpdateUserWorkloadsConfigMap, effectiveSettings.UpdateUserWorkloadsConfigMapSettings).WithGoogleRequestParam("user_workloads_config_map.name", request => request.UserWorkloadsConfigMap?.Name);
+            Modify_ApiCall(ref _callUpdateUserWorkloadsConfigMap);
+            Modify_UpdateUserWorkloadsConfigMapApiCall(ref _callUpdateUserWorkloadsConfigMap);
+            _callDeleteUserWorkloadsConfigMap = clientHelper.BuildApiCall<DeleteUserWorkloadsConfigMapRequest, wkt::Empty>("DeleteUserWorkloadsConfigMap", grpcClient.DeleteUserWorkloadsConfigMapAsync, grpcClient.DeleteUserWorkloadsConfigMap, effectiveSettings.DeleteUserWorkloadsConfigMapSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUserWorkloadsConfigMap);
+            Modify_DeleteUserWorkloadsConfigMapApiCall(ref _callDeleteUserWorkloadsConfigMap);
             _callSaveSnapshot = clientHelper.BuildApiCall<SaveSnapshotRequest, lro::Operation>("SaveSnapshot", grpcClient.SaveSnapshotAsync, grpcClient.SaveSnapshot, effectiveSettings.SaveSnapshotSettings).WithGoogleRequestParam("environment", request => request.Environment);
             Modify_ApiCall(ref _callSaveSnapshot);
             Modify_SaveSnapshotApiCall(ref _callSaveSnapshot);
@@ -1668,6 +3350,28 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
 
         partial void Modify_PollAirflowCommandApiCall(ref gaxgrpc::ApiCall<PollAirflowCommandRequest, PollAirflowCommandResponse> call);
 
+        partial void Modify_ListWorkloadsApiCall(ref gaxgrpc::ApiCall<ListWorkloadsRequest, ListWorkloadsResponse> call);
+
+        partial void Modify_CreateUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<CreateUserWorkloadsSecretRequest, UserWorkloadsSecret> call);
+
+        partial void Modify_GetUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<GetUserWorkloadsSecretRequest, UserWorkloadsSecret> call);
+
+        partial void Modify_ListUserWorkloadsSecretsApiCall(ref gaxgrpc::ApiCall<ListUserWorkloadsSecretsRequest, ListUserWorkloadsSecretsResponse> call);
+
+        partial void Modify_UpdateUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<UpdateUserWorkloadsSecretRequest, UserWorkloadsSecret> call);
+
+        partial void Modify_DeleteUserWorkloadsSecretApiCall(ref gaxgrpc::ApiCall<DeleteUserWorkloadsSecretRequest, wkt::Empty> call);
+
+        partial void Modify_CreateUserWorkloadsConfigMapApiCall(ref gaxgrpc::ApiCall<CreateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> call);
+
+        partial void Modify_GetUserWorkloadsConfigMapApiCall(ref gaxgrpc::ApiCall<GetUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> call);
+
+        partial void Modify_ListUserWorkloadsConfigMapsApiCall(ref gaxgrpc::ApiCall<ListUserWorkloadsConfigMapsRequest, ListUserWorkloadsConfigMapsResponse> call);
+
+        partial void Modify_UpdateUserWorkloadsConfigMapApiCall(ref gaxgrpc::ApiCall<UpdateUserWorkloadsConfigMapRequest, UserWorkloadsConfigMap> call);
+
+        partial void Modify_DeleteUserWorkloadsConfigMapApiCall(ref gaxgrpc::ApiCall<DeleteUserWorkloadsConfigMapRequest, wkt::Empty> call);
+
         partial void Modify_SaveSnapshotApiCall(ref gaxgrpc::ApiCall<SaveSnapshotRequest, lro::Operation> call);
 
         partial void Modify_LoadSnapshotApiCall(ref gaxgrpc::ApiCall<LoadSnapshotRequest, lro::Operation> call);
@@ -1696,6 +3400,28 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         partial void Modify_StopAirflowCommandRequest(ref StopAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PollAirflowCommandRequest(ref PollAirflowCommandRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWorkloadsRequest(ref ListWorkloadsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateUserWorkloadsSecretRequest(ref CreateUserWorkloadsSecretRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetUserWorkloadsSecretRequest(ref GetUserWorkloadsSecretRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUserWorkloadsSecretsRequest(ref ListUserWorkloadsSecretsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateUserWorkloadsSecretRequest(ref UpdateUserWorkloadsSecretRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserWorkloadsSecretRequest(ref DeleteUserWorkloadsSecretRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateUserWorkloadsConfigMapRequest(ref CreateUserWorkloadsConfigMapRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetUserWorkloadsConfigMapRequest(ref GetUserWorkloadsConfigMapRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUserWorkloadsConfigMapsRequest(ref ListUserWorkloadsConfigMapsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateUserWorkloadsConfigMapRequest(ref UpdateUserWorkloadsConfigMapRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserWorkloadsConfigMapRequest(ref DeleteUserWorkloadsConfigMapRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SaveSnapshotRequest(ref SaveSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1906,6 +3632,344 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
             return _callPollAirflowCommand.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloads(ListWorkloadsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkloadsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWorkloadsRequest, ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload>(_callListWorkloads, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists workloads in a Cloud Composer environment. Workload is a unit that
+        /// runs a single Composer component.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ListWorkloadsResponse.Types.ComposerWorkload"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload> ListWorkloadsAsync(ListWorkloadsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkloadsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkloadsRequest, ListWorkloadsResponse, ListWorkloadsResponse.Types.ComposerWorkload>(_callListWorkloads, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsSecret CreateUserWorkloadsSecret(CreateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callCreateUserWorkloadsSecret.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsSecret> CreateUserWorkloadsSecretAsync(CreateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callCreateUserWorkloadsSecret.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsSecret GetUserWorkloadsSecret(GetUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callGetUserWorkloadsSecret.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an existing user workloads Secret.
+        /// Values of the "data" field in the response are cleared.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsSecret> GetUserWorkloadsSecretAsync(GetUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callGetUserWorkloadsSecret.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public override gax::PagedEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecrets(ListUserWorkloadsSecretsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserWorkloadsSecretsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUserWorkloadsSecretsRequest, ListUserWorkloadsSecretsResponse, UserWorkloadsSecret>(_callListUserWorkloadsSecrets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists user workloads Secrets.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsSecret"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListUserWorkloadsSecretsResponse, UserWorkloadsSecret> ListUserWorkloadsSecretsAsync(ListUserWorkloadsSecretsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserWorkloadsSecretsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUserWorkloadsSecretsRequest, ListUserWorkloadsSecretsResponse, UserWorkloadsSecret>(_callListUserWorkloadsSecrets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsSecret UpdateUserWorkloadsSecret(UpdateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callUpdateUserWorkloadsSecret.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsSecret> UpdateUserWorkloadsSecretAsync(UpdateUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callUpdateUserWorkloadsSecret.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteUserWorkloadsSecret(DeleteUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserWorkloadsSecretRequest(ref request, ref callSettings);
+            _callDeleteUserWorkloadsSecret.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user workloads Secret.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteUserWorkloadsSecretAsync(DeleteUserWorkloadsSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserWorkloadsSecretRequest(ref request, ref callSettings);
+            return _callDeleteUserWorkloadsSecret.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsConfigMap CreateUserWorkloadsConfigMap(CreateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callCreateUserWorkloadsConfigMap.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsConfigMap> CreateUserWorkloadsConfigMapAsync(CreateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callCreateUserWorkloadsConfigMap.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsConfigMap GetUserWorkloadsConfigMap(GetUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callGetUserWorkloadsConfigMap.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an existing user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsConfigMap> GetUserWorkloadsConfigMapAsync(GetUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callGetUserWorkloadsConfigMap.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public override gax::PagedEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMaps(ListUserWorkloadsConfigMapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserWorkloadsConfigMapsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUserWorkloadsConfigMapsRequest, ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap>(_callListUserWorkloadsConfigMaps, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists user workloads ConfigMaps.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="UserWorkloadsConfigMap"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap> ListUserWorkloadsConfigMapsAsync(ListUserWorkloadsConfigMapsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserWorkloadsConfigMapsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUserWorkloadsConfigMapsRequest, ListUserWorkloadsConfigMapsResponse, UserWorkloadsConfigMap>(_callListUserWorkloadsConfigMaps, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserWorkloadsConfigMap UpdateUserWorkloadsConfigMap(UpdateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callUpdateUserWorkloadsConfigMap.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserWorkloadsConfigMap> UpdateUserWorkloadsConfigMapAsync(UpdateUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callUpdateUserWorkloadsConfigMap.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteUserWorkloadsConfigMap(DeleteUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            _callDeleteUserWorkloadsConfigMap.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user workloads ConfigMap.
+        /// 
+        /// This method is supported for Cloud Composer environments in versions
+        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteUserWorkloadsConfigMapAsync(DeleteUserWorkloadsConfigMapRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserWorkloadsConfigMapRequest(ref request, ref callSettings);
+            return _callDeleteUserWorkloadsConfigMap.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>SaveSnapshot</c>.</summary>
         public override lro::OperationsClient SaveSnapshotOperationsClient { get; }
 
@@ -2028,10 +4092,46 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
     {
     }
 
+    public partial class ListWorkloadsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListUserWorkloadsSecretsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListUserWorkloadsConfigMapsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListEnvironmentsResponse : gaxgrpc::IPageResponse<Environment>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Environment> GetEnumerator() => Environments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWorkloadsResponse : gaxgrpc::IPageResponse<ListWorkloadsResponse.Types.ComposerWorkload>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Types.ComposerWorkload> GetEnumerator() => Workloads.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListUserWorkloadsSecretsResponse : gaxgrpc::IPageResponse<UserWorkloadsSecret>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UserWorkloadsSecret> GetEnumerator() => UserWorkloadsSecrets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListUserWorkloadsConfigMapsResponse : gaxgrpc::IPageResponse<UserWorkloadsConfigMap>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<UserWorkloadsConfigMap> GetEnumerator() => UserWorkloadsConfigMaps.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

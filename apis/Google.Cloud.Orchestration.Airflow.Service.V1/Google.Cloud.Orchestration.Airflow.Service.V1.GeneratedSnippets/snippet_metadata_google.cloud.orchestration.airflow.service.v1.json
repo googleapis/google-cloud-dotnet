@@ -1302,6 +1302,3095 @@
       ]
     },
     {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_sync",
+      "title": "ListWorkloadsRequestObject",
+      "description": "Snippet for ListWorkloads",
+      "file": "EnvironmentsClient.ListWorkloadsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_async",
+      "title": "ListWorkloadsRequestObjectAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "EnvironmentsClient.ListWorkloadsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_sync_flattened",
+      "title": "ListWorkloads",
+      "description": "Snippet for ListWorkloads",
+      "file": "EnvironmentsClient.ListWorkloadsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_async_flattened",
+      "title": "ListWorkloadsAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "EnvironmentsClient.ListWorkloadsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_sync_flattened_resourceNames",
+      "title": "ListWorkloadsResourceNames",
+      "description": "Snippet for ListWorkloads",
+      "file": "EnvironmentsClient.ListWorkloadsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListWorkloads_async_flattened_resourceNames",
+      "title": "ListWorkloadsResourceNamesAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "EnvironmentsClient.ListWorkloadsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.ListWorkloadsResponse+Types+ComposerWorkload>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListWorkloads",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_sync",
+      "title": "CreateUserWorkloadsSecretRequestObject",
+      "description": "Snippet for CreateUserWorkloadsSecret",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_async",
+      "title": "CreateUserWorkloadsSecretRequestObjectAsync",
+      "description": "Snippet for CreateUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_sync_flattened",
+      "title": "CreateUserWorkloadsSecret",
+      "description": "Snippet for CreateUserWorkloadsSecret",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_async_flattened",
+      "title": "CreateUserWorkloadsSecretAsync",
+      "description": "Snippet for CreateUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_sync_flattened_resourceNames",
+      "title": "CreateUserWorkloadsSecretResourceNames",
+      "description": "Snippet for CreateUserWorkloadsSecret",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsSecret_async_flattened_resourceNames",
+      "title": "CreateUserWorkloadsSecretResourceNamesAsync",
+      "description": "Snippet for CreateUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsSecretResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_sync",
+      "title": "GetUserWorkloadsSecretRequestObject",
+      "description": "Snippet for GetUserWorkloadsSecret",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_async",
+      "title": "GetUserWorkloadsSecretRequestObjectAsync",
+      "description": "Snippet for GetUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_sync_flattened",
+      "title": "GetUserWorkloadsSecret",
+      "description": "Snippet for GetUserWorkloadsSecret",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_async_flattened",
+      "title": "GetUserWorkloadsSecretAsync",
+      "description": "Snippet for GetUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_sync_flattened_resourceNames",
+      "title": "GetUserWorkloadsSecretResourceNames",
+      "description": "Snippet for GetUserWorkloadsSecret",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsSecret_async_flattened_resourceNames",
+      "title": "GetUserWorkloadsSecretResourceNamesAsync",
+      "description": "Snippet for GetUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsSecretResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_sync",
+      "title": "ListUserWorkloadsSecretsRequestObject",
+      "description": "Snippet for ListUserWorkloadsSecrets",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecrets",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecrets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_async",
+      "title": "ListUserWorkloadsSecretsRequestObjectAsync",
+      "description": "Snippet for ListUserWorkloadsSecretsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecretsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecretsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_sync_flattened",
+      "title": "ListUserWorkloadsSecrets",
+      "description": "Snippet for ListUserWorkloadsSecrets",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecrets",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecrets",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_async_flattened",
+      "title": "ListUserWorkloadsSecretsAsync",
+      "description": "Snippet for ListUserWorkloadsSecretsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecretsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecretsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_sync_flattened_resourceNames",
+      "title": "ListUserWorkloadsSecretsResourceNames",
+      "description": "Snippet for ListUserWorkloadsSecrets",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecrets",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecrets",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsSecrets_async_flattened_resourceNames",
+      "title": "ListUserWorkloadsSecretsResourceNamesAsync",
+      "description": "Snippet for ListUserWorkloadsSecretsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsSecretsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsSecretsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsSecretsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsSecretsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsSecrets",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsSecrets",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsSecret_sync",
+      "title": "UpdateUserWorkloadsSecretRequestObject",
+      "description": "Snippet for UpdateUserWorkloadsSecret",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsSecretRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsSecret_async",
+      "title": "UpdateUserWorkloadsSecretRequestObjectAsync",
+      "description": "Snippet for UpdateUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsSecretRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsSecret_sync_flattened",
+      "title": "UpdateUserWorkloadsSecret",
+      "description": "Snippet for UpdateUserWorkloadsSecret",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsSecretSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsSecret_async_flattened",
+      "title": "UpdateUserWorkloadsSecretAsync",
+      "description": "Snippet for UpdateUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsSecretAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret",
+            "name": "userWorkloadsSecret"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecret>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_sync",
+      "title": "DeleteUserWorkloadsSecretRequestObject",
+      "description": "Snippet for DeleteUserWorkloadsSecret",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_async",
+      "title": "DeleteUserWorkloadsSecretRequestObjectAsync",
+      "description": "Snippet for DeleteUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsSecretRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_sync_flattened",
+      "title": "DeleteUserWorkloadsSecret",
+      "description": "Snippet for DeleteUserWorkloadsSecret",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_async_flattened",
+      "title": "DeleteUserWorkloadsSecretAsync",
+      "description": "Snippet for DeleteUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_sync_flattened_resourceNames",
+      "title": "DeleteUserWorkloadsSecretResourceNames",
+      "description": "Snippet for DeleteUserWorkloadsSecret",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecret",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecret",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsSecret_async_flattened_resourceNames",
+      "title": "DeleteUserWorkloadsSecretResourceNamesAsync",
+      "description": "Snippet for DeleteUserWorkloadsSecretAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsSecretResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsSecretAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsSecretAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsSecretName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsSecret",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsSecret",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_sync",
+      "title": "CreateUserWorkloadsConfigMapRequestObject",
+      "description": "Snippet for CreateUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_async",
+      "title": "CreateUserWorkloadsConfigMapRequestObjectAsync",
+      "description": "Snippet for CreateUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.CreateUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_sync_flattened",
+      "title": "CreateUserWorkloadsConfigMap",
+      "description": "Snippet for CreateUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_async_flattened",
+      "title": "CreateUserWorkloadsConfigMapAsync",
+      "description": "Snippet for CreateUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_sync_flattened_resourceNames",
+      "title": "CreateUserWorkloadsConfigMapResourceNames",
+      "description": "Snippet for CreateUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_CreateUserWorkloadsConfigMap_async_flattened_resourceNames",
+      "title": "CreateUserWorkloadsConfigMapResourceNamesAsync",
+      "description": "Snippet for CreateUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.CreateUserWorkloadsConfigMapResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.CreateUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "CreateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.CreateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_sync",
+      "title": "GetUserWorkloadsConfigMapRequestObject",
+      "description": "Snippet for GetUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_async",
+      "title": "GetUserWorkloadsConfigMapRequestObjectAsync",
+      "description": "Snippet for GetUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.GetUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_sync_flattened",
+      "title": "GetUserWorkloadsConfigMap",
+      "description": "Snippet for GetUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_async_flattened",
+      "title": "GetUserWorkloadsConfigMapAsync",
+      "description": "Snippet for GetUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_sync_flattened_resourceNames",
+      "title": "GetUserWorkloadsConfigMapResourceNames",
+      "description": "Snippet for GetUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_GetUserWorkloadsConfigMap_async_flattened_resourceNames",
+      "title": "GetUserWorkloadsConfigMapResourceNamesAsync",
+      "description": "Snippet for GetUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.GetUserWorkloadsConfigMapResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.GetUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "GetUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.GetUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_sync",
+      "title": "ListUserWorkloadsConfigMapsRequestObject",
+      "description": "Snippet for ListUserWorkloadsConfigMaps",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMaps",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMaps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_async",
+      "title": "ListUserWorkloadsConfigMapsRequestObjectAsync",
+      "description": "Snippet for ListUserWorkloadsConfigMapsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMapsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_sync_flattened",
+      "title": "ListUserWorkloadsConfigMaps",
+      "description": "Snippet for ListUserWorkloadsConfigMaps",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMaps",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMaps",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_async_flattened",
+      "title": "ListUserWorkloadsConfigMapsAsync",
+      "description": "Snippet for ListUserWorkloadsConfigMapsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMapsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_sync_flattened_resourceNames",
+      "title": "ListUserWorkloadsConfigMapsResourceNames",
+      "description": "Snippet for ListUserWorkloadsConfigMaps",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMaps",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMaps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_ListUserWorkloadsConfigMaps_async_flattened_resourceNames",
+      "title": "ListUserWorkloadsConfigMapsResourceNamesAsync",
+      "description": "Snippet for ListUserWorkloadsConfigMapsAsync",
+      "file": "EnvironmentsClient.ListUserWorkloadsConfigMapsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserWorkloadsConfigMapsAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.ListUserWorkloadsConfigMapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Orchestration.Airflow.Service.V1.ListUserWorkloadsConfigMapsResponse, Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "ListUserWorkloadsConfigMaps",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.ListUserWorkloadsConfigMaps",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsConfigMap_sync",
+      "title": "UpdateUserWorkloadsConfigMapRequestObject",
+      "description": "Snippet for UpdateUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsConfigMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsConfigMap_async",
+      "title": "UpdateUserWorkloadsConfigMapRequestObjectAsync",
+      "description": "Snippet for UpdateUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsConfigMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UpdateUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsConfigMap_sync_flattened",
+      "title": "UpdateUserWorkloadsConfigMap",
+      "description": "Snippet for UpdateUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsConfigMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_UpdateUserWorkloadsConfigMap_async_flattened",
+      "title": "UpdateUserWorkloadsConfigMapAsync",
+      "description": "Snippet for UpdateUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.UpdateUserWorkloadsConfigMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.UpdateUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap",
+            "name": "userWorkloadsConfigMap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMap>",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "UpdateUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.UpdateUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_sync",
+      "title": "DeleteUserWorkloadsConfigMapRequestObject",
+      "description": "Snippet for DeleteUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_async",
+      "title": "DeleteUserWorkloadsConfigMapRequestObjectAsync",
+      "description": "Snippet for DeleteUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.DeleteUserWorkloadsConfigMapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_sync_flattened",
+      "title": "DeleteUserWorkloadsConfigMap",
+      "description": "Snippet for DeleteUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_async_flattened",
+      "title": "DeleteUserWorkloadsConfigMapAsync",
+      "description": "Snippet for DeleteUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_sync_flattened_resourceNames",
+      "title": "DeleteUserWorkloadsConfigMapResourceNames",
+      "description": "Snippet for DeleteUserWorkloadsConfigMap",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMap",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "composer_v1_generated_Environments_DeleteUserWorkloadsConfigMap_async_flattened_resourceNames",
+      "title": "DeleteUserWorkloadsConfigMapResourceNamesAsync",
+      "description": "Snippet for DeleteUserWorkloadsConfigMapAsync",
+      "file": "EnvironmentsClient.DeleteUserWorkloadsConfigMapResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserWorkloadsConfigMapAsync",
+        "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient.DeleteUserWorkloadsConfigMapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Orchestration.Airflow.Service.V1.UserWorkloadsConfigMapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "EnvironmentsClient",
+          "fullName": "Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsClient"
+        },
+        "method": {
+          "shortName": "DeleteUserWorkloadsConfigMap",
+          "fullName": "google.cloud.orchestration.airflow.service.v1.Environments.DeleteUserWorkloadsConfigMap",
+          "service": {
+            "shortName": "Environments",
+            "fullName": "google.cloud.orchestration.airflow.service.v1.Environments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "composer_v1_generated_Environments_SaveSnapshot_sync",
       "title": "SaveSnapshotRequestObject",
       "description": "Snippet for SaveSnapshot",
