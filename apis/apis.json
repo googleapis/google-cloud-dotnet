@@ -3673,6 +3673,28 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Parallelstore.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Parallelstore",
+      "productUrl": "http://cloud/parallelstore?hl=en",
+      "description": "Recommended Google client library to manage the Parallelstore high performance, managed parallel file service.",
+      "tags": [
+        "performance"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.0.0",
+        "Google.LongRunning": "3.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/parallelstore/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "parallelstore",
+      "serviceConfigFile": "parallelstore_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/phishingprotection/v1beta1",
