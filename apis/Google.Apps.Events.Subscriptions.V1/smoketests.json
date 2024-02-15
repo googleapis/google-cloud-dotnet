@@ -1,0 +1,10 @@
+[
+  {
+    "skip": "b/325289454",
+    "method": "ListSubscriptions",
+    "client": "SubscriptionsServiceClient",
+    "arguments": {
+      "filter": "event_types:\"google.workspace.chat.membership.v1.updated\""
+    }
+  }
+]
