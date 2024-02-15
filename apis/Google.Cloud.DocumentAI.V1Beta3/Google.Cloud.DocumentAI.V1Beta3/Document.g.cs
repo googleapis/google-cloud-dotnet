@@ -11495,7 +11495,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             private global::Google.Cloud.DocumentAI.V1Beta3.BoundingPoly boundingPoly_;
             /// <summary>
             /// Optional. Identifies the bounding polygon of a layout element on the
-            /// page.
+            /// page. If `layout_type` is set, the bounding polygon must be exactly the
+            /// same to the layout element it's referring to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

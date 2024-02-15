@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(request);
