@@ -215,7 +215,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
 
   /// <summary>
-  /// Describes the labelling status of a document.
+  /// Describes the labeling status of a document.
   /// </summary>
   public enum DocumentLabelingState {
     /// <summary>
@@ -223,15 +223,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// </summary>
     [pbr::OriginalName("DOCUMENT_LABELING_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Document has been labelled.
+    /// Document has been labeled.
     /// </summary>
     [pbr::OriginalName("DOCUMENT_LABELED")] DocumentLabeled = 1,
     /// <summary>
-    /// Document has not been labelled.
+    /// Document has not been labeled.
     /// </summary>
     [pbr::OriginalName("DOCUMENT_UNLABELED")] DocumentUnlabeled = 2,
     /// <summary>
-    /// Document has been auto-labelled.
+    /// Document has been auto-labeled.
     /// </summary>
     [pbr::OriginalName("DOCUMENT_AUTO_LABELED")] DocumentAutoLabeled = 3,
   }
@@ -3170,8 +3170,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int ReturnTotalSizeFieldNumber = 6;
     private bool returnTotalSize_;
     /// <summary>
-    /// Optional. Controls if the ListDocuments request requires a total size
-    /// of matched documents. See ListDocumentsResponse.total_size.
+    /// Optional. Controls if the request requires a total size of matched
+    /// documents. See
+    /// [ListDocumentsResponse.total_size][google.cloud.documentai.v1beta3.ListDocumentsResponse.total_size].
     ///
     /// Enabling this flag may adversely impact performance.
     ///
@@ -3192,10 +3193,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// <summary>
     /// Optional. Number of results to skip beginning from the `page_token` if
     /// provided. https://google.aip.dev/158#skipping-results. It must be a
-    /// non-negative integer. Negative values wil be rejected. Note that this is
+    /// non-negative integer. Negative values will be rejected. Note that this is
     /// not the number of pages to skip. If this value causes the cursor to move
-    /// past the end of results, `ListDocumentsResponse.document_metadata` and
-    /// `ListDocumentsResponse.next_page_token` will be empty.
+    /// past the end of results,
+    /// [ListDocumentsResponse.document_metadata][google.cloud.documentai.v1beta3.ListDocumentsResponse.document_metadata]
+    /// and
+    /// [ListDocumentsResponse.next_page_token][google.cloud.documentai.v1beta3.ListDocumentsResponse.next_page_token]
+    /// will be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3524,8 +3528,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token, which can be sent as `page_token` to retrieve the next page.
-    /// If this field is omitted, there are no subsequent pages.
+    /// A token, which can be sent as
+    /// [ListDocumentsRequest.page_token][google.cloud.documentai.v1beta3.ListDocumentsRequest.page_token]
+    /// to retrieve the next page. If this field is omitted, there are no
+    /// subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5528,7 +5534,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public const int LabelingStateFieldNumber = 5;
     private global::Google.Cloud.DocumentAI.V1Beta3.DocumentLabelingState labelingState_ = global::Google.Cloud.DocumentAI.V1Beta3.DocumentLabelingState.Unspecified;
     /// <summary>
-    /// Labelling state of the document.
+    /// Labeling state of the document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);
