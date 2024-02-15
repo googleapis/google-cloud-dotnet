@@ -1,0 +1,19 @@
+[
+  {
+    "method": "ListLocations",
+    "client": "ParallelstoreClient",
+    "clientNavigationProperty": "LocationsClient",
+    "arguments": {
+      "request": {
+        "name": "projects/${PROJECT_ID}"
+      }
+    }
+  },
+  {
+    "method": "ListInstances",
+    "client": "ParallelstoreClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1-a"
+    }
+  }
+]
