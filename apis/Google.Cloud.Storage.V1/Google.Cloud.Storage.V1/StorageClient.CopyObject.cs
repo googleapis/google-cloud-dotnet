@@ -43,7 +43,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <summary>
-        /// Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+        /// Creates a copy of an object asynchronously, potentially to a different bucket. This method uses the
         /// <c>rewriteObject</c> underlying API operation for more flexibility and reliability.
         /// </summary>
         /// <param name="sourceBucket">The name of the bucket containing the object to copy. Must not be null.</param>
