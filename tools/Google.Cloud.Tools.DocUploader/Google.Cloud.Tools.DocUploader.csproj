@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
     <PackageReference Include="Google.Cloud.Storage.V1" Version="4.8.0" />
-    <PackageReference Include="Google.Protobuf" Version="3.24.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.3" />
     <PackageReference Include="SharpCompress" Version="0.36.0" />
   </ItemGroup>
 
