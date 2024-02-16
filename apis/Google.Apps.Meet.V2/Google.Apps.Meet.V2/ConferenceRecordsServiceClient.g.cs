@@ -362,8 +362,18 @@ namespace Google.Apps.Meet.V2
         public static string DefaultEndpoint { get; } = "meet.googleapis.com:443";
 
         /// <summary>The default ConferenceRecordsService scopes.</summary>
-        /// <remarks>The default ConferenceRecordsService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default ConferenceRecordsService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/meetings.space.created</description></item>
+        /// <item><description>https://www.googleapis.com/auth/meetings.space.readonly</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/meetings.space.created",
+            "https://www.googleapis.com/auth/meetings.space.readonly",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConferenceRecordsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
