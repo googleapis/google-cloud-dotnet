@@ -1,0 +1,14 @@
+name: Check that all pre and post-generation scripts are executable
+
+on: [pull_request, push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+        
+    - name: Validate script permissions
+      run: '! stat -c "%a %n" apis/*/p*.sh | grep -v 755'
