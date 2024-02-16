@@ -1089,13 +1089,19 @@ namespace Google.Cloud.ServiceHealth.V1 {
         /// </summary>
         [pbr::OriginalName("MERGED")] Merged = 4,
         /// <summary>
-        /// The incident was automatically closed because the issues couldn’t be
-        /// confirmed or is no longer impacting Google Cloud Products and/or
-        /// Locations.
+        /// The incident was automatically closed because of the following reasons:
+        ///
+        ///  * The impact of the incident could not be confirmed.
+        ///  * The incident was intermittent or resolved itself.
+        ///
+        ///  The incident does not have a resolution because no action or
+        ///  investigation happened. If it is intermittent, the incident may reopen.
         /// </summary>
         [pbr::OriginalName("AUTO_CLOSED")] AutoClosed = 9,
         /// <summary>
-        /// The incident was verified as non-impactful. No further action required.
+        /// Upon investigation, Google engineers concluded that the incident is not
+        /// affecting a Google Cloud product. This state can change if the incident
+        /// is reviewed again.
         /// </summary>
         [pbr::OriginalName("FALSE_POSITIVE")] FalsePositive = 10,
       }
@@ -1975,13 +1981,19 @@ namespace Google.Cloud.ServiceHealth.V1 {
         /// </summary>
         [pbr::OriginalName("MERGED")] Merged = 4,
         /// <summary>
-        /// The incident was automatically closed because the issues couldn’t be
-        /// confirmed or is no longer impacting Google Cloud Products and/or
-        /// Locations.
+        /// The incident was automatically closed because of the following reasons:
+        ///
+        ///  * The impact of the incident could not be confirmed.
+        ///  * The incident was intermittent or resolved itself.
+        ///
+        ///  The incident does not have a resolution because no action or
+        ///  investigation happened. If it is intermittent, the incident may reopen.
         /// </summary>
         [pbr::OriginalName("AUTO_CLOSED")] AutoClosed = 9,
         /// <summary>
-        /// The incident was verified as non-impactful. No further action required.
+        /// Upon investigation, Google engineers concluded that the incident is not
+        /// affecting a Google Cloud product. This state can change if the incident
+        /// is reviewed again.
         /// </summary>
         [pbr::OriginalName("FALSE_POSITIVE")] FalsePositive = 10,
       }
