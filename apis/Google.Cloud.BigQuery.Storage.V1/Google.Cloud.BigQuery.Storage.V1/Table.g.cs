@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bxIgZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8iUQoLVGFibGVTY2hlbWESQgoGZmll",
             "bGRzGAEgAygLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEu",
-            "VGFibGVGaWVsZFNjaGVtYSKsBQoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
+            "VGFibGVGaWVsZFNjaGVtYSL9BgoQVGFibGVGaWVsZFNjaGVtYRIRCgRuYW1l",
             "GAEgASgJQgPgQQISSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5zdG9yYWdlLnYxLlRhYmxlRmllbGRTY2hlbWEuVHlwZUID4EECEkoK",
             "BG1vZGUYAyABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
@@ -37,22 +37,27 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "U2NoZW1hQgPgQQESGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBARIXCgptYXhf",
             "bGVuZ3RoGAcgASgDQgPgQQESFgoJcHJlY2lzaW9uGAggASgDQgPgQQESEgoF",
             "c2NhbGUYCSABKANCA+BBARIlChhkZWZhdWx0X3ZhbHVlX2V4cHJlc3Npb24Y",
-            "CiABKAlCA+BBASLVAQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoG",
-            "U1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VCTEUQAxIKCgZTVFJVQ1QQBBIJ",
-            "CgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1FU1RBTVAQBxIICgREQVRFEAgS",
-            "CAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJR0VPR1JBUEhZEAsSCwoHTlVN",
-            "RVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJTlRFUlZBTBAOEggKBEpTT04Q",
-            "DyJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghOVUxMQUJMRRAB",
-            "EgwKCFJFUVVJUkVEEAISDAoIUkVQRUFURUQQA0K6AQokY29tLmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgpUYWJsZVByb3RvUAFaPmNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vYmlncXVlcnkvc3RvcmFnZS9hcGl2MS9zdG9yYWdl",
-            "cGI7c3RvcmFnZXBiqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2Uu",
-            "VjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "CiABKAlCA+BBARJkChJyYW5nZV9lbGVtZW50X3R5cGUYCyABKAsyQy5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZUZpZWxkU2NoZW1h",
+            "LkZpZWxkRWxlbWVudFR5cGVCA+BBARpeChBGaWVsZEVsZW1lbnRUeXBlEkoK",
+            "BHR5cGUYASABKA4yNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
+            "MS5UYWJsZUZpZWxkU2NoZW1hLlR5cGVCA+BBAiLgAQoEVHlwZRIUChBUWVBF",
+            "X1VOU1BFQ0lGSUVEEAASCgoGU1RSSU5HEAESCQoFSU5UNjQQAhIKCgZET1VC",
+            "TEUQAxIKCgZTVFJVQ1QQBBIJCgVCWVRFUxAFEggKBEJPT0wQBhINCglUSU1F",
+            "U1RBTVAQBxIICgREQVRFEAgSCAoEVElNRRAJEgwKCERBVEVUSU1FEAoSDQoJ",
+            "R0VPR1JBUEhZEAsSCwoHTlVNRVJJQxAMEg4KCkJJR05VTUVSSUMQDRIMCghJ",
+            "TlRFUlZBTBAOEggKBEpTT04QDxIJCgVSQU5HRRAQIkYKBE1vZGUSFAoQTU9E",
+            "RV9VTlNQRUNJRklFRBAAEgwKCE5VTExBQkxFEAESDAoIUkVRVUlSRUQQAhIM",
+            "CghSRVBFQVRFRBADQroBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
+            "b3JhZ2UudjFCClRhYmxlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "aWdxdWVyeS9zdG9yYWdlL2FwaXYxL3N0b3JhZ2VwYjtzdG9yYWdlcGKqAiBH",
+            "b29nbGUuQ2xvdWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2dsZVxDbG91",
+            "ZFxCaWdRdWVyeVxTdG9yYWdlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableSchema), global::Google.Cloud.BigQuery.Storage.V1.TableSchema.Parser, new[]{ "Fields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale", "DefaultValueExpression" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Parser, new[]{ "Name", "Type", "Mode", "Fields", "Description", "MaxLength", "Precision", "Scale", "DefaultValueExpression", "RangeElementType" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType), global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType.Parser, new[]{ "Type" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -293,6 +298,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       precision_ = other.precision_;
       scale_ = other.scale_;
       defaultValueExpression_ = other.defaultValueExpression_;
+      rangeElementType_ = other.rangeElementType_ != null ? other.rangeElementType_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -482,6 +488,26 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "range_element_type" field.</summary>
+    public const int RangeElementTypeFieldNumber = 11;
+    private global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType rangeElementType_;
+    /// <summary>
+    /// Optional. The subtype of the RANGE, if the type of this field is RANGE. If
+    /// the type is RANGE, this field is required. Possible values for the field
+    /// element type of a RANGE include:
+    /// * DATE
+    /// * DATETIME
+    /// * TIMESTAMP
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType RangeElementType {
+      get { return rangeElementType_; }
+      set {
+        rangeElementType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -506,6 +532,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (Precision != other.Precision) return false;
       if (Scale != other.Scale) return false;
       if (DefaultValueExpression != other.DefaultValueExpression) return false;
+      if (!object.Equals(RangeElementType, other.RangeElementType)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -522,6 +549,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (Precision != 0L) hash ^= Precision.GetHashCode();
       if (Scale != 0L) hash ^= Scale.GetHashCode();
       if (DefaultValueExpression.Length != 0) hash ^= DefaultValueExpression.GetHashCode();
+      if (rangeElementType_ != null) hash ^= RangeElementType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -573,6 +601,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(82);
         output.WriteString(DefaultValueExpression);
       }
+      if (rangeElementType_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RangeElementType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -616,6 +648,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(82);
         output.WriteString(DefaultValueExpression);
       }
+      if (rangeElementType_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RangeElementType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -650,6 +686,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (DefaultValueExpression.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DefaultValueExpression);
+      }
+      if (rangeElementType_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RangeElementType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -687,6 +726,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.DefaultValueExpression.Length != 0) {
         DefaultValueExpression = other.DefaultValueExpression;
+      }
+      if (other.rangeElementType_ != null) {
+        if (rangeElementType_ == null) {
+          RangeElementType = new global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType();
+        }
+        RangeElementType.MergeFrom(other.RangeElementType);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -739,6 +784,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             DefaultValueExpression = input.ReadString();
             break;
           }
+          case 90: {
+            if (rangeElementType_ == null) {
+              RangeElementType = new global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType();
+            }
+            input.ReadMessage(RangeElementType);
+            break;
+          }
         }
       }
     #endif
@@ -788,6 +840,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 82: {
             DefaultValueExpression = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (rangeElementType_ == null) {
+              RangeElementType = new global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.FieldElementType();
+            }
+            input.ReadMessage(RangeElementType);
             break;
           }
         }
@@ -865,6 +924,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// JSON, String
         /// </summary>
         [pbr::OriginalName("JSON")] Json = 15,
+        /// <summary>
+        /// RANGE
+        /// </summary>
+        [pbr::OriginalName("RANGE")] Range = 16,
       }
 
       public enum Mode {
@@ -875,6 +938,202 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         [pbr::OriginalName("NULLABLE")] Nullable = 1,
         [pbr::OriginalName("REQUIRED")] Required = 2,
         [pbr::OriginalName("REPEATED")] Repeated = 3,
+      }
+
+      /// <summary>
+      /// Represents the type of a field element.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FieldElementType : pb::IMessage<FieldElementType>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FieldElementType> _parser = new pb::MessageParser<FieldElementType>(() => new FieldElementType());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FieldElementType> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FieldElementType() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FieldElementType(FieldElementType other) : this() {
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FieldElementType Clone() {
+          return new FieldElementType(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type type_ = global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified;
+        /// <summary>
+        /// Required. The type of a field element.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FieldElementType);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FieldElementType other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FieldElementType other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.BigQuery.Storage.V1.TableFieldSchema.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
