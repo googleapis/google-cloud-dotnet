@@ -26,38 +26,38 @@ namespace Google.Cloud.Spanner.V1 {
           string.Concat(
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
             "LnNwYW5uZXIudjEaHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLrBQoSVHJhbnNhY3Rp",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKUBgoSVHJhbnNhY3Rp",
             "b25PcHRpb25zEkUKCnJlYWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5l",
             "ci52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0",
             "aW9uZWRfZG1sGAMgASgLMjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rp",
             "b25PcHRpb25zLlBhcnRpdGlvbmVkRG1sSAASQwoJcmVhZF9vbmx5GAIgASgL",
             "Mi4uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRP",
-            "bmx5SAAasgEKCVJlYWRXcml0ZRJUCg5yZWFkX2xvY2tfbW9kZRgBIAEoDjI8",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5SZWFkV3Jp",
-            "dGUuUmVhZExvY2tNb2RlIk8KDFJlYWRMb2NrTW9kZRIeChpSRUFEX0xPQ0tf",
-            "TU9ERV9VTlNQRUNJRklFRBAAEg8KC1BFU1NJTUlTVElDEAESDgoKT1BUSU1J",
-            "U1RJQxACGhAKDlBhcnRpdGlvbmVkRG1sGqgCCghSZWFkT25seRIQCgZzdHJv",
-            "bmcYASABKAhIABI4ChJtaW5fcmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wSAASMgoNbWF4X3N0YWxlbmVzcxgDIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEjQKDnJlYWRfdGltZXN0",
-            "YW1wGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEjQKD2V4",
-            "YWN0X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bkgAEh0KFXJldHVybl9yZWFkX3RpbWVzdGFtcBgGIAEoCEIRCg90aW1lc3Rh",
-            "bXBfYm91bmRCBgoEbW9kZSJNCgtUcmFuc2FjdGlvbhIKCgJpZBgBIAEoDBIy",
-            "Cg5yZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXAipAEKE1RyYW5zYWN0aW9uU2VsZWN0b3ISOwoKc2luZ2xlX3VzZRgB",
-            "IAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gA",
-            "EgwKAmlkGAIgASgMSAASNgoFYmVnaW4YAyABKAsyJS5nb29nbGUuc3Bhbm5l",
-            "ci52MS5UcmFuc2FjdGlvbk9wdGlvbnNIAEIKCghzZWxlY3RvckKzAQoVY29t",
-            "Lmdvb2dsZS5zcGFubmVyLnYxQhBUcmFuc2FjdGlvblByb3RvUAFaNWNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9zcGFubmVycGI7c3Bhbm5l",
-            "cnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRc",
-            "U3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OlYxYgZwcm90",
-            "bzM="));
+            "bmx5SAASJwofZXhjbHVkZV90eG5fZnJvbV9jaGFuZ2Vfc3RyZWFtcxgFIAEo",
+            "CBqyAQoJUmVhZFdyaXRlElQKDnJlYWRfbG9ja19tb2RlGAEgASgOMjwuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRXcml0ZS5S",
+            "ZWFkTG9ja01vZGUiTwoMUmVhZExvY2tNb2RlEh4KGlJFQURfTE9DS19NT0RF",
+            "X1VOU1BFQ0lGSUVEEAASDwoLUEVTU0lNSVNUSUMQARIOCgpPUFRJTUlTVElD",
+            "EAIaEAoOUGFydGl0aW9uZWREbWwaqAIKCFJlYWRPbmx5EhAKBnN0cm9uZxgB",
+            "IAEoCEgAEjgKEm1pbl9yZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBIABIyCg1tYXhfc3RhbGVuZXNzGAMgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASNAoOcmVhZF90aW1lc3RhbXAY",
+            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAASNAoPZXhhY3Rf",
+            "c3RhbGVuZXNzGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAAS",
+            "HQoVcmV0dXJuX3JlYWRfdGltZXN0YW1wGAYgASgIQhEKD3RpbWVzdGFtcF9i",
+            "b3VuZEIGCgRtb2RlIk0KC1RyYW5zYWN0aW9uEgoKAmlkGAEgASgMEjIKDnJl",
+            "YWRfdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cCKkAQoTVHJhbnNhY3Rpb25TZWxlY3RvchI7CgpzaW5nbGVfdXNlGAEgASgL",
+            "MiUuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zSAASDAoC",
+            "aWQYAiABKAxIABI2CgViZWdpbhgDIAEoCzIlLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlRyYW5zYWN0aW9uT3B0aW9uc0gAQgoKCHNlbGVjdG9yQrMBChVjb20uZ29v",
+            "Z2xlLnNwYW5uZXIudjFCEFRyYW5zYWN0aW9uUHJvdG9QAVo1Y2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKq",
+            "AhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFu",
+            "bmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly", "ExcludeTxnFromChangeStreams" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp" }, null, null, null, null),
@@ -429,6 +429,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransactionOptions(TransactionOptions other) : this() {
+      excludeTxnFromChangeStreams_ = other.excludeTxnFromChangeStreams_;
       switch (other.ModeCase) {
         case ModeOneofCase.ReadWrite:
           ReadWrite = other.ReadWrite.Clone();
@@ -507,6 +508,34 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "exclude_txn_from_change_streams" field.</summary>
+    public const int ExcludeTxnFromChangeStreamsFieldNumber = 5;
+    private bool excludeTxnFromChangeStreams_;
+    /// <summary>
+    /// When `exclude_txn_from_change_streams` is set to `true`:
+    ///  * Mutations from this transaction will not be recorded in change streams
+    ///  with DDL option `allow_txn_exclusion=true` that are tracking columns
+    ///  modified by these transactions.
+    ///  * Mutations from this transaction will be recorded in change streams with
+    ///  DDL option `allow_txn_exclusion=false or not set` that are tracking
+    ///  columns modified by these transactions.
+    ///
+    /// When `exclude_txn_from_change_streams` is set to `false` or not set,
+    /// mutations from this transaction will be recorded in all change streams that
+    /// are tracking columns modified by these transactions.
+    /// `exclude_txn_from_change_streams` may only be specified for read-write or
+    /// partitioned-dml transactions, otherwise the API will return an
+    /// `INVALID_ARGUMENT` error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ExcludeTxnFromChangeStreams {
+      get { return excludeTxnFromChangeStreams_; }
+      set {
+        excludeTxnFromChangeStreams_ = value;
+      }
+    }
+
     private object mode_;
     /// <summary>Enum of possible cases for the "mode" oneof.</summary>
     public enum ModeOneofCase {
@@ -547,6 +576,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(ReadWrite, other.ReadWrite)) return false;
       if (!object.Equals(PartitionedDml, other.PartitionedDml)) return false;
       if (!object.Equals(ReadOnly, other.ReadOnly)) return false;
+      if (ExcludeTxnFromChangeStreams != other.ExcludeTxnFromChangeStreams) return false;
       if (ModeCase != other.ModeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -558,6 +588,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (modeCase_ == ModeOneofCase.ReadWrite) hash ^= ReadWrite.GetHashCode();
       if (modeCase_ == ModeOneofCase.PartitionedDml) hash ^= PartitionedDml.GetHashCode();
       if (modeCase_ == ModeOneofCase.ReadOnly) hash ^= ReadOnly.GetHashCode();
+      if (ExcludeTxnFromChangeStreams != false) hash ^= ExcludeTxnFromChangeStreams.GetHashCode();
       hash ^= (int) modeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -589,6 +620,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(PartitionedDml);
       }
+      if (ExcludeTxnFromChangeStreams != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ExcludeTxnFromChangeStreams);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -611,6 +646,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(PartitionedDml);
       }
+      if (ExcludeTxnFromChangeStreams != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ExcludeTxnFromChangeStreams);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -630,6 +669,9 @@ namespace Google.Cloud.Spanner.V1 {
       if (modeCase_ == ModeOneofCase.ReadOnly) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadOnly);
       }
+      if (ExcludeTxnFromChangeStreams != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -641,6 +683,9 @@ namespace Google.Cloud.Spanner.V1 {
     public void MergeFrom(TransactionOptions other) {
       if (other == null) {
         return;
+      }
+      if (other.ExcludeTxnFromChangeStreams != false) {
+        ExcludeTxnFromChangeStreams = other.ExcludeTxnFromChangeStreams;
       }
       switch (other.ModeCase) {
         case ModeOneofCase.ReadWrite:
@@ -705,6 +750,10 @@ namespace Google.Cloud.Spanner.V1 {
             PartitionedDml = subBuilder;
             break;
           }
+          case 40: {
+            ExcludeTxnFromChangeStreams = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -745,6 +794,10 @@ namespace Google.Cloud.Spanner.V1 {
             }
             input.ReadMessage(subBuilder);
             PartitionedDml = subBuilder;
+            break;
+          }
+          case 40: {
+            ExcludeTxnFromChangeStreams = input.ReadBool();
             break;
           }
         }
