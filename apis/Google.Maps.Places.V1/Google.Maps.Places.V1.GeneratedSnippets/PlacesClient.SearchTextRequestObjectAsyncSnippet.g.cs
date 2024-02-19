@@ -52,6 +52,7 @@ namespace GoogleCSharpSnippets
                 StrictTypeFiltering = false,
                 LocationBias = new SearchTextRequest.Types.LocationBias(),
                 LocationRestriction = new SearchTextRequest.Types.LocationRestriction(),
+                EvOptions = new SearchTextRequest.Types.EVOptions(),
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);

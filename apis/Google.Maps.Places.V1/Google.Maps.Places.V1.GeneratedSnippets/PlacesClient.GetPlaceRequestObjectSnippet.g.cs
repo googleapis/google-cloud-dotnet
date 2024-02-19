@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 PlaceName = PlaceName.FromPlace("[PLACE_ID]"),
                 LanguageCode = "",
                 RegionCode = "",
+                SessionToken = "",
             };
             // Make the request
             Place response = placesClient.GetPlace(request);

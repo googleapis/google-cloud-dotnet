@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Maps.Places.V1;
+    using Google.Type;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -95,6 +96,7 @@ namespace GoogleCSharpSnippets
                 StrictTypeFiltering = false,
                 LocationBias = new SearchTextRequest.Types.LocationBias(),
                 LocationRestriction = new SearchTextRequest.Types.LocationRestriction(),
+                EvOptions = new SearchTextRequest.Types.EVOptions(),
             };
             // Make the request
             SearchTextResponse response = placesClient.SearchText(request);
@@ -126,6 +128,7 @@ namespace GoogleCSharpSnippets
                 StrictTypeFiltering = false,
                 LocationBias = new SearchTextRequest.Types.LocationBias(),
                 LocationRestriction = new SearchTextRequest.Types.LocationRestriction(),
+                EvOptions = new SearchTextRequest.Types.EVOptions(),
             };
             // Make the request
             SearchTextResponse response = await placesClient.SearchTextAsync(request);
@@ -237,6 +240,7 @@ namespace GoogleCSharpSnippets
                 PlaceName = PlaceName.FromPlace("[PLACE_ID]"),
                 LanguageCode = "",
                 RegionCode = "",
+                SessionToken = "",
             };
             // Make the request
             Place response = placesClient.GetPlace(request);
@@ -256,6 +260,7 @@ namespace GoogleCSharpSnippets
                 PlaceName = PlaceName.FromPlace("[PLACE_ID]"),
                 LanguageCode = "",
                 RegionCode = "",
+                SessionToken = "",
             };
             // Make the request
             Place response = await placesClient.GetPlaceAsync(request);
@@ -313,6 +318,59 @@ namespace GoogleCSharpSnippets
             PlaceName name = PlaceName.FromPlace("[PLACE_ID]");
             // Make the request
             Place response = await placesClient.GetPlaceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AutocompletePlaces</summary>
+        public void AutocompletePlacesRequestObject()
+        {
+            // Snippet: AutocompletePlaces(AutocompletePlacesRequest, CallSettings)
+            // Create client
+            PlacesClient placesClient = PlacesClient.Create();
+            // Initialize request argument(s)
+            AutocompletePlacesRequest request = new AutocompletePlacesRequest
+            {
+                Input = "",
+                LocationBias = new AutocompletePlacesRequest.Types.LocationBias(),
+                LocationRestriction = new AutocompletePlacesRequest.Types.LocationRestriction(),
+                IncludedPrimaryTypes = { "", },
+                IncludedRegionCodes = { "", },
+                LanguageCode = "",
+                RegionCode = "",
+                Origin = new LatLng(),
+                InputOffset = 0,
+                IncludeQueryPredictions = false,
+                SessionToken = "",
+            };
+            // Make the request
+            AutocompletePlacesResponse response = placesClient.AutocompletePlaces(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AutocompletePlacesAsync</summary>
+        public async Task AutocompletePlacesRequestObjectAsync()
+        {
+            // Snippet: AutocompletePlacesAsync(AutocompletePlacesRequest, CallSettings)
+            // Additional: AutocompletePlacesAsync(AutocompletePlacesRequest, CancellationToken)
+            // Create client
+            PlacesClient placesClient = await PlacesClient.CreateAsync();
+            // Initialize request argument(s)
+            AutocompletePlacesRequest request = new AutocompletePlacesRequest
+            {
+                Input = "",
+                LocationBias = new AutocompletePlacesRequest.Types.LocationBias(),
+                LocationRestriction = new AutocompletePlacesRequest.Types.LocationRestriction(),
+                IncludedPrimaryTypes = { "", },
+                IncludedRegionCodes = { "", },
+                LanguageCode = "",
+                RegionCode = "",
+                Origin = new LatLng(),
+                InputOffset = 0,
+                IncludeQueryPredictions = false,
+                SessionToken = "",
+            };
+            // Make the request
+            AutocompletePlacesResponse response = await placesClient.AutocompletePlacesAsync(request);
             // End snippet
         }
     }
