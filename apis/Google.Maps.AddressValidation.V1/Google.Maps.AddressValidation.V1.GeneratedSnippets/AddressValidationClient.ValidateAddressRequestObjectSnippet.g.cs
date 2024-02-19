@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Address = new PostalAddress(),
                 PreviousResponseId = "",
                 EnableUspsCass = false,
+                SessionToken = "",
             };
             // Make the request
             ValidateAddressResponse response = addressValidationClient.ValidateAddress(request);
