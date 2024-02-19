@@ -35,6 +35,7 @@ namespace GoogleCSharpSnippets
                 Address = new PostalAddress(),
                 PreviousResponseId = "",
                 EnableUspsCass = false,
+                SessionToken = "",
             };
             // Make the request
             ValidateAddressResponse response = addressValidationClient.ValidateAddress(request);
@@ -54,6 +55,7 @@ namespace GoogleCSharpSnippets
                 Address = new PostalAddress(),
                 PreviousResponseId = "",
                 EnableUspsCass = false,
+                SessionToken = "",
             };
             // Make the request
             ValidateAddressResponse response = await addressValidationClient.ValidateAddressAsync(request);

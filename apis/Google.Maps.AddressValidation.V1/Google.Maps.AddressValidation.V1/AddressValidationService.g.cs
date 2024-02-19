@@ -33,60 +33,60 @@ namespace Google.Maps.AddressValidation.V1 {
             "MS9nZW9jb2RlLnByb3RvGi9nb29nbGUvbWFwcy9hZGRyZXNzdmFsaWRhdGlv",
             "bi92MS9tZXRhZGF0YS5wcm90bxowZ29vZ2xlL21hcHMvYWRkcmVzc3ZhbGlk",
             "YXRpb24vdjEvdXNwc19kYXRhLnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxf",
-            "YWRkcmVzcy5wcm90byKCAQoWVmFsaWRhdGVBZGRyZXNzUmVxdWVzdBIwCgdh",
+            "YWRkcmVzcy5wcm90byKeAQoWVmFsaWRhdGVBZGRyZXNzUmVxdWVzdBIwCgdh",
             "ZGRyZXNzGAEgASgLMhouZ29vZ2xlLnR5cGUuUG9zdGFsQWRkcmVzc0ID4EEC",
             "EhwKFHByZXZpb3VzX3Jlc3BvbnNlX2lkGAIgASgJEhgKEGVuYWJsZV91c3Bz",
-            "X2Nhc3MYAyABKAgicgoXVmFsaWRhdGVBZGRyZXNzUmVzcG9uc2USQgoGcmVz",
-            "dWx0GAEgASgLMjIuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEu",
-            "VmFsaWRhdGlvblJlc3VsdBITCgtyZXNwb25zZV9pZBgCIAEoCSLLAgogUHJv",
-            "dmlkZVZhbGlkYXRpb25GZWVkYmFja1JlcXVlc3QScAoKY29uY2x1c2lvbhgB",
-            "IAEoDjJXLmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlByb3Zp",
-            "ZGVWYWxpZGF0aW9uRmVlZGJhY2tSZXF1ZXN0LlZhbGlkYXRpb25Db25jbHVz",
-            "aW9uQgPgQQISGAoLcmVzcG9uc2VfaWQYAiABKAlCA+BBAiKaAQoUVmFsaWRh",
-            "dGlvbkNvbmNsdXNpb24SJQohVkFMSURBVElPTl9DT05DTFVTSU9OX1VOU1BF",
-            "Q0lGSUVEEAASGgoWVkFMSURBVEVEX1ZFUlNJT05fVVNFRBABEhUKEVVTRVJf",
-            "VkVSU0lPTl9VU0VEEAISHAoYVU5WQUxJREFURURfVkVSU0lPTl9VU0VEEAMS",
-            "CgoGVU5VU0VEEAQiIwohUHJvdmlkZVZhbGlkYXRpb25GZWVkYmFja1Jlc3Bv",
-            "bnNlIsoCChBWYWxpZGF0aW9uUmVzdWx0EjoKB3ZlcmRpY3QYASABKAsyKS5n",
-            "b29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5WZXJkaWN0EjoKB2Fk",
-            "ZHJlc3MYAiABKAsyKS5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52",
-            "MS5BZGRyZXNzEjoKB2dlb2NvZGUYAyABKAsyKS5nb29nbGUubWFwcy5hZGRy",
-            "ZXNzdmFsaWRhdGlvbi52MS5HZW9jb2RlEkMKCG1ldGFkYXRhGAQgASgLMjEu",
-            "Z29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEuQWRkcmVzc01ldGFk",
-            "YXRhEj0KCXVzcHNfZGF0YRgFIAEoCzIqLmdvb2dsZS5tYXBzLmFkZHJlc3N2",
-            "YWxpZGF0aW9uLnYxLlVzcHNEYXRhIokECgdWZXJkaWN0ElAKEWlucHV0X2dy",
-            "YW51bGFyaXR5GAEgASgOMjUuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
-            "b24udjEuVmVyZGljdC5HcmFudWxhcml0eRJVChZ2YWxpZGF0aW9uX2dyYW51",
-            "bGFyaXR5GAIgASgOMjUuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24u",
-            "djEuVmVyZGljdC5HcmFudWxhcml0eRJSChNnZW9jb2RlX2dyYW51bGFyaXR5",
-            "GAMgASgOMjUuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEuVmVy",
-            "ZGljdC5HcmFudWxhcml0eRIYChBhZGRyZXNzX2NvbXBsZXRlGAQgASgIEiIK",
-            "Gmhhc191bmNvbmZpcm1lZF9jb21wb25lbnRzGAUgASgIEh8KF2hhc19pbmZl",
-            "cnJlZF9jb21wb25lbnRzGAYgASgIEh8KF2hhc19yZXBsYWNlZF9jb21wb25l",
-            "bnRzGAcgASgIIoABCgtHcmFudWxhcml0eRIbChdHUkFOVUxBUklUWV9VTlNQ",
-            "RUNJRklFRBAAEg8KC1NVQl9QUkVNSVNFEAESCwoHUFJFTUlTRRACEhUKEVBS",
-            "RU1JU0VfUFJPWElNSVRZEAMSCQoFQkxPQ0sQBBIJCgVST1VURRAFEgkKBU9U",
-            "SEVSEAYysgMKEUFkZHJlc3NWYWxpZGF0aW9uEqYBCg9WYWxpZGF0ZUFkZHJl",
-            "c3MSOC5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5WYWxpZGF0",
-            "ZUFkZHJlc3NSZXF1ZXN0GjkuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRp",
-            "b24udjEuVmFsaWRhdGVBZGRyZXNzUmVzcG9uc2UiHoLT5JMCGCITL3YxOnZh",
-            "bGlkYXRlQWRkcmVzczoBKhLOAQoZUHJvdmlkZVZhbGlkYXRpb25GZWVkYmFj",
-            "axJCLmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlByb3ZpZGVW",
-            "YWxpZGF0aW9uRmVlZGJhY2tSZXF1ZXN0GkMuZ29vZ2xlLm1hcHMuYWRkcmVz",
-            "c3ZhbGlkYXRpb24udjEuUHJvdmlkZVZhbGlkYXRpb25GZWVkYmFja1Jlc3Bv",
-            "bnNlIiiC0+STAiIiHS92MTpwcm92aWRlVmFsaWRhdGlvbkZlZWRiYWNrOgEq",
-            "GiPKQSBhZGRyZXNzdmFsaWRhdGlvbi5nb29nbGVhcGlzLmNvbUKaAgokY29t",
-            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQh1BZGRyZXNzVmFs",
-            "aWRhdGlvblNlcnZpY2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21h",
-            "cHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBpdjEvYWRkcmVzc3ZhbGlkYXRpb25w",
-            "YjthZGRyZXNzdmFsaWRhdGlvbnBi+AEBogIHR01QQVZWMaoCIEdvb2dsZS5N",
-            "YXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYxygIgR29vZ2xlXE1hcHNcQWRkcmVz",
-            "c1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6Ok1hcHM6OkFkZHJlc3NWYWxpZGF0",
-            "aW9uOjpWMWIGcHJvdG8z"));
+            "X2Nhc3MYAyABKAgSGgoNc2Vzc2lvbl90b2tlbhgFIAEoCUID4EEBInIKF1Zh",
+            "bGlkYXRlQWRkcmVzc1Jlc3BvbnNlEkIKBnJlc3VsdBgBIAEoCzIyLmdvb2ds",
+            "ZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZhbGlkYXRpb25SZXN1bHQS",
+            "EwoLcmVzcG9uc2VfaWQYAiABKAkiywIKIFByb3ZpZGVWYWxpZGF0aW9uRmVl",
+            "ZGJhY2tSZXF1ZXN0EnAKCmNvbmNsdXNpb24YASABKA4yVy5nb29nbGUubWFw",
+            "cy5hZGRyZXNzdmFsaWRhdGlvbi52MS5Qcm92aWRlVmFsaWRhdGlvbkZlZWRi",
+            "YWNrUmVxdWVzdC5WYWxpZGF0aW9uQ29uY2x1c2lvbkID4EECEhgKC3Jlc3Bv",
+            "bnNlX2lkGAIgASgJQgPgQQIimgEKFFZhbGlkYXRpb25Db25jbHVzaW9uEiUK",
+            "IVZBTElEQVRJT05fQ09OQ0xVU0lPTl9VTlNQRUNJRklFRBAAEhoKFlZBTElE",
+            "QVRFRF9WRVJTSU9OX1VTRUQQARIVChFVU0VSX1ZFUlNJT05fVVNFRBACEhwK",
+            "GFVOVkFMSURBVEVEX1ZFUlNJT05fVVNFRBADEgoKBlVOVVNFRBAEIiMKIVBy",
+            "b3ZpZGVWYWxpZGF0aW9uRmVlZGJhY2tSZXNwb25zZSLKAgoQVmFsaWRhdGlv",
+            "blJlc3VsdBI6Cgd2ZXJkaWN0GAEgASgLMikuZ29vZ2xlLm1hcHMuYWRkcmVz",
+            "c3ZhbGlkYXRpb24udjEuVmVyZGljdBI6CgdhZGRyZXNzGAIgASgLMikuZ29v",
+            "Z2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEuQWRkcmVzcxI6CgdnZW9j",
+            "b2RlGAMgASgLMikuZ29vZ2xlLm1hcHMuYWRkcmVzc3ZhbGlkYXRpb24udjEu",
+            "R2VvY29kZRJDCghtZXRhZGF0YRgEIAEoCzIxLmdvb2dsZS5tYXBzLmFkZHJl",
+            "c3N2YWxpZGF0aW9uLnYxLkFkZHJlc3NNZXRhZGF0YRI9Cgl1c3BzX2RhdGEY",
+            "BSABKAsyKi5nb29nbGUubWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MS5Vc3Bz",
+            "RGF0YSKJBAoHVmVyZGljdBJQChFpbnB1dF9ncmFudWxhcml0eRgBIAEoDjI1",
+            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3Jh",
+            "bnVsYXJpdHkSVQoWdmFsaWRhdGlvbl9ncmFudWxhcml0eRgCIAEoDjI1Lmdv",
+            "b2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3JhbnVs",
+            "YXJpdHkSUgoTZ2VvY29kZV9ncmFudWxhcml0eRgDIAEoDjI1Lmdvb2dsZS5t",
+            "YXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZlcmRpY3QuR3JhbnVsYXJpdHkS",
+            "GAoQYWRkcmVzc19jb21wbGV0ZRgEIAEoCBIiChpoYXNfdW5jb25maXJtZWRf",
+            "Y29tcG9uZW50cxgFIAEoCBIfChdoYXNfaW5mZXJyZWRfY29tcG9uZW50cxgG",
+            "IAEoCBIfChdoYXNfcmVwbGFjZWRfY29tcG9uZW50cxgHIAEoCCKAAQoLR3Jh",
+            "bnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIPCgtTVUJf",
+            "UFJFTUlTRRABEgsKB1BSRU1JU0UQAhIVChFQUkVNSVNFX1BST1hJTUlUWRAD",
+            "EgkKBUJMT0NLEAQSCQoFUk9VVEUQBRIJCgVPVEhFUhAGMrIDChFBZGRyZXNz",
+            "VmFsaWRhdGlvbhKmAQoPVmFsaWRhdGVBZGRyZXNzEjguZ29vZ2xlLm1hcHMu",
+            "YWRkcmVzc3ZhbGlkYXRpb24udjEuVmFsaWRhdGVBZGRyZXNzUmVxdWVzdBo5",
+            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlZhbGlkYXRlQWRk",
+            "cmVzc1Jlc3BvbnNlIh6C0+STAhgiEy92MTp2YWxpZGF0ZUFkZHJlc3M6ASoS",
+            "zgEKGVByb3ZpZGVWYWxpZGF0aW9uRmVlZGJhY2sSQi5nb29nbGUubWFwcy5h",
+            "ZGRyZXNzdmFsaWRhdGlvbi52MS5Qcm92aWRlVmFsaWRhdGlvbkZlZWRiYWNr",
+            "UmVxdWVzdBpDLmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxLlBy",
+            "b3ZpZGVWYWxpZGF0aW9uRmVlZGJhY2tSZXNwb25zZSIogtPkkwIiIh0vdjE6",
+            "cHJvdmlkZVZhbGlkYXRpb25GZWVkYmFjazoBKhojykEgYWRkcmVzc3ZhbGlk",
+            "YXRpb24uZ29vZ2xlYXBpcy5jb21CmgIKJGNvbS5nb29nbGUubWFwcy5hZGRy",
+            "ZXNzdmFsaWRhdGlvbi52MUIdQWRkcmVzc1ZhbGlkYXRpb25TZXJ2aWNlUHJv",
+            "dG9QAVpYY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2FkZHJlc3N2YWxpZGF0",
+            "aW9uL2FwaXYxL2FkZHJlc3N2YWxpZGF0aW9ucGI7YWRkcmVzc3ZhbGlkYXRp",
+            "b25wYvgBAaICB0dNUEFWVjGqAiBHb29nbGUuTWFwcy5BZGRyZXNzVmFsaWRh",
+            "dGlvbi5WMcoCIEdvb2dsZVxNYXBzXEFkZHJlc3NWYWxpZGF0aW9uXFYx6gIj",
+            "R29vZ2xlOjpNYXBzOjpBZGRyZXNzVmFsaWRhdGlvbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.AddressValidation.V1.AddressReflection.Descriptor, global::Google.Maps.AddressValidation.V1.GeocodeReflection.Descriptor, global::Google.Maps.AddressValidation.V1.MetadataReflection.Descriptor, global::Google.Maps.AddressValidation.V1.UspsDataReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ValidateAddressRequest), global::Google.Maps.AddressValidation.V1.ValidateAddressRequest.Parser, new[]{ "Address", "PreviousResponseId", "EnableUspsCass" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ValidateAddressRequest), global::Google.Maps.AddressValidation.V1.ValidateAddressRequest.Parser, new[]{ "Address", "PreviousResponseId", "EnableUspsCass", "SessionToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ValidateAddressResponse), global::Google.Maps.AddressValidation.V1.ValidateAddressResponse.Parser, new[]{ "Result", "ResponseId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest), global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest.Parser, new[]{ "Conclusion", "ResponseId" }, null, new[]{ typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest.Types.ValidationConclusion) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse), global::Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse.Parser, null, null, null, null, null),
@@ -139,6 +139,7 @@ namespace Google.Maps.AddressValidation.V1 {
       address_ = other.address_ != null ? other.address_.Clone() : null;
       previousResponseId_ = other.previousResponseId_;
       enableUspsCass_ = other.enableUspsCass_;
+      sessionToken_ = other.sessionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -158,8 +159,8 @@ namespace Google.Maps.AddressValidation.V1 {
     /// The total length of the fields in this input must not exceed 280
     /// characters.
     ///
-    /// Supported regions can be found in the
-    /// [FAQ](https://developers.google.com/maps/documentation/address-validation/faq#which_regions_are_currently_supported).
+    /// Supported regions can be found
+    /// [here](https://developers.google.com/maps/documentation/address-validation/coverage).
     ///
     /// The [language_code][google.type.PostalAddress.language_code] value in the
     /// input address is reserved for future uses and is ignored today. The
@@ -227,6 +228,40 @@ namespace Google.Maps.AddressValidation.V1 {
       }
     }
 
+    /// <summary>Field number for the "session_token" field.</summary>
+    public const int SessionTokenFieldNumber = 5;
+    private string sessionToken_ = "";
+    /// <summary>
+    /// Optional. A string which identifies an Autocomplete session for billing
+    /// purposes. Must be a URL and filename safe base64 string with at most 36
+    /// ASCII characters in length. Otherwise an INVALID_ARGUMENT error is
+    /// returned.
+    ///
+    /// The session begins when the user starts typing a query, and concludes when
+    /// they select a place and a call to Place Details or Address Validation is
+    /// made. Each session can have multiple autocomplete queries, followed by one
+    /// Place Details or Address Validation request. The credentials used for each
+    /// request within a session must belong to the same Google Cloud Console
+    /// project. Once a session has concluded, the token is no longer valid; your
+    /// app must generate a fresh token for each session. If the `session_token`
+    /// parameter is omitted, or if you reuse a session token, the session is
+    /// charged as if no session token was provided (each request is billed
+    /// separately).
+    ///
+    /// Note: Address Validation can only be used in sessions with the
+    /// Autocomplete (New) API, not the old Autocomplete API. See
+    /// https://developers.google.com/maps/documentation/places/web-service/session-pricing
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SessionToken {
+      get { return sessionToken_; }
+      set {
+        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -245,6 +280,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (!object.Equals(Address, other.Address)) return false;
       if (PreviousResponseId != other.PreviousResponseId) return false;
       if (EnableUspsCass != other.EnableUspsCass) return false;
+      if (SessionToken != other.SessionToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -255,6 +291,7 @@ namespace Google.Maps.AddressValidation.V1 {
       if (address_ != null) hash ^= Address.GetHashCode();
       if (PreviousResponseId.Length != 0) hash ^= PreviousResponseId.GetHashCode();
       if (EnableUspsCass != false) hash ^= EnableUspsCass.GetHashCode();
+      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -285,6 +322,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(24);
         output.WriteBool(EnableUspsCass);
       }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SessionToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -307,6 +348,10 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(24);
         output.WriteBool(EnableUspsCass);
       }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SessionToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -325,6 +370,9 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (EnableUspsCass != false) {
         size += 1 + 1;
+      }
+      if (SessionToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -349,6 +397,9 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (other.EnableUspsCass != false) {
         EnableUspsCass = other.EnableUspsCass;
+      }
+      if (other.SessionToken.Length != 0) {
+        SessionToken = other.SessionToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -380,6 +431,10 @@ namespace Google.Maps.AddressValidation.V1 {
             EnableUspsCass = input.ReadBool();
             break;
           }
+          case 42: {
+            SessionToken = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -408,6 +463,10 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 24: {
             EnableUspsCass = input.ReadBool();
+            break;
+          }
+          case 42: {
+            SessionToken = input.ReadString();
             break;
           }
         }
@@ -2004,8 +2063,7 @@ namespace Google.Maps.AddressValidation.V1 {
         /// </summary>
         [pbr::OriginalName("PREMISE")] Premise = 2,
         /// <summary>
-        /// A geocode that should be very close to the building-level location of
-        /// the address.
+        /// A geocode that approximates the building-level location of the address.
         /// </summary>
         [pbr::OriginalName("PREMISE_PROXIMITY")] PremiseProximity = 3,
         /// <summary>

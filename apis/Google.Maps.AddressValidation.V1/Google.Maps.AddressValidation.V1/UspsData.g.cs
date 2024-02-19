@@ -30,35 +30,41 @@ namespace Google.Maps.AddressValidation.V1 {
             "bRgCIAEoCRIbChNzZWNvbmRfYWRkcmVzc19saW5lGAMgASgJEhQKDHVyYmFu",
             "aXphdGlvbhgEIAEoCRIjChtjaXR5X3N0YXRlX3ppcF9hZGRyZXNzX2xpbmUY",
             "BSABKAkSDAoEY2l0eRgGIAEoCRINCgVzdGF0ZRgHIAEoCRIQCgh6aXBfY29k",
-            "ZRgIIAEoCRIaChJ6aXBfY29kZV9leHRlbnNpb24YCSABKAki/AUKCFVzcHNE",
+            "ZRgIIAEoCRIaChJ6aXBfY29kZV9leHRlbnNpb24YCSABKAkigggKCFVzcHNE",
             "YXRhEksKFHN0YW5kYXJkaXplZF9hZGRyZXNzGAEgASgLMi0uZ29vZ2xlLm1h",
             "cHMuYWRkcmVzc3ZhbGlkYXRpb24udjEuVXNwc0FkZHJlc3MSGwoTZGVsaXZl",
             "cnlfcG9pbnRfY29kZRgCIAEoCRIiChpkZWxpdmVyeV9wb2ludF9jaGVja19k",
             "aWdpdBgDIAEoCRIYChBkcHZfY29uZmlybWF0aW9uGAQgASgJEhQKDGRwdl9m",
             "b290bm90ZRgFIAEoCRIQCghkcHZfY21yYRgGIAEoCRISCgpkcHZfdmFjYW50",
-            "GAcgASgJEhMKC2Rwdl9ub19zdGF0GAggASgJEhUKDWNhcnJpZXJfcm91dGUY",
-            "CSABKAkSHwoXY2Fycmllcl9yb3V0ZV9pbmRpY2F0b3IYCiABKAkSFAoMZXdz",
-            "X25vX21hdGNoGAsgASgIEhgKEHBvc3Rfb2ZmaWNlX2NpdHkYDCABKAkSGQoR",
-            "cG9zdF9vZmZpY2Vfc3RhdGUYDSABKAkSGAoQYWJicmV2aWF0ZWRfY2l0eRgO",
-            "IAEoCRIYChBmaXBzX2NvdW50eV9jb2RlGA8gASgJEg4KBmNvdW50eRgQIAEo",
-            "CRITCgtlbG90X251bWJlchgRIAEoCRIRCgllbG90X2ZsYWcYEiABKAkSHQoV",
-            "bGFjc19saW5rX3JldHVybl9jb2RlGBMgASgJEhsKE2xhY3NfbGlua19pbmRp",
-            "Y2F0b3IYFCABKAkSHwoXcG9fYm94X29ubHlfcG9zdGFsX2NvZGUYFSABKAgS",
-            "GgoSc3VpdGVsaW5rX2Zvb3Rub3RlGBYgASgJEhYKDnBtYl9kZXNpZ25hdG9y",
-            "GBcgASgJEhIKCnBtYl9udW1iZXIYGCABKAkSGwoTYWRkcmVzc19yZWNvcmRf",
-            "dHlwZRgZIAEoCRIXCg9kZWZhdWx0X2FkZHJlc3MYGiABKAgSFQoNZXJyb3Jf",
-            "bWVzc2FnZRgbIAEoCRIWCg5jYXNzX3Byb2Nlc3NlZBgcIAEoCEKKAgokY29t",
-            "Lmdvb2dsZS5tYXBzLmFkZHJlc3N2YWxpZGF0aW9uLnYxQg1Vc3BzRGF0YVBy",
-            "b3RvUAFaWGNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9hZGRyZXNzdmFsaWRh",
-            "dGlvbi9hcGl2MS9hZGRyZXNzdmFsaWRhdGlvbnBiO2FkZHJlc3N2YWxpZGF0",
-            "aW9ucGL4AQGiAgdHTVBBVlYxqgIgR29vZ2xlLk1hcHMuQWRkcmVzc1ZhbGlk",
-            "YXRpb24uVjHKAiBHb29nbGVcTWFwc1xBZGRyZXNzVmFsaWRhdGlvblxWMeoC",
-            "I0dvb2dsZTo6TWFwczo6QWRkcmVzc1ZhbGlkYXRpb246OlYxYgZwcm90bzM="));
+            "GAcgASgJEhMKC2Rwdl9ub19zdGF0GAggASgJEh8KF2Rwdl9ub19zdGF0X3Jl",
+            "YXNvbl9jb2RlGB0gASgFEhAKCGRwdl9kcm9wGB4gASgJEhUKDWRwdl90aHJv",
+            "d2JhY2sYHyABKAkSHQoVZHB2X25vbl9kZWxpdmVyeV9kYXlzGCAgASgJEiQK",
+            "HGRwdl9ub25fZGVsaXZlcnlfZGF5c192YWx1ZXMYISABKAUSHgoWZHB2X25v",
+            "X3NlY3VyZV9sb2NhdGlvbhgiIAEoCRIQCghkcHZfcGJzYRgjIAEoCRIfChdk",
+            "cHZfZG9vcl9ub3RfYWNjZXNzaWJsZRgkIAEoCRIiChpkcHZfZW5oYW5jZWRf",
+            "ZGVsaXZlcnlfY29kZRglIAEoCRIVCg1jYXJyaWVyX3JvdXRlGAkgASgJEh8K",
+            "F2NhcnJpZXJfcm91dGVfaW5kaWNhdG9yGAogASgJEhQKDGV3c19ub19tYXRj",
+            "aBgLIAEoCBIYChBwb3N0X29mZmljZV9jaXR5GAwgASgJEhkKEXBvc3Rfb2Zm",
+            "aWNlX3N0YXRlGA0gASgJEhgKEGFiYnJldmlhdGVkX2NpdHkYDiABKAkSGAoQ",
+            "Zmlwc19jb3VudHlfY29kZRgPIAEoCRIOCgZjb3VudHkYECABKAkSEwoLZWxv",
+            "dF9udW1iZXIYESABKAkSEQoJZWxvdF9mbGFnGBIgASgJEh0KFWxhY3NfbGlu",
+            "a19yZXR1cm5fY29kZRgTIAEoCRIbChNsYWNzX2xpbmtfaW5kaWNhdG9yGBQg",
+            "ASgJEh8KF3BvX2JveF9vbmx5X3Bvc3RhbF9jb2RlGBUgASgIEhoKEnN1aXRl",
+            "bGlua19mb290bm90ZRgWIAEoCRIWCg5wbWJfZGVzaWduYXRvchgXIAEoCRIS",
+            "CgpwbWJfbnVtYmVyGBggASgJEhsKE2FkZHJlc3NfcmVjb3JkX3R5cGUYGSAB",
+            "KAkSFwoPZGVmYXVsdF9hZGRyZXNzGBogASgIEhUKDWVycm9yX21lc3NhZ2UY",
+            "GyABKAkSFgoOY2Fzc19wcm9jZXNzZWQYHCABKAhCigIKJGNvbS5nb29nbGUu",
+            "bWFwcy5hZGRyZXNzdmFsaWRhdGlvbi52MUINVXNwc0RhdGFQcm90b1ABWlhj",
+            "bG91ZC5nb29nbGUuY29tL2dvL21hcHMvYWRkcmVzc3ZhbGlkYXRpb24vYXBp",
+            "djEvYWRkcmVzc3ZhbGlkYXRpb25wYjthZGRyZXNzdmFsaWRhdGlvbnBi+AEB",
+            "ogIHR01QQVZWMaoCIEdvb2dsZS5NYXBzLkFkZHJlc3NWYWxpZGF0aW9uLlYx",
+            "ygIgR29vZ2xlXE1hcHNcQWRkcmVzc1ZhbGlkYXRpb25cVjHqAiNHb29nbGU6",
+            "Ok1hcHM6OkFkZHJlc3NWYWxpZGF0aW9uOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsAddress), global::Google.Maps.AddressValidation.V1.UspsAddress.Parser, new[]{ "FirstAddressLine", "Firm", "SecondAddressLine", "Urbanization", "CityStateZipAddressLine", "City", "State", "ZipCode", "ZipCodeExtension" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsData), global::Google.Maps.AddressValidation.V1.UspsData.Parser, new[]{ "StandardizedAddress", "DeliveryPointCode", "DeliveryPointCheckDigit", "DpvConfirmation", "DpvFootnote", "DpvCmra", "DpvVacant", "DpvNoStat", "CarrierRoute", "CarrierRouteIndicator", "EwsNoMatch", "PostOfficeCity", "PostOfficeState", "AbbreviatedCity", "FipsCountyCode", "County", "ElotNumber", "ElotFlag", "LacsLinkReturnCode", "LacsLinkIndicator", "PoBoxOnlyPostalCode", "SuitelinkFootnote", "PmbDesignator", "PmbNumber", "AddressRecordType", "DefaultAddress", "ErrorMessage", "CassProcessed" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.AddressValidation.V1.UspsData), global::Google.Maps.AddressValidation.V1.UspsData.Parser, new[]{ "StandardizedAddress", "DeliveryPointCode", "DeliveryPointCheckDigit", "DpvConfirmation", "DpvFootnote", "DpvCmra", "DpvVacant", "DpvNoStat", "DpvNoStatReasonCode", "DpvDrop", "DpvThrowback", "DpvNonDeliveryDays", "DpvNonDeliveryDaysValues", "DpvNoSecureLocation", "DpvPbsa", "DpvDoorNotAccessible", "DpvEnhancedDeliveryCode", "CarrierRoute", "CarrierRouteIndicator", "EwsNoMatch", "PostOfficeCity", "PostOfficeState", "AbbreviatedCity", "FipsCountyCode", "County", "ElotNumber", "ElotFlag", "LacsLinkReturnCode", "LacsLinkIndicator", "PoBoxOnlyPostalCode", "SuitelinkFootnote", "PmbDesignator", "PmbNumber", "AddressRecordType", "DefaultAddress", "ErrorMessage", "CassProcessed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -630,6 +636,15 @@ namespace Google.Maps.AddressValidation.V1 {
       dpvCmra_ = other.dpvCmra_;
       dpvVacant_ = other.dpvVacant_;
       dpvNoStat_ = other.dpvNoStat_;
+      dpvNoStatReasonCode_ = other.dpvNoStatReasonCode_;
+      dpvDrop_ = other.dpvDrop_;
+      dpvThrowback_ = other.dpvThrowback_;
+      dpvNonDeliveryDays_ = other.dpvNonDeliveryDays_;
+      dpvNonDeliveryDaysValues_ = other.dpvNonDeliveryDaysValues_;
+      dpvNoSecureLocation_ = other.dpvNoSecureLocation_;
+      dpvPbsa_ = other.dpvPbsa_;
+      dpvDoorNotAccessible_ = other.dpvDoorNotAccessible_;
+      dpvEnhancedDeliveryCode_ = other.dpvEnhancedDeliveryCode_;
       carrierRoute_ = other.carrierRoute_;
       carrierRouteIndicator_ = other.carrierRouteIndicator_;
       ewsNoMatch_ = other.ewsNoMatch_;
@@ -711,15 +726,18 @@ namespace Google.Maps.AddressValidation.V1 {
     public const int DpvConfirmationFieldNumber = 4;
     private string dpvConfirmation_ = "";
     /// <summary>
-    /// The possible values for DPV confirmation. Returns a single character.
+    /// The possible values for DPV confirmation. Returns a single character or
+    /// returns no value.
     ///
-    /// * `Y`: Address was DPV confirmed for primary and any secondary numbers.
     /// * `N`: Primary and any secondary number information failed to
     /// DPV confirm.
-    /// * `S`: Address was DPV confirmed for the primary number only, and the
-    /// secondary number information was present by not confirmed.
     /// * `D`: Address was DPV confirmed for the primary number only, and the
     /// secondary number information was missing.
+    /// * `S`: Address was DPV confirmed for the primary number only, and the
+    /// secondary number information was present but not confirmed.
+    /// * `Y`: Address was DPV confirmed for primary and any secondary numbers.
+    /// * Empty: If the response does not contain a `dpv_confirmation` value, the
+    /// address was not submitted for DPV confirmation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -740,11 +758,12 @@ namespace Google.Maps.AddressValidation.V1 {
     /// * `AA`: Input address matched to the ZIP+4 file
     /// * `A1`: Input address was not matched to the ZIP+4 file
     /// * `BB`: Matched to DPV (all components)
-    /// * `CC`: Secondary number not matched (present but invalid)
+    /// * `CC`: Secondary number not matched and not required
+    /// * `C1`: Secondary number not matched but required
     /// * `N1`: High-rise address missing secondary number
     /// * `M1`: Primary number missing
     /// * `M3`: Primary number invalid
-    /// * `P1`: Input address RR or HC box number missing
+    /// * `P1`: Input address PO, RR or HC box number missing
     /// * `P3`: Input address PO, RR, or HC Box number invalid
     /// * `F1`: Input address matched to a military address
     /// * `G1`: Input address matched to a general delivery address
@@ -753,6 +772,8 @@ namespace Google.Maps.AddressValidation.V1 {
     /// * `RR`: DPV confirmed address with PMB information
     /// * `R1`: DPV confirmed address without PMB information
     /// * `R7`: Carrier Route R777 or R779 record
+    /// * `IA`: Informed Address identified
+    /// * `TA`: Primary number matched by dropping a trailing alpha
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -818,6 +839,201 @@ namespace Google.Maps.AddressValidation.V1 {
       get { return dpvNoStat_; }
       set {
         dpvNoStat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_no_stat_reason_code" field.</summary>
+    public const int DpvNoStatReasonCodeFieldNumber = 29;
+    private int dpvNoStatReasonCode_;
+    /// <summary>
+    /// Indicates the NoStat type. Returns a reason code as int.
+    ///
+    /// * `1`: IDA (Internal Drop Address) – Addresses that do not receive mail
+    /// directly from the USPS but are delivered to a drop address that services
+    /// them.
+    /// * `2`: CDS - Addresses that have not yet become deliverable. For example, a
+    /// new subdivision where lots and primary numbers have been determined, but no
+    /// structure exists yet for occupancy.
+    /// * `3`: Collision - Addresses that do not actually DPV confirm.
+    /// * `4`: CMZ (College, Military and Other Types) - ZIP + 4 records USPS has
+    /// incorporated into the data.
+    /// * `5`: Regular - Indicates addresses not receiving delivery and the
+    /// addresses are not counted as possible deliveries.
+    /// * `6`: Secondary Required - The address requires secondary information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DpvNoStatReasonCode {
+      get { return dpvNoStatReasonCode_; }
+      set {
+        dpvNoStatReasonCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dpv_drop" field.</summary>
+    public const int DpvDropFieldNumber = 30;
+    private string dpvDrop_ = "";
+    /// <summary>
+    /// Flag indicates mail is delivered to a single receptable at a site.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The mail is delivered to a single receptable at a site.
+    /// * `N`: The mail is not delivered to a single receptable at a site.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvDrop {
+      get { return dpvDrop_; }
+      set {
+        dpvDrop_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_throwback" field.</summary>
+    public const int DpvThrowbackFieldNumber = 31;
+    private string dpvThrowback_ = "";
+    /// <summary>
+    /// Indicates that mail is not delivered to the street address.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The mail is not delivered to the street address.
+    /// * `N`: The mail is delivered to the street address.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvThrowback {
+      get { return dpvThrowback_; }
+      set {
+        dpvThrowback_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_non_delivery_days" field.</summary>
+    public const int DpvNonDeliveryDaysFieldNumber = 32;
+    private string dpvNonDeliveryDays_ = "";
+    /// <summary>
+    /// Flag indicates mail delivery is not performed every day of the week.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The mail delivery is not performed every day of the week.
+    /// * `N`: No indication the mail delivery is not performed every day of the
+    /// week.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvNonDeliveryDays {
+      get { return dpvNonDeliveryDays_; }
+      set {
+        dpvNonDeliveryDays_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_non_delivery_days_values" field.</summary>
+    public const int DpvNonDeliveryDaysValuesFieldNumber = 33;
+    private int dpvNonDeliveryDaysValues_;
+    /// <summary>
+    /// Integer identifying non-delivery days. It can be interrogated using bit
+    /// flags:
+    /// 0x40 – Sunday is a non-delivery day
+    /// 0x20 – Monday is a non-delivery day
+    /// 0x10 – Tuesday is a non-delivery day
+    /// 0x08 – Wednesday is a non-delivery day
+    /// 0x04 – Thursday is a non-delivery day
+    /// 0x02 – Friday is a non-delivery day
+    /// 0x01 – Saturday is a non-delivery day
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DpvNonDeliveryDaysValues {
+      get { return dpvNonDeliveryDaysValues_; }
+      set {
+        dpvNonDeliveryDaysValues_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dpv_no_secure_location" field.</summary>
+    public const int DpvNoSecureLocationFieldNumber = 34;
+    private string dpvNoSecureLocation_ = "";
+    /// <summary>
+    /// Flag indicates door is accessible, but package will not be left due to
+    /// security concerns.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The package will not be left due to security concerns.
+    /// * `N`: No indication the package will not be left due to security concerns.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvNoSecureLocation {
+      get { return dpvNoSecureLocation_; }
+      set {
+        dpvNoSecureLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_pbsa" field.</summary>
+    public const int DpvPbsaFieldNumber = 35;
+    private string dpvPbsa_ = "";
+    /// <summary>
+    /// Indicates the address was matched to PBSA record.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The address was matched to PBSA record.
+    /// * `N`: The address was not matched to PBSA record.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvPbsa {
+      get { return dpvPbsa_; }
+      set {
+        dpvPbsa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_door_not_accessible" field.</summary>
+    public const int DpvDoorNotAccessibleFieldNumber = 36;
+    private string dpvDoorNotAccessible_ = "";
+    /// <summary>
+    /// Flag indicates addresses where USPS cannot knock on a door to deliver mail.
+    /// Returns a single character.
+    ///
+    /// * `Y`: The door is not accessible.
+    /// * `N`: No indication the door is not accessible.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvDoorNotAccessible {
+      get { return dpvDoorNotAccessible_; }
+      set {
+        dpvDoorNotAccessible_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dpv_enhanced_delivery_code" field.</summary>
+    public const int DpvEnhancedDeliveryCodeFieldNumber = 37;
+    private string dpvEnhancedDeliveryCode_ = "";
+    /// <summary>
+    /// Indicates that more than one DPV return code is valid for the address.
+    /// Returns a single character.
+    ///
+    /// * `Y`: Address was DPV confirmed for primary and any secondary numbers.
+    /// * `N`: Primary and any secondary number information failed to
+    /// DPV confirm.
+    /// * `S`: Address was DPV confirmed for the primary number only, and the
+    /// secondary number information was present by not confirmed,  or a single
+    /// trailing alpha on a primary number was dropped to make a DPV match and
+    /// secondary information required.
+    /// * `D`: Address was DPV confirmed for the primary number only, and the
+    /// secondary number information was missing.
+    /// * `R`: Address confirmed but assigned to phantom route R777 and R779 and
+    /// USPS delivery is not provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DpvEnhancedDeliveryCode {
+      get { return dpvEnhancedDeliveryCode_; }
+      set {
+        dpvEnhancedDeliveryCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1176,6 +1392,15 @@ namespace Google.Maps.AddressValidation.V1 {
       if (DpvCmra != other.DpvCmra) return false;
       if (DpvVacant != other.DpvVacant) return false;
       if (DpvNoStat != other.DpvNoStat) return false;
+      if (DpvNoStatReasonCode != other.DpvNoStatReasonCode) return false;
+      if (DpvDrop != other.DpvDrop) return false;
+      if (DpvThrowback != other.DpvThrowback) return false;
+      if (DpvNonDeliveryDays != other.DpvNonDeliveryDays) return false;
+      if (DpvNonDeliveryDaysValues != other.DpvNonDeliveryDaysValues) return false;
+      if (DpvNoSecureLocation != other.DpvNoSecureLocation) return false;
+      if (DpvPbsa != other.DpvPbsa) return false;
+      if (DpvDoorNotAccessible != other.DpvDoorNotAccessible) return false;
+      if (DpvEnhancedDeliveryCode != other.DpvEnhancedDeliveryCode) return false;
       if (CarrierRoute != other.CarrierRoute) return false;
       if (CarrierRouteIndicator != other.CarrierRouteIndicator) return false;
       if (EwsNoMatch != other.EwsNoMatch) return false;
@@ -1211,6 +1436,15 @@ namespace Google.Maps.AddressValidation.V1 {
       if (DpvCmra.Length != 0) hash ^= DpvCmra.GetHashCode();
       if (DpvVacant.Length != 0) hash ^= DpvVacant.GetHashCode();
       if (DpvNoStat.Length != 0) hash ^= DpvNoStat.GetHashCode();
+      if (DpvNoStatReasonCode != 0) hash ^= DpvNoStatReasonCode.GetHashCode();
+      if (DpvDrop.Length != 0) hash ^= DpvDrop.GetHashCode();
+      if (DpvThrowback.Length != 0) hash ^= DpvThrowback.GetHashCode();
+      if (DpvNonDeliveryDays.Length != 0) hash ^= DpvNonDeliveryDays.GetHashCode();
+      if (DpvNonDeliveryDaysValues != 0) hash ^= DpvNonDeliveryDaysValues.GetHashCode();
+      if (DpvNoSecureLocation.Length != 0) hash ^= DpvNoSecureLocation.GetHashCode();
+      if (DpvPbsa.Length != 0) hash ^= DpvPbsa.GetHashCode();
+      if (DpvDoorNotAccessible.Length != 0) hash ^= DpvDoorNotAccessible.GetHashCode();
+      if (DpvEnhancedDeliveryCode.Length != 0) hash ^= DpvEnhancedDeliveryCode.GetHashCode();
       if (CarrierRoute.Length != 0) hash ^= CarrierRoute.GetHashCode();
       if (CarrierRouteIndicator.Length != 0) hash ^= CarrierRouteIndicator.GetHashCode();
       if (EwsNoMatch != false) hash ^= EwsNoMatch.GetHashCode();
@@ -1361,6 +1595,42 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(CassProcessed);
       }
+      if (DpvNoStatReasonCode != 0) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt32(DpvNoStatReasonCode);
+      }
+      if (DpvDrop.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(DpvDrop);
+      }
+      if (DpvThrowback.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(DpvThrowback);
+      }
+      if (DpvNonDeliveryDays.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(DpvNonDeliveryDays);
+      }
+      if (DpvNonDeliveryDaysValues != 0) {
+        output.WriteRawTag(136, 2);
+        output.WriteInt32(DpvNonDeliveryDaysValues);
+      }
+      if (DpvNoSecureLocation.Length != 0) {
+        output.WriteRawTag(146, 2);
+        output.WriteString(DpvNoSecureLocation);
+      }
+      if (DpvPbsa.Length != 0) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(DpvPbsa);
+      }
+      if (DpvDoorNotAccessible.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(DpvDoorNotAccessible);
+      }
+      if (DpvEnhancedDeliveryCode.Length != 0) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(DpvEnhancedDeliveryCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1483,6 +1753,42 @@ namespace Google.Maps.AddressValidation.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(CassProcessed);
       }
+      if (DpvNoStatReasonCode != 0) {
+        output.WriteRawTag(232, 1);
+        output.WriteInt32(DpvNoStatReasonCode);
+      }
+      if (DpvDrop.Length != 0) {
+        output.WriteRawTag(242, 1);
+        output.WriteString(DpvDrop);
+      }
+      if (DpvThrowback.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(DpvThrowback);
+      }
+      if (DpvNonDeliveryDays.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(DpvNonDeliveryDays);
+      }
+      if (DpvNonDeliveryDaysValues != 0) {
+        output.WriteRawTag(136, 2);
+        output.WriteInt32(DpvNonDeliveryDaysValues);
+      }
+      if (DpvNoSecureLocation.Length != 0) {
+        output.WriteRawTag(146, 2);
+        output.WriteString(DpvNoSecureLocation);
+      }
+      if (DpvPbsa.Length != 0) {
+        output.WriteRawTag(154, 2);
+        output.WriteString(DpvPbsa);
+      }
+      if (DpvDoorNotAccessible.Length != 0) {
+        output.WriteRawTag(162, 2);
+        output.WriteString(DpvDoorNotAccessible);
+      }
+      if (DpvEnhancedDeliveryCode.Length != 0) {
+        output.WriteRawTag(170, 2);
+        output.WriteString(DpvEnhancedDeliveryCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1516,6 +1822,33 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (DpvNoStat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DpvNoStat);
+      }
+      if (DpvNoStatReasonCode != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(DpvNoStatReasonCode);
+      }
+      if (DpvDrop.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvDrop);
+      }
+      if (DpvThrowback.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvThrowback);
+      }
+      if (DpvNonDeliveryDays.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvNonDeliveryDays);
+      }
+      if (DpvNonDeliveryDaysValues != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(DpvNonDeliveryDaysValues);
+      }
+      if (DpvNoSecureLocation.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvNoSecureLocation);
+      }
+      if (DpvPbsa.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvPbsa);
+      }
+      if (DpvDoorNotAccessible.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvDoorNotAccessible);
+      }
+      if (DpvEnhancedDeliveryCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DpvEnhancedDeliveryCode);
       }
       if (CarrierRoute.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CarrierRoute);
@@ -1615,6 +1948,33 @@ namespace Google.Maps.AddressValidation.V1 {
       }
       if (other.DpvNoStat.Length != 0) {
         DpvNoStat = other.DpvNoStat;
+      }
+      if (other.DpvNoStatReasonCode != 0) {
+        DpvNoStatReasonCode = other.DpvNoStatReasonCode;
+      }
+      if (other.DpvDrop.Length != 0) {
+        DpvDrop = other.DpvDrop;
+      }
+      if (other.DpvThrowback.Length != 0) {
+        DpvThrowback = other.DpvThrowback;
+      }
+      if (other.DpvNonDeliveryDays.Length != 0) {
+        DpvNonDeliveryDays = other.DpvNonDeliveryDays;
+      }
+      if (other.DpvNonDeliveryDaysValues != 0) {
+        DpvNonDeliveryDaysValues = other.DpvNonDeliveryDaysValues;
+      }
+      if (other.DpvNoSecureLocation.Length != 0) {
+        DpvNoSecureLocation = other.DpvNoSecureLocation;
+      }
+      if (other.DpvPbsa.Length != 0) {
+        DpvPbsa = other.DpvPbsa;
+      }
+      if (other.DpvDoorNotAccessible.Length != 0) {
+        DpvDoorNotAccessible = other.DpvDoorNotAccessible;
+      }
+      if (other.DpvEnhancedDeliveryCode.Length != 0) {
+        DpvEnhancedDeliveryCode = other.DpvEnhancedDeliveryCode;
       }
       if (other.CarrierRoute.Length != 0) {
         CarrierRoute = other.CarrierRoute;
@@ -1806,6 +2166,42 @@ namespace Google.Maps.AddressValidation.V1 {
             CassProcessed = input.ReadBool();
             break;
           }
+          case 232: {
+            DpvNoStatReasonCode = input.ReadInt32();
+            break;
+          }
+          case 242: {
+            DpvDrop = input.ReadString();
+            break;
+          }
+          case 250: {
+            DpvThrowback = input.ReadString();
+            break;
+          }
+          case 258: {
+            DpvNonDeliveryDays = input.ReadString();
+            break;
+          }
+          case 264: {
+            DpvNonDeliveryDaysValues = input.ReadInt32();
+            break;
+          }
+          case 274: {
+            DpvNoSecureLocation = input.ReadString();
+            break;
+          }
+          case 282: {
+            DpvPbsa = input.ReadString();
+            break;
+          }
+          case 290: {
+            DpvDoorNotAccessible = input.ReadString();
+            break;
+          }
+          case 298: {
+            DpvEnhancedDeliveryCode = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1934,6 +2330,42 @@ namespace Google.Maps.AddressValidation.V1 {
           }
           case 224: {
             CassProcessed = input.ReadBool();
+            break;
+          }
+          case 232: {
+            DpvNoStatReasonCode = input.ReadInt32();
+            break;
+          }
+          case 242: {
+            DpvDrop = input.ReadString();
+            break;
+          }
+          case 250: {
+            DpvThrowback = input.ReadString();
+            break;
+          }
+          case 258: {
+            DpvNonDeliveryDays = input.ReadString();
+            break;
+          }
+          case 264: {
+            DpvNonDeliveryDaysValues = input.ReadInt32();
+            break;
+          }
+          case 274: {
+            DpvNoSecureLocation = input.ReadString();
+            break;
+          }
+          case 282: {
+            DpvPbsa = input.ReadString();
+            break;
+          }
+          case 290: {
+            DpvDoorNotAccessible = input.ReadString();
+            break;
+          }
+          case 298: {
+            DpvEnhancedDeliveryCode = input.ReadString();
             break;
           }
         }
