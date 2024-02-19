@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,8 +16,6 @@ using Google.Apis.Bigquery.v2.Data;
 
 namespace Google.Cloud.BigQuery.V2
 {
-
-
     /// <summary>
     /// Options for <c>Insert</c> operations.
     /// </summary>
