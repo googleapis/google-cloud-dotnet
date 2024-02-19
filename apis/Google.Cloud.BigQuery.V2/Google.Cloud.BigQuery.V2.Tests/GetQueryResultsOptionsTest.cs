@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,15 +29,24 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageSize = 25,
                 PageToken = "foo",
                 Timeout = TimeSpan.FromSeconds(5),
+                UseInt64Timestamp = false,
             };
             GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
-            options.ModifyRequest(request);
+            GetQueryResultsOptions.ModifyRequest(options, request);
             Assert.Equal("foo", request.PageToken);
             Assert.Equal(25, request.MaxResults);
+            Assert.False(request.FormatOptionsUseInt64Timestamp);
             // ModifyRequest doesn't modify the timeout, as that's done externally
             Assert.Null(request.TimeoutMs);
         }
 
+        [Fact]
+        public void ModifyRequest_NoOptions()
+        {
+            GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
+            GetQueryResultsOptions.ModifyRequest(null, request);
+            Assert.True(request.FormatOptionsUseInt64Timestamp);
+        }
 
         [Fact]
         public void Clone()

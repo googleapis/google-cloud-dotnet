@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -56,7 +56,20 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string PageToken { get; set; }
 
-        internal void ModifyRequest(GetQueryResultsRequest request)
+        /// <summary>
+        /// Whether to use 64-bit integers for timestamps, instead of
+        /// floating point, in order to preserve precision. If not set, this is effectively true.
+        /// </summary>
+        public bool? UseInt64Timestamp { get; set; }
+
+        // This doesn't follow the usual pattern, as we want to modify the request even if options is null.
+        internal static void ModifyRequest(GetQueryResultsOptions options, GetQueryResultsRequest request)
+        {
+            options?.ModifyRequest(request);
+            request.FormatOptionsUseInt64Timestamp = options?.UseInt64Timestamp ?? true;
+        }
+
+        private void ModifyRequest(GetQueryResultsRequest request)
         {
             if (PageToken != null && StartIndex != null)
             {

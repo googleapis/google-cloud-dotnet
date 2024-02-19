@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,15 +30,17 @@ namespace Google.Cloud.BigQuery.V2
         {
             private readonly TableSchema _schema;
             private readonly Dictionary<string, int> _fieldNameToIndexMap;
+            private readonly bool _useInt64Timestamp;
 
-            internal TableRowPageManager(TableSchema schema)
+            internal TableRowPageManager(TableSchema schema, bool useInt64Timestamp)
             {
                 _schema = schema;
                 _fieldNameToIndexMap = schema.IndexFieldNames();
+                _useInt64Timestamp = useInt64Timestamp;
             }
 
             public string GetNextPageToken(TableDataList response) => response.PageToken;
-            public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema, _fieldNameToIndexMap));
+            public IEnumerable<BigQueryRow> GetResources(TableDataList response) => response.Rows?.Select(row => new BigQueryRow(row, _schema, _fieldNameToIndexMap, _useInt64Timestamp));
             public void SetPageSize(TabledataResource.ListRequest request, int pageSize) => request.MaxResults = pageSize;
             public void SetPageToken(TabledataResource.ListRequest request, string pageToken)
             {
@@ -136,7 +138,7 @@ namespace Google.Cloud.BigQuery.V2
             // So, if the schema is empty, the whole rows will be fetch, so we need to get the whole schema.
             var resultSchema = schema?.Fields?.Count > 0 ? schema : GetSchema(tableReference);
 
-            var pageManager = new TableRowPageManager(resultSchema);
+            var pageManager = new TableRowPageManager(resultSchema, options?.UseInt64Timestamp ?? true);
             return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 // Pass the original schema, if it was null then the whole table will be fetch and we don't need to
                 // specify selected fields.
@@ -153,7 +155,7 @@ namespace Google.Cloud.BigQuery.V2
             // So, if the schema is empty, the whole rows will be fetch, so we need to get the whole schema.
             var resultSchema = schema?.Fields?.Count > 0 ? schema : GetSchema(tableReference);
 
-            var pageManager = new TableRowPageManager(resultSchema);
+            var pageManager = new TableRowPageManager(resultSchema, options?.UseInt64Timestamp ?? true);
             return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 // Pass the original schema, if it was null then the whole table will be fetch and we don't need to
                 // specify selected fields.
@@ -195,7 +197,7 @@ namespace Google.Cloud.BigQuery.V2
         private TabledataResource.ListRequest CreateListRequest(TableReference tableReference, ListRowsOptions options, TableSchema schema)
         {
             var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
-            options?.ModifyRequest(request);
+            ListRowsOptions.ModifyRequest(options, request);
             // null and empty schemas are handled by BuildSelectedFields,
             // but both values mean the same, and that is to return whole rows.
             request.SelectedFields = schema.BuildSelectedFields();
@@ -219,7 +221,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
             request.Location = jobReference.Location;
             request.TimeoutMs = requestTimeoutMs;
-            options?.ModifyRequest(request);
+            GetQueryResultsOptions.ModifyRequest(options, request);
             RetryHandler.MarkAsRetriable(request);
             request.PrettyPrint = PrettyPrint;
             return request;
