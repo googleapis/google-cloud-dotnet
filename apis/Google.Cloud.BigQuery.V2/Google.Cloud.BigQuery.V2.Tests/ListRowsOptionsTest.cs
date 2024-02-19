@@ -61,44 +61,5 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
             Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
         }
-
-        [Fact]
-        public void ToGetQueryResultsOptions_BothPageTokenAndStartIndexSet()
-        {
-            var options = new ListRowsOptions
-            {
-                StartIndex = 10,
-                PageToken = "foo"
-            };
-            Assert.Throws<ArgumentException>(() => options.ToGetQueryResultsOptions());
-        }
-
-        [Fact]
-        public void ToGetQueryResultsOptions_StartIndex()
-        {
-            var options = new ListRowsOptions
-            {
-                StartIndex = 10,
-                PageSize = 25,
-            };
-            var listOptions = options.ToGetQueryResultsOptions();
-            Assert.Equal(10UL, listOptions.StartIndex);
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Null(listOptions.PageToken);
-        }
-
-        [Fact]
-        public void ToGetQueryResultsOptions_PageToken()
-        {
-            var options = new ListRowsOptions
-            {
-                PageSize = 25,
-                PageToken = "token"
-            };
-            var listOptions = options.ToGetQueryResultsOptions();
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Equal("token", listOptions.PageToken);
-            Assert.Null(listOptions.StartIndex);
-        }
     }
 }

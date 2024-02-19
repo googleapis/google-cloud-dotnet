@@ -60,21 +60,5 @@ namespace Google.Cloud.BigQuery.V2
                 request.StartIndex = StartIndex;
             }
         }
-
-        internal GetQueryResultsOptions ToGetQueryResultsOptions()
-        {
-            if (PageToken != null && StartIndex != null)
-            {
-                throw new ArgumentException($"Cannot specify both {nameof(PageToken)} and {nameof(StartIndex)}");
-            }
-
-            return new GetQueryResultsOptions
-            {
-                PageSize = PageSize,
-                StartIndex = StartIndex,
-                PageToken = PageToken
-            };
-        }
-
     }
 }
