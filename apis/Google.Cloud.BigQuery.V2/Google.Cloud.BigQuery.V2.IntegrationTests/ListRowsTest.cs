@@ -160,5 +160,33 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 Assert.All(rows, row => dummy = row[6]);
             }
         }
+
+        [Fact]
+        public void TimestampPrecision()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var schema = new TableSchemaBuilder { { "timestamp", BigQueryDbType.Timestamp } }.Build();
+            var table = client.CreateTable(_fixture.DatasetId, _fixture.CreateTableId(), schema);
+            var originalTimestamp = new DateTime(8000, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(123456 * 10); // 10 ticks per microsecond
+            table.InsertRow(new BigQueryInsertRow { { "timestamp", originalTimestamp } });
+
+            var noOptionsRows = table.ListRows();
+            var emptyOptionsRows = table.ListRows(new ListRowsOptions());
+            var preciseRows = table.ListRows(new ListRowsOptions { UseInt64Timestamp = true }).ToList();
+            var impreciseRows = table.ListRows(new ListRowsOptions { UseInt64Timestamp = false }).ToList();
+
+            var noOptionsRow = Assert.Single(noOptionsRows);
+            var emptyOptionsRow = Assert.Single(emptyOptionsRows);
+            var preciseRow = Assert.Single(preciseRows);
+            var impreciseRow = Assert.Single(impreciseRows);
+
+            // The default setting is to use the int64 representation, which will provide
+            // microsecond-precise values. When we explicitly request UseInt64Timestamp=false,
+            // we use the floating point representation which won't round-trip for this value.
+            Assert.Equal(originalTimestamp, noOptionsRow["timestamp"]);
+            Assert.Equal(originalTimestamp, emptyOptionsRow["timestamp"]);
+            Assert.Equal(originalTimestamp, preciseRow["timestamp"]);
+            Assert.NotEqual(originalTimestamp, impreciseRow["timestamp"]);
+        }
     }
 }

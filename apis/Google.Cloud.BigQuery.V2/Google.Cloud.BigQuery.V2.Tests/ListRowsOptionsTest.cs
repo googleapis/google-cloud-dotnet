@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,12 +27,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new ListRowsOptions
             {
                 PageSize = 25,
-                PageToken = "token"
+                PageToken = "token",
+                UseInt64Timestamp = false,
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            options.ModifyRequest(request);
+            ListRowsOptions.ModifyRequest(options, request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal("token", request.PageToken);
+            Assert.False(request.FormatOptionsUseInt64Timestamp);
         }
 
         [Fact]
@@ -44,7 +46,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 StartIndex = 10
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            options.ModifyRequest(request);
+            ListRowsOptions.ModifyRequest(options, request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(10UL, request.StartIndex);
         }
@@ -59,7 +61,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageToken = "token"
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
+            Assert.Throws<ArgumentException>(() => ListRowsOptions.ModifyRequest(options, request));
+        }
+
+        [Fact]
+        public void ModifyRequest_NoOptions()
+        {
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            ListRowsOptions.ModifyRequest(null, request);
+            Assert.True(request.FormatOptionsUseInt64Timestamp);
         }
     }
 }
