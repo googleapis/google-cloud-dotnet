@@ -28,80 +28,144 @@ namespace Google.Maps.Places.V1 {
             "FWdvb2dsZS5tYXBzLnBsYWNlcy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
             "cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aHmdvb2dsZS9nZW8vdHlwZS92aWV3cG9ydC5wcm90bxokZ29vZ2xlL21h",
-            "cHMvcGxhY2VzL3YxL2dlb21ldHJ5LnByb3RvGiFnb29nbGUvbWFwcy9wbGFj",
-            "ZXMvdjEvcGxhY2UucHJvdG8iowQKE1NlYXJjaE5lYXJieVJlcXVlc3QSFQoN",
-            "bGFuZ3VhZ2VfY29kZRgBIAEoCRITCgtyZWdpb25fY29kZRgCIAEoCRIWCg5p",
-            "bmNsdWRlZF90eXBlcxgDIAMoCRIWCg5leGNsdWRlZF90eXBlcxgEIAMoCRIe",
-            "ChZpbmNsdWRlZF9wcmltYXJ5X3R5cGVzGAUgAygJEh4KFmV4Y2x1ZGVkX3By",
-            "aW1hcnlfdHlwZXMYBiADKAkSGAoQbWF4X3Jlc3VsdF9jb3VudBgHIAEoBRJh",
-            "ChRsb2NhdGlvbl9yZXN0cmljdGlvbhgIIAEoCzI+Lmdvb2dsZS5tYXBzLnBs",
-            "YWNlcy52MS5TZWFyY2hOZWFyYnlSZXF1ZXN0LkxvY2F0aW9uUmVzdHJpY3Rp",
-            "b25CA+BBAhJSCg9yYW5rX3ByZWZlcmVuY2UYCSABKA4yOS5nb29nbGUubWFw",
-            "cy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5UmVxdWVzdC5SYW5rUHJlZmVyZW5j",
-            "ZRpOChNMb2NhdGlvblJlc3RyaWN0aW9uEi8KBmNpcmNsZRgCIAEoCzIdLmdv",
-            "b2dsZS5tYXBzLnBsYWNlcy52MS5DaXJjbGVIAEIGCgR0eXBlIk8KDlJhbmtQ",
-            "cmVmZXJlbmNlEh8KG1JBTktfUFJFRkVSRU5DRV9VTlNQRUNJRklFRBAAEgwK",
-            "CERJU1RBTkNFEAESDgoKUE9QVUxBUklUWRACIkQKFFNlYXJjaE5lYXJieVJl",
-            "c3BvbnNlEiwKBnBsYWNlcxgBIAMoCzIcLmdvb2dsZS5tYXBzLnBsYWNlcy52",
-            "MS5QbGFjZSKbBgoRU2VhcmNoVGV4dFJlcXVlc3QSFwoKdGV4dF9xdWVyeRgB",
-            "IAEoCUID4EECEhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSEwoLcmVnaW9uX2Nv",
-            "ZGUYAyABKAkSUAoPcmFua19wcmVmZXJlbmNlGAQgASgOMjcuZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlNlYXJjaFRleHRSZXF1ZXN0LlJhbmtQcmVmZXJlbmNl",
-            "EhUKDWluY2x1ZGVkX3R5cGUYBiABKAkSEAoIb3Blbl9ub3cYByABKAgSEgoK",
-            "bWluX3JhdGluZxgJIAEoARIYChBtYXhfcmVzdWx0X2NvdW50GAogASgFEjcK",
-            "DHByaWNlX2xldmVscxgLIAMoDjIhLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5Q",
-            "cmljZUxldmVsEh0KFXN0cmljdF90eXBlX2ZpbHRlcmluZxgMIAEoCBJMCg1s",
-            "b2NhdGlvbl9iaWFzGA0gASgLMjUuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNl",
-            "YXJjaFRleHRSZXF1ZXN0LkxvY2F0aW9uQmlhcxJaChRsb2NhdGlvbl9yZXN0",
-            "cmljdGlvbhgOIAEoCzI8Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hU",
-            "ZXh0UmVxdWVzdC5Mb2NhdGlvblJlc3RyaWN0aW9uGncKDExvY2F0aW9uQmlh",
-            "cxIuCglyZWN0YW5nbGUYASABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3Bv",
-            "cnRIABIvCgZjaXJjbGUYAiABKAsyHS5nb29nbGUubWFwcy5wbGFjZXMudjEu",
-            "Q2lyY2xlSABCBgoEdHlwZRpNChNMb2NhdGlvblJlc3RyaWN0aW9uEi4KCXJl",
-            "Y3RhbmdsZRgBIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEgAQgYK",
-            "BHR5cGUiTgoOUmFua1ByZWZlcmVuY2USHwobUkFOS19QUkVGRVJFTkNFX1VO",
-            "U1BFQ0lGSUVEEAASDAoIRElTVEFOQ0UQARINCglSRUxFVkFOQ0UQAiJCChJT",
-            "ZWFyY2hUZXh0UmVzcG9uc2USLAoGcGxhY2VzGAEgAygLMhwuZ29vZ2xlLm1h",
-            "cHMucGxhY2VzLnYxLlBsYWNlIqYBChRHZXRQaG90b01lZGlhUmVxdWVzdBI2",
-            "CgRuYW1lGAEgASgJQijgQQL6QSIKIHBsYWNlcy5nb29nbGVhcGlzLmNvbS9Q",
-            "aG90b01lZGlhEhkKDG1heF93aWR0aF9weBgCIAEoBUID4EEBEhoKDW1heF9o",
-            "ZWlnaHRfcHgYAyABKAVCA+BBARIfChJza2lwX2h0dHBfcmVkaXJlY3QYBCAB",
-            "KAhCA+BBASKfAQoKUGhvdG9NZWRpYRIMCgRuYW1lGAEgASgJEhEKCXBob3Rv",
-            "X3VyaRgCIAEoCTpw6kFtCiBwbGFjZXMuZ29vZ2xlYXBpcy5jb20vUGhvdG9N",
-            "ZWRpYRIwcGxhY2VzL3twbGFjZV9pZH0vcGhvdG9zL3twaG90b19yZWZlcmVu",
-            "Y2V9L21lZGlhKgtwaG90b01lZGlhczIKcGhvdG9NZWRpYSJ6Cg9HZXRQbGFj",
-            "ZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtwbGFjZXMuZ29vZ2xl",
-            "YXBpcy5jb20vUGxhY2USGgoNbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEBEhgK",
-            "C3JlZ2lvbl9jb2RlGAMgASgJQgPgQQEywQQKBlBsYWNlcxKLAQoMU2VhcmNo",
-            "TmVhcmJ5EiouZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5lYXJieVJl",
-            "cXVlc3QaKy5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5UmVz",
-            "cG9uc2UiIoLT5JMCHCIXL3YxL3BsYWNlczpzZWFyY2hOZWFyYnk6ASoSgwEK",
-            "ClNlYXJjaFRleHQSKC5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4",
-            "dFJlcXVlc3QaKS5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4dFJl",
-            "c3BvbnNlIiCC0+STAhoiFS92MS9wbGFjZXM6c2VhcmNoVGV4dDoBKhKSAQoN",
-            "R2V0UGhvdG9NZWRpYRIrLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5HZXRQaG90",
-            "b01lZGlhUmVxdWVzdBohLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QaG90b01l",
-            "ZGlhIjHaQQRuYW1lgtPkkwIkEiIvdjEve25hbWU9cGxhY2VzLyovcGhvdG9z",
-            "LyovbWVkaWF9EnQKCEdldFBsYWNlEiYuZ29vZ2xlLm1hcHMucGxhY2VzLnYx",
-            "LkdldFBsYWNlUmVxdWVzdBocLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5QbGFj",
-            "ZSIi2kEEbmFtZYLT5JMCFRITL3YxL3tuYW1lPXBsYWNlcy8qfRoYykEVcGxh",
-            "Y2VzLmdvb2dsZWFwaXMuY29tQqYBChljb20uZ29vZ2xlLm1hcHMucGxhY2Vz",
-            "LnYxQhJQbGFjZXNTZXJ2aWNlUHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9tYXBzL3BsYWNlcy9hcGl2MS9wbGFjZXNwYjtwbGFjZXNwYvgBAaICBkdN",
-            "UFNWMaoCFUdvb2dsZS5NYXBzLlBsYWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBs",
-            "YWNlc1xWMWIGcHJvdG8z"));
+            "dG8aHmdvb2dsZS9nZW8vdHlwZS92aWV3cG9ydC5wcm90bxonZ29vZ2xlL21h",
+            "cHMvcGxhY2VzL3YxL2V2X2NoYXJnaW5nLnByb3RvGiRnb29nbGUvbWFwcy9w",
+            "bGFjZXMvdjEvZ2VvbWV0cnkucHJvdG8aIWdvb2dsZS9tYXBzL3BsYWNlcy92",
+            "MS9wbGFjZS5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3RvIqMEChNT",
+            "ZWFyY2hOZWFyYnlSZXF1ZXN0EhUKDWxhbmd1YWdlX2NvZGUYASABKAkSEwoL",
+            "cmVnaW9uX2NvZGUYAiABKAkSFgoOaW5jbHVkZWRfdHlwZXMYAyADKAkSFgoO",
+            "ZXhjbHVkZWRfdHlwZXMYBCADKAkSHgoWaW5jbHVkZWRfcHJpbWFyeV90eXBl",
+            "cxgFIAMoCRIeChZleGNsdWRlZF9wcmltYXJ5X3R5cGVzGAYgAygJEhgKEG1h",
+            "eF9yZXN1bHRfY291bnQYByABKAUSYQoUbG9jYXRpb25fcmVzdHJpY3Rpb24Y",
+            "CCABKAsyPi5nb29nbGUubWFwcy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5UmVx",
+            "dWVzdC5Mb2NhdGlvblJlc3RyaWN0aW9uQgPgQQISUgoPcmFua19wcmVmZXJl",
+            "bmNlGAkgASgOMjkuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5lYXJi",
+            "eVJlcXVlc3QuUmFua1ByZWZlcmVuY2UaTgoTTG9jYXRpb25SZXN0cmljdGlv",
+            "bhIvCgZjaXJjbGUYAiABKAsyHS5nb29nbGUubWFwcy5wbGFjZXMudjEuQ2ly",
+            "Y2xlSABCBgoEdHlwZSJPCg5SYW5rUHJlZmVyZW5jZRIfChtSQU5LX1BSRUZF",
+            "UkVOQ0VfVU5TUEVDSUZJRUQQABIMCghESVNUQU5DRRABEg4KClBPUFVMQVJJ",
+            "VFkQAiJEChRTZWFyY2hOZWFyYnlSZXNwb25zZRIsCgZwbGFjZXMYASADKAsy",
+            "HC5nb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2Ui4gcKEVNlYXJjaFRleHRS",
+            "ZXF1ZXN0EhcKCnRleHRfcXVlcnkYASABKAlCA+BBAhIVCg1sYW5ndWFnZV9j",
+            "b2RlGAIgASgJEhMKC3JlZ2lvbl9jb2RlGAMgASgJElAKD3JhbmtfcHJlZmVy",
+            "ZW5jZRgEIAEoDjI3Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hUZXh0",
+            "UmVxdWVzdC5SYW5rUHJlZmVyZW5jZRIVCg1pbmNsdWRlZF90eXBlGAYgASgJ",
+            "EhAKCG9wZW5fbm93GAcgASgIEhIKCm1pbl9yYXRpbmcYCSABKAESGAoQbWF4",
+            "X3Jlc3VsdF9jb3VudBgKIAEoBRI3CgxwcmljZV9sZXZlbHMYCyADKA4yIS5n",
+            "b29nbGUubWFwcy5wbGFjZXMudjEuUHJpY2VMZXZlbBIdChVzdHJpY3RfdHlw",
+            "ZV9maWx0ZXJpbmcYDCABKAgSTAoNbG9jYXRpb25fYmlhcxgNIAEoCzI1Lmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hUZXh0UmVxdWVzdC5Mb2NhdGlv",
+            "bkJpYXMSWgoUbG9jYXRpb25fcmVzdHJpY3Rpb24YDiABKAsyPC5nb29nbGUu",
+            "bWFwcy5wbGFjZXMudjEuU2VhcmNoVGV4dFJlcXVlc3QuTG9jYXRpb25SZXN0",
+            "cmljdGlvbhJLCgpldl9vcHRpb25zGA8gASgLMjIuZ29vZ2xlLm1hcHMucGxh",
+            "Y2VzLnYxLlNlYXJjaFRleHRSZXF1ZXN0LkVWT3B0aW9uc0ID4EEBGncKDExv",
+            "Y2F0aW9uQmlhcxIuCglyZWN0YW5nbGUYASABKAsyGS5nb29nbGUuZ2VvLnR5",
+            "cGUuVmlld3BvcnRIABIvCgZjaXJjbGUYAiABKAsyHS5nb29nbGUubWFwcy5w",
+            "bGFjZXMudjEuQ2lyY2xlSABCBgoEdHlwZRpNChNMb2NhdGlvblJlc3RyaWN0",
+            "aW9uEi4KCXJlY3RhbmdsZRgBIAEoCzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3",
+            "cG9ydEgAQgYKBHR5cGUaeAoJRVZPcHRpb25zEiUKGG1pbmltdW1fY2hhcmdp",
+            "bmdfcmF0ZV9rdxgBIAEoAUID4EEBEkQKD2Nvbm5lY3Rvcl90eXBlcxgCIAMo",
+            "DjImLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5FVkNvbm5lY3RvclR5cGVCA+BB",
+            "ASJOCg5SYW5rUHJlZmVyZW5jZRIfChtSQU5LX1BSRUZFUkVOQ0VfVU5TUEVD",
+            "SUZJRUQQABIMCghESVNUQU5DRRABEg0KCVJFTEVWQU5DRRACIkIKElNlYXJj",
+            "aFRleHRSZXNwb25zZRIsCgZwbGFjZXMYASADKAsyHC5nb29nbGUubWFwcy5w",
+            "bGFjZXMudjEuUGxhY2UipgEKFEdldFBob3RvTWVkaWFSZXF1ZXN0EjYKBG5h",
+            "bWUYASABKAlCKOBBAvpBIgogcGxhY2VzLmdvb2dsZWFwaXMuY29tL1Bob3Rv",
+            "TWVkaWESGQoMbWF4X3dpZHRoX3B4GAIgASgFQgPgQQESGgoNbWF4X2hlaWdo",
+            "dF9weBgDIAEoBUID4EEBEh8KEnNraXBfaHR0cF9yZWRpcmVjdBgEIAEoCEID",
+            "4EEBIp8BCgpQaG90b01lZGlhEgwKBG5hbWUYASABKAkSEQoJcGhvdG9fdXJp",
+            "GAIgASgJOnDqQW0KIHBsYWNlcy5nb29nbGVhcGlzLmNvbS9QaG90b01lZGlh",
+            "EjBwbGFjZXMve3BsYWNlX2lkfS9waG90b3Mve3Bob3RvX3JlZmVyZW5jZX0v",
+            "bWVkaWEqC3Bob3RvTWVkaWFzMgpwaG90b01lZGlhIpYBCg9HZXRQbGFjZVJl",
+            "cXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtwbGFjZXMuZ29vZ2xlYXBp",
+            "cy5jb20vUGxhY2USGgoNbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEBEhgKC3Jl",
+            "Z2lvbl9jb2RlGAMgASgJQgPgQQESGgoNc2Vzc2lvbl90b2tlbhgEIAEoCUID",
+            "4EEBIvQFChlBdXRvY29tcGxldGVQbGFjZXNSZXF1ZXN0EhIKBWlucHV0GAEg",
+            "ASgJQgPgQQISWQoNbG9jYXRpb25fYmlhcxgCIAEoCzI9Lmdvb2dsZS5tYXBz",
+            "LnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXF1ZXN0LkxvY2F0aW9u",
+            "Qmlhc0ID4EEBEmcKFGxvY2F0aW9uX3Jlc3RyaWN0aW9uGAMgASgLMkQuZ29v",
+            "Z2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1JlcXVlc3Qu",
+            "TG9jYXRpb25SZXN0cmljdGlvbkID4EEBEiMKFmluY2x1ZGVkX3ByaW1hcnlf",
+            "dHlwZXMYBCADKAlCA+BBARIiChVpbmNsdWRlZF9yZWdpb25fY29kZXMYBSAD",
+            "KAlCA+BBARIaCg1sYW5ndWFnZV9jb2RlGAYgASgJQgPgQQESGAoLcmVnaW9u",
+            "X2NvZGUYByABKAlCA+BBARIoCgZvcmlnaW4YCCABKAsyEy5nb29nbGUudHlw",
+            "ZS5MYXRMbmdCA+BBARIZCgxpbnB1dF9vZmZzZXQYCSABKAVCA+BBARImChlp",
+            "bmNsdWRlX3F1ZXJ5X3ByZWRpY3Rpb25zGAogASgIQgPgQQESGgoNc2Vzc2lv",
+            "bl90b2tlbhgLIAEoCUID4EEBGncKDExvY2F0aW9uQmlhcxIuCglyZWN0YW5n",
+            "bGUYASABKAsyGS5nb29nbGUuZ2VvLnR5cGUuVmlld3BvcnRIABIvCgZjaXJj",
+            "bGUYAiABKAsyHS5nb29nbGUubWFwcy5wbGFjZXMudjEuQ2lyY2xlSABCBgoE",
+            "dHlwZRp+ChNMb2NhdGlvblJlc3RyaWN0aW9uEi4KCXJlY3RhbmdsZRgBIAEo",
+            "CzIZLmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEgAEi8KBmNpcmNsZRgCIAEo",
+            "CzIdLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5DaXJjbGVIAEIGCgR0eXBlIooK",
+            "ChpBdXRvY29tcGxldGVQbGFjZXNSZXNwb25zZRJRCgtzdWdnZXN0aW9ucxgB",
+            "IAMoCzI8Lmdvb2dsZS5tYXBzLnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFj",
+            "ZXNSZXNwb25zZS5TdWdnZXN0aW9uGpgJCgpTdWdnZXN0aW9uEmgKEHBsYWNl",
+            "X3ByZWRpY3Rpb24YASABKAsyTC5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0",
+            "b2NvbXBsZXRlUGxhY2VzUmVzcG9uc2UuU3VnZ2VzdGlvbi5QbGFjZVByZWRp",
+            "Y3Rpb25IABJoChBxdWVyeV9wcmVkaWN0aW9uGAIgASgLMkwuZ29vZ2xlLm1h",
+            "cHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dl",
+            "c3Rpb24uUXVlcnlQcmVkaWN0aW9uSAAaNwoLU3RyaW5nUmFuZ2USFAoMc3Rh",
+            "cnRfb2Zmc2V0GAEgASgFEhIKCmVuZF9vZmZzZXQYAiABKAUaegoPRm9ybWF0",
+            "dGFibGVUZXh0EgwKBHRleHQYASABKAkSWQoHbWF0Y2hlcxgCIAMoCzJILmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXNwb25z",
+            "ZS5TdWdnZXN0aW9uLlN0cmluZ1JhbmdlGtkBChBTdHJ1Y3R1cmVkRm9ybWF0",
+            "El8KCW1haW5fdGV4dBgBIAEoCzJMLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5B",
+            "dXRvY29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdnZXN0aW9uLkZvcm1hdHRh",
+            "YmxlVGV4dBJkCg5zZWNvbmRhcnlfdGV4dBgCIAEoCzJMLmdvb2dsZS5tYXBz",
+            "LnBsYWNlcy52MS5BdXRvY29tcGxldGVQbGFjZXNSZXNwb25zZS5TdWdnZXN0",
+            "aW9uLkZvcm1hdHRhYmxlVGV4dBrCAgoPUGxhY2VQcmVkaWN0aW9uEi8KBXBs",
+            "YWNlGAEgASgJQiD6QR0KG3BsYWNlcy5nb29nbGVhcGlzLmNvbS9QbGFjZRIQ",
+            "CghwbGFjZV9pZBgCIAEoCRJaCgR0ZXh0GAMgASgLMkwuZ29vZ2xlLm1hcHMu",
+            "cGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rp",
+            "b24uRm9ybWF0dGFibGVUZXh0EmgKEXN0cnVjdHVyZWRfZm9ybWF0GAQgASgL",
+            "Mk0uZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jl",
+            "c3BvbnNlLlN1Z2dlc3Rpb24uU3RydWN0dXJlZEZvcm1hdBINCgV0eXBlcxgF",
+            "IAMoCRIXCg9kaXN0YW5jZV9tZXRlcnMYBiABKAUa1wEKD1F1ZXJ5UHJlZGlj",
+            "dGlvbhJaCgR0ZXh0GAEgASgLMkwuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1",
+            "dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dlc3Rpb24uRm9ybWF0dGFi",
+            "bGVUZXh0EmgKEXN0cnVjdHVyZWRfZm9ybWF0GAIgASgLMk0uZ29vZ2xlLm1h",
+            "cHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlLlN1Z2dl",
+            "c3Rpb24uU3RydWN0dXJlZEZvcm1hdEIGCgRraW5kMuEFCgZQbGFjZXMSiwEK",
+            "DFNlYXJjaE5lYXJieRIqLmdvb2dsZS5tYXBzLnBsYWNlcy52MS5TZWFyY2hO",
+            "ZWFyYnlSZXF1ZXN0GisuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJjaE5l",
+            "YXJieVJlc3BvbnNlIiKC0+STAhwiFy92MS9wbGFjZXM6c2VhcmNoTmVhcmJ5",
+            "OgEqEoMBCgpTZWFyY2hUZXh0EiguZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNl",
+            "YXJjaFRleHRSZXF1ZXN0GikuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLlNlYXJj",
+            "aFRleHRSZXNwb25zZSIggtPkkwIaIhUvdjEvcGxhY2VzOnNlYXJjaFRleHQ6",
+            "ASoSkgEKDUdldFBob3RvTWVkaWESKy5nb29nbGUubWFwcy5wbGFjZXMudjEu",
+            "R2V0UGhvdG9NZWRpYVJlcXVlc3QaIS5nb29nbGUubWFwcy5wbGFjZXMudjEu",
+            "UGhvdG9NZWRpYSIx2kEEbmFtZYLT5JMCJBIiL3YxL3tuYW1lPXBsYWNlcy8q",
+            "L3Bob3Rvcy8qL21lZGlhfRJ0CghHZXRQbGFjZRImLmdvb2dsZS5tYXBzLnBs",
+            "YWNlcy52MS5HZXRQbGFjZVJlcXVlc3QaHC5nb29nbGUubWFwcy5wbGFjZXMu",
+            "djEuUGxhY2UiItpBBG5hbWWC0+STAhUSEy92MS97bmFtZT1wbGFjZXMvKn0S",
+            "nQEKEkF1dG9jb21wbGV0ZVBsYWNlcxIwLmdvb2dsZS5tYXBzLnBsYWNlcy52",
+            "MS5BdXRvY29tcGxldGVQbGFjZXNSZXF1ZXN0GjEuZ29vZ2xlLm1hcHMucGxh",
+            "Y2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1Jlc3BvbnNlIiKC0+STAhwiFy92",
+            "MS9wbGFjZXM6YXV0b2NvbXBsZXRlOgEqGhjKQRVwbGFjZXMuZ29vZ2xlYXBp",
+            "cy5jb21CpgEKGWNvbS5nb29nbGUubWFwcy5wbGFjZXMudjFCElBsYWNlc1Nl",
+            "cnZpY2VQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2Vz",
+            "L2FwaXYxL3BsYWNlc3BiO3BsYWNlc3Bi+AEBogIGR01QU1YxqgIVR29vZ2xl",
+            "Lk1hcHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.GeometryReflection.Descriptor, global::Google.Maps.Places.V1.PlaceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.GeometryReflection.Descriptor, global::Google.Maps.Places.V1.PlaceReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest), global::Google.Maps.Places.V1.SearchNearbyRequest.Parser, new[]{ "LanguageCode", "RegionCode", "IncludedTypes", "ExcludedTypes", "IncludedPrimaryTypes", "ExcludedPrimaryTypes", "MaxResultCount", "LocationRestriction", "RankPreference" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchNearbyRequest.Types.LocationRestriction.Parser, new[]{ "Circle" }, new[]{ "Type" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchNearbyResponse), global::Google.Maps.Places.V1.SearchNearbyResponse.Parser, new[]{ "Places" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest), global::Google.Maps.Places.V1.SearchTextRequest.Parser, new[]{ "TextQuery", "LanguageCode", "RegionCode", "RankPreference", "IncludedType", "OpenNow", "MinRating", "MaxResultCount", "PriceLevels", "StrictTypeFiltering", "LocationBias", "LocationRestriction" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction.Parser, new[]{ "Rectangle" }, new[]{ "Type" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest), global::Google.Maps.Places.V1.SearchTextRequest.Parser, new[]{ "TextQuery", "LanguageCode", "RegionCode", "RankPreference", "IncludedType", "OpenNow", "MinRating", "MaxResultCount", "PriceLevels", "StrictTypeFiltering", "LocationBias", "LocationRestriction", "EvOptions" }, null, new[]{ typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.RankPreference) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationBias.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction.Parser, new[]{ "Rectangle" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions), global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions.Parser, new[]{ "MinimumChargingRateKw", "ConnectorTypes" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.SearchTextResponse), global::Google.Maps.Places.V1.SearchTextResponse.Parser, new[]{ "Places" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.GetPhotoMediaRequest), global::Google.Maps.Places.V1.GetPhotoMediaRequest.Parser, new[]{ "Name", "MaxWidthPx", "MaxHeightPx", "SkipHttpRedirect" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.PhotoMedia), global::Google.Maps.Places.V1.PhotoMedia.Parser, new[]{ "Name", "PhotoUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.GetPlaceRequest), global::Google.Maps.Places.V1.GetPlaceRequest.Parser, new[]{ "Name", "LanguageCode", "RegionCode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.GetPlaceRequest), global::Google.Maps.Places.V1.GetPlaceRequest.Parser, new[]{ "Name", "LanguageCode", "RegionCode", "SessionToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesRequest), global::Google.Maps.Places.V1.AutocompletePlacesRequest.Parser, new[]{ "Input", "LocationBias", "LocationRestriction", "IncludedPrimaryTypes", "IncludedRegionCodes", "LanguageCode", "RegionCode", "Origin", "InputOffset", "IncludeQueryPredictions", "SessionToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias), global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction), global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction.Parser, new[]{ "Rectangle", "Circle" }, new[]{ "Type" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Parser, new[]{ "Suggestions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Parser, new[]{ "PlacePrediction", "QueryPrediction" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange.Parser, new[]{ "StartOffset", "EndOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText.Parser, new[]{ "Text", "Matches" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat.Parser, new[]{ "MainText", "SecondaryText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction.Parser, new[]{ "Place", "PlaceId", "Text", "StructuredFormat", "Types_", "DistanceMeters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction), global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction.Parser, new[]{ "Text", "StructuredFormat" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -1173,6 +1237,7 @@ namespace Google.Maps.Places.V1 {
       strictTypeFiltering_ = other.strictTypeFiltering_;
       locationBias_ = other.locationBias_ != null ? other.locationBias_.Clone() : null;
       locationRestriction_ = other.locationRestriction_ != null ? other.locationRestriction_.Clone() : null;
+      evOptions_ = other.evOptions_ != null ? other.evOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1392,6 +1457,21 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "ev_options" field.</summary>
+    public const int EvOptionsFieldNumber = 15;
+    private global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions evOptions_;
+    /// <summary>
+    /// Optional. Set the searchable EV options of a place search request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions EvOptions {
+      get { return evOptions_; }
+      set {
+        evOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1419,6 +1499,7 @@ namespace Google.Maps.Places.V1 {
       if (StrictTypeFiltering != other.StrictTypeFiltering) return false;
       if (!object.Equals(LocationBias, other.LocationBias)) return false;
       if (!object.Equals(LocationRestriction, other.LocationRestriction)) return false;
+      if (!object.Equals(EvOptions, other.EvOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1438,6 +1519,7 @@ namespace Google.Maps.Places.V1 {
       if (StrictTypeFiltering != false) hash ^= StrictTypeFiltering.GetHashCode();
       if (locationBias_ != null) hash ^= LocationBias.GetHashCode();
       if (locationRestriction_ != null) hash ^= LocationRestriction.GetHashCode();
+      if (evOptions_ != null) hash ^= EvOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1501,6 +1583,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(LocationRestriction);
       }
+      if (evOptions_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EvOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1556,6 +1642,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(LocationRestriction);
       }
+      if (evOptions_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EvOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1599,6 +1689,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (locationRestriction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocationRestriction);
+      }
+      if (evOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1651,6 +1744,12 @@ namespace Google.Maps.Places.V1 {
           LocationRestriction = new global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction();
         }
         LocationRestriction.MergeFrom(other.LocationRestriction);
+      }
+      if (other.evOptions_ != null) {
+        if (evOptions_ == null) {
+          EvOptions = new global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions();
+        }
+        EvOptions.MergeFrom(other.EvOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1722,6 +1821,13 @@ namespace Google.Maps.Places.V1 {
             input.ReadMessage(LocationRestriction);
             break;
           }
+          case 122: {
+            if (evOptions_ == null) {
+              EvOptions = new global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions();
+            }
+            input.ReadMessage(EvOptions);
+            break;
+          }
         }
       }
     #endif
@@ -1790,6 +1896,13 @@ namespace Google.Maps.Places.V1 {
               LocationRestriction = new global::Google.Maps.Places.V1.SearchTextRequest.Types.LocationRestriction();
             }
             input.ReadMessage(LocationRestriction);
+            break;
+          }
+          case 122: {
+            if (evOptions_ == null) {
+              EvOptions = new global::Google.Maps.Places.V1.SearchTextRequest.Types.EVOptions();
+            }
+            input.ReadMessage(EvOptions);
             break;
           }
         }
@@ -2358,6 +2471,235 @@ namespace Google.Maps.Places.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 Rectangle = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Searchable EV options of a place search request.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EVOptions : pb::IMessage<EVOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EVOptions> _parser = new pb::MessageParser<EVOptions>(() => new EVOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EVOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.SearchTextRequest.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EVOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EVOptions(EVOptions other) : this() {
+          minimumChargingRateKw_ = other.minimumChargingRateKw_;
+          connectorTypes_ = other.connectorTypes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EVOptions Clone() {
+          return new EVOptions(this);
+        }
+
+        /// <summary>Field number for the "minimum_charging_rate_kw" field.</summary>
+        public const int MinimumChargingRateKwFieldNumber = 1;
+        private double minimumChargingRateKw_;
+        /// <summary>
+        /// Optional. Filtering places by minimum charging rate. Any places with
+        /// charging a rate less than the minimum charging rate are filtered out.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double MinimumChargingRateKw {
+          get { return minimumChargingRateKw_; }
+          set {
+            minimumChargingRateKw_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "connector_types" field.</summary>
+        public const int ConnectorTypesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.EVConnectorType> _repeated_connectorTypes_codec
+            = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Maps.Places.V1.EVConnectorType) x);
+        private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.EVConnectorType> connectorTypes_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.EVConnectorType>();
+        /// <summary>
+        /// Optional. The list of preferred EV connector types. A place that does not
+        /// support any of the listed connector types are filter out.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Maps.Places.V1.EVConnectorType> ConnectorTypes {
+          get { return connectorTypes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EVOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EVOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MinimumChargingRateKw, other.MinimumChargingRateKw)) return false;
+          if(!connectorTypes_.Equals(other.connectorTypes_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MinimumChargingRateKw != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MinimumChargingRateKw);
+          hash ^= connectorTypes_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MinimumChargingRateKw != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(MinimumChargingRateKw);
+          }
+          connectorTypes_.WriteTo(output, _repeated_connectorTypes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MinimumChargingRateKw != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(MinimumChargingRateKw);
+          }
+          connectorTypes_.WriteTo(ref output, _repeated_connectorTypes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MinimumChargingRateKw != 0D) {
+            size += 1 + 8;
+          }
+          size += connectorTypes_.CalculateSize(_repeated_connectorTypes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EVOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MinimumChargingRateKw != 0D) {
+            MinimumChargingRateKw = other.MinimumChargingRateKw;
+          }
+          connectorTypes_.Add(other.connectorTypes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                MinimumChargingRateKw = input.ReadDouble();
+                break;
+              }
+              case 18:
+              case 16: {
+                connectorTypes_.AddEntriesFrom(input, _repeated_connectorTypes_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                MinimumChargingRateKw = input.ReadDouble();
+                break;
+              }
+              case 18:
+              case 16: {
+                connectorTypes_.AddEntriesFrom(ref input, _repeated_connectorTypes_codec);
                 break;
               }
             }
@@ -3140,7 +3482,8 @@ namespace Google.Maps.Places.V1 {
   }
 
   /// <summary>
-  /// Request for fetching a Place with a place id (in a name) string.
+  /// Request for fetching a Place based on its resource name, which is a string in
+  /// the `places/{place_id}` format.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPlaceRequest : pb::IMessage<GetPlaceRequest>
@@ -3180,6 +3523,7 @@ namespace Google.Maps.Places.V1 {
       name_ = other.name_;
       languageCode_ = other.languageCode_;
       regionCode_ = other.regionCode_;
+      sessionToken_ = other.sessionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3193,9 +3537,7 @@ namespace Google.Maps.Places.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. A place ID returned in a Place (with "places/" prefix), or
-    /// equivalently the name in the same Place. Format:
-    /// `places/{place_id}`.
+    /// Required. The resource name of a place, in the `places/{place_id}` format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3247,6 +3589,44 @@ namespace Google.Maps.Places.V1 {
       }
     }
 
+    /// <summary>Field number for the "session_token" field.</summary>
+    public const int SessionTokenFieldNumber = 4;
+    private string sessionToken_ = "";
+    /// <summary>
+    /// Optional. An arbitrary string which identifies an autocomplete session for
+    /// billing purposes. Must be at most 36 characters in length. Otherwise an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// The session begins when the user starts typing a query, and concludes when
+    /// they select a place and a call to Place Details or Address Validation is
+    /// made. Each session can have multiple queries, followed by one Place
+    /// selection. The credentials used for each request within a session must
+    /// belong to the same Google Cloud Console project. Once a session has
+    /// concluded, the token is no longer valid; your app must generate a fresh
+    /// token for each session. If the `session_token` parameter is omitted, or if
+    /// you reuse a session token, the session is charged as if no session token
+    /// was provided (each request is billed separately).
+    ///
+    /// We recommend the following guidelines:
+    /// * Use session tokens for all Place Autocomplete calls.
+    /// * Generate a fresh token for each session. Using a version 4 UUID is
+    ///   recommended.
+    /// * Ensure that the credentials used for all Place Autocomplete, Place
+    ///   Details, and Address Validation requests within a session belong to the
+    ///   same Cloud Console project.
+    /// * Be sure to pass a unique session token for each new session. Using the
+    ///   same token for more than one session will result in each request being
+    ///   billed individually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SessionToken {
+      get { return sessionToken_; }
+      set {
+        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3265,6 +3645,7 @@ namespace Google.Maps.Places.V1 {
       if (Name != other.Name) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (RegionCode != other.RegionCode) return false;
+      if (SessionToken != other.SessionToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3275,6 +3656,7 @@ namespace Google.Maps.Places.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3305,6 +3687,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(26);
         output.WriteString(RegionCode);
       }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SessionToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3327,6 +3713,10 @@ namespace Google.Maps.Places.V1 {
         output.WriteRawTag(26);
         output.WriteString(RegionCode);
       }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SessionToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3345,6 +3735,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (RegionCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
+      }
+      if (SessionToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3366,6 +3759,9 @@ namespace Google.Maps.Places.V1 {
       }
       if (other.RegionCode.Length != 0) {
         RegionCode = other.RegionCode;
+      }
+      if (other.SessionToken.Length != 0) {
+        SessionToken = other.SessionToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3392,6 +3788,10 @@ namespace Google.Maps.Places.V1 {
           }
           case 26: {
             RegionCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            SessionToken = input.ReadString();
             break;
           }
         }
@@ -3421,10 +3821,3203 @@ namespace Google.Maps.Places.V1 {
             RegionCode = input.ReadString();
             break;
           }
+          case 34: {
+            SessionToken = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Request proto for AutocompletePlaces.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutocompletePlacesRequest : pb::IMessage<AutocompletePlacesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutocompletePlacesRequest> _parser = new pb::MessageParser<AutocompletePlacesRequest>(() => new AutocompletePlacesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutocompletePlacesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesRequest(AutocompletePlacesRequest other) : this() {
+      input_ = other.input_;
+      locationBias_ = other.locationBias_ != null ? other.locationBias_.Clone() : null;
+      locationRestriction_ = other.locationRestriction_ != null ? other.locationRestriction_.Clone() : null;
+      includedPrimaryTypes_ = other.includedPrimaryTypes_.Clone();
+      includedRegionCodes_ = other.includedRegionCodes_.Clone();
+      languageCode_ = other.languageCode_;
+      regionCode_ = other.regionCode_;
+      origin_ = other.origin_ != null ? other.origin_.Clone() : null;
+      inputOffset_ = other.inputOffset_;
+      includeQueryPredictions_ = other.includeQueryPredictions_;
+      sessionToken_ = other.sessionToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesRequest Clone() {
+      return new AutocompletePlacesRequest(this);
+    }
+
+    /// <summary>Field number for the "input" field.</summary>
+    public const int InputFieldNumber = 1;
+    private string input_ = "";
+    /// <summary>
+    /// Required. The text string on which to search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Input {
+      get { return input_; }
+      set {
+        input_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location_bias" field.</summary>
+    public const int LocationBiasFieldNumber = 2;
+    private global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias locationBias_;
+    /// <summary>
+    /// Optional. Bias results to a specified location.
+    ///
+    /// At most one of `location_bias` or `location_restriction` should be set. If
+    /// neither are set, the results will be biased by IP address, meaning the IP
+    /// address will be mapped to an imprecise location and used as a biasing
+    /// signal.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias LocationBias {
+      get { return locationBias_; }
+      set {
+        locationBias_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "location_restriction" field.</summary>
+    public const int LocationRestrictionFieldNumber = 3;
+    private global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction locationRestriction_;
+    /// <summary>
+    /// Optional. Restrict results to a specified location.
+    ///
+    /// At most one of `location_bias` or `location_restriction` should be set. If
+    /// neither are set, the results will be biased by IP address, meaning the IP
+    /// address will be mapped to an imprecise location and used as a biasing
+    /// signal.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction LocationRestriction {
+      get { return locationRestriction_; }
+      set {
+        locationRestriction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "included_primary_types" field.</summary>
+    public const int IncludedPrimaryTypesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_includedPrimaryTypes_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> includedPrimaryTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Included primary Place type (e.g. "restaurant" or "gas_station")
+    /// from
+    /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+    /// A Place is only returned if its primary type is included in this list. Up
+    /// to 5 values can be specified. If no types are specified, all Place types
+    /// are returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> IncludedPrimaryTypes {
+      get { return includedPrimaryTypes_; }
+    }
+
+    /// <summary>Field number for the "included_region_codes" field.</summary>
+    public const int IncludedRegionCodesFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_includedRegionCodes_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> includedRegionCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Only include results in the specified regions, specified as up to
+    /// 15 CLDR two-character region codes. An empty set will not restrict the
+    /// results. If both `location_restriction` and `included_region_codes` are
+    /// set, the results will be located in the area of intersection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> IncludedRegionCodes {
+      get { return includedRegionCodes_; }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 6;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The language in which to return results. Defaults to en-US. The
+    /// results may be in mixed languages if the language used in `input` is
+    /// different from `language_code` or if the returned Place does not have a
+    /// translation from the local language to `language_code`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 7;
+    private string regionCode_ = "";
+    /// <summary>
+    /// Optional. The region code, specified as a CLDR two-character region code.
+    /// This affects address formatting, result ranking, and may influence what
+    /// results are returned. This does not restrict results to the specified
+    /// region. To restrict results to a region, use `region_code_restriction`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionCode {
+      get { return regionCode_; }
+      set {
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "origin" field.</summary>
+    public const int OriginFieldNumber = 8;
+    private global::Google.Type.LatLng origin_;
+    /// <summary>
+    /// Optional. The origin point from which to calculate geodesic distance to the
+    /// destination (returned as `distance_meters`). If this value is omitted,
+    /// geodesic distance will not be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.LatLng Origin {
+      get { return origin_; }
+      set {
+        origin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "input_offset" field.</summary>
+    public const int InputOffsetFieldNumber = 9;
+    private int inputOffset_;
+    /// <summary>
+    /// Optional. A zero-based Unicode character offset of `input` indicating the
+    /// cursor position in `input`. The cursor position may influence what
+    /// predictions are returned.
+    ///
+    /// If empty, defaults to the length of `input`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int InputOffset {
+      get { return inputOffset_; }
+      set {
+        inputOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_query_predictions" field.</summary>
+    public const int IncludeQueryPredictionsFieldNumber = 10;
+    private bool includeQueryPredictions_;
+    /// <summary>
+    /// Optional. If true, the response will include both Place and query
+    /// predictions. Otherwise the response will only return Place predictions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeQueryPredictions {
+      get { return includeQueryPredictions_; }
+      set {
+        includeQueryPredictions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "session_token" field.</summary>
+    public const int SessionTokenFieldNumber = 11;
+    private string sessionToken_ = "";
+    /// <summary>
+    /// Optional. An arbitrary string which identifies an autocomplete session for
+    /// billing purposes. Must be at most 36 characters in length. Otherwise an
+    /// INVALID_ARGUMENT error is returned.
+    ///
+    /// The session begins when the user starts typing a query, and concludes when
+    /// they select a place and a call to Place Details or Address Validation is
+    /// made. Each session can have multiple queries, followed by one Place
+    /// selection. The credentials used for each request within a session must
+    /// belong to the same Google Cloud Console project. Once a session has
+    /// concluded, the token is no longer valid; your app must generate a fresh
+    /// token for each session. If the `session_token` parameter is omitted, or if
+    /// you reuse a session token, the session is charged as if no session token
+    /// was provided (each request is billed separately).
+    ///
+    /// We recommend the following guidelines:
+    /// * Use session tokens for all Place Autocomplete calls.
+    /// * Generate a fresh token for each session. Using a version 4 UUID is
+    ///   recommended.
+    /// * Ensure that the credentials used for all Place Autocomplete, Place
+    ///   Details, and Address Validation requests within a session belong to the
+    ///   same Cloud Console project.
+    /// * Be sure to pass a unique session token for each new session. Using the
+    ///   same token for more than one session will result in each request being
+    ///   billed individually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SessionToken {
+      get { return sessionToken_; }
+      set {
+        sessionToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutocompletePlacesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutocompletePlacesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Input != other.Input) return false;
+      if (!object.Equals(LocationBias, other.LocationBias)) return false;
+      if (!object.Equals(LocationRestriction, other.LocationRestriction)) return false;
+      if(!includedPrimaryTypes_.Equals(other.includedPrimaryTypes_)) return false;
+      if(!includedRegionCodes_.Equals(other.includedRegionCodes_)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (RegionCode != other.RegionCode) return false;
+      if (!object.Equals(Origin, other.Origin)) return false;
+      if (InputOffset != other.InputOffset) return false;
+      if (IncludeQueryPredictions != other.IncludeQueryPredictions) return false;
+      if (SessionToken != other.SessionToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Input.Length != 0) hash ^= Input.GetHashCode();
+      if (locationBias_ != null) hash ^= LocationBias.GetHashCode();
+      if (locationRestriction_ != null) hash ^= LocationRestriction.GetHashCode();
+      hash ^= includedPrimaryTypes_.GetHashCode();
+      hash ^= includedRegionCodes_.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+      if (origin_ != null) hash ^= Origin.GetHashCode();
+      if (InputOffset != 0) hash ^= InputOffset.GetHashCode();
+      if (IncludeQueryPredictions != false) hash ^= IncludeQueryPredictions.GetHashCode();
+      if (SessionToken.Length != 0) hash ^= SessionToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Input.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Input);
+      }
+      if (locationBias_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LocationBias);
+      }
+      if (locationRestriction_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LocationRestriction);
+      }
+      includedPrimaryTypes_.WriteTo(output, _repeated_includedPrimaryTypes_codec);
+      includedRegionCodes_.WriteTo(output, _repeated_includedRegionCodes_codec);
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RegionCode);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Origin);
+      }
+      if (InputOffset != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(InputOffset);
+      }
+      if (IncludeQueryPredictions != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IncludeQueryPredictions);
+      }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(SessionToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Input.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Input);
+      }
+      if (locationBias_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LocationBias);
+      }
+      if (locationRestriction_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LocationRestriction);
+      }
+      includedPrimaryTypes_.WriteTo(ref output, _repeated_includedPrimaryTypes_codec);
+      includedRegionCodes_.WriteTo(ref output, _repeated_includedRegionCodes_codec);
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RegionCode);
+      }
+      if (origin_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Origin);
+      }
+      if (InputOffset != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(InputOffset);
+      }
+      if (IncludeQueryPredictions != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IncludeQueryPredictions);
+      }
+      if (SessionToken.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(SessionToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Input.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Input);
+      }
+      if (locationBias_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocationBias);
+      }
+      if (locationRestriction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LocationRestriction);
+      }
+      size += includedPrimaryTypes_.CalculateSize(_repeated_includedPrimaryTypes_codec);
+      size += includedRegionCodes_.CalculateSize(_repeated_includedRegionCodes_codec);
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
+      }
+      if (origin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Origin);
+      }
+      if (InputOffset != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InputOffset);
+      }
+      if (IncludeQueryPredictions != false) {
+        size += 1 + 1;
+      }
+      if (SessionToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutocompletePlacesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Input.Length != 0) {
+        Input = other.Input;
+      }
+      if (other.locationBias_ != null) {
+        if (locationBias_ == null) {
+          LocationBias = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias();
+        }
+        LocationBias.MergeFrom(other.LocationBias);
+      }
+      if (other.locationRestriction_ != null) {
+        if (locationRestriction_ == null) {
+          LocationRestriction = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction();
+        }
+        LocationRestriction.MergeFrom(other.LocationRestriction);
+      }
+      includedPrimaryTypes_.Add(other.includedPrimaryTypes_);
+      includedRegionCodes_.Add(other.includedRegionCodes_);
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
+      }
+      if (other.origin_ != null) {
+        if (origin_ == null) {
+          Origin = new global::Google.Type.LatLng();
+        }
+        Origin.MergeFrom(other.Origin);
+      }
+      if (other.InputOffset != 0) {
+        InputOffset = other.InputOffset;
+      }
+      if (other.IncludeQueryPredictions != false) {
+        IncludeQueryPredictions = other.IncludeQueryPredictions;
+      }
+      if (other.SessionToken.Length != 0) {
+        SessionToken = other.SessionToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Input = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (locationBias_ == null) {
+              LocationBias = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias();
+            }
+            input.ReadMessage(LocationBias);
+            break;
+          }
+          case 26: {
+            if (locationRestriction_ == null) {
+              LocationRestriction = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction();
+            }
+            input.ReadMessage(LocationRestriction);
+            break;
+          }
+          case 34: {
+            includedPrimaryTypes_.AddEntriesFrom(input, _repeated_includedPrimaryTypes_codec);
+            break;
+          }
+          case 42: {
+            includedRegionCodes_.AddEntriesFrom(input, _repeated_includedRegionCodes_codec);
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 58: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (origin_ == null) {
+              Origin = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+          case 72: {
+            InputOffset = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            IncludeQueryPredictions = input.ReadBool();
+            break;
+          }
+          case 90: {
+            SessionToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Input = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (locationBias_ == null) {
+              LocationBias = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationBias();
+            }
+            input.ReadMessage(LocationBias);
+            break;
+          }
+          case 26: {
+            if (locationRestriction_ == null) {
+              LocationRestriction = new global::Google.Maps.Places.V1.AutocompletePlacesRequest.Types.LocationRestriction();
+            }
+            input.ReadMessage(LocationRestriction);
+            break;
+          }
+          case 34: {
+            includedPrimaryTypes_.AddEntriesFrom(ref input, _repeated_includedPrimaryTypes_codec);
+            break;
+          }
+          case 42: {
+            includedRegionCodes_.AddEntriesFrom(ref input, _repeated_includedRegionCodes_codec);
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 58: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (origin_ == null) {
+              Origin = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(Origin);
+            break;
+          }
+          case 72: {
+            InputOffset = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            IncludeQueryPredictions = input.ReadBool();
+            break;
+          }
+          case 90: {
+            SessionToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutocompletePlacesRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The region to search. The results may be biased around the specified
+      /// region.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LocationBias : pb::IMessage<LocationBias>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LocationBias> _parser = new pb::MessageParser<LocationBias>(() => new LocationBias());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LocationBias> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.AutocompletePlacesRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationBias() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationBias(LocationBias other) : this() {
+          switch (other.TypeCase) {
+            case TypeOneofCase.Rectangle:
+              Rectangle = other.Rectangle.Clone();
+              break;
+            case TypeOneofCase.Circle:
+              Circle = other.Circle.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationBias Clone() {
+          return new LocationBias(this);
+        }
+
+        /// <summary>Field number for the "rectangle" field.</summary>
+        public const int RectangleFieldNumber = 1;
+        /// <summary>
+        /// A viewport defined by a northeast and a southwest corner.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Geo.Type.Viewport Rectangle {
+          get { return typeCase_ == TypeOneofCase.Rectangle ? (global::Google.Geo.Type.Viewport) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Rectangle;
+          }
+        }
+
+        /// <summary>Field number for the "circle" field.</summary>
+        public const int CircleFieldNumber = 2;
+        /// <summary>
+        /// A circle defined by a center point and radius.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.Circle Circle {
+          get { return typeCase_ == TypeOneofCase.Circle ? (global::Google.Maps.Places.V1.Circle) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Circle;
+          }
+        }
+
+        private object type_;
+        /// <summary>Enum of possible cases for the "type" oneof.</summary>
+        public enum TypeOneofCase {
+          None = 0,
+          Rectangle = 1,
+          Circle = 2,
+        }
+        private TypeOneofCase typeCase_ = TypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TypeOneofCase TypeCase {
+          get { return typeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearType() {
+          typeCase_ = TypeOneofCase.None;
+          type_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LocationBias);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LocationBias other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Rectangle, other.Rectangle)) return false;
+          if (!object.Equals(Circle, other.Circle)) return false;
+          if (TypeCase != other.TypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (typeCase_ == TypeOneofCase.Rectangle) hash ^= Rectangle.GetHashCode();
+          if (typeCase_ == TypeOneofCase.Circle) hash ^= Circle.GetHashCode();
+          hash ^= (int) typeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Circle);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Circle);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Circle);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LocationBias other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.TypeCase) {
+            case TypeOneofCase.Rectangle:
+              if (Rectangle == null) {
+                Rectangle = new global::Google.Geo.Type.Viewport();
+              }
+              Rectangle.MergeFrom(other.Rectangle);
+              break;
+            case TypeOneofCase.Circle:
+              if (Circle == null) {
+                Circle = new global::Google.Maps.Places.V1.Circle();
+              }
+              Circle.MergeFrom(other.Circle);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Geo.Type.Viewport subBuilder = new global::Google.Geo.Type.Viewport();
+                if (typeCase_ == TypeOneofCase.Rectangle) {
+                  subBuilder.MergeFrom(Rectangle);
+                }
+                input.ReadMessage(subBuilder);
+                Rectangle = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.Circle subBuilder = new global::Google.Maps.Places.V1.Circle();
+                if (typeCase_ == TypeOneofCase.Circle) {
+                  subBuilder.MergeFrom(Circle);
+                }
+                input.ReadMessage(subBuilder);
+                Circle = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Geo.Type.Viewport subBuilder = new global::Google.Geo.Type.Viewport();
+                if (typeCase_ == TypeOneofCase.Rectangle) {
+                  subBuilder.MergeFrom(Rectangle);
+                }
+                input.ReadMessage(subBuilder);
+                Rectangle = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.Circle subBuilder = new global::Google.Maps.Places.V1.Circle();
+                if (typeCase_ == TypeOneofCase.Circle) {
+                  subBuilder.MergeFrom(Circle);
+                }
+                input.ReadMessage(subBuilder);
+                Circle = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The region to search. The results will be restricted to the specified
+      /// region.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LocationRestriction : pb::IMessage<LocationRestriction>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LocationRestriction> _parser = new pb::MessageParser<LocationRestriction>(() => new LocationRestriction());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LocationRestriction> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.AutocompletePlacesRequest.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationRestriction() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationRestriction(LocationRestriction other) : this() {
+          switch (other.TypeCase) {
+            case TypeOneofCase.Rectangle:
+              Rectangle = other.Rectangle.Clone();
+              break;
+            case TypeOneofCase.Circle:
+              Circle = other.Circle.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LocationRestriction Clone() {
+          return new LocationRestriction(this);
+        }
+
+        /// <summary>Field number for the "rectangle" field.</summary>
+        public const int RectangleFieldNumber = 1;
+        /// <summary>
+        /// A viewport defined by a northeast and a southwest corner.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Geo.Type.Viewport Rectangle {
+          get { return typeCase_ == TypeOneofCase.Rectangle ? (global::Google.Geo.Type.Viewport) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Rectangle;
+          }
+        }
+
+        /// <summary>Field number for the "circle" field.</summary>
+        public const int CircleFieldNumber = 2;
+        /// <summary>
+        /// A circle defined by a center point and radius.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.Circle Circle {
+          get { return typeCase_ == TypeOneofCase.Circle ? (global::Google.Maps.Places.V1.Circle) type_ : null; }
+          set {
+            type_ = value;
+            typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Circle;
+          }
+        }
+
+        private object type_;
+        /// <summary>Enum of possible cases for the "type" oneof.</summary>
+        public enum TypeOneofCase {
+          None = 0,
+          Rectangle = 1,
+          Circle = 2,
+        }
+        private TypeOneofCase typeCase_ = TypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TypeOneofCase TypeCase {
+          get { return typeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearType() {
+          typeCase_ = TypeOneofCase.None;
+          type_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LocationRestriction);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LocationRestriction other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Rectangle, other.Rectangle)) return false;
+          if (!object.Equals(Circle, other.Circle)) return false;
+          if (TypeCase != other.TypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (typeCase_ == TypeOneofCase.Rectangle) hash ^= Rectangle.GetHashCode();
+          if (typeCase_ == TypeOneofCase.Circle) hash ^= Circle.GetHashCode();
+          hash ^= (int) typeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Circle);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Circle);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (typeCase_ == TypeOneofCase.Rectangle) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rectangle);
+          }
+          if (typeCase_ == TypeOneofCase.Circle) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Circle);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LocationRestriction other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.TypeCase) {
+            case TypeOneofCase.Rectangle:
+              if (Rectangle == null) {
+                Rectangle = new global::Google.Geo.Type.Viewport();
+              }
+              Rectangle.MergeFrom(other.Rectangle);
+              break;
+            case TypeOneofCase.Circle:
+              if (Circle == null) {
+                Circle = new global::Google.Maps.Places.V1.Circle();
+              }
+              Circle.MergeFrom(other.Circle);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Geo.Type.Viewport subBuilder = new global::Google.Geo.Type.Viewport();
+                if (typeCase_ == TypeOneofCase.Rectangle) {
+                  subBuilder.MergeFrom(Rectangle);
+                }
+                input.ReadMessage(subBuilder);
+                Rectangle = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.Circle subBuilder = new global::Google.Maps.Places.V1.Circle();
+                if (typeCase_ == TypeOneofCase.Circle) {
+                  subBuilder.MergeFrom(Circle);
+                }
+                input.ReadMessage(subBuilder);
+                Circle = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Geo.Type.Viewport subBuilder = new global::Google.Geo.Type.Viewport();
+                if (typeCase_ == TypeOneofCase.Rectangle) {
+                  subBuilder.MergeFrom(Rectangle);
+                }
+                input.ReadMessage(subBuilder);
+                Rectangle = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.Circle subBuilder = new global::Google.Maps.Places.V1.Circle();
+                if (typeCase_ == TypeOneofCase.Circle) {
+                  subBuilder.MergeFrom(Circle);
+                }
+                input.ReadMessage(subBuilder);
+                Circle = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response proto for AutocompletePlaces.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutocompletePlacesResponse : pb::IMessage<AutocompletePlacesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutocompletePlacesResponse> _parser = new pb::MessageParser<AutocompletePlacesResponse>(() => new AutocompletePlacesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutocompletePlacesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.Places.V1.PlacesServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesResponse(AutocompletePlacesResponse other) : this() {
+      suggestions_ = other.suggestions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutocompletePlacesResponse Clone() {
+      return new AutocompletePlacesResponse(this);
+    }
+
+    /// <summary>Field number for the "suggestions" field.</summary>
+    public const int SuggestionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion> _repeated_suggestions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion> suggestions_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion>();
+    /// <summary>
+    /// Contains a list of suggestions, ordered in descending order of relevance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion> Suggestions {
+      get { return suggestions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutocompletePlacesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutocompletePlacesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!suggestions_.Equals(other.suggestions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= suggestions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      suggestions_.WriteTo(output, _repeated_suggestions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      suggestions_.WriteTo(ref output, _repeated_suggestions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += suggestions_.CalculateSize(_repeated_suggestions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutocompletePlacesResponse other) {
+      if (other == null) {
+        return;
+      }
+      suggestions_.Add(other.suggestions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            suggestions_.AddEntriesFrom(input, _repeated_suggestions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            suggestions_.AddEntriesFrom(ref input, _repeated_suggestions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutocompletePlacesResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// An Autocomplete suggestion result.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Suggestion : pb::IMessage<Suggestion>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Suggestion> _parser = new pb::MessageParser<Suggestion>(() => new Suggestion());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Suggestion> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Suggestion() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Suggestion(Suggestion other) : this() {
+          switch (other.KindCase) {
+            case KindOneofCase.PlacePrediction:
+              PlacePrediction = other.PlacePrediction.Clone();
+              break;
+            case KindOneofCase.QueryPrediction:
+              QueryPrediction = other.QueryPrediction.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Suggestion Clone() {
+          return new Suggestion(this);
+        }
+
+        /// <summary>Field number for the "place_prediction" field.</summary>
+        public const int PlacePredictionFieldNumber = 1;
+        /// <summary>
+        /// A prediction for a Place.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction PlacePrediction {
+          get { return kindCase_ == KindOneofCase.PlacePrediction ? (global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction) kind_ : null; }
+          set {
+            kind_ = value;
+            kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.PlacePrediction;
+          }
+        }
+
+        /// <summary>Field number for the "query_prediction" field.</summary>
+        public const int QueryPredictionFieldNumber = 2;
+        /// <summary>
+        /// A prediction for a query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction QueryPrediction {
+          get { return kindCase_ == KindOneofCase.QueryPrediction ? (global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction) kind_ : null; }
+          set {
+            kind_ = value;
+            kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.QueryPrediction;
+          }
+        }
+
+        private object kind_;
+        /// <summary>Enum of possible cases for the "kind" oneof.</summary>
+        public enum KindOneofCase {
+          None = 0,
+          PlacePrediction = 1,
+          QueryPrediction = 2,
+        }
+        private KindOneofCase kindCase_ = KindOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KindOneofCase KindCase {
+          get { return kindCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKind() {
+          kindCase_ = KindOneofCase.None;
+          kind_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Suggestion);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Suggestion other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(PlacePrediction, other.PlacePrediction)) return false;
+          if (!object.Equals(QueryPrediction, other.QueryPrediction)) return false;
+          if (KindCase != other.KindCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (kindCase_ == KindOneofCase.PlacePrediction) hash ^= PlacePrediction.GetHashCode();
+          if (kindCase_ == KindOneofCase.QueryPrediction) hash ^= QueryPrediction.GetHashCode();
+          hash ^= (int) kindCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (kindCase_ == KindOneofCase.PlacePrediction) {
+            output.WriteRawTag(10);
+            output.WriteMessage(PlacePrediction);
+          }
+          if (kindCase_ == KindOneofCase.QueryPrediction) {
+            output.WriteRawTag(18);
+            output.WriteMessage(QueryPrediction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (kindCase_ == KindOneofCase.PlacePrediction) {
+            output.WriteRawTag(10);
+            output.WriteMessage(PlacePrediction);
+          }
+          if (kindCase_ == KindOneofCase.QueryPrediction) {
+            output.WriteRawTag(18);
+            output.WriteMessage(QueryPrediction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (kindCase_ == KindOneofCase.PlacePrediction) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlacePrediction);
+          }
+          if (kindCase_ == KindOneofCase.QueryPrediction) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryPrediction);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Suggestion other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.KindCase) {
+            case KindOneofCase.PlacePrediction:
+              if (PlacePrediction == null) {
+                PlacePrediction = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction();
+              }
+              PlacePrediction.MergeFrom(other.PlacePrediction);
+              break;
+            case KindOneofCase.QueryPrediction:
+              if (QueryPrediction == null) {
+                QueryPrediction = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction();
+              }
+              QueryPrediction.MergeFrom(other.QueryPrediction);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction subBuilder = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction();
+                if (kindCase_ == KindOneofCase.PlacePrediction) {
+                  subBuilder.MergeFrom(PlacePrediction);
+                }
+                input.ReadMessage(subBuilder);
+                PlacePrediction = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction subBuilder = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction();
+                if (kindCase_ == KindOneofCase.QueryPrediction) {
+                  subBuilder.MergeFrom(QueryPrediction);
+                }
+                input.ReadMessage(subBuilder);
+                QueryPrediction = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction subBuilder = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.PlacePrediction();
+                if (kindCase_ == KindOneofCase.PlacePrediction) {
+                  subBuilder.MergeFrom(PlacePrediction);
+                }
+                input.ReadMessage(subBuilder);
+                PlacePrediction = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction subBuilder = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.QueryPrediction();
+                if (kindCase_ == KindOneofCase.QueryPrediction) {
+                  subBuilder.MergeFrom(QueryPrediction);
+                }
+                input.ReadMessage(subBuilder);
+                QueryPrediction = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Suggestion message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Identifies a substring within a given text.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class StringRange : pb::IMessage<StringRange>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<StringRange> _parser = new pb::MessageParser<StringRange>(() => new StringRange());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<StringRange> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringRange() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringRange(StringRange other) : this() {
+              startOffset_ = other.startOffset_;
+              endOffset_ = other.endOffset_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StringRange Clone() {
+              return new StringRange(this);
+            }
+
+            /// <summary>Field number for the "start_offset" field.</summary>
+            public const int StartOffsetFieldNumber = 1;
+            private int startOffset_;
+            /// <summary>
+            /// Zero-based offset of the first Unicode character of the string
+            /// (inclusive).
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int StartOffset {
+              get { return startOffset_; }
+              set {
+                startOffset_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "end_offset" field.</summary>
+            public const int EndOffsetFieldNumber = 2;
+            private int endOffset_;
+            /// <summary>
+            /// Zero-based offset of the last Unicode character (exclusive).
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int EndOffset {
+              get { return endOffset_; }
+              set {
+                endOffset_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as StringRange);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(StringRange other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (StartOffset != other.StartOffset) return false;
+              if (EndOffset != other.EndOffset) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (StartOffset != 0) hash ^= StartOffset.GetHashCode();
+              if (EndOffset != 0) hash ^= EndOffset.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (StartOffset != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(StartOffset);
+              }
+              if (EndOffset != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(EndOffset);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (StartOffset != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(StartOffset);
+              }
+              if (EndOffset != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(EndOffset);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (StartOffset != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(StartOffset);
+              }
+              if (EndOffset != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndOffset);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(StringRange other) {
+              if (other == null) {
+                return;
+              }
+              if (other.StartOffset != 0) {
+                StartOffset = other.StartOffset;
+              }
+              if (other.EndOffset != 0) {
+                EndOffset = other.EndOffset;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    StartOffset = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    EndOffset = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    StartOffset = input.ReadInt32();
+                    break;
+                  }
+                  case 16: {
+                    EndOffset = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Text representing a Place or query prediction. The text may be used as is
+          /// or formatted.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class FormattableText : pb::IMessage<FormattableText>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<FormattableText> _parser = new pb::MessageParser<FormattableText>(() => new FormattableText());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<FormattableText> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FormattableText() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FormattableText(FormattableText other) : this() {
+              text_ = other.text_;
+              matches_ = other.matches_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public FormattableText Clone() {
+              return new FormattableText(this);
+            }
+
+            /// <summary>Field number for the "text" field.</summary>
+            public const int TextFieldNumber = 1;
+            private string text_ = "";
+            /// <summary>
+            /// Text that may be used as is or formatted with `matches`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Text {
+              get { return text_; }
+              set {
+                text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "matches" field.</summary>
+            public const int MatchesFieldNumber = 2;
+            private static readonly pb::FieldCodec<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange> _repeated_matches_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange.Parser);
+            private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange> matches_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange>();
+            /// <summary>
+            /// A list of string ranges identifying where the input request matched in
+            /// `text`. The ranges can be used to format specific parts of `text`. The
+            /// substrings may not be exact matches of `input` if the matching was
+            /// determined by criteria other than string matching (e.g. spell
+            /// corrections or transliterations).
+            ///
+            /// These values are Unicode character offsets of `text`. The ranges are
+            /// guaranteed to be ordered in increasing offset values.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StringRange> Matches {
+              get { return matches_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as FormattableText);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(FormattableText other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Text != other.Text) return false;
+              if(!matches_.Equals(other.matches_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Text.Length != 0) hash ^= Text.GetHashCode();
+              hash ^= matches_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Text.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Text);
+              }
+              matches_.WriteTo(output, _repeated_matches_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Text.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Text);
+              }
+              matches_.WriteTo(ref output, _repeated_matches_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Text.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+              }
+              size += matches_.CalculateSize(_repeated_matches_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(FormattableText other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Text.Length != 0) {
+                Text = other.Text;
+              }
+              matches_.Add(other.matches_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Text = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    matches_.AddEntriesFrom(input, _repeated_matches_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Text = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    matches_.AddEntriesFrom(ref input, _repeated_matches_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Contains a breakdown of a Place or query prediction into main text
+          /// and secondary text.
+          ///
+          /// For Place predictions, the main text contains the specific name of the
+          /// Place. For query predictions, the main text contains the query.
+          ///
+          /// The secondary text contains additional disambiguating features (such as a
+          /// city or region) to further identify the Place or refine the query.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class StructuredFormat : pb::IMessage<StructuredFormat>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<StructuredFormat> _parser = new pb::MessageParser<StructuredFormat>(() => new StructuredFormat());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<StructuredFormat> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StructuredFormat() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StructuredFormat(StructuredFormat other) : this() {
+              mainText_ = other.mainText_ != null ? other.mainText_.Clone() : null;
+              secondaryText_ = other.secondaryText_ != null ? other.secondaryText_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public StructuredFormat Clone() {
+              return new StructuredFormat(this);
+            }
+
+            /// <summary>Field number for the "main_text" field.</summary>
+            public const int MainTextFieldNumber = 1;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText mainText_;
+            /// <summary>
+            /// Represents the name of the Place or query.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText MainText {
+              get { return mainText_; }
+              set {
+                mainText_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "secondary_text" field.</summary>
+            public const int SecondaryTextFieldNumber = 2;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText secondaryText_;
+            /// <summary>
+            /// Represents additional disambiguating features (such as a city or
+            /// region) to further identify the Place or refine the query.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText SecondaryText {
+              get { return secondaryText_; }
+              set {
+                secondaryText_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as StructuredFormat);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(StructuredFormat other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(MainText, other.MainText)) return false;
+              if (!object.Equals(SecondaryText, other.SecondaryText)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (mainText_ != null) hash ^= MainText.GetHashCode();
+              if (secondaryText_ != null) hash ^= SecondaryText.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (mainText_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(MainText);
+              }
+              if (secondaryText_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(SecondaryText);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (mainText_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(MainText);
+              }
+              if (secondaryText_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(SecondaryText);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (mainText_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(MainText);
+              }
+              if (secondaryText_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(SecondaryText);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(StructuredFormat other) {
+              if (other == null) {
+                return;
+              }
+              if (other.mainText_ != null) {
+                if (mainText_ == null) {
+                  MainText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                }
+                MainText.MergeFrom(other.MainText);
+              }
+              if (other.secondaryText_ != null) {
+                if (secondaryText_ == null) {
+                  SecondaryText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                }
+                SecondaryText.MergeFrom(other.SecondaryText);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (mainText_ == null) {
+                      MainText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(MainText);
+                    break;
+                  }
+                  case 18: {
+                    if (secondaryText_ == null) {
+                      SecondaryText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(SecondaryText);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (mainText_ == null) {
+                      MainText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(MainText);
+                    break;
+                  }
+                  case 18: {
+                    if (secondaryText_ == null) {
+                      SecondaryText = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(SecondaryText);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Prediction results for a Place Autocomplete prediction.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class PlacePrediction : pb::IMessage<PlacePrediction>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PlacePrediction> _parser = new pb::MessageParser<PlacePrediction>(() => new PlacePrediction());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PlacePrediction> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlacePrediction() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlacePrediction(PlacePrediction other) : this() {
+              place_ = other.place_;
+              placeId_ = other.placeId_;
+              text_ = other.text_ != null ? other.text_.Clone() : null;
+              structuredFormat_ = other.structuredFormat_ != null ? other.structuredFormat_.Clone() : null;
+              types_ = other.types_.Clone();
+              distanceMeters_ = other.distanceMeters_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PlacePrediction Clone() {
+              return new PlacePrediction(this);
+            }
+
+            /// <summary>Field number for the "place" field.</summary>
+            public const int PlaceFieldNumber = 1;
+            private string place_ = "";
+            /// <summary>
+            /// The resource name of the suggested Place. This name can be used in
+            /// other APIs that accept Place names.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Place {
+              get { return place_; }
+              set {
+                place_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "place_id" field.</summary>
+            public const int PlaceIdFieldNumber = 2;
+            private string placeId_ = "";
+            /// <summary>
+            /// The unique identifier of the suggested Place. This identifier can be
+            /// used in other APIs that accept Place IDs.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string PlaceId {
+              get { return placeId_; }
+              set {
+                placeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "text" field.</summary>
+            public const int TextFieldNumber = 3;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText text_;
+            /// <summary>
+            /// Contains the human-readable name for the returned result. For
+            /// establishment results, this is usually the business name and address.
+            ///
+            /// `text` is recommended for developers who wish to show a single UI
+            /// element. Developers who wish to show two separate, but related, UI
+            /// elements may want to use `structured_format` instead. They are two
+            /// different ways to represent a Place prediction. Users should not try to
+            /// parse `structured_format` into `text` or vice versa.
+            ///
+            /// This text may be different from the `display_name` returned by
+            /// GetPlace.
+            ///
+            /// May be in mixed languages if the request `input` and `language_code`
+            /// are in different languages or if the Place does not have a translation
+            /// from the local language to `language_code`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText Text {
+              get { return text_; }
+              set {
+                text_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "structured_format" field.</summary>
+            public const int StructuredFormatFieldNumber = 4;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat structuredFormat_;
+            /// <summary>
+            /// A breakdown of the Place prediction into main text containing the name
+            /// of the Place and secondary text containing additional disambiguating
+            /// features (such as a city or region).
+            ///
+            /// `structured_format` is recommended for developers who wish to show two
+            /// separate, but related, UI elements. Developers who wish to show a
+            /// single UI element may want to use `text` instead. They are two
+            /// different ways to represent a Place prediction. Users should not try to
+            /// parse `structured_format` into `text` or vice versa.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat StructuredFormat {
+              get { return structuredFormat_; }
+              set {
+                structuredFormat_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "types" field.</summary>
+            public const int Types_FieldNumber = 5;
+            private static readonly pb::FieldCodec<string> _repeated_types_codec
+                = pb::FieldCodec.ForString(42);
+            private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// List of types that apply to this Place from Table A or Table B in
+            /// https://developers.google.com/maps/documentation/places/web-service/place-types.
+            ///
+            /// A type is a categorization of a Place. Places with shared types will
+            /// share similar characteristics.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> Types_ {
+              get { return types_; }
+            }
+
+            /// <summary>Field number for the "distance_meters" field.</summary>
+            public const int DistanceMetersFieldNumber = 6;
+            private int distanceMeters_;
+            /// <summary>
+            /// The length of the geodesic in meters from `origin` if `origin` is
+            /// specified. Certain predictions such as routes may not populate this
+            /// field.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int DistanceMeters {
+              get { return distanceMeters_; }
+              set {
+                distanceMeters_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PlacePrediction);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PlacePrediction other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Place != other.Place) return false;
+              if (PlaceId != other.PlaceId) return false;
+              if (!object.Equals(Text, other.Text)) return false;
+              if (!object.Equals(StructuredFormat, other.StructuredFormat)) return false;
+              if(!types_.Equals(other.types_)) return false;
+              if (DistanceMeters != other.DistanceMeters) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Place.Length != 0) hash ^= Place.GetHashCode();
+              if (PlaceId.Length != 0) hash ^= PlaceId.GetHashCode();
+              if (text_ != null) hash ^= Text.GetHashCode();
+              if (structuredFormat_ != null) hash ^= StructuredFormat.GetHashCode();
+              hash ^= types_.GetHashCode();
+              if (DistanceMeters != 0) hash ^= DistanceMeters.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Place.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Place);
+              }
+              if (PlaceId.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(PlaceId);
+              }
+              if (text_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Text);
+              }
+              if (structuredFormat_ != null) {
+                output.WriteRawTag(34);
+                output.WriteMessage(StructuredFormat);
+              }
+              types_.WriteTo(output, _repeated_types_codec);
+              if (DistanceMeters != 0) {
+                output.WriteRawTag(48);
+                output.WriteInt32(DistanceMeters);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Place.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Place);
+              }
+              if (PlaceId.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(PlaceId);
+              }
+              if (text_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Text);
+              }
+              if (structuredFormat_ != null) {
+                output.WriteRawTag(34);
+                output.WriteMessage(StructuredFormat);
+              }
+              types_.WriteTo(ref output, _repeated_types_codec);
+              if (DistanceMeters != 0) {
+                output.WriteRawTag(48);
+                output.WriteInt32(DistanceMeters);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Place.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Place);
+              }
+              if (PlaceId.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
+              }
+              if (text_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
+              }
+              if (structuredFormat_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredFormat);
+              }
+              size += types_.CalculateSize(_repeated_types_codec);
+              if (DistanceMeters != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(DistanceMeters);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PlacePrediction other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Place.Length != 0) {
+                Place = other.Place;
+              }
+              if (other.PlaceId.Length != 0) {
+                PlaceId = other.PlaceId;
+              }
+              if (other.text_ != null) {
+                if (text_ == null) {
+                  Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                }
+                Text.MergeFrom(other.Text);
+              }
+              if (other.structuredFormat_ != null) {
+                if (structuredFormat_ == null) {
+                  StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                }
+                StructuredFormat.MergeFrom(other.StructuredFormat);
+              }
+              types_.Add(other.types_);
+              if (other.DistanceMeters != 0) {
+                DistanceMeters = other.DistanceMeters;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Place = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    PlaceId = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    if (text_ == null) {
+                      Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(Text);
+                    break;
+                  }
+                  case 34: {
+                    if (structuredFormat_ == null) {
+                      StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                    }
+                    input.ReadMessage(StructuredFormat);
+                    break;
+                  }
+                  case 42: {
+                    types_.AddEntriesFrom(input, _repeated_types_codec);
+                    break;
+                  }
+                  case 48: {
+                    DistanceMeters = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Place = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    PlaceId = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    if (text_ == null) {
+                      Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(Text);
+                    break;
+                  }
+                  case 34: {
+                    if (structuredFormat_ == null) {
+                      StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                    }
+                    input.ReadMessage(StructuredFormat);
+                    break;
+                  }
+                  case 42: {
+                    types_.AddEntriesFrom(ref input, _repeated_types_codec);
+                    break;
+                  }
+                  case 48: {
+                    DistanceMeters = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Prediction results for a Query Autocomplete prediction.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class QueryPrediction : pb::IMessage<QueryPrediction>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<QueryPrediction> _parser = new pb::MessageParser<QueryPrediction>(() => new QueryPrediction());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<QueryPrediction> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Descriptor.NestedTypes[4]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public QueryPrediction() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public QueryPrediction(QueryPrediction other) : this() {
+              text_ = other.text_ != null ? other.text_.Clone() : null;
+              structuredFormat_ = other.structuredFormat_ != null ? other.structuredFormat_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public QueryPrediction Clone() {
+              return new QueryPrediction(this);
+            }
+
+            /// <summary>Field number for the "text" field.</summary>
+            public const int TextFieldNumber = 1;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText text_;
+            /// <summary>
+            /// The predicted text. This text does not represent a Place, but rather a
+            /// text query that could be used in a search endpoint (e.g. TextSearch).
+            ///
+            /// `text` is recommended for developers who wish to show a single UI
+            /// element. Developers who wish to show two separate, but related, UI
+            /// elements may want to use `structured_format` instead. They are two
+            /// different ways to represent a query prediction. Users should not try to
+            /// parse `structured_format` into `text` or vice versa.
+            ///
+            /// May be in mixed languages if the request `input` and `language_code`
+            /// are in different languages or if part of the query does not have a
+            /// translation from the local language to `language_code`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText Text {
+              get { return text_; }
+              set {
+                text_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "structured_format" field.</summary>
+            public const int StructuredFormatFieldNumber = 2;
+            private global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat structuredFormat_;
+            /// <summary>
+            /// A breakdown of the query prediction into main text containing the query
+            /// and secondary text containing additional disambiguating features (such
+            /// as a city or region).
+            ///
+            /// `structured_format` is recommended for developers who wish to show two
+            /// separate, but related, UI elements. Developers who wish to show a
+            /// single UI element may want to use `text` instead. They are two
+            /// different ways to represent a query prediction. Users should not try to
+            /// parse `structured_format` into `text` or vice versa.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat StructuredFormat {
+              get { return structuredFormat_; }
+              set {
+                structuredFormat_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as QueryPrediction);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(QueryPrediction other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Text, other.Text)) return false;
+              if (!object.Equals(StructuredFormat, other.StructuredFormat)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (text_ != null) hash ^= Text.GetHashCode();
+              if (structuredFormat_ != null) hash ^= StructuredFormat.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (text_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Text);
+              }
+              if (structuredFormat_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(StructuredFormat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (text_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Text);
+              }
+              if (structuredFormat_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(StructuredFormat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (text_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Text);
+              }
+              if (structuredFormat_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredFormat);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(QueryPrediction other) {
+              if (other == null) {
+                return;
+              }
+              if (other.text_ != null) {
+                if (text_ == null) {
+                  Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                }
+                Text.MergeFrom(other.Text);
+              }
+              if (other.structuredFormat_ != null) {
+                if (structuredFormat_ == null) {
+                  StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                }
+                StructuredFormat.MergeFrom(other.StructuredFormat);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (text_ == null) {
+                      Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(Text);
+                    break;
+                  }
+                  case 18: {
+                    if (structuredFormat_ == null) {
+                      StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                    }
+                    input.ReadMessage(StructuredFormat);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (text_ == null) {
+                      Text = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.FormattableText();
+                    }
+                    input.ReadMessage(Text);
+                    break;
+                  }
+                  case 18: {
+                    if (structuredFormat_ == null) {
+                      StructuredFormat = new global::Google.Maps.Places.V1.AutocompletePlacesResponse.Types.Suggestion.Types.StructuredFormat();
+                    }
+                    input.ReadMessage(StructuredFormat);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

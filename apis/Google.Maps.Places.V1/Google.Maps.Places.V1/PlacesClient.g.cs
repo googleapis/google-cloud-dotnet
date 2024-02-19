@@ -48,6 +48,7 @@ namespace Google.Maps.Places.V1
             SearchTextSettings = existing.SearchTextSettings;
             GetPhotoMediaSettings = existing.GetPhotoMediaSettings;
             GetPlaceSettings = existing.GetPlaceSettings;
+            AutocompletePlacesSettings = existing.AutocompletePlacesSettings;
             OnCopy(existing);
         }
 
@@ -100,6 +101,18 @@ namespace Google.Maps.Places.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetPlaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PlacesClient.AutocompletePlaces</c> and <c>PlacesClient.AutocompletePlacesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AutocompletePlacesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PlacesSettings"/> object.</returns>
@@ -433,7 +446,8 @@ namespace Google.Maps.Places.V1
             GetPhotoMediaAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -442,7 +456,8 @@ namespace Google.Maps.Places.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -451,7 +466,8 @@ namespace Google.Maps.Places.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -460,12 +476,11 @@ namespace Google.Maps.Places.V1
             GetPlaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -476,12 +491,11 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -492,12 +506,11 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -505,12 +518,11 @@ namespace Google.Maps.Places.V1
             GetPlaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -521,12 +533,11 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -537,17 +548,43 @@ namespace Google.Maps.Places.V1
             }, callSettings);
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="name">
-        /// Required. A place ID returned in a Place (with "places/" prefix), or
-        /// equivalently the name in the same Place. Format:
-        /// `places/{place_id}`.
+        /// Required. The resource name of a place, in the `places/{place_id}` format.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Place> GetPlaceAsync(PlaceName name, st::CancellationToken cancellationToken) =>
             GetPlaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns predictions for the given input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AutocompletePlacesResponse AutocompletePlaces(AutocompletePlacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns predictions for the given input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutocompletePlacesResponse> AutocompletePlacesAsync(AutocompletePlacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns predictions for the given input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AutocompletePlacesResponse> AutocompletePlacesAsync(AutocompletePlacesRequest request, st::CancellationToken cancellationToken) =>
+            AutocompletePlacesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Places client wrapper implementation, for convenient use.</summary>
@@ -568,6 +605,8 @@ namespace Google.Maps.Places.V1
         private readonly gaxgrpc::ApiCall<GetPhotoMediaRequest, PhotoMedia> _callGetPhotoMedia;
 
         private readonly gaxgrpc::ApiCall<GetPlaceRequest, Place> _callGetPlace;
+
+        private readonly gaxgrpc::ApiCall<AutocompletePlacesRequest, AutocompletePlacesResponse> _callAutocompletePlaces;
 
         /// <summary>
         /// Constructs a client wrapper for the Places service, with the specified gRPC client and settings.
@@ -592,6 +631,9 @@ namespace Google.Maps.Places.V1
             _callGetPlace = clientHelper.BuildApiCall<GetPlaceRequest, Place>("GetPlace", grpcClient.GetPlaceAsync, grpcClient.GetPlace, effectiveSettings.GetPlaceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPlace);
             Modify_GetPlaceApiCall(ref _callGetPlace);
+            _callAutocompletePlaces = clientHelper.BuildApiCall<AutocompletePlacesRequest, AutocompletePlacesResponse>("AutocompletePlaces", grpcClient.AutocompletePlacesAsync, grpcClient.AutocompletePlaces, effectiveSettings.AutocompletePlacesSettings);
+            Modify_ApiCall(ref _callAutocompletePlaces);
+            Modify_AutocompletePlacesApiCall(ref _callAutocompletePlaces);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -605,6 +647,8 @@ namespace Google.Maps.Places.V1
 
         partial void Modify_GetPlaceApiCall(ref gaxgrpc::ApiCall<GetPlaceRequest, Place> call);
 
+        partial void Modify_AutocompletePlacesApiCall(ref gaxgrpc::ApiCall<AutocompletePlacesRequest, AutocompletePlacesResponse> call);
+
         partial void OnConstruction(Places.PlacesClient grpcClient, PlacesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Places client</summary>
@@ -617,6 +661,8 @@ namespace Google.Maps.Places.V1
         partial void Modify_GetPhotoMediaRequest(ref GetPhotoMediaRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetPlaceRequest(ref GetPlaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AutocompletePlacesRequest(ref AutocompletePlacesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Search for places near locations.
@@ -691,7 +737,8 @@ namespace Google.Maps.Places.V1
         }
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -703,7 +750,8 @@ namespace Google.Maps.Places.V1
         }
 
         /// <summary>
-        /// Get place details with a place id (in a name) string.
+        /// Get the details of a place based on its resource name, which is a string
+        /// in the `places/{place_id}` format.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -712,6 +760,30 @@ namespace Google.Maps.Places.V1
         {
             Modify_GetPlaceRequest(ref request, ref callSettings);
             return _callGetPlace.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns predictions for the given input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AutocompletePlacesResponse AutocompletePlaces(AutocompletePlacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AutocompletePlacesRequest(ref request, ref callSettings);
+            return _callAutocompletePlaces.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns predictions for the given input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AutocompletePlacesResponse> AutocompletePlacesAsync(AutocompletePlacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AutocompletePlacesRequest(ref request, ref callSettings);
+            return _callAutocompletePlaces.Async(request, callSettings);
         }
     }
 }

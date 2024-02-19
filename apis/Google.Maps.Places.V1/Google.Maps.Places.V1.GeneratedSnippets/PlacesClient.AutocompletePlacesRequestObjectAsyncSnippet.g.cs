@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START places_v1_generated_Places_GetPlace_async]
+    // [START places_v1_generated_Places_AutocompletePlaces_async]
     using Google.Maps.Places.V1;
+    using Google.Type;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedPlacesClientSnippets
     {
-        /// <summary>Snippet for GetPlaceAsync</summary>
+        /// <summary>Snippet for AutocompletePlacesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,21 +31,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetPlaceRequestObjectAsync()
+        public async Task AutocompletePlacesRequestObjectAsync()
         {
             // Create client
             PlacesClient placesClient = await PlacesClient.CreateAsync();
             // Initialize request argument(s)
-            GetPlaceRequest request = new GetPlaceRequest
+            AutocompletePlacesRequest request = new AutocompletePlacesRequest
             {
-                PlaceName = PlaceName.FromPlace("[PLACE_ID]"),
+                Input = "",
+                LocationBias = new AutocompletePlacesRequest.Types.LocationBias(),
+                LocationRestriction = new AutocompletePlacesRequest.Types.LocationRestriction(),
+                IncludedPrimaryTypes = { "", },
+                IncludedRegionCodes = { "", },
                 LanguageCode = "",
                 RegionCode = "",
+                Origin = new LatLng(),
+                InputOffset = 0,
+                IncludeQueryPredictions = false,
                 SessionToken = "",
             };
             // Make the request
-            Place response = await placesClient.GetPlaceAsync(request);
+            AutocompletePlacesResponse response = await placesClient.AutocompletePlacesAsync(request);
         }
     }
-    // [END places_v1_generated_Places_GetPlace_async]
+    // [END places_v1_generated_Places_AutocompletePlaces_async]
 }
