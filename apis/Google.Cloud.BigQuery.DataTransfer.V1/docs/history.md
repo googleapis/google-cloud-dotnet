@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.5.0, released 2024-02-20
+
+### New features
+
+- Add UnenrollDataSources API which gives users a programmatic way to unenroll data sources ([commit 174b0bc](https://github.com/googleapis/google-cloud-dotnet/commit/174b0bc552a3438b586c999a5a4f8f1e57dcbc48))
+
+### Documentation improvements
+
+- Update transferConfig.name description to indicate that it supports both formats ([commit e821bb9](https://github.com/googleapis/google-cloud-dotnet/commit/e821bb96b2abb6b7473ada5169283e27a2e267dd))
+
 ## Version 4.4.0, released 2023-08-04
 
 ### New features
