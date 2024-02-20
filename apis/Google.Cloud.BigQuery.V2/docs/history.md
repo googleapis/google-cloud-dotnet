@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2024-02-20
+
+### New features
+
+- Implement int64-based timestamps ([commit 9677fcb](https://github.com/googleapis/google-cloud-dotnet/commit/9677fcb585130adead6bbb1963477dc77be13f57))
+
 ## Version 3.5.0, released 2023-10-13
 
 ### New features
