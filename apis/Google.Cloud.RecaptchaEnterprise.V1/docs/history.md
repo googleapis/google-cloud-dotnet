@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.9.0, released 2024-02-20
+
+### New features
+
+- Add an API method for reordering firewall policies ([commit 3a8650e](https://github.com/googleapis/google-cloud-dotnet/commit/3a8650eeeec900cc533908c62cb610336425b517))
+
+### Documentation improvements
+
+- Update comment for `AccountVerificationInfo.username` ([commit 7560af8](https://github.com/googleapis/google-cloud-dotnet/commit/7560af85aa6f677214b9a19d5eeeef15f30c7f64))
+
 ## Version 2.8.0, released 2023-12-11
 
 ### New features
