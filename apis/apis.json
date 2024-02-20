@@ -3510,7 +3510,7 @@
     },
     {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "type": "grpc",
       "productName": "Cloud Composer",
       "productUrl": "https://cloud.google.com/composer/docs/",
