@@ -1,6 +1,5 @@
 [
   {
-    "skip": "b/323337532",
     "method": "ListConferenceRecords",
     "client": "ConferenceRecordsServiceClient",
     "arguments": {
