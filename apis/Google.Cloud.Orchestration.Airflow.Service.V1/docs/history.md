@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.5.0, released 2024-02-20
+
+### New features
+
+- Added ListWorkloads RPC ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field data_retention_config to EnvironmentConfig ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field web_server_plugins_mode to SoftwareConfig ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+- Added field storage_config to Environment ([commit 2f0cfc6](https://github.com/googleapis/google-cloud-dotnet/commit/2f0cfc682d783c0629519bda7c3706ff1c271ea0))
+
 ## Version 2.4.0, released 2023-06-20
 
 ### New features
