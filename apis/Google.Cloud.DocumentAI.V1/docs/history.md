@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.12.0, released 2024-02-20
+
+### New features
+
+- A new field `schema_override` is added to message `ProcessOptions` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+- A new field `labels` is added to messages `ProcessRequest` and `BatchProcessRequest` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+- A new field `display_name` is added to message `DocumentSchema` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+
+### Documentation improvements
+
+- Updated comments ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+
 ## Version 3.11.0, released 2024-02-09
 
 ### New features
