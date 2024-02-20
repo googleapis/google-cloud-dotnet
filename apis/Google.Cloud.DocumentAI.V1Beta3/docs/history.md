@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.0.0-beta15, released 2024-02-20
+
+### Bug fixes
+
+- Deprecate `Dataset.document_warehouse_config` ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+
+### New features
+
+- A new message FoundationModelTuningOptions is added ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+- A new field foundation_model_tuning_options is added to message TrainProcessorVersionRequest ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+- A new field `labels` is added to messages `ProcessRequest` and `BatchProcessRequest` ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+- A new field `display_name` is added to message `DocumentSchema` ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+
+### Documentation improvements
+
+- Updated comments ([commit 9161ec3](https://github.com/googleapis/google-cloud-dotnet/commit/9161ec3cbc47939c6e0e0a5ca8640a34f80b6a0c))
+
 ## Version 2.0.0-beta14, released 2024-02-09
 
 ### New features
