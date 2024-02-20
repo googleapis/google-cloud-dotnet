@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.1.0, released 2024-02-20
+
+### New features
+
+- Add session token support for Autocomplete (New) sessions that end with a call to Address Validation ([commit 289fa6e](https://github.com/googleapis/google-cloud-dotnet/commit/289fa6e1f785e4da53676b952eefe2f7182ef4c2))
+- Add new fields to USPS data ([commit 289fa6e](https://github.com/googleapis/google-cloud-dotnet/commit/289fa6e1f785e4da53676b952eefe2f7182ef4c2))
+
+### Documentation improvements
+
+- Update proto field descriptions ([commit 289fa6e](https://github.com/googleapis/google-cloud-dotnet/commit/289fa6e1f785e4da53676b952eefe2f7182ef4c2))
+
 ## Version 1.0.0, released 2023-11-01
 
 In addition to the documentation changes listed below, this library
