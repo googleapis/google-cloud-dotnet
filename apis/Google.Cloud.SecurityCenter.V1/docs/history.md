@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.14.0, released 2024-02-20
+
+### New features
+
+- Add application field to finding's list of attributes ([commit a359c07](https://github.com/googleapis/google-cloud-dotnet/commit/a359c076cf3ac7f795acf940d57eb408a94ffce4))
+
+### Documentation improvements
+
+- Modify documentation of SimulateSecurityHealthAnalyticsCustomModuleRequest ([commit fb09480](https://github.com/googleapis/google-cloud-dotnet/commit/fb094805f2a6b2d56ff3994603fa5d87148570c9))
+
 ## Version 3.13.0, released 2023-10-30
 
 ### New features
