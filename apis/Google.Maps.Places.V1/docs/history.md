@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2024-02-20
+
+### New features
+
+- Add AutoComplete API ([commit a61f906](https://github.com/googleapis/google-cloud-dotnet/commit/a61f906f803b519900d553e302d0ac3ae9e1b7a3))
+- Add Searchable EV feature to TextSearch API ([commit a61f906](https://github.com/googleapis/google-cloud-dotnet/commit/a61f906f803b519900d553e302d0ac3ae9e1b7a3))
+
 ## Version 1.0.0-beta02, released 2023-12-11
 
 ### New features
