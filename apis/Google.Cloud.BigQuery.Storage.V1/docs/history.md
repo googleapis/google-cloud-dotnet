@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.12.0, released 2024-02-20
+
+### New features
+
+- Add the RANGE type to the google.cloud.bigquery.storage.v1.TableFieldSchema ([commit 7867a64](https://github.com/googleapis/google-cloud-dotnet/commit/7867a6402a3216bc1387a9e5c44a99f0379c350b))
+
 ## Version 3.11.0, released 2024-01-16
 
 ### New features
