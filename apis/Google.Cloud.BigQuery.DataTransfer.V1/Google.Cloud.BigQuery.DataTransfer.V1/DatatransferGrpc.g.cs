@@ -459,7 +459,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// Unenroll data sources in a user project. This allows users to remove
       /// transfer configurations for these data sources. They will no longer appear
       /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-      /// UI](https://console.cloud.google.com/bigquery).
+      /// UI](https://console.cloud.google.com/bigquery). Data transfers
+      /// configurations of unenrolled data sources will not be scheduled.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1299,7 +1300,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// Unenroll data sources in a user project. This allows users to remove
       /// transfer configurations for these data sources. They will no longer appear
       /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-      /// UI](https://console.cloud.google.com/bigquery).
+      /// UI](https://console.cloud.google.com/bigquery). Data transfers
+      /// configurations of unenrolled data sources will not be scheduled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1315,7 +1317,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// Unenroll data sources in a user project. This allows users to remove
       /// transfer configurations for these data sources. They will no longer appear
       /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-      /// UI](https://console.cloud.google.com/bigquery).
+      /// UI](https://console.cloud.google.com/bigquery). Data transfers
+      /// configurations of unenrolled data sources will not be scheduled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1329,7 +1332,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// Unenroll data sources in a user project. This allows users to remove
       /// transfer configurations for these data sources. They will no longer appear
       /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-      /// UI](https://console.cloud.google.com/bigquery).
+      /// UI](https://console.cloud.google.com/bigquery). Data transfers
+      /// configurations of unenrolled data sources will not be scheduled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1345,7 +1349,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// Unenroll data sources in a user project. This allows users to remove
       /// transfer configurations for these data sources. They will no longer appear
       /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-      /// UI](https://console.cloud.google.com/bigquery).
+      /// UI](https://console.cloud.google.com/bigquery). Data transfers
+      /// configurations of unenrolled data sources will not be scheduled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

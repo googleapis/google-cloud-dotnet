@@ -2454,7 +2454,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Unenroll data sources in a user project. This allows users to remove
         /// transfer configurations for these data sources. They will no longer appear
         /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-        /// UI](https://console.cloud.google.com/bigquery).
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2466,7 +2467,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Unenroll data sources in a user project. This allows users to remove
         /// transfer configurations for these data sources. They will no longer appear
         /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-        /// UI](https://console.cloud.google.com/bigquery).
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2478,7 +2480,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Unenroll data sources in a user project. This allows users to remove
         /// transfer configurations for these data sources. They will no longer appear
         /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-        /// UI](https://console.cloud.google.com/bigquery).
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3067,7 +3070,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Unenroll data sources in a user project. This allows users to remove
         /// transfer configurations for these data sources. They will no longer appear
         /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-        /// UI](https://console.cloud.google.com/bigquery).
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3082,7 +3086,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// Unenroll data sources in a user project. This allows users to remove
         /// transfer configurations for these data sources. They will no longer appear
         /// in the ListDataSources RPC and will also no longer appear in the [BigQuery
-        /// UI](https://console.cloud.google.com/bigquery).
+        /// UI](https://console.cloud.google.com/bigquery). Data transfers
+        /// configurations of unenrolled data sources will not be scheduled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
