@@ -32,49 +32,50 @@ namespace Google.Cloud.ServiceControl.V1 {
             "aW9uLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byJ7CgxDaGVja1Jl",
             "cXVlc3QSFAoMc2VydmljZV9uYW1lGAEgASgJEjoKCW9wZXJhdGlvbhgCIAEo",
             "CzInLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuT3BlcmF0aW9uEhkK",
-            "EXNlcnZpY2VfY29uZmlnX2lkGAQgASgJIuYECg1DaGVja1Jlc3BvbnNlEhQK",
+            "EXNlcnZpY2VfY29uZmlnX2lkGAQgASgJIvwECg1DaGVja1Jlc3BvbnNlEhQK",
             "DG9wZXJhdGlvbl9pZBgBIAEoCRI+CgxjaGVja19lcnJvcnMYAiADKAsyKC5n",
             "b29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkNoZWNrRXJyb3ISGQoRc2Vy",
             "dmljZV9jb25maWdfaWQYBSABKAkSGgoSc2VydmljZV9yb2xsb3V0X2lkGAsg",
             "ASgJEkkKCmNoZWNrX2luZm8YBiABKAsyNS5nb29nbGUuYXBpLnNlcnZpY2Vj",
-            "b250cm9sLnYxLkNoZWNrUmVzcG9uc2UuQ2hlY2tJbmZvGnYKCUNoZWNrSW5m",
-            "bxIYChB1bnVzZWRfYXJndW1lbnRzGAEgAygJEk8KDWNvbnN1bWVyX2luZm8Y",
-            "AiABKAsyOC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkNoZWNrUmVz",
-            "cG9uc2UuQ29uc3VtZXJJbmZvGoQCCgxDb25zdW1lckluZm8SFgoOcHJvamVj",
-            "dF9udW1iZXIYASABKAMSUwoEdHlwZRgCIAEoDjJFLmdvb2dsZS5hcGkuc2Vy",
-            "dmljZWNvbnRyb2wudjEuQ2hlY2tSZXNwb25zZS5Db25zdW1lckluZm8uQ29u",
-            "c3VtZXJUeXBlEhcKD2NvbnN1bWVyX251bWJlchgDIAEoAyJuCgxDb25zdW1l",
-            "clR5cGUSHQoZQ09OU1VNRVJfVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BST0pF",
-            "Q1QQARIKCgZGT0xERVIQAhIQCgxPUkdBTklaQVRJT04QAxIUChBTRVJWSUNF",
-            "X1NQRUNJRklDEAQifQoNUmVwb3J0UmVxdWVzdBIUCgxzZXJ2aWNlX25hbWUY",
-            "ASABKAkSOwoKb3BlcmF0aW9ucxgCIAMoCzInLmdvb2dsZS5hcGkuc2Vydmlj",
-            "ZWNvbnRyb2wudjEuT3BlcmF0aW9uEhkKEXNlcnZpY2VfY29uZmlnX2lkGAMg",
-            "ASgJIuEBCg5SZXBvcnRSZXNwb25zZRJPCg1yZXBvcnRfZXJyb3JzGAEgAygL",
-            "MjguZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5SZXBvcnRSZXNwb25z",
-            "ZS5SZXBvcnRFcnJvchIZChFzZXJ2aWNlX2NvbmZpZ19pZBgCIAEoCRIaChJz",
-            "ZXJ2aWNlX3JvbGxvdXRfaWQYBCABKAkaRwoLUmVwb3J0RXJyb3ISFAoMb3Bl",
-            "cmF0aW9uX2lkGAEgASgJEiIKBnN0YXR1cxgCIAEoCzISLmdvb2dsZS5ycGMu",
-            "U3RhdHVzMrwDChFTZXJ2aWNlQ29udHJvbGxlchKOAQoFQ2hlY2sSKi5nb29n",
-            "bGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkNoZWNrUmVxdWVzdBorLmdvb2ds",
-            "ZS5hcGkuc2VydmljZWNvbnRyb2wudjEuQ2hlY2tSZXNwb25zZSIsgtPkkwIm",
-            "IiEvdjEvc2VydmljZXMve3NlcnZpY2VfbmFtZX06Y2hlY2s6ASoSkgEKBlJl",
-            "cG9ydBIrLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuUmVwb3J0UmVx",
-            "dWVzdBosLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuUmVwb3J0UmVz",
-            "cG9uc2UiLYLT5JMCJyIiL3YxL3NlcnZpY2VzL3tzZXJ2aWNlX25hbWV9OnJl",
-            "cG9ydDoBKhqAAcpBHXNlcnZpY2Vjb250cm9sLmdvb2dsZWFwaXMuY29t0kFd",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NlcnZpY2Vjb250",
-            "cm9sQvgBCiBjb20uZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MUIWU2Vy",
-            "dmljZUNvbnRyb2xsZXJQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nl",
-            "cnZpY2Vjb250cm9sL2FwaXYxL3NlcnZpY2Vjb250cm9scGI7c2VydmljZWNv",
-            "bnRyb2xwYvgBAaICBEdBU0OqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNvbnRy",
-            "b2wuVjHKAh5Hb29nbGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFHb29n",
-            "bGU6OkNsb3VkOjpTZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
+            "b250cm9sLnYxLkNoZWNrUmVzcG9uc2UuQ2hlY2tJbmZvGosBCglDaGVja0lu",
+            "Zm8SGAoQdW51c2VkX2FyZ3VtZW50cxgBIAMoCRJPCg1jb25zdW1lcl9pbmZv",
+            "GAIgASgLMjguZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5DaGVja1Jl",
+            "c3BvbnNlLkNvbnN1bWVySW5mbxITCgthcGlfa2V5X3VpZBgFIAEoCRqEAgoM",
+            "Q29uc3VtZXJJbmZvEhYKDnByb2plY3RfbnVtYmVyGAEgASgDElMKBHR5cGUY",
+            "AiABKA4yRS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkNoZWNrUmVz",
+            "cG9uc2UuQ29uc3VtZXJJbmZvLkNvbnN1bWVyVHlwZRIXCg9jb25zdW1lcl9u",
+            "dW1iZXIYAyABKAMibgoMQ29uc3VtZXJUeXBlEh0KGUNPTlNVTUVSX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABILCgdQUk9KRUNUEAESCgoGRk9MREVSEAISEAoMT1JH",
+            "QU5JWkFUSU9OEAMSFAoQU0VSVklDRV9TUEVDSUZJQxAEIn0KDVJlcG9ydFJl",
+            "cXVlc3QSFAoMc2VydmljZV9uYW1lGAEgASgJEjsKCm9wZXJhdGlvbnMYAiAD",
+            "KAsyJy5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLk9wZXJhdGlvbhIZ",
+            "ChFzZXJ2aWNlX2NvbmZpZ19pZBgDIAEoCSLhAQoOUmVwb3J0UmVzcG9uc2US",
+            "TwoNcmVwb3J0X2Vycm9ycxgBIAMoCzI4Lmdvb2dsZS5hcGkuc2VydmljZWNv",
+            "bnRyb2wudjEuUmVwb3J0UmVzcG9uc2UuUmVwb3J0RXJyb3ISGQoRc2Vydmlj",
+            "ZV9jb25maWdfaWQYAiABKAkSGgoSc2VydmljZV9yb2xsb3V0X2lkGAQgASgJ",
+            "GkcKC1JlcG9ydEVycm9yEhQKDG9wZXJhdGlvbl9pZBgBIAEoCRIiCgZzdGF0",
+            "dXMYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1czK8AwoRU2VydmljZUNvbnRy",
+            "b2xsZXISjgEKBUNoZWNrEiouZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52",
+            "MS5DaGVja1JlcXVlc3QaKy5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYx",
+            "LkNoZWNrUmVzcG9uc2UiLILT5JMCJiIhL3YxL3NlcnZpY2VzL3tzZXJ2aWNl",
+            "X25hbWV9OmNoZWNrOgEqEpIBCgZSZXBvcnQSKy5nb29nbGUuYXBpLnNlcnZp",
+            "Y2Vjb250cm9sLnYxLlJlcG9ydFJlcXVlc3QaLC5nb29nbGUuYXBpLnNlcnZp",
+            "Y2Vjb250cm9sLnYxLlJlcG9ydFJlc3BvbnNlIi2C0+STAiciIi92MS9zZXJ2",
+            "aWNlcy97c2VydmljZV9uYW1lfTpyZXBvcnQ6ASoagAHKQR1zZXJ2aWNlY29u",
+            "dHJvbC5nb29nbGVhcGlzLmNvbdJBXWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9zZXJ2aWNlY29udHJvbEL4AQogY29tLmdvb2dsZS5hcGku",
+            "c2VydmljZWNvbnRyb2wudjFCFlNlcnZpY2VDb250cm9sbGVyUHJvdG9QAVpK",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zZXJ2aWNlY29udHJvbC9hcGl2MS9zZXJ2",
+            "aWNlY29udHJvbHBiO3NlcnZpY2Vjb250cm9scGL4AQGiAgRHQVNDqgIeR29v",
+            "Z2xlLkNsb3VkLlNlcnZpY2VDb250cm9sLlYxygIeR29vZ2xlXENsb3VkXFNl",
+            "cnZpY2VDb250cm9sXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VydmljZUNvbnRy",
+            "b2w6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.CheckErrorReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.OperationReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckRequest), global::Google.Cloud.ServiceControl.V1.CheckRequest.Parser, new[]{ "ServiceName", "Operation", "ServiceConfigId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse), global::Google.Cloud.ServiceControl.V1.CheckResponse.Parser, new[]{ "OperationId", "CheckErrors", "ServiceConfigId", "ServiceRolloutId", "CheckInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo), global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo.Parser, new[]{ "UnusedArguments", "ConsumerInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse), global::Google.Cloud.ServiceControl.V1.CheckResponse.Parser, new[]{ "OperationId", "CheckErrors", "ServiceConfigId", "ServiceRolloutId", "CheckInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo), global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.CheckInfo.Parser, new[]{ "UnusedArguments", "ConsumerInfo", "ApiKeyUid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.ConsumerInfo), global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.ConsumerInfo.Parser, new[]{ "ProjectNumber", "Type", "ConsumerNumber" }, null, new[]{ typeof(global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.ConsumerInfo.Types.ConsumerType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.ReportRequest), global::Google.Cloud.ServiceControl.V1.ReportRequest.Parser, new[]{ "ServiceName", "Operations", "ServiceConfigId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.ReportResponse), global::Google.Cloud.ServiceControl.V1.ReportResponse.Parser, new[]{ "ReportErrors", "ServiceConfigId", "ServiceRolloutId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.ReportResponse.Types.ReportError), global::Google.Cloud.ServiceControl.V1.ReportResponse.Types.ReportError.Parser, new[]{ "OperationId", "Status" }, null, null, null, null)})
@@ -781,6 +782,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         public CheckInfo(CheckInfo other) : this() {
           unusedArguments_ = other.unusedArguments_.Clone();
           consumerInfo_ = other.consumerInfo_ != null ? other.consumerInfo_.Clone() : null;
+          apiKeyUid_ = other.apiKeyUid_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -821,6 +823,23 @@ namespace Google.Cloud.ServiceControl.V1 {
           }
         }
 
+        /// <summary>Field number for the "api_key_uid" field.</summary>
+        public const int ApiKeyUidFieldNumber = 5;
+        private string apiKeyUid_ = "";
+        /// <summary>
+        /// The unique id of the api key in the format of "apikey:&lt;UID>".
+        /// This field will be populated when the consumer passed to Service Control
+        /// is an API key and all the API key related validations are successful.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ApiKeyUid {
+          get { return apiKeyUid_; }
+          set {
+            apiKeyUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -838,6 +857,7 @@ namespace Google.Cloud.ServiceControl.V1 {
           }
           if(!unusedArguments_.Equals(other.unusedArguments_)) return false;
           if (!object.Equals(ConsumerInfo, other.ConsumerInfo)) return false;
+          if (ApiKeyUid != other.ApiKeyUid) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -847,6 +867,7 @@ namespace Google.Cloud.ServiceControl.V1 {
           int hash = 1;
           hash ^= unusedArguments_.GetHashCode();
           if (consumerInfo_ != null) hash ^= ConsumerInfo.GetHashCode();
+          if (ApiKeyUid.Length != 0) hash ^= ApiKeyUid.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -870,6 +891,10 @@ namespace Google.Cloud.ServiceControl.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(ConsumerInfo);
           }
+          if (ApiKeyUid.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ApiKeyUid);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -885,6 +910,10 @@ namespace Google.Cloud.ServiceControl.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(ConsumerInfo);
           }
+          if (ApiKeyUid.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ApiKeyUid);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -898,6 +927,9 @@ namespace Google.Cloud.ServiceControl.V1 {
           size += unusedArguments_.CalculateSize(_repeated_unusedArguments_codec);
           if (consumerInfo_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsumerInfo);
+          }
+          if (ApiKeyUid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiKeyUid);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -917,6 +949,9 @@ namespace Google.Cloud.ServiceControl.V1 {
               ConsumerInfo = new global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.ConsumerInfo();
             }
             ConsumerInfo.MergeFrom(other.ConsumerInfo);
+          }
+          if (other.ApiKeyUid.Length != 0) {
+            ApiKeyUid = other.ApiKeyUid;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -944,6 +979,10 @@ namespace Google.Cloud.ServiceControl.V1 {
                 input.ReadMessage(ConsumerInfo);
                 break;
               }
+              case 42: {
+                ApiKeyUid = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -968,6 +1007,10 @@ namespace Google.Cloud.ServiceControl.V1 {
                   ConsumerInfo = new global::Google.Cloud.ServiceControl.V1.CheckResponse.Types.ConsumerInfo();
                 }
                 input.ReadMessage(ConsumerInfo);
+                break;
+              }
+              case 42: {
+                ApiKeyUid = input.ReadString();
                 break;
               }
             }
