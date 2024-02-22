@@ -60,6 +60,7 @@ namespace GoogleCSharpSnippets
                 DiskType = "",
                 DiskSizeGb = 0L,
                 ResourceManagerTags = new ResourceManagerTags(),
+                QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
