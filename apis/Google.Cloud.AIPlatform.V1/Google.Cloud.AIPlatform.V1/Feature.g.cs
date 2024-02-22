@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo5Z29v",
             "Z2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZmVhdHVyZV9tb25pdG9yaW5nX3N0",
-            "YXRzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuYJ",
+            "YXRzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoAK",
             "CgdGZWF0dXJlEhEKBG5hbWUYASABKAlCA+BBBRITCgtkZXNjcmlwdGlvbhgC",
             "IAEoCRJGCgp2YWx1ZV90eXBlGAMgASgOMi0uZ29vZ2xlLmNsb3VkLmFpcGxh",
             "dGZvcm0udjEuRmVhdHVyZS5WYWx1ZVR5cGVCA+BBBRI0CgtjcmVhdGVfdGlt",
@@ -39,33 +39,34 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ChJkaXNhYmxlX21vbml0b3JpbmcYDCABKAhCA+BBARJjChptb25pdG9yaW5n",
             "X3N0YXRzX2Fub21hbGllcxgLIAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
             "b3JtLnYxLkZlYXR1cmUuTW9uaXRvcmluZ1N0YXRzQW5vbWFseUID4EEDEhsK",
-            "E3ZlcnNpb25fY29sdW1uX25hbWUYaiABKAkapwIKFk1vbml0b3JpbmdTdGF0",
-            "c0Fub21hbHkSXAoJb2JqZWN0aXZlGAEgASgOMkQuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuRmVhdHVyZS5Nb25pdG9yaW5nU3RhdHNBbm9tYWx5Lk9i",
-            "amVjdGl2ZUID4EEDElMKFWZlYXR1cmVfc3RhdHNfYW5vbWFseRgCIAEoCzIv",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVTdGF0c0Fub21h",
-            "bHlCA+BBAyJaCglPYmplY3RpdmUSGQoVT0JKRUNUSVZFX1VOU1BFQ0lGSUVE",
-            "EAASGwoXSU1QT1JUX0ZFQVRVUkVfQU5BTFlTSVMQARIVChFTTkFQU0hPVF9B",
-            "TkFMWVNJUxACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEipAEKCVZhbHVlVHlwZRIaChZWQUxVRV9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASCAoEQk9PTBABEg4KCkJPT0xfQVJSQVkQAhIKCgZET1VCTEUQ",
-            "AxIQCgxET1VCTEVfQVJSQVkQBBIJCgVJTlQ2NBAJEg8KC0lOVDY0X0FSUkFZ",
-            "EAoSCgoGU1RSSU5HEAsSEAoMU1RSSU5HX0FSUkFZEAwSCQoFQllURVMQDTqH",
-            "AupBgwIKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZRJxcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVz",
-            "dG9yZXMve2ZlYXR1cmVzdG9yZX0vZW50aXR5VHlwZXMve2VudGl0eV90eXBl",
-            "fS9mZWF0dXJlcy97ZmVhdHVyZX0SWHByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlR3JvdXBzL3tmZWF0dXJlX2dyb3Vw",
-            "fS9mZWF0dXJlcy97ZmVhdHVyZX0qCGZlYXR1cmVzMgdmZWF0dXJlQsoBCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDEZlYXR1cmVQcm90b1AB",
-            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
-            "b3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "E3ZlcnNpb25fY29sdW1uX25hbWUYaiABKAkSGAoQcG9pbnRfb2ZfY29udGFj",
+            "dBhrIAEoCRqnAgoWTW9uaXRvcmluZ1N0YXRzQW5vbWFseRJcCglvYmplY3Rp",
+            "dmUYASABKA4yRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJl",
+            "Lk1vbml0b3JpbmdTdGF0c0Fub21hbHkuT2JqZWN0aXZlQgPgQQMSUwoVZmVh",
+            "dHVyZV9zdGF0c19hbm9tYWx5GAIgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRmVhdHVyZVN0YXRzQW5vbWFseUID4EEDIloKCU9iamVjdGl2",
+            "ZRIZChVPQkpFQ1RJVkVfVU5TUEVDSUZJRUQQABIbChdJTVBPUlRfRkVBVFVS",
+            "RV9BTkFMWVNJUxABEhUKEVNOQVBTSE9UX0FOQUxZU0lTEAIaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKkAQoJVmFs",
+            "dWVUeXBlEhoKFlZBTFVFX1RZUEVfVU5TUEVDSUZJRUQQABIICgRCT09MEAES",
+            "DgoKQk9PTF9BUlJBWRACEgoKBkRPVUJMRRADEhAKDERPVUJMRV9BUlJBWRAE",
+            "EgkKBUlOVDY0EAkSDwoLSU5UNjRfQVJSQVkQChIKCgZTVFJJTkcQCxIQCgxT",
+            "VFJJTkdfQVJSQVkQDBIJCgVCWVRFUxANOocC6kGDAgohYWlwbGF0Zm9ybS5n",
+            "b29nbGVhcGlzLmNvbS9GZWF0dXJlEnFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZXN0b3Jlcy97ZmVhdHVyZXN0b3Jl",
+            "fS9lbnRpdHlUeXBlcy97ZW50aXR5X3R5cGV9L2ZlYXR1cmVzL3tmZWF0dXJl",
+            "fRJYcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Zl",
+            "YXR1cmVHcm91cHMve2ZlYXR1cmVfZ3JvdXB9L2ZlYXR1cmVzL3tmZWF0dXJl",
+            "fSoIZmVhdHVyZXMyB2ZlYXR1cmVCygEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MUIMRmVhdHVyZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBi",
+            "qgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRc",
+            "QUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "DisableMonitoring", "MonitoringStatsAnomalies", "VersionColumnName" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature), global::Google.Cloud.AIPlatform.V1.Feature.Parser, new[]{ "Name", "Description", "ValueType", "CreateTime", "UpdateTime", "Labels", "Etag", "DisableMonitoring", "MonitoringStatsAnomalies", "VersionColumnName", "PointOfContact" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly), global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Parser, new[]{ "Objective", "FeatureStatsAnomaly" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Feature.Types.MonitoringStatsAnomaly.Types.Objective) }, null, null),
             null, })
           }));
     }
@@ -122,6 +123,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       disableMonitoring_ = other.disableMonitoring_;
       monitoringStatsAnomalies_ = other.monitoringStatsAnomalies_.Clone();
       versionColumnName_ = other.versionColumnName_;
+      pointOfContact_ = other.pointOfContact_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -312,6 +314,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "point_of_contact" field.</summary>
+    public const int PointOfContactFieldNumber = 107;
+    private string pointOfContact_ = "";
+    /// <summary>
+    /// Entity responsible for maintaining this feature. Can be comma separated
+    /// list of email addresses or URIs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PointOfContact {
+      get { return pointOfContact_; }
+      set {
+        pointOfContact_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -337,6 +355,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableMonitoring != other.DisableMonitoring) return false;
       if(!monitoringStatsAnomalies_.Equals(other.monitoringStatsAnomalies_)) return false;
       if (VersionColumnName != other.VersionColumnName) return false;
+      if (PointOfContact != other.PointOfContact) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -354,6 +373,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisableMonitoring != false) hash ^= DisableMonitoring.GetHashCode();
       hash ^= monitoringStatsAnomalies_.GetHashCode();
       if (VersionColumnName.Length != 0) hash ^= VersionColumnName.GetHashCode();
+      if (PointOfContact.Length != 0) hash ^= PointOfContact.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -406,6 +426,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(210, 6);
         output.WriteString(VersionColumnName);
       }
+      if (PointOfContact.Length != 0) {
+        output.WriteRawTag(218, 6);
+        output.WriteString(PointOfContact);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -450,6 +474,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(210, 6);
         output.WriteString(VersionColumnName);
       }
+      if (PointOfContact.Length != 0) {
+        output.WriteRawTag(218, 6);
+        output.WriteString(PointOfContact);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -485,6 +513,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += monitoringStatsAnomalies_.CalculateSize(_repeated_monitoringStatsAnomalies_codec);
       if (VersionColumnName.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(VersionColumnName);
+      }
+      if (PointOfContact.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PointOfContact);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -529,6 +560,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       monitoringStatsAnomalies_.Add(other.monitoringStatsAnomalies_);
       if (other.VersionColumnName.Length != 0) {
         VersionColumnName = other.VersionColumnName;
+      }
+      if (other.PointOfContact.Length != 0) {
+        PointOfContact = other.PointOfContact;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -591,6 +625,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             VersionColumnName = input.ReadString();
             break;
           }
+          case 858: {
+            PointOfContact = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -650,6 +688,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 850: {
             VersionColumnName = input.ReadString();
+            break;
+          }
+          case 858: {
+            PointOfContact = input.ReadString();
             break;
           }
         }
