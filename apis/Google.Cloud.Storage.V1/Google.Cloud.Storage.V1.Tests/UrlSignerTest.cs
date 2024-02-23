@@ -21,12 +21,6 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Storage.V1.UrlSigner;
 
-#if NET461
-using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
-#else
-using RsaKey = System.Security.Cryptography.RSA;
-#endif
-
 namespace Google.Cloud.Storage.V1.Tests
 {
     /// <summary>
@@ -104,7 +98,7 @@ namespace Google.Cloud.Storage.V1.Tests
         private static ServiceAccountCredential CreateFakeServiceAccountCredential(string id = "test") =>
             new ServiceAccountCredential(new ServiceAccountCredential.Initializer(id)
             {
-                Key = (RsaKey) RSA.Create()
+                Key = RSA.Create()
             });
     }
 }
