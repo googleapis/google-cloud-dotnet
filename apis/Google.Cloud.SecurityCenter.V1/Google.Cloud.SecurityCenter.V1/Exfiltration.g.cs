@@ -25,21 +25,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZXhmaWx0cmF0aW9u",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEijgEKDEV4",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEirwEKDEV4",
             "ZmlsdHJhdGlvbhI+Cgdzb3VyY2VzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLnNl",
             "Y3VyaXR5Y2VudGVyLnYxLkV4ZmlsUmVzb3VyY2USPgoHdGFyZ2V0cxgCIAMo",
             "CzItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5FeGZpbFJlc291",
-            "cmNlIjEKDUV4ZmlsUmVzb3VyY2USDAoEbmFtZRgBIAEoCRISCgpjb21wb25l",
-            "bnRzGAIgAygJQusBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxQhFFeGZpbHRyYXRpb25Qcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dv",
-            "L3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJp",
-            "dHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoC",
-            "Hkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xv",
-            "dWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "cmNlEh8KF3RvdGFsX2V4ZmlsdHJhdGVkX2J5dGVzGAMgASgDIjEKDUV4Zmls",
+            "UmVzb3VyY2USDAoEbmFtZRgBIAEoCRISCgpjb21wb25lbnRzGAIgAygJQusB",
+            "CiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQhFFeGZpbHRy",
+            "YXRpb25Qcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2Vu",
+            "dGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoC",
+            "Hkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91",
+            "ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5",
+            "Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Exfiltration), global::Google.Cloud.SecurityCenter.V1.Exfiltration.Parser, new[]{ "Sources", "Targets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Exfiltration), global::Google.Cloud.SecurityCenter.V1.Exfiltration.Parser, new[]{ "Sources", "Targets", "TotalExfiltratedBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ExfilResource), global::Google.Cloud.SecurityCenter.V1.ExfilResource.Parser, new[]{ "Name", "Components" }, null, null, null, null)
           }));
     }
@@ -90,6 +91,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public Exfiltration(Exfiltration other) : this() {
       sources_ = other.sources_.Clone();
       targets_ = other.targets_.Clone();
+      totalExfiltratedBytes_ = other.totalExfiltratedBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -130,6 +132,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return targets_; }
     }
 
+    /// <summary>Field number for the "total_exfiltrated_bytes" field.</summary>
+    public const int TotalExfiltratedBytesFieldNumber = 3;
+    private long totalExfiltratedBytes_;
+    /// <summary>
+    /// Total exfiltrated bytes processed for the entire job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalExfiltratedBytes {
+      get { return totalExfiltratedBytes_; }
+      set {
+        totalExfiltratedBytes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -147,6 +164,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if(!sources_.Equals(other.sources_)) return false;
       if(!targets_.Equals(other.targets_)) return false;
+      if (TotalExfiltratedBytes != other.TotalExfiltratedBytes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -156,6 +174,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int hash = 1;
       hash ^= sources_.GetHashCode();
       hash ^= targets_.GetHashCode();
+      if (TotalExfiltratedBytes != 0L) hash ^= TotalExfiltratedBytes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,6 +195,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     #else
       sources_.WriteTo(output, _repeated_sources_codec);
       targets_.WriteTo(output, _repeated_targets_codec);
+      if (TotalExfiltratedBytes != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TotalExfiltratedBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -188,6 +211,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       sources_.WriteTo(ref output, _repeated_sources_codec);
       targets_.WriteTo(ref output, _repeated_targets_codec);
+      if (TotalExfiltratedBytes != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TotalExfiltratedBytes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -200,6 +227,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int size = 0;
       size += sources_.CalculateSize(_repeated_sources_codec);
       size += targets_.CalculateSize(_repeated_targets_codec);
+      if (TotalExfiltratedBytes != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalExfiltratedBytes);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -214,6 +244,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       sources_.Add(other.sources_);
       targets_.Add(other.targets_);
+      if (other.TotalExfiltratedBytes != 0L) {
+        TotalExfiltratedBytes = other.TotalExfiltratedBytes;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -237,6 +270,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
+          case 24: {
+            TotalExfiltratedBytes = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -258,6 +295,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 18: {
             targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
+            break;
+          }
+          case 24: {
+            TotalExfiltratedBytes = input.ReadInt64();
             break;
           }
         }

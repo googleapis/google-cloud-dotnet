@@ -25,31 +25,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvaW5kaWNhdG9yLnBy",
-            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEikQUKCUluZGlj",
+            "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi2QYKCUluZGlj",
             "YXRvchIUCgxpcF9hZGRyZXNzZXMYASADKAkSDwoHZG9tYWlucxgCIAMoCRJO",
             "CgpzaWduYXR1cmVzGAMgAygLMjouZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
             "dGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlEgwKBHVyaXMYBCAD",
-            "KAka/gMKEFByb2Nlc3NTaWduYXR1cmUSbwoVbWVtb3J5X2hhc2hfc2lnbmF0",
+            "KAkaxgUKEFByb2Nlc3NTaWduYXR1cmUSbwoVbWVtb3J5X2hhc2hfc2lnbmF0",
             "dXJlGAYgASgLMk4uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLklu",
             "ZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJlLk1lbW9yeUhhc2hTaWduYXR1cmVI",
             "ABJrChN5YXJhX3J1bGVfc2lnbmF0dXJlGAcgASgLMkwuZ29vZ2xlLmNsb3Vk",
             "LnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvci5Qcm9jZXNzU2lnbmF0dXJl",
-            "LllhcmFSdWxlU2lnbmF0dXJlSAAa1gEKE01lbW9yeUhhc2hTaWduYXR1cmUS",
-            "FQoNYmluYXJ5X2ZhbWlseRgBIAEoCRJsCgpkZXRlY3Rpb25zGAQgAygLMlgu",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkluZGljYXRvci5Qcm9j",
-            "ZXNzU2lnbmF0dXJlLk1lbW9yeUhhc2hTaWduYXR1cmUuRGV0ZWN0aW9uGjoK",
-            "CURldGVjdGlvbhIOCgZiaW5hcnkYAiABKAkSHQoVcGVyY2VudF9wYWdlc19t",
-            "YXRjaGVkGAMgASgBGiYKEVlhcmFSdWxlU2lnbmF0dXJlEhEKCXlhcmFfcnVs",
-            "ZRgFIAEoCUILCglzaWduYXR1cmVC6AEKImNvbS5nb29nbGUuY2xvdWQuc2Vj",
-            "dXJpdHljZW50ZXIudjFCDkluZGljYXRvclByb3RvUAFaSmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJw",
-            "YjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2Vu",
-            "dGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29v",
-            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "LllhcmFSdWxlU2lnbmF0dXJlSAASYAoOc2lnbmF0dXJlX3R5cGUYCCABKA4y",
+            "SC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuSW5kaWNhdG9yLlBy",
+            "b2Nlc3NTaWduYXR1cmUuU2lnbmF0dXJlVHlwZRrWAQoTTWVtb3J5SGFzaFNp",
+            "Z25hdHVyZRIVCg1iaW5hcnlfZmFtaWx5GAEgASgJEmwKCmRldGVjdGlvbnMY",
+            "BCADKAsyWC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuSW5kaWNh",
+            "dG9yLlByb2Nlc3NTaWduYXR1cmUuTWVtb3J5SGFzaFNpZ25hdHVyZS5EZXRl",
+            "Y3Rpb24aOgoJRGV0ZWN0aW9uEg4KBmJpbmFyeRgCIAEoCRIdChVwZXJjZW50",
+            "X3BhZ2VzX21hdGNoZWQYAyABKAEaJgoRWWFyYVJ1bGVTaWduYXR1cmUSEQoJ",
+            "eWFyYV9ydWxlGAUgASgJImQKDVNpZ25hdHVyZVR5cGUSHgoaU0lHTkFUVVJF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIaChZTSUdOQVRVUkVfVFlQRV9QUk9DRVNT",
+            "EAESFwoTU0lHTkFUVVJFX1RZUEVfRklMRRACQgsKCXNpZ25hdHVyZULoAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MUIOSW5kaWNhdG9y",
+            "UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRlci9h",
+            "cGl2MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5Hb29n",
+            "bGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2Vj",
+            "dXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRl",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains", "Signatures", "Uris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser, new[]{ "MemoryHashSignature", "YaraRuleSignature" }, new[]{ "Signature" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Parser, new[]{ "BinaryFamily", "Detections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser, new[]{ "Binary", "PercentPagesMatched" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator), global::Google.Cloud.SecurityCenter.V1.Indicator.Parser, new[]{ "IpAddresses", "Domains", "Signatures", "Uris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Parser, new[]{ "MemoryHashSignature", "YaraRuleSignature", "SignatureType" }, new[]{ "Signature" }, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Parser, new[]{ "BinaryFamily", "Detections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.MemoryHashSignature.Types.Detection.Parser, new[]{ "Binary", "PercentPagesMatched" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature), global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.YaraRuleSignature.Parser, new[]{ "YaraRule" }, null, null, null, null)})})
           }));
     }
@@ -375,6 +380,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ProcessSignature(ProcessSignature other) : this() {
+          signatureType_ = other.signatureType_;
           switch (other.SignatureCase) {
             case SignatureOneofCase.MemoryHashSignature:
               MemoryHashSignature = other.MemoryHashSignature.Clone();
@@ -423,6 +429,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
         }
 
+        /// <summary>Field number for the "signature_type" field.</summary>
+        public const int SignatureTypeFieldNumber = 8;
+        private global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType signatureType_ = global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified;
+        /// <summary>
+        /// Describes the type of resource associated with the signature.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType SignatureType {
+          get { return signatureType_; }
+          set {
+            signatureType_ = value;
+          }
+        }
+
         private object signature_;
         /// <summary>Enum of possible cases for the "signature" oneof.</summary>
         public enum SignatureOneofCase {
@@ -461,6 +482,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           if (!object.Equals(MemoryHashSignature, other.MemoryHashSignature)) return false;
           if (!object.Equals(YaraRuleSignature, other.YaraRuleSignature)) return false;
+          if (SignatureType != other.SignatureType) return false;
           if (SignatureCase != other.SignatureCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -471,6 +493,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           int hash = 1;
           if (signatureCase_ == SignatureOneofCase.MemoryHashSignature) hash ^= MemoryHashSignature.GetHashCode();
           if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) hash ^= YaraRuleSignature.GetHashCode();
+          if (SignatureType != global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified) hash ^= SignatureType.GetHashCode();
           hash ^= (int) signatureCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -498,6 +521,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             output.WriteRawTag(58);
             output.WriteMessage(YaraRuleSignature);
           }
+          if (SignatureType != global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified) {
+            output.WriteRawTag(64);
+            output.WriteEnum((int) SignatureType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -516,6 +543,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             output.WriteRawTag(58);
             output.WriteMessage(YaraRuleSignature);
           }
+          if (SignatureType != global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified) {
+            output.WriteRawTag(64);
+            output.WriteEnum((int) SignatureType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -532,6 +563,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
           if (signatureCase_ == SignatureOneofCase.YaraRuleSignature) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(YaraRuleSignature);
           }
+          if (SignatureType != global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignatureType);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -543,6 +577,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public void MergeFrom(ProcessSignature other) {
           if (other == null) {
             return;
+          }
+          if (other.SignatureType != global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType.Unspecified) {
+            SignatureType = other.SignatureType;
           }
           switch (other.SignatureCase) {
             case SignatureOneofCase.MemoryHashSignature:
@@ -592,6 +629,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
                 YaraRuleSignature = subBuilder;
                 break;
               }
+              case 64: {
+                SignatureType = (global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -625,6 +666,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
                 YaraRuleSignature = subBuilder;
                 break;
               }
+              case 64: {
+                SignatureType = (global::Google.Cloud.SecurityCenter.V1.Indicator.Types.ProcessSignature.Types.SignatureType) input.ReadEnum();
+                break;
+              }
             }
           }
         }
@@ -635,6 +680,24 @@ namespace Google.Cloud.SecurityCenter.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
+          /// <summary>
+          /// Possible resource types to be associated with a signature.
+          /// </summary>
+          public enum SignatureType {
+            /// <summary>
+            /// The default signature type.
+            /// </summary>
+            [pbr::OriginalName("SIGNATURE_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Used for signatures concerning processes.
+            /// </summary>
+            [pbr::OriginalName("SIGNATURE_TYPE_PROCESS")] Process = 1,
+            /// <summary>
+            /// Used for signatures concerning disks.
+            /// </summary>
+            [pbr::OriginalName("SIGNATURE_TYPE_FILE")] File = 2,
+          }
+
           /// <summary>
           /// A signature corresponding to memory page hashes.
           /// </summary>

@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbWl0cmVfYXR0YWNr",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi6AwKC01p",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEi9hEKC01p",
             "dHJlQXR0YWNrEkoKDnByaW1hcnlfdGFjdGljGAEgASgOMjIuZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLk1pdHJlQXR0YWNrLlRhY3RpYxJRChJw",
             "cmltYXJ5X3RlY2huaXF1ZXMYAiADKA4yNS5nb29nbGUuY2xvdWQuc2VjdXJp",
@@ -40,34 +40,49 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "R0VfRVNDQUxBVElPThAIEhMKD0RFRkVOU0VfRVZBU0lPThAHEhUKEUNSRURF",
             "TlRJQUxfQUNDRVNTEAkSDQoJRElTQ09WRVJZEAoSFAoQTEFURVJBTF9NT1ZF",
             "TUVOVBALEg4KCkNPTExFQ1RJT04QDBIXChNDT01NQU5EX0FORF9DT05UUk9M",
-            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4iywcKCVRlY2huaXF1",
-            "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABITCg9BQ1RJVkVfU0NBTk5J",
-            "TkcQARIWChJTQ0FOTklOR19JUF9CTE9DS1MQAhIZChVJTkdSRVNTX1RPT0xf",
-            "VFJBTlNGRVIQAxIOCgpOQVRJVkVfQVBJEAQSEgoOU0hBUkVEX01PRFVMRVMQ",
-            "BRIlCiFDT01NQU5EX0FORF9TQ1JJUFRJTkdfSU5URVJQUkVURVIQBhIOCgpV",
-            "TklYX1NIRUxMEAcSFgoSUkVTT1VSQ0VfSElKQUNLSU5HEAgSCQoFUFJPWFkQ",
-            "CRISCg5FWFRFUk5BTF9QUk9YWRAKEhMKD01VTFRJX0hPUF9QUk9YWRALEhYK",
-            "EkRZTkFNSUNfUkVTT0xVVElPThAMEhkKFVVOU0VDVVJFRF9DUkVERU5USUFM",
-            "UxANEhIKDlZBTElEX0FDQ09VTlRTEA4SEgoOTE9DQUxfQUNDT1VOVFMQDxIS",
-            "Cg5DTE9VRF9BQ0NPVU5UUxAQEh0KGU5FVFdPUktfREVOSUFMX09GX1NFUlZJ",
-            "Q0UQERIfChtQRVJNSVNTSU9OX0dST1VQU19ESVNDT1ZFUlkQEhIQCgxDTE9V",
-            "RF9HUk9VUFMQExIhCh1FWEZJTFRSQVRJT05fT1ZFUl9XRUJfU0VSVklDRRAU",
-            "EiEKHUVYRklMVFJBVElPTl9UT19DTE9VRF9TVE9SQUdFEBUSGAoUQUNDT1VO",
-            "VF9NQU5JUFVMQVRJT04QFhIXChNTU0hfQVVUSE9SSVpFRF9LRVlTEBcSIwof",
-            "Q1JFQVRFX09SX01PRElGWV9TWVNURU1fUFJPQ0VTUxAYEhwKGFNURUFMX1dF",
-            "Ql9TRVNTSU9OX0NPT0tJRRAZEicKI01PRElGWV9DTE9VRF9DT01QVVRFX0lO",
-            "RlJBU1RSVUNUVVJFEBoSJQohRVhQTE9JVF9QVUJMSUNfRkFDSU5HX0FQUExJ",
-            "Q0FUSU9OEBsSIQodTU9ESUZZX0FVVEhFTlRJQ0FUSU9OX1BST0NFU1MQHBIU",
-            "ChBEQVRBX0RFU1RSVUNUSU9OEB0SHgoaRE9NQUlOX1BPTElDWV9NT0RJRklD",
-            "QVRJT04QHhITCg9JTVBBSVJfREVGRU5TRVMQHxIdChlORVRXT1JLX1NFUlZJ",
-            "Q0VfRElTQ09WRVJZECASHQoZQUNDRVNTX1RPS0VOX01BTklQVUxBVElPThAh",
-            "EiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTRAiEhQKEERF",
-            "RkFVTFRfQUNDT1VOVFMQI0LqAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eWNlbnRlci52MUIQTWl0cmVBdHRhY2tQcm90b1ABWkpjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7",
-            "c2VjdXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRl",
-            "ci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2ds",
-            "ZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4i2QwKCVRlY2huaXF1",
+            "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABIQCgxNQVNRVUVSQURJTkcQ",
+            "MRIlCiFNQVRDSF9MRUdJVElNQVRFX05BTUVfT1JfTE9DQVRJT04QMhIoCiRC",
+            "T09UX09SX0xPR09OX0lOSVRJQUxJWkFUSU9OX1NDUklQVFMQJRIRCg1TVEFS",
+            "VFVQX0lURU1TECYSHQoZTkVUV09SS19TRVJWSUNFX0RJU0NPVkVSWRAgEhUK",
+            "EVBST0NFU1NfRElTQ09WRVJZEDgSJQohQ09NTUFORF9BTkRfU0NSSVBUSU5H",
+            "X0lOVEVSUFJFVEVSEAYSDgoKVU5JWF9TSEVMTBAHEh8KG1BFUk1JU1NJT05f",
+            "R1JPVVBTX0RJU0NPVkVSWRASEhAKDENMT1VEX0dST1VQUxATEh4KGkFQUExJ",
+            "Q0FUSU9OX0xBWUVSX1BST1RPQ09MEC0SBwoDRE5TEC4SHQoZU09GVFdBUkVf",
+            "REVQTE9ZTUVOVF9UT09MUxAvEhIKDlZBTElEX0FDQ09VTlRTEA4SFAoQREVG",
+            "QVVMVF9BQ0NPVU5UUxAjEhIKDkxPQ0FMX0FDQ09VTlRTEA8SEgoOQ0xPVURf",
+            "QUNDT1VOVFMQEBIJCgVQUk9YWRAJEhIKDkVYVEVSTkFMX1BST1hZEAoSEwoP",
+            "TVVMVElfSE9QX1BST1hZEAsSGAoUQUNDT1VOVF9NQU5JUFVMQVRJT04QFhIg",
+            "ChxBRERJVElPTkFMX0NMT1VEX0NSRURFTlRJQUxTECgSFwoTU1NIX0FVVEhP",
+            "UklaRURfS0VZUxAXEiYKIkFERElUSU9OQUxfQ09OVEFJTkVSX0NMVVNURVJf",
+            "Uk9MRVMQOhIZChVJTkdSRVNTX1RPT0xfVFJBTlNGRVIQAxIOCgpOQVRJVkVf",
+            "QVBJEAQSDwoLQlJVVEVfRk9SQ0UQLBISCg5TSEFSRURfTU9EVUxFUxAFEh0K",
+            "GUFDQ0VTU19UT0tFTl9NQU5JUFVMQVRJT04QIRIgChxUT0tFTl9JTVBFUlNP",
+            "TkFUSU9OX09SX1RIRUZUECcSJQohRVhQTE9JVF9QVUJMSUNfRkFDSU5HX0FQ",
+            "UExJQ0FUSU9OEBsSHgoaRE9NQUlOX1BPTElDWV9NT0RJRklDQVRJT04QHhIU",
+            "ChBEQVRBX0RFU1RSVUNUSU9OEB0SEAoMU0VSVklDRV9TVE9QEDQSGwoXSU5I",
+            "SUJJVF9TWVNURU1fUkVDT1ZFUlkQJBIWChJSRVNPVVJDRV9ISUpBQ0tJTkcQ",
+            "CBIdChlORVRXT1JLX0RFTklBTF9PRl9TRVJWSUNFEBESGwoXQ0xPVURfU0VS",
+            "VklDRV9ESVNDT1ZFUlkQMBIiCh5TVEVBTF9BUFBMSUNBVElPTl9BQ0NFU1Nf",
+            "VE9LRU4QKhIaChZBQ0NPVU5UX0FDQ0VTU19SRU1PVkFMEDMSHAoYU1RFQUxf",
+            "V0VCX1NFU1NJT05fQ09PS0lFEBkSIwofQ1JFQVRFX09SX01PRElGWV9TWVNU",
+            "RU1fUFJPQ0VTUxAYEiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hB",
+            "TklTTRAiEhkKFVVOU0VDVVJFRF9DUkVERU5USUFMUxANEiEKHU1PRElGWV9B",
+            "VVRIRU5USUNBVElPTl9QUk9DRVNTEBwSEwoPSU1QQUlSX0RFRkVOU0VTEB8S",
+            "GwoXRElTQUJMRV9PUl9NT0RJRllfVE9PTFMQNxIhCh1FWEZJTFRSQVRJT05f",
+            "T1ZFUl9XRUJfU0VSVklDRRAUEiEKHUVYRklMVFJBVElPTl9UT19DTE9VRF9T",
+            "VE9SQUdFEBUSFgoSRFlOQU1JQ19SRVNPTFVUSU9OEAwSGQoVTEFURVJBTF9U",
+            "T09MX1RSQU5TRkVSECkSJwojTU9ESUZZX0NMT1VEX0NPTVBVVEVfSU5GUkFT",
+            "VFJVQ1RVUkUQGhITCg9DUkVBVEVfU05BUFNIT1QQNhIiCh5DTE9VRF9JTkZS",
+            "QVNUUlVDVFVSRV9ESVNDT1ZFUlkQNRIXChNPQlRBSU5fQ0FQQUJJTElUSUVT",
+            "ECsSEwoPQUNUSVZFX1NDQU5OSU5HEAESFgoSU0NBTk5JTkdfSVBfQkxPQ0tT",
+            "EAISJAogQ09OVEFJTkVSX0FORF9SRVNPVVJDRV9ESVNDT1ZFUlkQOULqAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MUIQTWl0cmVBdHRh",
+            "Y2tQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVy",
+            "L2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdv",
+            "b2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxT",
+            "ZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2Vu",
+            "dGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -487,6 +502,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <summary>
       /// MITRE ATT&amp;CK techniques that can be referenced by SCC findings.
       /// See: https://attack.mitre.org/techniques/enterprise/
+      /// Next ID: 59
       /// </summary>
       public enum Technique {
         /// <summary>
@@ -494,25 +510,29 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// </summary>
         [pbr::OriginalName("TECHNIQUE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// T1595
+        /// T1036
         /// </summary>
-        [pbr::OriginalName("ACTIVE_SCANNING")] ActiveScanning = 1,
+        [pbr::OriginalName("MASQUERADING")] Masquerading = 49,
         /// <summary>
-        /// T1595.001
+        /// T1036.005
         /// </summary>
-        [pbr::OriginalName("SCANNING_IP_BLOCKS")] ScanningIpBlocks = 2,
+        [pbr::OriginalName("MATCH_LEGITIMATE_NAME_OR_LOCATION")] MatchLegitimateNameOrLocation = 50,
         /// <summary>
-        /// T1105
+        /// T1037
         /// </summary>
-        [pbr::OriginalName("INGRESS_TOOL_TRANSFER")] IngressToolTransfer = 3,
+        [pbr::OriginalName("BOOT_OR_LOGON_INITIALIZATION_SCRIPTS")] BootOrLogonInitializationScripts = 37,
         /// <summary>
-        /// T1106
+        /// T1037.005
         /// </summary>
-        [pbr::OriginalName("NATIVE_API")] NativeApi = 4,
+        [pbr::OriginalName("STARTUP_ITEMS")] StartupItems = 38,
         /// <summary>
-        /// T1129
+        /// T1046
         /// </summary>
-        [pbr::OriginalName("SHARED_MODULES")] SharedModules = 5,
+        [pbr::OriginalName("NETWORK_SERVICE_DISCOVERY")] NetworkServiceDiscovery = 32,
+        /// <summary>
+        /// T1057
+        /// </summary>
+        [pbr::OriginalName("PROCESS_DISCOVERY")] ProcessDiscovery = 56,
         /// <summary>
         /// T1059
         /// </summary>
@@ -522,9 +542,41 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// </summary>
         [pbr::OriginalName("UNIX_SHELL")] UnixShell = 7,
         /// <summary>
-        /// T1496
+        /// T1069
         /// </summary>
-        [pbr::OriginalName("RESOURCE_HIJACKING")] ResourceHijacking = 8,
+        [pbr::OriginalName("PERMISSION_GROUPS_DISCOVERY")] PermissionGroupsDiscovery = 18,
+        /// <summary>
+        /// T1069.003
+        /// </summary>
+        [pbr::OriginalName("CLOUD_GROUPS")] CloudGroups = 19,
+        /// <summary>
+        /// T1071
+        /// </summary>
+        [pbr::OriginalName("APPLICATION_LAYER_PROTOCOL")] ApplicationLayerProtocol = 45,
+        /// <summary>
+        /// T1071.004
+        /// </summary>
+        [pbr::OriginalName("DNS")] Dns = 46,
+        /// <summary>
+        /// T1072
+        /// </summary>
+        [pbr::OriginalName("SOFTWARE_DEPLOYMENT_TOOLS")] SoftwareDeploymentTools = 47,
+        /// <summary>
+        /// T1078
+        /// </summary>
+        [pbr::OriginalName("VALID_ACCOUNTS")] ValidAccounts = 14,
+        /// <summary>
+        /// T1078.001
+        /// </summary>
+        [pbr::OriginalName("DEFAULT_ACCOUNTS")] DefaultAccounts = 35,
+        /// <summary>
+        /// T1078.003
+        /// </summary>
+        [pbr::OriginalName("LOCAL_ACCOUNTS")] LocalAccounts = 15,
+        /// <summary>
+        /// T1078.004
+        /// </summary>
+        [pbr::OriginalName("CLOUD_ACCOUNTS")] CloudAccounts = 16,
         /// <summary>
         /// T1090
         /// </summary>
@@ -538,37 +590,113 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// </summary>
         [pbr::OriginalName("MULTI_HOP_PROXY")] MultiHopProxy = 11,
         /// <summary>
-        /// T1568
+        /// T1098
         /// </summary>
-        [pbr::OriginalName("DYNAMIC_RESOLUTION")] DynamicResolution = 12,
+        [pbr::OriginalName("ACCOUNT_MANIPULATION")] AccountManipulation = 22,
         /// <summary>
-        /// T1552
+        /// T1098.001
         /// </summary>
-        [pbr::OriginalName("UNSECURED_CREDENTIALS")] UnsecuredCredentials = 13,
+        [pbr::OriginalName("ADDITIONAL_CLOUD_CREDENTIALS")] AdditionalCloudCredentials = 40,
         /// <summary>
-        /// T1078
+        /// T1098.004
         /// </summary>
-        [pbr::OriginalName("VALID_ACCOUNTS")] ValidAccounts = 14,
+        [pbr::OriginalName("SSH_AUTHORIZED_KEYS")] SshAuthorizedKeys = 23,
         /// <summary>
-        /// T1078.003
+        /// T1098.006
         /// </summary>
-        [pbr::OriginalName("LOCAL_ACCOUNTS")] LocalAccounts = 15,
+        [pbr::OriginalName("ADDITIONAL_CONTAINER_CLUSTER_ROLES")] AdditionalContainerClusterRoles = 58,
         /// <summary>
-        /// T1078.004
+        /// T1105
         /// </summary>
-        [pbr::OriginalName("CLOUD_ACCOUNTS")] CloudAccounts = 16,
+        [pbr::OriginalName("INGRESS_TOOL_TRANSFER")] IngressToolTransfer = 3,
+        /// <summary>
+        /// T1106
+        /// </summary>
+        [pbr::OriginalName("NATIVE_API")] NativeApi = 4,
+        /// <summary>
+        /// T1110
+        /// </summary>
+        [pbr::OriginalName("BRUTE_FORCE")] BruteForce = 44,
+        /// <summary>
+        /// T1129
+        /// </summary>
+        [pbr::OriginalName("SHARED_MODULES")] SharedModules = 5,
+        /// <summary>
+        /// T1134
+        /// </summary>
+        [pbr::OriginalName("ACCESS_TOKEN_MANIPULATION")] AccessTokenManipulation = 33,
+        /// <summary>
+        /// T1134.001
+        /// </summary>
+        [pbr::OriginalName("TOKEN_IMPERSONATION_OR_THEFT")] TokenImpersonationOrTheft = 39,
+        /// <summary>
+        /// T1190
+        /// </summary>
+        [pbr::OriginalName("EXPLOIT_PUBLIC_FACING_APPLICATION")] ExploitPublicFacingApplication = 27,
+        /// <summary>
+        /// T1484
+        /// </summary>
+        [pbr::OriginalName("DOMAIN_POLICY_MODIFICATION")] DomainPolicyModification = 30,
+        /// <summary>
+        /// T1485
+        /// </summary>
+        [pbr::OriginalName("DATA_DESTRUCTION")] DataDestruction = 29,
+        /// <summary>
+        /// T1489
+        /// </summary>
+        [pbr::OriginalName("SERVICE_STOP")] ServiceStop = 52,
+        /// <summary>
+        /// T1490
+        /// </summary>
+        [pbr::OriginalName("INHIBIT_SYSTEM_RECOVERY")] InhibitSystemRecovery = 36,
+        /// <summary>
+        /// T1496
+        /// </summary>
+        [pbr::OriginalName("RESOURCE_HIJACKING")] ResourceHijacking = 8,
         /// <summary>
         /// T1498
         /// </summary>
         [pbr::OriginalName("NETWORK_DENIAL_OF_SERVICE")] NetworkDenialOfService = 17,
         /// <summary>
-        /// T1069
+        /// T1526
         /// </summary>
-        [pbr::OriginalName("PERMISSION_GROUPS_DISCOVERY")] PermissionGroupsDiscovery = 18,
+        [pbr::OriginalName("CLOUD_SERVICE_DISCOVERY")] CloudServiceDiscovery = 48,
         /// <summary>
-        /// T1069.003
+        /// T1528
         /// </summary>
-        [pbr::OriginalName("CLOUD_GROUPS")] CloudGroups = 19,
+        [pbr::OriginalName("STEAL_APPLICATION_ACCESS_TOKEN")] StealApplicationAccessToken = 42,
+        /// <summary>
+        /// T1531
+        /// </summary>
+        [pbr::OriginalName("ACCOUNT_ACCESS_REMOVAL")] AccountAccessRemoval = 51,
+        /// <summary>
+        /// T1539
+        /// </summary>
+        [pbr::OriginalName("STEAL_WEB_SESSION_COOKIE")] StealWebSessionCookie = 25,
+        /// <summary>
+        /// T1543
+        /// </summary>
+        [pbr::OriginalName("CREATE_OR_MODIFY_SYSTEM_PROCESS")] CreateOrModifySystemProcess = 24,
+        /// <summary>
+        /// T1548
+        /// </summary>
+        [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM")] AbuseElevationControlMechanism = 34,
+        /// <summary>
+        /// T1552
+        /// </summary>
+        [pbr::OriginalName("UNSECURED_CREDENTIALS")] UnsecuredCredentials = 13,
+        /// <summary>
+        /// T1556
+        /// </summary>
+        [pbr::OriginalName("MODIFY_AUTHENTICATION_PROCESS")] ModifyAuthenticationProcess = 28,
+        /// <summary>
+        /// T1562
+        /// </summary>
+        [pbr::OriginalName("IMPAIR_DEFENSES")] ImpairDefenses = 31,
+        /// <summary>
+        /// T1562.001
+        /// </summary>
+        [pbr::OriginalName("DISABLE_OR_MODIFY_TOOLS")] DisableOrModifyTools = 55,
         /// <summary>
         /// T1567
         /// </summary>
@@ -578,61 +706,41 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// </summary>
         [pbr::OriginalName("EXFILTRATION_TO_CLOUD_STORAGE")] ExfiltrationToCloudStorage = 21,
         /// <summary>
-        /// T1098
+        /// T1568
         /// </summary>
-        [pbr::OriginalName("ACCOUNT_MANIPULATION")] AccountManipulation = 22,
+        [pbr::OriginalName("DYNAMIC_RESOLUTION")] DynamicResolution = 12,
         /// <summary>
-        /// T1098.004
+        /// T1570
         /// </summary>
-        [pbr::OriginalName("SSH_AUTHORIZED_KEYS")] SshAuthorizedKeys = 23,
-        /// <summary>
-        /// T1543
-        /// </summary>
-        [pbr::OriginalName("CREATE_OR_MODIFY_SYSTEM_PROCESS")] CreateOrModifySystemProcess = 24,
-        /// <summary>
-        /// T1539
-        /// </summary>
-        [pbr::OriginalName("STEAL_WEB_SESSION_COOKIE")] StealWebSessionCookie = 25,
+        [pbr::OriginalName("LATERAL_TOOL_TRANSFER")] LateralToolTransfer = 41,
         /// <summary>
         /// T1578
         /// </summary>
         [pbr::OriginalName("MODIFY_CLOUD_COMPUTE_INFRASTRUCTURE")] ModifyCloudComputeInfrastructure = 26,
         /// <summary>
-        /// T1190
+        /// T1578.001
         /// </summary>
-        [pbr::OriginalName("EXPLOIT_PUBLIC_FACING_APPLICATION")] ExploitPublicFacingApplication = 27,
+        [pbr::OriginalName("CREATE_SNAPSHOT")] CreateSnapshot = 54,
         /// <summary>
-        /// T1556
+        /// T1580
         /// </summary>
-        [pbr::OriginalName("MODIFY_AUTHENTICATION_PROCESS")] ModifyAuthenticationProcess = 28,
+        [pbr::OriginalName("CLOUD_INFRASTRUCTURE_DISCOVERY")] CloudInfrastructureDiscovery = 53,
         /// <summary>
-        /// T1485
+        /// T1588
         /// </summary>
-        [pbr::OriginalName("DATA_DESTRUCTION")] DataDestruction = 29,
+        [pbr::OriginalName("OBTAIN_CAPABILITIES")] ObtainCapabilities = 43,
         /// <summary>
-        /// T1484
+        /// T1595
         /// </summary>
-        [pbr::OriginalName("DOMAIN_POLICY_MODIFICATION")] DomainPolicyModification = 30,
+        [pbr::OriginalName("ACTIVE_SCANNING")] ActiveScanning = 1,
         /// <summary>
-        /// T1562
+        /// T1595.001
         /// </summary>
-        [pbr::OriginalName("IMPAIR_DEFENSES")] ImpairDefenses = 31,
+        [pbr::OriginalName("SCANNING_IP_BLOCKS")] ScanningIpBlocks = 2,
         /// <summary>
-        /// T1046
+        /// T1613
         /// </summary>
-        [pbr::OriginalName("NETWORK_SERVICE_DISCOVERY")] NetworkServiceDiscovery = 32,
-        /// <summary>
-        /// T1134
-        /// </summary>
-        [pbr::OriginalName("ACCESS_TOKEN_MANIPULATION")] AccessTokenManipulation = 33,
-        /// <summary>
-        /// T1548
-        /// </summary>
-        [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM")] AbuseElevationControlMechanism = 34,
-        /// <summary>
-        /// T1078.001
-        /// </summary>
-        [pbr::OriginalName("DEFAULT_ACCOUNTS")] DefaultAccounts = 35,
+        [pbr::OriginalName("CONTAINER_AND_RESOURCE_DISCOVERY")] ContainerAndResourceDiscovery = 57,
       }
 
     }
