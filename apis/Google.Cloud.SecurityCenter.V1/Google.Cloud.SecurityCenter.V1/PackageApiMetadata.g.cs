@@ -78,10 +78,13 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return KernelRootkitReflection.Descriptor;
             yield return KubernetesReflection.Descriptor;
             yield return LabelReflection.Descriptor;
+            yield return LoadBalancerReflection.Descriptor;
+            yield return LogEntryReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
+            yield return OrgPolicyReflection.Descriptor;
             yield return OrganizationSettingsReflection.Descriptor;
             yield return ProcessReflection.Descriptor;
             yield return ResourceReflection.Descriptor;

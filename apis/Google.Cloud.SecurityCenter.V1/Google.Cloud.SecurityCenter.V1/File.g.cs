@@ -25,19 +25,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZmlsZS5wcm90bxIe",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxInMKBEZpbGUSDAoEcGF0",
-            "aBgBIAEoCRIMCgRzaXplGAIgASgDEg4KBnNoYTI1NhgDIAEoCRITCgtoYXNo",
-            "ZWRfc2l6ZRgEIAEoAxIYChBwYXJ0aWFsbHlfaGFzaGVkGAUgASgIEhAKCGNv",
-            "bnRlbnRzGAYgASgJQuMBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
-            "dGVyLnYxQglGaWxlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1",
-            "cml0eWNlbnRlci9hcGl2MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2Vu",
-            "dGVycGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29n",
-            "bGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpT",
-            "ZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxIvABCgRGaWxlEgwKBHBh",
+            "dGgYASABKAkSDAoEc2l6ZRgCIAEoAxIOCgZzaGEyNTYYAyABKAkSEwoLaGFz",
+            "aGVkX3NpemUYBCABKAMSGAoQcGFydGlhbGx5X2hhc2hlZBgFIAEoCBIQCghj",
+            "b250ZW50cxgGIAEoCRJACglkaXNrX3BhdGgYByABKAsyLS5nb29nbGUuY2xv",
+            "dWQuc2VjdXJpdHljZW50ZXIudjEuRmlsZS5EaXNrUGF0aBo5CghEaXNrUGF0",
+            "aBIWCg5wYXJ0aXRpb25fdXVpZBgBIAEoCRIVCg1yZWxhdGl2ZV9wYXRoGAIg",
+            "ASgJQuMBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxQglG",
+            "aWxlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRl",
+            "ci9hcGl2MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5H",
+            "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRc",
+            "U2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNl",
+            "bnRlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.File), global::Google.Cloud.SecurityCenter.V1.File.Parser, new[]{ "Path", "Size", "Sha256", "HashedSize", "PartiallyHashed", "Contents" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.File), global::Google.Cloud.SecurityCenter.V1.File.Parser, new[]{ "Path", "Size", "Sha256", "HashedSize", "PartiallyHashed", "Contents", "DiskPath" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath), global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath.Parser, new[]{ "PartitionUuid", "RelativePath" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -89,6 +92,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       hashedSize_ = other.hashedSize_;
       partiallyHashed_ = other.partiallyHashed_;
       contents_ = other.contents_;
+      diskPath_ = other.diskPath_ != null ? other.diskPath_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -192,6 +196,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "disk_path" field.</summary>
+    public const int DiskPathFieldNumber = 7;
+    private global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath diskPath_;
+    /// <summary>
+    /// Path of the file in terms of underlying disk/partition identifiers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath DiskPath {
+      get { return diskPath_; }
+      set {
+        diskPath_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -213,6 +232,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (HashedSize != other.HashedSize) return false;
       if (PartiallyHashed != other.PartiallyHashed) return false;
       if (Contents != other.Contents) return false;
+      if (!object.Equals(DiskPath, other.DiskPath)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -226,6 +246,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (HashedSize != 0L) hash ^= HashedSize.GetHashCode();
       if (PartiallyHashed != false) hash ^= PartiallyHashed.GetHashCode();
       if (Contents.Length != 0) hash ^= Contents.GetHashCode();
+      if (diskPath_ != null) hash ^= DiskPath.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -268,6 +289,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(50);
         output.WriteString(Contents);
       }
+      if (diskPath_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DiskPath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -302,6 +327,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(50);
         output.WriteString(Contents);
       }
+      if (diskPath_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DiskPath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -329,6 +358,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (Contents.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Contents);
+      }
+      if (diskPath_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiskPath);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -359,6 +391,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.Contents.Length != 0) {
         Contents = other.Contents;
+      }
+      if (other.diskPath_ != null) {
+        if (diskPath_ == null) {
+          DiskPath = new global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath();
+        }
+        DiskPath.MergeFrom(other.DiskPath);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -397,6 +435,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 50: {
             Contents = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (diskPath_ == null) {
+              DiskPath = new global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath();
+            }
+            input.ReadMessage(DiskPath);
             break;
           }
         }
@@ -438,10 +483,263 @@ namespace Google.Cloud.SecurityCenter.V1 {
             Contents = input.ReadString();
             break;
           }
+          case 58: {
+            if (diskPath_ == null) {
+              DiskPath = new global::Google.Cloud.SecurityCenter.V1.File.Types.DiskPath();
+            }
+            input.ReadMessage(DiskPath);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the File message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Path of the file in terms of underlying disk/partition identifiers.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DiskPath : pb::IMessage<DiskPath>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DiskPath> _parser = new pb::MessageParser<DiskPath>(() => new DiskPath());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DiskPath> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V1.File.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskPath() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskPath(DiskPath other) : this() {
+          partitionUuid_ = other.partitionUuid_;
+          relativePath_ = other.relativePath_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DiskPath Clone() {
+          return new DiskPath(this);
+        }
+
+        /// <summary>Field number for the "partition_uuid" field.</summary>
+        public const int PartitionUuidFieldNumber = 1;
+        private string partitionUuid_ = "";
+        /// <summary>
+        /// UUID of the partition (format
+        /// https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PartitionUuid {
+          get { return partitionUuid_; }
+          set {
+            partitionUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "relative_path" field.</summary>
+        public const int RelativePathFieldNumber = 2;
+        private string relativePath_ = "";
+        /// <summary>
+        /// Relative path of the file in the partition as a JSON encoded string.
+        /// Example: /home/user1/executable_file.sh
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RelativePath {
+          get { return relativePath_; }
+          set {
+            relativePath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DiskPath);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DiskPath other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PartitionUuid != other.PartitionUuid) return false;
+          if (RelativePath != other.RelativePath) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PartitionUuid.Length != 0) hash ^= PartitionUuid.GetHashCode();
+          if (RelativePath.Length != 0) hash ^= RelativePath.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PartitionUuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PartitionUuid);
+          }
+          if (RelativePath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(RelativePath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PartitionUuid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(PartitionUuid);
+          }
+          if (RelativePath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(RelativePath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PartitionUuid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PartitionUuid);
+          }
+          if (RelativePath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RelativePath);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DiskPath other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PartitionUuid.Length != 0) {
+            PartitionUuid = other.PartitionUuid;
+          }
+          if (other.RelativePath.Length != 0) {
+            RelativePath = other.RelativePath;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                PartitionUuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                RelativePath = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                PartitionUuid = input.ReadString();
+                break;
+              }
+              case 18: {
+                RelativePath = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
