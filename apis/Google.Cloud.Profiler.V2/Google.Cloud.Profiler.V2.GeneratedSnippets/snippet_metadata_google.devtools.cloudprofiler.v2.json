@@ -108,6 +108,228 @@
       ]
     },
     {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_sync_flattened",
+      "title": "ListProfiles",
+      "description": "Snippet for ListProfiles",
+      "file": "ExportServiceClient.ListProfilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfiles",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_async_flattened",
+      "title": "ListProfilesAsync",
+      "description": "Snippet for ListProfilesAsync",
+      "file": "ExportServiceClient.ListProfilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfilesAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_sync_flattened_resourceNames",
+      "title": "ListProfilesResourceNames",
+      "description": "Snippet for ListProfiles",
+      "file": "ExportServiceClient.ListProfilesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfiles",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfiles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_async_flattened_resourceNames",
+      "title": "ListProfilesResourceNamesAsync",
+      "description": "Snippet for ListProfilesAsync",
+      "file": "ExportServiceClient.ListProfilesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfilesAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateProfile_sync",
       "title": "CreateProfileRequestObject",
       "description": "Snippet for CreateProfile",

@@ -153,9 +153,8 @@ namespace Google.Cloud.Profiler.V2
     /// Manage the collection of continuous profiling data provided by profiling
     /// agents running in the cloud or by an offline provider of profiling data.
     /// 
-    /// General guidelines:
-    /// * Profiles for a single deployment must be created in ascending time order.
-    /// * Profiles can be created in either online or offline mode, see below.
+    /// __The APIs listed in this service are intended for use within our profiler
+    /// agents only.__
     /// </remarks>
     public abstract partial class ProfilerServiceClient
     {
@@ -244,6 +243,11 @@ namespace Google.Cloud.Profiler.V2
         /// <summary>
         /// CreateProfile creates a new profile resource in the online mode.
         /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
+        /// 
         /// The server ensures that the new profiles are created at a constant rate per
         /// deployment, so the creation request may hang for some time until the next
         /// profile session is available.
@@ -264,6 +268,11 @@ namespace Google.Cloud.Profiler.V2
 
         /// <summary>
         /// CreateProfile creates a new profile resource in the online mode.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// 
         /// The server ensures that the new profiles are created at a constant rate per
         /// deployment, so the creation request may hang for some time until the next
@@ -286,6 +295,11 @@ namespace Google.Cloud.Profiler.V2
         /// <summary>
         /// CreateProfile creates a new profile resource in the online mode.
         /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
+        /// 
         /// The server ensures that the new profiles are created at a constant rate per
         /// deployment, so the creation request may hang for some time until the next
         /// profile session is available.
@@ -305,9 +319,14 @@ namespace Google.Cloud.Profiler.V2
             CreateProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -316,9 +335,14 @@ namespace Google.Cloud.Profiler.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -327,9 +351,14 @@ namespace Google.Cloud.Profiler.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -338,9 +367,14 @@ namespace Google.Cloud.Profiler.V2
             CreateOfflineProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -358,9 +392,14 @@ namespace Google.Cloud.Profiler.V2
             }, callSettings);
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -378,9 +417,14 @@ namespace Google.Cloud.Profiler.V2
             }, callSettings);
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -394,9 +438,14 @@ namespace Google.Cloud.Profiler.V2
             CreateOfflineProfileAsync(parent, profile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -414,9 +463,14 @@ namespace Google.Cloud.Profiler.V2
             }, callSettings);
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -434,9 +488,14 @@ namespace Google.Cloud.Profiler.V2
             }, callSettings);
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="parent">
         /// Parent project to create the profile in.
@@ -454,6 +513,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -466,6 +530,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -478,6 +547,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -490,6 +564,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="profile">
         /// Profile to update.
@@ -514,6 +593,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="profile">
         /// Profile to update.
@@ -538,6 +622,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="profile">
         /// Profile to update.
@@ -559,9 +648,8 @@ namespace Google.Cloud.Profiler.V2
     /// Manage the collection of continuous profiling data provided by profiling
     /// agents running in the cloud or by an offline provider of profiling data.
     /// 
-    /// General guidelines:
-    /// * Profiles for a single deployment must be created in ascending time order.
-    /// * Profiles can be created in either online or offline mode, see below.
+    /// __The APIs listed in this service are intended for use within our profiler
+    /// agents only.__
     /// </remarks>
     public sealed partial class ProfilerServiceClientImpl : ProfilerServiceClient
     {
@@ -616,6 +704,11 @@ namespace Google.Cloud.Profiler.V2
         /// <summary>
         /// CreateProfile creates a new profile resource in the online mode.
         /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
+        /// 
         /// The server ensures that the new profiles are created at a constant rate per
         /// deployment, so the creation request may hang for some time until the next
         /// profile session is available.
@@ -640,6 +733,11 @@ namespace Google.Cloud.Profiler.V2
         /// <summary>
         /// CreateProfile creates a new profile resource in the online mode.
         /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
+        /// 
         /// The server ensures that the new profiles are created at a constant rate per
         /// deployment, so the creation request may hang for some time until the next
         /// profile session is available.
@@ -662,9 +760,14 @@ namespace Google.Cloud.Profiler.V2
         }
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -676,9 +779,14 @@ namespace Google.Cloud.Profiler.V2
         }
 
         /// <summary>
-        /// CreateOfflineProfile creates a new profile resource in the offline mode.
-        /// The client provides the profile to create along with the profile bytes, the
-        /// server records it.
+        /// CreateOfflineProfile creates a new profile resource in the offline
+        /// mode. The client provides the profile to create along with the profile
+        /// bytes, the server records it.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -694,6 +802,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -709,6 +822,11 @@ namespace Google.Cloud.Profiler.V2
         /// created in the online mode. Updating the bytes for profiles created in the
         /// offline mode is currently not supported: the profile content must be
         /// provided at the time of the profile creation.
+        /// 
+        /// _Direct use of this API is discouraged, please use a [supported
+        /// profiler
+        /// agent](https://cloud.google.com/profiler/docs/about-profiler#profiling_agent)
+        /// instead for profile collection._
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
