@@ -145,6 +145,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A collection of tests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TestFile : pb::IMessage<TestFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -326,6 +327,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A Test describes a single client method call and its expected result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Test : pb::IMessage<Test>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1012,6 +1014,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// Call to the DocumentRef.Get method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTest : pb::IMessage<GetTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1256,6 +1259,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// Call to DocumentRef.Create.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTest : pb::IMessage<CreateTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1583,6 +1587,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A call to DocumentRef.Set.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetTest : pb::IMessage<SetTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1957,6 +1962,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a map
   /// or dictionary.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTest : pb::IMessage<UpdateTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2331,6 +2337,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a list
   /// of field paths and their values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePathsTest : pb::IMessage<UpdatePathsTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2722,6 +2729,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A call to DocmentRef.Delete
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTest : pb::IMessage<DeleteTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3052,6 +3060,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// An option to the DocumentRef.Set call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SetOption : pb::IMessage<SetOption>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3273,6 +3282,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryTest : pb::IMessage<QueryTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3574,6 +3584,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Clause : pb::IMessage<Clause>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4232,6 +4243,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Select : pb::IMessage<Select>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4410,6 +4422,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Where : pb::IMessage<Where>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4682,6 +4695,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrderBy : pb::IMessage<OrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4920,6 +4934,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cursor : pb::IMessage<Cursor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5147,6 +5162,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocSnapshot : pb::IMessage<DocSnapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5373,6 +5389,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldPath : pb::IMessage<FieldPath>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5564,6 +5581,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// should either change their client's ID for testing,
   /// or change the ID in the tests before running them.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListenTest : pb::IMessage<ListenTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5805,6 +5823,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Snapshot : pb::IMessage<Snapshot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6055,6 +6074,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocChange : pb::IMessage<DocChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

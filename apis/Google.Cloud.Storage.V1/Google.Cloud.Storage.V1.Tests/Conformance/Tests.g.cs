@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             "c3QSUwoUcG9zdF9wb2xpY3lfdjRfdGVzdHMYAiADKAsyNS5nb29nbGUuY2xv",
             "dWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb3N0UG9saWN5VjRUZXN0EkMK",
             "C3JldHJ5X3Rlc3RzGAMgAygLMi4uZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNl",
-            "LnN0b3JhZ2UudjEuUmV0cnlUZXN0IokFCg1TaWduaW5nVjRUZXN0EhAKCGZp",
+            "LnN0b3JhZ2UudjEuUmV0cnlUZXN0IuUFCg1TaWduaW5nVjRUZXN0EhAKCGZp",
             "bGVOYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg4KBmJ1Y2tldBgD",
             "IAEoCRIOCgZvYmplY3QYBCABKAkSDgoGbWV0aG9kGAUgASgJEhIKCmV4cGly",
             "YXRpb24YBiABKAMSLQoJdGltZXN0YW1wGAcgASgLMhouZ29vZ2xlLnByb3Rv",
@@ -44,51 +44,53 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             "GAsgASgJEj8KCHVybFN0eWxlGAwgASgOMi0uZ29vZ2xlLmNsb3VkLmNvbmZv",
             "cm1hbmNlLnN0b3JhZ2UudjEuVXJsU3R5bGUSGwoTYnVja2V0Qm91bmRIb3N0",
             "bmFtZRgNIAEoCRIgChhleHBlY3RlZENhbm9uaWNhbFJlcXVlc3QYDiABKAkS",
-            "HAoUZXhwZWN0ZWRTdHJpbmdUb1NpZ24YDyABKAkaLgoMSGVhZGVyc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaNgoUUXVlcnlQYXJh",
-            "bWV0ZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASIo",
-            "ChJDb25kaXRpb25hbE1hdGNoZXMSEgoKZXhwcmVzc2lvbhgBIAMoCSJCChBQ",
-            "b2xpY3lDb25kaXRpb25zEhoKEmNvbnRlbnRMZW5ndGhSYW5nZRgBIAMoBRIS",
-            "CgpzdGFydHNXaXRoGAIgAygJIqYDCgtQb2xpY3lJbnB1dBIOCgZzY2hlbWUY",
-            "ASABKAkSPwoIdXJsU3R5bGUYAiABKA4yLS5nb29nbGUuY2xvdWQuY29uZm9y",
-            "bWFuY2Uuc3RvcmFnZS52MS5VcmxTdHlsZRIbChNidWNrZXRCb3VuZEhvc3Ru",
-            "YW1lGAMgASgJEg4KBmJ1Y2tldBgEIAEoCRIOCgZvYmplY3QYBSABKAkSEgoK",
-            "ZXhwaXJhdGlvbhgGIAEoBRItCgl0aW1lc3RhbXAYByABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEkwKBmZpZWxkcxgIIAMoCzI8Lmdvb2dsZS5j",
-            "bG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlBvbGljeUlucHV0LkZpZWxk",
-            "c0VudHJ5EkkKCmNvbmRpdGlvbnMYCSABKAsyNS5nb29nbGUuY2xvdWQuY29u",
-            "Zm9ybWFuY2Uuc3RvcmFnZS52MS5Qb2xpY3lDb25kaXRpb25zGi0KC0ZpZWxk",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiuAEKDFBv",
-            "bGljeU91dHB1dBILCgN1cmwYASABKAkSTQoGZmllbGRzGAIgAygLMj0uZ29v",
-            "Z2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5T3V0cHV0",
-            "LkZpZWxkc0VudHJ5Eh0KFWV4cGVjdGVkRGVjb2RlZFBvbGljeRgDIAEoCRot",
-            "CgtGaWVsZHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IrcBChBQb3N0UG9saWN5VjRUZXN0EhMKC2Rlc2NyaXB0aW9uGAEgASgJEkUK",
-            "C3BvbGljeUlucHV0GAIgASgLMjAuZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNl",
-            "LnN0b3JhZ2UudjEuUG9saWN5SW5wdXQSRwoMcG9saWN5T3V0cHV0GAMgASgL",
-            "MjEuZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5",
-            "T3V0cHV0IlAKClJldHJ5VGVzdHMSQgoKcmV0cnlUZXN0cxgBIAMoCzIuLmdv",
-            "b2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlJldHJ5VGVzdCIn",
-            "Cg9JbnN0cnVjdGlvbkxpc3QSFAoMaW5zdHJ1Y3Rpb25zGAEgAygJImcKBk1l",
-            "dGhvZBIMCgRuYW1lGAEgASgJEkAKCXJlc291cmNlcxgCIAMoDjItLmdvb2ds",
-            "ZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxLlJlc291cmNlEg0KBWdy",
-            "b3VwGAMgASgJIuQBCglSZXRyeVRlc3QSCgoCaWQYASABKAUSEwoLZGVzY3Jp",
-            "cHRpb24YAiABKAkSQwoFY2FzZXMYAyADKAsyNC5nb29nbGUuY2xvdWQuY29u",
-            "Zm9ybWFuY2Uuc3RvcmFnZS52MS5JbnN0cnVjdGlvbkxpc3QSPAoHbWV0aG9k",
-            "cxgEIAMoCzIrLmdvb2dsZS5jbG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYx",
-            "Lk1ldGhvZBIcChRwcmVjb25kaXRpb25Qcm92aWRlZBgFIAEoCBIVCg1leHBl",
-            "Y3RTdWNjZXNzGAYgASgIKk8KCFVybFN0eWxlEg4KClBBVEhfU1RZTEUQABIY",
-            "ChRWSVJUVUFMX0hPU1RFRF9TVFlMRRABEhkKFUJVQ0tFVF9CT1VORF9IT1NU",
-            "TkFNRRACKkIKCFJlc291cmNlEgoKBkJVQ0tFVBAAEgoKBk9CSkVDVBABEhAK",
-            "DE5PVElGSUNBVElPThACEgwKCEhNQUNfS0VZEANCfAonY29tLmdvb2dsZS5j",
-            "bG91ZC5jb25mb3JtYW5jZS5zdG9yYWdlLnYxUAFaI2dvb2dsZS9jbG91ZC9j",
-            "b25mb3JtYW5jZS9zdG9yYWdlL3YxqgIpR29vZ2xlLkNsb3VkLlN0b3JhZ2Uu",
-            "VjEuVGVzdHMuQ29uZm9ybWFuY2ViBnByb3RvMw=="));
+            "HAoUZXhwZWN0ZWRTdHJpbmdUb1NpZ24YDyABKAkSEAoIaG9zdG5hbWUYECAB",
+            "KAkSFgoOY2xpZW50RW5kcG9pbnQYESABKAkSGAoQZW11bGF0b3JIb3N0bmFt",
+            "ZRgSIAEoCRIWCg51bml2ZXJzZURvbWFpbhgTIAEoCRouCgxIZWFkZXJzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo2ChRRdWVyeVBh",
+            "cmFtZXRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IigKEkNvbmRpdGlvbmFsTWF0Y2hlcxISCgpleHByZXNzaW9uGAEgAygJIkIK",
+            "EFBvbGljeUNvbmRpdGlvbnMSGgoSY29udGVudExlbmd0aFJhbmdlGAEgAygF",
+            "EhIKCnN0YXJ0c1dpdGgYAiADKAkipgMKC1BvbGljeUlucHV0Eg4KBnNjaGVt",
+            "ZRgBIAEoCRI/Cgh1cmxTdHlsZRgCIAEoDjItLmdvb2dsZS5jbG91ZC5jb25m",
+            "b3JtYW5jZS5zdG9yYWdlLnYxLlVybFN0eWxlEhsKE2J1Y2tldEJvdW5kSG9z",
+            "dG5hbWUYAyABKAkSDgoGYnVja2V0GAQgASgJEg4KBm9iamVjdBgFIAEoCRIS",
+            "CgpleHBpcmF0aW9uGAYgASgFEi0KCXRpbWVzdGFtcBgHIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASTAoGZmllbGRzGAggAygLMjwuZ29vZ2xl",
+            "LmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUG9saWN5SW5wdXQuRmll",
+            "bGRzRW50cnkSSQoKY29uZGl0aW9ucxgJIAEoCzI1Lmdvb2dsZS5jbG91ZC5j",
+            "b25mb3JtYW5jZS5zdG9yYWdlLnYxLlBvbGljeUNvbmRpdGlvbnMaLQoLRmll",
+            "bGRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK4AQoM",
+            "UG9saWN5T3V0cHV0EgsKA3VybBgBIAEoCRJNCgZmaWVsZHMYAiADKAsyPS5n",
+            "b29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb2xpY3lPdXRw",
+            "dXQuRmllbGRzRW50cnkSHQoVZXhwZWN0ZWREZWNvZGVkUG9saWN5GAMgASgJ",
+            "Gi0KC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEitwEKEFBvc3RQb2xpY3lWNFRlc3QSEwoLZGVzY3JpcHRpb24YASABKAkS",
+            "RQoLcG9saWN5SW5wdXQYAiABKAsyMC5nb29nbGUuY2xvdWQuY29uZm9ybWFu",
+            "Y2Uuc3RvcmFnZS52MS5Qb2xpY3lJbnB1dBJHCgxwb2xpY3lPdXRwdXQYAyAB",
+            "KAsyMS5nb29nbGUuY2xvdWQuY29uZm9ybWFuY2Uuc3RvcmFnZS52MS5Qb2xp",
+            "Y3lPdXRwdXQiUAoKUmV0cnlUZXN0cxJCCgpyZXRyeVRlc3RzGAEgAygLMi4u",
+            "Z29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUmV0cnlUZXN0",
+            "IicKD0luc3RydWN0aW9uTGlzdBIUCgxpbnN0cnVjdGlvbnMYASADKAkiZwoG",
+            "TWV0aG9kEgwKBG5hbWUYASABKAkSQAoJcmVzb3VyY2VzGAIgAygOMi0uZ29v",
+            "Z2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjEuUmVzb3VyY2USDQoF",
+            "Z3JvdXAYAyABKAki5AEKCVJldHJ5VGVzdBIKCgJpZBgBIAEoBRITCgtkZXNj",
+            "cmlwdGlvbhgCIAEoCRJDCgVjYXNlcxgDIAMoCzI0Lmdvb2dsZS5jbG91ZC5j",
+            "b25mb3JtYW5jZS5zdG9yYWdlLnYxLkluc3RydWN0aW9uTGlzdBI8CgdtZXRo",
+            "b2RzGAQgAygLMisuZ29vZ2xlLmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2Uu",
+            "djEuTWV0aG9kEhwKFHByZWNvbmRpdGlvblByb3ZpZGVkGAUgASgIEhUKDWV4",
+            "cGVjdFN1Y2Nlc3MYBiABKAgqTwoIVXJsU3R5bGUSDgoKUEFUSF9TVFlMRRAA",
+            "EhgKFFZJUlRVQUxfSE9TVEVEX1NUWUxFEAESGQoVQlVDS0VUX0JPVU5EX0hP",
+            "U1ROQU1FEAIqQgoIUmVzb3VyY2USCgoGQlVDS0VUEAASCgoGT0JKRUNUEAES",
+            "EAoMTk9USUZJQ0FUSU9OEAISDAoISE1BQ19LRVkQA0J8Cidjb20uZ29vZ2xl",
+            "LmNsb3VkLmNvbmZvcm1hbmNlLnN0b3JhZ2UudjFQAVojZ29vZ2xlL2Nsb3Vk",
+            "L2NvbmZvcm1hbmNlL3N0b3JhZ2UvdjGqAilHb29nbGUuQ2xvdWQuU3RvcmFn",
+            "ZS5WMS5UZXN0cy5Db25mb3JtYW5jZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.UrlStyle), typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.Resource), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile), global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile.Parser, new[]{ "SigningV4Tests", "PostPolicyV4Tests", "RetryTests" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test), global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test.Parser, new[]{ "FileName", "Description", "Bucket", "Object", "Method", "Expiration", "Timestamp", "ExpectedUrl", "Headers", "QueryParameters", "Scheme", "UrlStyle", "BucketBoundHostname", "ExpectedCanonicalRequest", "ExpectedStringToSign" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test), global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test.Parser, new[]{ "FileName", "Description", "Bucket", "Object", "Method", "Expiration", "Timestamp", "ExpectedUrl", "Headers", "QueryParameters", "Scheme", "UrlStyle", "BucketBoundHostname", "ExpectedCanonicalRequest", "ExpectedStringToSign", "Hostname", "ClientEndpoint", "EmulatorHostname", "UniverseDomain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.ConditionalMatches), global::Google.Cloud.Storage.V1.Tests.Conformance.ConditionalMatches.Parser, new[]{ "Expression" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyConditions), global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyConditions.Parser, new[]{ "ContentLengthRange", "StartsWith" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyInput), global::Google.Cloud.Storage.V1.Tests.Conformance.PolicyInput.Parser, new[]{ "Scheme", "UrlStyle", "BucketBoundHostname", "Bucket", "Object", "Expiration", "Timestamp", "Fields", "Conditions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -124,6 +126,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
   #endregion
 
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TestFile : pb::IMessage<TestFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -359,6 +362,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SigningV4Test : pb::IMessage<SigningV4Test>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -408,6 +412,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       bucketBoundHostname_ = other.bucketBoundHostname_;
       expectedCanonicalRequest_ = other.expectedCanonicalRequest_;
       expectedStringToSign_ = other.expectedStringToSign_;
+      hostname_ = other.hostname_;
+      clientEndpoint_ = other.clientEndpoint_;
+      emulatorHostname_ = other.emulatorHostname_;
+      universeDomain_ = other.universeDomain_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -595,6 +603,54 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
     }
 
+    /// <summary>Field number for the "hostname" field.</summary>
+    public const int HostnameFieldNumber = 16;
+    private string hostname_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Hostname {
+      get { return hostname_; }
+      set {
+        hostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "clientEndpoint" field.</summary>
+    public const int ClientEndpointFieldNumber = 17;
+    private string clientEndpoint_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientEndpoint {
+      get { return clientEndpoint_; }
+      set {
+        clientEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "emulatorHostname" field.</summary>
+    public const int EmulatorHostnameFieldNumber = 18;
+    private string emulatorHostname_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EmulatorHostname {
+      get { return emulatorHostname_; }
+      set {
+        emulatorHostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "universeDomain" field.</summary>
+    public const int UniverseDomainFieldNumber = 19;
+    private string universeDomain_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UniverseDomain {
+      get { return universeDomain_; }
+      set {
+        universeDomain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -625,6 +681,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       if (BucketBoundHostname != other.BucketBoundHostname) return false;
       if (ExpectedCanonicalRequest != other.ExpectedCanonicalRequest) return false;
       if (ExpectedStringToSign != other.ExpectedStringToSign) return false;
+      if (Hostname != other.Hostname) return false;
+      if (ClientEndpoint != other.ClientEndpoint) return false;
+      if (EmulatorHostname != other.EmulatorHostname) return false;
+      if (UniverseDomain != other.UniverseDomain) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -647,6 +707,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       if (BucketBoundHostname.Length != 0) hash ^= BucketBoundHostname.GetHashCode();
       if (ExpectedCanonicalRequest.Length != 0) hash ^= ExpectedCanonicalRequest.GetHashCode();
       if (ExpectedStringToSign.Length != 0) hash ^= ExpectedStringToSign.GetHashCode();
+      if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
+      if (ClientEndpoint.Length != 0) hash ^= ClientEndpoint.GetHashCode();
+      if (EmulatorHostname.Length != 0) hash ^= EmulatorHostname.GetHashCode();
+      if (UniverseDomain.Length != 0) hash ^= UniverseDomain.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -719,6 +783,22 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
         output.WriteRawTag(122);
         output.WriteString(ExpectedStringToSign);
       }
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Hostname);
+      }
+      if (ClientEndpoint.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(ClientEndpoint);
+      }
+      if (EmulatorHostname.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(EmulatorHostname);
+      }
+      if (UniverseDomain.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(UniverseDomain);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -783,6 +863,22 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
         output.WriteRawTag(122);
         output.WriteString(ExpectedStringToSign);
       }
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(Hostname);
+      }
+      if (ClientEndpoint.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(ClientEndpoint);
+      }
+      if (EmulatorHostname.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(EmulatorHostname);
+      }
+      if (UniverseDomain.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(UniverseDomain);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -833,6 +929,18 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
       if (ExpectedStringToSign.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExpectedStringToSign);
+      }
+      if (Hostname.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Hostname);
+      }
+      if (ClientEndpoint.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientEndpoint);
+      }
+      if (EmulatorHostname.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(EmulatorHostname);
+      }
+      if (UniverseDomain.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UniverseDomain);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -889,6 +997,18 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
       }
       if (other.ExpectedStringToSign.Length != 0) {
         ExpectedStringToSign = other.ExpectedStringToSign;
+      }
+      if (other.Hostname.Length != 0) {
+        Hostname = other.Hostname;
+      }
+      if (other.ClientEndpoint.Length != 0) {
+        ClientEndpoint = other.ClientEndpoint;
+      }
+      if (other.EmulatorHostname.Length != 0) {
+        EmulatorHostname = other.EmulatorHostname;
+      }
+      if (other.UniverseDomain.Length != 0) {
+        UniverseDomain = other.UniverseDomain;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -966,6 +1086,22 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
           }
           case 122: {
             ExpectedStringToSign = input.ReadString();
+            break;
+          }
+          case 130: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 138: {
+            ClientEndpoint = input.ReadString();
+            break;
+          }
+          case 146: {
+            EmulatorHostname = input.ReadString();
+            break;
+          }
+          case 154: {
+            UniverseDomain = input.ReadString();
             break;
           }
         }
@@ -1046,6 +1182,22 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
             ExpectedStringToSign = input.ReadString();
             break;
           }
+          case 130: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 138: {
+            ClientEndpoint = input.ReadString();
+            break;
+          }
+          case 146: {
+            EmulatorHostname = input.ReadString();
+            break;
+          }
+          case 154: {
+            UniverseDomain = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1053,6 +1205,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConditionalMatches : pb::IMessage<ConditionalMatches>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1231,6 +1384,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyConditions : pb::IMessage<PolicyConditions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1437,6 +1591,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyInput : pb::IMessage<PolicyInput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1944,6 +2099,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyOutput : pb::IMessage<PolicyOutput>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2254,6 +2410,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostPolicyV4Test : pb::IMessage<PostPolicyV4Test>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2535,6 +2692,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetryTests : pb::IMessage<RetryTests>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2717,6 +2875,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
   /// A list of instructions to send as headers to the GCS emulator. Each
   /// instruction will force a specified failure for that request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstructionList : pb::IMessage<InstructionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2899,6 +3058,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
   /// A particular storage API method and required resources in order to test it.
   /// Methods must be implemented in tests for each language.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Method : pb::IMessage<Method>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3163,6 +3323,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
   /// Schema for a retry test, corresponding to a single scenario from the design
   /// doc.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RetryTest : pb::IMessage<RetryTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

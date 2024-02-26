@@ -51,6 +51,7 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TestFile : pb::IMessage<TestFile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -229,6 +230,7 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadRowsTest : pb::IMessage<ReadRowsTest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -477,6 +479,7 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance {
       /// Expected results of reading the row.
       /// Only the last result can be an error.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Result : pb::IMessage<Result>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
