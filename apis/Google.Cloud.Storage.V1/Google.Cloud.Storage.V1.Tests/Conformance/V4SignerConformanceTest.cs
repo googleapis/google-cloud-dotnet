@@ -27,15 +27,17 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
 {
     public class V4SignerConformanceTest
     {
-        public static TheoryData<SigningV4Test> V4SigningTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.SigningV4Tests);
+        public static TheoryData<SigningV4Test> V4SigningTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f =>
+            // We skip test data with features that we don't support.
+            f.SigningV4Tests.Where(data => data.Hostname == "" && data.EmulatorHostname == "" && data.ClientEndpoint == "" && data.UniverseDomain == ""));
         public static TheoryData<PostPolicyV4Test> V4PostPolicyTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.PostPolicyV4Tests);
 
         private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
-            {
-                { "GET", HttpMethod.Get },
-                { "POST", HttpMethod.Post },
-                { "PUT", HttpMethod.Put }
-            };
+        {
+            { "GET", HttpMethod.Get },
+            { "POST", HttpMethod.Post },
+            { "PUT", HttpMethod.Put }
+        };
 
         [Theory, MemberData(nameof(V4SigningTestData))]
         public void SigningTest(SigningV4Test test)
