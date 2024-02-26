@@ -8543,6 +8543,325 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_sync",
+      "title": "ListDatabasesRequestObject",
+      "description": "Snippet for ListDatabases",
+      "file": "AlloyDBAdminClient.ListDatabasesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabases",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_async",
+      "title": "ListDatabasesRequestObjectAsync",
+      "description": "Snippet for ListDatabasesAsync",
+      "file": "AlloyDBAdminClient.ListDatabasesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabasesAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ListDatabasesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_sync_flattened",
+      "title": "ListDatabases",
+      "description": "Snippet for ListDatabases",
+      "file": "AlloyDBAdminClient.ListDatabasesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabases",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_async_flattened",
+      "title": "ListDatabasesAsync",
+      "description": "Snippet for ListDatabasesAsync",
+      "file": "AlloyDBAdminClient.ListDatabasesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabasesAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_sync_flattened_resourceNames",
+      "title": "ListDatabasesResourceNames",
+      "description": "Snippet for ListDatabases",
+      "file": "AlloyDBAdminClient.ListDatabasesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabases",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabases",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ListDatabases_async_flattened_resourceNames",
+      "title": "ListDatabasesResourceNamesAsync",
+      "description": "Snippet for ListDatabasesAsync",
+      "file": "AlloyDBAdminClient.ListDatabasesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatabasesAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ListDatabasesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AlloyDb.V1Beta.ListDatabasesResponse, Google.Cloud.AlloyDb.V1Beta.Database>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ListDatabases",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ListDatabases",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
