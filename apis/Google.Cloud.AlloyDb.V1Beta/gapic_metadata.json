@@ -136,6 +136,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",

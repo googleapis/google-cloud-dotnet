@@ -343,4 +343,16 @@ namespace Google.Cloud.AlloyDb.V1Beta
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
