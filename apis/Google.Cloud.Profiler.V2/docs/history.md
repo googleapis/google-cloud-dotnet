@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2024-02-27
+
+### New features
+
+- Add `start_time` to Profile proto ([commit 4e7680a](https://github.com/googleapis/google-cloud-dotnet/commit/4e7680a120658891eddb812e47e739e239eb524d))
+
+### Documentation improvements
+
+- Update documentation to add guidance around use of ProfilerService API methods ([commit 4e7680a](https://github.com/googleapis/google-cloud-dotnet/commit/4e7680a120658891eddb812e47e739e239eb524d))
+
 ## Version 2.3.0, released 2024-01-08
 
 ### New features
