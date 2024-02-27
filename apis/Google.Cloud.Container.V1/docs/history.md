@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.22.0, released 2024-02-27
+
+### New features
+
+- Add API to enable Provisioning Request API on existing nodepools ([commit 01d881e](https://github.com/googleapis/google-cloud-dotnet/commit/01d881eabb489af5bdb0f0fa88da1b11827000ea))
+- Promoted enable_confidential_storage to GA (behind allowlist) ([commit 01d881e](https://github.com/googleapis/google-cloud-dotnet/commit/01d881eabb489af5bdb0f0fa88da1b11827000ea))
+
 ## Version 3.21.0, released 2024-02-08
 
 ### New features
