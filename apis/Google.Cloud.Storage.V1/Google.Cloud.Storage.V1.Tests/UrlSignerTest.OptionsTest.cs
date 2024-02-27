@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google Inc. All Rights Reserved.
+// Copyright 2020 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -175,6 +175,70 @@ namespace Google.Cloud.Storage.V1.Tests
                 var options = Options.FromDuration(TimeSpan.FromMinutes(1));
 
                 Assert.Throws<ArgumentException>(() => options.WithScheme("ftp"));
+            }
+
+            [Fact]
+            public void Host_Defaults()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Equal("storage.googleapis.com", options.Host);
+            }
+
+            [Fact]
+            public void WithHost()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newHost = options.WithHost("another.custom.host");
+
+                Assert.NotSame(options, newHost);
+                Assert.Equal("another.custom.host", newHost.Host);
+            }
+
+            [Fact]
+            public void WithHost_Null()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                options = options.WithHost("another.custom.host");
+
+                var newOptions = options.WithHost(null);
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("storage.googleapis.com", newOptions.Host);
+            }
+
+            [Fact]
+            public void Port_Defaults()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                Assert.Null(options.Port);
+            }
+
+            [Fact]
+            public void WithPort()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newPort = options.WithPort(443);
+
+                Assert.NotSame(options, newPort);
+                Assert.Equal(443, newPort.Port);
+            }
+
+            [Fact]
+            public void WithPort_Null()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                options = options.WithPort(443);
+
+                var newOptions = options.WithPort(null);
+
+                Assert.NotSame(options, newOptions);
+                Assert.Null(newOptions.Port);
             }
         }
     }

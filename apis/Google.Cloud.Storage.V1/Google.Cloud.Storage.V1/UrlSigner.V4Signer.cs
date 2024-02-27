@@ -92,15 +92,17 @@ namespace Google.Cloud.Storage.V1
                 private readonly string _canonicalQueryString;
                 internal readonly byte[] _blobToSign;
                 private readonly string _scheme;
-                private readonly string _host;
+                private readonly string _hostForSignature;
+                private readonly string _hostForUrl;
+
 
                 internal UrlSigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, BlobSignerParameters signerParameters)
                 {
-                    (_host, _resourcePath) = options.UrlStyle switch
+                    (_hostForSignature, _hostForUrl, _resourcePath) = options.UrlStyle switch
                     {
-                        UrlStyle.PathStyle => (StorageHost, $"/{template.Bucket}"),
-                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{StorageHost}", string.Empty),
-                        UrlStyle.BucketBoundHostname => (options.BucketBoundHostname, string.Empty),
+                        UrlStyle.PathStyle => (options.Host, options.HostAndPort, $"/{template.Bucket}"),
+                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{options.Host}", $"{template.Bucket}.{options.HostAndPort}", string.Empty),
+                        UrlStyle.BucketBoundHostname => (options.BucketBoundHostname, options.BucketBoundHostname, string.Empty),
                         _ => throw new ArgumentOutOfRangeException(nameof(options.UrlStyle))
                     };
 
@@ -126,7 +128,7 @@ namespace Google.Cloud.Storage.V1
                     string credentialScope = $"{datestamp}/{signerParameters.Region}/{signerParameters.Service}/{signerParameters.RequestType}";
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
-                    headers.AddHeader("host", _host);
+                    headers.AddHeader("host", _hostForSignature);
                     var effectiveRequestMethod = template.HttpMethod;
                     if (effectiveRequestMethod == ResumableHttpMethod)
                     {
@@ -177,7 +179,7 @@ namespace Google.Cloud.Storage.V1
                 }
 
                 internal string GetResult(string signature) =>
-                    $"{_scheme}://{_host}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
+                    $"{_scheme}://{_hostForUrl}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
             }
 
             /// <summary>
@@ -196,10 +198,10 @@ namespace Google.Cloud.Storage.V1
                 {
                     string uri = options.UrlStyle switch
                     {
-                        UrlStyle.PathStyle => policy.Bucket == null ? StorageHost : $"{StorageHost}/{policy.Bucket}",
+                        UrlStyle.PathStyle => policy.Bucket == null ? options.HostAndPort : $"{options.HostAndPort}/{policy.Bucket}",
                         UrlStyle.VirtualHostedStyle => policy.Bucket == null ?
                             throw new ArgumentNullException(nameof(PostPolicy.Bucket), $"When using {UrlStyle.VirtualHostedStyle} a bucket condition must be set in the policy.") :
-                            $"{policy.Bucket}.{StorageHost}",
+                            $"{policy.Bucket}.{options.HostAndPort}",
                         UrlStyle.BucketBoundHostname => options.BucketBoundHostname,
                         _ => throw new ArgumentOutOfRangeException(nameof(options.UrlStyle))
                     };
