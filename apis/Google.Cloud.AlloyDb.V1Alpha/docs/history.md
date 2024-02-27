@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-alpha06, released 2024-02-27
+
+### New features
+
+- Support for obtaining the public IP address of an Instance ([commit 984260f](https://github.com/googleapis/google-cloud-dotnet/commit/984260f6f5ae6810095e86938cf65a0a780a1a20))
+- Support for getting PSC DNS name from the GetConnectionInfo API ([commit 984260f](https://github.com/googleapis/google-cloud-dotnet/commit/984260f6f5ae6810095e86938cf65a0a780a1a20))
+
 ## Version 1.0.0-alpha05, released 2024-01-08
 
 ### New features
