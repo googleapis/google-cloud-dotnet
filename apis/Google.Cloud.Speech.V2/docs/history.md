@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2024-02-27
+
+### New features
+
+- Add API for writing BatchRecognize transcripts in SRT and VTT formats ([commit 75f14ec](https://github.com/googleapis/google-cloud-dotnet/commit/75f14ec9ae233ff89a3649e501a0c84abb0b867b))
+
+### Documentation improvements
+
+- Update field documentation based on field behavior updates ([commit 75f14ec](https://github.com/googleapis/google-cloud-dotnet/commit/75f14ec9ae233ff89a3649e501a0c84abb0b867b))
+
 ## Version 1.0.0-beta07, released 2023-11-07
 
 ### New features
