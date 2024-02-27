@@ -244,7 +244,7 @@ namespace Google.Cloud.Batch.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. A system generated unique ID (in UUID4 format) for the Job.
+    /// Output only. A system generated unique ID for the Job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
