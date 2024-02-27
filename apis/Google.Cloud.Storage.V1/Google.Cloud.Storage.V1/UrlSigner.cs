@@ -32,7 +32,6 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public sealed partial class UrlSigner
     {
-        private const string StorageHost = "storage.googleapis.com";
         private static readonly ISigner s_v2Signer = new V2Signer();
         private static readonly ISigner s_v4Signer = new V4Signer();
 

@@ -146,8 +146,8 @@ namespace Google.Cloud.Storage.V1
 
                     (_host, _urlResourcePath) = options.UrlStyle switch
                     {
-                        UrlStyle.PathStyle => (StorageHost, $"/{template.Bucket}"),
-                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{StorageHost}", string.Empty),
+                        UrlStyle.PathStyle => (options.HostAndPort, $"/{template.Bucket}"),
+                        UrlStyle.VirtualHostedStyle => ($"{template.Bucket}.{options.HostAndPort}", string.Empty),
                         _ => throw new ArgumentOutOfRangeException(
                             nameof(options.UrlStyle),
                             $"When using {nameof(SigningVersion.V2)} only {nameof(UrlStyle.PathStyle)} or {nameof(UrlStyle.VirtualHostedStyle)} can be specified.")

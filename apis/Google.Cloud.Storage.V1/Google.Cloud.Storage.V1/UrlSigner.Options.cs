@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,6 +25,8 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public sealed class Options
         {
+            private const string DefaultStorageHost = "storage.googleapis.com";
+
             /// <summary>
             /// The length of time for which the signed URL should remain usable,
             /// counting from the moment the signed URL is created.
@@ -68,6 +70,23 @@ namespace Google.Cloud.Storage.V1
             public string Scheme { get; }
 
             /// <summary>
+            /// The host to use for generating the signed URL.
+            /// This will never be null. If null is specified in <see cref="WithHost(string)"/>
+            /// then <see cref="DefaultStorageHost"/> will be used.
+            /// Will be ignored if <see cref="UrlStyle"/> is set to <see cref="UrlStyle.BucketBoundHostname"/>.
+            /// </summary>
+            public string Host { get; }
+
+            /// <summary>
+            /// The port for the signed URL. The port is not included on the signature itself, only on the
+            /// resulting signed URL. Defaults to null.
+            /// Will be ignored if <see cref="UrlStyle"/> is set to <see cref="UrlStyle.BucketBoundHostname"/>.
+            /// </summary>
+            public int? Port { get; }
+
+            internal string HostAndPort => Port is null ? Host : $"{Host}:{Port}";
+
+            /// <summary>
             /// A bucket bound host to use for generating the signed URL.
             /// If <see cref="UrlStyle"/> is <see cref="UrlStyle.BucketBoundHostname"/> this won't be null.
             /// It will be null otherwise.
@@ -82,7 +101,7 @@ namespace Google.Cloud.Storage.V1
             public string BucketBoundHostname { get; }
 
             private Options(
-                TimeSpan? duration, DateTimeOffset? expiration, SigningVersion version, UrlStyle? urlStyle, string scheme, string bucketBoundHostname)
+                TimeSpan? duration, DateTimeOffset? expiration, SigningVersion version, UrlStyle? urlStyle, string scheme, string host, int? port, string bucketBoundHostname)
             {
                 GaxPreconditions.CheckArgument(
                     duration.HasValue != expiration.HasValue,
@@ -113,6 +132,8 @@ namespace Google.Cloud.Storage.V1
                 SigningVersion = version;
                 UrlStyle = urlStyle ?? UrlStyle.PathStyle;
                 Scheme = scheme ?? "https";
+                Host = host ?? DefaultStorageHost;
+                Port = port;
                 BucketBoundHostname = bucketBoundHostname;
             }
 
@@ -122,7 +143,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="duration">The duration to create these options with.</param>
             /// <returns>A new options set.</returns>
             public static Options FromDuration(TimeSpan duration) =>
-                new Options(duration, null, SigningVersion.Default, null, null, null);
+                new Options(duration, null, SigningVersion.Default, null, null, null, null, null);
 
             /// <summary>
             /// Creates a new <see cref="UrlSigner.Options"/> from the given expiration.
@@ -130,7 +151,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="expiration">The expiration to create these options with.</param>
             /// <returns>A new options set.</returns>
             public static Options FromExpiration(DateTimeOffset expiration) =>
-                new Options(null, expiration, SigningVersion.Default, null, null, null);
+                new Options(null, expiration, SigningVersion.Default, null, null, null, null, null);
 
             /// <summary>
             /// If this set of options was duration based, this method will return a new set
@@ -149,7 +170,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="duration">The new duration.</param>
             /// <returns>A new set of options with the given duration.</returns>
             public Options WithDuration(TimeSpan duration) =>
-                new Options(duration, null, SigningVersion, UrlStyle, Scheme, BucketBoundHostname);
+                new Options(duration, null, SigningVersion, UrlStyle, Scheme, Host, Port, BucketBoundHostname);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one but expiration based.
@@ -157,7 +178,7 @@ namespace Google.Cloud.Storage.V1
             /// <param name="expiration">The new expiration.</param>
             /// <returns>A new set of options with the given expiration.</returns>
             public Options WithExpiration(DateTimeOffset expiration) =>
-                new Options(null, expiration, SigningVersion, UrlStyle, Scheme, BucketBoundHostname);
+                new Options(null, expiration, SigningVersion, UrlStyle, Scheme, Host, Port, BucketBoundHostname);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for the signing version.
@@ -165,16 +186,17 @@ namespace Google.Cloud.Storage.V1
             /// <param name="version">The new signing version.</param>
             /// <returns>A set of options with the given signing version.</returns>
             public Options WithSigningVersion(SigningVersion version) =>
-                new Options(Duration, Expiration, GaxPreconditions.CheckEnumValue(version, nameof(version)), UrlStyle, Scheme, BucketBoundHostname);
+                new Options(Duration, Expiration, GaxPreconditions.CheckEnumValue(version, nameof(version)), UrlStyle, Scheme, Host, Port, BucketBoundHostname);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for the
-            /// <see cref="UrlStyle"/> value.
+            /// <see cref="UrlStyle"/> value and <see cref="BucketBoundHostname"/> set to null.
             /// </summary>
+            /// <remarks> Use <see cref="WithBucketBoundHostname(string)"/> to set <see cref="UrlStyle.BucketBoundHostname"/>.</remarks>
             /// <param name="urlStyle">The new url style.</param>
             /// <returns>A new set ofoptions with the given url style.</returns>
             public Options WithUrlStyle(UrlStyle urlStyle) =>
-                new Options(Duration, Expiration, SigningVersion, urlStyle, Scheme, null);
+                new Options(Duration, Expiration, SigningVersion, urlStyle, Scheme, Host, Port, null);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for the scheme.
@@ -182,7 +204,23 @@ namespace Google.Cloud.Storage.V1
             /// <param name="scheme">The new scheme. May be null in which case https will be used.</param>
             /// <returns>A new set of options with the given scheme.</returns>
             public Options WithScheme(string scheme) =>
-                new Options(Duration, Expiration, SigningVersion, UrlStyle, scheme, BucketBoundHostname);
+                new Options(Duration, Expiration, SigningVersion, UrlStyle, scheme, Host, Port, BucketBoundHostname);
+
+            /// <summary>
+            /// Returns a new set of options with the same values as this one except for the host.
+            /// </summary>
+            /// <param name="host">The new host. May be null in which case <see cref="DefaultStorageHost"/> will be used.</param>
+            /// <returns>A new set of options with the given host.</returns>
+            public Options WithHost(string host) =>
+                new Options(Duration, Expiration, SigningVersion, UrlStyle, Scheme, host, Port, BucketBoundHostname);
+
+            /// <summary>
+            /// Returns a new set of options with the same values as this one except for the port.
+            /// </summary>
+            /// <param name="port">The new port. May be null.</param>
+            /// <returns>A new set of options with the given host.</returns>
+            public Options WithPort(int? port) =>
+                new Options(Duration, Expiration, SigningVersion, UrlStyle, Scheme, Host, port, BucketBoundHostname);
 
             /// <summary>
             /// Returns a new set of options with the same values as this one except for bucket bound domain
@@ -192,7 +230,7 @@ namespace Google.Cloud.Storage.V1
             /// <returns>A new set of options with the given bucket bound domain and the url style set to
             /// <see cref="UrlStyle.BucketBoundHostname"/>.</returns>
             public Options WithBucketBoundHostname(string bucketBoundHostname) =>
-                new Options(Duration, Expiration, SigningVersion, UrlStyle.BucketBoundHostname, Scheme, bucketBoundHostname);
+                new Options(Duration, Expiration, SigningVersion, UrlStyle.BucketBoundHostname, Scheme, Host, Port, bucketBoundHostname);
         }
     }
 }

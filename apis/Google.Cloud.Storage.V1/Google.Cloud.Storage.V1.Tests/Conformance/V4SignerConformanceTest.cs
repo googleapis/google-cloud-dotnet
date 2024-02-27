@@ -29,7 +29,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
     {
         public static TheoryData<SigningV4Test> V4SigningTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f =>
             // We skip test data with features that we don't support.
-            f.SigningV4Tests.Where(data => data.Hostname == "" && data.EmulatorHostname == "" && data.ClientEndpoint == "" && data.UniverseDomain == ""));
+            f.SigningV4Tests.Where(data => data.EmulatorHostname == "" && data.ClientEndpoint == "" && data.UniverseDomain == ""));
         public static TheoryData<PostPolicyV4Test> V4PostPolicyTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.PostPolicyV4Tests);
 
         private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
@@ -55,7 +55,17 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
             var options = Options
                 .FromDuration(TimeSpan.FromSeconds(test.Expiration))
                 .WithSigningVersion(SigningVersion.V4)
-                .WithScheme(test.Scheme);
+                .WithScheme(test.Scheme == "" ? null : test.Scheme);
+
+            // SigningV4Test.Hostname can include a port but our UrlSigner.Options have individual options
+            // for scheme, hostname and port so we have to split the hostname here.
+            // Note that there's SigningV4Test.Scheme so we mapped that to our options already.
+            if (test.Hostname != "")
+            {
+                var hostAndPort = test.Hostname.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                options = options.WithHost(hostAndPort[0]);
+                options = hostAndPort.Length == 2 ? options.WithPort(int.Parse(hostAndPort[1])) : options;
+            }
 
             switch (test.UrlStyle)
             {
