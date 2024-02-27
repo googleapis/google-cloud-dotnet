@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.24.0, released 2024-02-27
+
+### New features
+
+- Add CompositeKey message and composite_key field to FeatureViewDataKey ([commit 0fd7d02](https://github.com/googleapis/google-cloud-dotnet/commit/0fd7d02fcb8b65b4f5213936ed99a30002759b8b))
+- Add `point_of_contact` to `Feature` message ([commit d4ab784](https://github.com/googleapis/google-cloud-dotnet/commit/d4ab784aa1a32cc3b4fa4fbf20c13f6a5e838f9e))
+
 ## Version 2.23.0, released 2024-02-12
 
 Note: including a breaking change in a minor version is highly
