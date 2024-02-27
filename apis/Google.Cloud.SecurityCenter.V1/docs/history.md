@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.15.0, released 2024-02-27
+
+### New features
+
+- Add load balancer, log entry, org policy, database.version, exfiltration.total_exfiltrated_bytes, file.disk_path, indicator.signature_type, and kubernetes.objects to finding's list of attributes ([commit 2e2659b](https://github.com/googleapis/google-cloud-dotnet/commit/2e2659b8b970ba3e0cf2937f91016f1835fb4c0c))
+- Add Backup DR field to finding's list of attributes ([commit 3a79f3f](https://github.com/googleapis/google-cloud-dotnet/commit/3a79f3f15ddb7445c0da61db768e33ab2c28fc1c))
+
 ## Version 3.14.0, released 2024-02-20
 
 ### New features
