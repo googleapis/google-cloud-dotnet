@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2024-02-27
+
+### New features
+
+- Support for obtaining the public IP address of an Instance ([commit 28c0d9d](https://github.com/googleapis/google-cloud-dotnet/commit/28c0d9d23d02ec425e360ebc5b1d53814fc6dffd))
+- Support for getting PSC DNS name from the GetConnectionInfo API ([commit 28c0d9d](https://github.com/googleapis/google-cloud-dotnet/commit/28c0d9d23d02ec425e360ebc5b1d53814fc6dffd))
+- Add PSC cluster and instance configuration settings to enable/disable PSC and obtain the PSC endpoint name ([commit 28c0d9d](https://github.com/googleapis/google-cloud-dotnet/commit/28c0d9d23d02ec425e360ebc5b1d53814fc6dffd))
+- Add new API to list the databases in a project and location ([commit 28c0d9d](https://github.com/googleapis/google-cloud-dotnet/commit/28c0d9d23d02ec425e360ebc5b1d53814fc6dffd))
+
+### Documentation improvements
+
+- Clarified read pool config is for read pool type instances ([commit 28c0d9d](https://github.com/googleapis/google-cloud-dotnet/commit/28c0d9d23d02ec425e360ebc5b1d53814fc6dffd))
+
 ## Version 1.0.0-beta03, released 2023-09-25
 
 ### New features
