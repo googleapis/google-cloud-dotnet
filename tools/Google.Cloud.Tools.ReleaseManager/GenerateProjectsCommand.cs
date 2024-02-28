@@ -122,12 +122,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             { ConfigureAwaitAnalyzer, "5.0.0" },
         };
 
-        private static readonly Dictionary<string, string> CommonSampleDependencies = new Dictionary<string, string>
-        {
-            { "CommandLineParser", "2.8.0" },
-            { "Google.Cloud.SampleUtil", "project"},
-        };
-
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
         
@@ -401,9 +395,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                     case ".GeneratedSnippets":
                         GenerateTestProject(api, dir, apiNames);
                         break;
-                    case ".Samples":
-                        GenerateSampleProject(api, dir, apiNames);
-                        break;
                 }
             }
 
@@ -640,27 +631,6 @@ api-name: {api.Id}
 
         private static string GetTestTargetFrameworks(ApiMetadata api) =>
             api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
-
-        private static void GenerateSampleProject(ApiMetadata api, string directory, HashSet<string> apiNames)
-        {
-            // Don't generate a project file if we've got a placeholder directory
-            if (Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories).Length == 0)
-            {
-                return;
-            }
-            var dependencies = new SortedList<string, string>(CommonSampleDependencies, StringComparer.Ordinal);
-            dependencies.Add(api.Id, "project");
-            var propertyGroup =
-                new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "net6.0"),
-                    new XElement("OutputType", "Exe"),
-                    new XElement("IsPackable", false),
-                    new XElement("StartupObject", api.Id + ".Samples.Program"));
-
-            string project = Path.GetFileName(directory);
-            var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
-            WriteProjectFile(directory, propertyGroup, dependenciesElement);
-        }
 
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
