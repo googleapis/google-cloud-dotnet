@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Fix formatting due to unclosed backtick ([commit 9c9f138](https://github.com/googleapis/google-cloud-dotnet/commit/9c9f138f23701d913a1fc192003ff9d77563f792))
+
 ## Version 3.5.0, released 2024-01-08
 
 ### New features
