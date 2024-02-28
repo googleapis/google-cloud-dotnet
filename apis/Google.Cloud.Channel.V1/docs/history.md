@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.10.0, released 2024-02-28
+
+### Documentation improvements
+
+- A comment for service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `RunReportJob` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `FetchReportResults` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+- A comment for method `ListReports` in service `CloudChannelReportsService` is changed ([commit 7cc3f5b](https://github.com/googleapis/google-cloud-dotnet/commit/7cc3f5bfbb76a11fe64ad3672a90e2456d57f8e0))
+
 ## Version 2.9.0, released 2023-09-11
 
 ### New features
