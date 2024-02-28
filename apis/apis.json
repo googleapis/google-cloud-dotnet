@@ -1575,7 +1575,7 @@
     },
     {
       "id": "Google.Cloud.DataCatalog.Lineage.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Data Lineage",
       "productUrl": "https://cloud.google.com/data-catalog/docs/concepts/about-data-lineage",
