@@ -323,7 +323,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
 
       /// <summary>
       /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// the given CRM parent and all of the parent's CRM descendants.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -727,7 +727,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// the given CRM parent and all of the parent's CRM descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -741,7 +741,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// the given CRM parent and all of the parent's CRM descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -753,7 +753,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// the given CRM parent and all of the parent's CRM descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -767,7 +767,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
       }
       /// <summary>
       /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-      /// the given CRM parent and all of the parent’s CRM descendants.
+      /// the given CRM parent and all of the parent's CRM descendants.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
