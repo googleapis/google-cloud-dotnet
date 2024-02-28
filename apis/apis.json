@@ -2343,7 +2343,7 @@
     },
     {
       "id": "Google.Cloud.Eventarc.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Eventarc",
       "productUrl": "https://cloud.google.com/eventarc/docs",
