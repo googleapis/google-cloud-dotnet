@@ -86,7 +86,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
         private const string GrpcCorePackageConditionFramework = "net462";
-        private const string DefaultGaxVersion = "4.5.0";
+        private const string DefaultGaxVersion = "4.6.0";
         private const string GrpcCoreVersion = "2.46.6";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
@@ -97,8 +97,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcCorePackage, GrpcCoreVersion },
             { "Grpc.Core.Testing", GrpcCoreVersion },
-            { "Google.Api.CommonProtos", "2.10.0" },
-            { "Google.Protobuf", "3.23.0" }
+            { "Google.Api.CommonProtos", "2.14.0" },
+            { "Google.Protobuf", "3.25.0" }
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
