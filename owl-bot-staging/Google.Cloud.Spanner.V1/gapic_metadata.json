@@ -1,0 +1,114 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.spanner.v1",
+  "libraryPackage": "Google.Cloud.Spanner.V1",
+  "services": {
+    "Spanner": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SpannerClient",
+          "rpcs": {
+            "BatchCreateSessions": {
+              "methods": [
+                "BatchCreateSessions",
+                "BatchCreateSessionsAsync"
+              ]
+            },
+            "BatchWrite": {
+              "methods": [
+                "BatchWrite",
+                "BatchWriteAsync"
+              ]
+            },
+            "BeginTransaction": {
+              "methods": [
+                "BeginTransaction",
+                "BeginTransactionAsync"
+              ]
+            },
+            "Commit": {
+              "methods": [
+                "Commit",
+                "CommitAsync"
+              ]
+            },
+            "CreateSession": {
+              "methods": [
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "ExecuteBatchDml": {
+              "methods": [
+                "ExecuteBatchDml",
+                "ExecuteBatchDmlAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
+            "ExecuteStreamingSql": {
+              "methods": [
+                "ExecuteStreamingSql",
+                "ExecuteStreamingSqlAsync"
+              ]
+            },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
+            "PartitionQuery": {
+              "methods": [
+                "PartitionQuery",
+                "PartitionQueryAsync"
+              ]
+            },
+            "PartitionRead": {
+              "methods": [
+                "PartitionRead",
+                "PartitionReadAsync"
+              ]
+            },
+            "Read": {
+              "methods": [
+                "Read",
+                "ReadAsync"
+              ]
+            },
+            "Rollback": {
+              "methods": [
+                "Rollback",
+                "RollbackAsync"
+              ]
+            },
+            "StreamingRead": {
+              "methods": [
+                "StreamingRead",
+                "StreamingReadAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

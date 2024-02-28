@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.securesourcemanager.v1",
+  "libraryPackage": "Google.Cloud.SecureSourceManager.V1",
+  "services": {
+    "SecureSourceManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecureSourceManagerClient",
+          "rpcs": {
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "GetIamPolicyRepo": {
+              "methods": [
+                "GetIamPolicyRepo",
+                "GetIamPolicyRepoAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "SetIamPolicyRepo": {
+              "methods": [
+                "SetIamPolicyRepo",
+                "SetIamPolicyRepoAsync"
+              ]
+            },
+            "TestIamPermissionsRepo": {
+              "methods": [
+                "TestIamPermissionsRepo",
+                "TestIamPermissionsRepoAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
