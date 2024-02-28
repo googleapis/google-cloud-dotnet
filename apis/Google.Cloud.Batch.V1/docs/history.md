@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.8.0, released 2024-02-28
+
+### Documentation improvements
+
+- Update description of Job uid field ([commit eaaff5e](https://github.com/googleapis/google-cloud-dotnet/commit/eaaff5e430e478452b5463f33b590209e944b7a7))
+- Refine proto comment for run_as_non_root ([commit 354560a](https://github.com/googleapis/google-cloud-dotnet/commit/354560a797a3038d45cab928a5d4e8b0bd0cac91))
+- Add caution messages for container runnable username and password fields ([commit 354560a](https://github.com/googleapis/google-cloud-dotnet/commit/354560a797a3038d45cab928a5d4e8b0bd0cac91))
+
 ## Version 2.7.0, released 2024-02-08
 
 ### New features
