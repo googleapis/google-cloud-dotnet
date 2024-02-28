@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.1.0, released 2024-02-28
+
+### Documentation improvements
+
+- Fix link to RFC 2616 ([commit 5868d25](https://github.com/googleapis/google-cloud-dotnet/commit/5868d2595a028cca59aa9bd5882e0389ead7eed5))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
