@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-alpha22, released 2024-02-28
+
+### Documentation improvements
+
+- Remove UUID specification in comment ([commit 8951fe6](https://github.com/googleapis/google-cloud-dotnet/commit/8951fe6cfcb94b62017cb970a95df258ffe4a000))
+- Add caution messages for container runnable username and password fields ([commit 7377638](https://github.com/googleapis/google-cloud-dotnet/commit/73776380d25ca177f91f65b7ed2496030e25e884))
+- Refine proto comment for run_as_non_root ([commit 7377638](https://github.com/googleapis/google-cloud-dotnet/commit/73776380d25ca177f91f65b7ed2496030e25e884))
+
 ## Version 1.0.0-alpha21, released 2024-02-08
 
 ### Bug fixes
