@@ -2299,7 +2299,7 @@
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Essential Contacts",
       "productUrl": "https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest",
