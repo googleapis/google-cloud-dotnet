@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2024-02-28
+
+### Documentation improvements
+
+- Fixing Oauth typo ([commit 50dce7e](https://github.com/googleapis/google-cloud-dotnet/commit/50dce7e87a926b0773a3f3a13117f17976b7202f))
+
 ## Version 2.4.0, released 2023-09-18
 
 ### New features
