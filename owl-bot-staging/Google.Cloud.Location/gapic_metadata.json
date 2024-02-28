@@ -1,0 +1,30 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.location",
+  "libraryPackage": "Google.Cloud.Location",
+  "services": {
+    "Locations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LocationsClient",
+          "rpcs": {
+            "GetLocation": {
+              "methods": [
+                "GetLocation",
+                "GetLocationAsync"
+              ]
+            },
+            "ListLocations": {
+              "methods": [
+                "ListLocations",
+                "ListLocationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
