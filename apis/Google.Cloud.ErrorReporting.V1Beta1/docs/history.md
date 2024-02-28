@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta03, released 2024-02-28
+
+### Documentation improvements
+
+- Removed link to the regionalization page ([commit 10a0c0a](https://github.com/googleapis/google-cloud-dotnet/commit/10a0c0a60e7006c2e357816fc2c7f79657891f31))
+
 ## Version 3.0.0-beta02, released 2023-01-19
 
 ### New features
