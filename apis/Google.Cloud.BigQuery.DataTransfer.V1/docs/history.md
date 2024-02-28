@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Update unenrollDataSources API documentation ([commit 4139f3c](https://github.com/googleapis/google-cloud-dotnet/commit/4139f3c037ac0723446f602a5e167cf695857222))
+
 ## Version 4.5.0, released 2024-02-20
 
 ### New features
