@@ -1,0 +1,174 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.edgenetwork.v1",
+  "libraryPackage": "Google.Cloud.EdgeNetwork.V1",
+  "services": {
+    "EdgeNetwork": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EdgeNetworkClient",
+          "rpcs": {
+            "CreateInterconnectAttachment": {
+              "methods": [
+                "CreateInterconnectAttachment",
+                "CreateInterconnectAttachmentAsync"
+              ]
+            },
+            "CreateNetwork": {
+              "methods": [
+                "CreateNetwork",
+                "CreateNetworkAsync"
+              ]
+            },
+            "CreateRouter": {
+              "methods": [
+                "CreateRouter",
+                "CreateRouterAsync"
+              ]
+            },
+            "CreateSubnet": {
+              "methods": [
+                "CreateSubnet",
+                "CreateSubnetAsync"
+              ]
+            },
+            "DeleteInterconnectAttachment": {
+              "methods": [
+                "DeleteInterconnectAttachment",
+                "DeleteInterconnectAttachmentAsync"
+              ]
+            },
+            "DeleteNetwork": {
+              "methods": [
+                "DeleteNetwork",
+                "DeleteNetworkAsync"
+              ]
+            },
+            "DeleteRouter": {
+              "methods": [
+                "DeleteRouter",
+                "DeleteRouterAsync"
+              ]
+            },
+            "DeleteSubnet": {
+              "methods": [
+                "DeleteSubnet",
+                "DeleteSubnetAsync"
+              ]
+            },
+            "DiagnoseInterconnect": {
+              "methods": [
+                "DiagnoseInterconnect",
+                "DiagnoseInterconnectAsync"
+              ]
+            },
+            "DiagnoseNetwork": {
+              "methods": [
+                "DiagnoseNetwork",
+                "DiagnoseNetworkAsync"
+              ]
+            },
+            "DiagnoseRouter": {
+              "methods": [
+                "DiagnoseRouter",
+                "DiagnoseRouterAsync"
+              ]
+            },
+            "GetInterconnect": {
+              "methods": [
+                "GetInterconnect",
+                "GetInterconnectAsync"
+              ]
+            },
+            "GetInterconnectAttachment": {
+              "methods": [
+                "GetInterconnectAttachment",
+                "GetInterconnectAttachmentAsync"
+              ]
+            },
+            "GetNetwork": {
+              "methods": [
+                "GetNetwork",
+                "GetNetworkAsync"
+              ]
+            },
+            "GetRouter": {
+              "methods": [
+                "GetRouter",
+                "GetRouterAsync"
+              ]
+            },
+            "GetSubnet": {
+              "methods": [
+                "GetSubnet",
+                "GetSubnetAsync"
+              ]
+            },
+            "GetZone": {
+              "methods": [
+                "GetZone",
+                "GetZoneAsync"
+              ]
+            },
+            "InitializeZone": {
+              "methods": [
+                "InitializeZone",
+                "InitializeZoneAsync"
+              ]
+            },
+            "ListInterconnectAttachments": {
+              "methods": [
+                "ListInterconnectAttachments",
+                "ListInterconnectAttachmentsAsync"
+              ]
+            },
+            "ListInterconnects": {
+              "methods": [
+                "ListInterconnects",
+                "ListInterconnectsAsync"
+              ]
+            },
+            "ListNetworks": {
+              "methods": [
+                "ListNetworks",
+                "ListNetworksAsync"
+              ]
+            },
+            "ListRouters": {
+              "methods": [
+                "ListRouters",
+                "ListRoutersAsync"
+              ]
+            },
+            "ListSubnets": {
+              "methods": [
+                "ListSubnets",
+                "ListSubnetsAsync"
+              ]
+            },
+            "ListZones": {
+              "methods": [
+                "ListZones",
+                "ListZonesAsync"
+              ]
+            },
+            "UpdateRouter": {
+              "methods": [
+                "UpdateRouter",
+                "UpdateRouterAsync"
+              ]
+            },
+            "UpdateSubnet": {
+              "methods": [
+                "UpdateSubnet",
+                "UpdateSubnetAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
