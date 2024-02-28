@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.0.0-alpha02, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 2.0.0-alpha01, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.
