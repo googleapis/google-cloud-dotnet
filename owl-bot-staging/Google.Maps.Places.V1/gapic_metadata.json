@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.maps.places.v1",
+  "libraryPackage": "Google.Maps.Places.V1",
+  "services": {
+    "Places": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PlacesClient",
+          "rpcs": {
+            "AutocompletePlaces": {
+              "methods": [
+                "AutocompletePlaces",
+                "AutocompletePlacesAsync"
+              ]
+            },
+            "GetPhotoMedia": {
+              "methods": [
+                "GetPhotoMedia",
+                "GetPhotoMediaAsync"
+              ]
+            },
+            "GetPlace": {
+              "methods": [
+                "GetPlace",
+                "GetPlaceAsync"
+              ]
+            },
+            "SearchNearby": {
+              "methods": [
+                "SearchNearby",
+                "SearchNearbyAsync"
+              ]
+            },
+            "SearchText": {
+              "methods": [
+                "SearchText",
+                "SearchTextAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
