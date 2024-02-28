@@ -1776,12 +1776,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 82,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 78,
+          "start": 38,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -1825,12 +1825,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 84,
           "type": "FULL"
         },
         {
-          "start": 39,
-          "end": 80,
+          "start": 40,
+          "end": 82,
           "type": "SHORT"
         }
       ]
@@ -2037,6 +2037,325 @@
         "method": {
           "shortName": "ListInstances",
           "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstances",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_sync",
+      "title": "ListInstancePartitionsRequestObject",
+      "description": "Snippet for ListInstancePartitions",
+      "file": "InstanceAdminClient.ListInstancePartitionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitions",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_async",
+      "title": "ListInstancePartitionsRequestObjectAsync",
+      "description": "Snippet for ListInstancePartitionsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_sync_flattened",
+      "title": "ListInstancePartitions",
+      "description": "Snippet for ListInstancePartitions",
+      "file": "InstanceAdminClient.ListInstancePartitionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitions",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_async_flattened",
+      "title": "ListInstancePartitionsAsync",
+      "description": "Snippet for ListInstancePartitionsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_sync_flattened_resourceNames",
+      "title": "ListInstancePartitionsResourceNames",
+      "description": "Snippet for ListInstancePartitions",
+      "file": "InstanceAdminClient.ListInstancePartitionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitions",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitions_async_flattened_resourceNames",
+      "title": "ListInstancePartitionsResourceNamesAsync",
+      "description": "Snippet for ListInstancePartitionsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionsResponse, Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitions",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitions",
           "service": {
             "shortName": "InstanceAdmin",
             "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
@@ -4036,6 +4355,1415 @@
         {
           "start": 38,
           "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_sync",
+      "title": "GetInstancePartitionRequestObject",
+      "description": "Snippet for GetInstancePartition",
+      "file": "InstanceAdminClient.GetInstancePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_async",
+      "title": "GetInstancePartitionRequestObjectAsync",
+      "description": "Snippet for GetInstancePartitionAsync",
+      "file": "InstanceAdminClient.GetInstancePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.GetInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_sync_flattened",
+      "title": "GetInstancePartition",
+      "description": "Snippet for GetInstancePartition",
+      "file": "InstanceAdminClient.GetInstancePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartition",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_async_flattened",
+      "title": "GetInstancePartitionAsync",
+      "description": "Snippet for GetInstancePartitionAsync",
+      "file": "InstanceAdminClient.GetInstancePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_sync_flattened_resourceNames",
+      "title": "GetInstancePartitionResourceNames",
+      "description": "Snippet for GetInstancePartition",
+      "file": "InstanceAdminClient.GetInstancePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartitionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_GetInstancePartition_async_flattened_resourceNames",
+      "title": "GetInstancePartitionResourceNamesAsync",
+      "description": "Snippet for GetInstancePartitionAsync",
+      "file": "InstanceAdminClient.GetInstancePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.GetInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartitionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.GetInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_sync",
+      "title": "CreateInstancePartitionRequestObject",
+      "description": "Snippet for CreateInstancePartition",
+      "file": "InstanceAdminClient.CreateInstancePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_async",
+      "title": "CreateInstancePartitionRequestObjectAsync",
+      "description": "Snippet for CreateInstancePartitionAsync",
+      "file": "InstanceAdminClient.CreateInstancePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_sync_flattened",
+      "title": "CreateInstancePartition",
+      "description": "Snippet for CreateInstancePartition",
+      "file": "InstanceAdminClient.CreateInstancePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartition",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "System.String",
+            "name": "instancePartitionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_async_flattened",
+      "title": "CreateInstancePartitionAsync",
+      "description": "Snippet for CreateInstancePartitionAsync",
+      "file": "InstanceAdminClient.CreateInstancePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "System.String",
+            "name": "instancePartitionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_sync_flattened_resourceNames",
+      "title": "CreateInstancePartitionResourceNames",
+      "description": "Snippet for CreateInstancePartition",
+      "file": "InstanceAdminClient.CreateInstancePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "System.String",
+            "name": "instancePartitionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_CreateInstancePartition_async_flattened_resourceNames",
+      "title": "CreateInstancePartitionResourceNamesAsync",
+      "description": "Snippet for CreateInstancePartitionAsync",
+      "file": "InstanceAdminClient.CreateInstancePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.CreateInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "System.String",
+            "name": "instancePartitionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.CreateInstancePartitionMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.CreateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_sync",
+      "title": "DeleteInstancePartitionRequestObject",
+      "description": "Snippet for DeleteInstancePartition",
+      "file": "InstanceAdminClient.DeleteInstancePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_async",
+      "title": "DeleteInstancePartitionRequestObjectAsync",
+      "description": "Snippet for DeleteInstancePartitionAsync",
+      "file": "InstanceAdminClient.DeleteInstancePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_sync_flattened",
+      "title": "DeleteInstancePartition",
+      "description": "Snippet for DeleteInstancePartition",
+      "file": "InstanceAdminClient.DeleteInstancePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartition",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_async_flattened",
+      "title": "DeleteInstancePartitionAsync",
+      "description": "Snippet for DeleteInstancePartitionAsync",
+      "file": "InstanceAdminClient.DeleteInstancePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_sync_flattened_resourceNames",
+      "title": "DeleteInstancePartitionResourceNames",
+      "description": "Snippet for DeleteInstancePartition",
+      "file": "InstanceAdminClient.DeleteInstancePartitionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartitionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_DeleteInstancePartition_async_flattened_resourceNames",
+      "title": "DeleteInstancePartitionResourceNamesAsync",
+      "description": "Snippet for DeleteInstancePartitionAsync",
+      "file": "InstanceAdminClient.DeleteInstancePartitionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.DeleteInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartitionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstancePartition_sync",
+      "title": "UpdateInstancePartitionRequestObject",
+      "description": "Snippet for UpdateInstancePartition",
+      "file": "InstanceAdminClient.UpdateInstancePartitionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstancePartition_async",
+      "title": "UpdateInstancePartitionRequestObjectAsync",
+      "description": "Snippet for UpdateInstancePartitionAsync",
+      "file": "InstanceAdminClient.UpdateInstancePartitionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstancePartition_sync_flattened",
+      "title": "UpdateInstancePartition",
+      "description": "Snippet for UpdateInstancePartition",
+      "file": "InstanceAdminClient.UpdateInstancePartitionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstancePartition",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstancePartition",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "fieldMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_UpdateInstancePartition_async_flattened",
+      "title": "UpdateInstancePartitionAsync",
+      "description": "Snippet for UpdateInstancePartitionAsync",
+      "file": "InstanceAdminClient.UpdateInstancePartitionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInstancePartitionAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.UpdateInstancePartitionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition",
+            "name": "instancePartition"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "fieldMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition, Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstancePartitionMetadata>>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateInstancePartition",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstancePartition",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_sync",
+      "title": "ListInstancePartitionOperationsRequestObject",
+      "description": "Snippet for ListInstancePartitionOperations",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_async",
+      "title": "ListInstancePartitionOperationsRequestObjectAsync",
+      "description": "Snippet for ListInstancePartitionOperationsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 41,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_sync_flattened",
+      "title": "ListInstancePartitionOperations",
+      "description": "Snippet for ListInstancePartitionOperations",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_async_flattened",
+      "title": "ListInstancePartitionOperationsAsync",
+      "description": "Snippet for ListInstancePartitionOperationsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_sync_flattened_resourceNames",
+      "title": "ListInstancePartitionOperationsResourceNames",
+      "description": "Snippet for ListInstancePartitionOperations",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperations",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_async_flattened_resourceNames",
+      "title": "ListInstancePartitionOperationsResourceNamesAsync",
+      "description": "Snippet for ListInstancePartitionOperationsAsync",
+      "file": "InstanceAdminClient.ListInstancePartitionOperationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInstancePartitionOperationsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient.ListInstancePartitionOperationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Spanner.Admin.Instance.V1.ListInstancePartitionOperationsResponse, Google.LongRunning.Operation>",
+        "client": {
+          "shortName": "InstanceAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Instance.V1.InstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListInstancePartitionOperations",
+          "fullName": "google.spanner.admin.instance.v1.InstanceAdmin.ListInstancePartitionOperations",
+          "service": {
+            "shortName": "InstanceAdmin",
+            "fullName": "google.spanner.admin.instance.v1.InstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
           "type": "SHORT"
         }
       ]
