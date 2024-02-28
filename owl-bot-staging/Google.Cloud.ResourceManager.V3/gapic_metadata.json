@@ -1,0 +1,384 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.resourcemanager.v3",
+  "libraryPackage": "Google.Cloud.ResourceManager.V3",
+  "services": {
+    "Folders": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FoldersClient",
+          "rpcs": {
+            "CreateFolder": {
+              "methods": [
+                "CreateFolder",
+                "CreateFolderAsync"
+              ]
+            },
+            "DeleteFolder": {
+              "methods": [
+                "DeleteFolder",
+                "DeleteFolderAsync"
+              ]
+            },
+            "GetFolder": {
+              "methods": [
+                "GetFolder",
+                "GetFolderAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "ListFolders": {
+              "methods": [
+                "ListFolders",
+                "ListFoldersAsync"
+              ]
+            },
+            "MoveFolder": {
+              "methods": [
+                "MoveFolder",
+                "MoveFolderAsync"
+              ]
+            },
+            "SearchFolders": {
+              "methods": [
+                "SearchFolders",
+                "SearchFoldersAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UndeleteFolder": {
+              "methods": [
+                "UndeleteFolder",
+                "UndeleteFolderAsync"
+              ]
+            },
+            "UpdateFolder": {
+              "methods": [
+                "UpdateFolder",
+                "UpdateFolderAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Organizations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OrganizationsClient",
+          "rpcs": {
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetOrganization": {
+              "methods": [
+                "GetOrganization",
+                "GetOrganizationAsync"
+              ]
+            },
+            "SearchOrganizations": {
+              "methods": [
+                "SearchOrganizations",
+                "SearchOrganizationsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Projects": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProjectsClient",
+          "rpcs": {
+            "CreateProject": {
+              "methods": [
+                "CreateProject",
+                "CreateProjectAsync"
+              ]
+            },
+            "DeleteProject": {
+              "methods": [
+                "DeleteProject",
+                "DeleteProjectAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetProject": {
+              "methods": [
+                "GetProject",
+                "GetProjectAsync"
+              ]
+            },
+            "ListProjects": {
+              "methods": [
+                "ListProjects",
+                "ListProjectsAsync"
+              ]
+            },
+            "MoveProject": {
+              "methods": [
+                "MoveProject",
+                "MoveProjectAsync"
+              ]
+            },
+            "SearchProjects": {
+              "methods": [
+                "SearchProjects",
+                "SearchProjectsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UndeleteProject": {
+              "methods": [
+                "UndeleteProject",
+                "UndeleteProjectAsync"
+              ]
+            },
+            "UpdateProject": {
+              "methods": [
+                "UpdateProject",
+                "UpdateProjectAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TagBindings": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TagBindingsClient",
+          "rpcs": {
+            "CreateTagBinding": {
+              "methods": [
+                "CreateTagBinding",
+                "CreateTagBindingAsync"
+              ]
+            },
+            "DeleteTagBinding": {
+              "methods": [
+                "DeleteTagBinding",
+                "DeleteTagBindingAsync"
+              ]
+            },
+            "ListEffectiveTags": {
+              "methods": [
+                "ListEffectiveTags",
+                "ListEffectiveTagsAsync"
+              ]
+            },
+            "ListTagBindings": {
+              "methods": [
+                "ListTagBindings",
+                "ListTagBindingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TagHolds": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TagHoldsClient",
+          "rpcs": {
+            "CreateTagHold": {
+              "methods": [
+                "CreateTagHold",
+                "CreateTagHoldAsync"
+              ]
+            },
+            "DeleteTagHold": {
+              "methods": [
+                "DeleteTagHold",
+                "DeleteTagHoldAsync"
+              ]
+            },
+            "ListTagHolds": {
+              "methods": [
+                "ListTagHolds",
+                "ListTagHoldsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TagKeys": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TagKeysClient",
+          "rpcs": {
+            "CreateTagKey": {
+              "methods": [
+                "CreateTagKey",
+                "CreateTagKeyAsync"
+              ]
+            },
+            "DeleteTagKey": {
+              "methods": [
+                "DeleteTagKey",
+                "DeleteTagKeyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetNamespacedTagKey": {
+              "methods": [
+                "GetNamespacedTagKey",
+                "GetNamespacedTagKeyAsync"
+              ]
+            },
+            "GetTagKey": {
+              "methods": [
+                "GetTagKey",
+                "GetTagKeyAsync"
+              ]
+            },
+            "ListTagKeys": {
+              "methods": [
+                "ListTagKeys",
+                "ListTagKeysAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateTagKey": {
+              "methods": [
+                "UpdateTagKey",
+                "UpdateTagKeyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TagValues": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TagValuesClient",
+          "rpcs": {
+            "CreateTagValue": {
+              "methods": [
+                "CreateTagValue",
+                "CreateTagValueAsync"
+              ]
+            },
+            "DeleteTagValue": {
+              "methods": [
+                "DeleteTagValue",
+                "DeleteTagValueAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetNamespacedTagValue": {
+              "methods": [
+                "GetNamespacedTagValue",
+                "GetNamespacedTagValueAsync"
+              ]
+            },
+            "GetTagValue": {
+              "methods": [
+                "GetTagValue",
+                "GetTagValueAsync"
+              ]
+            },
+            "ListTagValues": {
+              "methods": [
+                "ListTagValues",
+                "ListTagValuesAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateTagValue": {
+              "methods": [
+                "UpdateTagValue",
+                "UpdateTagValueAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

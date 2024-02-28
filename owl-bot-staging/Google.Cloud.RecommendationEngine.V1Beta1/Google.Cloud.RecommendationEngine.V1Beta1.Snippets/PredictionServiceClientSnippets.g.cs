@@ -1,0 +1,319 @@
+// Copyright 2024 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+namespace GoogleCSharpSnippets
+{
+    using Google.Api.Gax;
+    using Google.Cloud.RecommendationEngine.V1Beta1;
+    using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    /// <summary>Generated snippets.</summary>
+    public sealed class AllGeneratedPredictionServiceClientSnippets
+    {
+        /// <summary>Snippet for Predict</summary>
+        public void PredictRequestObject()
+        {
+            // Snippet: Predict(PredictRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            PredictRequest request = new PredictRequest
+            {
+                PlacementName = PlacementName.FromProjectLocationCatalogEventStorePlacement("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]", "[PLACEMENT]"),
+                UserEvent = new UserEvent(),
+                Filter = "",
+                DryRun = false,
+                Params = { { "", new Value() }, },
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.Predict(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PredictResponse.Types.PredictionResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (PredictResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for PredictAsync</summary>
+        public async Task PredictRequestObjectAsync()
+        {
+            // Snippet: PredictAsync(PredictRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PredictRequest request = new PredictRequest
+            {
+                PlacementName = PlacementName.FromProjectLocationCatalogEventStorePlacement("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]", "[PLACEMENT]"),
+                UserEvent = new UserEvent(),
+                Filter = "",
+                DryRun = false,
+                Params = { { "", new Value() }, },
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.PredictAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PredictResponse.Types.PredictionResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((PredictResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Predict</summary>
+        public void Predict()
+        {
+            // Snippet: Predict(string, UserEvent, string, int?, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/eventStores/[EVENT_STORE]/placements/[PLACEMENT]";
+            UserEvent userEvent = new UserEvent();
+            // Make the request
+            PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.Predict(name, userEvent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PredictResponse.Types.PredictionResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (PredictResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for PredictAsync</summary>
+        public async Task PredictAsync()
+        {
+            // Snippet: PredictAsync(string, UserEvent, string, int?, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/catalogs/[CATALOG]/eventStores/[EVENT_STORE]/placements/[PLACEMENT]";
+            UserEvent userEvent = new UserEvent();
+            // Make the request
+            PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.PredictAsync(name, userEvent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PredictResponse.Types.PredictionResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((PredictResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Predict</summary>
+        public void PredictResourceNames()
+        {
+            // Snippet: Predict(PlacementName, UserEvent, string, int?, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            PlacementName name = PlacementName.FromProjectLocationCatalogEventStorePlacement("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]", "[PLACEMENT]");
+            UserEvent userEvent = new UserEvent();
+            // Make the request
+            PagedEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.Predict(name, userEvent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PredictResponse.Types.PredictionResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (PredictResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for PredictAsync</summary>
+        public async Task PredictResourceNamesAsync()
+        {
+            // Snippet: PredictAsync(PlacementName, UserEvent, string, int?, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PlacementName name = PlacementName.FromProjectLocationCatalogEventStorePlacement("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]", "[PLACEMENT]");
+            UserEvent userEvent = new UserEvent();
+            // Make the request
+            PagedAsyncEnumerable<PredictResponse, PredictResponse.Types.PredictionResult> response = predictionServiceClient.PredictAsync(name, userEvent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((PredictResponse.Types.PredictionResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((PredictResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PredictResponse.Types.PredictionResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PredictResponse.Types.PredictionResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PredictResponse.Types.PredictionResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+    }
+}

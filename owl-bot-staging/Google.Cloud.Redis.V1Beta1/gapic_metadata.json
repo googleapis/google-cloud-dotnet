@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.redis.v1beta1",
+  "libraryPackage": "Google.Cloud.Redis.V1Beta1",
+  "services": {
+    "CloudRedis": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudRedisClient",
+          "rpcs": {
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "ExportInstance": {
+              "methods": [
+                "ExportInstance",
+                "ExportInstanceAsync"
+              ]
+            },
+            "FailoverInstance": {
+              "methods": [
+                "FailoverInstance",
+                "FailoverInstanceAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetInstanceAuthString": {
+              "methods": [
+                "GetInstanceAuthString",
+                "GetInstanceAuthStringAsync"
+              ]
+            },
+            "ImportInstance": {
+              "methods": [
+                "ImportInstance",
+                "ImportInstanceAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "UpgradeInstance": {
+              "methods": [
+                "UpgradeInstance",
+                "UpgradeInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
