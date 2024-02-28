@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigSettings = existing.DeleteInstanceConfigSettings;
             ListInstanceConfigOperationsSettings = existing.ListInstanceConfigOperationsSettings;
             ListInstancesSettings = existing.ListInstancesSettings;
+            ListInstancePartitionsSettings = existing.ListInstancePartitionsSettings;
             GetInstanceSettings = existing.GetInstanceSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
@@ -68,6 +69,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            GetInstancePartitionSettings = existing.GetInstancePartitionSettings;
+            CreateInstancePartitionSettings = existing.CreateInstancePartitionSettings;
+            CreateInstancePartitionOperationsSettings = existing.CreateInstancePartitionOperationsSettings.Clone();
+            DeleteInstancePartitionSettings = existing.DeleteInstancePartitionSettings;
+            UpdateInstancePartitionSettings = existing.UpdateInstancePartitionSettings;
+            UpdateInstancePartitionOperationsSettings = existing.UpdateInstancePartitionOperationsSettings.Clone();
+            ListInstancePartitionOperationsSettings = existing.ListInstancePartitionOperationsSettings;
             OnCopy(existing);
         }
 
@@ -223,6 +231,19 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.ListInstancePartitions</c> and <c>InstanceAdminClient.ListInstancePartitionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInstancePartitionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstanceAdminClient.GetInstance</c> and <c>InstanceAdminClient.GetInstanceAsync</c>.
         /// </summary>
         /// <remarks>
@@ -367,6 +388,106 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.GetInstancePartition</c> and <c>InstanceAdminClient.GetInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.CreateInstancePartition</c> and <c>InstanceAdminClient.CreateInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.CreateInstancePartition</c> and
+        /// <c>InstanceAdminClient.CreateInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateInstancePartitionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.DeleteInstancePartition</c> and <c>InstanceAdminClient.DeleteInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.UpdateInstancePartition</c> and <c>InstanceAdminClient.UpdateInstancePartitionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateInstancePartitionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstanceAdminClient.UpdateInstancePartition</c> and
+        /// <c>InstanceAdminClient.UpdateInstancePartitionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateInstancePartitionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstanceAdminClient.ListInstancePartitionOperations</c> and
+        /// <c>InstanceAdminClient.ListInstancePartitionOperationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInstancePartitionOperationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="InstanceAdminSettings"/> object.</returns>
@@ -2217,6 +2338,124 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             }, callSettings);
 
         /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitions(new ListInstancePartitionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionsAsync(new ListInstancePartitionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitions(new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose instance partitions should be listed. Values
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionsAsync(new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Gets information about a particular instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3923,6 +4162,1418 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartition(new GetInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartitionAsync(new GetInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstancePartition GetInstancePartition(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartition(new GetInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstancePartitionAsync(new GetInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance partition. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstancePartition> GetInstancePartitionAsync(InstancePartitionName name, st::CancellationToken cancellationToken) =>
+            GetInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateInstancePartition</c>.</summary>
+        public virtual lro::OperationsClient CreateInstancePartitionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> PollOnceCreateInstancePartition(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, CreateInstancePartitionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> PollOnceCreateInstancePartitionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, CreateInstancePartitionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(string parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartition(new CreateInstancePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(string parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartitionAsync(new CreateInstancePartitionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(string parent, InstancePartition instancePartition, string instancePartitionId, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartition(new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstancePartitionAsync(new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstancePartitionId = gax::GaxPreconditions.CheckNotNullOrEmpty(instancePartitionId, nameof(instancePartitionId)),
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance in which to create the instance
+        /// partition. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to create. The instance_partition.name may
+        /// be omitted, but if specified must be
+        /// `&lt;parent&gt;/instancePartitions/&lt;instance_partition_id&gt;`.
+        /// </param>
+        /// <param name="instancePartitionId">
+        /// Required. The ID of the instance partition to create. Valid identifiers are
+        /// of the form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 2 and 64
+        /// characters in length.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(gcscv::InstanceName parent, InstancePartition instancePartition, string instancePartitionId, st::CancellationToken cancellationToken) =>
+            CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartition(new DeleteInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartitionAsync(new DeleteInstancePartitionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteInstancePartition(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartition(new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(InstancePartitionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstancePartitionAsync(new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance partition to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteInstancePartitionAsync(InstancePartitionName name, st::CancellationToken cancellationToken) =>
+            DeleteInstancePartitionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateInstancePartitionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateInstancePartition</c>.</summary>
+        public virtual lro::OperationsClient UpdateInstancePartitionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> PollOnceUpdateInstancePartition(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateInstancePartition</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> PollOnceUpdateInstancePartitionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateInstancePartitionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(InstancePartition instancePartition, wkt::FieldMask fieldMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstancePartition(new UpdateInstancePartitionRequest
+            {
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+                FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(InstancePartition instancePartition, wkt::FieldMask fieldMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateInstancePartitionAsync(new UpdateInstancePartitionRequest
+            {
+                InstancePartition = gax::GaxPreconditions.CheckNotNull(instancePartition, nameof(instancePartition)),
+                FieldMask = gax::GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="instancePartition">
+        /// Required. The instance partition to update, which must always include the
+        /// instance partition name. Otherwise, only fields mentioned in
+        /// [field_mask][google.spanner.admin.instance.v1.UpdateInstancePartitionRequest.field_mask]
+        /// need be included.
+        /// </param>
+        /// <param name="fieldMask">
+        /// Required. A mask specifying which fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// should be updated. The field mask must always be specified; this prevents
+        /// any future fields in
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition]
+        /// from being erased accidentally by clients that do not know about them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(InstancePartition instancePartition, wkt::FieldMask fieldMask, st::CancellationToken cancellationToken) =>
+            UpdateInstancePartitionAsync(instancePartition, fieldMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionOperations(new ListInstancePartitionOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionOperationsAsync(new ListInstancePartitionOperationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionOperations(new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance of the instance partition operations.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInstancePartitionOperationsAsync(new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>InstanceAdmin client wrapper implementation, for convenient use.</summary>
@@ -3965,6 +5616,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;
 
+        private readonly gaxgrpc::ApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse> _callListInstancePartitions;
+
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
 
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
@@ -3978,6 +5631,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<GetInstancePartitionRequest, InstancePartition> _callGetInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<CreateInstancePartitionRequest, lro::Operation> _callCreateInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<DeleteInstancePartitionRequest, wkt::Empty> _callDeleteInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<UpdateInstancePartitionRequest, lro::Operation> _callUpdateInstancePartition;
+
+        private readonly gaxgrpc::ApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse> _callListInstancePartitionOperations;
 
         /// <summary>
         /// Constructs a client wrapper for the InstanceAdmin service, with the specified gRPC client and settings.
@@ -3994,6 +5657,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             UpdateInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceConfigOperationsSettings, logger);
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
+            CreateInstancePartitionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstancePartitionOperationsSettings, logger);
+            UpdateInstancePartitionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstancePartitionOperationsSettings, logger);
             _callListInstanceConfigs = clientHelper.BuildApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse>("ListInstanceConfigs", grpcClient.ListInstanceConfigsAsync, grpcClient.ListInstanceConfigs, effectiveSettings.ListInstanceConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstanceConfigs);
             Modify_ListInstanceConfigsApiCall(ref _callListInstanceConfigs);
@@ -4015,6 +5680,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
+            _callListInstancePartitions = clientHelper.BuildApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse>("ListInstancePartitions", grpcClient.ListInstancePartitionsAsync, grpcClient.ListInstancePartitions, effectiveSettings.ListInstancePartitionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListInstancePartitions);
+            Modify_ListInstancePartitionsApiCall(ref _callListInstancePartitions);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>("GetInstance", grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
@@ -4036,6 +5704,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callGetInstancePartition = clientHelper.BuildApiCall<GetInstancePartitionRequest, InstancePartition>("GetInstancePartition", grpcClient.GetInstancePartitionAsync, grpcClient.GetInstancePartition, effectiveSettings.GetInstancePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInstancePartition);
+            Modify_GetInstancePartitionApiCall(ref _callGetInstancePartition);
+            _callCreateInstancePartition = clientHelper.BuildApiCall<CreateInstancePartitionRequest, lro::Operation>("CreateInstancePartition", grpcClient.CreateInstancePartitionAsync, grpcClient.CreateInstancePartition, effectiveSettings.CreateInstancePartitionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateInstancePartition);
+            Modify_CreateInstancePartitionApiCall(ref _callCreateInstancePartition);
+            _callDeleteInstancePartition = clientHelper.BuildApiCall<DeleteInstancePartitionRequest, wkt::Empty>("DeleteInstancePartition", grpcClient.DeleteInstancePartitionAsync, grpcClient.DeleteInstancePartition, effectiveSettings.DeleteInstancePartitionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteInstancePartition);
+            Modify_DeleteInstancePartitionApiCall(ref _callDeleteInstancePartition);
+            _callUpdateInstancePartition = clientHelper.BuildApiCall<UpdateInstancePartitionRequest, lro::Operation>("UpdateInstancePartition", grpcClient.UpdateInstancePartitionAsync, grpcClient.UpdateInstancePartition, effectiveSettings.UpdateInstancePartitionSettings).WithGoogleRequestParam("instance_partition.name", request => request.InstancePartition?.Name);
+            Modify_ApiCall(ref _callUpdateInstancePartition);
+            Modify_UpdateInstancePartitionApiCall(ref _callUpdateInstancePartition);
+            _callListInstancePartitionOperations = clientHelper.BuildApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse>("ListInstancePartitionOperations", grpcClient.ListInstancePartitionOperationsAsync, grpcClient.ListInstancePartitionOperations, effectiveSettings.ListInstancePartitionOperationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListInstancePartitionOperations);
+            Modify_ListInstancePartitionOperationsApiCall(ref _callListInstancePartitionOperations);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4055,6 +5738,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
 
+        partial void Modify_ListInstancePartitionsApiCall(ref gaxgrpc::ApiCall<ListInstancePartitionsRequest, ListInstancePartitionsResponse> call);
+
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
 
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
@@ -4068,6 +5753,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_GetInstancePartitionApiCall(ref gaxgrpc::ApiCall<GetInstancePartitionRequest, InstancePartition> call);
+
+        partial void Modify_CreateInstancePartitionApiCall(ref gaxgrpc::ApiCall<CreateInstancePartitionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteInstancePartitionApiCall(ref gaxgrpc::ApiCall<DeleteInstancePartitionRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateInstancePartitionApiCall(ref gaxgrpc::ApiCall<UpdateInstancePartitionRequest, lro::Operation> call);
+
+        partial void Modify_ListInstancePartitionOperationsApiCall(ref gaxgrpc::ApiCall<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse> call);
 
         partial void OnConstruction(InstanceAdmin.InstanceAdminClient grpcClient, InstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4088,6 +5783,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListInstancePartitionsRequest(ref ListInstancePartitionsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -4101,6 +5798,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetInstancePartitionRequest(ref GetInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateInstancePartitionRequest(ref CreateInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteInstancePartitionRequest(ref DeleteInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateInstancePartitionRequest(ref UpdateInstancePartitionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListInstancePartitionOperationsRequest(ref ListInstancePartitionOperationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
@@ -4477,6 +6184,30 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="InstancePartition"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitions(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancePartitionsRequest, ListInstancePartitionsResponse, InstancePartition>(_callListInstancePartitions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all instance partitions for the given instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="InstancePartition"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> ListInstancePartitionsAsync(ListInstancePartitionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancePartitionsRequest, ListInstancePartitionsResponse, InstancePartition>(_callListInstancePartitions, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets information about a particular instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4839,6 +6570,330 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InstancePartition GetInstancePartition(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstancePartitionRequest(ref request, ref callSettings);
+            return _callGetInstancePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a particular instance partition.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InstancePartition> GetInstancePartitionAsync(GetInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstancePartitionRequest(ref request, ref callSettings);
+            return _callGetInstancePartition.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateInstancePartition</c>.</summary>
+        public override lro::OperationsClient CreateInstancePartitionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InstancePartition, CreateInstancePartitionMetadata> CreateInstancePartition(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, CreateInstancePartitionMetadata>(_callCreateInstancePartition.Sync(request, callSettings), CreateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an instance partition and begins preparing it to be used. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new instance partition.
+        /// The instance partition name is assigned by the caller. If the named
+        /// instance partition already exists, `CreateInstancePartition` returns
+        /// `ALREADY_EXISTS`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * The instance partition is readable via the API, with all requested
+        /// attributes but no allocated resources. Its state is `CREATING`.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation renders the instance partition immediately
+        /// unreadable via the API.
+        /// * The instance partition can be deleted.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing for all successfully-allocated resources begins (some types
+        /// may have lower than the requested levels).
+        /// * Databases can start using this instance partition.
+        /// * The instance partition's allocated resource levels are readable via the
+        /// API.
+        /// * The instance partition's state becomes `READY`.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track creation of the instance partition.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InstancePartition, CreateInstancePartitionMetadata>> CreateInstancePartitionAsync(CreateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, CreateInstancePartitionMetadata>(await _callCreateInstancePartition.Async(request, callSettings).ConfigureAwait(false), CreateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteInstancePartition(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteInstancePartitionRequest(ref request, ref callSettings);
+            _callDeleteInstancePartition.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an existing instance partition. Requires that the
+        /// instance partition is not used by any database or backup and is not the
+        /// default instance partition of an instance.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.delete` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteInstancePartitionAsync(DeleteInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteInstancePartitionRequest(ref request, ref callSettings);
+            return _callDeleteInstancePartition.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateInstancePartition</c>.</summary>
+        public override lro::OperationsClient UpdateInstancePartitionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InstancePartition, UpdateInstancePartitionMetadata> UpdateInstancePartition(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>(_callUpdateInstancePartition.Sync(request, callSettings), UpdateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an instance partition, and begins allocating or releasing resources
+        /// as requested. The returned [long-running
+        /// operation][google.longrunning.Operation] can be used to track the
+        /// progress of updating the instance partition. If the named instance
+        /// partition does not exist, returns `NOT_FOUND`.
+        /// 
+        /// Immediately upon completion of this request:
+        /// 
+        /// * For resource types for which a decrease in the instance partition's
+        /// allocation has been requested, billing is based on the newly-requested
+        /// level.
+        /// 
+        /// Until completion of the returned operation:
+        /// 
+        /// * Cancelling the operation sets its metadata's
+        /// [cancel_time][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata.cancel_time],
+        /// and begins restoring resources to their pre-request values. The
+        /// operation is guaranteed to succeed at undoing all resource changes,
+        /// after which point it terminates with a `CANCELLED` status.
+        /// * All other attempts to modify the instance partition are rejected.
+        /// * Reading the instance partition via the API continues to give the
+        /// pre-request resource levels.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * Billing begins for all successfully-allocated resources (some types
+        /// may have lower than the requested levels).
+        /// * All newly-reserved resources are available for serving the instance
+        /// partition's tables.
+        /// * The instance partition's new resource levels are readable via the API.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track the instance partition modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
+        /// successful.
+        /// 
+        /// Authorization requires `spanner.instancePartitions.update` permission on
+        /// the resource
+        /// [name][google.spanner.admin.instance.v1.InstancePartition.name].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>> UpdateInstancePartitionAsync(UpdateInstancePartitionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateInstancePartitionRequest(ref request, ref callSettings);
+            return new lro::Operation<InstancePartition, UpdateInstancePartitionMetadata>(await _callUpdateInstancePartition.Async(request, callSettings).ConfigureAwait(false), UpdateInstancePartitionOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperations(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse, lro::Operation>(_callListInstancePartitionOperations, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists instance partition [long-running
+        /// operations][google.longrunning.Operation] in the given instance.
+        /// An instance partition operation has a name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
+        /// The long-running operation
+        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// `metadata.type_url` describes the type of the metadata. Operations returned
+        /// include those that have completed/failed/canceled within the last 7 days,
+        /// and pending operations. Operations returned are ordered by
+        /// `operation.metadata.value.start_time` in descending order starting from the
+        /// most recently started operation.
+        /// 
+        /// Authorization requires `spanner.instancePartitionOperations.list`
+        /// permission on the resource
+        /// [parent][google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest.parent].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, lro::Operation> ListInstancePartitionOperationsAsync(ListInstancePartitionOperationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInstancePartitionOperationsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInstancePartitionOperationsRequest, ListInstancePartitionOperationsResponse, lro::Operation>(_callListInstancePartitionOperations, request, callSettings);
+        }
     }
 
     public partial class ListInstanceConfigsRequest : gaxgrpc::IPageRequest
@@ -4850,6 +6905,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListInstancePartitionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListInstancePartitionOperationsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4873,6 +6936,22 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListInstancePartitionsResponse : gaxgrpc::IPageResponse<InstancePartition>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<InstancePartition> GetEnumerator() => InstancePartitions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListInstancePartitionOperationsResponse : gaxgrpc::IPageResponse<lro::Operation>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<lro::Operation> GetEnumerator() => Operations.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

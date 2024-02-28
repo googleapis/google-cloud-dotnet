@@ -1101,6 +1101,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                InstanceDeadline = new Timestamp(),
             };
             // Make the request
             PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(request);
@@ -1150,6 +1151,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
+                InstanceDeadline = new Timestamp(),
             };
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstancesAsync(request);
@@ -1359,6 +1361,284 @@ namespace GoogleCSharpSnippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Instance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitions</summary>
+        public void ListInstancePartitionsRequestObject()
+        {
+            // Snippet: ListInstancePartitions(ListInstancePartitionsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstancePartitionDeadline = new Timestamp(),
+            };
+            // Make the request
+            PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstancePartition item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionsAsync</summary>
+        public async Task ListInstancePartitionsRequestObjectAsync()
+        {
+            // Snippet: ListInstancePartitionsAsync(ListInstancePartitionsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInstancePartitionsRequest request = new ListInstancePartitionsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstancePartitionDeadline = new Timestamp(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstancePartition item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitions</summary>
+        public void ListInstancePartitions()
+        {
+            // Snippet: ListInstancePartitions(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstancePartition item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionsAsync</summary>
+        public async Task ListInstancePartitionsAsync()
+        {
+            // Snippet: ListInstancePartitionsAsync(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstancePartition item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitions</summary>
+        public void ListInstancePartitionsResourceNames()
+        {
+            // Snippet: ListInstancePartitions(InstanceName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (InstancePartition item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionsAsync</summary>
+        public async Task ListInstancePartitionsResourceNamesAsync()
+        {
+            // Snippet: ListInstancePartitionsAsync(InstanceName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionsResponse, InstancePartition> response = instanceAdminClient.ListInstancePartitionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((InstancePartition item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (InstancePartition item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<InstancePartition> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (InstancePartition item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2141,6 +2421,785 @@ namespace GoogleCSharpSnippets
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await instanceAdminClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartition</summary>
+        public void GetInstancePartitionRequestObject()
+        {
+            // Snippet: GetInstancePartition(GetInstancePartitionRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetInstancePartitionRequest request = new GetInstancePartitionRequest
+            {
+                InstancePartitionName = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]"),
+            };
+            // Make the request
+            InstancePartition response = instanceAdminClient.GetInstancePartition(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartitionAsync</summary>
+        public async Task GetInstancePartitionRequestObjectAsync()
+        {
+            // Snippet: GetInstancePartitionAsync(GetInstancePartitionRequest, CallSettings)
+            // Additional: GetInstancePartitionAsync(GetInstancePartitionRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetInstancePartitionRequest request = new GetInstancePartitionRequest
+            {
+                InstancePartitionName = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]"),
+            };
+            // Make the request
+            InstancePartition response = await instanceAdminClient.GetInstancePartitionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartition</summary>
+        public void GetInstancePartition()
+        {
+            // Snippet: GetInstancePartition(string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/instancePartitions/[INSTANCE_PARTITION]";
+            // Make the request
+            InstancePartition response = instanceAdminClient.GetInstancePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartitionAsync</summary>
+        public async Task GetInstancePartitionAsync()
+        {
+            // Snippet: GetInstancePartitionAsync(string, CallSettings)
+            // Additional: GetInstancePartitionAsync(string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/instancePartitions/[INSTANCE_PARTITION]";
+            // Make the request
+            InstancePartition response = await instanceAdminClient.GetInstancePartitionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartition</summary>
+        public void GetInstancePartitionResourceNames()
+        {
+            // Snippet: GetInstancePartition(InstancePartitionName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstancePartitionName name = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]");
+            // Make the request
+            InstancePartition response = instanceAdminClient.GetInstancePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInstancePartitionAsync</summary>
+        public async Task GetInstancePartitionResourceNamesAsync()
+        {
+            // Snippet: GetInstancePartitionAsync(InstancePartitionName, CallSettings)
+            // Additional: GetInstancePartitionAsync(InstancePartitionName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstancePartitionName name = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]");
+            // Make the request
+            InstancePartition response = await instanceAdminClient.GetInstancePartitionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartition</summary>
+        public void CreateInstancePartitionRequestObject()
+        {
+            // Snippet: CreateInstancePartition(CreateInstancePartitionRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            CreateInstancePartitionRequest request = new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstancePartitionId = "",
+                InstancePartition = new InstancePartition(),
+            };
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = instanceAdminClient.CreateInstancePartition(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstancePartition(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartitionAsync</summary>
+        public async Task CreateInstancePartitionRequestObjectAsync()
+        {
+            // Snippet: CreateInstancePartitionAsync(CreateInstancePartitionRequest, CallSettings)
+            // Additional: CreateInstancePartitionAsync(CreateInstancePartitionRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateInstancePartitionRequest request = new CreateInstancePartitionRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                InstancePartitionId = "",
+                InstancePartition = new InstancePartition(),
+            };
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = await instanceAdminClient.CreateInstancePartitionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstancePartitionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartition</summary>
+        public void CreateInstancePartition()
+        {
+            // Snippet: CreateInstancePartition(string, InstancePartition, string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            InstancePartition instancePartition = new InstancePartition();
+            string instancePartitionId = "";
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = instanceAdminClient.CreateInstancePartition(parent, instancePartition, instancePartitionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstancePartition(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartitionAsync</summary>
+        public async Task CreateInstancePartitionAsync()
+        {
+            // Snippet: CreateInstancePartitionAsync(string, InstancePartition, string, CallSettings)
+            // Additional: CreateInstancePartitionAsync(string, InstancePartition, string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            InstancePartition instancePartition = new InstancePartition();
+            string instancePartitionId = "";
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = await instanceAdminClient.CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstancePartitionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartition</summary>
+        public void CreateInstancePartitionResourceNames()
+        {
+            // Snippet: CreateInstancePartition(InstanceName, InstancePartition, string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            InstancePartition instancePartition = new InstancePartition();
+            string instancePartitionId = "";
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = instanceAdminClient.CreateInstancePartition(parent, instancePartition, instancePartitionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = instanceAdminClient.PollOnceCreateInstancePartition(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateInstancePartitionAsync</summary>
+        public async Task CreateInstancePartitionResourceNamesAsync()
+        {
+            // Snippet: CreateInstancePartitionAsync(InstanceName, InstancePartition, string, CallSettings)
+            // Additional: CreateInstancePartitionAsync(InstanceName, InstancePartition, string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            InstancePartition instancePartition = new InstancePartition();
+            string instancePartitionId = "";
+            // Make the request
+            Operation<InstancePartition, CreateInstancePartitionMetadata> response = await instanceAdminClient.CreateInstancePartitionAsync(parent, instancePartition, instancePartitionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, CreateInstancePartitionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, CreateInstancePartitionMetadata> retrievedResponse = await instanceAdminClient.PollOnceCreateInstancePartitionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartition</summary>
+        public void DeleteInstancePartitionRequestObject()
+        {
+            // Snippet: DeleteInstancePartition(DeleteInstancePartitionRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteInstancePartitionRequest request = new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]"),
+                Etag = "",
+            };
+            // Make the request
+            instanceAdminClient.DeleteInstancePartition(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartitionAsync</summary>
+        public async Task DeleteInstancePartitionRequestObjectAsync()
+        {
+            // Snippet: DeleteInstancePartitionAsync(DeleteInstancePartitionRequest, CallSettings)
+            // Additional: DeleteInstancePartitionAsync(DeleteInstancePartitionRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteInstancePartitionRequest request = new DeleteInstancePartitionRequest
+            {
+                InstancePartitionName = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]"),
+                Etag = "",
+            };
+            // Make the request
+            await instanceAdminClient.DeleteInstancePartitionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartition</summary>
+        public void DeleteInstancePartition()
+        {
+            // Snippet: DeleteInstancePartition(string, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/instancePartitions/[INSTANCE_PARTITION]";
+            // Make the request
+            instanceAdminClient.DeleteInstancePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartitionAsync</summary>
+        public async Task DeleteInstancePartitionAsync()
+        {
+            // Snippet: DeleteInstancePartitionAsync(string, CallSettings)
+            // Additional: DeleteInstancePartitionAsync(string, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/instancePartitions/[INSTANCE_PARTITION]";
+            // Make the request
+            await instanceAdminClient.DeleteInstancePartitionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartition</summary>
+        public void DeleteInstancePartitionResourceNames()
+        {
+            // Snippet: DeleteInstancePartition(InstancePartitionName, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstancePartitionName name = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]");
+            // Make the request
+            instanceAdminClient.DeleteInstancePartition(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstancePartitionAsync</summary>
+        public async Task DeleteInstancePartitionResourceNamesAsync()
+        {
+            // Snippet: DeleteInstancePartitionAsync(InstancePartitionName, CallSettings)
+            // Additional: DeleteInstancePartitionAsync(InstancePartitionName, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstancePartitionName name = InstancePartitionName.FromProjectInstanceInstancePartition("[PROJECT]", "[INSTANCE]", "[INSTANCE_PARTITION]");
+            // Make the request
+            await instanceAdminClient.DeleteInstancePartitionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstancePartition</summary>
+        public void UpdateInstancePartitionRequestObject()
+        {
+            // Snippet: UpdateInstancePartition(UpdateInstancePartitionRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateInstancePartitionRequest request = new UpdateInstancePartitionRequest
+            {
+                InstancePartition = new InstancePartition(),
+                FieldMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> response = instanceAdminClient.UpdateInstancePartition(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstancePartition(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstancePartitionAsync</summary>
+        public async Task UpdateInstancePartitionRequestObjectAsync()
+        {
+            // Snippet: UpdateInstancePartitionAsync(UpdateInstancePartitionRequest, CallSettings)
+            // Additional: UpdateInstancePartitionAsync(UpdateInstancePartitionRequest, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateInstancePartitionRequest request = new UpdateInstancePartitionRequest
+            {
+                InstancePartition = new InstancePartition(),
+                FieldMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> response = await instanceAdminClient.UpdateInstancePartitionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstancePartitionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstancePartition</summary>
+        public void UpdateInstancePartition()
+        {
+            // Snippet: UpdateInstancePartition(InstancePartition, FieldMask, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstancePartition instancePartition = new InstancePartition();
+            FieldMask fieldMask = new FieldMask();
+            // Make the request
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> response = instanceAdminClient.UpdateInstancePartition(instancePartition, fieldMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> retrievedResponse = instanceAdminClient.PollOnceUpdateInstancePartition(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateInstancePartitionAsync</summary>
+        public async Task UpdateInstancePartitionAsync()
+        {
+            // Snippet: UpdateInstancePartitionAsync(InstancePartition, FieldMask, CallSettings)
+            // Additional: UpdateInstancePartitionAsync(InstancePartition, FieldMask, CancellationToken)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstancePartition instancePartition = new InstancePartition();
+            FieldMask fieldMask = new FieldMask();
+            // Make the request
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> response = await instanceAdminClient.UpdateInstancePartitionAsync(instancePartition, fieldMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InstancePartition result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InstancePartition, UpdateInstancePartitionMetadata> retrievedResponse = await instanceAdminClient.PollOnceUpdateInstancePartitionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InstancePartition retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperations</summary>
+        public void ListInstancePartitionOperationsRequestObject()
+        {
+            // Snippet: ListInstancePartitionOperations(ListInstancePartitionOperationsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                Filter = "",
+                InstancePartitionDeadline = new Timestamp(),
+            };
+            // Make the request
+            PagedEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperationsAsync</summary>
+        public async Task ListInstancePartitionOperationsRequestObjectAsync()
+        {
+            // Snippet: ListInstancePartitionOperationsAsync(ListInstancePartitionOperationsRequest, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInstancePartitionOperationsRequest request = new ListInstancePartitionOperationsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                Filter = "",
+                InstancePartitionDeadline = new Timestamp(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperations</summary>
+        public void ListInstancePartitionOperations()
+        {
+            // Snippet: ListInstancePartitionOperations(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperationsAsync</summary>
+        public async Task ListInstancePartitionOperationsAsync()
+        {
+            // Snippet: ListInstancePartitionOperationsAsync(string, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperations</summary>
+        public void ListInstancePartitionOperationsResourceNames()
+        {
+            // Snippet: ListInstancePartitionOperations(InstanceName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Operation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInstancePartitionOperationsAsync</summary>
+        public async Task ListInstancePartitionOperationsResourceNamesAsync()
+        {
+            // Snippet: ListInstancePartitionOperationsAsync(InstanceName, string, int?, CallSettings)
+            // Create client
+            InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Operation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInstancePartitionOperationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Operation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

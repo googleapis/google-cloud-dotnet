@@ -16,16 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START spanner_v1_generated_InstanceAdmin_ListInstances_sync]
+    // [START spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_sync_flattened_resourceNames]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Spanner.Admin.Instance.V1;
-    using Google.Protobuf.WellKnownTypes;
+    using Google.Cloud.Spanner.Common.V1;
+    using Google.LongRunning;
     using System;
 
     public sealed partial class GeneratedInstanceAdminClientSnippets
     {
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancePartitionOperations</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,33 +33,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListInstancesRequestObject()
+        public void ListInstancePartitionOperationsResourceNames()
         {
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            ListInstancesRequest request = new ListInstancesRequest
-            {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
-                Filter = "",
-                InstanceDeadline = new Timestamp(),
-            };
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             // Make the request
-            PagedEnumerable<ListInstancesResponse, Instance> response = instanceAdminClient.ListInstances(request);
+            PagedEnumerable<ListInstancePartitionOperationsResponse, Operation> response = instanceAdminClient.ListInstancePartitionOperations(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Instance item in response)
+            foreach (Operation item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListInstancesResponse page in response.AsRawResponses())
+            foreach (ListInstancePartitionOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Instance item in page)
+                foreach (Operation item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -68,10 +63,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Instance> singlePage = response.ReadPage(pageSize);
+            Page<Operation> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Instance item in singlePage)
+            foreach (Operation item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -80,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END spanner_v1_generated_InstanceAdmin_ListInstances_sync]
+    // [END spanner_v1_generated_InstanceAdmin_ListInstancePartitionOperations_sync_flattened_resourceNames]
 }
