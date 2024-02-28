@@ -75,47 +75,6 @@ generate_microgenerator() {
   delete_generated apis/$1/$1.Snippets
   delete_generated apis/$1/$1.GeneratedSnippets
 
-  # If there's exactly one gRPC service config file, pass it in. Otherwise, omit it.
-  GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*_grpc_service_config.json)
-  GRPC_SERVICE_CONFIG_OPTION=
-  if [[ -f "$GRPC_SERVICE_CONFIG" ]]
-  then
-    GRPC_SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
-  fi
-
-  # Default to "all resources are common" but allow a per-API config file too.
-  COMMON_RESOURCES_CONFIG=common-resources-config=CommonResourcesConfig.json
-
-  # Note: defaulting to "x" is pretty horrible, but it's hard to tell the difference
-  # between empty and unspecified otherwise.
-  API_COMMON_RESOURCES_CONFIG=$(get_api_field $PACKAGE_ID commonResourcesConfig x)
-  if [[ $API_COMMON_RESOURCES_CONFIG != "" && $API_COMMON_RESOURCES_CONFIG != "x" ]]
-  then
-    COMMON_RESOURCES_CONFIG=$COMMON_RESOURCES_CONFIG,common-resources-config=$API_COMMON_RESOURCES_CONFIG
-  fi
-  COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
-  TRANSPORT_OPTION=--gapic_opt=transport=$(get_api_field $PACKAGE transport grpc)
-  REST_NUMERIC_ENUMS_OPTION=--gapic_opt=rest-numeric-enums=$(get_api_field $PACKAGE restNumericEnums false)
-  LOGGING_OPTION=--gapic_opt=log=$OUTDIR/generator-log-${PACKAGE_ID}.txt
-
-  # All APIs should have a service config specified, but it might be deliberately "none" to mean
-  # "there are no services for this API directory" e.g. for oslogin/common
-  SERVICE_CONFIG_FILE=$(get_api_field $PACKAGE_ID serviceConfigFile)
-  SERVICE_CONFIG_OPTION=
-  if [[ $SERVICE_CONFIG_FILE != "none" ]]
-  then
-    SERVICE_CONFIG_OPTION=--gapic_opt=service-config=$API_SRC_DIR/$SERVICE_CONFIG_FILE
-  fi
-
-  # Specify the common resources proto where appropriate - which is an increasingly-complex
-  # decision, now delegated to the API catalog.
-  INCLUDE_COMMON_RESOURCES_PROTO=$(get_api_field $PACKAGE_ID includeCommonResourcesProto)
-  COMMON_RESOURCES_PROTO=
-  if [[ $INCLUDE_COMMON_RESOURCES_PROTO == "True" ]]
-  then
-    COMMON_RESOURCES_PROTO=$GOOGLEAPIS/google/cloud/common_resources.proto
-  fi
-  
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
   # Message and service generation. This doesn't need the common resources,
@@ -138,18 +97,12 @@ generate_microgenerator() {
   # types can use the messages in them, but nothing will be generated.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
-    $GRPC_SERVICE_CONFIG_OPTION \
-    $SERVICE_CONFIG_OPTION \
-    $COMMON_RESOURCES_OPTION \
-    $TRANSPORT_OPTION \
-    $REST_NUMERIC_ENUMS_OPTION \
-    $LOGGING_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $GOOGLEAPIS/google/cloud/common/*.proto \
     $(find $API_SRC_DIR -name '*.proto') \
-    $COMMON_RESOURCES_PROTO \
+    $(dotnet $RELEASE_MANAGER_BINARY get-generator-options $PACKAGE_ID $GOOGLEAPIS) \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
   # We generate our own project files
