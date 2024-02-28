@@ -1,0 +1,1745 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.BeyondCorp.AppConnections.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.beyondcorp.appconnections.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_sync",
+      "title": "ListAppConnectionsRequestObject",
+      "description": "Snippet for ListAppConnections",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_async",
+      "title": "ListAppConnectionsRequestObjectAsync",
+      "description": "Snippet for ListAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_sync_flattened",
+      "title": "ListAppConnections",
+      "description": "Snippet for ListAppConnections",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_async_flattened",
+      "title": "ListAppConnectionsAsync",
+      "description": "Snippet for ListAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_sync_flattened_resourceNames",
+      "title": "ListAppConnectionsResourceNames",
+      "description": "Snippet for ListAppConnections",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ListAppConnections_async_flattened_resourceNames",
+      "title": "ListAppConnectionsResourceNamesAsync",
+      "description": "Snippet for ListAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ListAppConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ListAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ListAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ListAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_sync",
+      "title": "GetAppConnectionRequestObject",
+      "description": "Snippet for GetAppConnection",
+      "file": "AppConnectionsServiceClient.GetAppConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.GetAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_async",
+      "title": "GetAppConnectionRequestObjectAsync",
+      "description": "Snippet for GetAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.GetAppConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.GetAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_sync_flattened",
+      "title": "GetAppConnection",
+      "description": "Snippet for GetAppConnection",
+      "file": "AppConnectionsServiceClient.GetAppConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_async_flattened",
+      "title": "GetAppConnectionAsync",
+      "description": "Snippet for GetAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.GetAppConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_sync_flattened_resourceNames",
+      "title": "GetAppConnectionResourceNames",
+      "description": "Snippet for GetAppConnection",
+      "file": "AppConnectionsServiceClient.GetAppConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_GetAppConnection_async_flattened_resourceNames",
+      "title": "GetAppConnectionResourceNamesAsync",
+      "description": "Snippet for GetAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.GetAppConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.GetAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.GetAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_sync",
+      "title": "CreateAppConnectionRequestObject",
+      "description": "Snippet for CreateAppConnection",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.CreateAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_async",
+      "title": "CreateAppConnectionRequestObjectAsync",
+      "description": "Snippet for CreateAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.CreateAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_sync_flattened",
+      "title": "CreateAppConnection",
+      "description": "Snippet for CreateAppConnection",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "appConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_async_flattened",
+      "title": "CreateAppConnectionAsync",
+      "description": "Snippet for CreateAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "appConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_sync_flattened_resourceNames",
+      "title": "CreateAppConnectionResourceNames",
+      "description": "Snippet for CreateAppConnection",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "appConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_CreateAppConnection_async_flattened_resourceNames",
+      "title": "CreateAppConnectionResourceNamesAsync",
+      "description": "Snippet for CreateAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.CreateAppConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.CreateAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "System.String",
+            "name": "appConnectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.CreateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_UpdateAppConnection_sync",
+      "title": "UpdateAppConnectionRequestObject",
+      "description": "Snippet for UpdateAppConnection",
+      "file": "AppConnectionsServiceClient.UpdateAppConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.UpdateAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.UpdateAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.UpdateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_UpdateAppConnection_async",
+      "title": "UpdateAppConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.UpdateAppConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.UpdateAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.UpdateAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.UpdateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_UpdateAppConnection_sync_flattened",
+      "title": "UpdateAppConnection",
+      "description": "Snippet for UpdateAppConnection",
+      "file": "AppConnectionsServiceClient.UpdateAppConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.UpdateAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.UpdateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_UpdateAppConnection_async_flattened",
+      "title": "UpdateAppConnectionAsync",
+      "description": "Snippet for UpdateAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.UpdateAppConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.UpdateAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection",
+            "name": "appConnection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BeyondCorp.AppConnections.V1.AppConnection, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.UpdateAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_sync",
+      "title": "DeleteAppConnectionRequestObject",
+      "description": "Snippet for DeleteAppConnection",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.DeleteAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_async",
+      "title": "DeleteAppConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.DeleteAppConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_sync_flattened",
+      "title": "DeleteAppConnection",
+      "description": "Snippet for DeleteAppConnection",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_async_flattened",
+      "title": "DeleteAppConnectionAsync",
+      "description": "Snippet for DeleteAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_sync_flattened_resourceNames",
+      "title": "DeleteAppConnectionResourceNames",
+      "description": "Snippet for DeleteAppConnection",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnection",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_DeleteAppConnection_async_flattened_resourceNames",
+      "title": "DeleteAppConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteAppConnectionAsync",
+      "file": "AppConnectionsServiceClient.DeleteAppConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppConnectionAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.DeleteAppConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionOperationMetadata>>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteAppConnection",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.DeleteAppConnection",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_sync",
+      "title": "ResolveAppConnectionsRequestObject",
+      "description": "Snippet for ResolveAppConnections",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_async",
+      "title": "ResolveAppConnectionsRequestObjectAsync",
+      "description": "Snippet for ResolveAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_sync_flattened",
+      "title": "ResolveAppConnections",
+      "description": "Snippet for ResolveAppConnections",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_async_flattened",
+      "title": "ResolveAppConnectionsAsync",
+      "description": "Snippet for ResolveAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_sync_flattened_resourceNames",
+      "title": "ResolveAppConnectionsResourceNames",
+      "description": "Snippet for ResolveAppConnections",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnections",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "beyondcorp_v1_generated_AppConnectionsService_ResolveAppConnections_async_flattened_resourceNames",
+      "title": "ResolveAppConnectionsResourceNamesAsync",
+      "description": "Snippet for ResolveAppConnectionsAsync",
+      "file": "AppConnectionsServiceClient.ResolveAppConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResolveAppConnectionsAsync",
+        "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient.ResolveAppConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse, Google.Cloud.BeyondCorp.AppConnections.V1.ResolveAppConnectionsResponse+Types+AppConnectionDetails>",
+        "client": {
+          "shortName": "AppConnectionsServiceClient",
+          "fullName": "Google.Cloud.BeyondCorp.AppConnections.V1.AppConnectionsServiceClient"
+        },
+        "method": {
+          "shortName": "ResolveAppConnections",
+          "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService.ResolveAppConnections",
+          "service": {
+            "shortName": "AppConnectionsService",
+            "fullName": "google.cloud.beyondcorp.appconnections.v1.AppConnectionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
