@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.2.0, released 2024-02-28
+
+### Documentation improvements
+
+- Specify limit for `properties` in `Index` message in Datastore Admin API ([commit 2e2e21b](https://github.com/googleapis/google-cloud-dotnet/commit/2e2e21bc8c6e01672dc17e966f8d824c37ec60de))
+- Minor formatting in Datastore Admin API ([commit 2e2e21b](https://github.com/googleapis/google-cloud-dotnet/commit/2e2e21bc8c6e01672dc17e966f8d824c37ec60de))
+
 ## Version 2.1.0, released 2023-01-16
 
 ### New features
