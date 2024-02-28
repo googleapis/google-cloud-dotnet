@@ -32,13 +32,13 @@ namespace Google.Apps.Script.Type.Sheets {
             "Z29vZ2xlLmFwcHMuc2NyaXB0LnR5cGUuSG9tZXBhZ2VFeHRlbnNpb25Qb2lu",
             "dBJbCh1vbl9maWxlX3Njb3BlX2dyYW50ZWRfdHJpZ2dlchgFIAEoCzI0Lmdv",
             "b2dsZS5hcHBzLnNjcmlwdC50eXBlLnNoZWV0cy5TaGVldHNFeHRlbnNpb25Q",
-            "b2ludCIyChRTaGVldHNFeHRlbnNpb25Qb2ludBIaCgxydW5fZnVuY3Rpb24Y",
-            "ASABKAlCBOJBAQJC5gEKImNvbS5nb29nbGUuYXBwcy5zY3JpcHQudHlwZS5z",
-            "aGVldHNCGFNoZWV0c0FkZE9uTWFuaWZlc3RQcm90b1ABWj1nb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwcHMvc2NyaXB0L3R5cGUv",
-            "c2hlZXRzqgIeR29vZ2xlLkFwcHMuU2NyaXB0LlR5cGUuU2hlZXRzygIeR29v",
-            "Z2xlXEFwcHNcU2NyaXB0XFR5cGVcU2hlZXRz6gIiR29vZ2xlOjpBcHBzOjpT",
-            "Y3JpcHQ6OlR5cGU6OlNoZWV0c2IGcHJvdG8z"));
+            "b2ludCIxChRTaGVldHNFeHRlbnNpb25Qb2ludBIZCgxydW5fZnVuY3Rpb24Y",
+            "ASABKAlCA+BBAkLmAQoiY29tLmdvb2dsZS5hcHBzLnNjcmlwdC50eXBlLnNo",
+            "ZWV0c0IYU2hlZXRzQWRkT25NYW5pZmVzdFByb3RvUAFaPWdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBwcy9zY3JpcHQvdHlwZS9z",
+            "aGVldHOqAh5Hb29nbGUuQXBwcy5TY3JpcHQuVHlwZS5TaGVldHPKAh5Hb29n",
+            "bGVcQXBwc1xTY3JpcHRcVHlwZVxTaGVldHPqAiJHb29nbGU6OkFwcHM6OlNj",
+            "cmlwdDo6VHlwZTo6U2hlZXRzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
