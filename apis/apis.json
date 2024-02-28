@@ -685,7 +685,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppConnections.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "BeyondCorp AppConnections",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
