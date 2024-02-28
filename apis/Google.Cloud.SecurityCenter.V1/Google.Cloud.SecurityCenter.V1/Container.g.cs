@@ -26,19 +26,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvY29udGFpbmVyLnBy",
             "b3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaKmdvb2dsZS9j",
-            "bG91ZC9zZWN1cml0eWNlbnRlci92MS9sYWJlbC5wcm90byJvCglDb250YWlu",
-            "ZXISDAoEbmFtZRgBIAEoCRILCgN1cmkYAiABKAkSEAoIaW1hZ2VfaWQYAyAB",
-            "KAkSNQoGbGFiZWxzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
-            "dGVyLnYxLkxhYmVsQugBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
-            "dGVyLnYxQg5Db250YWluZXJQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dv",
-            "L3NlY3VyaXR5Y2VudGVyL2FwaXYxL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJp",
-            "dHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoC",
-            "Hkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xv",
-            "dWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "bG91ZC9zZWN1cml0eWNlbnRlci92MS9sYWJlbC5wcm90bxofZ29vZ2xlL3By",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byKgAQoJQ29udGFpbmVyEgwKBG5hbWUY",
+            "ASABKAkSCwoDdXJpGAIgASgJEhAKCGltYWdlX2lkGAMgASgJEjUKBmxhYmVs",
+            "cxgEIAMoCzIlLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5MYWJl",
+            "bBIvCgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBC6AEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFC",
+            "DkNvbnRhaW5lclByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJp",
+            "dHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRl",
+            "cnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xl",
+            "XENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2Vj",
+            "dXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.LabelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.LabelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Container), global::Google.Cloud.SecurityCenter.V1.Container.Parser, new[]{ "Name", "Uri", "ImageId", "Labels" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Container), global::Google.Cloud.SecurityCenter.V1.Container.Parser, new[]{ "Name", "Uri", "ImageId", "Labels", "CreateTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -87,6 +89,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       uri_ = other.uri_;
       imageId_ = other.imageId_;
       labels_ = other.labels_.Clone();
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -157,6 +160,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// The time that the container was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -176,6 +194,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (Uri != other.Uri) return false;
       if (ImageId != other.ImageId) return false;
       if(!labels_.Equals(other.labels_)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -187,6 +206,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
       if (ImageId.Length != 0) hash ^= ImageId.GetHashCode();
       hash ^= labels_.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -218,6 +238,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(ImageId);
       }
       labels_.WriteTo(output, _repeated_labels_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -241,6 +265,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(ImageId);
       }
       labels_.WriteTo(ref output, _repeated_labels_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -261,6 +289,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageId);
       }
       size += labels_.CalculateSize(_repeated_labels_codec);
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -283,6 +314,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
         ImageId = other.ImageId;
       }
       labels_.Add(other.labels_);
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -314,6 +351,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             labels_.AddEntriesFrom(input, _repeated_labels_codec);
             break;
           }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
         }
       }
     #endif
@@ -343,6 +387,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 34: {
             labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
             break;
           }
         }
