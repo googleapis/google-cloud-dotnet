@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta03, released 2024-02-28
+
+### Documentation improvements
+
+- Minor formatting fixes to reference documentation ([commit cbe3cad](https://github.com/googleapis/google-cloud-dotnet/commit/cbe3cad6997d3563e7084f51ff9138aa215b0141))
+
 ## Version 2.0.0-beta02, released 2022-12-01
 
 ### Bug fixes
