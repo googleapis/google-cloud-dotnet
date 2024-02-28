@@ -1275,7 +1275,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1285,7 +1285,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1297,7 +1297,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1326,7 +1326,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1357,7 +1357,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1417,7 +1417,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1446,7 +1446,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1477,7 +1477,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -1506,7 +1506,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of parent to list custom modules. Its format is
@@ -4407,7 +4407,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4420,7 +4420,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1
 
         /// <summary>
         /// Returns a list of all resident SecurityHealthAnalyticsCustomModules under
-        /// the given CRM parent and all of the parent’s CRM descendants.
+        /// the given CRM parent and all of the parent's CRM descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -2253,9 +2253,10 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int ResourceSelectorFieldNumber = 3;
     private global::Google.Cloud.SecurityCenterManagement.V1.CustomConfig.Types.ResourceSelector resourceSelector_;
     /// <summary>
-    /// Optional. The CAI resource types that the custom module operates on (see
-    /// go/gcp-cai-doc/supported-asset-types). Each custom module can specify up to
-    /// 5 resource types.
+    /// Optional. The Cloud Asset Inventory resource types that the custom module
+    /// operates on. For information about resource types, see [Supported asset
+    /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
+    /// Each custom module can specify up to 5 resource types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
