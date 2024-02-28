@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.2.0, released 2024-02-28
+
+### Documentation improvements
+
+- Point to Search Console for domain ownership verification ([commit e79e82e](https://github.com/googleapis/google-cloud-dotnet/commit/e79e82e92a5cccdfa8f6bc7e16c1805e2632afb8))
+
 ## Version 2.1.0, released 2023-01-17
 
 ### New features
