@@ -2260,7 +2260,7 @@
     },
     {
       "id": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Enterprise Knowledge Graph",
       "productUrl": "https://cloud.google.com/enterprise-knowledge-graph/docs/overview",
