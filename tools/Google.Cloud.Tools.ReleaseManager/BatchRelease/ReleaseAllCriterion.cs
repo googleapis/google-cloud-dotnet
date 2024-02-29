@@ -38,10 +38,15 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public bool SkipDocumentationOnly { get; set; }
 
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
+            progressCallback?.Invoke(0, catalog.Apis.Count);
             Console.WriteLine($"Analyzing changes by API (this may take a few minutes)");
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
             Console.WriteLine($"Finish analyzing changes.");
@@ -49,8 +54,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             // Map from package group ID to all the changed APIs within it.
             var skippedPackageGroups = new Dictionary<string, List<string>>();
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
+                progressCallback?.Invoke(++progress, catalog.Apis.Count);
                 var commits = pendingChangesByApi[api].Commits;
 
                 // Don't propose packages that haven't changed.

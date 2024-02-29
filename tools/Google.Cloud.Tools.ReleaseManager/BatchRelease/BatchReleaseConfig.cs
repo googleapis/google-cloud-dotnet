@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -76,6 +76,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// notable changes. (If not specified, the normal "just dependencies" will be used.)
         /// </summary>
         public string DefaultHistoryMessageFile { get; set; }
+
+        /// <summary>
+        /// When this is true, all proposals are collected before any are executed. This allows
+        /// a workflow of "start the run going, leave it ages, then expect to proceed very quickly".
+        /// </summary>
+        public bool CollectProposalsEagerly { get; set; }
 
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {

@@ -58,7 +58,15 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 ? (id, sv) => sv.AfterMajorVersion(id)
                 : (id, sv) => sv.AfterIncrement();
             string defaultMessage = config.DefaultHistoryMessageFile is null ? null : File.ReadAllText(config.DefaultHistoryMessageFile);
-            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage);
+
+            var lastLog = DateTime.UtcNow;
+            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage, MaybeLogProgress);
+
+            if (config.CollectProposalsEagerly)
+            {
+                Console.WriteLine("Collecting proposals eagerly. Will periodically report progress.");
+                proposals = proposals.ToList();
+            }
 
             foreach (var proposal in proposals)
             {
@@ -66,6 +74,20 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 proposal.Execute(config);
             }
             return 0;
+
+            void MaybeLogProgress(int progress, int total)
+            {
+                if (!config.CollectProposalsEagerly)
+                {
+                    return;
+                }
+                var now = DateTime.UtcNow;
+                if ((now - lastLog).TotalMinutes >= 1)
+                {
+                    Console.WriteLine($"{now:HH:mm:ss}Z: Evaluating API {progress} out of {total}");
+                    lastLog = now;
+                }
+            }
         }
     }
 }

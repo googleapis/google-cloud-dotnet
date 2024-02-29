@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,6 +23,18 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// <summary>
         /// Returns the proposed releases for all APIs in the catalog
         /// </summary>
-        IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage);
+        /// <param name="catalog">The local API catalog.</param>
+        /// <param name="defaultMessage">A customized default message for APIs with no commit history messages.</param>
+        /// <param name="versionIncrementer">A function to increment from one version to another, based on an ID.</param>
+        /// <param name="progressCallback">
+        /// A callback to invoke with progess.
+        /// The first argument is the number of API candidates meaningfully considered;
+        /// the second is the total number of API candidates that will be considered.
+        /// </param>
+        IEnumerable<ReleaseProposal> GetProposals(
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback);
     }
 }
