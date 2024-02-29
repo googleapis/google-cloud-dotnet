@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2024-02-29
+
+### Documentation improvements
+
+- Add three per company option to diversification levels ([commit fea4d59](https://github.com/googleapis/google-cloud-dotnet/commit/fea4d5922cf62babd58dddc1197ec7e93ef32476))
+
 ## Version 2.3.0, released 2023-05-03
 
 ### Bug fixes
