@@ -4008,7 +4008,7 @@
     },
     {
       "id": "Google.Cloud.Redis.Cluster.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Google Cloud Memorystore for Redis (cluster management)",
       "productUrl": "https://cloud.google.com/redis/docs",
@@ -4019,7 +4019,7 @@
         "Cluster"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.0.0",
+        "Google.Cloud.Location": "2.1.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
