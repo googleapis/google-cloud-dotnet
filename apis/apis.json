@@ -5224,7 +5224,7 @@
     },
     {
       "id": "Google.Cloud.Video.Stitcher.V1",
-      "version": "3.0.0-beta02",
+      "version": "3.0.0-beta03",
       "type": "grpc",
       "productName": "Video Stitcher",
       "productUrl": "https://cloud.google.com/video-stitcher/docs",
