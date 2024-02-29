@@ -4395,7 +4395,7 @@
     },
     {
       "id": "Google.Cloud.SecurityCenterManagement.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Security Center Management",
       "productUrl": "https://cloud.google.com/security-command-center/docs/reference/security-center-management/rest",
@@ -4405,8 +4405,8 @@
         "security"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0",
-        "Google.Cloud.Location": "2.0.0"
+        "Google.Cloud.Iam.V1": "3.1.0",
+        "Google.Cloud.Location": "2.1.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/securitycentermanagement/v1",
