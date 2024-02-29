@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta06, released 2024-02-29
+
+### Documentation improvements
+
+- Fix the resource name format in comment for CreatePhraseSetRequest ([commit c2e3fcf](https://github.com/googleapis/google-cloud-dotnet/commit/c2e3fcffb4dfaecd7b2d0b160a0b68ded3df80e4))
+
 ## Version 3.0.0-beta05, released 2023-03-06
 
 ### New features
