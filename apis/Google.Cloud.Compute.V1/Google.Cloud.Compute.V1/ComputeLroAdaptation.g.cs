@@ -1044,6 +1044,33 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteInstantSnapshotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertInstantSnapshotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetLabelsInstantSnapshotRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteInterconnectAttachmentRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1424,6 +1451,11 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class MoveInstanceProjectRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class SetCloudArmorTierProjectRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
@@ -1937,6 +1969,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class BulkInsertRegionInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteRegionInstantSnapshotRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertRegionInstantSnapshotRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetLabelsRegionInstantSnapshotRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

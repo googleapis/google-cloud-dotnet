@@ -550,6 +550,22 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Backend.Types.BalancingMode.Utilization"/>.</summary>
                 public const string Utilization = "UTILIZATION";
             }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Backend.Types.Preference"/> enum.</summary>
+            public static class Preference
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Backend.Types.Preference.UndefinedPreference"/>.</summary>
+                public const string UndefinedPreference = "UNDEFINED_PREFERENCE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Backend.Types.Preference.Default"/>.</summary>
+                public const string Default = "DEFAULT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Backend.Types.Preference.Unspecified"/>.</summary>
+                public const string Unspecified = "PREFERENCE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Backend.Types.Preference.Preferred"/>.</summary>
+                public const string Preferred = "PREFERRED";
+            }
         }
 
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendBucket"/> message.</summary>
@@ -2034,6 +2050,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy"/> message.</summary>
         public static class InstanceGroupManagerInstanceLifecyclePolicy
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.DefaultActionOnFailure"/> enum.</summary>
+            public static class DefaultActionOnFailure
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.DefaultActionOnFailure.UndefinedDefaultActionOnFailure"/>.</summary>
+                public const string UndefinedDefaultActionOnFailure = "UNDEFINED_DEFAULT_ACTION_ON_FAILURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.DefaultActionOnFailure.DoNothing"/>.</summary>
+                public const string DoNothing = "DO_NOTHING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.DefaultActionOnFailure.Repair"/>.</summary>
+                public const string Repair = "REPAIR";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerInstanceLifecyclePolicy.Types.ForceUpdateOnRepair"/> enum.</summary>
             public static class ForceUpdateOnRepair
             {
@@ -2278,6 +2307,45 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Types.Type.Unspecified"/>.</summary>
                 public const string Unspecified = "UNSPECIFIED";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot"/> message.</summary>
+        public static class InstantSnapshot
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Architecture"/> enum.</summary>
+            public static class Architecture
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Architecture.UndefinedArchitecture"/>.</summary>
+                public const string UndefinedArchitecture = "UNDEFINED_ARCHITECTURE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Architecture.Unspecified"/>.</summary>
+                public const string Unspecified = "ARCHITECTURE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Architecture.Arm64"/>.</summary>
+                public const string Arm64 = "ARM64";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Architecture.X8664"/>.</summary>
+                public const string X8664 = "X86_64";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status"/> enum.</summary>
+            public static class Status
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.UndefinedStatus"/>.</summary>
+                public const string UndefinedStatus = "UNDEFINED_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Creating"/>.</summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Deleting"/>.</summary>
+                public const string Deleting = "DELETING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Failed"/>.</summary>
+                public const string Failed = "FAILED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Ready"/>.</summary>
+                public const string Ready = "READY";
             }
         }
 
@@ -3757,6 +3825,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Project"/> message.</summary>
         public static class Project
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Project.Types.CloudArmorTier"/> enum.</summary>
+            public static class CloudArmorTier
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.CloudArmorTier.UndefinedCloudArmorTier"/>.</summary>
+                public const string UndefinedCloudArmorTier = "UNDEFINED_CLOUD_ARMOR_TIER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.CloudArmorTier.CaEnterpriseAnnual"/>.</summary>
+                public const string CaEnterpriseAnnual = "CA_ENTERPRISE_ANNUAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.CloudArmorTier.CaEnterprisePaygo"/>.</summary>
+                public const string CaEnterprisePaygo = "CA_ENTERPRISE_PAYGO";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.CloudArmorTier.CaStandard"/>.</summary>
+                public const string CaStandard = "CA_STANDARD";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Project.Types.DefaultNetworkTier"/> enum.</summary>
             public static class DefaultNetworkTier
             {
@@ -3806,6 +3890,26 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Project.Types.XpnProjectStatus.UnspecifiedXpnProjectStatus"/>.</summary>
                 public const string UnspecifiedXpnProjectStatus = "UNSPECIFIED_XPN_PROJECT_STATUS";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest"/> message.</summary>
+        public static class ProjectsSetCloudArmorTierRequest
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest.Types.CloudArmorTier"/> enum.</summary>
+            public static class CloudArmorTier
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest.Types.CloudArmorTier.UndefinedCloudArmorTier"/>.</summary>
+                public const string UndefinedCloudArmorTier = "UNDEFINED_CLOUD_ARMOR_TIER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest.Types.CloudArmorTier.CaEnterpriseAnnual"/>.</summary>
+                public const string CaEnterpriseAnnual = "CA_ENTERPRISE_ANNUAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest.Types.CloudArmorTier.CaEnterprisePaygo"/>.</summary>
+                public const string CaEnterprisePaygo = "CA_ENTERPRISE_PAYGO";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ProjectsSetCloudArmorTierRequest.Types.CloudArmorTier.CaStandard"/>.</summary>
+                public const string CaStandard = "CA_STANDARD";
             }
         }
 
@@ -6430,6 +6534,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.VpnGateway"/> message.</summary>
         public static class VpnGateway
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.VpnGateway.Types.GatewayIpVersion"/> enum.</summary>
+            public static class GatewayIpVersion
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.VpnGateway.Types.GatewayIpVersion.UndefinedGatewayIpVersion"/>.</summary>
+                public const string UndefinedGatewayIpVersion = "UNDEFINED_GATEWAY_IP_VERSION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.VpnGateway.Types.GatewayIpVersion.Ipv4"/>.</summary>
+                public const string Ipv4 = "IPV4";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.VpnGateway.Types.GatewayIpVersion.Ipv6"/>.</summary>
+                public const string Ipv6 = "IPV6";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.VpnGateway.Types.StackType"/> enum.</summary>
             public static class StackType
             {

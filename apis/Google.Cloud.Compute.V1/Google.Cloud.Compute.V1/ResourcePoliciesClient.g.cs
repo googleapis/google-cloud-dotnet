@@ -405,7 +405,7 @@ namespace Google.Cloud.Compute.V1
         public virtual ResourcePolicies.ResourcePoliciesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -414,7 +414,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -425,7 +425,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -449,7 +449,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1388,7 +1388,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsResourcePolicyRequest(ref TestIamPermissionsResourcePolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1400,7 +1400,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of resource policies.
+        /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

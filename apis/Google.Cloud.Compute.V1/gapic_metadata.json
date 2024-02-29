@@ -1667,6 +1667,69 @@
         }
       }
     },
+    "InstantSnapshots": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InstantSnapshotsClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "InterconnectAttachments": {
       "clients": {
         "grpc": {
@@ -2605,6 +2668,12 @@
                 "MoveInstanceAsync"
               ]
             },
+            "SetCloudArmorTier": {
+              "methods": [
+                "SetCloudArmorTier",
+                "SetCloudArmorTierAsync"
+              ]
+            },
             "SetCommonInstanceMetadata": {
               "methods": [
                 "SetCommonInstanceMetadata",
@@ -3314,6 +3383,63 @@
               "methods": [
                 "BulkInsert",
                 "BulkInsertAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegionInstantSnapshots": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegionInstantSnapshotsClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }

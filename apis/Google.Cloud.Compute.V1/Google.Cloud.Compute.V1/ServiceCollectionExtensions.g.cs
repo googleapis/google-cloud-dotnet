@@ -440,6 +440,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::InstantSnapshotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstantSnapshotsClient(this IServiceCollection services, sys::Action<gccv::InstantSnapshotsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstantSnapshotsClientBuilder builder = new gccv::InstantSnapshotsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::InterconnectAttachmentsClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -971,6 +989,24 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::RegionInstancesClientBuilder builder = new gccv::RegionInstancesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionInstantSnapshotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionInstantSnapshotsClient(this IServiceCollection services, sys::Action<gccv::RegionInstantSnapshotsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionInstantSnapshotsClientBuilder builder = new gccv::RegionInstantSnapshotsClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
