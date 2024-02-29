@@ -3758,7 +3758,7 @@
     },
     {
       "id": "Google.Cloud.PolicySimulator.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Policy Simulator",
       "productUrl": "https://cloud.google.com/policy-intelligence/docs/iam-simulator-overview",
@@ -3769,7 +3769,7 @@
         "policy"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Iam.V1": "3.1.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
