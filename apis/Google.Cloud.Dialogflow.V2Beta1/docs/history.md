@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
 ## Version 1.0.0-beta12, released 2024-01-08
 
 ### New features
