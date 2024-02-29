@@ -427,7 +427,7 @@ namespace Google.Cloud.Compute.V1
         public virtual PublicDelegatedPrefixes.PublicDelegatedPrefixesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -436,7 +436,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -447,7 +447,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -471,7 +471,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_WithdrawPublicDelegatedPrefixeRequest(ref WithdrawPublicDelegatedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1360,7 +1360,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
