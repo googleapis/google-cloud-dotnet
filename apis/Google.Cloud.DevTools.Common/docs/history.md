@@ -1,5 +1,10 @@
 # Version history
 
+## Version 3.1.1, released 2024-02-29
+
+Purely a release-process patch, re-releasing 3.1.0 which failed to
+release.
+
 ## Version 3.1.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
