@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.3.0, released 2024-02-29
+
+### Documentation improvements
+
+- Correct timezone/offset information for Cloud Scheduler headers ([commit 986fc6f](https://github.com/googleapis/google-cloud-dotnet/commit/986fc6fed12f179c14ab7c61a0de00e89396394f))
+
 ## Version 3.2.0, released 2023-03-06
 
 ### New features
