@@ -5171,7 +5171,7 @@
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "productName": "VM Migration",
       "productUrl": "https://cloud.google.com/migrate/compute-engine/docs/",
@@ -5183,8 +5183,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.6.0",
-        "Google.Cloud.Iam.V1": "3.0.0",
-        "Google.Cloud.Location": "2.0.0",
+        "Google.Cloud.Iam.V1": "3.1.0",
+        "Google.Cloud.Location": "2.1.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.6"
       },
