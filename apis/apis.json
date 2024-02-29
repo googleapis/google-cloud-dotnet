@@ -5871,7 +5871,7 @@
     },
     {
       "id": "Google.Shopping.Type",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "targetFrameworks": "netstandard2.1;net462",
       "type": "other",
       "description": "Version-agnostic types for Shopping APIs.",
