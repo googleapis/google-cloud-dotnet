@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
+using NuGet.Protocol.Plugins;
 using System;
 using System.Collections.Generic;
 
@@ -28,17 +29,23 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             _apis = new HashSet<string>(apis);
         }
 
-        public IEnumerable<ReleaseProposal> GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        public IEnumerable<ReleaseProposal> GetProposals(
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
                 if (!_apis.Contains(api.Id))
                 {
                     continue;
                 }
+                progressCallback?.Invoke(++progress, _apis.Count);
 
                 if (api.BlockRelease is string blockReason)
                 {

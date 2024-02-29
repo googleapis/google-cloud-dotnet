@@ -35,14 +35,20 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public HashSet<string> Commits { get; set; }
 
-        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(ApiCatalog catalog, Func<string, StructuredVersion, StructuredVersion> versionIncrementer, string defaultMessage)
+        IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            ApiCatalog catalog,
+            Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
+            string defaultMessage,
+            Action<int, int> progressCallback)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using var repo = new Repository(root);
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
 
+            int progress = 0;
             foreach (var api in catalog.Apis)
             {
+                progressCallback?.Invoke(++progress, catalog.Apis.Count);
                 var pendingChanges = pendingChangesByApi[api];
                 var pendingCommits = pendingChanges.Commits.Select(commit => commit.HashPrefix);
                 if (!Commits.SetEquals(pendingCommits))
