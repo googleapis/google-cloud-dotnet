@@ -364,19 +364,21 @@ namespace Google.Cloud.Tools.ReleaseManager
             // We assume the source directories already exist, either because they've just
             // been generated or because they were already there. We infer the type of each
             // project based on the directory name. If a directory has no .cs files within it,
-            // a project will not be generated.
+            // a project will not be generated, but if a directory already has a .csproj file within it,
+            // that project will be regenerated even if there aren't any .cs files.
+            // (This is to handle Google.Cloud.DevTools.Common, and any similar situations we may find later.)
+
             // Expected suffixes:
             // - None: main API
             // - .Snippets: snippets (manual and generated) TODO: Will contain manual snippets only after we have started using GeneratedSnippets for docs.
             // - .GeneratedSnippets: generated snippets.
             // - .Tests: unit tests
             // - .IntegrationTests: integration tests
-            // - .Samples: generated standalone samples
 
             // Anything else will be ignored for now...
             var projectDirectories = Directory.GetDirectories(apiRoot)
                 .Where(pd => Path.GetFileName(pd).StartsWith(api.Id))
-                .Where(pd => Directory.EnumerateFiles(pd, "*.cs").Any())
+                .Where(pd => Directory.EnumerateFiles(pd, "*.cs").Any() || Directory.EnumerateFiles(pd, "*.csproj").Any())
                 .ToList();
             foreach (var dir in projectDirectories)
             {
