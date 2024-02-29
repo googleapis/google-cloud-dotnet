@@ -1895,7 +1895,7 @@
     },
     {
       "id": "Google.Cloud.DevTools.Common",
-      "version": "3.1.0",
+      "version": "3.1.1",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
       "testTargetFrameworks": "net6.0;net462",
