@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Xunit;
 using static Google.Cloud.Storage.V1.UrlSigner;
 
@@ -239,6 +240,45 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 Assert.NotSame(options, newOptions);
                 Assert.Null(newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides_NullOverrideValues()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides(null, null, null));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal(Options.DefaultScheme, newOptions.Scheme);
+                Assert.Equal(Options.DefaultStorageHost, newOptions.Host);
+                Assert.Null(newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1));
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides("http", "overrideHost", 1234));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("http", newOptions.Scheme);
+                Assert.Equal("overrideHost", newOptions.Host);
+                Assert.Equal(1234, newOptions.Port);
+            }
+
+            [Fact]
+            public void WithDefaultOverrides_DoesNotOverrideExplicit()
+            {
+                var options = Options.FromDuration(TimeSpan.FromMinutes(1)).WithScheme("https").WithHost("explicitHost").WithPort(5678);
+
+                var newOptions = options.WithDefaultOptionsOverrides(new DefaultOptionsOverrides("http", "overrideHost", 1234));
+
+                Assert.NotSame(options, newOptions);
+                Assert.Equal("https", newOptions.Scheme);
+                Assert.Equal("explicitHost", newOptions.Host);
+                Assert.Equal(5678, newOptions.Port);
             }
         }
     }
