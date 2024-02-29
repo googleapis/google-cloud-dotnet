@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Clarify that the parent field in the CreateBillingAccountRequest must be a billing account ([commit 0c2c601](https://github.com/googleapis/google-cloud-dotnet/commit/0c2c6018b82fa49527b1b1108bc569cc4c9018c5))
+- Update comments ([commit fe663ba](https://github.com/googleapis/google-cloud-dotnet/commit/fe663ba9a85fd347c4fd3a4fd554466dede34a7f))
+
 ## Version 3.5.0, released 2023-12-11
 
 ### New features
