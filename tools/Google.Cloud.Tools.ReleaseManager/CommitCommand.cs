@@ -43,26 +43,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"Cannot automate a release commit for a deleted API.");
             }
-
-            var historyFilePath = HistoryFile.GetPathForPackage(diff.Id);
-            if (!File.Exists(historyFilePath))
-            {
-                throw new UserErrorException($"Cannot automate a release commit without a version history file.");
-            }
-
-            var historyFile = HistoryFile.Load(historyFilePath);
-            var section = historyFile.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
-            if (section is null)
-            {
-                throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
-            }
-            if (section.Lines.Any(line => line.Contains(HistoryFile.FixmeBlockingRelease)))
-            {
-                throw new UserErrorException("History file requires editing before release");
-            }
-
+            var apiCatalog = ApiCatalog.Load();
+            var api = apiCatalog[diff.Id];
             string header = $"Release {diff.Id} version {diff.NewVersion}";
-            var message = string.Join("\n", new[] { header, "", "Changes in this release:", "" }.Concat(section.Lines.Skip(2)));
+            string message = GetCommitMessage();
 
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
@@ -87,6 +71,35 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
             }
             return 0;
+
+            string GetCommitMessage()
+            {
+                // Handle APIs such as Google.Cloud.OsLogin.Common, where we don't really need a history entry.
+                if (api.NoVersionHistory)
+                {
+                    return "This library has no dedicated release history. Changes are typically recorded in other libraries, or are just dependency updates.";
+                }
+
+                // Anything else really should have a history.
+                var historyFilePath = HistoryFile.GetPathForPackage(diff.Id);
+                if (!File.Exists(historyFilePath))
+                {
+                    throw new UserErrorException($"Cannot automate a release commit without a version history file.");
+                }
+
+                var historyFile = HistoryFile.Load(historyFilePath);
+                var section = historyFile.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
+                if (section is null)
+                {
+                    throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
+                }
+                if (section.Lines.Any(line => line.Contains(HistoryFile.FixmeBlockingRelease)))
+                {
+                    throw new UserErrorException("History file requires editing before release");
+                }
+
+                return string.Join("\n", new[] { header, "", "Changes in this release:", "" }.Concat(section.Lines.Skip(2)));
+            }
         }
     }
 }
