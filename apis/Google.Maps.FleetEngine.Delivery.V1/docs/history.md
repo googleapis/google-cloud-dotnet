@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2024-02-29
+
+### Documentation improvements
+
+- Updated incorrect reference to `Task.journeySharingInfo` ([commit 1c0c513](https://github.com/googleapis/google-cloud-dotnet/commit/1c0c513f3dfa371f21525365bd614fb13d522e93))
+
 ## Version 1.1.0, released 2024-01-08
 
 ### New features
