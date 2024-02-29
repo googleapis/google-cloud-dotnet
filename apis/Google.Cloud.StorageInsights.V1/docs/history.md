@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2024-02-29
+
+### Documentation improvements
+
+- Add link to documentation for ReportConfig proto fields ([commit 9ece40a](https://github.com/googleapis/google-cloud-dotnet/commit/9ece40a4379f510096117fe7c656ce6112e7540f))
+
 ## Version 1.0.0, released 2023-06-12
 
 Primary purpose of release is to update dependencies and promote to 1.0.0.
