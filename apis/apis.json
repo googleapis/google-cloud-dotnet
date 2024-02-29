@@ -5623,7 +5623,7 @@
       "generator": "micro",
       "type": "grpc",
       "protoPath": "google/identity/accesscontextmanager/v1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "productName": "Identity Access Context Manager",
       "productUrl": "https://cloud.google.com/access-context-manager/docs",
       "description": "Recommended Google client library to access the Identity Access Context Manager API V1.",
@@ -5632,7 +5632,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.6.0",
-        "Google.Cloud.Iam.V1": "3.0.0",
+        "Google.Cloud.Iam.V1": "3.1.0",
         "Google.Identity.AccessContextManager.Type": "2.0.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.6"
