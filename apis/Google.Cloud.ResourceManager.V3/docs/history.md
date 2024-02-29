@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.3.0, released 2024-02-29
+
+### Documentation improvements
+
+- Update formatting for `Purpose` class documentation ([commit 162977d](https://github.com/googleapis/google-cloud-dotnet/commit/162977db9e125b809c8758ef7a176d36717ca166))
+- Add documentation for additional acceptable formats for `namespaced_tag_key` and `namespaced_tag_value`in `EffectiveTag`, `parent` in `ListTagKeysRequest`, `parent` in `TagKey`, and `namespaced_name` in `TagValue` ([commit 162977d](https://github.com/googleapis/google-cloud-dotnet/commit/162977db9e125b809c8758ef7a176d36717ca166))
+- Update the table format in SearchProjects docs ([commit 6e0900b](https://github.com/googleapis/google-cloud-dotnet/commit/6e0900b77422408914a86baeae4d672168c1173f))
+
 ## Version 2.2.0, released 2023-04-21
 
 ### New features
