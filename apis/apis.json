@@ -4488,7 +4488,7 @@
     },
     {
       "id": "Google.Cloud.ServiceHealth.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Service Health",
       "productUrl": "https://cloud.google.com/service-health/docs/overview",
@@ -4497,7 +4497,7 @@
         "monitoring"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.0.0"
+        "Google.Cloud.Location": "2.1.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/servicehealth/v1",
