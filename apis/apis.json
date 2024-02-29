@@ -5514,7 +5514,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
@@ -5525,7 +5525,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.6.0",
-        "Google.Cloud.Location": "2.0.0",
+        "Google.Cloud.Location": "2.1.0",
         "Google.Cloud.Workflows.Common.V1": "2.2.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.6"
