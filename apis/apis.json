@@ -5472,7 +5472,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.Executions.V1",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflow Executions",
