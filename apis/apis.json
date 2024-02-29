@@ -3904,7 +3904,7 @@
     },
     {
       "id": "Google.Cloud.RapidMigrationAssessment.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Rapid Migration Assessment",
       "productUrl": "https://cloud.google.com/migration-center/docs",
@@ -3913,7 +3913,7 @@
         "migration"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.0.0",
+        "Google.Cloud.Location": "2.1.0",
         "Google.LongRunning": "3.0.0"
       },
       "generator": "micro",
