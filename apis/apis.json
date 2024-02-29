@@ -4824,7 +4824,7 @@
     },
     {
       "id": "Google.Cloud.StorageInsights.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Google Cloud Storage Insights",
       "productUrl": "https://cloud.google.com/storage/docs/insights/inventory-reports",
@@ -4836,7 +4836,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "4.6.0",
-        "Google.Cloud.Location": "2.0.0",
+        "Google.Cloud.Location": "2.1.0",
         "Google.LongRunning": "3.0.0",
         "Grpc.Core": "2.46.6"
       },
