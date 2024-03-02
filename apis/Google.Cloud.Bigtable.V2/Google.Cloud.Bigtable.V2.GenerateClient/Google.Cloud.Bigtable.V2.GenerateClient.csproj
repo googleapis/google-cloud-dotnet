@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Grpc" Version="4.6.0" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.7.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.9.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.8.0" />
     <!--
       - For some reason, the above packages introduce a dependency somewhere on version 3.0.3
