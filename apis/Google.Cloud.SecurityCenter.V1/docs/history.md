@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.16.0, released 2024-03-04
+
+### New features
+
+- Add container.create_time, vulnerability.offending_package, vulnerability.fixed_package, vulnerability.security_bulletin, vulnerability.cve.impact, vulnerability.cve.exploitation_activity, vulnerability.cve.observed_in_the_wild, vulnerability.cve.zero_day to finding's list of attributes ([commit bafbb2b](https://github.com/googleapis/google-cloud-dotnet/commit/bafbb2b01675d7b8f13c5d69f6a6bbfd5b1c37fe))
+
 ## Version 3.15.0, released 2024-02-27
 
 ### New features
