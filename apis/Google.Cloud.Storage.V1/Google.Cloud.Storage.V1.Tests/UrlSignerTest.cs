@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -48,6 +49,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ComputeCredential) null));
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ServiceAccountCredential) null));
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((ImpersonatedCredential) null));
+            Assert.Throws<ArgumentNullException>(() => UrlSigner.FromCredential((IHttpExecuteInterceptor) null));
         }
 
         [Fact]

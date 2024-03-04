@@ -27,9 +27,18 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
 {
     public class V4SignerConformanceTest
     {
-        public static TheoryData<SigningV4Test> V4SigningTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f =>
-            // We skip test data with features that we don't support.
-            f.SigningV4Tests.Where(data => data.EmulatorHostname == "" && data.ClientEndpoint == "" && data.UniverseDomain == ""));
+        public static TheoryData<SigningV4Test> V4SignerTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f =>
+            // We skip test data with features that we don't support or test elsewhere.
+            f.SigningV4Tests.Where(data =>
+                data.EmulatorHostname == "" // We don't support signers for emulators.
+                && data.ClientEndpoint == "" // This is tested in StorageClientSignerTest.
+                && data.UniverseDomain == "")); // This is tested in StorageClientSignerTest.
+
+        public static TheoryData<SigningV4Test> StorageClientSignerTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f =>
+            // We only get test data with features that are relevant for testing the StorageClient Signer.
+            f.SigningV4Tests.Where(
+                data => data.EmulatorHostname == "" // We don't support signers for emulators.
+                && (data.ClientEndpoint != "" || data.UniverseDomain != "")));
         public static TheoryData<PostPolicyV4Test> V4PostPolicyTestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.PostPolicyV4Tests);
 
         private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
@@ -39,12 +48,32 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
             { "PUT", HttpMethod.Put }
         };
 
-        [Theory, MemberData(nameof(V4SigningTestData))]
-        public void SigningTest(SigningV4Test test)
+        [Theory, MemberData(nameof(V4SignerTestData))]
+        public void V4SignerTest(SigningV4Test test) =>
+            SignerTest(test, UrlSigner.FromCredential(StorageConformanceTestData.TestCredential));
+
+        [Theory, MemberData(nameof(StorageClientSignerTestData))]
+        public void StorageClientSignerTest(SigningV4Test test)
         {
+            var storageClient = new StorageClientBuilder
+            {
+                UniverseDomain = test.UniverseDomain == "" ? null : test.UniverseDomain,
+                BaseUri = test.ClientEndpoint == "" ? null :
+                    // We may need to format client endpoints from tests, for instance storage.googleapis.com:443,
+                    // as the library only accepts the base full URI, which needs to include the scheme.
+                    (test.ClientEndpoint.StartsWith("http") ? test.ClientEndpoint : $"https://{test.ClientEndpoint}"),
+                Credential = StorageConformanceTestData.TestCredential,
+            }.Build();
+            var signer = storageClient.CreateUrlSigner();
+
+            SignerTest(test, signer);
+        }
+
+        private void SignerTest(SigningV4Test test, UrlSigner signer)
+        { 
             var timestamp = test.Timestamp.ToDateTime();
             var clock = new FakeClock(timestamp);
-            var signer = UrlSigner.FromCredential(StorageConformanceTestData.TestCredential).WithClock(clock);
+            signer = signer.WithClock(clock);
 
             var requestTemplate = RequestTemplate
                 .FromBucket(test.Bucket)

@@ -133,6 +133,26 @@ namespace Google.Cloud.Storage.V1
             }.Build();
 
         /// <summary>
+        /// Creates a URL signer based on this client, that uses the same credential as this client, as well
+        /// as defaulting to this client's URI scheme, host and port. 
+        /// </summary>
+        /// <exception cref="InvalidOperationException">
+        /// If the credential used by this client is not compatible with <see cref="UrlSigner"/>.
+        /// See <see cref="UrlSigner"/>'s documentation for more information on compatible credentials.
+        /// </exception>
+        public UrlSigner CreateUrlSigner()
+        {
+            UrlSigner signer = UrlSigner.FromCredential(Service.HttpClient.MessageHandler.Credential);
+
+            var baseUri = new Uri(Service.BaseUri);
+            // If the original URI didn't specify a port, we want signed URLs to not have a port either;
+            // but Uri.Port returns the default port for the URI scheme when the port was not specified on the
+            // original URI.
+            int? port = baseUri.IsDefaultPort && !Service.BaseUri.Contains(baseUri.Port.ToString()) ? null : baseUri.Port;
+            return signer.WithDefaultOptionsOverride(new UrlSigner.DefaultOptionsOverrides(baseUri.Scheme, baseUri.Host, port));
+        }
+
+        /// <summary>
         /// Dispose of this instance. See the <see cref="StorageClient"/> remarks on when this should be called.
         /// </summary>
         public virtual void Dispose() { }
