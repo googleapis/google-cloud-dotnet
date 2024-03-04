@@ -1098,6 +1098,787 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateAuthorizedView</summary>
+        public void CreateAuthorizedViewRequestObject()
+        {
+            // Snippet: CreateAuthorizedView(CreateAuthorizedViewRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            CreateAuthorizedViewRequest request = new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                AuthorizedViewId = "",
+                AuthorizedView = new AuthorizedView(),
+            };
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = bigtableTableAdminClient.CreateAuthorizedView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateAuthorizedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthorizedViewAsync</summary>
+        public async Task CreateAuthorizedViewRequestObjectAsync()
+        {
+            // Snippet: CreateAuthorizedViewAsync(CreateAuthorizedViewRequest, CallSettings)
+            // Additional: CreateAuthorizedViewAsync(CreateAuthorizedViewRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAuthorizedViewRequest request = new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                AuthorizedViewId = "",
+                AuthorizedView = new AuthorizedView(),
+            };
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = await bigtableTableAdminClient.CreateAuthorizedViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateAuthorizedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthorizedView</summary>
+        public void CreateAuthorizedView()
+        {
+            // Snippet: CreateAuthorizedView(string, AuthorizedView, string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            AuthorizedView authorizedView = new AuthorizedView();
+            string authorizedViewId = "";
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = bigtableTableAdminClient.CreateAuthorizedView(parent, authorizedView, authorizedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateAuthorizedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthorizedViewAsync</summary>
+        public async Task CreateAuthorizedViewAsync()
+        {
+            // Snippet: CreateAuthorizedViewAsync(string, AuthorizedView, string, CallSettings)
+            // Additional: CreateAuthorizedViewAsync(string, AuthorizedView, string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            AuthorizedView authorizedView = new AuthorizedView();
+            string authorizedViewId = "";
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = await bigtableTableAdminClient.CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateAuthorizedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthorizedView</summary>
+        public void CreateAuthorizedViewResourceNames()
+        {
+            // Snippet: CreateAuthorizedView(TableName, AuthorizedView, string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            AuthorizedView authorizedView = new AuthorizedView();
+            string authorizedViewId = "";
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = bigtableTableAdminClient.CreateAuthorizedView(parent, authorizedView, authorizedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceCreateAuthorizedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAuthorizedViewAsync</summary>
+        public async Task CreateAuthorizedViewResourceNamesAsync()
+        {
+            // Snippet: CreateAuthorizedViewAsync(TableName, AuthorizedView, string, CallSettings)
+            // Additional: CreateAuthorizedViewAsync(TableName, AuthorizedView, string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            AuthorizedView authorizedView = new AuthorizedView();
+            string authorizedViewId = "";
+            // Make the request
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> response = await bigtableTableAdminClient.CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, CreateAuthorizedViewMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceCreateAuthorizedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViews</summary>
+        public void ListAuthorizedViewsRequestObject()
+        {
+            // Snippet: ListAuthorizedViews(ListAuthorizedViewsRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                View = AuthorizedView.Types.ResponseView.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthorizedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViewsAsync</summary>
+        public async Task ListAuthorizedViewsRequestObjectAsync()
+        {
+            // Snippet: ListAuthorizedViewsAsync(ListAuthorizedViewsRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                View = AuthorizedView.Types.ResponseView.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthorizedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViews</summary>
+        public void ListAuthorizedViews()
+        {
+            // Snippet: ListAuthorizedViews(string, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthorizedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViewsAsync</summary>
+        public async Task ListAuthorizedViewsAsync()
+        {
+            // Snippet: ListAuthorizedViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]";
+            // Make the request
+            PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthorizedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViews</summary>
+        public void ListAuthorizedViewsResourceNames()
+        {
+            // Snippet: ListAuthorizedViews(TableName, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AuthorizedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAuthorizedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAuthorizedViewsAsync</summary>
+        public async Task ListAuthorizedViewsResourceNamesAsync()
+        {
+            // Snippet: ListAuthorizedViewsAsync(TableName, string, int?, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName parent = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> response = bigtableTableAdminClient.ListAuthorizedViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AuthorizedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAuthorizedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AuthorizedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AuthorizedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AuthorizedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedView</summary>
+        public void GetAuthorizedViewRequestObject()
+        {
+            // Snippet: GetAuthorizedView(GetAuthorizedViewRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            GetAuthorizedViewRequest request = new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                View = AuthorizedView.Types.ResponseView.Unspecified,
+            };
+            // Make the request
+            AuthorizedView response = bigtableTableAdminClient.GetAuthorizedView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedViewAsync</summary>
+        public async Task GetAuthorizedViewRequestObjectAsync()
+        {
+            // Snippet: GetAuthorizedViewAsync(GetAuthorizedViewRequest, CallSettings)
+            // Additional: GetAuthorizedViewAsync(GetAuthorizedViewRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAuthorizedViewRequest request = new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                View = AuthorizedView.Types.ResponseView.Unspecified,
+            };
+            // Make the request
+            AuthorizedView response = await bigtableTableAdminClient.GetAuthorizedViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedView</summary>
+        public void GetAuthorizedView()
+        {
+            // Snippet: GetAuthorizedView(string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/authorizedViews/[AUTHORIZED_VIEW]";
+            // Make the request
+            AuthorizedView response = bigtableTableAdminClient.GetAuthorizedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedViewAsync</summary>
+        public async Task GetAuthorizedViewAsync()
+        {
+            // Snippet: GetAuthorizedViewAsync(string, CallSettings)
+            // Additional: GetAuthorizedViewAsync(string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/authorizedViews/[AUTHORIZED_VIEW]";
+            // Make the request
+            AuthorizedView response = await bigtableTableAdminClient.GetAuthorizedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedView</summary>
+        public void GetAuthorizedViewResourceNames()
+        {
+            // Snippet: GetAuthorizedView(AuthorizedViewName, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            AuthorizedViewName name = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]");
+            // Make the request
+            AuthorizedView response = bigtableTableAdminClient.GetAuthorizedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAuthorizedViewAsync</summary>
+        public async Task GetAuthorizedViewResourceNamesAsync()
+        {
+            // Snippet: GetAuthorizedViewAsync(AuthorizedViewName, CallSettings)
+            // Additional: GetAuthorizedViewAsync(AuthorizedViewName, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthorizedViewName name = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]");
+            // Make the request
+            AuthorizedView response = await bigtableTableAdminClient.GetAuthorizedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthorizedView</summary>
+        public void UpdateAuthorizedViewRequestObject()
+        {
+            // Snippet: UpdateAuthorizedView(UpdateAuthorizedViewRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateAuthorizedViewRequest request = new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = new AuthorizedView(),
+                UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> response = bigtableTableAdminClient.UpdateAuthorizedView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateAuthorizedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthorizedViewAsync</summary>
+        public async Task UpdateAuthorizedViewRequestObjectAsync()
+        {
+            // Snippet: UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest, CallSettings)
+            // Additional: UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAuthorizedViewRequest request = new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = new AuthorizedView(),
+                UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
+            };
+            // Make the request
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> response = await bigtableTableAdminClient.UpdateAuthorizedViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateAuthorizedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthorizedView</summary>
+        public void UpdateAuthorizedView()
+        {
+            // Snippet: UpdateAuthorizedView(AuthorizedView, FieldMask, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            AuthorizedView authorizedView = new AuthorizedView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> response = bigtableTableAdminClient.UpdateAuthorizedView(authorizedView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> retrievedResponse = bigtableTableAdminClient.PollOnceUpdateAuthorizedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAuthorizedViewAsync</summary>
+        public async Task UpdateAuthorizedViewAsync()
+        {
+            // Snippet: UpdateAuthorizedViewAsync(AuthorizedView, FieldMask, CallSettings)
+            // Additional: UpdateAuthorizedViewAsync(AuthorizedView, FieldMask, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthorizedView authorizedView = new AuthorizedView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> response = await bigtableTableAdminClient.UpdateAuthorizedViewAsync(authorizedView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AuthorizedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AuthorizedView, UpdateAuthorizedViewMetadata> retrievedResponse = await bigtableTableAdminClient.PollOnceUpdateAuthorizedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AuthorizedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedView</summary>
+        public void DeleteAuthorizedViewRequestObject()
+        {
+            // Snippet: DeleteAuthorizedView(DeleteAuthorizedViewRequest, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteAuthorizedViewRequest request = new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            bigtableTableAdminClient.DeleteAuthorizedView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedViewAsync</summary>
+        public async Task DeleteAuthorizedViewRequestObjectAsync()
+        {
+            // Snippet: DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest, CallSettings)
+            // Additional: DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAuthorizedViewRequest request = new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            await bigtableTableAdminClient.DeleteAuthorizedViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedView</summary>
+        public void DeleteAuthorizedView()
+        {
+            // Snippet: DeleteAuthorizedView(string, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/authorizedViews/[AUTHORIZED_VIEW]";
+            // Make the request
+            bigtableTableAdminClient.DeleteAuthorizedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedViewAsync</summary>
+        public async Task DeleteAuthorizedViewAsync()
+        {
+            // Snippet: DeleteAuthorizedViewAsync(string, CallSettings)
+            // Additional: DeleteAuthorizedViewAsync(string, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/tables/[TABLE]/authorizedViews/[AUTHORIZED_VIEW]";
+            // Make the request
+            await bigtableTableAdminClient.DeleteAuthorizedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedView</summary>
+        public void DeleteAuthorizedViewResourceNames()
+        {
+            // Snippet: DeleteAuthorizedView(AuthorizedViewName, CallSettings)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = BigtableTableAdminClient.Create();
+            // Initialize request argument(s)
+            AuthorizedViewName name = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]");
+            // Make the request
+            bigtableTableAdminClient.DeleteAuthorizedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAuthorizedViewAsync</summary>
+        public async Task DeleteAuthorizedViewResourceNamesAsync()
+        {
+            // Snippet: DeleteAuthorizedViewAsync(AuthorizedViewName, CallSettings)
+            // Additional: DeleteAuthorizedViewAsync(AuthorizedViewName, CancellationToken)
+            // Create client
+            BigtableTableAdminClient bigtableTableAdminClient = await BigtableTableAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AuthorizedViewName name = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]");
+            // Make the request
+            await bigtableTableAdminClient.DeleteAuthorizedViewAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ModifyColumnFamilies</summary>
         public void ModifyColumnFamiliesRequestObject()
         {

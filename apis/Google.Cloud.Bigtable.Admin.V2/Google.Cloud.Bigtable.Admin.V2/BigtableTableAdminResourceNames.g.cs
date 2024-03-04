@@ -305,4 +305,52 @@ namespace Google.Cloud.Bigtable.Admin.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAuthorizedViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::AuthorizedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::AuthorizedViewName AuthorizedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::AuthorizedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAuthorizedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::AuthorizedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::AuthorizedViewName AuthorizedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::AuthorizedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

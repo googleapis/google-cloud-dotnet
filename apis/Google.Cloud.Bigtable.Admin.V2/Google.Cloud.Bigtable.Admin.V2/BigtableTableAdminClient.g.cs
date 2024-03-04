@@ -59,6 +59,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteTableSettings = existing.DeleteTableSettings;
             UndeleteTableSettings = existing.UndeleteTableSettings;
             UndeleteTableOperationsSettings = existing.UndeleteTableOperationsSettings.Clone();
+            CreateAuthorizedViewSettings = existing.CreateAuthorizedViewSettings;
+            CreateAuthorizedViewOperationsSettings = existing.CreateAuthorizedViewOperationsSettings.Clone();
+            ListAuthorizedViewsSettings = existing.ListAuthorizedViewsSettings;
+            GetAuthorizedViewSettings = existing.GetAuthorizedViewSettings;
+            UpdateAuthorizedViewSettings = existing.UpdateAuthorizedViewSettings;
+            UpdateAuthorizedViewOperationsSettings = existing.UpdateAuthorizedViewOperationsSettings.Clone();
+            DeleteAuthorizedViewSettings = existing.DeleteAuthorizedViewSettings;
             ModifyColumnFamiliesSettings = existing.ModifyColumnFamiliesSettings;
             DropRowRangeSettings = existing.DropRowRangeSettings;
             GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
@@ -242,6 +249,107 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CreateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.CreateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CreateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.CreateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAuthorizedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.ListAuthorizedViews</c> and <c>BigtableTableAdminClient.ListAuthorizedViewsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuthorizedViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GetAuthorizedView</c> and <c>BigtableTableAdminClient.GetAuthorizedViewAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.UpdateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAuthorizedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.DeleteAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.DeleteAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1851,6 +1959,699 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Table, UndeleteTableMetadata>> UndeleteTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
             UndeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAuthorizedView</c>.</summary>
+        public virtual lro::OperationsClient CreateAuthorizedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAuthorizedView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> PollOnceCreateAuthorizedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAuthorizedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> PollOnceCreateAuthorizedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(string parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedView(new CreateAuthorizedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(string parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedViewAsync(new CreateAuthorizedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(string parent, AuthorizedView authorizedView, string authorizedViewId, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedView(new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedViewAsync(new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAuthorizedViews(new ListAuthorizedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAuthorizedViewsAsync(new ListAuthorizedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAuthorizedViews(new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAuthorizedViewsAsync(new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedView(new GetAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedViewAsync(new GetAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedView(new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedViewAsync(new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(AuthorizedViewName name, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAuthorizedView</c>.</summary>
+        public virtual lro::OperationsClient UpdateAuthorizedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAuthorizedView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> PollOnceUpdateAuthorizedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAuthorizedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> PollOnceUpdateAuthorizedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(AuthorizedView authorizedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthorizedView(new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(AuthorizedView authorizedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthorizedViewAsync(new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(AuthorizedView authorizedView, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAuthorizedViewAsync(authorizedView, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedView(new DeleteAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedViewAsync(new DeleteAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedView(new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedViewAsync(new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(AuthorizedViewName name, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs a series of column family modifications on the specified table.
@@ -4804,6 +5605,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> _callUndeleteTable;
 
+        private readonly gaxgrpc::ApiCall<CreateAuthorizedViewRequest, lro::Operation> _callCreateAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse> _callListAuthorizedViews;
+
+        private readonly gaxgrpc::ApiCall<GetAuthorizedViewRequest, AuthorizedView> _callGetAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<UpdateAuthorizedViewRequest, lro::Operation> _callUpdateAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<DeleteAuthorizedViewRequest, wkt::Empty> _callDeleteAuthorizedView;
+
         private readonly gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
 
         private readonly gaxgrpc::ApiCall<DropRowRangeRequest, wkt::Empty> _callDropRowRange;
@@ -4854,6 +5665,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateTableFromSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings, logger);
             UpdateTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTableOperationsSettings, logger);
             UndeleteTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteTableOperationsSettings, logger);
+            CreateAuthorizedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizedViewOperationsSettings, logger);
+            UpdateAuthorizedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizedViewOperationsSettings, logger);
             SnapshotTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             RestoreTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreTableOperationsSettings, logger);
@@ -4879,6 +5692,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callUndeleteTable = clientHelper.BuildApiCall<UndeleteTableRequest, lro::Operation>("UndeleteTable", grpcClient.UndeleteTableAsync, grpcClient.UndeleteTable, effectiveSettings.UndeleteTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteTable);
             Modify_UndeleteTableApiCall(ref _callUndeleteTable);
+            _callCreateAuthorizedView = clientHelper.BuildApiCall<CreateAuthorizedViewRequest, lro::Operation>("CreateAuthorizedView", grpcClient.CreateAuthorizedViewAsync, grpcClient.CreateAuthorizedView, effectiveSettings.CreateAuthorizedViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAuthorizedView);
+            Modify_CreateAuthorizedViewApiCall(ref _callCreateAuthorizedView);
+            _callListAuthorizedViews = clientHelper.BuildApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse>("ListAuthorizedViews", grpcClient.ListAuthorizedViewsAsync, grpcClient.ListAuthorizedViews, effectiveSettings.ListAuthorizedViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuthorizedViews);
+            Modify_ListAuthorizedViewsApiCall(ref _callListAuthorizedViews);
+            _callGetAuthorizedView = clientHelper.BuildApiCall<GetAuthorizedViewRequest, AuthorizedView>("GetAuthorizedView", grpcClient.GetAuthorizedViewAsync, grpcClient.GetAuthorizedView, effectiveSettings.GetAuthorizedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuthorizedView);
+            Modify_GetAuthorizedViewApiCall(ref _callGetAuthorizedView);
+            _callUpdateAuthorizedView = clientHelper.BuildApiCall<UpdateAuthorizedViewRequest, lro::Operation>("UpdateAuthorizedView", grpcClient.UpdateAuthorizedViewAsync, grpcClient.UpdateAuthorizedView, effectiveSettings.UpdateAuthorizedViewSettings).WithGoogleRequestParam("authorized_view.name", request => request.AuthorizedView?.Name);
+            Modify_ApiCall(ref _callUpdateAuthorizedView);
+            Modify_UpdateAuthorizedViewApiCall(ref _callUpdateAuthorizedView);
+            _callDeleteAuthorizedView = clientHelper.BuildApiCall<DeleteAuthorizedViewRequest, wkt::Empty>("DeleteAuthorizedView", grpcClient.DeleteAuthorizedViewAsync, grpcClient.DeleteAuthorizedView, effectiveSettings.DeleteAuthorizedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAuthorizedView);
+            Modify_DeleteAuthorizedViewApiCall(ref _callDeleteAuthorizedView);
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>("ModifyColumnFamilies", grpcClient.ModifyColumnFamiliesAsync, grpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyColumnFamilies);
             Modify_ModifyColumnFamiliesApiCall(ref _callModifyColumnFamilies);
@@ -4952,6 +5780,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_UndeleteTableApiCall(ref gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> call);
 
+        partial void Modify_CreateAuthorizedViewApiCall(ref gaxgrpc::ApiCall<CreateAuthorizedViewRequest, lro::Operation> call);
+
+        partial void Modify_ListAuthorizedViewsApiCall(ref gaxgrpc::ApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse> call);
+
+        partial void Modify_GetAuthorizedViewApiCall(ref gaxgrpc::ApiCall<GetAuthorizedViewRequest, AuthorizedView> call);
+
+        partial void Modify_UpdateAuthorizedViewApiCall(ref gaxgrpc::ApiCall<UpdateAuthorizedViewRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAuthorizedViewApiCall(ref gaxgrpc::ApiCall<DeleteAuthorizedViewRequest, wkt::Empty> call);
+
         partial void Modify_ModifyColumnFamiliesApiCall(ref gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> call);
 
         partial void Modify_DropRowRangeApiCall(ref gaxgrpc::ApiCall<DropRowRangeRequest, wkt::Empty> call);
@@ -5006,6 +5844,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeleteTableRequest(ref UndeleteTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAuthorizedViewRequest(ref CreateAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuthorizedViewsRequest(ref ListAuthorizedViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuthorizedViewRequest(ref GetAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAuthorizedViewRequest(ref UpdateAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAuthorizedViewRequest(ref DeleteAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5236,6 +6084,132 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_UndeleteTableRequest(ref request, ref callSettings);
             return new lro::Operation<Table, UndeleteTableMetadata>(await _callUndeleteTable.Async(request, callSettings).ConfigureAwait(false), UndeleteTableOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAuthorizedView</c>.</summary>
+        public override lro::OperationsClient CreateAuthorizedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>(_callCreateAuthorizedView.Sync(request, callSettings), CreateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>(await _callCreateAuthorizedView.Async(request, callSettings).ConfigureAwait(false), CreateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthorizedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse, AuthorizedView>(_callListAuthorizedViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthorizedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse, AuthorizedView>(_callListAuthorizedViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuthorizedView GetAuthorizedView(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthorizedViewRequest(ref request, ref callSettings);
+            return _callGetAuthorizedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthorizedViewRequest(ref request, ref callSettings);
+            return _callGetAuthorizedView.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAuthorizedView</c>.</summary>
+        public override lro::OperationsClient UpdateAuthorizedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>(_callUpdateAuthorizedView.Sync(request, callSettings), UpdateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>(await _callUpdateAuthorizedView.Async(request, callSettings).ConfigureAwait(false), UpdateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAuthorizedView(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthorizedViewRequest(ref request, ref callSettings);
+            _callDeleteAuthorizedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthorizedViewRequest(ref request, ref callSettings);
+            return _callDeleteAuthorizedView.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5795,6 +6769,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
     }
 
+    public partial class ListAuthorizedViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSnapshotsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5807,6 +6785,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Table> GetEnumerator() => Tables.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAuthorizedViewsResponse : gaxgrpc::IPageResponse<AuthorizedView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuthorizedView> GetEnumerator() => AuthorizedViews.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
