@@ -9,14 +9,15 @@
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Grpc" Version="4.6.0" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.7.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.8.0" />
+    <!-- Note: these two packages usually need upgrading together (which is then a manual job). -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.9.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.9.2" />
     <!--
-      - For some reason, the above packages introduce a dependency somewhere on version 3.0.3
-      - of Microsoft.Extensions.Logging.Abstractions, so MSBuild gets confused. It's simplest
-      - to just specify v6 ourselves.
+      - For some reason, the above packages introduce some odd dependencies, so we need to be
+      - explicit about versions for other packages.
       -->
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
