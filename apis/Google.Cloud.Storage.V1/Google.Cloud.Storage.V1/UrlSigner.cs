@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
 using System;
 using System.IO;
 using System.Net.Http;
@@ -133,6 +134,24 @@ namespace Google.Cloud.Storage.V1
                 ImpersonatedCredential imp => FromCredential(imp),
                 ComputeCredential comp => FromCredential(comp),
                 _ => throw new InvalidOperationException($"The credential type {credential.UnderlyingCredential.GetType()} is not supported for signing.")
+            };
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instace for a <see cref="IHttpExecuteInterceptor"/> if
+        /// the <paramref name="credential"/> is of a type supported for signing.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">
+        /// The type of <paramref name="credential"/> is not supported for signing.
+        /// </exception>
+        internal static UrlSigner FromCredential(IHttpExecuteInterceptor credential) =>
+            GaxPreconditions.CheckNotNull(credential, nameof(credential)) switch
+            {
+                GoogleCredential gc => FromCredential(gc),
+                ServiceAccountCredential sa => FromCredential(sa),
+                ImpersonatedCredential imp => FromCredential(imp),
+                ComputeCredential comp => FromCredential(comp),
+                IBlobSigner blobSigner => FromBlobSigner(blobSigner),
+                _ => throw new InvalidOperationException($"The type {credential.GetType()} is not supported for signing.")
             };
 
         /// <summary>
