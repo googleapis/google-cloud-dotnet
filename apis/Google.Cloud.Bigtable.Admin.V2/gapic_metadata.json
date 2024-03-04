@@ -157,6 +157,12 @@
                 "CopyBackupAsync"
               ]
             },
+            "CreateAuthorizedView": {
+              "methods": [
+                "CreateAuthorizedView",
+                "CreateAuthorizedViewAsync"
+              ]
+            },
             "CreateBackup": {
               "methods": [
                 "CreateBackup",
@@ -173,6 +179,12 @@
               "methods": [
                 "CreateTableFromSnapshot",
                 "CreateTableFromSnapshotAsync"
+              ]
+            },
+            "DeleteAuthorizedView": {
+              "methods": [
+                "DeleteAuthorizedView",
+                "DeleteAuthorizedViewAsync"
               ]
             },
             "DeleteBackup": {
@@ -205,6 +217,12 @@
                 "GenerateConsistencyTokenAsync"
               ]
             },
+            "GetAuthorizedView": {
+              "methods": [
+                "GetAuthorizedView",
+                "GetAuthorizedViewAsync"
+              ]
+            },
             "GetBackup": {
               "methods": [
                 "GetBackup",
@@ -227,6 +245,12 @@
               "methods": [
                 "GetTable",
                 "GetTableAsync"
+              ]
+            },
+            "ListAuthorizedViews": {
+              "methods": [
+                "ListAuthorizedViews",
+                "ListAuthorizedViewsAsync"
               ]
             },
             "ListBackups": {
@@ -281,6 +305,12 @@
               "methods": [
                 "UndeleteTable",
                 "UndeleteTableAsync"
+              ]
+            },
+            "UpdateAuthorizedView": {
+              "methods": [
+                "UpdateAuthorizedView",
+                "UpdateAuthorizedViewAsync"
               ]
             },
             "UpdateBackup": {
