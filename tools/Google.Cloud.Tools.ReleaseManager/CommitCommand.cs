@@ -46,7 +46,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             var apiCatalog = ApiCatalog.Load();
             var api = apiCatalog[diff.Id];
             string header = $"Release {diff.Id} version {diff.NewVersion}";
-            string message = GetCommitMessage();
+            var bodyLines = GetCommitBodyLines();
+            string message = string.Join("\n", new[] { header, "" }.Concat(bodyLines));
 
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
@@ -72,12 +73,12 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             return 0;
 
-            string GetCommitMessage()
+            IEnumerable<string> GetCommitBodyLines()
             {
                 // Handle APIs such as Google.Cloud.OsLogin.Common, where we don't really need a history entry.
                 if (api.NoVersionHistory)
                 {
-                    return "This library has no dedicated release history. Changes are typically recorded in other libraries, or are just dependency updates.";
+                    return new[] { "This library has no dedicated release history. Changes are typically recorded in other libraries, or are just dependency updates." };
                 }
 
                 // Anything else really should have a history.
@@ -98,7 +99,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     throw new UserErrorException("History file requires editing before release");
                 }
 
-                return string.Join("\n", new[] { header, "", "Changes in this release:", "" }.Concat(section.Lines.Skip(2)));
+                return new[] { "Changes in this release:", "" }.Concat(section.Lines.Skip(2));
             }
         }
     }
