@@ -39,6 +39,11 @@ namespace Google.Cloud.Storage.V1
         public Projection? Projection { get; set; }
 
         /// <summary>
+        /// When set to true, permanently enable object retention for this bucket.
+        /// </summary>
+        public bool? ObjectRetentionEnabled { get; set; }
+
+        /// <summary>
         /// Options to pass custom retry configuration for each API request.
         /// </summary>
         public RetryOptions RetryOptions { get; set; }
@@ -58,6 +63,10 @@ namespace Google.Cloud.Storage.V1
             if (Projection != null)
             {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+            }
+            if (ObjectRetentionEnabled.HasValue)
+            {
+                request.EnableObjectRetention = ObjectRetentionEnabled.Value;
             }
         }
     }
