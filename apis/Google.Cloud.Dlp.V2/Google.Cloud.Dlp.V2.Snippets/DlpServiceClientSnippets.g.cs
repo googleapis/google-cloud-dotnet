@@ -5629,6 +5629,1377 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListProjectDataProfiles</summary>
+        public void ListProjectDataProfilesRequestObject()
+        {
+            // Snippet: ListProjectDataProfiles(ListProjectDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProjectDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfilesAsync</summary>
+        public async Task ListProjectDataProfilesRequestObjectAsync()
+        {
+            // Snippet: ListProjectDataProfilesAsync(ListProjectDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListProjectDataProfilesRequest request = new ListProjectDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProjectDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfiles</summary>
+        public void ListProjectDataProfiles()
+        {
+            // Snippet: ListProjectDataProfiles(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProjectDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfilesAsync</summary>
+        public async Task ListProjectDataProfilesAsync()
+        {
+            // Snippet: ListProjectDataProfilesAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProjectDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfiles</summary>
+        public void ListProjectDataProfilesResourceNames1()
+        {
+            // Snippet: ListProjectDataProfiles(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProjectDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfilesAsync</summary>
+        public async Task ListProjectDataProfilesResourceNames1Async()
+        {
+            // Snippet: ListProjectDataProfilesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProjectDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfiles</summary>
+        public void ListProjectDataProfilesResourceNames2()
+        {
+            // Snippet: ListProjectDataProfiles(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProjectDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProjectDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProjectDataProfilesAsync</summary>
+        public async Task ListProjectDataProfilesResourceNames2Async()
+        {
+            // Snippet: ListProjectDataProfilesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListProjectDataProfilesResponse, ProjectDataProfile> response = dlpServiceClient.ListProjectDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProjectDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProjectDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProjectDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProjectDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProjectDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfiles</summary>
+        public void ListTableDataProfilesRequestObject()
+        {
+            // Snippet: ListTableDataProfiles(ListTableDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TableDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfilesAsync</summary>
+        public async Task ListTableDataProfilesRequestObjectAsync()
+        {
+            // Snippet: ListTableDataProfilesAsync(ListTableDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTableDataProfilesRequest request = new ListTableDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TableDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfiles</summary>
+        public void ListTableDataProfiles()
+        {
+            // Snippet: ListTableDataProfiles(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TableDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfilesAsync</summary>
+        public async Task ListTableDataProfilesAsync()
+        {
+            // Snippet: ListTableDataProfilesAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TableDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfiles</summary>
+        public void ListTableDataProfilesResourceNames1()
+        {
+            // Snippet: ListTableDataProfiles(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TableDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfilesAsync</summary>
+        public async Task ListTableDataProfilesResourceNames1Async()
+        {
+            // Snippet: ListTableDataProfilesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TableDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfiles</summary>
+        public void ListTableDataProfilesResourceNames2()
+        {
+            // Snippet: ListTableDataProfiles(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TableDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTableDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTableDataProfilesAsync</summary>
+        public async Task ListTableDataProfilesResourceNames2Async()
+        {
+            // Snippet: ListTableDataProfilesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListTableDataProfilesResponse, TableDataProfile> response = dlpServiceClient.ListTableDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TableDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTableDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TableDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TableDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TableDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfiles</summary>
+        public void ListColumnDataProfilesRequestObject()
+        {
+            // Snippet: ListColumnDataProfiles(ListColumnDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ColumnDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfilesAsync</summary>
+        public async Task ListColumnDataProfilesRequestObjectAsync()
+        {
+            // Snippet: ListColumnDataProfilesAsync(ListColumnDataProfilesRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListColumnDataProfilesRequest request = new ListColumnDataProfilesRequest
+            {
+                ParentAsOrganizationLocationName = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]"),
+                OrderBy = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ColumnDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfiles</summary>
+        public void ListColumnDataProfiles()
+        {
+            // Snippet: ListColumnDataProfiles(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ColumnDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfilesAsync</summary>
+        public async Task ListColumnDataProfilesAsync()
+        {
+            // Snippet: ListColumnDataProfilesAsync(string, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ColumnDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfiles</summary>
+        public void ListColumnDataProfilesResourceNames1()
+        {
+            // Snippet: ListColumnDataProfiles(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ColumnDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfilesAsync</summary>
+        public async Task ListColumnDataProfilesResourceNames1Async()
+        {
+            // Snippet: ListColumnDataProfilesAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ColumnDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfiles</summary>
+        public void ListColumnDataProfilesResourceNames2()
+        {
+            // Snippet: ListColumnDataProfiles(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfiles(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ColumnDataProfile item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListColumnDataProfilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListColumnDataProfilesAsync</summary>
+        public async Task ListColumnDataProfilesResourceNames2Async()
+        {
+            // Snippet: ListColumnDataProfilesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListColumnDataProfilesResponse, ColumnDataProfile> response = dlpServiceClient.ListColumnDataProfilesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ColumnDataProfile item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListColumnDataProfilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ColumnDataProfile item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ColumnDataProfile> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ColumnDataProfile item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfile</summary>
+        public void GetProjectDataProfileRequestObject()
+        {
+            // Snippet: GetProjectDataProfile(GetProjectDataProfileRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetProjectDataProfileRequest request = new GetProjectDataProfileRequest
+            {
+                ProjectDataProfileName = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]"),
+            };
+            // Make the request
+            ProjectDataProfile response = dlpServiceClient.GetProjectDataProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfileAsync</summary>
+        public async Task GetProjectDataProfileRequestObjectAsync()
+        {
+            // Snippet: GetProjectDataProfileAsync(GetProjectDataProfileRequest, CallSettings)
+            // Additional: GetProjectDataProfileAsync(GetProjectDataProfileRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProjectDataProfileRequest request = new GetProjectDataProfileRequest
+            {
+                ProjectDataProfileName = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]"),
+            };
+            // Make the request
+            ProjectDataProfile response = await dlpServiceClient.GetProjectDataProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfile</summary>
+        public void GetProjectDataProfile()
+        {
+            // Snippet: GetProjectDataProfile(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/projectDataProfiles/[PROJECT_DATA_PROFILE]";
+            // Make the request
+            ProjectDataProfile response = dlpServiceClient.GetProjectDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfileAsync</summary>
+        public async Task GetProjectDataProfileAsync()
+        {
+            // Snippet: GetProjectDataProfileAsync(string, CallSettings)
+            // Additional: GetProjectDataProfileAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/projectDataProfiles/[PROJECT_DATA_PROFILE]";
+            // Make the request
+            ProjectDataProfile response = await dlpServiceClient.GetProjectDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfile</summary>
+        public void GetProjectDataProfileResourceNames()
+        {
+            // Snippet: GetProjectDataProfile(ProjectDataProfileName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectDataProfileName name = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]");
+            // Make the request
+            ProjectDataProfile response = dlpServiceClient.GetProjectDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectDataProfileAsync</summary>
+        public async Task GetProjectDataProfileResourceNamesAsync()
+        {
+            // Snippet: GetProjectDataProfileAsync(ProjectDataProfileName, CallSettings)
+            // Additional: GetProjectDataProfileAsync(ProjectDataProfileName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectDataProfileName name = ProjectDataProfileName.FromOrganizationLocationProjectDataProfile("[ORGANIZATION]", "[LOCATION]", "[PROJECT_DATA_PROFILE]");
+            // Make the request
+            ProjectDataProfile response = await dlpServiceClient.GetProjectDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfile</summary>
+        public void GetTableDataProfileRequestObject()
+        {
+            // Snippet: GetTableDataProfile(GetTableDataProfileRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetTableDataProfileRequest request = new GetTableDataProfileRequest
+            {
+                TableDataProfileName = TableDataProfileName.FromOrganizationLocationTableDataProfile("[ORGANIZATION]", "[LOCATION]", "[TABLE_DATA_PROFILE]"),
+            };
+            // Make the request
+            TableDataProfile response = dlpServiceClient.GetTableDataProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfileAsync</summary>
+        public async Task GetTableDataProfileRequestObjectAsync()
+        {
+            // Snippet: GetTableDataProfileAsync(GetTableDataProfileRequest, CallSettings)
+            // Additional: GetTableDataProfileAsync(GetTableDataProfileRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTableDataProfileRequest request = new GetTableDataProfileRequest
+            {
+                TableDataProfileName = TableDataProfileName.FromOrganizationLocationTableDataProfile("[ORGANIZATION]", "[LOCATION]", "[TABLE_DATA_PROFILE]"),
+            };
+            // Make the request
+            TableDataProfile response = await dlpServiceClient.GetTableDataProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfile</summary>
+        public void GetTableDataProfile()
+        {
+            // Snippet: GetTableDataProfile(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/tableDataProfiles/[TABLE_DATA_PROFILE]";
+            // Make the request
+            TableDataProfile response = dlpServiceClient.GetTableDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfileAsync</summary>
+        public async Task GetTableDataProfileAsync()
+        {
+            // Snippet: GetTableDataProfileAsync(string, CallSettings)
+            // Additional: GetTableDataProfileAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/tableDataProfiles/[TABLE_DATA_PROFILE]";
+            // Make the request
+            TableDataProfile response = await dlpServiceClient.GetTableDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfile</summary>
+        public void GetTableDataProfileResourceNames()
+        {
+            // Snippet: GetTableDataProfile(TableDataProfileName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            TableDataProfileName name = TableDataProfileName.FromOrganizationLocationTableDataProfile("[ORGANIZATION]", "[LOCATION]", "[TABLE_DATA_PROFILE]");
+            // Make the request
+            TableDataProfile response = dlpServiceClient.GetTableDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableDataProfileAsync</summary>
+        public async Task GetTableDataProfileResourceNamesAsync()
+        {
+            // Snippet: GetTableDataProfileAsync(TableDataProfileName, CallSettings)
+            // Additional: GetTableDataProfileAsync(TableDataProfileName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TableDataProfileName name = TableDataProfileName.FromOrganizationLocationTableDataProfile("[ORGANIZATION]", "[LOCATION]", "[TABLE_DATA_PROFILE]");
+            // Make the request
+            TableDataProfile response = await dlpServiceClient.GetTableDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfile</summary>
+        public void GetColumnDataProfileRequestObject()
+        {
+            // Snippet: GetColumnDataProfile(GetColumnDataProfileRequest, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetColumnDataProfileRequest request = new GetColumnDataProfileRequest
+            {
+                ColumnDataProfileName = ColumnDataProfileName.FromOrganizationLocationColumnDataProfile("[ORGANIZATION]", "[LOCATION]", "[COLUMN_DATA_PROFILE]"),
+            };
+            // Make the request
+            ColumnDataProfile response = dlpServiceClient.GetColumnDataProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfileAsync</summary>
+        public async Task GetColumnDataProfileRequestObjectAsync()
+        {
+            // Snippet: GetColumnDataProfileAsync(GetColumnDataProfileRequest, CallSettings)
+            // Additional: GetColumnDataProfileAsync(GetColumnDataProfileRequest, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetColumnDataProfileRequest request = new GetColumnDataProfileRequest
+            {
+                ColumnDataProfileName = ColumnDataProfileName.FromOrganizationLocationColumnDataProfile("[ORGANIZATION]", "[LOCATION]", "[COLUMN_DATA_PROFILE]"),
+            };
+            // Make the request
+            ColumnDataProfile response = await dlpServiceClient.GetColumnDataProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfile</summary>
+        public void GetColumnDataProfile()
+        {
+            // Snippet: GetColumnDataProfile(string, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/columnDataProfiles/[COLUMN_DATA_PROFILE]";
+            // Make the request
+            ColumnDataProfile response = dlpServiceClient.GetColumnDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfileAsync</summary>
+        public async Task GetColumnDataProfileAsync()
+        {
+            // Snippet: GetColumnDataProfileAsync(string, CallSettings)
+            // Additional: GetColumnDataProfileAsync(string, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/locations/[LOCATION]/columnDataProfiles/[COLUMN_DATA_PROFILE]";
+            // Make the request
+            ColumnDataProfile response = await dlpServiceClient.GetColumnDataProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfile</summary>
+        public void GetColumnDataProfileResourceNames()
+        {
+            // Snippet: GetColumnDataProfile(ColumnDataProfileName, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ColumnDataProfileName name = ColumnDataProfileName.FromOrganizationLocationColumnDataProfile("[ORGANIZATION]", "[LOCATION]", "[COLUMN_DATA_PROFILE]");
+            // Make the request
+            ColumnDataProfile response = dlpServiceClient.GetColumnDataProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetColumnDataProfileAsync</summary>
+        public async Task GetColumnDataProfileResourceNamesAsync()
+        {
+            // Snippet: GetColumnDataProfileAsync(ColumnDataProfileName, CallSettings)
+            // Additional: GetColumnDataProfileAsync(ColumnDataProfileName, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ColumnDataProfileName name = ColumnDataProfileName.FromOrganizationLocationColumnDataProfile("[ORGANIZATION]", "[LOCATION]", "[COLUMN_DATA_PROFILE]");
+            // Make the request
+            ColumnDataProfile response = await dlpServiceClient.GetColumnDataProfileAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for HybridInspectDlpJob</summary>
         public void HybridInspectDlpJobRequestObject()
         {

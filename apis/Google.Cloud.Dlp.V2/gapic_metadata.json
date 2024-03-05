@@ -106,6 +106,12 @@
                 "FinishDlpJobAsync"
               ]
             },
+            "GetColumnDataProfile": {
+              "methods": [
+                "GetColumnDataProfile",
+                "GetColumnDataProfileAsync"
+              ]
+            },
             "GetDeidentifyTemplate": {
               "methods": [
                 "GetDeidentifyTemplate",
@@ -136,10 +142,22 @@
                 "GetJobTriggerAsync"
               ]
             },
+            "GetProjectDataProfile": {
+              "methods": [
+                "GetProjectDataProfile",
+                "GetProjectDataProfileAsync"
+              ]
+            },
             "GetStoredInfoType": {
               "methods": [
                 "GetStoredInfoType",
                 "GetStoredInfoTypeAsync"
+              ]
+            },
+            "GetTableDataProfile": {
+              "methods": [
+                "GetTableDataProfile",
+                "GetTableDataProfileAsync"
               ]
             },
             "HybridInspectDlpJob": {
@@ -158,6 +176,12 @@
               "methods": [
                 "InspectContent",
                 "InspectContentAsync"
+              ]
+            },
+            "ListColumnDataProfiles": {
+              "methods": [
+                "ListColumnDataProfiles",
+                "ListColumnDataProfilesAsync"
               ]
             },
             "ListDeidentifyTemplates": {
@@ -196,10 +220,22 @@
                 "ListJobTriggersAsync"
               ]
             },
+            "ListProjectDataProfiles": {
+              "methods": [
+                "ListProjectDataProfiles",
+                "ListProjectDataProfilesAsync"
+              ]
+            },
             "ListStoredInfoTypes": {
               "methods": [
                 "ListStoredInfoTypes",
                 "ListStoredInfoTypesAsync"
+              ]
+            },
+            "ListTableDataProfiles": {
+              "methods": [
+                "ListTableDataProfiles",
+                "ListTableDataProfilesAsync"
               ]
             },
             "RedactImage": {
