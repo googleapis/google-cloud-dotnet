@@ -65,6 +65,7 @@ namespace Google.Cloud.Run.V2
             yield return RevisionReflection.Descriptor;
             yield return RevisionTemplateReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
+            yield return StatusReflection.Descriptor;
             yield return TaskReflection.Descriptor;
             yield return TaskTemplateReflection.Descriptor;
             yield return TrafficTargetReflection.Descriptor;

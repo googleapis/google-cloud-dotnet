@@ -25,37 +25,39 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvcnVuL3YyL3ZlbmRvcl9zZXR0aW5ncy5wcm90bxIT",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
-            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLoAgoJVnBjQWNj",
-            "ZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNhY2Nlc3MuZ29vZ2xl",
-            "YXBpcy5jb20vQ29ubmVjdG9yEjgKBmVncmVzcxgCIAEoDjIoLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzcxJLChJuZXR3b3JrX2lu",
-            "dGVyZmFjZXMYAyADKAsyLy5nb29nbGUuY2xvdWQucnVuLnYyLlZwY0FjY2Vz",
-            "cy5OZXR3b3JrSW50ZXJmYWNlGkUKEE5ldHdvcmtJbnRlcmZhY2USDwoHbmV0",
-            "d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEgwKBHRhZ3MYAyADKAki",
-            "UQoJVnBjRWdyZXNzEhoKFlZQQ19FR1JFU1NfVU5TUEVDSUZJRUQQABIPCgtB",
-            "TExfVFJBRkZJQxABEhcKE1BSSVZBVEVfUkFOR0VTX09OTFkQAiJhChNCaW5h",
-            "cnlBdXRob3JpemF0aW9uEhUKC3VzZV9kZWZhdWx0GAEgASgISAASIAoYYnJl",
-            "YWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQhEKD2JpbmF1dGh6X21ldGhv",
-            "ZCJJCg9SZXZpc2lvblNjYWxpbmcSGgoSbWluX2luc3RhbmNlX2NvdW50GAEg",
-            "ASgFEhoKEm1heF9pbnN0YW5jZV9jb3VudBgCIAEoBSqZAQoOSW5ncmVzc1Ry",
-            "YWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5H",
-            "UkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5B",
-            "TF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFM",
-            "QU5DRVIQAyp9ChRFeGVjdXRpb25FbnZpcm9ubWVudBIlCiFFWEVDVVRJT05f",
-            "RU5WSVJPTk1FTlRfVU5TUEVDSUZJRUQQABIeChpFWEVDVVRJT05fRU5WSVJP",
-            "Tk1FTlRfR0VOMRABEh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4yEAIq",
-            "cAodRW5jcnlwdGlvbktleVJldm9jYXRpb25BY3Rpb24SMAosRU5DUllQVElP",
-            "Tl9LRVlfUkVWT0NBVElPTl9BQ1RJT05fVU5TUEVDSUZJRUQQABIPCgtQUkVW",
-            "RU5UX05FVxABEgwKCFNIVVRET1dOEAJCWwoXY29tLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "Z29vZ2xlLmNsb3VkLnJ1bi52MhoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "byLoAgoJVnBjQWNjZXNzEjoKCWNvbm5lY3RvchgBIAEoCUIn+kEkCiJ2cGNh",
+            "Y2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdG9yEjgKBmVncmVzcxgCIAEo",
+            "DjIoLmdvb2dsZS5jbG91ZC5ydW4udjIuVnBjQWNjZXNzLlZwY0VncmVzcxJL",
+            "ChJuZXR3b3JrX2ludGVyZmFjZXMYAyADKAsyLy5nb29nbGUuY2xvdWQucnVu",
+            "LnYyLlZwY0FjY2Vzcy5OZXR3b3JrSW50ZXJmYWNlGkUKEE5ldHdvcmtJbnRl",
+            "cmZhY2USDwoHbmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEgwK",
+            "BHRhZ3MYAyADKAkiUQoJVnBjRWdyZXNzEhoKFlZQQ19FR1JFU1NfVU5TUEVD",
+            "SUZJRUQQABIPCgtBTExfVFJBRkZJQxABEhcKE1BSSVZBVEVfUkFOR0VTX09O",
+            "TFkQAiJhChNCaW5hcnlBdXRob3JpemF0aW9uEhUKC3VzZV9kZWZhdWx0GAEg",
+            "ASgISAASIAoYYnJlYWtnbGFzc19qdXN0aWZpY2F0aW9uGAIgASgJQhEKD2Jp",
+            "bmF1dGh6X21ldGhvZCJJCg9SZXZpc2lvblNjYWxpbmcSGgoSbWluX2luc3Rh",
+            "bmNlX2NvdW50GAEgASgFEhoKEm1heF9pbnN0YW5jZV9jb3VudBgCIAEoBSIs",
+            "Cg5TZXJ2aWNlU2NhbGluZxIaChJtaW5faW5zdGFuY2VfY291bnQYASABKAUq",
+            "mQEKDkluZ3Jlc3NUcmFmZmljEh8KG0lOR1JFU1NfVFJBRkZJQ19VTlNQRUNJ",
+            "RklFRBAAEhcKE0lOR1JFU1NfVFJBRkZJQ19BTEwQARIhCh1JTkdSRVNTX1RS",
+            "QUZGSUNfSU5URVJOQUxfT05MWRACEioKJklOR1JFU1NfVFJBRkZJQ19JTlRF",
+            "Uk5BTF9MT0FEX0JBTEFOQ0VSEAMqfQoURXhlY3V0aW9uRW52aXJvbm1lbnQS",
+            "JQohRVhFQ1VUSU9OX0VOVklST05NRU5UX1VOU1BFQ0lGSUVEEAASHgoaRVhF",
+            "Q1VUSU9OX0VOVklST05NRU5UX0dFTjEQARIeChpFWEVDVVRJT05fRU5WSVJP",
+            "Tk1FTlRfR0VOMhACKnAKHUVuY3J5cHRpb25LZXlSZXZvY2F0aW9uQWN0aW9u",
+            "EjAKLEVOQ1JZUFRJT05fS0VZX1JFVk9DQVRJT05fQUNUSU9OX1VOU1BFQ0lG",
+            "SUVEEAASDwoLUFJFVkVOVF9ORVcQARIMCghTSFVURE9XThACQlsKF2NvbS5n",
+            "b29nbGUuY2xvdWQucnVuLnYyQhNWZW5kb3JTZXR0aW5nc1Byb3RvUAFaKWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess), global::Google.Cloud.Run.V2.VpcAccess.Parser, new[]{ "Connector", "Egress", "NetworkInterfaces" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.VpcEgress) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface), global::Google.Cloud.Run.V2.VpcAccess.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "Tags" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1205,6 +1207,205 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             MaxInstanceCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Scaling settings applied at the service level rather than
+  /// at the revision level.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ServiceScaling : pb::IMessage<ServiceScaling>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ServiceScaling> _parser = new pb::MessageParser<ServiceScaling>(() => new ServiceScaling());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ServiceScaling> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceScaling() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceScaling(ServiceScaling other) : this() {
+      minInstanceCount_ = other.minInstanceCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ServiceScaling Clone() {
+      return new ServiceScaling(this);
+    }
+
+    /// <summary>Field number for the "min_instance_count" field.</summary>
+    public const int MinInstanceCountFieldNumber = 1;
+    private int minInstanceCount_;
+    /// <summary>
+    /// total min instances for the service. This number of instances is
+    /// divided among all revisions with specified traffic based on the percent
+    /// of traffic they are receiving. (BETA)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinInstanceCount {
+      get { return minInstanceCount_; }
+      set {
+        minInstanceCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ServiceScaling);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ServiceScaling other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MinInstanceCount != other.MinInstanceCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MinInstanceCount != 0) hash ^= MinInstanceCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MinInstanceCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinInstanceCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MinInstanceCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinInstanceCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MinInstanceCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstanceCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ServiceScaling other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MinInstanceCount != 0) {
+        MinInstanceCount = other.MinInstanceCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MinInstanceCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MinInstanceCount = input.ReadInt32();
             break;
           }
         }
