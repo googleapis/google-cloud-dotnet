@@ -1304,6 +1304,27 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.CloudControlsPartner.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Controls Partner",
+      "productUrl": "https://cloud.google.com/sovereign-controls-by-partners/docs/sovereign-partners/reference/rest",
+      "description": "Recommended Google client library to access the Google Cloud Controls Partner API (v1) which provides insights about your customers and their Assured Workloads based on your Sovereign Controls by Partners offering.",
+      "tags": [
+        "partner",
+        "customers",
+        "insights"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/cloudcontrolspartner/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudcontrolspartner",
+      "serviceConfigFile": "cloudcontrolspartner_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.CloudControlsPartner.V1Beta",
       "version": "1.0.0-beta00",
       "type": "grpc",
