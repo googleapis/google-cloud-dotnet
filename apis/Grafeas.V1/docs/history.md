@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.5.0, released 2024-03-05
+
+### New features
+
+- Add session and session_template controllers ([commit 14d4f40](https://github.com/googleapis/google-cloud-dotnet/commit/14d4f40e57218134116f6d580ca726832d07d244))
+
 ## Version 3.4.0, released 2023-05-03
 
 ### New features
