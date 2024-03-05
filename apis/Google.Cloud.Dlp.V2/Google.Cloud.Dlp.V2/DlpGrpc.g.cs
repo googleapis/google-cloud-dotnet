@@ -32,7 +32,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// scheduling of data scans on Google Cloud Platform based data sets.
   ///
   /// To learn more about concepts and find how-to guides see
-  /// https://cloud.google.com/dlp/docs/.
+  /// https://cloud.google.com/sensitive-data-protection/docs/.
   /// </summary>
   public static partial class DlpService
   {
@@ -183,6 +183,30 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest> __Marshaller_google_privacy_dlp_v2_ListProjectDataProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse> __Marshaller_google_privacy_dlp_v2_ListProjectDataProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest> __Marshaller_google_privacy_dlp_v2_ListTableDataProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse> __Marshaller_google_privacy_dlp_v2_ListTableDataProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest> __Marshaller_google_privacy_dlp_v2_ListColumnDataProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse> __Marshaller_google_privacy_dlp_v2_ListColumnDataProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest> __Marshaller_google_privacy_dlp_v2_GetProjectDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ProjectDataProfile> __Marshaller_google_privacy_dlp_v2_ProjectDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ProjectDataProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest> __Marshaller_google_privacy_dlp_v2_GetTableDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.TableDataProfile> __Marshaller_google_privacy_dlp_v2_TableDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.TableDataProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest> __Marshaller_google_privacy_dlp_v2_GetColumnDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ColumnDataProfile> __Marshaller_google_privacy_dlp_v2_ColumnDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ColumnDataProfile.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -485,6 +509,54 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse> __Method_ListProjectDataProfiles = new grpc::Method<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListProjectDataProfiles",
+        __Marshaller_google_privacy_dlp_v2_ListProjectDataProfilesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListProjectDataProfilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse> __Method_ListTableDataProfiles = new grpc::Method<global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTableDataProfiles",
+        __Marshaller_google_privacy_dlp_v2_ListTableDataProfilesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListTableDataProfilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse> __Method_ListColumnDataProfiles = new grpc::Method<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListColumnDataProfiles",
+        __Marshaller_google_privacy_dlp_v2_ListColumnDataProfilesRequest,
+        __Marshaller_google_privacy_dlp_v2_ListColumnDataProfilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest, global::Google.Cloud.Dlp.V2.ProjectDataProfile> __Method_GetProjectDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest, global::Google.Cloud.Dlp.V2.ProjectDataProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProjectDataProfile",
+        __Marshaller_google_privacy_dlp_v2_GetProjectDataProfileRequest,
+        __Marshaller_google_privacy_dlp_v2_ProjectDataProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile> __Method_GetTableDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTableDataProfile",
+        __Marshaller_google_privacy_dlp_v2_GetTableDataProfileRequest,
+        __Marshaller_google_privacy_dlp_v2_TableDataProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest, global::Google.Cloud.Dlp.V2.ColumnDataProfile> __Method_GetColumnDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest, global::Google.Cloud.Dlp.V2.ColumnDataProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetColumnDataProfile",
+        __Marshaller_google_privacy_dlp_v2_GetColumnDataProfileRequest,
+        __Marshaller_google_privacy_dlp_v2_ColumnDataProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -518,8 +590,10 @@ namespace Google.Cloud.Dlp.V2 {
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
       ///
-      /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-      /// and https://cloud.google.com/dlp/docs/inspecting-text,
+      /// For how to guides, see
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -533,8 +607,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Redacts potentially sensitive info from an image.
       /// This method has limits on input size, processing time, and output size.
-      /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -552,8 +627,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// De-identifies potentially sensitive info from a ContentItem.
       /// This method has limits on input size and output size.
-      /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -571,7 +647,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Re-identifies content that has been de-identified.
       /// See
-      /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+      /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
       /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -585,8 +661,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Returns a list of the sensitive information types that DLP API
-      /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-      /// learn more.
+      /// supports. See
+      /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -600,7 +677,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -613,7 +692,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Updates the InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -626,7 +707,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Gets an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -639,7 +722,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Lists InspectTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -652,7 +737,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Deletes an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -666,8 +753,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -680,8 +768,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Updates the DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -694,8 +783,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Gets a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -708,8 +798,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Lists DeidentifyTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -722,8 +813,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Deletes a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -737,7 +829,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a job trigger to run DLP actions such as scanning storage for
       /// sensitive information on a set schedule.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -750,7 +844,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Updates a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -777,7 +873,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Gets a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -790,7 +888,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Lists job triggers.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -803,7 +903,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Deletes a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -889,8 +991,11 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
       /// system will automatically choose what detectors to run. By default this may
@@ -907,8 +1012,11 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Lists DlpJobs that match the specified filter in the request.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -921,8 +1029,11 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Gets the latest state of a long-running DlpJob.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -937,8 +1048,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Deletes a long-running DlpJob. This method indicates that the client is
       /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -953,8 +1067,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Starts asynchronous cancellation on a long-running DlpJob. The server
       /// makes a best effort to cancel the DlpJob, but success is not
       /// guaranteed.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -967,8 +1084,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Creates a pre-built stored infoType to be used for inspection.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -982,8 +1100,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Updates the stored infoType by creating a new version. The existing version
       /// will continue to be used until the new version is ready.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -996,8 +1115,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Gets a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1010,8 +1130,9 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Lists stored infoTypes.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1024,14 +1145,87 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Deletes a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse> ListProjectDataProfiles(global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse> ListTableDataProfiles(global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse> ListColumnDataProfiles(global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a project data profile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ProjectDataProfile> GetProjectDataProfile(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a table data profile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.TableDataProfile> GetTableDataProfile(global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a column data profile.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ColumnDataProfile> GetColumnDataProfile(global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1100,8 +1294,10 @@ namespace Google.Cloud.Dlp.V2 {
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
       ///
-      /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-      /// and https://cloud.google.com/dlp/docs/inspecting-text,
+      /// For how to guides, see
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1121,8 +1317,10 @@ namespace Google.Cloud.Dlp.V2 {
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
       ///
-      /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-      /// and https://cloud.google.com/dlp/docs/inspecting-text,
+      /// For how to guides, see
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1140,8 +1338,10 @@ namespace Google.Cloud.Dlp.V2 {
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
       ///
-      /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-      /// and https://cloud.google.com/dlp/docs/inspecting-text,
+      /// For how to guides, see
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1161,8 +1361,10 @@ namespace Google.Cloud.Dlp.V2 {
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
       ///
-      /// For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-      /// and https://cloud.google.com/dlp/docs/inspecting-text,
+      /// For how to guides, see
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-images
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-text,
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1175,8 +1377,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Redacts potentially sensitive info from an image.
       /// This method has limits on input size, processing time, and output size.
-      /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1195,8 +1398,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Redacts potentially sensitive info from an image.
       /// This method has limits on input size, processing time, and output size.
-      /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1213,8 +1417,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Redacts potentially sensitive info from an image.
       /// This method has limits on input size, processing time, and output size.
-      /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1233,8 +1438,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Redacts potentially sensitive info from an image.
       /// This method has limits on input size, processing time, and output size.
-      /// See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/redacting-sensitive-data-images
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1251,8 +1457,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// De-identifies potentially sensitive info from a ContentItem.
       /// This method has limits on input size and output size.
-      /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1271,8 +1478,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// De-identifies potentially sensitive info from a ContentItem.
       /// This method has limits on input size and output size.
-      /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1289,8 +1497,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// De-identifies potentially sensitive info from a ContentItem.
       /// This method has limits on input size and output size.
-      /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1309,8 +1518,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// De-identifies potentially sensitive info from a ContentItem.
       /// This method has limits on input size and output size.
-      /// See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
@@ -1327,7 +1537,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Re-identifies content that has been de-identified.
       /// See
-      /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+      /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
       /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1343,7 +1553,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Re-identifies content that has been de-identified.
       /// See
-      /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+      /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
       /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1357,7 +1567,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Re-identifies content that has been de-identified.
       /// See
-      /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+      /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
       /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1373,7 +1583,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Re-identifies content that has been de-identified.
       /// See
-      /// https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
+      /// https://cloud.google.com/sensitive-data-protection/docs/pseudonymization#re-identification_in_free_text_code_example
       /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1386,8 +1596,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Returns a list of the sensitive information types that DLP API
-      /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-      /// learn more.
+      /// supports. See
+      /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1401,8 +1612,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Returns a list of the sensitive information types that DLP API
-      /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-      /// learn more.
+      /// supports. See
+      /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1414,8 +1626,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Returns a list of the sensitive information types that DLP API
-      /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-      /// learn more.
+      /// supports. See
+      /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1429,8 +1642,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Returns a list of the sensitive information types that DLP API
-      /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-      /// learn more.
+      /// supports. See
+      /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1443,7 +1657,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1458,7 +1674,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1471,7 +1689,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1486,7 +1706,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates an InspectTemplate for reusing frequently used configuration
       /// for inspecting content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1498,7 +1720,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1512,7 +1736,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1524,7 +1750,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1538,7 +1766,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1550,7 +1780,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1564,7 +1796,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1576,7 +1810,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1590,7 +1826,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1602,7 +1840,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists InspectTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1616,7 +1856,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists InspectTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1628,7 +1870,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists InspectTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1642,7 +1886,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists InspectTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1654,7 +1900,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1668,7 +1916,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1680,7 +1930,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1694,7 +1946,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes an InspectTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1707,8 +1961,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1723,8 +1978,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1737,8 +1993,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1753,8 +2010,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a DeidentifyTemplate for reusing frequently used configuration
       /// for de-identifying content, images, and storage.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1766,8 +2024,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1781,8 +2040,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1794,8 +2054,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1809,8 +2070,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates the DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1822,8 +2084,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1837,8 +2100,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1850,8 +2114,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1865,8 +2130,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1878,8 +2144,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DeidentifyTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1893,8 +2160,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DeidentifyTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1906,8 +2174,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DeidentifyTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1921,8 +2190,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DeidentifyTemplates.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1934,8 +2204,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1949,8 +2220,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1962,8 +2234,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1977,8 +2250,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a DeidentifyTemplate.
-      /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-      /// more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-templates-deid
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1991,7 +2265,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a job trigger to run DLP actions such as scanning storage for
       /// sensitive information on a set schedule.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2006,7 +2282,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a job trigger to run DLP actions such as scanning storage for
       /// sensitive information on a set schedule.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2019,7 +2297,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a job trigger to run DLP actions such as scanning storage for
       /// sensitive information on a set schedule.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2034,7 +2314,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Creates a job trigger to run DLP actions such as scanning storage for
       /// sensitive information on a set schedule.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2046,7 +2328,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2060,7 +2344,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2072,7 +2358,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2086,7 +2374,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Updates a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2154,7 +2444,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2168,7 +2460,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2180,7 +2474,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2194,7 +2490,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2206,7 +2504,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists job triggers.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2220,7 +2520,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists job triggers.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2232,7 +2534,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists job triggers.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2246,7 +2550,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists job triggers.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2258,7 +2564,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2272,7 +2580,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2284,7 +2594,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2298,7 +2610,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a job trigger.
-      /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2602,8 +2916,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
       /// system will automatically choose what detectors to run. By default this may
@@ -2621,8 +2938,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
       /// system will automatically choose what detectors to run. By default this may
@@ -2638,8 +2958,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
       /// system will automatically choose what detectors to run. By default this may
@@ -2657,8 +2980,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       ///
       /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
       /// system will automatically choose what detectors to run. By default this may
@@ -2674,8 +3000,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DlpJobs that match the specified filter in the request.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2689,8 +3018,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DlpJobs that match the specified filter in the request.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2702,8 +3034,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DlpJobs that match the specified filter in the request.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2717,8 +3052,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists DlpJobs that match the specified filter in the request.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2730,8 +3068,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets the latest state of a long-running DlpJob.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2745,8 +3086,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets the latest state of a long-running DlpJob.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2758,8 +3102,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets the latest state of a long-running DlpJob.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2773,8 +3120,11 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets the latest state of a long-running DlpJob.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2788,8 +3138,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Deletes a long-running DlpJob. This method indicates that the client is
       /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2805,8 +3158,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Deletes a long-running DlpJob. This method indicates that the client is
       /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2820,8 +3176,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Deletes a long-running DlpJob. This method indicates that the client is
       /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2837,8 +3196,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Deletes a long-running DlpJob. This method indicates that the client is
       /// no longer interested in the DlpJob result. The job will be canceled if
       /// possible.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2852,8 +3214,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Starts asynchronous cancellation on a long-running DlpJob. The server
       /// makes a best effort to cancel the DlpJob, but success is not
       /// guaranteed.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2869,8 +3234,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Starts asynchronous cancellation on a long-running DlpJob. The server
       /// makes a best effort to cancel the DlpJob, but success is not
       /// guaranteed.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2884,8 +3252,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Starts asynchronous cancellation on a long-running DlpJob. The server
       /// makes a best effort to cancel the DlpJob, but success is not
       /// guaranteed.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2901,8 +3272,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Starts asynchronous cancellation on a long-running DlpJob. The server
       /// makes a best effort to cancel the DlpJob, but success is not
       /// guaranteed.
-      /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-      /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+      /// and
+      /// https://cloud.google.com/sensitive-data-protection/docs/compute-risk-analysis
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2914,8 +3288,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a pre-built stored infoType to be used for inspection.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2929,8 +3304,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a pre-built stored infoType to be used for inspection.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2942,8 +3318,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a pre-built stored infoType to be used for inspection.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2957,8 +3334,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Creates a pre-built stored infoType to be used for inspection.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2971,8 +3349,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Updates the stored infoType by creating a new version. The existing version
       /// will continue to be used until the new version is ready.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2987,8 +3366,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Updates the stored infoType by creating a new version. The existing version
       /// will continue to be used until the new version is ready.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3001,8 +3381,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Updates the stored infoType by creating a new version. The existing version
       /// will continue to be used until the new version is ready.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3017,8 +3398,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Updates the stored infoType by creating a new version. The existing version
       /// will continue to be used until the new version is ready.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3030,8 +3412,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3045,8 +3428,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3058,8 +3442,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3073,8 +3458,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Gets a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3086,8 +3472,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists stored infoTypes.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3101,8 +3488,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists stored infoTypes.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3114,8 +3502,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists stored infoTypes.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3129,8 +3518,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Lists stored infoTypes.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3142,8 +3532,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3157,8 +3548,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3170,8 +3562,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3185,8 +3578,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Deletes a stored infoType.
-      /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-      /// learn more.
+      /// See
+      /// https://cloud.google.com/sensitive-data-protection/docs/creating-stored-infotypes
+      /// to learn more.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3195,6 +3589,294 @@ namespace Google.Cloud.Dlp.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse ListProjectDataProfiles(global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProjectDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse ListProjectDataProfiles(global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListProjectDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse> ListProjectDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListProjectDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse> ListProjectDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListProjectDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse ListTableDataProfiles(global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTableDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse ListTableDataProfiles(global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTableDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse> ListTableDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTableDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse> ListTableDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTableDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse ListColumnDataProfiles(global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListColumnDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse ListColumnDataProfiles(global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListColumnDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse> ListColumnDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListColumnDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists data profiles for an organization.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse> ListColumnDataProfilesAsync(global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListColumnDataProfiles, null, options, request);
+      }
+      /// <summary>
+      /// Gets a project data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ProjectDataProfile GetProjectDataProfile(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a project data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ProjectDataProfile GetProjectDataProfile(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProjectDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a project data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ProjectDataProfile> GetProjectDataProfileAsync(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a project data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ProjectDataProfile> GetProjectDataProfileAsync(global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProjectDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a table data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.TableDataProfile GetTableDataProfile(global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTableDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a table data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.TableDataProfile GetTableDataProfile(global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTableDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a table data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.TableDataProfile> GetTableDataProfileAsync(global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTableDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a table data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.TableDataProfile> GetTableDataProfileAsync(global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTableDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a column data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ColumnDataProfile GetColumnDataProfile(global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetColumnDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a column data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ColumnDataProfile GetColumnDataProfile(global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetColumnDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets a column data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ColumnDataProfile> GetColumnDataProfileAsync(global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetColumnDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a column data profile.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ColumnDataProfile> GetColumnDataProfileAsync(global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetColumnDataProfile, null, options, request);
       }
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
@@ -3355,6 +4037,12 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_GetStoredInfoType, serviceImpl.GetStoredInfoType)
           .AddMethod(__Method_ListStoredInfoTypes, serviceImpl.ListStoredInfoTypes)
           .AddMethod(__Method_DeleteStoredInfoType, serviceImpl.DeleteStoredInfoType)
+          .AddMethod(__Method_ListProjectDataProfiles, serviceImpl.ListProjectDataProfiles)
+          .AddMethod(__Method_ListTableDataProfiles, serviceImpl.ListTableDataProfiles)
+          .AddMethod(__Method_ListColumnDataProfiles, serviceImpl.ListColumnDataProfiles)
+          .AddMethod(__Method_GetProjectDataProfile, serviceImpl.GetProjectDataProfile)
+          .AddMethod(__Method_GetTableDataProfile, serviceImpl.GetTableDataProfile)
+          .AddMethod(__Method_GetColumnDataProfile, serviceImpl.GetColumnDataProfile)
           .AddMethod(__Method_HybridInspectDlpJob, serviceImpl.HybridInspectDlpJob)
           .AddMethod(__Method_FinishDlpJob, serviceImpl.FinishDlpJob).Build();
     }
@@ -3403,6 +4091,12 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_GetStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(serviceImpl.GetStoredInfoType));
       serviceBinder.AddMethod(__Method_ListStoredInfoTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(serviceImpl.ListStoredInfoTypes));
       serviceBinder.AddMethod(__Method_DeleteStoredInfoType, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteStoredInfoType));
+      serviceBinder.AddMethod(__Method_ListProjectDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse>(serviceImpl.ListProjectDataProfiles));
+      serviceBinder.AddMethod(__Method_ListTableDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListTableDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListTableDataProfilesResponse>(serviceImpl.ListTableDataProfiles));
+      serviceBinder.AddMethod(__Method_ListColumnDataProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest, global::Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse>(serviceImpl.ListColumnDataProfiles));
+      serviceBinder.AddMethod(__Method_GetProjectDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest, global::Google.Cloud.Dlp.V2.ProjectDataProfile>(serviceImpl.GetProjectDataProfile));
+      serviceBinder.AddMethod(__Method_GetTableDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile>(serviceImpl.GetTableDataProfile));
+      serviceBinder.AddMethod(__Method_GetColumnDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest, global::Google.Cloud.Dlp.V2.ColumnDataProfile>(serviceImpl.GetColumnDataProfile));
       serviceBinder.AddMethod(__Method_HybridInspectDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(serviceImpl.HybridInspectDlpJob));
       serviceBinder.AddMethod(__Method_FinishDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.FinishDlpJob));
     }

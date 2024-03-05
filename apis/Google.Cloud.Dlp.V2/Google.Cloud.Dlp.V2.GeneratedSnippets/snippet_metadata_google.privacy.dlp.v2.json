@@ -12487,6 +12487,2157 @@
       ]
     },
     {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_sync",
+      "title": "ListProjectDataProfilesRequestObject",
+      "description": "Snippet for ListProjectDataProfiles",
+      "file": "DlpServiceClient.ListProjectDataProfilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_async",
+      "title": "ListProjectDataProfilesRequestObjectAsync",
+      "description": "Snippet for ListProjectDataProfilesAsync",
+      "file": "DlpServiceClient.ListProjectDataProfilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListProjectDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_sync_flattened",
+      "title": "ListProjectDataProfiles",
+      "description": "Snippet for ListProjectDataProfiles",
+      "file": "DlpServiceClient.ListProjectDataProfilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_async_flattened",
+      "title": "ListProjectDataProfilesAsync",
+      "description": "Snippet for ListProjectDataProfilesAsync",
+      "file": "DlpServiceClient.ListProjectDataProfilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_sync_flattened_resourceNames1",
+      "title": "ListProjectDataProfilesResourceNames1",
+      "description": "Snippet for ListProjectDataProfiles",
+      "file": "DlpServiceClient.ListProjectDataProfilesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_async_flattened_resourceNames1",
+      "title": "ListProjectDataProfilesResourceNames1Async",
+      "description": "Snippet for ListProjectDataProfilesAsync",
+      "file": "DlpServiceClient.ListProjectDataProfilesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_sync_flattened_resourceNames2",
+      "title": "ListProjectDataProfilesResourceNames2",
+      "description": "Snippet for ListProjectDataProfiles",
+      "file": "DlpServiceClient.ListProjectDataProfilesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListProjectDataProfiles_async_flattened_resourceNames2",
+      "title": "ListProjectDataProfilesResourceNames2Async",
+      "description": "Snippet for ListProjectDataProfilesAsync",
+      "file": "DlpServiceClient.ListProjectDataProfilesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProjectDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListProjectDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListProjectDataProfilesResponse, Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListProjectDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListProjectDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_sync",
+      "title": "ListTableDataProfilesRequestObject",
+      "description": "Snippet for ListTableDataProfiles",
+      "file": "DlpServiceClient.ListTableDataProfilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListTableDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_async",
+      "title": "ListTableDataProfilesRequestObjectAsync",
+      "description": "Snippet for ListTableDataProfilesAsync",
+      "file": "DlpServiceClient.ListTableDataProfilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListTableDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_sync_flattened",
+      "title": "ListTableDataProfiles",
+      "description": "Snippet for ListTableDataProfiles",
+      "file": "DlpServiceClient.ListTableDataProfilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_async_flattened",
+      "title": "ListTableDataProfilesAsync",
+      "description": "Snippet for ListTableDataProfilesAsync",
+      "file": "DlpServiceClient.ListTableDataProfilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_sync_flattened_resourceNames1",
+      "title": "ListTableDataProfilesResourceNames1",
+      "description": "Snippet for ListTableDataProfiles",
+      "file": "DlpServiceClient.ListTableDataProfilesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_async_flattened_resourceNames1",
+      "title": "ListTableDataProfilesResourceNames1Async",
+      "description": "Snippet for ListTableDataProfilesAsync",
+      "file": "DlpServiceClient.ListTableDataProfilesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_sync_flattened_resourceNames2",
+      "title": "ListTableDataProfilesResourceNames2",
+      "description": "Snippet for ListTableDataProfiles",
+      "file": "DlpServiceClient.ListTableDataProfilesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListTableDataProfiles_async_flattened_resourceNames2",
+      "title": "ListTableDataProfilesResourceNames2Async",
+      "description": "Snippet for ListTableDataProfilesAsync",
+      "file": "DlpServiceClient.ListTableDataProfilesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTableDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListTableDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListTableDataProfilesResponse, Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListTableDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListTableDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_sync",
+      "title": "ListColumnDataProfilesRequestObject",
+      "description": "Snippet for ListColumnDataProfiles",
+      "file": "DlpServiceClient.ListColumnDataProfilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_async",
+      "title": "ListColumnDataProfilesRequestObjectAsync",
+      "description": "Snippet for ListColumnDataProfilesAsync",
+      "file": "DlpServiceClient.ListColumnDataProfilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListColumnDataProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_sync_flattened",
+      "title": "ListColumnDataProfiles",
+      "description": "Snippet for ListColumnDataProfiles",
+      "file": "DlpServiceClient.ListColumnDataProfilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_async_flattened",
+      "title": "ListColumnDataProfilesAsync",
+      "description": "Snippet for ListColumnDataProfilesAsync",
+      "file": "DlpServiceClient.ListColumnDataProfilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_sync_flattened_resourceNames1",
+      "title": "ListColumnDataProfilesResourceNames1",
+      "description": "Snippet for ListColumnDataProfiles",
+      "file": "DlpServiceClient.ListColumnDataProfilesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_async_flattened_resourceNames1",
+      "title": "ListColumnDataProfilesResourceNames1Async",
+      "description": "Snippet for ListColumnDataProfilesAsync",
+      "file": "DlpServiceClient.ListColumnDataProfilesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_sync_flattened_resourceNames2",
+      "title": "ListColumnDataProfilesResourceNames2",
+      "description": "Snippet for ListColumnDataProfiles",
+      "file": "DlpServiceClient.ListColumnDataProfilesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfiles",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfiles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListColumnDataProfiles_async_flattened_resourceNames2",
+      "title": "ListColumnDataProfilesResourceNames2Async",
+      "description": "Snippet for ListColumnDataProfilesAsync",
+      "file": "DlpServiceClient.ListColumnDataProfilesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListColumnDataProfilesAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListColumnDataProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListColumnDataProfilesResponse, Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListColumnDataProfiles",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListColumnDataProfiles",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_sync",
+      "title": "GetProjectDataProfileRequestObject",
+      "description": "Snippet for GetProjectDataProfile",
+      "file": "DlpServiceClient.GetProjectDataProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetProjectDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ProjectDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_async",
+      "title": "GetProjectDataProfileRequestObjectAsync",
+      "description": "Snippet for GetProjectDataProfileAsync",
+      "file": "DlpServiceClient.GetProjectDataProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetProjectDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_sync_flattened",
+      "title": "GetProjectDataProfile",
+      "description": "Snippet for GetProjectDataProfile",
+      "file": "DlpServiceClient.GetProjectDataProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ProjectDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_async_flattened",
+      "title": "GetProjectDataProfileAsync",
+      "description": "Snippet for GetProjectDataProfileAsync",
+      "file": "DlpServiceClient.GetProjectDataProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_sync_flattened_resourceNames",
+      "title": "GetProjectDataProfileResourceNames",
+      "description": "Snippet for GetProjectDataProfile",
+      "file": "DlpServiceClient.GetProjectDataProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ProjectDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ProjectDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetProjectDataProfile_async_flattened_resourceNames",
+      "title": "GetProjectDataProfileResourceNamesAsync",
+      "description": "Snippet for GetProjectDataProfileAsync",
+      "file": "DlpServiceClient.GetProjectDataProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProjectDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetProjectDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ProjectDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ProjectDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetProjectDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetProjectDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_sync",
+      "title": "GetTableDataProfileRequestObject",
+      "description": "Snippet for GetTableDataProfile",
+      "file": "DlpServiceClient.GetTableDataProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetTableDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.TableDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_async",
+      "title": "GetTableDataProfileRequestObjectAsync",
+      "description": "Snippet for GetTableDataProfileAsync",
+      "file": "DlpServiceClient.GetTableDataProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetTableDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_sync_flattened",
+      "title": "GetTableDataProfile",
+      "description": "Snippet for GetTableDataProfile",
+      "file": "DlpServiceClient.GetTableDataProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.TableDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_async_flattened",
+      "title": "GetTableDataProfileAsync",
+      "description": "Snippet for GetTableDataProfileAsync",
+      "file": "DlpServiceClient.GetTableDataProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_sync_flattened_resourceNames",
+      "title": "GetTableDataProfileResourceNames",
+      "description": "Snippet for GetTableDataProfile",
+      "file": "DlpServiceClient.GetTableDataProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.TableDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.TableDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetTableDataProfile_async_flattened_resourceNames",
+      "title": "GetTableDataProfileResourceNamesAsync",
+      "description": "Snippet for GetTableDataProfileAsync",
+      "file": "DlpServiceClient.GetTableDataProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.TableDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.TableDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_sync",
+      "title": "GetColumnDataProfileRequestObject",
+      "description": "Snippet for GetColumnDataProfile",
+      "file": "DlpServiceClient.GetColumnDataProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetColumnDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ColumnDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_async",
+      "title": "GetColumnDataProfileRequestObjectAsync",
+      "description": "Snippet for GetColumnDataProfileAsync",
+      "file": "DlpServiceClient.GetColumnDataProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetColumnDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_sync_flattened",
+      "title": "GetColumnDataProfile",
+      "description": "Snippet for GetColumnDataProfile",
+      "file": "DlpServiceClient.GetColumnDataProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ColumnDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_async_flattened",
+      "title": "GetColumnDataProfileAsync",
+      "description": "Snippet for GetColumnDataProfileAsync",
+      "file": "DlpServiceClient.GetColumnDataProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_sync_flattened_resourceNames",
+      "title": "GetColumnDataProfileResourceNames",
+      "description": "Snippet for GetColumnDataProfile",
+      "file": "DlpServiceClient.GetColumnDataProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ColumnDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.ColumnDataProfile",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetColumnDataProfile_async_flattened_resourceNames",
+      "title": "GetColumnDataProfileResourceNamesAsync",
+      "description": "Snippet for GetColumnDataProfileAsync",
+      "file": "DlpServiceClient.GetColumnDataProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetColumnDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetColumnDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ColumnDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.ColumnDataProfile>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetColumnDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetColumnDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dlp_v2_generated_DlpService_HybridInspectDlpJob_sync",
       "title": "HybridInspectDlpJobRequestObject",
       "description": "Snippet for HybridInspectDlpJob",
