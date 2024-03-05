@@ -1,5 +1,9 @@
 # Version history
 
+## Version 5.2.0, released 2024-03-05
+
+No API surface changes; just dependency updates.
+
 ## Version 5.1.0, released 2023-02-08
 
 ### New features
