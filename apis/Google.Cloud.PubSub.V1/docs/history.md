@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2024-03-05
+
+### Documentation improvements
+
+- Small fix in Pub/Sub ingestion comments ([commit 663a29c](https://github.com/googleapis/google-cloud-dotnet/commit/663a29c5ad9fc8c8dc6942540e35b60c4d8c2f36))
+
 ## Version 3.10.0-beta01, released 2024-02-09
 
 ### New features
