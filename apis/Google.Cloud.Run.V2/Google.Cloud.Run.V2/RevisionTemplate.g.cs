@@ -25,34 +25,36 @@ namespace Google.Cloud.Run.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvcnVuL3YyL3JldmlzaW9uX3RlbXBsYXRlLnByb3Rv",
-            "EhNnb29nbGUuY2xvdWQucnVuLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2ds",
-            "ZS9jbG91ZC9ydW4vdjIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8imQYKEFJldmlzaW9uVGVtcGxhdGUS",
-            "MgoIcmV2aXNpb24YASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1Jl",
-            "dmlzaW9uEkEKBmxhYmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIu",
-            "UmV2aXNpb25UZW1wbGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgD",
-            "IAMoCzI2Lmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZS5B",
-            "bm5vdGF0aW9uc0VudHJ5EjUKB3NjYWxpbmcYBCABKAsyJC5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlJldmlzaW9uU2NhbGluZxIyCgp2cGNfYWNjZXNzGAYgASgL",
-            "Mh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3MSKgoHdGltZW91dBgI",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2Fj",
-            "Y291bnQYCSABKAkSMgoKY29udGFpbmVycxgKIAMoCzIeLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuQ29udGFpbmVyEiwKB3ZvbHVtZXMYCyADKAsyGy5nb29nbGUu",
-            "Y2xvdWQucnVuLnYyLlZvbHVtZRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQY",
-            "DSABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25t",
-            "ZW50Ej4KDmVuY3J5cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdv",
-            "b2dsZWFwaXMuY29tL0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVz",
-            "dF9jb25jdXJyZW5jeRgPIAEoBRIYChBzZXNzaW9uX2FmZmluaXR5GBMgASgI",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBQl0KF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQhVSZXZpc2lv",
-            "blRlbXBsYXRlUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBp",
-            "djIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "EhNnb29nbGUuY2xvdWQucnVuLnYyGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUv",
+            "Y2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8aKWdvb2dsZS9jbG91ZC9ydW4v",
+            "djIvdmVuZG9yX3NldHRpbmdzLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
+            "YXRpb24ucHJvdG8iwgYKEFJldmlzaW9uVGVtcGxhdGUSMgoIcmV2aXNpb24Y",
+            "ASABKAlCIPpBHQobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkEKBmxh",
+            "YmVscxgCIAMoCzIxLmdvb2dsZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1w",
+            "bGF0ZS5MYWJlbHNFbnRyeRJLCgthbm5vdGF0aW9ucxgDIAMoCzI2Lmdvb2ds",
+            "ZS5jbG91ZC5ydW4udjIuUmV2aXNpb25UZW1wbGF0ZS5Bbm5vdGF0aW9uc0Vu",
+            "dHJ5EjUKB3NjYWxpbmcYBCABKAsyJC5nb29nbGUuY2xvdWQucnVuLnYyLlJl",
+            "dmlzaW9uU2NhbGluZxIyCgp2cGNfYWNjZXNzGAYgASgLMh4uZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5WcGNBY2Nlc3MSKgoHdGltZW91dBgIIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2FjY291bnQYCSABKAkS",
+            "MgoKY29udGFpbmVycxgKIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29u",
+            "dGFpbmVyEiwKB3ZvbHVtZXMYCyADKAsyGy5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LlZvbHVtZRJIChVleGVjdXRpb25fZW52aXJvbm1lbnQYDSABKA4yKS5nb29n",
+            "bGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25tZW50Ej4KDmVuY3J5",
+            "cHRpb25fa2V5GA4gASgJQib6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29t",
+            "L0NyeXB0b0tleRIoCiBtYXhfaW5zdGFuY2VfcmVxdWVzdF9jb25jdXJyZW5j",
+            "eRgPIAEoBRIdChBzZXNzaW9uX2FmZmluaXR5GBMgASgIQgPgQQESIgoVaGVh",
+            "bHRoX2NoZWNrX2Rpc2FibGVkGBQgASgIQgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCXQoXY29t",
+            "Lmdvb2dsZS5jbG91ZC5ydW4udjJCFVJldmlzaW9uVGVtcGxhdGVQcm90b1AB",
+            "WiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "SessionAffinity" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionTemplate), global::Google.Cloud.Run.V2.RevisionTemplate.Parser, new[]{ "Revision", "Labels", "Annotations", "Scaling", "VpcAccess", "Timeout", "ServiceAccount", "Containers", "Volumes", "ExecutionEnvironment", "EncryptionKey", "MaxInstanceRequestConcurrency", "SessionAffinity", "HealthCheckDisabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -111,6 +113,7 @@ namespace Google.Cloud.Run.V2 {
       encryptionKey_ = other.encryptionKey_;
       maxInstanceRequestConcurrency_ = other.maxInstanceRequestConcurrency_;
       sessionAffinity_ = other.sessionAffinity_;
+      healthCheckDisabled_ = other.healthCheckDisabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -329,7 +332,7 @@ namespace Google.Cloud.Run.V2 {
     public const int SessionAffinityFieldNumber = 19;
     private bool sessionAffinity_;
     /// <summary>
-    /// Enable session affinity.
+    /// Optional. Enable session affinity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -337,6 +340,21 @@ namespace Google.Cloud.Run.V2 {
       get { return sessionAffinity_; }
       set {
         sessionAffinity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "health_check_disabled" field.</summary>
+    public const int HealthCheckDisabledFieldNumber = 20;
+    private bool healthCheckDisabled_;
+    /// <summary>
+    /// Optional. Disables health checking containers during deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HealthCheckDisabled {
+      get { return healthCheckDisabled_; }
+      set {
+        healthCheckDisabled_ = value;
       }
     }
 
@@ -368,6 +386,7 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey != other.EncryptionKey) return false;
       if (MaxInstanceRequestConcurrency != other.MaxInstanceRequestConcurrency) return false;
       if (SessionAffinity != other.SessionAffinity) return false;
+      if (HealthCheckDisabled != other.HealthCheckDisabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -388,6 +407,7 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (MaxInstanceRequestConcurrency != 0) hash ^= MaxInstanceRequestConcurrency.GetHashCode();
       if (SessionAffinity != false) hash ^= SessionAffinity.GetHashCode();
+      if (HealthCheckDisabled != false) hash ^= HealthCheckDisabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -446,6 +466,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(152, 1);
         output.WriteBool(SessionAffinity);
       }
+      if (HealthCheckDisabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(HealthCheckDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -496,6 +520,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(152, 1);
         output.WriteBool(SessionAffinity);
       }
+      if (HealthCheckDisabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(HealthCheckDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -535,6 +563,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceRequestConcurrency);
       }
       if (SessionAffinity != false) {
+        size += 2 + 1;
+      }
+      if (HealthCheckDisabled != false) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -588,6 +619,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.SessionAffinity != false) {
         SessionAffinity = other.SessionAffinity;
+      }
+      if (other.HealthCheckDisabled != false) {
+        HealthCheckDisabled = other.HealthCheckDisabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -665,6 +699,10 @@ namespace Google.Cloud.Run.V2 {
             SessionAffinity = input.ReadBool();
             break;
           }
+          case 160: {
+            HealthCheckDisabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -739,6 +777,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 152: {
             SessionAffinity = input.ReadBool();
+            break;
+          }
+          case 160: {
+            HealthCheckDisabled = input.ReadBool();
             break;
           }
         }
