@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                     new MutateRowsRequest.Types.Entry(),
                 },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);

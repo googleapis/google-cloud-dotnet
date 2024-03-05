@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 RowKey = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);

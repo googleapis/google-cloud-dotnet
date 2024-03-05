@@ -64,7 +64,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -73,7 +74,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(string tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
             }, callSettings);
 
         /// <summary>
@@ -83,7 +84,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -92,7 +94,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
             }, callSettings);
 
         /// <summary>
@@ -102,7 +104,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -115,7 +118,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 
@@ -126,7 +129,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -139,7 +143,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 

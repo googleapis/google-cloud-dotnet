@@ -32,204 +32,244 @@ namespace Google.Cloud.Bigtable.V2 {
             "dG8aJmdvb2dsZS9iaWd0YWJsZS92Mi9yZXF1ZXN0X3N0YXRzLnByb3RvGh5n",
             "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
             "Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
-            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iogMKD1JlYWRSb3dzUmVx",
-            "dWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQKImJpZ3RhYmxlYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYBSAB",
-            "KAkSKAoEcm93cxgCIAEoCzIaLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dTZXQS",
-            "LQoGZmlsdGVyGAMgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRl",
-            "chISCgpyb3dzX2xpbWl0GAQgASgDElAKEnJlcXVlc3Rfc3RhdHNfdmlldxgG",
-            "IAEoDjI0Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1JlcXVlc3QuUmVx",
-            "dWVzdFN0YXRzVmlldxIQCghyZXZlcnNlZBgHIAEoCCJmChBSZXF1ZXN0U3Rh",
-            "dHNWaWV3EiIKHlJFUVVFU1RfU1RBVFNfVklFV19VTlNQRUNJRklFRBAAEhYK",
-            "ElJFUVVFU1RfU1RBVFNfTk9ORRABEhYKElJFUVVFU1RfU1RBVFNfRlVMTBAC",
-            "IrEDChBSZWFkUm93c1Jlc3BvbnNlEj4KBmNodW5rcxgBIAMoCzIuLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jlc3BvbnNlLkNlbGxDaHVuaxIcChRs",
-            "YXN0X3NjYW5uZWRfcm93X2tleRgCIAEoDBI3Cg1yZXF1ZXN0X3N0YXRzGAMg",
-            "ASgLMiAuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlcXVlc3RTdGF0cxqFAgoJQ2Vs",
-            "bENodW5rEg8KB3Jvd19rZXkYASABKAwSMQoLZmFtaWx5X25hbWUYAiABKAsy",
-            "HC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLgoJcXVhbGlmaWVyGAMg",
-            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkJ5dGVzVmFsdWUSGAoQdGltZXN0YW1w",
-            "X21pY3JvcxgEIAEoAxIOCgZsYWJlbHMYBSADKAkSDQoFdmFsdWUYBiABKAwS",
-            "EgoKdmFsdWVfc2l6ZRgHIAEoBRITCglyZXNldF9yb3cYCCABKAhIABIUCgpj",
-            "b21taXRfcm93GAkgASgISABCDAoKcm93X3N0YXR1cyJuChRTYW1wbGVSb3dL",
-            "ZXlzUmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQKImJpZ3Rh",
-            "YmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3Byb2ZpbGVf",
-            "aWQYAiABKAkiPgoVU2FtcGxlUm93S2V5c1Jlc3BvbnNlEg8KB3Jvd19rZXkY",
-            "ASABKAwSFAoMb2Zmc2V0X2J5dGVzGAIgASgDIrYBChBNdXRhdGVSb3dSZXF1",
-            "ZXN0Ej4KCnRhYmxlX25hbWUYASABKAlCKuBBAvpBJAoiYmlndGFibGVhZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9UYWJsZRIWCg5hcHBfcHJvZmlsZV9pZBgEIAEo",
-            "CRIUCgdyb3dfa2V5GAIgASgMQgPgQQISNAoJbXV0YXRpb25zGAMgAygLMhwu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uQgPgQQIiEwoRTXV0YXRlUm93",
-            "UmVzcG9uc2Ui/gEKEU11dGF0ZVJvd3NSZXF1ZXN0Ej4KCnRhYmxlX25hbWUY",
-            "ASABKAlCKuBBAvpBJAoiYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9U",
-            "YWJsZRIWCg5hcHBfcHJvZmlsZV9pZBgDIAEoCRJBCgdlbnRyaWVzGAIgAygL",
-            "MisuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd3NSZXF1ZXN0LkVudHJ5",
-            "QgPgQQIaTgoFRW50cnkSDwoHcm93X2tleRgBIAEoDBI0CgltdXRhdGlvbnMY",
-            "AiADKAsyHC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb25CA+BBAiLkAQoS",
-            "TXV0YXRlUm93c1Jlc3BvbnNlEj0KB2VudHJpZXMYASADKAsyLC5nb29nbGUu",
-            "YmlndGFibGUudjIuTXV0YXRlUm93c1Jlc3BvbnNlLkVudHJ5Ej8KD3JhdGVf",
-            "bGltaXRfaW5mbxgDIAEoCzIhLmdvb2dsZS5iaWd0YWJsZS52Mi5SYXRlTGlt",
-            "aXRJbmZvSACIAQEaOgoFRW50cnkSDQoFaW5kZXgYASABKAMSIgoGc3RhdHVz",
-            "GAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCEgoQX3JhdGVfbGltaXRfaW5m",
-            "byJKCg1SYXRlTGltaXRJbmZvEikKBnBlcmlvZBgBIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhIOCgZmYWN0b3IYAiABKAEirgIKGENoZWNrQW5k",
-            "TXV0YXRlUm93UmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQK",
-            "ImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3By",
-            "b2ZpbGVfaWQYByABKAkSFAoHcm93X2tleRgCIAEoDEID4EECEjcKEHByZWRp",
-            "Y2F0ZV9maWx0ZXIYBiABKAsyHS5nb29nbGUuYmlndGFibGUudjIuUm93Rmls",
-            "dGVyEjQKDnRydWVfbXV0YXRpb25zGAQgAygLMhwuZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyLk11dGF0aW9uEjUKD2ZhbHNlX211dGF0aW9ucxgFIAMoCzIcLmdvb2ds",
-            "ZS5iaWd0YWJsZS52Mi5NdXRhdGlvbiI2ChlDaGVja0FuZE11dGF0ZVJvd1Jl",
-            "c3BvbnNlEhkKEXByZWRpY2F0ZV9tYXRjaGVkGAEgASgIImkKElBpbmdBbmRX",
-            "YXJtUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScKJWJpZ3RhYmxlYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USFgoOYXBwX3Byb2ZpbGVfaWQY",
-            "AiABKAkiFQoTUGluZ0FuZFdhcm1SZXNwb25zZSLGAQoZUmVhZE1vZGlmeVdy",
-            "aXRlUm93UmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQL6QSQKImJp",
-            "Z3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSFgoOYXBwX3Byb2Zp",
-            "bGVfaWQYBCABKAkSFAoHcm93X2tleRgCIAEoDEID4EECEjsKBXJ1bGVzGAMg",
-            "AygLMicuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRNb2RpZnlXcml0ZVJ1bGVC",
-            "A+BBAiJCChpSZWFkTW9kaWZ5V3JpdGVSb3dSZXNwb25zZRIkCgNyb3cYASAB",
-            "KAsyFy5nb29nbGUuYmlndGFibGUudjIuUm93IoYBCixHZW5lcmF0ZUluaXRp",
-            "YWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zUmVxdWVzdBI+Cgp0YWJsZV9uYW1l",
+            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8i9QMKD1JlYWRSb3dzUmVx",
+            "dWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQH6QSQKImJpZ3RhYmxlYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSUQoUYXV0aG9yaXplZF92aWV3X25h",
+            "bWUYCSABKAlCM+BBAfpBLQorYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9BdXRob3JpemVkVmlldxIWCg5hcHBfcHJvZmlsZV9pZBgFIAEoCRIoCgRy",
+            "b3dzGAIgASgLMhouZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd1NldBItCgZmaWx0",
+            "ZXIYAyABKAsyHS5nb29nbGUuYmlndGFibGUudjIuUm93RmlsdGVyEhIKCnJv",
+            "d3NfbGltaXQYBCABKAMSUAoScmVxdWVzdF9zdGF0c192aWV3GAYgASgOMjQu",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRSb3dzUmVxdWVzdC5SZXF1ZXN0U3Rh",
+            "dHNWaWV3EhAKCHJldmVyc2VkGAcgASgIImYKEFJlcXVlc3RTdGF0c1ZpZXcS",
+            "IgoeUkVRVUVTVF9TVEFUU19WSUVXX1VOU1BFQ0lGSUVEEAASFgoSUkVRVUVT",
+            "VF9TVEFUU19OT05FEAESFgoSUkVRVUVTVF9TVEFUU19GVUxMEAIisQMKEFJl",
+            "YWRSb3dzUmVzcG9uc2USPgoGY2h1bmtzGAEgAygLMi4uZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLlJlYWRSb3dzUmVzcG9uc2UuQ2VsbENodW5rEhwKFGxhc3Rfc2Nh",
+            "bm5lZF9yb3dfa2V5GAIgASgMEjcKDXJlcXVlc3Rfc3RhdHMYAyABKAsyIC5n",
+            "b29nbGUuYmlndGFibGUudjIuUmVxdWVzdFN0YXRzGoUCCglDZWxsQ2h1bmsS",
+            "DwoHcm93X2tleRgBIAEoDBIxCgtmYW1pbHlfbmFtZRgCIAEoCzIcLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIuCglxdWFsaWZpZXIYAyABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuQnl0ZXNWYWx1ZRIYChB0aW1lc3RhbXBfbWljcm9z",
+            "GAQgASgDEg4KBmxhYmVscxgFIAMoCRINCgV2YWx1ZRgGIAEoDBISCgp2YWx1",
+            "ZV9zaXplGAcgASgFEhMKCXJlc2V0X3JvdxgIIAEoCEgAEhQKCmNvbW1pdF9y",
+            "b3cYCSABKAhIAEIMCgpyb3dfc3RhdHVzIsEBChRTYW1wbGVSb3dLZXlzUmVx",
+            "dWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQH6QSQKImJpZ3RhYmxlYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSUQoUYXV0aG9yaXplZF92aWV3X25h",
+            "bWUYBCABKAlCM+BBAfpBLQorYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9BdXRob3JpemVkVmlldxIWCg5hcHBfcHJvZmlsZV9pZBgCIAEoCSI+ChVT",
+            "YW1wbGVSb3dLZXlzUmVzcG9uc2USDwoHcm93X2tleRgBIAEoDBIUCgxvZmZz",
+            "ZXRfYnl0ZXMYAiABKAMiiQIKEE11dGF0ZVJvd1JlcXVlc3QSPgoKdGFibGVf",
+            "bmFtZRgBIAEoCUIq4EEB+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMu",
+            "Y29tL1RhYmxlElEKFGF1dGhvcml6ZWRfdmlld19uYW1lGAYgASgJQjPgQQH6",
+            "QS0KK2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXV0aG9yaXplZFZp",
+            "ZXcSFgoOYXBwX3Byb2ZpbGVfaWQYBCABKAkSFAoHcm93X2tleRgCIAEoDEID",
+            "4EECEjQKCW11dGF0aW9ucxgDIAMoCzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5N",
+            "dXRhdGlvbkID4EECIhMKEU11dGF0ZVJvd1Jlc3BvbnNlItECChFNdXRhdGVS",
+            "b3dzUmVxdWVzdBI+Cgp0YWJsZV9uYW1lGAEgASgJQirgQQH6QSQKImJpZ3Rh",
+            "YmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSUQoUYXV0aG9yaXplZF92",
+            "aWV3X25hbWUYBSABKAlCM+BBAfpBLQorYmlndGFibGVhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbS9BdXRob3JpemVkVmlldxIWCg5hcHBfcHJvZmlsZV9pZBgDIAEo",
+            "CRJBCgdlbnRyaWVzGAIgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0",
+            "ZVJvd3NSZXF1ZXN0LkVudHJ5QgPgQQIaTgoFRW50cnkSDwoHcm93X2tleRgB",
+            "IAEoDBI0CgltdXRhdGlvbnMYAiADKAsyHC5nb29nbGUuYmlndGFibGUudjIu",
+            "TXV0YXRpb25CA+BBAiLkAQoSTXV0YXRlUm93c1Jlc3BvbnNlEj0KB2VudHJp",
+            "ZXMYASADKAsyLC5nb29nbGUuYmlndGFibGUudjIuTXV0YXRlUm93c1Jlc3Bv",
+            "bnNlLkVudHJ5Ej8KD3JhdGVfbGltaXRfaW5mbxgDIAEoCzIhLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5SYXRlTGltaXRJbmZvSACIAQEaOgoFRW50cnkSDQoFaW5k",
+            "ZXgYASABKAMSIgoGc3RhdHVzGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNC",
+            "EgoQX3JhdGVfbGltaXRfaW5mbyJKCg1SYXRlTGltaXRJbmZvEikKBnBlcmlv",
+            "ZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIOCgZmYWN0b3IY",
+            "AiABKAEigQMKGENoZWNrQW5kTXV0YXRlUm93UmVxdWVzdBI+Cgp0YWJsZV9u",
+            "YW1lGAEgASgJQirgQQH6QSQKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5j",
+            "b20vVGFibGUSUQoUYXV0aG9yaXplZF92aWV3X25hbWUYCSABKAlCM+BBAfpB",
+            "LQorYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9BdXRob3JpemVkVmll",
+            "dxIWCg5hcHBfcHJvZmlsZV9pZBgHIAEoCRIUCgdyb3dfa2V5GAIgASgMQgPg",
+            "QQISNwoQcHJlZGljYXRlX2ZpbHRlchgGIAEoCzIdLmdvb2dsZS5iaWd0YWJs",
+            "ZS52Mi5Sb3dGaWx0ZXISNAoOdHJ1ZV9tdXRhdGlvbnMYBCADKAsyHC5nb29n",
+            "bGUuYmlndGFibGUudjIuTXV0YXRpb24SNQoPZmFsc2VfbXV0YXRpb25zGAUg",
+            "AygLMhwuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uIjYKGUNoZWNrQW5k",
+            "TXV0YXRlUm93UmVzcG9uc2USGQoRcHJlZGljYXRlX21hdGNoZWQYASABKAgi",
+            "aQoSUGluZ0FuZFdhcm1SZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwol",
+            "YmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIWCg5hcHBf",
+            "cHJvZmlsZV9pZBgCIAEoCSIVChNQaW5nQW5kV2FybVJlc3BvbnNlIpkCChlS",
+            "ZWFkTW9kaWZ5V3JpdGVSb3dSZXF1ZXN0Ej4KCnRhYmxlX25hbWUYASABKAlC",
+            "KuBBAfpBJAoiYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRJR",
+            "ChRhdXRob3JpemVkX3ZpZXdfbmFtZRgGIAEoCUIz4EEB+kEtCitiaWd0YWJs",
+            "ZWFkbWluLmdvb2dsZWFwaXMuY29tL0F1dGhvcml6ZWRWaWV3EhYKDmFwcF9w",
+            "cm9maWxlX2lkGAQgASgJEhQKB3Jvd19rZXkYAiABKAxCA+BBAhI7CgVydWxl",
+            "cxgDIAMoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkTW9kaWZ5V3JpdGVS",
+            "dWxlQgPgQQIiQgoaUmVhZE1vZGlmeVdyaXRlUm93UmVzcG9uc2USJAoDcm93",
+            "GAEgASgLMhcuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvdyKGAQosR2VuZXJhdGVJ",
+            "bml0aWFsQ2hhbmdlU3RyZWFtUGFydGl0aW9uc1JlcXVlc3QSPgoKdGFibGVf",
+            "bmFtZRgBIAEoCUIq4EEC+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMu",
+            "Y29tL1RhYmxlEhYKDmFwcF9wcm9maWxlX2lkGAIgASgJImcKLUdlbmVyYXRl",
+            "SW5pdGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnNSZXNwb25zZRI2CglwYXJ0",
+            "aXRpb24YASABKAsyIy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0",
+            "aW9uIpsDChdSZWFkQ2hhbmdlU3RyZWFtUmVxdWVzdBI+Cgp0YWJsZV9uYW1l",
             "GAEgASgJQirgQQL6QSQKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "VGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkiZwotR2VuZXJhdGVJbml0",
-            "aWFsQ2hhbmdlU3RyZWFtUGFydGl0aW9uc1Jlc3BvbnNlEjYKCXBhcnRpdGlv",
-            "bhgBIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1QYXJ0aXRpb24i",
-            "mwMKF1JlYWRDaGFuZ2VTdHJlYW1SZXF1ZXN0Ej4KCnRhYmxlX25hbWUYASAB",
-            "KAlCKuBBAvpBJAoiYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJs",
-            "ZRIWCg5hcHBfcHJvZmlsZV9pZBgCIAEoCRI2CglwYXJ0aXRpb24YAyABKAsy",
-            "Iy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0aW9uEjAKCnN0YXJ0",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSAASSwoT",
-            "Y29udGludWF0aW9uX3Rva2VucxgGIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS52",
-            "Mi5TdHJlYW1Db250aW51YXRpb25Ub2tlbnNIABIsCghlbmRfdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNQoSaGVhcnRiZWF0X2R1",
-            "cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgwKCnN0",
-            "YXJ0X2Zyb20iqQoKGFJlYWRDaGFuZ2VTdHJlYW1SZXNwb25zZRJOCgtkYXRh",
-            "X2NoYW5nZRgBIAEoCzI3Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdl",
-            "U3RyZWFtUmVzcG9uc2UuRGF0YUNoYW5nZUgAEksKCWhlYXJ0YmVhdBgCIAEo",
-            "CzI2Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9u",
-            "c2UuSGVhcnRiZWF0SAASUAoMY2xvc2Vfc3RyZWFtGAMgASgLMjguZ29vZ2xl",
-            "LmJpZ3RhYmxlLnYyLlJlYWRDaGFuZ2VTdHJlYW1SZXNwb25zZS5DbG9zZVN0",
-            "cmVhbUgAGvQBCg1NdXRhdGlvbkNodW5rElgKCmNodW5rX2luZm8YASABKAsy",
-            "RC5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5nZVN0cmVhbVJlc3BvbnNl",
-            "Lk11dGF0aW9uQ2h1bmsuQ2h1bmtJbmZvEi4KCG11dGF0aW9uGAIgASgLMhwu",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uGlkKCUNodW5rSW5mbxIaChJj",
-            "aHVua2VkX3ZhbHVlX3NpemUYASABKAUSHAoUY2h1bmtlZF92YWx1ZV9vZmZz",
-            "ZXQYAiABKAUSEgoKbGFzdF9jaHVuaxgDIAEoCBrGAwoKRGF0YUNoYW5nZRJK",
-            "CgR0eXBlGAEgASgOMjwuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRDaGFuZ2VT",
-            "dHJlYW1SZXNwb25zZS5EYXRhQ2hhbmdlLlR5cGUSGQoRc291cmNlX2NsdXN0",
-            "ZXJfaWQYAiABKAkSDwoHcm93X2tleRgDIAEoDBI0ChBjb21taXRfdGltZXN0",
-            "YW1wGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgp0aWVi",
-            "cmVha2VyGAUgASgFEkoKBmNodW5rcxgGIAMoCzI6Lmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2UuTXV0YXRpb25DaHVuaxIM",
-            "CgRkb25lGAggASgIEg0KBXRva2VuGAkgASgJEjsKF2VzdGltYXRlZF9sb3df",
-            "d2F0ZXJtYXJrGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJQ",
-            "CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAESFgoSR0FS",
-            "QkFHRV9DT0xMRUNUSU9OEAISEAoMQ09OVElOVUFUSU9OEAMakQEKCUhlYXJ0",
-            "YmVhdBJHChJjb250aW51YXRpb25fdG9rZW4YASABKAsyKy5nb29nbGUuYmln",
-            "dGFibGUudjIuU3RyZWFtQ29udGludWF0aW9uVG9rZW4SOwoXZXN0aW1hdGVk",
-            "X2xvd193YXRlcm1hcmsYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wGrgBCgtDbG9zZVN0cmVhbRIiCgZzdGF0dXMYASABKAsyEi5nb29nbGUu",
-            "cnBjLlN0YXR1cxJIChNjb250aW51YXRpb25fdG9rZW5zGAIgAygLMisuZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuEjsKDm5l",
-            "d19wYXJ0aXRpb25zGAMgAygLMiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVh",
-            "bVBhcnRpdGlvbkIPCg1zdHJlYW1fcmVjb3JkMtcYCghCaWd0YWJsZRKbAgoI",
-            "UmVhZFJvd3MSIy5nb29nbGUuYmlndGFibGUudjIuUmVhZFJvd3NSZXF1ZXN0",
-            "GiQuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRSb3dzUmVzcG9uc2UiwQHaQQp0",
-            "YWJsZV9uYW1l2kEZdGFibGVfbmFtZSxhcHBfcHJvZmlsZV9pZILT5JMCPiI5",
-            "L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVz",
-            "Lyp9OnJlYWRSb3dzOgEqitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0YWJsZV9u",
-            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAKDmFwcF9w",
-            "cm9maWxlX2lkMAESrAIKDVNhbXBsZVJvd0tleXMSKC5nb29nbGUuYmlndGFi",
-            "bGUudjIuU2FtcGxlUm93S2V5c1JlcXVlc3QaKS5nb29nbGUuYmlndGFibGUu",
-            "djIuU2FtcGxlUm93S2V5c1Jlc3BvbnNlIsMB2kEKdGFibGVfbmFtZdpBGXRh",
-            "YmxlX25hbWUsYXBwX3Byb2ZpbGVfaWSC0+STAkASPi92Mi97dGFibGVfbmFt",
-            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpzYW1wbGVSb3dL",
-            "ZXlzitPkkwJOEjoKCnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3Rz",
-            "LyovaW5zdGFuY2VzLyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lkMAES",
-            "wQIKCU11dGF0ZVJvdxIkLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dS",
-            "ZXF1ZXN0GiUuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJvd1Jlc3BvbnNl",
-            "IuYB2kEcdGFibGVfbmFtZSxyb3dfa2V5LG11dGF0aW9uc9pBK3RhYmxlX25h",
-            "bWUscm93X2tleSxtdXRhdGlvbnMsYXBwX3Byb2ZpbGVfaWSC0+STAj8iOi92",
-            "Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8q",
-            "fTptdXRhdGVSb3c6ASqK0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25h",
-            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3By",
-            "b2ZpbGVfaWQSswIKCk11dGF0ZVJvd3MSJS5nb29nbGUuYmlndGFibGUudjIu",
-            "TXV0YXRlUm93c1JlcXVlc3QaJi5nb29nbGUuYmlndGFibGUudjIuTXV0YXRl",
-            "Um93c1Jlc3BvbnNlItMB2kESdGFibGVfbmFtZSxlbnRyaWVz2kEhdGFibGVf",
-            "bmFtZSxlbnRyaWVzLGFwcF9wcm9maWxlX2lkgtPkkwJAIjsvdjIve3RhYmxl",
-            "X25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06bXV0YXRl",
-            "Um93czoBKorT5JMCThI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9q",
-            "ZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9p",
-            "ZDABEq0DChFDaGVja0FuZE11dGF0ZVJvdxIsLmdvb2dsZS5iaWd0YWJsZS52",
-            "Mi5DaGVja0FuZE11dGF0ZVJvd1JlcXVlc3QaLS5nb29nbGUuYmlndGFibGUu",
-            "djIuQ2hlY2tBbmRNdXRhdGVSb3dSZXNwb25zZSK6AtpBQnRhYmxlX25hbWUs",
-            "cm93X2tleSxwcmVkaWNhdGVfZmlsdGVyLHRydWVfbXV0YXRpb25zLGZhbHNl",
-            "X211dGF0aW9uc9pBUXRhYmxlX25hbWUscm93X2tleSxwcmVkaWNhdGVfZmls",
-            "dGVyLHRydWVfbXV0YXRpb25zLGZhbHNlX211dGF0aW9ucyxhcHBfcHJvZmls",
-            "ZV9pZILT5JMCRyJCL3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFu",
-            "Y2VzLyovdGFibGVzLyp9OmNoZWNrQW5kTXV0YXRlUm93OgEqitPkkwJOEjoK",
-            "CnRhYmxlX25hbWUSLHt0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2Vz",
-            "LyovdGFibGVzLyp9EhAKDmFwcF9wcm9maWxlX2lkEu4BCgtQaW5nQW5kV2Fy",
-            "bRImLmdvb2dsZS5iaWd0YWJsZS52Mi5QaW5nQW5kV2FybVJlcXVlc3QaJy5n",
-            "b29nbGUuYmlndGFibGUudjIuUGluZ0FuZFdhcm1SZXNwb25zZSKNAdpBBG5h",
-            "bWXaQRNuYW1lLGFwcF9wcm9maWxlX2lkgtPkkwIrIiYvdjIve25hbWU9cHJv",
-            "amVjdHMvKi9pbnN0YW5jZXMvKn06cGluZzoBKorT5JMCORIlCgRuYW1lEh17",
-            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRIQCg5hcHBfcHJvZmlsZV9p",
-            "ZBLdAgoSUmVhZE1vZGlmeVdyaXRlUm93Ei0uZ29vZ2xlLmJpZ3RhYmxlLnYy",
-            "LlJlYWRNb2RpZnlXcml0ZVJvd1JlcXVlc3QaLi5nb29nbGUuYmlndGFibGUu",
-            "djIuUmVhZE1vZGlmeVdyaXRlUm93UmVzcG9uc2Ui5wHaQRh0YWJsZV9uYW1l",
-            "LHJvd19rZXkscnVsZXPaQSd0YWJsZV9uYW1lLHJvd19rZXkscnVsZXMsYXBw",
-            "X3Byb2ZpbGVfaWSC0+STAkgiQy92Mi97dGFibGVfbmFtZT1wcm9qZWN0cy8q",
-            "L2luc3RhbmNlcy8qL3RhYmxlcy8qfTpyZWFkTW9kaWZ5V3JpdGVSb3c6ASqK",
-            "0+STAk4SOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9cHJvamVjdHMvKi9p",
-            "bnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2ZpbGVfaWQSuwIKJUdl",
-            "bmVyYXRlSW5pdGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnMSQC5nb29nbGUu",
-            "YmlndGFibGUudjIuR2VuZXJhdGVJbml0aWFsQ2hhbmdlU3RyZWFtUGFydGl0",
-            "aW9uc1JlcXVlc3QaQS5nb29nbGUuYmlndGFibGUudjIuR2VuZXJhdGVJbml0",
-            "aWFsQ2hhbmdlU3RyZWFtUGFydGl0aW9uc1Jlc3BvbnNlIooB2kEKdGFibGVf",
-            "bmFtZdpBGXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWSC0+STAlsiVi92Mi97",
-            "dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpn",
-            "ZW5lcmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25zOgEqMAES5gEK",
-            "EFJlYWRDaGFuZ2VTdHJlYW0SKy5nb29nbGUuYmlndGFibGUudjIuUmVhZENo",
-            "YW5nZVN0cmVhbVJlcXVlc3QaLC5nb29nbGUuYmlndGFibGUudjIuUmVhZENo",
-            "YW5nZVN0cmVhbVJlc3BvbnNlInXaQQp0YWJsZV9uYW1l2kEZdGFibGVfbmFt",
-            "ZSxhcHBfcHJvZmlsZV9pZILT5JMCRiJBL3YyL3t0YWJsZV9uYW1lPXByb2pl",
-            "Y3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyp9OnJlYWRDaGFuZ2VTdHJlYW06",
-            "ASowARrbAspBF2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29t0kG9Amh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlndGFibGUuZGF0YSxodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3RhYmxlLmRhdGEucmVhZG9u",
-            "bHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1iaWd0",
-            "YWJsZS5kYXRhLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtYmlndGFibGUuZGF0YS5yZWFkb25seSxodHRwczovL3d3dy5nb29nbGVh",
-            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5QusCChZj",
-            "b20uZ29vZ2xlLmJpZ3RhYmxlLnYyQg1CaWd0YWJsZVByb3RvUAFaOmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7",
-            "YmlndGFibGWqAhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVc",
-            "Q2xvdWRcQmlndGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6",
-            "VjLqQVAKJWJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2US",
-            "J3Byb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfepBXAoi",
-            "YmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRI2cHJvamVjdHMv",
-            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L3RhYmxlcy97dGFibGV9",
-            "YgZwcm90bzM="));
+            "VGFibGUSFgoOYXBwX3Byb2ZpbGVfaWQYAiABKAkSNgoJcGFydGl0aW9uGAMg",
+            "ASgLMiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVhbVBhcnRpdGlvbhIwCgpz",
+            "dGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgA",
+            "EksKE2NvbnRpbnVhdGlvbl90b2tlbnMYBiABKAsyLC5nb29nbGUuYmlndGFi",
+            "bGUudjIuU3RyZWFtQ29udGludWF0aW9uVG9rZW5zSAASLAoIZW5kX3RpbWUY",
+            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEmhlYXJ0YmVh",
+            "dF9kdXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkIM",
+            "CgpzdGFydF9mcm9tIqkKChhSZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2USTgoL",
+            "ZGF0YV9jaGFuZ2UYASABKAsyNy5nb29nbGUuYmlndGFibGUudjIuUmVhZENo",
+            "YW5nZVN0cmVhbVJlc3BvbnNlLkRhdGFDaGFuZ2VIABJLCgloZWFydGJlYXQY",
+            "AiABKAsyNi5nb29nbGUuYmlndGFibGUudjIuUmVhZENoYW5nZVN0cmVhbVJl",
+            "c3BvbnNlLkhlYXJ0YmVhdEgAElAKDGNsb3NlX3N0cmVhbRgDIAEoCzI4Lmdv",
+            "b2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hhbmdlU3RyZWFtUmVzcG9uc2UuQ2xv",
+            "c2VTdHJlYW1IABr0AQoNTXV0YXRpb25DaHVuaxJYCgpjaHVua19pbmZvGAEg",
+            "ASgLMkQuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRDaGFuZ2VTdHJlYW1SZXNw",
+            "b25zZS5NdXRhdGlvbkNodW5rLkNodW5rSW5mbxIuCghtdXRhdGlvbhgCIAEo",
+            "CzIcLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbhpZCglDaHVua0luZm8S",
+            "GgoSY2h1bmtlZF92YWx1ZV9zaXplGAEgASgFEhwKFGNodW5rZWRfdmFsdWVf",
+            "b2Zmc2V0GAIgASgFEhIKCmxhc3RfY2h1bmsYAyABKAgaxgMKCkRhdGFDaGFu",
+            "Z2USSgoEdHlwZRgBIAEoDjI8Lmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkQ2hh",
+            "bmdlU3RyZWFtUmVzcG9uc2UuRGF0YUNoYW5nZS5UeXBlEhkKEXNvdXJjZV9j",
+            "bHVzdGVyX2lkGAIgASgJEg8KB3Jvd19rZXkYAyABKAwSNAoQY29tbWl0X3Rp",
+            "bWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoK",
+            "dGllYnJlYWtlchgFIAEoBRJKCgZjaHVua3MYBiADKAsyOi5nb29nbGUuYmln",
+            "dGFibGUudjIuUmVhZENoYW5nZVN0cmVhbVJlc3BvbnNlLk11dGF0aW9uQ2h1",
+            "bmsSDAoEZG9uZRgIIAEoCBINCgV0b2tlbhgJIAEoCRI7Chdlc3RpbWF0ZWRf",
+            "bG93X3dhdGVybWFyaxgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAiUAoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEhYK",
+            "EkdBUkJBR0VfQ09MTEVDVElPThACEhAKDENPTlRJTlVBVElPThADGpEBCglI",
+            "ZWFydGJlYXQSRwoSY29udGludWF0aW9uX3Rva2VuGAEgASgLMisuZ29vZ2xl",
+            "LmJpZ3RhYmxlLnYyLlN0cmVhbUNvbnRpbnVhdGlvblRva2VuEjsKF2VzdGlt",
+            "YXRlZF9sb3dfd2F0ZXJtYXJrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBq4AQoLQ2xvc2VTdHJlYW0SIgoGc3RhdHVzGAEgASgLMhIuZ29v",
+            "Z2xlLnJwYy5TdGF0dXMSSAoTY29udGludWF0aW9uX3Rva2VucxgCIAMoCzIr",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1Db250aW51YXRpb25Ub2tlbhI7",
+            "Cg5uZXdfcGFydGl0aW9ucxgDIAMoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5T",
+            "dHJlYW1QYXJ0aXRpb25CDwoNc3RyZWFtX3JlY29yZDLvIQoIQmlndGFibGUS",
+            "2wMKCFJlYWRSb3dzEiMuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRSb3dzUmVx",
+            "dWVzdBokLmdvb2dsZS5iaWd0YWJsZS52Mi5SZWFkUm93c1Jlc3BvbnNlIoED",
+            "2kEKdGFibGVfbmFtZdpBGXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWSC0+ST",
+            "ApoBIjkvdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90",
+            "YWJsZXMvKn06cmVhZFJvd3M6ASpaWiJVL3YyL3thdXRob3JpemVkX3ZpZXdf",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qL2F1dGhvcml6",
+            "ZWRWaWV3cy8qfTpyZWFkUm93czoBKorT5JMCsAESOgoKdGFibGVfbmFtZRIs",
+            "e3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0S",
+            "EAoOYXBwX3Byb2ZpbGVfaWQSYAoUYXV0aG9yaXplZF92aWV3X25hbWUSSHth",
+            "dXRob3JpemVkX3ZpZXdfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3Rh",
+            "Ymxlcy8qL2F1dGhvcml6ZWRWaWV3cy8qfTABEu4DCg1TYW1wbGVSb3dLZXlz",
+            "EiguZ29vZ2xlLmJpZ3RhYmxlLnYyLlNhbXBsZVJvd0tleXNSZXF1ZXN0Giku",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlNhbXBsZVJvd0tleXNSZXNwb25zZSKFA9pB",
+            "CnRhYmxlX25hbWXaQRl0YWJsZV9uYW1lLGFwcF9wcm9maWxlX2lkgtPkkwKe",
+            "ARI+L3YyL3t0YWJsZV9uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFi",
+            "bGVzLyp9OnNhbXBsZVJvd0tleXNaXBJaL3YyL3thdXRob3JpemVkX3ZpZXdf",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qL2F1dGhvcml6",
+            "ZWRWaWV3cy8qfTpzYW1wbGVSb3dLZXlzitPkkwKwARI6Cgp0YWJsZV9uYW1l",
+            "Eix7dGFibGVfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8q",
+            "fRIQCg5hcHBfcHJvZmlsZV9pZBJgChRhdXRob3JpemVkX3ZpZXdfbmFtZRJI",
+            "e2F1dGhvcml6ZWRfdmlld19uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyov",
+            "dGFibGVzLyovYXV0aG9yaXplZFZpZXdzLyp9MAESggQKCU11dGF0ZVJvdxIk",
+            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGVSb3dSZXF1ZXN0GiUuZ29vZ2xl",
+            "LmJpZ3RhYmxlLnYyLk11dGF0ZVJvd1Jlc3BvbnNlIqcD2kEcdGFibGVfbmFt",
+            "ZSxyb3dfa2V5LG11dGF0aW9uc9pBK3RhYmxlX25hbWUscm93X2tleSxtdXRh",
+            "dGlvbnMsYXBwX3Byb2ZpbGVfaWSC0+STApwBIjovdjIve3RhYmxlX25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn06bXV0YXRlUm93OgEq",
+            "WlsiVi92Mi97YXV0aG9yaXplZF92aWV3X25hbWU9cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKi90YWJsZXMvKi9hdXRob3JpemVkVmlld3MvKn06bXV0YXRlUm93",
+            "OgEqitPkkwKwARI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZBJg",
+            "ChRhdXRob3JpemVkX3ZpZXdfbmFtZRJIe2F1dGhvcml6ZWRfdmlld19uYW1l",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyovYXV0aG9yaXplZFZp",
+            "ZXdzLyp9EvUDCgpNdXRhdGVSb3dzEiUuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11",
+            "dGF0ZVJvd3NSZXF1ZXN0GiYuZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0ZVJv",
+            "d3NSZXNwb25zZSKVA9pBEnRhYmxlX25hbWUsZW50cmllc9pBIXRhYmxlX25h",
+            "bWUsZW50cmllcyxhcHBfcHJvZmlsZV9pZILT5JMCngEiOy92Mi97dGFibGVf",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTptdXRhdGVS",
+            "b3dzOgEqWlwiVy92Mi97YXV0aG9yaXplZF92aWV3X25hbWU9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi90YWJsZXMvKi9hdXRob3JpemVkVmlld3MvKn06bXV0",
+            "YXRlUm93czoBKorT5JMCsAESOgoKdGFibGVfbmFtZRIse3RhYmxlX25hbWU9",
+            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJsZXMvKn0SEAoOYXBwX3Byb2Zp",
+            "bGVfaWQSYAoUYXV0aG9yaXplZF92aWV3X25hbWUSSHthdXRob3JpemVkX3Zp",
+            "ZXdfbmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qL2F1dGhv",
+            "cml6ZWRWaWV3cy8qfTABEvYEChFDaGVja0FuZE11dGF0ZVJvdxIsLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5DaGVja0FuZE11dGF0ZVJvd1JlcXVlc3QaLS5nb29n",
+            "bGUuYmlndGFibGUudjIuQ2hlY2tBbmRNdXRhdGVSb3dSZXNwb25zZSKDBNpB",
+            "QnRhYmxlX25hbWUscm93X2tleSxwcmVkaWNhdGVfZmlsdGVyLHRydWVfbXV0",
+            "YXRpb25zLGZhbHNlX211dGF0aW9uc9pBUXRhYmxlX25hbWUscm93X2tleSxw",
+            "cmVkaWNhdGVfZmlsdGVyLHRydWVfbXV0YXRpb25zLGZhbHNlX211dGF0aW9u",
+            "cyxhcHBfcHJvZmlsZV9pZILT5JMCrAEiQi92Mi97dGFibGVfbmFtZT1wcm9q",
+            "ZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpjaGVja0FuZE11dGF0ZVJv",
+            "dzoBKlpjIl4vdjIve2F1dGhvcml6ZWRfdmlld19uYW1lPXByb2plY3RzLyov",
+            "aW5zdGFuY2VzLyovdGFibGVzLyovYXV0aG9yaXplZFZpZXdzLyp9OmNoZWNr",
+            "QW5kTXV0YXRlUm93OgEqitPkkwKwARI6Cgp0YWJsZV9uYW1lEix7dGFibGVf",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBf",
+            "cHJvZmlsZV9pZBJgChRhdXRob3JpemVkX3ZpZXdfbmFtZRJIe2F1dGhvcml6",
+            "ZWRfdmlld19uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyov",
+            "YXV0aG9yaXplZFZpZXdzLyp9Eu4BCgtQaW5nQW5kV2FybRImLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5QaW5nQW5kV2FybVJlcXVlc3QaJy5nb29nbGUuYmlndGFi",
+            "bGUudjIuUGluZ0FuZFdhcm1SZXNwb25zZSKNAdpBBG5hbWXaQRNuYW1lLGFw",
+            "cF9wcm9maWxlX2lkgtPkkwIrIiYvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0",
+            "YW5jZXMvKn06cGluZzoBKorT5JMCORIlCgRuYW1lEh17bmFtZT1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZBKnBAoSUmVhZE1v",
+            "ZGlmeVdyaXRlUm93Ei0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJlYWRNb2RpZnlX",
+            "cml0ZVJvd1JlcXVlc3QaLi5nb29nbGUuYmlndGFibGUudjIuUmVhZE1vZGlm",
+            "eVdyaXRlUm93UmVzcG9uc2UisQPaQRh0YWJsZV9uYW1lLHJvd19rZXkscnVs",
+            "ZXPaQSd0YWJsZV9uYW1lLHJvd19rZXkscnVsZXMsYXBwX3Byb2ZpbGVfaWSC",
+            "0+STAq4BIkMvdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Ki90YWJsZXMvKn06cmVhZE1vZGlmeVdyaXRlUm93OgEqWmQiXy92Mi97YXV0",
+            "aG9yaXplZF92aWV3X25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90YWJs",
+            "ZXMvKi9hdXRob3JpemVkVmlld3MvKn06cmVhZE1vZGlmeVdyaXRlUm93OgEq",
+            "itPkkwKwARI6Cgp0YWJsZV9uYW1lEix7dGFibGVfbmFtZT1wcm9qZWN0cy8q",
+            "L2luc3RhbmNlcy8qL3RhYmxlcy8qfRIQCg5hcHBfcHJvZmlsZV9pZBJgChRh",
+            "dXRob3JpemVkX3ZpZXdfbmFtZRJIe2F1dGhvcml6ZWRfdmlld19uYW1lPXBy",
+            "b2plY3RzLyovaW5zdGFuY2VzLyovdGFibGVzLyovYXV0aG9yaXplZFZpZXdz",
+            "Lyp9ErsCCiVHZW5lcmF0ZUluaXRpYWxDaGFuZ2VTdHJlYW1QYXJ0aXRpb25z",
+            "EkAuZ29vZ2xlLmJpZ3RhYmxlLnYyLkdlbmVyYXRlSW5pdGlhbENoYW5nZVN0",
+            "cmVhbVBhcnRpdGlvbnNSZXF1ZXN0GkEuZ29vZ2xlLmJpZ3RhYmxlLnYyLkdl",
+            "bmVyYXRlSW5pdGlhbENoYW5nZVN0cmVhbVBhcnRpdGlvbnNSZXNwb25zZSKK",
+            "AdpBCnRhYmxlX25hbWXaQRl0YWJsZV9uYW1lLGFwcF9wcm9maWxlX2lkgtPk",
+            "kwJbIlYvdjIve3RhYmxlX25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi90",
+            "YWJsZXMvKn06Z2VuZXJhdGVJbml0aWFsQ2hhbmdlU3RyZWFtUGFydGl0aW9u",
+            "czoBKjABEuYBChBSZWFkQ2hhbmdlU3RyZWFtEisuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlJlYWRDaGFuZ2VTdHJlYW1SZXF1ZXN0GiwuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlJlYWRDaGFuZ2VTdHJlYW1SZXNwb25zZSJ12kEKdGFibGVfbmFtZdpB",
+            "GXRhYmxlX25hbWUsYXBwX3Byb2ZpbGVfaWSC0+STAkYiQS92Mi97dGFibGVf",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL3RhYmxlcy8qfTpyZWFkQ2hh",
+            "bmdlU3RyZWFtOgEqMAEa2wLKQRdiaWd0YWJsZS5nb29nbGVhcGlzLmNvbdJB",
+            "vQJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3RhYmxlLmRh",
+            "dGEsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWd0YWJsZS5k",
+            "YXRhLnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtYmlndGFibGUuZGF0YSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLWJpZ3RhYmxlLmRhdGEucmVhZG9ubHksaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQt",
+            "b25seUL2AwoWY29tLmdvb2dsZS5iaWd0YWJsZS52MkINQmlndGFibGVQcm90",
+            "b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Jp",
+            "Z3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLlYy",
+            "ygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpDbG91ZDo6",
+            "QmlndGFibGU6OlYy6kFQCiViaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29t",
+            "L0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0",
+            "YW5jZX3qQVwKImJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUS",
+            "NnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS90YWJs",
+            "ZXMve3RhYmxlfepBhwEKK2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "QXV0aG9yaXplZFZpZXcSWHByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMv",
+            "e2luc3RhbmNlfS90YWJsZXMve3RhYmxlfS9hdXRob3JpemVkVmlld3Mve2F1",
+            "dGhvcml6ZWRfdmlld31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser, new[]{ "TableName", "AppProfileId", "Rows", "Filter", "RowsLimit", "RequestStatsView", "Reversed" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Types.RequestStatsView) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest), global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId", "Rows", "Filter", "RowsLimit", "RequestStatsView", "Reversed" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Types.RequestStatsView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser, new[]{ "Chunks", "LastScannedRowKey", "RequestStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk), global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Types.CellChunk.Parser, new[]{ "RowKey", "FamilyName", "Qualifier", "TimestampMicros", "Labels", "Value", "ValueSize", "ResetRow", "CommitRow" }, new[]{ "RowStatus" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest), global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser, new[]{ "TableName", "AppProfileId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest), global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse), global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse.Parser, new[]{ "RowKey", "OffsetBytes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowRequest), global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "Mutations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowRequest), global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "Mutations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowResponse), global::Google.Cloud.Bigtable.V2.MutateRowResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser, new[]{ "TableName", "AppProfileId", "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.Parser, new[]{ "RowKey", "Mutations" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId", "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Types.Entry.Parser, new[]{ "RowKey", "Mutations" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsResponse), global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Parser, new[]{ "Entries", "RateLimitInfo" }, new[]{ "RateLimitInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Types.Entry), global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Types.Entry.Parser, new[]{ "Index", "Status" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RateLimitInfo), global::Google.Cloud.Bigtable.V2.RateLimitInfo.Parser, new[]{ "Period", "Factor" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "PredicateFilter", "TrueMutations", "FalseMutations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "PredicateFilter", "TrueMutations", "FalseMutations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse), global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser, new[]{ "PredicateMatched" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PingAndWarmRequest), global::Google.Cloud.Bigtable.V2.PingAndWarmRequest.Parser, new[]{ "Name", "AppProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.PingAndWarmResponse), global::Google.Cloud.Bigtable.V2.PingAndWarmResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser, new[]{ "TableName", "AppProfileId", "RowKey", "Rules" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser, new[]{ "TableName", "AuthorizedViewName", "AppProfileId", "RowKey", "Rules" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse), global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser, new[]{ "Row" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest), global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest.Parser, new[]{ "TableName", "AppProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse), global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse.Parser, new[]{ "Partition" }, null, null, null, null),
@@ -283,6 +323,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadRowsRequest(ReadRowsRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       rows_ = other.rows_ != null ? other.rows_.Clone() : null;
       filter_ = other.filter_ != null ? other.filter_.Clone() : null;
@@ -302,7 +343,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table from which to read.
+    /// Optional. The unique name of the table from which to read.
+    ///
     /// Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
@@ -312,6 +354,24 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 9;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView from which to read.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -436,6 +496,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       if (!object.Equals(Rows, other.Rows)) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
@@ -450,6 +511,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (rows_ != null) hash ^= Rows.GetHashCode();
       if (filter_ != null) hash ^= Filter.GetHashCode();
@@ -502,6 +564,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(56);
         output.WriteBool(Reversed);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -540,6 +606,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(56);
         output.WriteBool(Reversed);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -552,6 +622,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -585,6 +658,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -659,6 +735,10 @@ namespace Google.Cloud.Bigtable.V2 {
             Reversed = input.ReadBool();
             break;
           }
+          case 74: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -706,6 +786,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 56: {
             Reversed = input.ReadBool();
+            break;
+          }
+          case 74: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
@@ -1704,6 +1788,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SampleRowKeysRequest(SampleRowKeysRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1718,7 +1803,8 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table from which to sample row keys.
+    /// Optional. The unique name of the table from which to sample row keys.
+    ///
     /// Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
@@ -1728,6 +1814,25 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 4;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView from which to sample row
+    /// keys.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1763,6 +1868,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1772,6 +1878,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1799,6 +1906,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1817,6 +1928,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1829,6 +1944,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -1847,6 +1965,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -1874,6 +1995,10 @@ namespace Google.Cloud.Bigtable.V2 {
             AppProfileId = input.ReadString();
             break;
           }
+          case 34: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1895,6 +2020,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 18: {
             AppProfileId = input.ReadString();
+            break;
+          }
+          case 34: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
@@ -2188,6 +2317,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MutateRowRequest(MutateRowRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       mutations_ = other.mutations_.Clone();
@@ -2204,8 +2334,10 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the mutation should be
-    /// applied. Values are of the form
+    /// Optional. The unique name of the table to which the mutation should be
+    /// applied.
+    ///
+    /// Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2214,6 +2346,25 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 6;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView to which the mutation
+    /// should be applied.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2280,6 +2431,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if(!mutations_.Equals(other.mutations_)) return false;
@@ -2291,6 +2443,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       hash ^= mutations_.GetHashCode();
@@ -2325,6 +2478,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2348,6 +2505,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2360,6 +2521,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -2382,6 +2546,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -2421,6 +2588,10 @@ namespace Google.Cloud.Bigtable.V2 {
             AppProfileId = input.ReadString();
             break;
           }
+          case 50: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2450,6 +2621,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 34: {
             AppProfileId = input.ReadString();
+            break;
+          }
+          case 50: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
@@ -2654,6 +2829,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MutateRowsRequest(MutateRowsRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       entries_ = other.entries_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2669,8 +2845,11 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the mutations should be
+    /// Optional. The unique name of the table to which the mutations should be
     /// applied.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2678,6 +2857,25 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 5;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView to which the mutations
+    /// should be applied.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2731,6 +2929,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       if(!entries_.Equals(other.entries_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2741,6 +2940,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       hash ^= entries_.GetHashCode();
       if (_unknownFields != null) {
@@ -2770,6 +2970,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2789,6 +2993,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(26);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2801,6 +3009,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -2820,6 +3031,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -2852,6 +3066,10 @@ namespace Google.Cloud.Bigtable.V2 {
             AppProfileId = input.ReadString();
             break;
           }
+          case 42: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2877,6 +3095,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 26: {
             AppProfileId = input.ReadString();
+            break;
+          }
+          case 42: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
@@ -3911,6 +4133,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CheckAndMutateRowRequest(CheckAndMutateRowRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       predicateFilter_ = other.predicateFilter_ != null ? other.predicateFilter_.Clone() : null;
@@ -3929,8 +4152,10 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the conditional mutation
-    /// should be applied. Values are of the form
+    /// Optional. The unique name of the table to which the conditional mutation
+    /// should be applied.
+    ///
+    /// Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3939,6 +4164,25 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 9;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView to which the conditional
+    /// mutation should be applied.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4044,6 +4288,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if (!object.Equals(PredicateFilter, other.PredicateFilter)) return false;
@@ -4057,6 +4302,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       if (predicateFilter_ != null) hash ^= PredicateFilter.GetHashCode();
@@ -4098,6 +4344,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(58);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4126,6 +4376,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(58);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4138,6 +4392,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -4164,6 +4421,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -4221,6 +4481,10 @@ namespace Google.Cloud.Bigtable.V2 {
             AppProfileId = input.ReadString();
             break;
           }
+          case 74: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4261,6 +4525,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 58: {
             AppProfileId = input.ReadString();
+            break;
+          }
+          case 74: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
@@ -4901,6 +5169,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadModifyWriteRowRequest(ReadModifyWriteRowRequest other) : this() {
       tableName_ = other.tableName_;
+      authorizedViewName_ = other.authorizedViewName_;
       appProfileId_ = other.appProfileId_;
       rowKey_ = other.rowKey_;
       rules_ = other.rules_.Clone();
@@ -4917,8 +5186,10 @@ namespace Google.Cloud.Bigtable.V2 {
     public const int TableNameFieldNumber = 1;
     private string tableName_ = "";
     /// <summary>
-    /// Required. The unique name of the table to which the read/modify/write rules
-    /// should be applied. Values are of the form
+    /// Optional. The unique name of the table to which the read/modify/write rules
+    /// should be applied.
+    ///
+    /// Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4927,6 +5198,25 @@ namespace Google.Cloud.Bigtable.V2 {
       get { return tableName_; }
       set {
         tableName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "authorized_view_name" field.</summary>
+    public const int AuthorizedViewNameFieldNumber = 6;
+    private string authorizedViewName_ = "";
+    /// <summary>
+    /// Optional. The unique name of the AuthorizedView to which the
+    /// read/modify/write rules should be applied.
+    ///
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/tables/&lt;table>/authorizedViews/&lt;authorized_view>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthorizedViewName {
+      get { return authorizedViewName_; }
+      set {
+        authorizedViewName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4994,6 +5284,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return true;
       }
       if (TableName != other.TableName) return false;
+      if (AuthorizedViewName != other.AuthorizedViewName) return false;
       if (AppProfileId != other.AppProfileId) return false;
       if (RowKey != other.RowKey) return false;
       if(!rules_.Equals(other.rules_)) return false;
@@ -5005,6 +5296,7 @@ namespace Google.Cloud.Bigtable.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
+      if (AuthorizedViewName.Length != 0) hash ^= AuthorizedViewName.GetHashCode();
       if (AppProfileId.Length != 0) hash ^= AppProfileId.GetHashCode();
       if (RowKey.Length != 0) hash ^= RowKey.GetHashCode();
       hash ^= rules_.GetHashCode();
@@ -5039,6 +5331,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5062,6 +5358,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(34);
         output.WriteString(AppProfileId);
       }
+      if (AuthorizedViewName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AuthorizedViewName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5074,6 +5374,9 @@ namespace Google.Cloud.Bigtable.V2 {
       int size = 0;
       if (TableName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TableName);
+      }
+      if (AuthorizedViewName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthorizedViewName);
       }
       if (AppProfileId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AppProfileId);
@@ -5096,6 +5399,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.TableName.Length != 0) {
         TableName = other.TableName;
+      }
+      if (other.AuthorizedViewName.Length != 0) {
+        AuthorizedViewName = other.AuthorizedViewName;
       }
       if (other.AppProfileId.Length != 0) {
         AppProfileId = other.AppProfileId;
@@ -5135,6 +5441,10 @@ namespace Google.Cloud.Bigtable.V2 {
             AppProfileId = input.ReadString();
             break;
           }
+          case 50: {
+            AuthorizedViewName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -5164,6 +5474,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 34: {
             AppProfileId = input.ReadString();
+            break;
+          }
+          case 50: {
+            AuthorizedViewName = input.ReadString();
             break;
           }
         }
