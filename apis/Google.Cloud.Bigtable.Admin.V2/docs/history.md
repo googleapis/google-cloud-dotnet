@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2024-03-05
+
+### New features
+
+- Cloud Bigtable Authorized Views admin APIs protos ([commit 6e5e476](https://github.com/googleapis/google-cloud-dotnet/commit/6e5e476614109cb6b6aed104b0c8499d926fec4e))
+
 ## Version 3.9.0, released 2024-02-09
 
 ### Bug fixes
