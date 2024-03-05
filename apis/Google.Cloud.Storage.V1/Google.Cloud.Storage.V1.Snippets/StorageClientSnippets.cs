@@ -355,9 +355,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             // var acl = PredefinedAcl.PublicRead // public
             var acl = PredefinedObjectAcl.AuthenticatedRead; // private
             var options = new UploadObjectOptions { PredefinedAcl = acl };
-            // Create a temporary uploader so the upload session can be manually initiated without actually uploading.
-            var tempUploader = client.CreateObjectUploader(bucketName, destination, contentType, new MemoryStream(), options);
-            var uploadUri = await tempUploader.InitiateSessionAsync();
+            var uploadUri = await client.InitiateUploadSessionAsync(bucketName, destination, contentType, contentLength: null, options);
 
             // Send uploadUri to (unauthenticated) client application, so it can perform the upload:
             using (var stream = File.OpenRead(source))
