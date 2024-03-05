@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.6.0, released 2024-03-05
+
+### New features
+
+- Support mounting NFS and GCS volumes in Cloud Run Jobs and Services ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Support specifying a per-Service min-instance-count ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Support disabling waiting for health checks during Service deployment. ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Allow disabling the default URL (run.app) for Cloud Run Services ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+
+### Documentation improvements
+
+- Clarify some defaults and required or optional values ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+
 ## Version 2.5.0, released 2024-02-29
 
 No API surface changes; just dependency updates.
