@@ -103,6 +103,39 @@ namespace Google.Cloud.Storage.V1
             IProgress<IUploadProgress> progress = null) =>
             new UploadHelper(this, destination, source, options, progress).ExecuteAsync(cancellationToken);
 
+        /// <inheritdoc />
+        public override Task<Uri> InitiateUploadSessionAsync(
+            Object destination,
+            long? contentLength,
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default)
+        {
+            // We could potentially do a single validation, but the reasons for preventing negative and zero
+            // values are somewhat different.   
+            GaxPreconditions.CheckNonNegative(contentLength, nameof(contentLength));
+            if (contentLength == 0)
+            {
+                throw new ArgumentOutOfRangeException("A content length of 0 cannot be enforced. Use a null content length for 'any length'.");
+            }
+            ValidateObject(destination, nameof(destination));
+            var upload = CreateObjectUploader(destination, new LengthOnlyStream(contentLength), options);
+            return upload.InitiateSessionAsync(cancellationToken);
+        }
+
+        /// <inheritdoc />
+        public override Task<Uri> InitiateUploadSessionAsync(
+            string bucket,
+            string objectName,
+            string contentType,
+            long? contentLength,
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default)
+        {
+            ValidateBucketName(bucket);
+            var obj = new Object { Bucket = bucket, Name = objectName, ContentType = contentType };
+            return InitiateUploadSessionAsync(obj, contentLength, options, cancellationToken);
+        }
+
         /// <summary>
         /// Helper class to provide common context between sync and async operations. Helps avoid quite so much duplicate code...
         /// </summary>
@@ -191,6 +224,34 @@ namespace Google.Cloud.Storage.V1
                 }
                 return result;
             }
+        }
+
+        private sealed class LengthOnlyStream : Stream
+        {
+            private readonly long? _length;
+            internal LengthOnlyStream(long? length) => _length = length;
+
+            public override long Length => _length ?? throw new NotSupportedException();
+            public override bool CanSeek => _length.HasValue;
+
+            public override bool CanRead => throw new NotImplementedException();
+            public override bool CanWrite => throw new NotImplementedException();
+
+            public override long Position
+            {
+                get => throw new NotImplementedException();
+                set => throw new NotImplementedException();
+            }
+
+            public override void Flush() => throw new NotImplementedException();
+            public override int Read(byte[] buffer, int offset, int count) =>
+                throw new NotImplementedException();
+            public override long Seek(long offset, SeekOrigin origin) =>
+                throw new NotImplementedException();
+            public override void SetLength(long value) =>
+                throw new NotImplementedException();
+            public override void Write(byte[] buffer, int offset, int count) =>
+                throw new NotImplementedException();
         }
     }
 }

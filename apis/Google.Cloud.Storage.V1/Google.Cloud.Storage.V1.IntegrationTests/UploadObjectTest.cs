@@ -13,8 +13,10 @@
 // limitations under the License.
 
 using Google.Apis.Http;
+using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
+using Grpc.Core.Interceptors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -366,6 +368,57 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.NotNull(ex.AdditionalFailures);
             // The deletion failed, so the uploaded object still exists.
             ValidateData(bucket, name, new MemoryStream(interceptor.UploadedBytes));
+        }
+
+        [Fact]
+        public async Task InitiateUploadSessionAsync_NegativeLength()
+        {
+            var client = _fixture.Client;
+            var name = IdGenerator.FromGuid();
+            await Assert.ThrowsAsync<ArgumentOutOfRangeException>(
+                () => client.InitiateUploadSessionAsync(_fixture.SingleVersionBucket, name, contentType: null, contentLength: -5));
+        }
+
+        [Fact]
+        public async Task InitiateUploadSessionAsync_ZeroLength()
+        {
+            var client = _fixture.Client;
+            var name = IdGenerator.FromGuid();
+            await Assert.ThrowsAsync<ArgumentOutOfRangeException>(
+                () => client.InitiateUploadSessionAsync(_fixture.SingleVersionBucket, name, contentType: null, contentLength: 0));
+        }
+
+        [Theory]
+        [InlineData(false)] // contentLength = null
+        [InlineData(true)]  // contentLength = correct length
+        public async Task InitiateUploadSessionAsyncThenUpload_NullOrCorrectLength(bool specifyLength)
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.SingleVersionBucket;
+            var name = IdGenerator.FromGuid();
+            var stream = GenerateData(50);
+            long? contentLength = specifyLength ? stream.Length : null;
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, null, contentLength);
+            var upload = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+            var progress = await upload.UploadAsync();
+            Assert.Equal(UploadStatus.Completed, progress.Status);
+            ValidateData(bucket, name, stream);
+        }
+
+        [Theory]
+        [InlineData(1)]  // We specify a larger length than we upload
+        [InlineData(-1)] // We specify a shorter length than we upload
+        public async Task InitiateUploadSessionAsyncThenUpload_IncorrectLength(int lengthDelta)
+        {
+            var client = _fixture.Client;
+            var bucket = _fixture.SingleVersionBucket;
+            var name = IdGenerator.FromGuid();
+            var stream = GenerateData(50);
+            long? contentLength = stream.Length + lengthDelta;
+            var uploadUri = await client.InitiateUploadSessionAsync(bucket, name, null, contentLength);
+            var upload = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+            var progress = await upload.UploadAsync();
+            Assert.Equal(UploadStatus.Failed, progress.Status);
         }
 
         private class BreakUploadInterceptor : IHttpExecuteInterceptor

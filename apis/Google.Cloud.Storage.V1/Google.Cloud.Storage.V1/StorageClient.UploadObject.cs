@@ -49,8 +49,8 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Creates an instance which is capable of starting a resumable upload for an object.
         /// </summary>
-        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
-        /// bucket and content type populated.</param>
+        /// <param name="destination">Object to create or update. Must not be null, and must have the name
+        /// and bucket populated.</param>
         /// <param name="source">The stream to read the data from. Must not be null.</param>
         /// <param name="options">Additional options for the upload. May be null, in which case appropriate
         /// defaults will be used.</param>
@@ -116,8 +116,8 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Uploads the data for an object in storage synchronously, from a specified stream.
         /// </summary>
-        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
-        /// bucket and content type populated.</param>
+        /// <param name="destination">Object to create or update. Must not be null, and must have the name
+        /// and bucket populated.</param>
         /// <param name="source">The stream to read the data from. Must not be null.</param>
         /// <param name="options">Additional options for the upload. May be null, in which case appropriate
         /// defaults will be used.</param>
@@ -135,8 +135,8 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// Uploads the data for an object in storage asynchronously, from a specified stream.
         /// </summary>
-        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
-        /// bucket and content type populated.</param>
+        /// <param name="destination">Object to create or update. Must not be null, and must have the name
+        /// and bucket populated.</param>
         /// <param name="source">The stream to read the data from. Must not be null.</param>
         /// <param name="options">Additional options for the upload. May be null, in which case appropriate
         /// defaults will be used.</param>
@@ -153,5 +153,51 @@ namespace Google.Cloud.Storage.V1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Initiates an upload session, optionally specifying the length of the content to be uploaded.
+        /// The resulting URI can be used with <see cref="ResumableUpload.CreateFromUploadUri"/>.
+        /// </summary>
+        /// <param name="destination">Object to create or update. Must not be null, and must have the name
+        /// and bucket populated.</param>
+        /// <param name="contentLength">The length of the content to upload later. This may be null, in which
+        /// case any length of content may be uploaded. If the value is non-null, it must be strictly positive
+        /// (not zero), and the content uploaded later must be exactly this length.</param>
+        /// <param name="options">Additional options for the upload. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation, with a result returning the
+        /// <see cref="Uri"/> to use in order to upload the content.</returns>
+        public virtual Task<Uri> InitiateUploadSessionAsync(
+            Object destination,
+            long? contentLength,
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default) =>
+            throw new NotImplementedException();
+
+        /// <summary>
+        /// Initiates an upload session, optionally specifying the length of the content to be uploaded.
+        /// The resulting URI can be used with <see cref="ResumableUpload.CreateFromUploadUri"/>.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="contentType">The content type of the object. This should be a MIME type
+        /// such as "text/html" or "application/octet-stream". May be null.</param>
+        /// <param name="contentLength">The length of the content to upload later. This may be null, in which
+        /// case any length of content may be uploaded. If the value is non-null, it must be strictly positive
+        /// (not zero), and the content uploaded later must be exactly this length.</param>
+        /// <param name="options">Additional options for the upload. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation, with a result returning the
+        /// <see cref="Uri"/> to use in order to upload the content.</returns>
+        public virtual Task<Uri> InitiateUploadSessionAsync(
+            string bucket,
+            string objectName,
+            string contentType,
+            long? contentLength,
+            UploadObjectOptions options = null,
+            CancellationToken cancellationToken = default) =>
+            throw new NotImplementedException();
     }
 }
