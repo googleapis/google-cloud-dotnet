@@ -1308,7 +1308,7 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Cloud Controls Partner",
-      "productUrl": "https://cloud.google.com/cloud-controls-partner/docs",
+      "productUrl": "https://cloud.google.com/sovereign-controls-by-partners/docs/sovereign-partners/reference/rest",
       "description": "Recommended Google client library to access the Google Cloud Controls Partner API (v1beta) which provides insights about your customers and their Assured Workloads based on your Sovereign Controls by Partners offering.",
       "tags": [
         "partner",
