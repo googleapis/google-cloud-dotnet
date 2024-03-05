@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 FalseMutations = { new Mutation(), },
                 PredicateFilter = new RowFilter(),
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);

@@ -362,7 +362,8 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to read.
+        /// Optional. The unique name of the table from which to read.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -371,7 +372,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadRowsStream ReadRows(string tableName, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
             }, callSettings);
 
         /// <summary>
@@ -382,7 +383,8 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to read.
+        /// Optional. The unique name of the table from which to read.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -391,7 +393,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadRowsStream ReadRows(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
             }, callSettings);
 
         /// <summary>
@@ -402,7 +404,8 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to read.
+        /// Optional. The unique name of the table from which to read.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -415,7 +418,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadRowsStream ReadRows(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 
@@ -427,7 +430,8 @@ namespace Google.Cloud.Bigtable.V2
         /// ReadRowsResponse documentation for details.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to read.
+        /// Optional. The unique name of the table from which to read.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -440,7 +444,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadRowsStream ReadRows(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 
@@ -470,7 +474,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -479,7 +484,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual SampleRowKeysStream SampleRowKeys(string tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
             }, callSettings);
 
         /// <summary>
@@ -489,7 +494,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -498,7 +504,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
             }, callSettings);
 
         /// <summary>
@@ -508,7 +514,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -521,7 +528,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual SampleRowKeysStream SampleRowKeys(string tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 
@@ -532,7 +539,8 @@ namespace Google.Cloud.Bigtable.V2
         /// mapreduces.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table from which to sample row keys.
+        /// Optional. The unique name of the table from which to sample row keys.
+        /// 
         /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
@@ -545,7 +553,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
             }, callSettings);
 
@@ -584,8 +592,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -601,7 +611,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowResponse MutateRow(string tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
                 {
@@ -614,8 +624,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -631,7 +643,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(string tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
                 {
@@ -644,8 +656,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -666,8 +680,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -683,7 +699,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowResponse MutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
                 {
@@ -696,8 +712,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -713,7 +731,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
                 {
@@ -726,8 +744,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -748,8 +768,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -769,7 +791,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowResponse MutateRow(string tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
@@ -783,8 +805,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -804,7 +828,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(string tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
@@ -818,8 +842,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -844,8 +870,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -865,7 +893,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowResponse MutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
@@ -879,8 +907,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -900,7 +930,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Mutations =
@@ -914,8 +944,10 @@ namespace Google.Cloud.Bigtable.V2
         /// unchanged unless explicitly changed by `mutation`.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutation should be
-        /// applied. Values are of the form
+        /// Optional. The unique name of the table to which the mutation should be
+        /// applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -959,8 +991,11 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be
+        /// Optional. The unique name of the table to which the mutations should be
         /// applied.
+        /// 
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -974,7 +1009,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowsStream MutateRows(string tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 Entries =
                 {
                     gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)),
@@ -987,8 +1022,11 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be
+        /// Optional. The unique name of the table to which the mutations should be
         /// applied.
+        /// 
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -1002,7 +1040,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowsStream MutateRows(gcbcv::TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 Entries =
                 {
                     gax::GaxPreconditions.CheckNotNull(entries, nameof(entries)),
@@ -1015,8 +1053,11 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be
+        /// Optional. The unique name of the table to which the mutations should be
         /// applied.
+        /// 
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -1034,7 +1075,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowsStream MutateRows(string tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 Entries =
                 {
@@ -1048,8 +1089,11 @@ namespace Google.Cloud.Bigtable.V2
         /// atomically.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the mutations should be
+        /// Optional. The unique name of the table to which the mutations should be
         /// applied.
+        /// 
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="entries">
         /// Required. The row keys and corresponding mutations to be applied in bulk.
@@ -1067,7 +1111,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual MutateRowsStream MutateRows(gcbcv::TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 Entries =
                 {
@@ -1106,8 +1150,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1139,7 +1185,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(string tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
                 TrueMutations =
@@ -1156,8 +1202,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1189,7 +1237,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(string tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
                 TrueMutations =
@@ -1206,8 +1254,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1243,8 +1293,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1276,7 +1328,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
                 TrueMutations =
@@ -1293,8 +1345,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1326,7 +1380,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
                 TrueMutations =
@@ -1343,8 +1397,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1380,8 +1436,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1417,7 +1475,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(string tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
@@ -1435,8 +1493,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1472,7 +1532,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(string tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
@@ -1490,8 +1550,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1531,8 +1593,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1568,7 +1632,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual CheckAndMutateRowResponse CheckAndMutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
@@ -1586,8 +1650,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1623,7 +1689,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 PredicateFilter = predicateFilter,
@@ -1641,8 +1707,10 @@ namespace Google.Cloud.Bigtable.V2
         /// Mutates a row atomically based on the output of a predicate Reader filter.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the conditional mutation
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the conditional mutation
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1975,8 +2043,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -1993,7 +2063,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(string tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
                 {
@@ -2009,8 +2079,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2027,7 +2099,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(string tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
                 {
@@ -2043,8 +2115,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2069,8 +2143,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2087,7 +2163,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
                 {
@@ -2103,8 +2179,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2121,7 +2199,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
                 {
@@ -2137,8 +2215,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2163,8 +2243,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2185,7 +2267,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(string tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
@@ -2202,8 +2284,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2224,7 +2308,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(string tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
-                TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                TableName = tableName ?? "",
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
@@ -2241,8 +2325,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2271,8 +2357,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2293,7 +2381,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
@@ -2310,8 +2398,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2332,7 +2422,7 @@ namespace Google.Cloud.Bigtable.V2
         public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
-                TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
+                TableNameAsTableName = tableName,
                 AppProfileId = appProfileId ?? "",
                 RowKey = gax::GaxPreconditions.CheckNotNull(rowKey, nameof(rowKey)),
                 Rules =
@@ -2349,8 +2439,10 @@ namespace Google.Cloud.Bigtable.V2
         /// time. The method returns the new contents of all modified cells.
         /// </summary>
         /// <param name="tableName">
-        /// Required. The unique name of the table to which the read/modify/write rules
-        /// should be applied. Values are of the form
+        /// Optional. The unique name of the table to which the read/modify/write rules
+        /// should be applied.
+        /// 
+        /// Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
         /// </param>
         /// <param name="rowKey">
@@ -2631,25 +2723,25 @@ namespace Google.Cloud.Bigtable.V2
             GrpcClient = grpcClient;
             BigtableServiceApiSettings effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>("ReadRows", grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>("ReadRows", grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callReadRows);
             Modify_ReadRowsApiCall(ref _callReadRows);
-            _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>("SampleRowKeys", grpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SampleRowKeysRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callSampleRowKeys = clientHelper.BuildApiCall<SampleRowKeysRequest, SampleRowKeysResponse>("SampleRowKeys", grpcClient.SampleRowKeys, effectiveSettings.SampleRowKeysSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<SampleRowKeysRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callSampleRowKeys);
             Modify_SampleRowKeysApiCall(ref _callSampleRowKeys);
-            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>("MutateRow", grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callMutateRow = clientHelper.BuildApiCall<MutateRowRequest, MutateRowResponse>("MutateRow", grpcClient.MutateRowAsync, grpcClient.MutateRow, effectiveSettings.MutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callMutateRow);
             Modify_MutateRowApiCall(ref _callMutateRow);
-            _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>("MutateRows", grpcClient.MutateRows, effectiveSettings.MutateRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callMutateRows = clientHelper.BuildApiCall<MutateRowsRequest, MutateRowsResponse>("MutateRows", grpcClient.MutateRows, effectiveSettings.MutateRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<MutateRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callMutateRows);
             Modify_MutateRowsApiCall(ref _callMutateRows);
-            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>("CheckAndMutateRow", grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CheckAndMutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callCheckAndMutateRow = clientHelper.BuildApiCall<CheckAndMutateRowRequest, CheckAndMutateRowResponse>("CheckAndMutateRow", grpcClient.CheckAndMutateRowAsync, grpcClient.CheckAndMutateRow, effectiveSettings.CheckAndMutateRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CheckAndMutateRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callCheckAndMutateRow);
             Modify_CheckAndMutateRowApiCall(ref _callCheckAndMutateRow);
             _callPingAndWarm = clientHelper.BuildApiCall<PingAndWarmRequest, PingAndWarmResponse>("PingAndWarm", grpcClient.PingAndWarmAsync, grpcClient.PingAndWarm, effectiveSettings.PingAndWarmSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<PingAndWarmRequest>().WithExtractedParameter("name", "^(projects/[^/]+/instances/[^/]+)/?$", request => request.Name).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
             Modify_ApiCall(ref _callPingAndWarm);
             Modify_PingAndWarmApiCall(ref _callPingAndWarm);
-            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>("ReadModifyWriteRow", grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId));
+            _callReadModifyWriteRow = clientHelper.BuildApiCall<ReadModifyWriteRowRequest, ReadModifyWriteRowResponse>("ReadModifyWriteRow", grpcClient.ReadModifyWriteRowAsync, grpcClient.ReadModifyWriteRow, effectiveSettings.ReadModifyWriteRowSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadModifyWriteRowRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callReadModifyWriteRow);
             Modify_ReadModifyWriteRowApiCall(ref _callReadModifyWriteRow);
             _callGenerateInitialChangeStreamPartitions = clientHelper.BuildApiCall<GenerateInitialChangeStreamPartitionsRequest, GenerateInitialChangeStreamPartitionsResponse>("GenerateInitialChangeStreamPartitions", grpcClient.GenerateInitialChangeStreamPartitions, effectiveSettings.GenerateInitialChangeStreamPartitionsSettings).WithGoogleRequestParam("table_name", request => request.TableName);

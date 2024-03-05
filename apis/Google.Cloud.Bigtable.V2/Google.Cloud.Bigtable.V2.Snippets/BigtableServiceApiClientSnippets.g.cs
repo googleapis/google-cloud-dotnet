@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
                 RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
                 Reversed = false,
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
@@ -164,6 +165,7 @@ namespace GoogleCSharpSnippets
             {
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
@@ -287,6 +289,7 @@ namespace GoogleCSharpSnippets
                 RowKey = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             MutateRowResponse response = bigtableServiceApiClient.MutateRow(request);
@@ -307,6 +310,7 @@ namespace GoogleCSharpSnippets
                 RowKey = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);
@@ -456,6 +460,7 @@ namespace GoogleCSharpSnippets
                     new MutateRowsRequest.Types.Entry(),
                 },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.MutateRowsStream response = bigtableServiceApiClient.MutateRows(request);
@@ -597,6 +602,7 @@ namespace GoogleCSharpSnippets
                 FalseMutations = { new Mutation(), },
                 PredicateFilter = new RowFilter(),
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             CheckAndMutateRowResponse response = bigtableServiceApiClient.CheckAndMutateRow(request);
@@ -619,6 +625,7 @@ namespace GoogleCSharpSnippets
                 FalseMutations = { new Mutation(), },
                 PredicateFilter = new RowFilter(),
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             CheckAndMutateRowResponse response = await bigtableServiceApiClient.CheckAndMutateRowAsync(request);
@@ -932,6 +939,7 @@ namespace GoogleCSharpSnippets
                     new ReadModifyWriteRule(),
                 },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(request);
@@ -955,6 +963,7 @@ namespace GoogleCSharpSnippets
                     new ReadModifyWriteRule(),
                 },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             ReadModifyWriteRowResponse response = await bigtableServiceApiClient.ReadModifyWriteRowAsync(request);
