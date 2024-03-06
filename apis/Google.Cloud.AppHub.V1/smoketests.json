@@ -1,0 +1,37 @@
+[
+  {
+    "method": "ListDiscoveredWorkloads",
+    "client": "AppHubClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListApplications",
+    "client": "AppHubClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "LookupServiceProjectAttachment",
+    "client": "AppHubClient",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListServiceProjectAttachments",
+    "client": "AppHubClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListDiscoveredServices",
+    "client": "AppHubClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
