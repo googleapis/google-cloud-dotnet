@@ -442,7 +442,7 @@
     },
     {
       "id": "Google.Cloud.AppHub.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "App Hub",
       "productUrl": "https://cloud.google.com/app-hub/docs/overview",
@@ -454,7 +454,7 @@
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.1.0",
         "Google.Cloud.Location": "2.1.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.LongRunning": "3.1.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/apphub/v1",
