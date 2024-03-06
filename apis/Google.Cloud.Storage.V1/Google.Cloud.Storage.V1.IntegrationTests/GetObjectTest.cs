@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
@@ -67,6 +70,22 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             Assert.Equal((ulong) _fixture.SmallContent.Length, o1.Size);
             Assert.Equal((ulong) _fixture.LargeContent.Length, o2.Size);
+        }
+
+        [Fact]
+        public async Task GetSoftDeleted()
+        {
+            // We upload and delete an object on the soft delete bucket.
+            var uploaded = await _fixture.Client.UploadObjectAsync(_fixture.SoftDeleteBucket, IdGenerator.FromGuid(prefix: "get-soft-delete"), "text/plain", new MemoryStream(_fixture.SmallContent));
+            await _fixture.Client.DeleteObjectAsync(uploaded);
+
+            // And now we get it, only soft deleted
+            var softDeleted = await _fixture.Client.GetObjectAsync(_fixture.SoftDeleteBucket, uploaded.Name, new GetObjectOptions { SoftDeletedOnly = true, Generation = uploaded.Generation });
+
+            Assert.Equal(_fixture.SoftDeleteBucket, softDeleted.Bucket);
+            Assert.Equal(uploaded.Name, softDeleted.Name);
+            Assert.Equal((ulong) _fixture.SmallContent.Length, softDeleted.Size);
+            Assert.NotNull(softDeleted.SoftDeleteTimeDateTimeOffset);
         }
     }
 }

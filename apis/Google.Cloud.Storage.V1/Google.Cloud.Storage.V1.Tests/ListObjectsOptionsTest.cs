@@ -32,6 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.Projection);
             Assert.Null(request.MaxResults);
             Assert.Null(request.Versions);
+            Assert.Null(request.SoftDeleted);
             Assert.Null(request.UserProject);
             Assert.Null(request.PageToken);
             Assert.Null(request.StartOffset);
@@ -51,6 +52,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 IncludeFoldersAsPrefixes = true,
                 Projection = Projection.Full,
                 Versions = true,
+                SoftDeletedOnly = true,
                 UserProject = "proj",
                 PageToken = "nextpage",
                 Fields = "items(name),nextPageToken",
@@ -65,6 +67,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.True(request.IncludeFoldersAsPrefixes);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.True(request.Versions);
+            Assert.True(request.SoftDeleted);
             Assert.Equal("proj", request.UserProject);
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal("items(name),nextPageToken", request.Fields);

@@ -56,6 +56,12 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public string InitiallyEmptyBucket => BucketPrefix + "-empty";
 
         /// <summary>
+        /// Name of a bucket which already exists, has no canned data, but has soft delete protection
+        /// for 24 hours.
+        /// </summary>
+        public string SoftDeleteBucket => BucketPrefix + "-soft-delete";
+
+        /// <summary>
         /// A small amount of content. Do not mutate the array.
         /// </summary>
         public byte[] SmallContent { get; } = Encoding.UTF8.GetBytes("hello, world");
@@ -154,12 +160,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Client = StorageClient.Create();
             BucketPrefix = IdGenerator.FromDateTime(prefix: "tests-", suffix: "-");
             LargeContent = Encoding.UTF8.GetBytes(string.Join("\n", Enumerable.Repeat("All work and no play makes Jack a dull boy.", 500)));
-            CreateBucket(SingleVersionBucket, false);
-            CreateBucket(MultiVersionBucket, true);
+            CreateBucket(SingleVersionBucket, multiVersion: false);
+            CreateBucket(MultiVersionBucket, multiVersion: true);
             CreateAndPopulateReadBucket();
-            CreateBucket(BucketBeginningWithZ, false);
-            CreateBucket(LabelsTestBucket, false);
-            CreateBucket(InitiallyEmptyBucket, false);
+            CreateBucket(BucketBeginningWithZ, multiVersion: false);
+            CreateBucket(LabelsTestBucket, multiVersion: false);
+            CreateBucket(InitiallyEmptyBucket, multiVersion: false);
+            CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -242,9 +249,16 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion)
+        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false)
         {
-            var bucket = Client.CreateBucket(ProjectId, new Bucket { Name = name, Versioning = new Bucket.VersioningData { Enabled = multiVersion } });
+            var bucket = Client.CreateBucket(ProjectId,
+                new Bucket
+                {
+                    Name = name,
+                    Versioning = new Bucket.VersioningData { Enabled = multiVersion },
+                    // The minimum allowed for soft delete is 7 days.
+                    SoftDeletePolicy = softDelete ? new Bucket.SoftDeletePolicyData { RetentionDurationSeconds = (int) TimeSpan.FromDays(7).TotalSeconds } : null,
+                });
             SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
             return bucket;
