@@ -31,6 +31,11 @@ namespace Google.Cloud.Storage.V1
         public long? Generation { get; set; }
 
         /// <summary>
+        /// If true, only soft-deleted object versions will be retrieved. The default is false.
+        /// </summary>
+        public bool? SoftDeletedOnly { get; set; }
+
+        /// <summary>
         /// The projection to retrieve.
         /// </summary>
         public Projection? Projection { get; set; }
@@ -108,6 +113,10 @@ namespace Google.Cloud.Storage.V1
             if (IfMetagenerationNotMatch != null)
             {
                 request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+            }
+            if (SoftDeletedOnly != null)
+            {
+                request.SoftDeleted = SoftDeletedOnly;
             }
             if (Projection != null)
             {
