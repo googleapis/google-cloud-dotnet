@@ -987,7 +987,7 @@
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.6.0",
-        "Google.Apis.Bigquery.v2": "1.66.0.3320"
+        "Google.Apis.Bigquery.v2": "1.67.0.3331"
       },
       "testDependencies": {
         "Google.Cloud.Storage.V1": "project",
@@ -3908,7 +3908,7 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.6.0",
-        "Google.Apis.CloudResourceManager.v1": "1.60.0.2950",
+        "Google.Apis.CloudResourceManager.v1": "1.67.0.3314",
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "Microsoft.Extensions.Hosting": "6.0.1",
         "Microsoft.Extensions.Hosting.Abstractions": "6.0.0",
@@ -4804,11 +4804,11 @@
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.6.0",
-        "Google.Apis.Storage.v1": "1.63.0.3206"
+        "Google.Apis.Storage.v1": "1.67.0.3326"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "4.6.0",
-        "Google.Apis.Iam.v1": "1.63.0.3178",
+        "Google.Apis.Iam.v1": "1.67.0.3304",
         "Google.Cloud.PubSub.V1": "project"
       },
       "tags": [
@@ -5182,7 +5182,7 @@
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
         "Google.Api.Gax.Rest": "4.6.0",
-        "Google.Apis.Translate.v2": "1.60.0.875"
+        "Google.Apis.Translate.v2": "1.67.0.875"
       },
       "tags": [
         "Translate",
