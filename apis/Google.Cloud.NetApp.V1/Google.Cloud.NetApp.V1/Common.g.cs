@@ -43,7 +43,7 @@ namespace Google.Cloud.NetApp.V1 {
   }
   #region Enums
   /// <summary>
-  /// The service levels - Storage Pool, Volumes
+  /// The service level of a storage pool and its volumes.
   /// </summary>
   public enum ServiceLevel {
     /// <summary>
@@ -59,17 +59,17 @@ namespace Google.Cloud.NetApp.V1 {
     /// </summary>
     [pbr::OriginalName("EXTREME")] Extreme = 2,
     /// <summary>
-    /// Standard (Software offering)
+    /// Standard service level.
     /// </summary>
     [pbr::OriginalName("STANDARD")] Standard = 3,
   }
 
   /// <summary>
-  /// Defined the current volume encryption key source.
+  /// The volume encryption key source.
   /// </summary>
   public enum EncryptionType {
     /// <summary>
-    /// The source of encryption key is not specified.
+    /// The source of the encryption key is not specified.
     /// </summary>
     [pbr::OriginalName("ENCRYPTION_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>

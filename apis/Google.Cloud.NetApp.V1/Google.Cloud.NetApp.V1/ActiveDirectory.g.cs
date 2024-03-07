@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "Y3RpdmVfZGlyZWN0b3J5GAIgASgLMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5BY3RpdmVEaXJlY3RvcnlCA+BBAiJbChxEZWxldGVBY3RpdmVEaXJlY3Rv",
             "cnlSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSKzBwoPQWN0aXZlRGlyZWN0b3J5",
+            "ZWFwaXMuY29tL0FjdGl2ZURpcmVjdG9yeSK9BwoPQWN0aXZlRGlyZWN0b3J5",
             "EhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgVzdGF0ZRgDIAEoDjIt",
             "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5LlN0YXRl",
@@ -55,24 +55,25 @@ namespace Google.Cloud.NetApp.V1 {
             "bnMYBiABKAlCA+BBAhIcCg9uZXRfYmlvc19wcmVmaXgYByABKAlCA+BBAhIb",
             "ChNvcmdhbml6YXRpb25hbF91bml0GAggASgJEhYKDmFlc19lbmNyeXB0aW9u",
             "GAkgASgIEhUKCHVzZXJuYW1lGAogASgJQgPgQQISFQoIcGFzc3dvcmQYCyAB",
-            "KAlCA+BBAhIYChBiYWNrdXBfb3BlcmF0b3JzGAwgAygJEhoKEnNlY3VyaXR5",
-            "X29wZXJhdG9ycxgNIAMoCRIUCgxrZGNfaG9zdG5hbWUYDiABKAkSDgoGa2Rj",
-            "X2lwGA8gASgJEhsKE25mc191c2Vyc193aXRoX2xkYXAYECABKAgSEwoLZGVz",
-            "Y3JpcHRpb24YESABKAkSFAoMbGRhcF9zaWduaW5nGBIgASgIEh4KFmVuY3J5",
-            "cHRfZGNfY29ubmVjdGlvbnMYEyABKAgSQwoGbGFiZWxzGBQgAygLMjMuZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MS5BY3RpdmVEaXJlY3RvcnkuTGFiZWxzRW50",
-            "cnkSGgoNc3RhdGVfZGV0YWlscxgVIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiagoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAIS",
-            "DAoIVVBEQVRJTkcQAxIKCgZJTl9VU0UQBBIMCghERUxFVElORxAFEgkKBUVS",
-            "Uk9SEAY6nQHqQZkBCiVuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQWN0aXZlRGly",
-            "ZWN0b3J5Ekxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vYWN0aXZlRGlyZWN0b3JpZXMve2FjdGl2ZV9kaXJlY3Rvcnl9KhFhY3Rp",
-            "dmVEaXJlY3RvcmllczIPYWN0aXZlRGlyZWN0b3J5QrYBChpjb20uZ29vZ2xl",
-            "LmNsb3VkLm5ldGFwcC52MUIUQWN0aXZlRGlyZWN0b3J5UHJvdG9QAVoyY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBw",
-            "cGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5l",
-            "dEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "KAlCA+BBAhIdChBiYWNrdXBfb3BlcmF0b3JzGAwgAygJQgPgQQESHwoSc2Vj",
+            "dXJpdHlfb3BlcmF0b3JzGA0gAygJQgPgQQESFAoMa2RjX2hvc3RuYW1lGA4g",
+            "ASgJEg4KBmtkY19pcBgPIAEoCRIbChNuZnNfdXNlcnNfd2l0aF9sZGFwGBAg",
+            "ASgIEhMKC2Rlc2NyaXB0aW9uGBEgASgJEhQKDGxkYXBfc2lnbmluZxgSIAEo",
+            "CBIeChZlbmNyeXB0X2RjX2Nvbm5lY3Rpb25zGBMgASgIEkMKBmxhYmVscxgU",
+            "IAMoCzIzLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuQWN0aXZlRGlyZWN0b3J5",
+            "LkxhYmVsc0VudHJ5EhoKDXN0YXRlX2RldGFpbHMYFSABKAlCA+BBAxotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImoK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJ",
+            "CgVSRUFEWRACEgwKCFVQREFUSU5HEAMSCgoGSU5fVVNFEAQSDAoIREVMRVRJ",
+            "TkcQBRIJCgVFUlJPUhAGOp0B6kGZAQolbmV0YXBwLmdvb2dsZWFwaXMuY29t",
+            "L0FjdGl2ZURpcmVjdG9yeRJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2FjdGl2ZURpcmVjdG9yaWVzL3thY3RpdmVfZGlyZWN0",
+            "b3J5fSoRYWN0aXZlRGlyZWN0b3JpZXMyD2FjdGl2ZURpcmVjdG9yeUK2AQoa",
+            "Y29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCFEFjdGl2ZURpcmVjdG9yeVBy",
+            "b3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFw",
+            "cHBiO25ldGFwcHBiqgIWR29vZ2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2ds",
+            "ZVxDbG91ZFxOZXRBcHBcVjHqAhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1879,7 +1880,8 @@ namespace Google.Cloud.NetApp.V1 {
         = pb::FieldCodec.ForString(98);
     private readonly pbc::RepeatedField<string> backupOperators_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Users to be added to the Built-in Backup Operator active directory group.
+    /// Optional. Users to be added to the Built-in Backup Operator active
+    /// directory group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1893,7 +1895,7 @@ namespace Google.Cloud.NetApp.V1 {
         = pb::FieldCodec.ForString(106);
     private readonly pbc::RepeatedField<string> securityOperators_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Domain users to be given the SeSecurityPrivilege.
+    /// Optional. Domain users to be given the SeSecurityPrivilege.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
