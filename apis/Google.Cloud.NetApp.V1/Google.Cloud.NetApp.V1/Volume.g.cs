@@ -2291,8 +2291,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PsaRangeFieldNumber = 6;
     private string psaRange_ = "";
     /// <summary>
-    /// Output only. Name of the Private Service Access allocated range. This is
-    /// optional. If not provided, any available range will be chosen.
+    /// Output only. This field is currently not implemented. Currently values
+    /// provided in this field will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
