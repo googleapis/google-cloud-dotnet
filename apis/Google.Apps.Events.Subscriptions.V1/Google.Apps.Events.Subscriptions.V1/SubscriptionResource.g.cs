@@ -86,7 +86,7 @@ namespace Google.Apps.Events.Subscriptions.V1 {
   /// <summary>
   /// A subscription to receive events about a Google Workspace resource. To learn
   /// more about subscriptions, see the [Google Workspace Events API
-  /// overview](https://developers.google.com/workspace/events/guides).
+  /// overview](https://developers.google.com/workspace/events).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Subscription : pb::IMessage<Subscription>
@@ -225,8 +225,9 @@ namespace Google.Apps.Events.Subscriptions.V1 {
     /// Required. Immutable. The Google Workspace resource that's monitored for
     /// events, formatted as the [full resource
     /// name](https://google.aip.dev/122#full-resource-names). To learn about
-    /// target resources, see [Supported Google Workspace
-    /// resources](https://developers.google.com/workspace/events/guides#supported-resources).
+    /// target resources and the events that they support, see [Supported Google
+    /// Workspace
+    /// events](https://developers.google.com/workspace/events#supported-events).
     ///
     /// A user can only authorize your app to create one subscription for a given
     /// target resource. If your app tries to create another subscription with the
@@ -251,12 +252,9 @@ namespace Google.Apps.Events.Subscriptions.V1 {
     /// Otherwise, output only. One or more types of events to receive about the
     /// target resource. Formatted according to the CloudEvents specification.
     ///
-    /// For a list of supported event types, see the following documentation:
-    ///
-    /// * [Google Chat
-    /// events](https://developers.google.com/workspace/events/guides/events-chat)
-    /// * [Google Meet
-    /// events](https://developers.google.com/workspace/events/guides/events-meet)
+    /// The supported event types depend on the target resource of your
+    /// subscription. For details, see [Supported Google Workspace
+    /// events](https://developers.google.com/workspace/events/guides#supported-events).
     ///
     /// By default, you also receive events about the [lifecycle of your
     /// subscription](https://developers.google.com/workspace/events/guides/events-lifecycle).
