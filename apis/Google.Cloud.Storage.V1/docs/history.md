@@ -1,5 +1,19 @@
 # Version history
 
+## Version 4.9.0, released 2024-03-07
+
+### Bug fixes
+
+- Fix typo ([commit 3fbdeb0](https://github.com/googleapis/google-cloud-dotnet/commit/3fbdeb03961bc767934dfd09981dedf88e8026e6))
+
+### New features
+
+- Allow a new upload session to be initiated as a single method call ([commit f0b643e](https://github.com/googleapis/google-cloud-dotnet/commit/f0b643e3f952624f323b64ec90a904ee804d8e7f))
+- Support overriding some URLSigner.Options default values. ([commit 4cc8131](https://github.com/googleapis/google-cloud-dotnet/commit/4cc81319385df5efce7671b16ba2da980fd38c13))
+- Support custom hostname and port in signers. ([commit adaa7c4](https://github.com/googleapis/google-cloud-dotnet/commit/adaa7c4ea307bc4948142f1d2c38558122b5a4bf))
+- Allows creating UrlSigner directly from a StorageClient. ([commit 4f0d708](https://github.com/googleapis/google-cloud-dotnet/commit/4f0d708a0b26c5223228f90bdd42a567bc983636))
+- Support object retention ([commit 6d73d8e](https://github.com/googleapis/google-cloud-dotnet/commit/6d73d8eb86d739f113ea70a535ecf704af471f85))
+
 ## Version 4.8.0, released 2024-02-09
 
 ### New features
