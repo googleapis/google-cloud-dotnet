@@ -1,0 +1,30 @@
+[
+  {
+    "method": "ListMuteConfigs",
+    "client": "SecurityCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListNotificationConfigs",
+    "client": "SecurityCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListSources",
+    "client": "SecurityCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListBigQueryExports",
+    "client": "SecurityCenterClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
