@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListServingConfigsRequest request = new ListServingConfigsRequest
             {
-                ParentAsDataStoreName = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                ParentAsEngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
             };
             // Make the request
             PagedEnumerable<ListServingConfigsResponse, ServingConfig> response = servingConfigServiceClient.ListServingConfigs(request);

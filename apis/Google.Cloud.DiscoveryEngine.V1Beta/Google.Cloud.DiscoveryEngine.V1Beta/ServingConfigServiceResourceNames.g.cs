@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 using gcdv = Google.Cloud.DiscoveryEngine.V1Beta;
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
@@ -33,12 +34,43 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
     public partial class ListServingConfigsRequest
     {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public EngineName ParentAsEngineName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EngineName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public DataStoreName ParentAsDataStoreName
         {
             get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (EngineName.TryParse(Parent, out EngineName engine))
+                {
+                    return engine;
+                }
+                if (DataStoreName.TryParse(Parent, out DataStoreName dataStore))
+                {
+                    return dataStore;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

@@ -24,7 +24,8 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
-  /// Service for modifying ServingConfig.
+  /// Service for operations related to
+  /// [ServingConfig][google.cloud.discoveryengine.v1beta.ServingConfig].
   /// </summary>
   public static partial class ServingConfigService
   {

@@ -275,6 +275,21 @@
         }
       }
     },
+    "SearchTuningService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchTuningServiceClient",
+          "rpcs": {
+            "TrainCustomModel": {
+              "methods": [
+                "TrainCustomModel",
+                "TrainCustomModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ServingConfigService": {
       "clients": {
         "grpc": {

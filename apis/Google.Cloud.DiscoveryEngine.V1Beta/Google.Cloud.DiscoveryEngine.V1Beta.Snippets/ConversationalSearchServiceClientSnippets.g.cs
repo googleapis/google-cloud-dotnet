@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
                 Filter = "",
+                BoostSpec = new SearchRequest.Types.BoostSpec(),
             };
             // Make the request
             ConverseConversationResponse response = conversationalSearchServiceClient.ConverseConversation(request);
@@ -67,6 +68,7 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
                 Filter = "",
+                BoostSpec = new SearchRequest.Types.BoostSpec(),
             };
             // Make the request
             ConverseConversationResponse response = await conversationalSearchServiceClient.ConverseConversationAsync(request);

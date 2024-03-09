@@ -159,7 +159,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
     /// <summary>ServingConfigService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service for modifying ServingConfig.
+    /// Service for operations related to
+    /// [ServingConfig][google.cloud.discoveryengine.v1beta.ServingConfig].
     /// </remarks>
     public abstract partial class ServingConfigServiceClient
     {
@@ -394,7 +395,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -411,7 +412,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -428,7 +429,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -442,7 +443,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -459,7 +460,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -476,7 +477,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ServingConfig to get. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -505,8 +506,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Lists all ServingConfigs linked to this dataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The dataStore resource name. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -530,8 +531,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Lists all ServingConfigs linked to this dataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The dataStore resource name. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -555,8 +556,58 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Lists all ServingConfigs linked to this dataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The dataStore resource name. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigs(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListServingConfigs(new ListServingConfigsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ServingConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> ListServingConfigsAsync(EngineName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListServingConfigsAsync(new ListServingConfigsRequest
+            {
+                ParentAsEngineName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all ServingConfigs linked to this dataStore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -580,8 +631,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Lists all ServingConfigs linked to this dataStore.
         /// </summary>
         /// <param name="parent">
-        /// Required. The dataStore resource name. Format:
-        /// `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+        /// Required. Full resource name of the parent resource. Format:
+        /// `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -604,7 +655,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
     /// <summary>ServingConfigService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service for modifying ServingConfig.
+    /// Service for operations related to
+    /// [ServingConfig][google.cloud.discoveryengine.v1beta.ServingConfig].
     /// </remarks>
     public sealed partial class ServingConfigServiceClientImpl : ServingConfigServiceClient
     {
