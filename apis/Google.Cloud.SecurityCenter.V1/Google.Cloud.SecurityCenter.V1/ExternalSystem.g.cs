@@ -27,27 +27,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "CjRnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZXh0ZXJuYWxfc3lz",
             "dGVtLnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEaGWdv",
             "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8i4AMKDkV4dGVybmFsU3lzdGVtEgwKBG5hbWUYASABKAkS",
+            "c3RhbXAucHJvdG8iggcKDkV4dGVybmFsU3lzdGVtEgwKBG5hbWUYASABKAkS",
             "EQoJYXNzaWduZWVzGAIgAygJEhQKDGV4dGVybmFsX3VpZBgDIAEoCRIOCgZz",
             "dGF0dXMYBCABKAkSPwobZXh0ZXJuYWxfc3lzdGVtX3VwZGF0ZV90aW1lGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDrFAupBwQIKLHNlY3Vy",
-            "aXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL0V4dGVybmFsU3lzdGVtEmFvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmlu",
-            "ZGluZ3Mve2ZpbmRpbmd9L2V4dGVybmFsU3lzdGVtcy97ZXh0ZXJuYWxzeXN0",
-            "ZW19ElVmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMve3NvdXJjZX0vZmluZGlu",
-            "Z3Mve2ZpbmRpbmd9L2V4dGVybmFsU3lzdGVtcy97ZXh0ZXJuYWxzeXN0ZW19",
-            "Eldwcm9qZWN0cy97cHJvamVjdH0vc291cmNlcy97c291cmNlfS9maW5kaW5n",
-            "cy97ZmluZGluZ30vZXh0ZXJuYWxTeXN0ZW1zL3tleHRlcm5hbHN5c3RlbX1C",
-            "7QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCE0V4dGVy",
-            "bmFsU3lzdGVtUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0",
-            "eWNlbnRlci9hcGl2MS9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVy",
-            "cGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVc",
-            "Q2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1",
-            "cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghjYXNlX3VyaRgG",
+            "IAEoCRIVCg1jYXNlX3ByaW9yaXR5GAcgASgJEiwKCGNhc2Vfc2xhGAkgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBjYXNlX2NyZWF0ZV90",
+            "aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCg9jYXNl",
+            "X2Nsb3NlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Ek4KC3RpY2tldF9pbmZvGAggASgLMjkuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
+            "Y2VudGVyLnYxLkV4dGVybmFsU3lzdGVtLlRpY2tldEluZm8ajQEKClRpY2tl",
+            "dEluZm8SCgoCaWQYASABKAkSEAoIYXNzaWduZWUYAiABKAkSEwoLZGVzY3Jp",
+            "cHRpb24YAyABKAkSCwoDdXJpGAQgASgJEg4KBnN0YXR1cxgFIAEoCRIvCgt1",
+            "cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXA6",
+            "xQLqQcECCixzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9FeHRlcm5h",
+            "bFN5c3RlbRJhb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9zb3VyY2Vz",
+            "L3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfS9leHRlcm5hbFN5c3RlbXMv",
+            "e2V4dGVybmFsc3lzdGVtfRJVZm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tz",
+            "b3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfS9leHRlcm5hbFN5c3RlbXMve2V4",
+            "dGVybmFsc3lzdGVtfRJXcHJvamVjdHMve3Byb2plY3R9L3NvdXJjZXMve3Nv",
+            "dXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9L2V4dGVybmFsU3lzdGVtcy97ZXh0",
+            "ZXJuYWxzeXN0ZW19Qu0BCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
+            "dGVyLnYxQhNFeHRlcm5hbFN5c3RlbVByb3RvUAFaSmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjEvc2VjdXJpdHljZW50ZXJwYjtz",
+            "ZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVy",
+            "LlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xl",
+            "OjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ExternalSystem), global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Parser, new[]{ "Name", "Assignees", "ExternalUid", "Status", "ExternalSystemUpdateTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ExternalSystem), global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Parser, new[]{ "Name", "Assignees", "ExternalUid", "Status", "ExternalSystemUpdateTime", "CaseUri", "CasePriority", "CaseSla", "CaseCreateTime", "CaseCloseTime", "TicketInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo), global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo.Parser, new[]{ "Id", "Assignee", "Description", "Uri", "Status", "UpdateTime" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -97,6 +106,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       externalUid_ = other.externalUid_;
       status_ = other.status_;
       externalSystemUpdateTime_ = other.externalSystemUpdateTime_ != null ? other.externalSystemUpdateTime_.Clone() : null;
+      caseUri_ = other.caseUri_;
+      casePriority_ = other.casePriority_;
+      caseSla_ = other.caseSla_ != null ? other.caseSla_.Clone() : null;
+      caseCreateTime_ = other.caseCreateTime_ != null ? other.caseCreateTime_.Clone() : null;
+      caseCloseTime_ = other.caseCloseTime_ != null ? other.caseCloseTime_.Clone() : null;
+      ticketInfo_ = other.ticketInfo_ != null ? other.ticketInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -142,7 +157,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ExternalUidFieldNumber = 3;
     private string externalUid_ = "";
     /// <summary>
-    /// Identifier that's used to track the given finding in the external system.
+    /// The identifier that's used to track the finding's corresponding case in the
+    /// external system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,8 +173,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int StatusFieldNumber = 4;
     private string status_ = "";
     /// <summary>
-    /// Most recent status of the corresponding finding's ticket/tracker in the
-    /// external system.
+    /// The most recent status of the finding's corresponding case, as reported by
+    /// the external system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,8 +189,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int ExternalSystemUpdateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp externalSystemUpdateTime_;
     /// <summary>
-    /// The most recent time when the corresponding finding's ticket/tracker was
-    /// updated in the external system.
+    /// The time when the case was last updated, as reported by the external
+    /// system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,6 +198,97 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return externalSystemUpdateTime_; }
       set {
         externalSystemUpdateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "case_uri" field.</summary>
+    public const int CaseUriFieldNumber = 6;
+    private string caseUri_ = "";
+    /// <summary>
+    /// The link to the finding's corresponding case in the external system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CaseUri {
+      get { return caseUri_; }
+      set {
+        caseUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "case_priority" field.</summary>
+    public const int CasePriorityFieldNumber = 7;
+    private string casePriority_ = "";
+    /// <summary>
+    /// The priority of the finding's corresponding case in the external system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CasePriority {
+      get { return casePriority_; }
+      set {
+        casePriority_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "case_sla" field.</summary>
+    public const int CaseSlaFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp caseSla_;
+    /// <summary>
+    /// The SLA of the finding's corresponding case in the external system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CaseSla {
+      get { return caseSla_; }
+      set {
+        caseSla_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "case_create_time" field.</summary>
+    public const int CaseCreateTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp caseCreateTime_;
+    /// <summary>
+    /// The time when the case was created, as reported by the external system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CaseCreateTime {
+      get { return caseCreateTime_; }
+      set {
+        caseCreateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "case_close_time" field.</summary>
+    public const int CaseCloseTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp caseCloseTime_;
+    /// <summary>
+    /// The time when the case was closed, as reported by the external system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CaseCloseTime {
+      get { return caseCloseTime_; }
+      set {
+        caseCloseTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ticket_info" field.</summary>
+    public const int TicketInfoFieldNumber = 8;
+    private global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo ticketInfo_;
+    /// <summary>
+    /// Information about the ticket, if any, that is being used to track the
+    /// resolution of the issue that is identified by this finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo TicketInfo {
+      get { return ticketInfo_; }
+      set {
+        ticketInfo_ = value;
       }
     }
 
@@ -205,6 +312,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ExternalUid != other.ExternalUid) return false;
       if (Status != other.Status) return false;
       if (!object.Equals(ExternalSystemUpdateTime, other.ExternalSystemUpdateTime)) return false;
+      if (CaseUri != other.CaseUri) return false;
+      if (CasePriority != other.CasePriority) return false;
+      if (!object.Equals(CaseSla, other.CaseSla)) return false;
+      if (!object.Equals(CaseCreateTime, other.CaseCreateTime)) return false;
+      if (!object.Equals(CaseCloseTime, other.CaseCloseTime)) return false;
+      if (!object.Equals(TicketInfo, other.TicketInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -217,6 +330,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ExternalUid.Length != 0) hash ^= ExternalUid.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (externalSystemUpdateTime_ != null) hash ^= ExternalSystemUpdateTime.GetHashCode();
+      if (CaseUri.Length != 0) hash ^= CaseUri.GetHashCode();
+      if (CasePriority.Length != 0) hash ^= CasePriority.GetHashCode();
+      if (caseSla_ != null) hash ^= CaseSla.GetHashCode();
+      if (caseCreateTime_ != null) hash ^= CaseCreateTime.GetHashCode();
+      if (caseCloseTime_ != null) hash ^= CaseCloseTime.GetHashCode();
+      if (ticketInfo_ != null) hash ^= TicketInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -252,6 +371,30 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExternalSystemUpdateTime);
       }
+      if (CaseUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CaseUri);
+      }
+      if (CasePriority.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CasePriority);
+      }
+      if (ticketInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TicketInfo);
+      }
+      if (caseSla_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CaseSla);
+      }
+      if (caseCreateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CaseCreateTime);
+      }
+      if (caseCloseTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CaseCloseTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -279,6 +422,30 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(ExternalSystemUpdateTime);
       }
+      if (CaseUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CaseUri);
+      }
+      if (CasePriority.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CasePriority);
+      }
+      if (ticketInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TicketInfo);
+      }
+      if (caseSla_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CaseSla);
+      }
+      if (caseCreateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CaseCreateTime);
+      }
+      if (caseCloseTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CaseCloseTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -301,6 +468,24 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (externalSystemUpdateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExternalSystemUpdateTime);
+      }
+      if (CaseUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CaseUri);
+      }
+      if (CasePriority.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CasePriority);
+      }
+      if (caseSla_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CaseSla);
+      }
+      if (caseCreateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CaseCreateTime);
+      }
+      if (caseCloseTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CaseCloseTime);
+      }
+      if (ticketInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TicketInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -329,6 +514,36 @@ namespace Google.Cloud.SecurityCenter.V1 {
           ExternalSystemUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ExternalSystemUpdateTime.MergeFrom(other.ExternalSystemUpdateTime);
+      }
+      if (other.CaseUri.Length != 0) {
+        CaseUri = other.CaseUri;
+      }
+      if (other.CasePriority.Length != 0) {
+        CasePriority = other.CasePriority;
+      }
+      if (other.caseSla_ != null) {
+        if (caseSla_ == null) {
+          CaseSla = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CaseSla.MergeFrom(other.CaseSla);
+      }
+      if (other.caseCreateTime_ != null) {
+        if (caseCreateTime_ == null) {
+          CaseCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CaseCreateTime.MergeFrom(other.CaseCreateTime);
+      }
+      if (other.caseCloseTime_ != null) {
+        if (caseCloseTime_ == null) {
+          CaseCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CaseCloseTime.MergeFrom(other.CaseCloseTime);
+      }
+      if (other.ticketInfo_ != null) {
+        if (ticketInfo_ == null) {
+          TicketInfo = new global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo();
+        }
+        TicketInfo.MergeFrom(other.TicketInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -366,6 +581,42 @@ namespace Google.Cloud.SecurityCenter.V1 {
               ExternalSystemUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExternalSystemUpdateTime);
+            break;
+          }
+          case 50: {
+            CaseUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            CasePriority = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (ticketInfo_ == null) {
+              TicketInfo = new global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo();
+            }
+            input.ReadMessage(TicketInfo);
+            break;
+          }
+          case 74: {
+            if (caseSla_ == null) {
+              CaseSla = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseSla);
+            break;
+          }
+          case 82: {
+            if (caseCreateTime_ == null) {
+              CaseCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseCreateTime);
+            break;
+          }
+          case 90: {
+            if (caseCloseTime_ == null) {
+              CaseCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseCloseTime);
             break;
           }
         }
@@ -406,10 +657,461 @@ namespace Google.Cloud.SecurityCenter.V1 {
             input.ReadMessage(ExternalSystemUpdateTime);
             break;
           }
+          case 50: {
+            CaseUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            CasePriority = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (ticketInfo_ == null) {
+              TicketInfo = new global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Types.TicketInfo();
+            }
+            input.ReadMessage(TicketInfo);
+            break;
+          }
+          case 74: {
+            if (caseSla_ == null) {
+              CaseSla = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseSla);
+            break;
+          }
+          case 82: {
+            if (caseCreateTime_ == null) {
+              CaseCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseCreateTime);
+            break;
+          }
+          case 90: {
+            if (caseCloseTime_ == null) {
+              CaseCloseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CaseCloseTime);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExternalSystem message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Information about the ticket, if any, that is being used to track the
+      /// resolution of the issue that is identified by this finding.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TicketInfo : pb::IMessage<TicketInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TicketInfo> _parser = new pb::MessageParser<TicketInfo>(() => new TicketInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TicketInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TicketInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TicketInfo(TicketInfo other) : this() {
+          id_ = other.id_;
+          assignee_ = other.assignee_;
+          description_ = other.description_;
+          uri_ = other.uri_;
+          status_ = other.status_;
+          updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TicketInfo Clone() {
+          return new TicketInfo(this);
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 1;
+        private string id_ = "";
+        /// <summary>
+        /// The identifier of the ticket in the ticket system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "assignee" field.</summary>
+        public const int AssigneeFieldNumber = 2;
+        private string assignee_ = "";
+        /// <summary>
+        /// The assignee of the ticket in the ticket system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Assignee {
+          get { return assignee_; }
+          set {
+            assignee_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 3;
+        private string description_ = "";
+        /// <summary>
+        /// The description of the ticket in the ticket system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 4;
+        private string uri_ = "";
+        /// <summary>
+        /// The link to the ticket in the ticket system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 5;
+        private string status_ = "";
+        /// <summary>
+        /// The latest status of the ticket, as reported by the ticket system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Status {
+          get { return status_; }
+          set {
+            status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "update_time" field.</summary>
+        public const int UpdateTimeFieldNumber = 6;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+        /// <summary>
+        /// The time when the ticket was last updated, as reported by the ticket
+        /// system.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+          get { return updateTime_; }
+          set {
+            updateTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TicketInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TicketInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Id != other.Id) return false;
+          if (Assignee != other.Assignee) return false;
+          if (Description != other.Description) return false;
+          if (Uri != other.Uri) return false;
+          if (Status != other.Status) return false;
+          if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (Assignee.Length != 0) hash ^= Assignee.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (Status.Length != 0) hash ^= Status.GetHashCode();
+          if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (Assignee.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Assignee);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Description);
+          }
+          if (Uri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Uri);
+          }
+          if (Status.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Status);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (Assignee.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Assignee);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Description);
+          }
+          if (Uri.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Uri);
+          }
+          if (Status.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Status);
+          }
+          if (updateTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (Assignee.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Assignee);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (Status.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
+          }
+          if (updateTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TicketInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          if (other.Assignee.Length != 0) {
+            Assignee = other.Assignee;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          if (other.Status.Length != 0) {
+            Status = other.Status;
+          }
+          if (other.updateTime_ != null) {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            UpdateTime.MergeFrom(other.UpdateTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                Assignee = input.ReadString();
+                break;
+              }
+              case 26: {
+                Description = input.ReadString();
+                break;
+              }
+              case 34: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 42: {
+                Status = input.ReadString();
+                break;
+              }
+              case 50: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                Assignee = input.ReadString();
+                break;
+              }
+              case 26: {
+                Description = input.ReadString();
+                break;
+              }
+              case 34: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 42: {
+                Status = input.ReadString();
+                break;
+              }
+              case 50: {
+                if (updateTime_ == null) {
+                  UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpdateTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
