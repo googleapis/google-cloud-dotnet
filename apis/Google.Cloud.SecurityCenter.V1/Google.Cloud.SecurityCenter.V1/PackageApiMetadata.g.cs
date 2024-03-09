@@ -92,6 +92,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return SecurityHealthAnalyticsCustomConfigReflection.Descriptor;
             yield return SecurityHealthAnalyticsCustomModuleReflection.Descriptor;
             yield return SecurityMarksReflection.Descriptor;
+            yield return SecurityPostureReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
             yield return SourceReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
