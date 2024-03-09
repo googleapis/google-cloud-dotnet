@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_async_flattened_resourceNames]
+    // [START discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using System;
@@ -33,12 +33,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListServingConfigsResourceNamesAsync()
+        public async Task ListServingConfigsResourceNames1Async()
         {
             // Create client
             ServingConfigServiceClient servingConfigServiceClient = await ServingConfigServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataStoreName parent = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            EngineName parent = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
             // Make the request
             PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> response = servingConfigServiceClient.ListServingConfigsAsync(parent);
 
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_async_flattened_resourceNames]
+    // [END discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_async_flattened_resourceNames1]
 }

@@ -28,34 +28,40 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "b3JlLnByb3RvEiNnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
             "YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2lu",
-            "ZS92MWJldGEvY29tbW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIsMFCglEYXRhU3RvcmUSEQoEbmFtZRgBIAEoCUID4EEFEhkK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElUKEWluZHVzdHJ5X3ZlcnRpY2Fs",
-            "GAMgASgOMjUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
-            "SW5kdXN0cnlWZXJ0aWNhbEID4EEFEkkKDnNvbHV0aW9uX3R5cGVzGAUgAygO",
-            "MjEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU29sdXRp",
-            "b25UeXBlEh4KEWRlZmF1bHRfc2NoZW1hX2lkGAcgASgJQgPgQQMSWQoOY29u",
-            "dGVudF9jb25maWcYBiABKA4yPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
-            "aW5lLnYxYmV0YS5EYXRhU3RvcmUuQ29udGVudENvbmZpZ0ID4EEFEjQKC2Ny",
-            "ZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDImkKDUNvbnRlbnRDb25maWcSHgoaQ09OVEVOVF9DT05GSUdfVU5TUEVD",
-            "SUZJRUQQABIOCgpOT19DT05URU5UEAESFAoQQ09OVEVOVF9SRVFVSVJFRBAC",
-            "EhIKDlBVQkxJQ19XRUJTSVRFEAM6yQHqQcUBCihkaXNjb3ZlcnllbmdpbmUu",
-            "Z29vZ2xlYXBpcy5jb20vRGF0YVN0b3JlEj9wcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0S",
-            "WHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
-            "ZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX1C",
-            "lQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUIO",
-            "RGF0YVN0b3JlUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zl",
-            "cnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
-            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRp",
-            "c2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5",
-            "RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2lu",
-            "ZTo6VjFiZXRhYgZwcm90bzM="));
+            "ZS92MWJldGEvY29tbW9uLnByb3RvGkRnb29nbGUvY2xvdWQvZGlzY292ZXJ5",
+            "ZW5naW5lL3YxYmV0YS9kb2N1bWVudF9wcm9jZXNzaW5nX2NvbmZpZy5wcm90",
+            "bxowZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MWJldGEvc2NoZW1h",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuwGCglE",
+            "YXRhU3RvcmUSEQoEbmFtZRgBIAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgC",
+            "IAEoCUID4EECElUKEWluZHVzdHJ5X3ZlcnRpY2FsGAMgASgOMjUuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW5kdXN0cnlWZXJ0aWNh",
+            "bEID4EEFEkkKDnNvbHV0aW9uX3R5cGVzGAUgAygOMjEuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU29sdXRpb25UeXBlEh4KEWRlZmF1",
+            "bHRfc2NoZW1hX2lkGAcgASgJQgPgQQMSWQoOY29udGVudF9jb25maWcYBiAB",
+            "KA4yPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5EYXRh",
+            "U3RvcmUuQ29udGVudENvbmZpZ0ID4EEFEjQKC2NyZWF0ZV90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEmEKGmRvY3VtZW50",
+            "X3Byb2Nlc3NpbmdfY29uZmlnGBsgASgLMj0uZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MWJldGEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnEkQK",
+            "D3N0YXJ0aW5nX3NjaGVtYRgcIAEoCzIrLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjFiZXRhLlNjaGVtYSJpCg1Db250ZW50Q29uZmlnEh4KGkNP",
+            "TlRFTlRfQ09ORklHX1VOU1BFQ0lGSUVEEAASDgoKTk9fQ09OVEVOVBABEhQK",
+            "EENPTlRFTlRfUkVRVUlSRUQQAhISCg5QVUJMSUNfV0VCU0lURRADOskB6kHF",
+            "AQooZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRI/",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFT",
+            "dG9yZXMve2RhdGFfc3RvcmV9Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFT",
+            "dG9yZXMve2RhdGFfc3RvcmV9QpUCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MWJldGFCDkRhdGFTdG9yZVByb3RvUAFaUWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zl",
+            "cnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lO",
+            "RaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29v",
+            "Z2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNs",
+            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore), global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore), global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig) }, null, null)
           }));
     }
     #endregion
@@ -107,6 +113,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       defaultSchemaId_ = other.defaultSchemaId_;
       contentConfig_ = other.contentConfig_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      documentProcessingConfig_ = other.documentProcessingConfig_ != null ? other.documentProcessingConfig_.Clone() : null;
+      startingSchema_ = other.startingSchema_ != null ? other.startingSchema_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -238,6 +246,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "document_processing_config" field.</summary>
+    public const int DocumentProcessingConfigFieldNumber = 27;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig documentProcessingConfig_;
+    /// <summary>
+    /// Configuration for Document understanding and enrichment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig DocumentProcessingConfig {
+      get { return documentProcessingConfig_; }
+      set {
+        documentProcessingConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "starting_schema" field.</summary>
+    public const int StartingSchemaFieldNumber = 28;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.Schema startingSchema_;
+    /// <summary>
+    /// The start schema to use for this
+    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore] when
+    /// provisioning it. If unset, a default vertical specialized schema will be
+    /// used.
+    ///
+    /// This field is only used by [CreateDataStore][] API, and will be ignored if
+    /// used in other APIs. This field will be omitted from all API responses
+    /// including [CreateDataStore][] API. To retrieve a schema of a
+    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore], use
+    /// [SchemaService.GetSchema][google.cloud.discoveryengine.v1beta.SchemaService.GetSchema]
+    /// API instead.
+    ///
+    /// The provided schema will be validated against certain rules on schema.
+    /// Learn more from [this
+    /// doc](https://cloud.google.com/generative-ai-app-builder/docs/provide-schema).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.Schema StartingSchema {
+      get { return startingSchema_; }
+      set {
+        startingSchema_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -260,6 +312,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DefaultSchemaId != other.DefaultSchemaId) return false;
       if (ContentConfig != other.ContentConfig) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(DocumentProcessingConfig, other.DocumentProcessingConfig)) return false;
+      if (!object.Equals(StartingSchema, other.StartingSchema)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -274,6 +328,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DefaultSchemaId.Length != 0) hash ^= DefaultSchemaId.GetHashCode();
       if (ContentConfig != global::Google.Cloud.DiscoveryEngine.V1Beta.DataStore.Types.ContentConfig.Unspecified) hash ^= ContentConfig.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (documentProcessingConfig_ != null) hash ^= DocumentProcessingConfig.GetHashCode();
+      if (startingSchema_ != null) hash ^= StartingSchema.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -317,6 +373,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (documentProcessingConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DocumentProcessingConfig);
+      }
+      if (startingSchema_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(StartingSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -352,6 +416,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(58);
         output.WriteString(DefaultSchemaId);
       }
+      if (documentProcessingConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(DocumentProcessingConfig);
+      }
+      if (startingSchema_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(StartingSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -380,6 +452,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (documentProcessingConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DocumentProcessingConfig);
+      }
+      if (startingSchema_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StartingSchema);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -414,6 +492,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.documentProcessingConfig_ != null) {
+        if (documentProcessingConfig_ == null) {
+          DocumentProcessingConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig();
+        }
+        DocumentProcessingConfig.MergeFrom(other.DocumentProcessingConfig);
+      }
+      if (other.startingSchema_ != null) {
+        if (startingSchema_ == null) {
+          StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1Beta.Schema();
+        }
+        StartingSchema.MergeFrom(other.StartingSchema);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -462,6 +552,20 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             DefaultSchemaId = input.ReadString();
             break;
           }
+          case 218: {
+            if (documentProcessingConfig_ == null) {
+              DocumentProcessingConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig();
+            }
+            input.ReadMessage(DocumentProcessingConfig);
+            break;
+          }
+          case 226: {
+            if (startingSchema_ == null) {
+              StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1Beta.Schema();
+            }
+            input.ReadMessage(StartingSchema);
+            break;
+          }
         }
       }
     #endif
@@ -507,6 +611,20 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 58: {
             DefaultSchemaId = input.ReadString();
+            break;
+          }
+          case 218: {
+            if (documentProcessingConfig_ == null) {
+              DocumentProcessingConfig = new global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig();
+            }
+            input.ReadMessage(DocumentProcessingConfig);
+            break;
+          }
+          case 226: {
+            if (startingSchema_ == null) {
+              StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1Beta.Schema();
+            }
+            input.ReadMessage(StartingSchema);
             break;
           }
         }

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Create client
             ServingConfigServiceClient servingConfigServiceClient = await ServingConfigServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
             // Make the request
             PagedAsyncEnumerable<ListServingConfigsResponse, ServingConfig> response = servingConfigServiceClient.ListServingConfigsAsync(parent);
 

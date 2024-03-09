@@ -16,15 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1beta_generated_SearchService_Search_sync]
+    // [START discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_sync_flattened_resourceNames2]
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1Beta;
-    using Google.Protobuf.WellKnownTypes;
     using System;
 
-    public sealed partial class GeneratedSearchServiceClientSnippets
+    public sealed partial class GeneratedServingConfigServiceClientSnippets
     {
-        /// <summary>Snippet for Search</summary>
+        /// <summary>Snippet for ListServingConfigs</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,57 +31,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void SearchRequestObject()
+        public void ListServingConfigsResourceNames2()
         {
             // Create client
-            SearchServiceClient searchServiceClient = SearchServiceClient.Create();
+            ServingConfigServiceClient servingConfigServiceClient = ServingConfigServiceClient.Create();
             // Initialize request argument(s)
-            SearchRequest request = new SearchRequest
-            {
-                ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
-                BranchAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                Query = "",
-                Offset = 0,
-                Filter = "",
-                OrderBy = "",
-                FacetSpecs =
-                {
-                    new SearchRequest.Types.FacetSpec(),
-                },
-                BoostSpec = new SearchRequest.Types.BoostSpec(),
-                Params = { { "", new Value() }, },
-                QueryExpansionSpec = new SearchRequest.Types.QueryExpansionSpec(),
-                SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
-                UserPseudoId = "",
-                ImageQuery = new SearchRequest.Types.ImageQuery(),
-                SafeSearch = false,
-                UserInfo = new UserInfo(),
-                UserLabels = { { "", "" }, },
-                EmbeddingSpec = new SearchRequest.Types.EmbeddingSpec(),
-                ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
-                RankingExpression = "",
-                CanonicalFilter = "",
-                DataStoreSpecs =
-                {
-                    new SearchRequest.Types.DataStoreSpec(),
-                },
-            };
+            DataStoreName parent = DataStoreName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
             // Make the request
-            PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
+            PagedEnumerable<ListServingConfigsResponse, ServingConfig> response = servingConfigServiceClient.ListServingConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (SearchResponse.Types.SearchResult item in response)
+            foreach (ServingConfig item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (SearchResponse page in response.AsRawResponses())
+            foreach (ListServingConfigsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (SearchResponse.Types.SearchResult item in page)
+                foreach (ServingConfig item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -91,10 +61,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<SearchResponse.Types.SearchResult> singlePage = response.ReadPage(pageSize);
+            Page<ServingConfig> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (SearchResponse.Types.SearchResult item in singlePage)
+            foreach (ServingConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -103,5 +73,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END discoveryengine_v1beta_generated_SearchService_Search_sync]
+    // [END discoveryengine_v1beta_generated_ServingConfigService_ListServingConfigs_sync_flattened_resourceNames2]
 }

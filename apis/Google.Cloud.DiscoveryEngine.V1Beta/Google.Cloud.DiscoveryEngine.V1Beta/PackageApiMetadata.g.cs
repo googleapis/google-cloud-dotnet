@@ -54,6 +54,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             yield return DataStoreReflection.Descriptor;
             yield return DataStoreServiceReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return DocumentProcessingConfigReflection.Descriptor;
             yield return DocumentServiceReflection.Descriptor;
             yield return EngineReflection.Descriptor;
             yield return EngineServiceReflection.Descriptor;
@@ -63,6 +64,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             yield return SchemaReflection.Descriptor;
             yield return SchemaServiceReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
+            yield return SearchTuningServiceReflection.Descriptor;
             yield return ServingConfigReflection.Descriptor;
             yield return ServingConfigServiceReflection.Descriptor;
             yield return SiteSearchEngineReflection.Descriptor;
