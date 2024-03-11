@@ -33,98 +33,126 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZWxpbmVfam9iLnByb3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90",
             "cmFpbmluZ19waXBlbGluZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29w",
             "ZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxog",
-            "Z29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8iqAEKHUNyZWF0ZVRy",
-            "YWluaW5nUGlwZWxpbmVSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEj",
-            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24STAoRdHJhaW5p",
-            "bmdfcGlwZWxpbmUYAiABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5UcmFpbmluZ1BpcGVsaW5lQgPgQQIiXgoaR2V0VHJhaW5pbmdQaXBlbGlu",
-            "ZVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEsCiphaXBsYXRmb3JtLmdv",
-            "b2dsZWFwaXMuY29tL1RyYWluaW5nUGlwZWxpbmUivwEKHExpc3RUcmFpbmlu",
-            "Z1BpcGVsaW5lc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxv",
-            "Y2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIOCgZmaWx0ZXIYAiAB",
-            "KAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSLQoJ",
-            "cmVhZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayKC",
-            "AQodTGlzdFRyYWluaW5nUGlwZWxpbmVzUmVzcG9uc2USSAoSdHJhaW5pbmdf",
-            "cGlwZWxpbmVzGAEgAygLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "VHJhaW5pbmdQaXBlbGluZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiYQod",
-            "RGVsZXRlVHJhaW5pbmdQaXBlbGluZVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy",
-            "4EEC+kEsCiphaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1RyYWluaW5nUGlw",
-            "ZWxpbmUiYQodQ2FuY2VsVHJhaW5pbmdQaXBlbGluZVJlcXVlc3QSQAoEbmFt",
-            "ZRgBIAEoCUIy4EEC+kEsCiphaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1Ry",
-            "YWluaW5nUGlwZWxpbmUisgEKGENyZWF0ZVBpcGVsaW5lSm9iUmVxdWVzdBI5",
-            "CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMu",
-            "Y29tL0xvY2F0aW9uEkIKDHBpcGVsaW5lX2pvYhgCIAEoCzInLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5lSm9iQgPgQQISFwoPcGlwZWxp",
-            "bmVfam9iX2lkGAMgASgJIlQKFUdldFBpcGVsaW5lSm9iUmVxdWVzdBI7CgRu",
-            "YW1lGAEgASgJQi3gQQL6QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
-            "UGlwZWxpbmVKb2IizAEKF0xpc3RQaXBlbGluZUpvYnNSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYXRpb24SDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAQgASgJEhAKCG9yZGVyX2J5GAYgASgJEi0KCXJlYWRf",
-            "bWFzaxgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sicwoYTGlz",
-            "dFBpcGVsaW5lSm9ic1Jlc3BvbnNlEj4KDXBpcGVsaW5lX2pvYnMYASADKAsy",
-            "Jy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZUpvYhIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiVwoYRGVsZXRlUGlwZWxpbmVKb2JSZXF1",
-            "ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwolYWlwbGF0Zm9ybS5nb29nbGVh",
-            "cGlzLmNvbS9QaXBlbGluZUpvYiJXChhDYW5jZWxQaXBlbGluZUpvYlJlcXVl",
-            "c3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29tL1BpcGVsaW5lSm9iMvwQCg9QaXBlbGluZVNlcnZpY2US7gEKFkNy",
-            "ZWF0ZVRyYWluaW5nUGlwZWxpbmUSOS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5DcmVhdGVUcmFpbmluZ1BpcGVsaW5lUmVxdWVzdBosLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlRyYWluaW5nUGlwZWxpbmUia9pBGHBhcmVu",
-            "dCx0cmFpbmluZ19waXBlbGluZYLT5JMCSiI1L3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vdHJhaW5pbmdQaXBlbGluZXM6EXRyYWluaW5n",
-            "X3BpcGVsaW5lEsEBChNHZXRUcmFpbmluZ1BpcGVsaW5lEjYuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuR2V0VHJhaW5pbmdQaXBlbGluZVJlcXVlc3Qa",
-            "LC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UcmFpbmluZ1BpcGVsaW5l",
-            "IkTaQQRuYW1lgtPkkwI3EjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfRLUAQoVTGlzdFRyYWluaW5nUGlw",
-            "ZWxpbmVzEjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlzdFRyYWlu",
-            "aW5nUGlwZWxpbmVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkxpc3RUcmFpbmluZ1BpcGVsaW5lc1Jlc3BvbnNlIkbaQQZwYXJlbnSC",
-            "0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3Ry",
-            "YWluaW5nUGlwZWxpbmVzEusBChZEZWxldGVUcmFpbmluZ1BpcGVsaW5lEjku",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlVHJhaW5pbmdQaXBl",
-            "bGluZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInfK",
-            "QTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3BlcmF0aW9uTWV0",
-            "YWRhdGHaQQRuYW1lgtPkkwI3KjUvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfRK7AQoWQ2FuY2VsVHJhaW5p",
-            "bmdQaXBlbGluZRI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNhbmNl",
-            "bFRyYWluaW5nUGlwZWxpbmVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5Ik7aQQRuYW1lgtPkkwJBIjwvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfTpjYW5jZWw6ASoS4AEKEUNy",
-            "ZWF0ZVBpcGVsaW5lSm9iEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "Q3JlYXRlUGlwZWxpbmVKb2JSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuUGlwZWxpbmVKb2IibNpBI3BhcmVudCxwaXBlbGluZV9qb2Is",
-            "cGlwZWxpbmVfam9iX2lkgtPkkwJAIjAvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qfS9waXBlbGluZUpvYnM6DHBpcGVsaW5lX2pvYhKtAQoO",
-            "R2V0UGlwZWxpbmVKb2ISMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5H",
-            "ZXRQaXBlbGluZUpvYlJlcXVlc3QaJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5QaXBlbGluZUpvYiI/2kEEbmFtZYLT5JMCMhIwL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovcGlwZWxpbmVKb2JzLyp9EsABChBMaXN0",
-            "UGlwZWxpbmVKb2JzEjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlz",
-            "dFBpcGVsaW5lSm9ic1JlcXVlc3QaNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5MaXN0UGlwZWxpbmVKb2JzUmVzcG9uc2UiQdpBBnBhcmVudILT5JMC",
-            "MhIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcGlwZWxp",
-            "bmVKb2JzEtwBChFEZWxldGVQaXBlbGluZUpvYhI0Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkRlbGV0ZVBpcGVsaW5lSm9iUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24icspBMAoVZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5EhdEZWxldGVPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjIq",
-            "MC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3BpcGVsaW5lSm9i",
-            "cy8qfRKsAQoRQ2FuY2VsUGlwZWxpbmVKb2ISNC5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5DYW5jZWxQaXBlbGluZUpvYlJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiSdpBBG5hbWWC0+STAjwiNy92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3BpcGVsaW5lSm9icy8qfTpjYW5jZWw6ASoa",
-            "TcpBGWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
-            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtIBCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFFBpcGVsaW5lU2VydmljZVByb3Rv",
-            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
-            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "Z29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8iegooQmF0Y2hDYW5j",
+            "ZWxQaXBlbGluZUpvYnNPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21l",
+            "dGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Vu",
+            "ZXJpY09wZXJhdGlvbk1ldGFkYXRhIqgBCh1DcmVhdGVUcmFpbmluZ1BpcGVs",
+            "aW5lUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
+            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEkwKEXRyYWluaW5nX3BpcGVsaW5l",
+            "GAIgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVHJhaW5pbmdQ",
+            "aXBlbGluZUID4EECIl4KGkdldFRyYWluaW5nUGlwZWxpbmVSZXF1ZXN0EkAK",
+            "BG5hbWUYASABKAlCMuBBAvpBLAoqYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
+            "bS9UcmFpbmluZ1BpcGVsaW5lIr8BChxMaXN0VHJhaW5pbmdQaXBlbGluZXNS",
+            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29v",
+            "Z2xlYXBpcy5jb20vTG9jYXRpb24SDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vf",
+            "c2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJEi0KCXJlYWRfbWFzaxgF",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siggEKHUxpc3RUcmFp",
+            "bmluZ1BpcGVsaW5lc1Jlc3BvbnNlEkgKEnRyYWluaW5nX3BpcGVsaW5lcxgB",
+            "IAMoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRyYWluaW5nUGlw",
+            "ZWxpbmUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJImEKHURlbGV0ZVRyYWlu",
+            "aW5nUGlwZWxpbmVSZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoqYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9UcmFpbmluZ1BpcGVsaW5lImEKHUNh",
+            "bmNlbFRyYWluaW5nUGlwZWxpbmVSZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBB",
+            "AvpBLAoqYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9UcmFpbmluZ1BpcGVs",
+            "aW5lIrIBChhDcmVhdGVQaXBlbGluZUpvYlJlcXVlc3QSOQoGcGFyZW50GAEg",
+            "ASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlv",
+            "bhJCCgxwaXBlbGluZV9qb2IYAiABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5QaXBlbGluZUpvYkID4EECEhcKD3BpcGVsaW5lX2pvYl9pZBgD",
+            "IAEoCSJUChVHZXRQaXBlbGluZUpvYlJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt",
+            "4EEC+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1BpcGVsaW5lSm9i",
+            "IswBChdMaXN0UGlwZWxpbmVKb2JzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEg4K",
+            "BmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tl",
+            "bhgEIAEoCRIQCghvcmRlcl9ieRgGIAEoCRItCglyZWFkX21hc2sYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrInMKGExpc3RQaXBlbGluZUpv",
+            "YnNSZXNwb25zZRI+Cg1waXBlbGluZV9qb2JzGAEgAygLMicuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuUGlwZWxpbmVKb2ISFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJIlcKGERlbGV0ZVBpcGVsaW5lSm9iUmVxdWVzdBI7CgRuYW1l",
+            "GAEgASgJQi3gQQL6QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUGlw",
+            "ZWxpbmVKb2IinQEKHkJhdGNoRGVsZXRlUGlwZWxpbmVKb2JzUmVxdWVzdBI9",
+            "CgZwYXJlbnQYASABKAlCLeBBAvpBJxIlYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
+            "LmNvbS9QaXBlbGluZUpvYhI8CgVuYW1lcxgCIAMoCUIt4EEC+kEnCiVhaXBs",
+            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL1BpcGVsaW5lSm9iImEKH0JhdGNoRGVs",
+            "ZXRlUGlwZWxpbmVKb2JzUmVzcG9uc2USPgoNcGlwZWxpbmVfam9icxgBIAMo",
+            "CzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5lSm9iIlcK",
+            "GENhbmNlbFBpcGVsaW5lSm9iUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6",
+            "QScKJWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUGlwZWxpbmVKb2IinQEK",
+            "HkJhdGNoQ2FuY2VsUGlwZWxpbmVKb2JzUmVxdWVzdBI9CgZwYXJlbnQYASAB",
+            "KAlCLeBBAvpBJxIlYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QaXBlbGlu",
+            "ZUpvYhI8CgVuYW1lcxgCIAMoCUIt4EEC+kEnCiVhaXBsYXRmb3JtLmdvb2ds",
+            "ZWFwaXMuY29tL1BpcGVsaW5lSm9iImEKH0JhdGNoQ2FuY2VsUGlwZWxpbmVK",
+            "b2JzUmVzcG9uc2USPgoNcGlwZWxpbmVfam9icxgBIAMoCzInLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlBpcGVsaW5lSm9iMqcVCg9QaXBlbGluZVNl",
+            "cnZpY2US7gEKFkNyZWF0ZVRyYWluaW5nUGlwZWxpbmUSOS5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5DcmVhdGVUcmFpbmluZ1BpcGVsaW5lUmVxdWVz",
+            "dBosLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRyYWluaW5nUGlwZWxp",
+            "bmUia9pBGHBhcmVudCx0cmFpbmluZ19waXBlbGluZYLT5JMCSiI1L3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdHJhaW5pbmdQaXBlbGlu",
+            "ZXM6EXRyYWluaW5nX3BpcGVsaW5lEsEBChNHZXRUcmFpbmluZ1BpcGVsaW5l",
+            "EjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0VHJhaW5pbmdQaXBl",
+            "bGluZVJlcXVlc3QaLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5UcmFp",
+            "bmluZ1BpcGVsaW5lIkTaQQRuYW1lgtPkkwI3EjUvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfRLUAQoVTGlz",
+            "dFRyYWluaW5nUGlwZWxpbmVzEjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuTGlzdFRyYWluaW5nUGlwZWxpbmVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLkxpc3RUcmFpbmluZ1BpcGVsaW5lc1Jlc3BvbnNl",
+            "IkbaQQZwYXJlbnSC0+STAjcSNS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L3RyYWluaW5nUGlwZWxpbmVzEusBChZEZWxldGVUcmFpbmlu",
+            "Z1BpcGVsaW5lEjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRl",
+            "VHJhaW5pbmdQaXBlbGluZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uInfKQTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRl",
+            "T3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwI3KjUvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfRK7AQoW",
+            "Q2FuY2VsVHJhaW5pbmdQaXBlbGluZRI5Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkNhbmNlbFRyYWluaW5nUGlwZWxpbmVSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Ik7aQQRuYW1lgtPkkwJBIjwvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi90cmFpbmluZ1BpcGVsaW5lcy8qfTpjYW5j",
+            "ZWw6ASoS4AEKEUNyZWF0ZVBpcGVsaW5lSm9iEjQuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuQ3JlYXRlUGlwZWxpbmVKb2JSZXF1ZXN0GicuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuUGlwZWxpbmVKb2IibNpBI3BhcmVudCxw",
+            "aXBlbGluZV9qb2IscGlwZWxpbmVfam9iX2lkgtPkkwJAIjAvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9waXBlbGluZUpvYnM6DHBpcGVs",
+            "aW5lX2pvYhKtAQoOR2V0UGlwZWxpbmVKb2ISMS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5HZXRQaXBlbGluZUpvYlJlcXVlc3QaJy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5QaXBlbGluZUpvYiI/2kEEbmFtZYLT5JMCMhIw",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGlwZWxpbmVKb2Jz",
+            "Lyp9EsABChBMaXN0UGlwZWxpbmVKb2JzEjMuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTGlzdFBpcGVsaW5lSm9ic1JlcXVlc3QaNC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5MaXN0UGlwZWxpbmVKb2JzUmVzcG9uc2UiQdpB",
+            "BnBhcmVudILT5JMCMhIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vcGlwZWxpbmVKb2JzEtwBChFEZWxldGVQaXBlbGluZUpvYhI0Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlbGV0ZVBpcGVsaW5lSm9iUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icspBMAoVZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5EhdEZWxldGVPcGVyYXRpb25NZXRhZGF0YdpB",
+            "BG5hbWWC0+STAjIqMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3BpcGVsaW5lSm9icy8qfRKKAgoXQmF0Y2hEZWxldGVQaXBlbGluZUpvYnMS",
+            "Oi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaERlbGV0ZVBpcGVs",
+            "aW5lSm9ic1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "IpMBykE6Ch9CYXRjaERlbGV0ZVBpcGVsaW5lSm9ic1Jlc3BvbnNlEhdEZWxl",
+            "dGVPcGVyYXRpb25NZXRhZGF0YdpBDHBhcmVudCxuYW1lc4LT5JMCQSI8L3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcGlwZWxpbmVKb2Jz",
+            "OmJhdGNoRGVsZXRlOgEqEqwBChFDYW5jZWxQaXBlbGluZUpvYhI0Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNhbmNlbFBpcGVsaW5lSm9iUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJ2kEEbmFtZYLT5JMCPCI3L3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcGlwZWxpbmVKb2JzLyp9",
+            "OmNhbmNlbDoBKhKbAgoXQmF0Y2hDYW5jZWxQaXBlbGluZUpvYnMSOi5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaENhbmNlbFBpcGVsaW5lSm9i",
+            "c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqQBykFL",
+            "Ch9CYXRjaENhbmNlbFBpcGVsaW5lSm9ic1Jlc3BvbnNlEihCYXRjaENhbmNl",
+            "bFBpcGVsaW5lSm9ic09wZXJhdGlvbk1ldGFkYXRh2kEMcGFyZW50LG5hbWVz",
+            "gtPkkwJBIjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9w",
+            "aXBlbGluZUpvYnM6YmF0Y2hDYW5jZWw6ASoaTcpBGWFpcGxhdGZvcm0uZ29v",
+            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLXBsYXRmb3JtQtIBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFCFFBpcGVsaW5lU2VydmljZVByb3RvUAFaPmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9y",
+            "bXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TrainingPipelineReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata), global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CreateTrainingPipelineRequest), global::Google.Cloud.AIPlatform.V1.CreateTrainingPipelineRequest.Parser, new[]{ "Parent", "TrainingPipeline" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetTrainingPipelineRequest), global::Google.Cloud.AIPlatform.V1.GetTrainingPipelineRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListTrainingPipelinesRequest), global::Google.Cloud.AIPlatform.V1.ListTrainingPipelinesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "ReadMask" }, null, null, null, null),
@@ -136,13 +164,223 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest), global::Google.Cloud.AIPlatform.V1.ListPipelineJobsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken", "OrderBy", "ReadMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse), global::Google.Cloud.AIPlatform.V1.ListPipelineJobsResponse.Parser, new[]{ "PipelineJobs", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest), global::Google.Cloud.AIPlatform.V1.DeletePipelineJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest), global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsRequest), global::Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsRequest.Parser, new[]{ "Parent", "Names" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse), global::Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse.Parser, new[]{ "PipelineJobs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest), global::Google.Cloud.AIPlatform.V1.CancelPipelineJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsRequest), global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsRequest.Parser, new[]{ "Parent", "Names" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse), global::Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse.Parser, new[]{ "PipelineJobs" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// Runtime operation information for
+  /// [PipelineService.BatchCancelPipelineJobs][google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCancelPipelineJobsOperationMetadata : pb::IMessage<BatchCancelPipelineJobsOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCancelPipelineJobsOperationMetadata> _parser = new pb::MessageParser<BatchCancelPipelineJobsOperationMetadata>(() => new BatchCancelPipelineJobsOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCancelPipelineJobsOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsOperationMetadata(BatchCancelPipelineJobsOperationMetadata other) : this() {
+      genericMetadata_ = other.genericMetadata_ != null ? other.genericMetadata_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsOperationMetadata Clone() {
+      return new BatchCancelPipelineJobsOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "generic_metadata" field.</summary>
+    public const int GenericMetadataFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata genericMetadata_;
+    /// <summary>
+    /// The common part of the operation metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata GenericMetadata {
+      get { return genericMetadata_; }
+      set {
+        genericMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCancelPipelineJobsOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCancelPipelineJobsOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GenericMetadata, other.GenericMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (genericMetadata_ != null) hash ^= GenericMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (genericMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GenericMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (genericMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GenericMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (genericMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenericMetadata);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCancelPipelineJobsOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.genericMetadata_ != null) {
+        if (genericMetadata_ == null) {
+          GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+        }
+        GenericMetadata.MergeFrom(other.GenericMetadata);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (genericMetadata_ == null) {
+              GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+            }
+            input.ReadMessage(GenericMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (genericMetadata_ == null) {
+              GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+            }
+            input.ReadMessage(GenericMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   /// <summary>
   /// Request message for
   /// [PipelineService.CreateTrainingPipeline][google.cloud.aiplatform.v1.PipelineService.CreateTrainingPipeline].
@@ -162,7 +400,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -409,7 +647,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -608,7 +846,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -999,7 +1237,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1228,7 +1466,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1427,7 +1665,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1626,7 +1864,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1918,7 +2156,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2117,7 +2355,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2574,7 +2812,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2803,7 +3041,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2985,6 +3223,422 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Request message for
+  /// [PipelineService.BatchDeletePipelineJobs][google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeletePipelineJobsRequest : pb::IMessage<BatchDeletePipelineJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeletePipelineJobsRequest> _parser = new pb::MessageParser<BatchDeletePipelineJobsRequest>(() => new BatchDeletePipelineJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeletePipelineJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsRequest(BatchDeletePipelineJobsRequest other) : this() {
+      parent_ = other.parent_;
+      names_ = other.names_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsRequest Clone() {
+      return new BatchDeletePipelineJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the PipelineJobs' parent resource.
+    /// Format: `projects/{project}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "names" field.</summary>
+    public const int NamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_names_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The names of the PipelineJobs to delete.
+    /// A maximum of 32 PipelineJobs can be deleted in a batch.
+    /// Format:
+    /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Names {
+      get { return names_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeletePipelineJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeletePipelineJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!names_.Equals(other.names_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= names_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(output, _repeated_names_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(ref output, _repeated_names_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += names_.CalculateSize(_repeated_names_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeletePipelineJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      names_.Add(other.names_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(input, _repeated_names_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(ref input, _repeated_names_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [PipelineService.BatchDeletePipelineJobs][google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeletePipelineJobsResponse : pb::IMessage<BatchDeletePipelineJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeletePipelineJobsResponse> _parser = new pb::MessageParser<BatchDeletePipelineJobsResponse>(() => new BatchDeletePipelineJobsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeletePipelineJobsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsResponse(BatchDeletePipelineJobsResponse other) : this() {
+      pipelineJobs_ = other.pipelineJobs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeletePipelineJobsResponse Clone() {
+      return new BatchDeletePipelineJobsResponse(this);
+    }
+
+    /// <summary>Field number for the "pipeline_jobs" field.</summary>
+    public const int PipelineJobsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.PipelineJob> _repeated_pipelineJobs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.PipelineJob.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob> pipelineJobs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob>();
+    /// <summary>
+    /// PipelineJobs deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob> PipelineJobs {
+      get { return pipelineJobs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeletePipelineJobsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeletePipelineJobsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!pipelineJobs_.Equals(other.pipelineJobs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= pipelineJobs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      pipelineJobs_.WriteTo(output, _repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      pipelineJobs_.WriteTo(ref output, _repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += pipelineJobs_.CalculateSize(_repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeletePipelineJobsResponse other) {
+      if (other == null) {
+        return;
+      }
+      pipelineJobs_.Add(other.pipelineJobs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            pipelineJobs_.AddEntriesFrom(input, _repeated_pipelineJobs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pipelineJobs_.AddEntriesFrom(ref input, _repeated_pipelineJobs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
   /// [PipelineService.CancelPipelineJob][google.cloud.aiplatform.v1.PipelineService.CancelPipelineJob].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3002,7 +3656,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3173,6 +3827,422 @@ namespace Google.Cloud.AIPlatform.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [PipelineService.BatchCancelPipelineJobs][google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCancelPipelineJobsRequest : pb::IMessage<BatchCancelPipelineJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCancelPipelineJobsRequest> _parser = new pb::MessageParser<BatchCancelPipelineJobsRequest>(() => new BatchCancelPipelineJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCancelPipelineJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsRequest(BatchCancelPipelineJobsRequest other) : this() {
+      parent_ = other.parent_;
+      names_ = other.names_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsRequest Clone() {
+      return new BatchCancelPipelineJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The name of the PipelineJobs' parent resource.
+    /// Format: `projects/{project}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "names" field.</summary>
+    public const int NamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_names_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The names of the PipelineJobs to cancel.
+    /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+    /// Format:
+    /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Names {
+      get { return names_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCancelPipelineJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCancelPipelineJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!names_.Equals(other.names_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= names_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(output, _repeated_names_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(ref output, _repeated_names_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += names_.CalculateSize(_repeated_names_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCancelPipelineJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      names_.Add(other.names_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(input, _repeated_names_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(ref input, _repeated_names_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [PipelineService.BatchCancelPipelineJobs][google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCancelPipelineJobsResponse : pb::IMessage<BatchCancelPipelineJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCancelPipelineJobsResponse> _parser = new pb::MessageParser<BatchCancelPipelineJobsResponse>(() => new BatchCancelPipelineJobsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCancelPipelineJobsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.PipelineServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsResponse(BatchCancelPipelineJobsResponse other) : this() {
+      pipelineJobs_ = other.pipelineJobs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCancelPipelineJobsResponse Clone() {
+      return new BatchCancelPipelineJobsResponse(this);
+    }
+
+    /// <summary>Field number for the "pipeline_jobs" field.</summary>
+    public const int PipelineJobsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.PipelineJob> _repeated_pipelineJobs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1.PipelineJob.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob> pipelineJobs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob>();
+    /// <summary>
+    /// PipelineJobs cancelled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineJob> PipelineJobs {
+      get { return pipelineJobs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCancelPipelineJobsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCancelPipelineJobsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!pipelineJobs_.Equals(other.pipelineJobs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= pipelineJobs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      pipelineJobs_.WriteTo(output, _repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      pipelineJobs_.WriteTo(ref output, _repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += pipelineJobs_.CalculateSize(_repeated_pipelineJobs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCancelPipelineJobsResponse other) {
+      if (other == null) {
+        return;
+      }
+      pipelineJobs_.Add(other.pipelineJobs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            pipelineJobs_.AddEntriesFrom(input, _repeated_pipelineJobs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pipelineJobs_.AddEntriesFrom(ref input, _repeated_pipelineJobs_codec);
             break;
           }
         }

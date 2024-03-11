@@ -1398,12 +1398,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///     * `labels.key=value` - key:value equality
     ///     * `labels.key:* or labels:key - key existence
     ///     * A key including a space must be quoted. `labels."a key"`.
+    ///   * `base_model_name` only supports =
     ///
     /// Some examples:
     ///
     ///   * `model=1234`
     ///   * `displayName="myDisplayName"`
     ///   * `labels.myKey="myValue"`
+    ///   * `baseModelName="text-bison"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -1285,6 +1285,18 @@
         "grpc": {
           "libraryClient": "PipelineServiceClient",
           "rpcs": {
+            "BatchCancelPipelineJobs": {
+              "methods": [
+                "BatchCancelPipelineJobs",
+                "BatchCancelPipelineJobsAsync"
+              ]
+            },
+            "BatchDeletePipelineJobs": {
+              "methods": [
+                "BatchDeletePipelineJobs",
+                "BatchDeletePipelineJobsAsync"
+              ]
+            },
             "CancelPipelineJob": {
               "methods": [
                 "CancelPipelineJob",

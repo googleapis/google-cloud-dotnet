@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.AIPlatform.V1;
 
@@ -128,6 +129,26 @@ namespace Google.Cloud.AIPlatform.V1
         }
     }
 
+    public partial class BatchDeletePipelineJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PipelineJobName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PipelineJobName> PipelineJobNames
+        {
+            get => new gax::ResourceNameList<PipelineJobName>(Names, s => string.IsNullOrEmpty(s) ? null : PipelineJobName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class CancelPipelineJobRequest
     {
         /// <summary>
@@ -137,6 +158,26 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::PipelineJobName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCancelPipelineJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PipelineJobName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<PipelineJobName> PipelineJobNames
+        {
+            get => new gax::ResourceNameList<PipelineJobName>(Names, s => string.IsNullOrEmpty(s) ? null : PipelineJobName.Parse(s, allowUnparsed: true));
         }
     }
 }

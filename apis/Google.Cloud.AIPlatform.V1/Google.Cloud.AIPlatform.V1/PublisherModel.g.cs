@@ -720,19 +720,26 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// </summary>
         [pbr::OriginalName("LAUNCH_STAGE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Used to indicate the PublisherModel is at Experimental launch stage.
+        /// Used to indicate the PublisherModel is at Experimental launch stage,
+        /// available to a small set of customers.
         /// </summary>
         [pbr::OriginalName("EXPERIMENTAL")] Experimental = 1,
         /// <summary>
-        /// Used to indicate the PublisherModel is at Private Preview launch stage.
+        /// Used to indicate the PublisherModel is at Private Preview launch stage,
+        /// only available to a small set of customers, although a larger set of
+        /// customers than an Experimental launch. Previews are the first launch
+        /// stage used to get feedback from customers.
         /// </summary>
         [pbr::OriginalName("PRIVATE_PREVIEW")] PrivatePreview = 2,
         /// <summary>
-        /// Used to indicate the PublisherModel is at Public Preview launch stage.
+        /// Used to indicate the PublisherModel is at Public Preview launch stage,
+        /// available to all customers, although not supported for production
+        /// workloads.
         /// </summary>
         [pbr::OriginalName("PUBLIC_PREVIEW")] PublicPreview = 3,
         /// <summary>
-        /// Used to indicate the PublisherModel is at GA launch stage.
+        /// Used to indicate the PublisherModel is at GA launch stage, available to
+        /// all customers and ready for production workload.
         /// </summary>
         [pbr::OriginalName("GA")] Ga = 4,
       }

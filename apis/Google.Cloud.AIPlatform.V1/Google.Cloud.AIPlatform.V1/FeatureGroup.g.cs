@@ -635,8 +635,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> entityIdColumns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. Columns to construct entity_id / row keys. Currently only
-        /// supports 1 entity_id_column. If not provided defaults to `entity_id`.
+        /// Optional. Columns to construct entity_id / row keys.
+        /// If not provided defaults to `entity_id`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
