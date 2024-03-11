@@ -83,6 +83,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// </summary>
         public bool CollectProposalsEagerly { get; set; }
 
+        /// <summary>
+        /// When specified, all APIs whose last release was before the specified date (yyyy-MM-dd format)
+        /// are released. APIs which haven't been released at all not released.
+        /// </summary>
+        public string LastReleaseBefore { get; set; }
+
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
             if (KnownCommits is object)
@@ -96,6 +102,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             if (ReleaseAll is object)
             {
                 yield return ReleaseAll;
+            }
+            if (LastReleaseBefore != null)
+            {
+                yield return new LastReleaseBeforeCriterion(LastReleaseBefore);
             }
         }
     }
