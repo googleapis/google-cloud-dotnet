@@ -65,10 +65,10 @@ public class ProtobufSnippets
         // In normal code you'd populate these individual requests with more
         // information.
         List<AnnotateImageRequest> requests = new List<AnnotateImageRequest>
-            {
-                new AnnotateImageRequest(),
-                new AnnotateImageRequest()
-            };
+        {
+            new AnnotateImageRequest(),
+            new AnnotateImageRequest()
+        };
 
         // Create the batch request using an object initializer
         BatchAnnotateImagesRequest batch = new BatchAnnotateImagesRequest
@@ -87,10 +87,10 @@ public class ProtobufSnippets
         HttpTarget target = new HttpTarget
         {
             Headers =
-                {
-                    {  "X-Custom-Header1", "Value1" },
-                    {  "X-Custom-Header2", "Value2" },
-                }
+            {
+                {  "X-Custom-Header1", "Value1" },
+                {  "X-Custom-Header2", "Value2" },
+            }
         };
         // End sample
     }
@@ -102,10 +102,10 @@ public class ProtobufSnippets
         HttpTarget target = new HttpTarget
         {
             Headers =
-                {
-                    ["X-Custom-Header1"] = "Value1",
-                    ["X-Custom-Header2"] = "Value2",
-                }
+            {
+                ["X-Custom-Header1"] = "Value1",
+                ["X-Custom-Header2"] = "Value2",
+            }
         };
         // End sample
     }
