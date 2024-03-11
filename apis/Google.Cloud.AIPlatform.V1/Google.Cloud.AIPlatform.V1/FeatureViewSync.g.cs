@@ -29,24 +29,27 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2ds",
             "ZS9ycGMvc3RhdHVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byL9AgoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
+            "byKSBAoPRmVhdHVyZVZpZXdTeW5jEhEKBG5hbWUYASABKAlCA+BBCBI0Cgtj",
             "cmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxIsCghydW5fdGltZRgFIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFs",
             "QgPgQQMSLQoMZmluYWxfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
-            "dXNCA+BBAzrDAepBvwEKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVh",
-            "dHVyZVZpZXdTeW5jEpEBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2ZlYXR1cmVPbmxpbmVTdG9yZXMve2ZlYXR1cmVfb25saW5l",
-            "X3N0b3JlfS9mZWF0dXJlVmlld3Mve2ZlYXR1cmVfdmlld30vZmVhdHVyZVZp",
-            "ZXdTeW5jcy9mZWF0dXJlX3ZpZXdfc3luY0LSAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxQhRGZWF0dXJlVmlld1N5bmNQcm90b1ABWj5jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
-            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
-            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
-            "aXBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "dXNCA+BBAxJSCgxzeW5jX3N1bW1hcnkYBiABKAsyNy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlld1N5bmMuU3luY1N1bW1hcnlCA+BB",
+            "Axo/CgtTeW5jU3VtbWFyeRIXCgpyb3dfc3luY2VkGAEgASgDQgPgQQMSFwoK",
+            "dG90YWxfc2xvdBgCIAEoA0ID4EEDOsMB6kG/AQopYWlwbGF0Zm9ybS5nb29n",
+            "bGVhcGlzLmNvbS9GZWF0dXJlVmlld1N5bmMSkQFwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97",
+            "ZmVhdHVyZV9vbmxpbmVfc3RvcmV9L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92",
+            "aWV3fS9mZWF0dXJlVmlld1N5bmNzL2ZlYXR1cmVfdmlld19zeW5jQtIBCh5j",
+            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFEZlYXR1cmVWaWV3U3lu",
+            "Y1Byb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkFpcGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Parser, new[]{ "Name", "CreateTime", "RunTime", "FinalStatus", "SyncSummary" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary), global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary.Parser, new[]{ "RowSynced", "TotalSlot" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -96,6 +99,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       runTime_ = other.runTime_ != null ? other.runTime_.Clone() : null;
       finalStatus_ = other.finalStatus_ != null ? other.finalStatus_.Clone() : null;
+      syncSummary_ = other.syncSummary_ != null ? other.syncSummary_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -168,6 +172,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "sync_summary" field.</summary>
+    public const int SyncSummaryFieldNumber = 6;
+    private global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary syncSummary_;
+    /// <summary>
+    /// Output only. Summary of the sync job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary SyncSummary {
+      get { return syncSummary_; }
+      set {
+        syncSummary_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -187,6 +206,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(RunTime, other.RunTime)) return false;
       if (!object.Equals(FinalStatus, other.FinalStatus)) return false;
+      if (!object.Equals(SyncSummary, other.SyncSummary)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -198,6 +218,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (runTime_ != null) hash ^= RunTime.GetHashCode();
       if (finalStatus_ != null) hash ^= FinalStatus.GetHashCode();
+      if (syncSummary_ != null) hash ^= SyncSummary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -232,6 +253,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(RunTime);
       }
+      if (syncSummary_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SyncSummary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -258,6 +283,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(RunTime);
       }
+      if (syncSummary_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SyncSummary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -279,6 +308,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (finalStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinalStatus);
+      }
+      if (syncSummary_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SyncSummary);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -312,6 +344,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           FinalStatus = new global::Google.Rpc.Status();
         }
         FinalStatus.MergeFrom(other.FinalStatus);
+      }
+      if (other.syncSummary_ != null) {
+        if (syncSummary_ == null) {
+          SyncSummary = new global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary();
+        }
+        SyncSummary.MergeFrom(other.SyncSummary);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -351,6 +389,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               RunTime = new global::Google.Type.Interval();
             }
             input.ReadMessage(RunTime);
+            break;
+          }
+          case 50: {
+            if (syncSummary_ == null) {
+              SyncSummary = new global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary();
+            }
+            input.ReadMessage(SyncSummary);
             break;
           }
         }
@@ -393,10 +438,262 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(RunTime);
             break;
           }
+          case 50: {
+            if (syncSummary_ == null) {
+              SyncSummary = new global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Types.SyncSummary();
+            }
+            input.ReadMessage(SyncSummary);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FeatureViewSync message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Summary from the Sync job. For continuous syncs, the summary is updated
+      /// periodically. For batch syncs, it gets updated on completion of the sync.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SyncSummary : pb::IMessage<SyncSummary>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SyncSummary> _parser = new pb::MessageParser<SyncSummary>(() => new SyncSummary());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SyncSummary> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureViewSync.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SyncSummary() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SyncSummary(SyncSummary other) : this() {
+          rowSynced_ = other.rowSynced_;
+          totalSlot_ = other.totalSlot_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SyncSummary Clone() {
+          return new SyncSummary(this);
+        }
+
+        /// <summary>Field number for the "row_synced" field.</summary>
+        public const int RowSyncedFieldNumber = 1;
+        private long rowSynced_;
+        /// <summary>
+        /// Output only. Total number of rows synced.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long RowSynced {
+          get { return rowSynced_; }
+          set {
+            rowSynced_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "total_slot" field.</summary>
+        public const int TotalSlotFieldNumber = 2;
+        private long totalSlot_;
+        /// <summary>
+        /// Output only. BigQuery slot milliseconds consumed for the sync job.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long TotalSlot {
+          get { return totalSlot_; }
+          set {
+            totalSlot_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SyncSummary);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SyncSummary other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RowSynced != other.RowSynced) return false;
+          if (TotalSlot != other.TotalSlot) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RowSynced != 0L) hash ^= RowSynced.GetHashCode();
+          if (TotalSlot != 0L) hash ^= TotalSlot.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RowSynced != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RowSynced);
+          }
+          if (TotalSlot != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(TotalSlot);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RowSynced != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(RowSynced);
+          }
+          if (TotalSlot != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(TotalSlot);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RowSynced != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowSynced);
+          }
+          if (TotalSlot != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalSlot);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SyncSummary other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RowSynced != 0L) {
+            RowSynced = other.RowSynced;
+          }
+          if (other.TotalSlot != 0L) {
+            TotalSlot = other.TotalSlot;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RowSynced = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                TotalSlot = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RowSynced = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                TotalSlot = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

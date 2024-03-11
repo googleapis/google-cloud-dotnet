@@ -61,7 +61,11 @@ namespace Google.Cloud.AIPlatform.V1
             ListPipelineJobsSettings = existing.ListPipelineJobsSettings;
             DeletePipelineJobSettings = existing.DeletePipelineJobSettings;
             DeletePipelineJobOperationsSettings = existing.DeletePipelineJobOperationsSettings.Clone();
+            BatchDeletePipelineJobsSettings = existing.BatchDeletePipelineJobsSettings;
+            BatchDeletePipelineJobsOperationsSettings = existing.BatchDeletePipelineJobsOperationsSettings.Clone();
             CancelPipelineJobSettings = existing.CancelPipelineJobSettings;
+            BatchCancelPipelineJobsSettings = existing.BatchCancelPipelineJobsSettings;
+            BatchCancelPipelineJobsOperationsSettings = existing.BatchCancelPipelineJobsOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -219,6 +223,37 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.BatchDeletePipelineJobs</c> and
+        /// <c>PipelineServiceClient.BatchDeletePipelineJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeletePipelineJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PipelineServiceClient.BatchDeletePipelineJobs</c> and
+        /// <c>PipelineServiceClient.BatchDeletePipelineJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchDeletePipelineJobsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>PipelineServiceClient.CancelPipelineJob</c> and <c>PipelineServiceClient.CancelPipelineJobAsync</c>.
         /// </summary>
         /// <remarks>
@@ -228,6 +263,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CancelPipelineJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PipelineServiceClient.BatchCancelPipelineJobs</c> and
+        /// <c>PipelineServiceClient.BatchCancelPipelineJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCancelPipelineJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PipelineServiceClient.BatchCancelPipelineJobs</c> and
+        /// <c>PipelineServiceClient.BatchCancelPipelineJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCancelPipelineJobsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1708,6 +1774,214 @@ namespace Google.Cloud.AIPlatform.V1
             DeletePipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> BatchDeletePipelineJobs(BatchDeletePipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(BatchDeletePipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(BatchDeletePipelineJobsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeletePipelineJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchDeletePipelineJobs</c>.</summary>
+        public virtual lro::OperationsClient BatchDeletePipelineJobsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeletePipelineJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> PollOnceBatchDeletePipelineJobs(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeletePipelineJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchDeletePipelineJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> PollOnceBatchDeletePipelineJobsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchDeletePipelineJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> BatchDeletePipelineJobs(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeletePipelineJobs(new BatchDeletePipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeletePipelineJobsAsync(new BatchDeletePipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeletePipelineJobsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> BatchDeletePipelineJobs(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeletePipelineJobs(new BatchDeletePipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJobNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeletePipelineJobsAsync(new BatchDeletePipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJobNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to delete.
+        /// A maximum of 32 PipelineJobs can be deleted in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, st::CancellationToken cancellationToken) =>
+            BatchDeletePipelineJobsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
         /// makes a best effort to cancel the pipeline, but success is not
@@ -1931,6 +2205,250 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelPipelineJobAsync(PipelineJobName name, st::CancellationToken cancellationToken) =>
             CancelPipelineJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> BatchCancelPipelineJobs(BatchCancelPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(BatchCancelPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(BatchCancelPipelineJobsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCancelPipelineJobsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BatchCancelPipelineJobs</c>.</summary>
+        public virtual lro::OperationsClient BatchCancelPipelineJobsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCancelPipelineJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> PollOnceBatchCancelPipelineJobs(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCancelPipelineJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BatchCancelPipelineJobs</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> PollOnceBatchCancelPipelineJobsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchCancelPipelineJobsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> BatchCancelPipelineJobs(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCancelPipelineJobs(new BatchCancelPipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCancelPipelineJobsAsync(new BatchCancelPipelineJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchCancelPipelineJobsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> BatchCancelPipelineJobs(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCancelPipelineJobs(new BatchCancelPipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJobNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCancelPipelineJobsAsync(new BatchCancelPipelineJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PipelineJobNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the PipelineJobs' parent resource.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The names of the PipelineJobs to cancel.
+        /// A maximum of 32 PipelineJobs can be cancelled in a batch.
+        /// Format:
+        /// `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(gagr::LocationName parent, scg::IEnumerable<PipelineJobName> names, st::CancellationToken cancellationToken) =>
+            BatchCancelPipelineJobsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PipelineService client wrapper implementation, for convenient use.</summary>
@@ -1959,7 +2477,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<DeletePipelineJobRequest, lro::Operation> _callDeletePipelineJob;
 
+        private readonly gaxgrpc::ApiCall<BatchDeletePipelineJobsRequest, lro::Operation> _callBatchDeletePipelineJobs;
+
         private readonly gaxgrpc::ApiCall<CancelPipelineJobRequest, wkt::Empty> _callCancelPipelineJob;
+
+        private readonly gaxgrpc::ApiCall<BatchCancelPipelineJobsRequest, lro::Operation> _callBatchCancelPipelineJobs;
 
         /// <summary>
         /// Constructs a client wrapper for the PipelineService service, with the specified gRPC client and settings.
@@ -1974,6 +2496,8 @@ namespace Google.Cloud.AIPlatform.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
             DeleteTrainingPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTrainingPipelineOperationsSettings, logger);
             DeletePipelineJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePipelineJobOperationsSettings, logger);
+            BatchDeletePipelineJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeletePipelineJobsOperationsSettings, logger);
+            BatchCancelPipelineJobsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCancelPipelineJobsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTrainingPipeline = clientHelper.BuildApiCall<CreateTrainingPipelineRequest, TrainingPipeline>("CreateTrainingPipeline", grpcClient.CreateTrainingPipelineAsync, grpcClient.CreateTrainingPipeline, effectiveSettings.CreateTrainingPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2003,9 +2527,15 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeletePipelineJob = clientHelper.BuildApiCall<DeletePipelineJobRequest, lro::Operation>("DeletePipelineJob", grpcClient.DeletePipelineJobAsync, grpcClient.DeletePipelineJob, effectiveSettings.DeletePipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePipelineJob);
             Modify_DeletePipelineJobApiCall(ref _callDeletePipelineJob);
+            _callBatchDeletePipelineJobs = clientHelper.BuildApiCall<BatchDeletePipelineJobsRequest, lro::Operation>("BatchDeletePipelineJobs", grpcClient.BatchDeletePipelineJobsAsync, grpcClient.BatchDeletePipelineJobs, effectiveSettings.BatchDeletePipelineJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeletePipelineJobs);
+            Modify_BatchDeletePipelineJobsApiCall(ref _callBatchDeletePipelineJobs);
             _callCancelPipelineJob = clientHelper.BuildApiCall<CancelPipelineJobRequest, wkt::Empty>("CancelPipelineJob", grpcClient.CancelPipelineJobAsync, grpcClient.CancelPipelineJob, effectiveSettings.CancelPipelineJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelPipelineJob);
             Modify_CancelPipelineJobApiCall(ref _callCancelPipelineJob);
+            _callBatchCancelPipelineJobs = clientHelper.BuildApiCall<BatchCancelPipelineJobsRequest, lro::Operation>("BatchCancelPipelineJobs", grpcClient.BatchCancelPipelineJobsAsync, grpcClient.BatchCancelPipelineJobs, effectiveSettings.BatchCancelPipelineJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCancelPipelineJobs);
+            Modify_BatchCancelPipelineJobsApiCall(ref _callBatchCancelPipelineJobs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2029,7 +2559,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_DeletePipelineJobApiCall(ref gaxgrpc::ApiCall<DeletePipelineJobRequest, lro::Operation> call);
 
+        partial void Modify_BatchDeletePipelineJobsApiCall(ref gaxgrpc::ApiCall<BatchDeletePipelineJobsRequest, lro::Operation> call);
+
         partial void Modify_CancelPipelineJobApiCall(ref gaxgrpc::ApiCall<CancelPipelineJobRequest, wkt::Empty> call);
+
+        partial void Modify_BatchCancelPipelineJobsApiCall(ref gaxgrpc::ApiCall<BatchCancelPipelineJobsRequest, lro::Operation> call);
 
         partial void OnConstruction(PipelineService.PipelineServiceClient grpcClient, PipelineServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2060,7 +2594,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_DeletePipelineJobRequest(ref DeletePipelineJobRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BatchDeletePipelineJobsRequest(ref BatchDeletePipelineJobsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CancelPipelineJobRequest(ref CancelPipelineJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCancelPipelineJobsRequest(ref BatchCancelPipelineJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a TrainingPipeline. A created TrainingPipeline right away will be
@@ -2312,6 +2850,37 @@ namespace Google.Cloud.AIPlatform.V1
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeletePipelineJob.Async(request, callSettings).ConfigureAwait(false), DeletePipelineJobOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>BatchDeletePipelineJobs</c>.</summary>
+        public override lro::OperationsClient BatchDeletePipelineJobsOperationsClient { get; }
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata> BatchDeletePipelineJobs(BatchDeletePipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeletePipelineJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>(_callBatchDeletePipelineJobs.Sync(request, callSettings), BatchDeletePipelineJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch deletes PipelineJobs
+        /// The Operation is atomic. If it fails, none of the PipelineJobs are deleted.
+        /// If it succeeds, all of the PipelineJobs are deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>> BatchDeletePipelineJobsAsync(BatchDeletePipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeletePipelineJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchDeletePipelineJobsResponse, DeleteOperationMetadata>(await _callBatchDeletePipelineJobs.Async(request, callSettings).ConfigureAwait(false), BatchDeletePipelineJobsOperationsClient);
+        }
+
         /// <summary>
         /// Cancels a PipelineJob.
         /// Starts asynchronous cancellation on the PipelineJob. The server
@@ -2358,6 +2927,45 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_CancelPipelineJobRequest(ref request, ref callSettings);
             return _callCancelPipelineJob.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BatchCancelPipelineJobs</c>.</summary>
+        public override lro::OperationsClient BatchCancelPipelineJobsOperationsClient { get; }
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata> BatchCancelPipelineJobs(BatchCancelPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCancelPipelineJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>(_callBatchCancelPipelineJobs.Sync(request, callSettings), BatchCancelPipelineJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// Batch cancel PipelineJobs.
+        /// Firstly the server will check if all the jobs are in non-terminal states,
+        /// and skip the jobs that are already terminated.
+        /// If the operation failed, none of the pipeline jobs are cancelled.
+        /// The server will poll the states of all the pipeline jobs periodically
+        /// to check the cancellation status.
+        /// This operation will return an LRO.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>> BatchCancelPipelineJobsAsync(BatchCancelPipelineJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCancelPipelineJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<BatchCancelPipelineJobsResponse, BatchCancelPipelineJobsOperationMetadata>(await _callBatchCancelPipelineJobs.Async(request, callSettings).ConfigureAwait(false), BatchCancelPipelineJobsOperationsClient);
         }
     }
 

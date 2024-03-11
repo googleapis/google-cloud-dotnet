@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX3ZpZXcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvUHCgtGZWF0dXJl",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqoICgtGZWF0dXJl",
             "VmlldxJXChBiaWdfcXVlcnlfc291cmNlGAYgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuQmlnUXVlcnlTb3VyY2VCA+BB",
             "AUgAEmUKF2ZlYXR1cmVfcmVnaXN0cnlfc291cmNlGAkgASgLMj0uZ29vZ2xl",
@@ -41,27 +41,28 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5TeW5jQ29uZmlnGkIKDkJp",
             "Z1F1ZXJ5U291cmNlEhAKA3VyaRgBIAEoCUID4EECEh4KEWVudGl0eV9pZF9j",
             "b2x1bW5zGAIgAygJQgPgQQIaGgoKU3luY0NvbmZpZxIMCgRjcm9uGAEgASgJ",
-            "GskBChVGZWF0dXJlUmVnaXN0cnlTb3VyY2USZwoOZmVhdHVyZV9ncm91cHMY",
+            "Gv4BChVGZWF0dXJlUmVnaXN0cnlTb3VyY2USZwoOZmVhdHVyZV9ncm91cHMY",
             "ASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmll",
-            "dy5GZWF0dXJlUmVnaXN0cnlTb3VyY2UuRmVhdHVyZUdyb3VwQgPgQQIaRwoM",
-            "RmVhdHVyZUdyb3VwEh0KEGZlYXR1cmVfZ3JvdXBfaWQYASABKAlCA+BBAhIY",
-            "CgtmZWF0dXJlX2lkcxgCIAMoCUID4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6mwHqQZcBCiVhaXBsYXRmb3Jt",
-            "Lmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVWaWV3Em5wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97",
-            "ZmVhdHVyZV9vbmxpbmVfc3RvcmV9L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92",
-            "aWV3fUIICgZzb3VyY2VCzgEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MUIQRmVhdHVyZVZpZXdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dv",
-            "L2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoC",
-            "Gkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJ",
-            "UGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIG",
-            "cHJvdG8z"));
+            "dy5GZWF0dXJlUmVnaXN0cnlTb3VyY2UuRmVhdHVyZUdyb3VwQgPgQQISIAoO",
+            "cHJvamVjdF9udW1iZXIYAiABKANCA+BBAUgAiAEBGkcKDEZlYXR1cmVHcm91",
+            "cBIdChBmZWF0dXJlX2dyb3VwX2lkGAEgASgJQgPgQQISGAoLZmVhdHVyZV9p",
+            "ZHMYAiADKAlCA+BBAkIRCg9fcHJvamVjdF9udW1iZXIaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqbAepBlwEKJWFp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZVZpZXcSbnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlT25saW5l",
+            "U3RvcmVzL3tmZWF0dXJlX29ubGluZV9zdG9yZX0vZmVhdHVyZVZpZXdzL3tm",
+            "ZWF0dXJlX3ZpZXd9QggKBnNvdXJjZULOAQoeY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxQhBGZWF0dXJlVmlld1Byb3RvUAFaPmNsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
+            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
+            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
+            "cm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig.Parser, new[]{ "Cron" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Parser, new[]{ "FeatureGroups" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup.Parser, new[]{ "FeatureGroupId", "FeatureIds" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Parser, new[]{ "FeatureGroups", "ProjectNumber" }, new[]{ "ProjectNumber" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup.Parser, new[]{ "FeatureGroupId", "FeatureIds" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -708,8 +709,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> entityIdColumns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Required. Columns to construct entity_id / row keys. Start by supporting
-        /// 1 only.
+        /// Required. Columns to construct entity_id / row keys.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1077,6 +1077,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         private static readonly pb::MessageParser<FeatureRegistrySource> _parser = new pb::MessageParser<FeatureRegistrySource>(() => new FeatureRegistrySource());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FeatureRegistrySource> Parser { get { return _parser; } }
@@ -1104,7 +1105,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FeatureRegistrySource(FeatureRegistrySource other) : this() {
+          _hasBits0 = other._hasBits0;
           featureGroups_ = other.featureGroups_.Clone();
+          projectNumber_ = other.projectNumber_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1128,6 +1131,36 @@ namespace Google.Cloud.AIPlatform.V1 {
           get { return featureGroups_; }
         }
 
+        /// <summary>Field number for the "project_number" field.</summary>
+        public const int ProjectNumberFieldNumber = 2;
+        private readonly static long ProjectNumberDefaultValue = 0L;
+
+        private long projectNumber_;
+        /// <summary>
+        /// Optional. The project number of the parent project of the Feature Groups.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ProjectNumber {
+          get { if ((_hasBits0 & 1) != 0) { return projectNumber_; } else { return ProjectNumberDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            projectNumber_ = value;
+          }
+        }
+        /// <summary>Gets whether the "project_number" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasProjectNumber {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "project_number" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearProjectNumber() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1144,6 +1177,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             return true;
           }
           if(!featureGroups_.Equals(other.featureGroups_)) return false;
+          if (ProjectNumber != other.ProjectNumber) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1152,6 +1186,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= featureGroups_.GetHashCode();
+          if (HasProjectNumber) hash ^= ProjectNumber.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1171,6 +1206,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           output.WriteRawMessage(this);
         #else
           featureGroups_.WriteTo(output, _repeated_featureGroups_codec);
+          if (HasProjectNumber) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ProjectNumber);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1182,6 +1221,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           featureGroups_.WriteTo(ref output, _repeated_featureGroups_codec);
+          if (HasProjectNumber) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ProjectNumber);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1193,6 +1236,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         public int CalculateSize() {
           int size = 0;
           size += featureGroups_.CalculateSize(_repeated_featureGroups_codec);
+          if (HasProjectNumber) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProjectNumber);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1206,6 +1252,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             return;
           }
           featureGroups_.Add(other.featureGroups_);
+          if (other.HasProjectNumber) {
+            ProjectNumber = other.ProjectNumber;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1225,6 +1274,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 featureGroups_.AddEntriesFrom(input, _repeated_featureGroups_codec);
                 break;
               }
+              case 16: {
+                ProjectNumber = input.ReadInt64();
+                break;
+              }
             }
           }
         #endif
@@ -1242,6 +1295,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 break;
               case 10: {
                 featureGroups_.AddEntriesFrom(ref input, _repeated_featureGroups_codec);
+                break;
+              }
+              case 16: {
+                ProjectNumber = input.ReadInt64();
                 break;
               }
             }

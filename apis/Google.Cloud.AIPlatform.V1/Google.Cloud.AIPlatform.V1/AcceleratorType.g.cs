@@ -25,18 +25,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hY2NlbGVyYXRvcl90eXBl",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqFAgoPQWNjZWxl",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqbAgoPQWNjZWxl",
             "cmF0b3JUeXBlEiAKHEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIU",
             "ChBOVklESUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIV",
             "ChFOVklESUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMK",
             "D05WSURJQV9URVNMQV9UNBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAgSFAoQ",
-            "TlZJRElBX0ExMDBfODBHQhAJEg0KCU5WSURJQV9MNBALEgoKBlRQVV9WMhAG",
-            "EgoKBlRQVV9WMxAHEg4KClRQVV9WNF9QT0QQCkLSAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQhRBY2NlbGVyYXRvclR5cGVQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "TlZJRElBX0ExMDBfODBHQhAJEg0KCU5WSURJQV9MNBALEhQKEE5WSURJQV9I",
+            "MTAwXzgwR0IQDRIKCgZUUFVfVjIQBhIKCgZUUFVfVjMQBxIOCgpUUFVfVjRf",
+            "UE9EEApC0gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIUQWNj",
+            "ZWxlcmF0b3JUeXBlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.AcceleratorType), }, null, null));
@@ -85,6 +86,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Nvidia L4 GPU.
     /// </summary>
     [pbr::OriginalName("NVIDIA_L4")] NvidiaL4 = 11,
+    /// <summary>
+    /// Nvidia H100 80Gb GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_H100_80GB")] NvidiaH10080Gb = 13,
     /// <summary>
     /// TPU v2.
     /// </summary>

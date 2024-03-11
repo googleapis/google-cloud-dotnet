@@ -57888,6 +57888,309 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_sync",
+      "title": "BatchDeletePipelineJobsRequestObject",
+      "description": "Snippet for BatchDeletePipelineJobs",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_async",
+      "title": "BatchDeletePipelineJobsRequestObjectAsync",
+      "description": "Snippet for BatchDeletePipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_sync_flattened",
+      "title": "BatchDeletePipelineJobs",
+      "description": "Snippet for BatchDeletePipelineJobs",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_async_flattened",
+      "title": "BatchDeletePipelineJobsAsync",
+      "description": "Snippet for BatchDeletePipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_sync_flattened_resourceNames",
+      "title": "BatchDeletePipelineJobsResourceNames",
+      "description": "Snippet for BatchDeletePipelineJobs",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PipelineJobName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchDeletePipelineJobs_async_flattened_resourceNames",
+      "title": "BatchDeletePipelineJobsResourceNamesAsync",
+      "description": "Snippet for BatchDeletePipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchDeletePipelineJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeletePipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchDeletePipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PipelineJobName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchDeletePipelineJobsResponse, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeletePipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchDeletePipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_PipelineService_CancelPipelineJob_sync",
       "title": "CancelPipelineJobRequestObject",
       "description": "Snippet for CancelPipelineJob",
@@ -58167,6 +58470,309 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_sync",
+      "title": "BatchCancelPipelineJobsRequestObject",
+      "description": "Snippet for BatchCancelPipelineJobs",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_async",
+      "title": "BatchCancelPipelineJobsRequestObjectAsync",
+      "description": "Snippet for BatchCancelPipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_sync_flattened",
+      "title": "BatchCancelPipelineJobs",
+      "description": "Snippet for BatchCancelPipelineJobs",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_async_flattened",
+      "title": "BatchCancelPipelineJobsAsync",
+      "description": "Snippet for BatchCancelPipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_sync_flattened_resourceNames",
+      "title": "BatchCancelPipelineJobsResourceNames",
+      "description": "Snippet for BatchCancelPipelineJobs",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PipelineJobName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PipelineService_BatchCancelPipelineJobs_async_flattened_resourceNames",
+      "title": "BatchCancelPipelineJobsResourceNamesAsync",
+      "description": "Snippet for BatchCancelPipelineJobsAsync",
+      "file": "PipelineServiceClient.BatchCancelPipelineJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCancelPipelineJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient.BatchCancelPipelineJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PipelineJobName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsResponse, Google.Cloud.AIPlatform.V1.BatchCancelPipelineJobsOperationMetadata>>",
+        "client": {
+          "shortName": "PipelineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PipelineServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCancelPipelineJobs",
+          "fullName": "google.cloud.aiplatform.v1.PipelineService.BatchCancelPipelineJobs",
+          "service": {
+            "shortName": "PipelineService",
+            "fullName": "google.cloud.aiplatform.v1.PipelineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
           "type": "SHORT"
         }
       ]
