@@ -4168,9 +4168,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4181,9 +4180,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4194,9 +4192,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4207,9 +4204,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4227,9 +4223,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4247,9 +4242,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4264,9 +4258,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4284,9 +4277,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4304,9 +4296,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -6348,9 +6339,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6364,9 +6354,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all Certificate Authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
