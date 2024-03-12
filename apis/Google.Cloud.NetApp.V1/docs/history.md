@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0, released 2024-03-12
+
+This is the first GA release of the library.
+
+### Documentation improvements
+
+- Mark optional fields explicitly in Storage Pool ([commit 41065fe](https://github.com/googleapis/google-cloud-dotnet/commit/41065fe41d33abf18e9055cb6c079f80eaec571f))
+- Change comments of the psa_range field to note it is currently not implemented ([commit 41065fe](https://github.com/googleapis/google-cloud-dotnet/commit/41065fe41d33abf18e9055cb6c079f80eaec571f))
+- Update comments of ServiceLevel and EncryptionType ([commit 41065fe](https://github.com/googleapis/google-cloud-dotnet/commit/41065fe41d33abf18e9055cb6c079f80eaec571f))
+
 ## Version 1.0.0-beta03, released 2024-02-28
 
 No API surface changes; just dependency updates.
