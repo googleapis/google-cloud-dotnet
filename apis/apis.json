@@ -2281,7 +2281,7 @@
     },
     {
       "id": "Google.Cloud.EdgeNetwork.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Distributed Cloud Edge Network",
       "productUrl": "https://cloud.google.com/distributed-cloud/edge/latest/docs/overview",
@@ -2292,8 +2292,10 @@
         "distributed"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.6.0",
+        "Google.Cloud.Location": "2.1.0",
+        "Google.LongRunning": "3.1.0",
+        "Grpc.Core": "2.46.6"
       },
       "generator": "micro",
       "protoPath": "google/cloud/edgenetwork/v1",
