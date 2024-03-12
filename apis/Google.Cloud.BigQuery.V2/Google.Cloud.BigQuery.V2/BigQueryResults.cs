@@ -60,6 +60,11 @@ namespace Google.Cloud.BigQuery.V2
         public long? NumDmlAffectedRows => _response.NumDmlAffectedRows;
 
         /// <summary>
+        /// Whether the query result was fetched from the query cache.
+        /// </summary>
+        public bool CacheHit => _response.CacheHit ?? false;
+
+        /// <summary>
         /// The rows in the response, or an empty sequence if the response contains no rows.
         /// </summary>
         private IEnumerable<BigQueryRow> ResponseRows => ConvertResponseRows(_response);

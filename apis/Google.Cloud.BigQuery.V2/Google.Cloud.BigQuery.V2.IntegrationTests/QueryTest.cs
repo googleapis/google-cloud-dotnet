@@ -786,6 +786,22 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(DateTime.MinValue, (DateTime) row["x"]);
         }
 
+        [Fact]
+        public void CacheHit()
+        {
+            var guid = Guid.NewGuid();
+            var projectId = _fixture.ProjectId;
+            var client = BigQueryClient.Create(projectId);
+            var parameters = new[] { new BigQueryParameter("guid", BigQueryDbType.String, guid.ToString()) };
+            var firstResults = client.ExecuteQuery($"SELECT @guid AS x", parameters);
+            var secondResults = client.ExecuteQuery($"SELECT @guid AS x", parameters);
+
+            // The use of a GUID parameter should ensure that we don't hit the cache first time.
+            Assert.False(firstResults.CacheHit);
+            // ... but we really should second time round.
+            Assert.True(secondResults.CacheHit);
+        }
+
         [Theory]
         [InlineData(null, true)] // Default to a precise representation
         [InlineData(true, true)]
