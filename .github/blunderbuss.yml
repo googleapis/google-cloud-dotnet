@@ -4,7 +4,5 @@ assign_issues_by:
   - 'api: clouderrorreporting'
   to:
   - simonz130
-- labels:
-  - 'api: spanner'
-  to:
-  - shivgautam
+assign_issues:
+  - 'jskeet'
