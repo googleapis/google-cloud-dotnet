@@ -6914,10 +6914,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain> caCerts_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain>();
     /// <summary>
-    /// The PEM encoded CA certificate chains of all
-    /// [ACTIVE][CertificateAuthority.State.ACTIVE]
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// resources in this [CaPool][google.cloud.security.privateca.v1.CaPool].
+    /// The PEM encoded CA certificate chains of all Certificate Authorities in
+    /// this [CaPool][google.cloud.security.privateca.v1.CaPool] in the ENABLED,
+    /// DISABLED, or STAGED states.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
