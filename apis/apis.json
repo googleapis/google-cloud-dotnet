@@ -3531,7 +3531,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V2",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Notebooks",
       "productUrl": "https://cloud.google.com/vertex-ai/docs/workbench/instances/introduction",
@@ -3541,9 +3541,11 @@
         "notebooks"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.0.0",
-        "Google.Cloud.Location": "2.0.0",
-        "Google.LongRunning": "3.0.0"
+        "Google.Api.Gax.Grpc": "4.6.0",
+        "Google.Cloud.Iam.V1": "3.1.0",
+        "Google.Cloud.Location": "2.1.0",
+        "Google.LongRunning": "3.1.0",
+        "Grpc.Core": "2.46.6"
       },
       "generator": "micro",
       "protoPath": "google/cloud/notebooks/v2",
