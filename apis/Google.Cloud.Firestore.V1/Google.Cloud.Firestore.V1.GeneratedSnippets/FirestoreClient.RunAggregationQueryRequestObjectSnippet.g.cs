@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 StructuredAggregationQuery = new StructuredAggregationQuery(),
                 Transaction = ByteString.Empty,
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request, returning a streaming response
             using FirestoreClient.RunAggregationQueryStream response = firestoreClient.RunAggregationQuery(request);
