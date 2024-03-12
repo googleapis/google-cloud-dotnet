@@ -1,5 +1,9 @@
 # Version history
 
+## Version 5.0.0, released 2024-03-12
+
+No API surface changes; just dependency updates and promotion to GA.
+
 ## Version 5.0.0-beta01, released 2024-01-04
 
 ### New features
