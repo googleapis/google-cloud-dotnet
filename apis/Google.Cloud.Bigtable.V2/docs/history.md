@@ -1,5 +1,22 @@
 # Version history
 
+## Version 3.10.0, released 2024-03-12
+
+### New features
+
+- Publish new bigtable APIs for types and aggregates ([commit 47a6ffd](https://github.com/googleapis/google-cloud-dotnet/commit/47a6ffdfeb169ed5c08eb0243b7810bb42e9bf29))
+- Add authorized view bindings to Cloud Bigtable data APIs and messages ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- (From 3.10.0-beta01) Bigtable supports universe domain ([commit c3610f9](https://github.com/googleapis/google-cloud-dotnet/commit/c3610f97235f1582376e3a124b9531dc01a43a77))
+
+### Documentation improvements
+
+- The field `table_name` in message `.google.bigtable.v2.ReadRowsRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.SampleRowKeysRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.MutateRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.MutateRowsRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.CheckAndMutateRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+- The field `table_name` in message `.google.bigtable.v2.ReadModifyWriteRowRequest` is changed from required to optional ([commit f09ba5c](https://github.com/googleapis/google-cloud-dotnet/commit/f09ba5cdffa0cd059141ed921e12440ac32e8002))
+
 ## Version 3.10.0-beta01, released 2024-02-08
 
 ### New features
