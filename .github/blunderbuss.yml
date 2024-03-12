@@ -1,10 +1,2 @@
-assign_issues_by:
-- labels:
-  - 'api: logging'
-  - 'api: clouderrorreporting'
-  to:
-  - simonz130
-- labels:
-  - 'api: spanner'
-  to:
-  - shivgautam
+assign_issues:
+  - googleapis/cloud-libraries-dotnet

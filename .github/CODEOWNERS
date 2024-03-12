@@ -5,13 +5,12 @@
 # https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#codeowners-syntax
 
 
-# The yoshi-dotnet team is the default owner for anything not
+# The cloud-libraries-dotnet is the default owner for anything not
 # explicitly taken by someone else.
-*                                   @googleapis/yoshi-dotnet
+*                                   @googleapis/cloud-libraries-dotnet
 
-/apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/yoshi-dotnet
-/apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/yoshi-dotnet
-/apis/Google.Cloud.Firestore*/      @googleapis/firestore-dpe @googleapis/yoshi-dotnet
-/apis/Google.Cloud.Storage*/        @googleapis/cloud-storage-dpe @googleapis/yoshi-dotnet
-/apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/yoshi-dotnet
-/apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/yoshi-dotnet
+/apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.Storage*/        @googleapis/cloud-storage-dpe @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/cloud-libraries-dotnet
