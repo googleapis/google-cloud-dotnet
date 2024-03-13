@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2024-03-13
+
+### New features
+
+- Support blended search ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+- Support boost in multi-turn search ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+- Add document processing config services ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+- Add search tuning services ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+- Allow setting schema on schema creation ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit a2187da](https://github.com/googleapis/google-cloud-dotnet/commit/a2187dace0c7a3c33a63859d2834921e12217905))
+
 ## Version 1.0.0-beta09, released 2024-02-09
 
 ### New features
