@@ -5558,7 +5558,7 @@
       "id": "Google.Cloud.Workflows.Common.V1",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "description": "Common resource names used by all Workflows V1 APIs",
       "tags": [
         "Spanner"
