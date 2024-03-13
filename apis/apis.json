@@ -5896,7 +5896,7 @@
     },
     {
       "id": "Google.Maps.Places.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Places API",
       "productUrl": "https://developers.google.com/maps/documentation/places/web-service/",
@@ -5905,7 +5905,7 @@
         "maps"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.0.0"
+        "Google.Geo.Type": "1.1.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/places/v1",
