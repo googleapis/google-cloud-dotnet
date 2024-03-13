@@ -871,6 +871,32 @@ namespace Google.Cloud.CloudBuild.V2
         }
     }
 
+    public partial class BitbucketDataCenterConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BitbucketCloudConfig
+    {
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="WebhookSecretSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName WebhookSecretSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(WebhookSecretSecretVersion) ? null : SecretVersionName.Parse(WebhookSecretSecretVersion, allowUnparsed: true);
+            set => WebhookSecretSecretVersion = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ServiceDirectoryConfig
     {
         /// <summary>
