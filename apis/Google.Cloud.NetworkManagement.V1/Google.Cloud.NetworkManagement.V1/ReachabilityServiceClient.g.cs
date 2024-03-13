@@ -17,6 +17,8 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -57,6 +59,8 @@ namespace Google.Cloud.NetworkManagement.V1
             RerunConnectivityTestOperationsSettings = existing.RerunConnectivityTestOperationsSettings.Clone();
             DeleteConnectivityTestSettings = existing.DeleteConnectivityTestSettings;
             DeleteConnectivityTestOperationsSettings = existing.DeleteConnectivityTestOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -212,6 +216,16 @@ namespace Google.Cloud.NetworkManagement.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReachabilityServiceSettings"/> object.</returns>
         public ReachabilityServiceSettings Clone() => new ReachabilityServiceSettings(this);
@@ -362,6 +376,12 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>The underlying gRPC ReachabilityService client</summary>
         public virtual ReachabilityService.ReachabilityServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists all Connectivity Tests owned by a project.
@@ -1121,6 +1141,8 @@ namespace Google.Cloud.NetworkManagement.V1
             UpdateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectivityTestOperationsSettings, logger);
             RerunConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RerunConnectivityTestOperationsSettings, logger);
             DeleteConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectivityTestOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListConnectivityTests = clientHelper.BuildApiCall<ListConnectivityTestsRequest, ListConnectivityTestsResponse>("ListConnectivityTests", grpcClient.ListConnectivityTestsAsync, grpcClient.ListConnectivityTests, effectiveSettings.ListConnectivityTestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnectivityTests);
             Modify_ListConnectivityTestsApiCall(ref _callListConnectivityTests);
@@ -1160,6 +1182,12 @@ namespace Google.Cloud.NetworkManagement.V1
 
         /// <summary>The underlying gRPC ReachabilityService client</summary>
         public override ReachabilityService.ReachabilityServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListConnectivityTestsRequest(ref ListConnectivityTestsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1425,6 +1453,32 @@ namespace Google.Cloud.NetworkManagement.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ReachabilityService
+    {
+        public partial class ReachabilityServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }
