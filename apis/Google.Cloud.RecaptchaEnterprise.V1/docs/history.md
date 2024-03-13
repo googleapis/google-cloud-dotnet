@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.10.0, released 2024-03-13
+
+### New features
+
+- Add include_recaptcha_script for as a new action in firewall policies ([commit d9e61ce](https://github.com/googleapis/google-cloud-dotnet/commit/d9e61ceccc664f21973cc0e20833f9fabe1b20b3))
+
 ## Version 2.9.0, released 2024-02-20
 
 ### New features
