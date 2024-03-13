@@ -25,7 +25,7 @@ namespace Grafeas.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRncmFmZWFzL3YxL3ZleC5wcm90bxIKZ3JhZmVhcy52MRoXZ3JhZmVhcy92",
-            "MS9jb21tb24ucHJvdG8iqg0KG1Z1bG5lcmFiaWxpdHlBc3Nlc3NtZW50Tm90",
+            "MS9jb21tb24ucHJvdG8iyA0KG1Z1bG5lcmFiaWxpdHlBc3Nlc3NtZW50Tm90",
             "ZRINCgV0aXRsZRgBIAEoCRIZChFzaG9ydF9kZXNjcmlwdGlvbhgCIAEoCRIY",
             "ChBsb25nX2Rlc2NyaXB0aW9uGAMgASgJEhUKDWxhbmd1YWdlX2NvZGUYBCAB",
             "KAkSRAoJcHVibGlzaGVyGAUgASgLMjEuZ3JhZmVhcy52MS5WdWxuZXJhYmls",
@@ -36,42 +36,42 @@ namespace Grafeas.V1 {
             "CgRuYW1lGAEgASgJEhkKEWlzc3VpbmdfYXV0aG9yaXR5GAIgASgJEhsKE3B1",
             "Ymxpc2hlcl9uYW1lc3BhY2UYAyABKAkaSAoHUHJvZHVjdBIMCgRuYW1lGAEg",
             "ASgJEgoKAmlkGAIgASgJEhUKC2dlbmVyaWNfdXJpGAMgASgJSABCDAoKaWRl",
-            "bnRpZmllchrCCQoKQXNzZXNzbWVudBILCgNjdmUYASABKAkSGQoRc2hvcnRf",
-            "ZGVzY3JpcHRpb24YAiABKAkSGAoQbG9uZ19kZXNjcmlwdGlvbhgDIAEoCRIs",
-            "CgxyZWxhdGVkX3VyaXMYBCADKAsyFi5ncmFmZWFzLnYxLlJlbGF0ZWRVcmwS",
-            "RwoFc3RhdGUYBSABKA4yOC5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxpdHlBc3Nl",
-            "c3NtZW50Tm90ZS5Bc3Nlc3NtZW50LlN0YXRlEg8KB2ltcGFjdHMYBiADKAkS",
-            "VwoNanVzdGlmaWNhdGlvbhgHIAEoCzJALmdyYWZlYXMudjEuVnVsbmVyYWJp",
-            "bGl0eUFzc2Vzc21lbnROb3RlLkFzc2Vzc21lbnQuSnVzdGlmaWNhdGlvbhJU",
-            "CgxyZW1lZGlhdGlvbnMYCCADKAsyPi5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxp",
-            "dHlBc3Nlc3NtZW50Tm90ZS5Bc3Nlc3NtZW50LlJlbWVkaWF0aW9uGowDCg1K",
-            "dXN0aWZpY2F0aW9uEm4KEmp1c3RpZmljYXRpb25fdHlwZRgBIAEoDjJSLmdy",
-            "YWZlYXMudjEuVnVsbmVyYWJpbGl0eUFzc2Vzc21lbnROb3RlLkFzc2Vzc21l",
-            "bnQuSnVzdGlmaWNhdGlvbi5KdXN0aWZpY2F0aW9uVHlwZRIPCgdkZXRhaWxz",
-            "GAIgASgJIvkBChFKdXN0aWZpY2F0aW9uVHlwZRIiCh5KVVNUSUZJQ0FUSU9O",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIZChVDT01QT05FTlRfTk9UX1BSRVNFTlQQ",
-            "ARIfChtWVUxORVJBQkxFX0NPREVfTk9UX1BSRVNFTlQQAhInCiNWVUxORVJB",
-            "QkxFX0NPREVfTk9UX0lOX0VYRUNVVEVfUEFUSBADEjUKMVZVTE5FUkFCTEVf",
-            "Q09ERV9DQU5OT1RfQkVfQ09OVFJPTExFRF9CWV9BRFZFUlNBUlkQBBIkCiBJ",
-            "TkxJTkVfTUlUSUdBVElPTlNfQUxSRUFEWV9FWElTVBAFGscCCgtSZW1lZGlh",
-            "dGlvbhJoChByZW1lZGlhdGlvbl90eXBlGAEgASgOMk4uZ3JhZmVhcy52MS5W",
-            "dWxuZXJhYmlsaXR5QXNzZXNzbWVudE5vdGUuQXNzZXNzbWVudC5SZW1lZGlh",
-            "dGlvbi5SZW1lZGlhdGlvblR5cGUSDwoHZGV0YWlscxgCIAEoCRIvCg9yZW1l",
-            "ZGlhdGlvbl91cmkYAyABKAsyFi5ncmFmZWFzLnYxLlJlbGF0ZWRVcmwiiwEK",
-            "D1JlbWVkaWF0aW9uVHlwZRIgChxSRU1FRElBVElPTl9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDgoKTUlUSUdBVElPThABEhIKDk5PX0ZJWF9QTEFOTkVEEAISEgoO",
-            "Tk9ORV9BVkFJTEFCTEUQAxIOCgpWRU5ET1JfRklYEAQSDgoKV09SS0FST1VO",
-            "RBAFImIKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQUZGRUNU",
-            "RUQQARIQCgxOT1RfQUZGRUNURUQQAhIJCgVGSVhFRBADEhcKE1VOREVSX0lO",
-            "VkVTVElHQVRJT04QBEJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFz",
-            "ogIDR1JBYgZwcm90bzM="));
+            "bnRpZmllchrgCQoKQXNzZXNzbWVudBIPCgNjdmUYASABKAlCAhgBEhgKEHZ1",
+            "bG5lcmFiaWxpdHlfaWQYCSABKAkSGQoRc2hvcnRfZGVzY3JpcHRpb24YAiAB",
+            "KAkSGAoQbG9uZ19kZXNjcmlwdGlvbhgDIAEoCRIsCgxyZWxhdGVkX3VyaXMY",
+            "BCADKAsyFi5ncmFmZWFzLnYxLlJlbGF0ZWRVcmwSRwoFc3RhdGUYBSABKA4y",
+            "OC5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxpdHlBc3Nlc3NtZW50Tm90ZS5Bc3Nl",
+            "c3NtZW50LlN0YXRlEg8KB2ltcGFjdHMYBiADKAkSVwoNanVzdGlmaWNhdGlv",
+            "bhgHIAEoCzJALmdyYWZlYXMudjEuVnVsbmVyYWJpbGl0eUFzc2Vzc21lbnRO",
+            "b3RlLkFzc2Vzc21lbnQuSnVzdGlmaWNhdGlvbhJUCgxyZW1lZGlhdGlvbnMY",
+            "CCADKAsyPi5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxpdHlBc3Nlc3NtZW50Tm90",
+            "ZS5Bc3Nlc3NtZW50LlJlbWVkaWF0aW9uGowDCg1KdXN0aWZpY2F0aW9uEm4K",
+            "Emp1c3RpZmljYXRpb25fdHlwZRgBIAEoDjJSLmdyYWZlYXMudjEuVnVsbmVy",
+            "YWJpbGl0eUFzc2Vzc21lbnROb3RlLkFzc2Vzc21lbnQuSnVzdGlmaWNhdGlv",
+            "bi5KdXN0aWZpY2F0aW9uVHlwZRIPCgdkZXRhaWxzGAIgASgJIvkBChFKdXN0",
+            "aWZpY2F0aW9uVHlwZRIiCh5KVVNUSUZJQ0FUSU9OX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIZChVDT01QT05FTlRfTk9UX1BSRVNFTlQQARIfChtWVUxORVJBQkxF",
+            "X0NPREVfTk9UX1BSRVNFTlQQAhInCiNWVUxORVJBQkxFX0NPREVfTk9UX0lO",
+            "X0VYRUNVVEVfUEFUSBADEjUKMVZVTE5FUkFCTEVfQ09ERV9DQU5OT1RfQkVf",
+            "Q09OVFJPTExFRF9CWV9BRFZFUlNBUlkQBBIkCiBJTkxJTkVfTUlUSUdBVElP",
+            "TlNfQUxSRUFEWV9FWElTVBAFGscCCgtSZW1lZGlhdGlvbhJoChByZW1lZGlh",
+            "dGlvbl90eXBlGAEgASgOMk4uZ3JhZmVhcy52MS5WdWxuZXJhYmlsaXR5QXNz",
+            "ZXNzbWVudE5vdGUuQXNzZXNzbWVudC5SZW1lZGlhdGlvbi5SZW1lZGlhdGlv",
+            "blR5cGUSDwoHZGV0YWlscxgCIAEoCRIvCg9yZW1lZGlhdGlvbl91cmkYAyAB",
+            "KAsyFi5ncmFmZWFzLnYxLlJlbGF0ZWRVcmwiiwEKD1JlbWVkaWF0aW9uVHlw",
+            "ZRIgChxSRU1FRElBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKTUlUSUdB",
+            "VElPThABEhIKDk5PX0ZJWF9QTEFOTkVEEAISEgoOTk9ORV9BVkFJTEFCTEUQ",
+            "AxIOCgpWRU5ET1JfRklYEAQSDgoKV09SS0FST1VORBAFImIKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQUZGRUNURUQQARIQCgxOT1RfQUZG",
+            "RUNURUQQAhIJCgVGSVhFRBADEhcKE1VOREVSX0lOVkVTVElHQVRJT04QBEJR",
+            "Cg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote), global::Grafeas.V1.VulnerabilityAssessmentNote.Parser, new[]{ "Title", "ShortDescription", "LongDescription", "LanguageCode", "Publisher", "Product", "Assessment" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Publisher), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Publisher.Parser, new[]{ "Name", "IssuingAuthority", "PublisherNamespace" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Product), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Product.Parser, new[]{ "Name", "Id", "GenericUri" }, new[]{ "Identifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Parser, new[]{ "Cve", "ShortDescription", "LongDescription", "RelatedUris", "State", "Impacts", "Justification", "Remediations" }, null, new[]{ typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification.Parser, new[]{ "JustificationType", "Details" }, null, new[]{ typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification.Types.JustificationType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Parser, new[]{ "Cve", "VulnerabilityId", "ShortDescription", "LongDescription", "RelatedUris", "State", "Impacts", "Justification", "Remediations" }, null, new[]{ typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification.Parser, new[]{ "JustificationType", "Details" }, null, new[]{ typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Justification.Types.JustificationType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Remediation), global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Remediation.Parser, new[]{ "RemediationType", "Details", "RemediationUri" }, null, new[]{ typeof(global::Grafeas.V1.VulnerabilityAssessmentNote.Types.Assessment.Types.Remediation.Types.RemediationType) }, null, null)})})
           }));
     }
@@ -1198,6 +1198,7 @@ namespace Grafeas.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Assessment(Assessment other) : this() {
           cve_ = other.cve_;
+          vulnerabilityId_ = other.vulnerabilityId_;
           shortDescription_ = other.shortDescription_;
           longDescription_ = other.longDescription_;
           relatedUris_ = other.relatedUris_.Clone();
@@ -1220,13 +1221,31 @@ namespace Grafeas.V1 {
         /// <summary>
         /// Holds the MITRE standard Common Vulnerabilities and Exposures (CVE)
         /// tracking number for the vulnerability.
+        /// Deprecated: Use vulnerability_id instead to denote CVEs.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Cve {
           get { return cve_; }
           set {
             cve_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "vulnerability_id" field.</summary>
+        public const int VulnerabilityIdFieldNumber = 9;
+        private string vulnerabilityId_ = "";
+        /// <summary>
+        /// The vulnerability identifier for this Assessment. Will hold one of
+        /// common identifiers e.g. CVE, GHSA etc.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string VulnerabilityId {
+          get { return vulnerabilityId_; }
+          set {
+            vulnerabilityId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -1353,6 +1372,7 @@ namespace Grafeas.V1 {
             return true;
           }
           if (Cve != other.Cve) return false;
+          if (VulnerabilityId != other.VulnerabilityId) return false;
           if (ShortDescription != other.ShortDescription) return false;
           if (LongDescription != other.LongDescription) return false;
           if(!relatedUris_.Equals(other.relatedUris_)) return false;
@@ -1368,6 +1388,7 @@ namespace Grafeas.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Cve.Length != 0) hash ^= Cve.GetHashCode();
+          if (VulnerabilityId.Length != 0) hash ^= VulnerabilityId.GetHashCode();
           if (ShortDescription.Length != 0) hash ^= ShortDescription.GetHashCode();
           if (LongDescription.Length != 0) hash ^= LongDescription.GetHashCode();
           hash ^= relatedUris_.GetHashCode();
@@ -1416,6 +1437,10 @@ namespace Grafeas.V1 {
             output.WriteMessage(Justification);
           }
           remediations_.WriteTo(output, _repeated_remediations_codec);
+          if (VulnerabilityId.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(VulnerabilityId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1449,6 +1474,10 @@ namespace Grafeas.V1 {
             output.WriteMessage(Justification);
           }
           remediations_.WriteTo(ref output, _repeated_remediations_codec);
+          if (VulnerabilityId.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(VulnerabilityId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1461,6 +1490,9 @@ namespace Grafeas.V1 {
           int size = 0;
           if (Cve.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Cve);
+          }
+          if (VulnerabilityId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(VulnerabilityId);
           }
           if (ShortDescription.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ShortDescription);
@@ -1491,6 +1523,9 @@ namespace Grafeas.V1 {
           }
           if (other.Cve.Length != 0) {
             Cve = other.Cve;
+          }
+          if (other.VulnerabilityId.Length != 0) {
+            VulnerabilityId = other.VulnerabilityId;
           }
           if (other.ShortDescription.Length != 0) {
             ShortDescription = other.ShortDescription;
@@ -1560,6 +1595,10 @@ namespace Grafeas.V1 {
                 remediations_.AddEntriesFrom(input, _repeated_remediations_codec);
                 break;
               }
+              case 74: {
+                VulnerabilityId = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1608,6 +1647,10 @@ namespace Grafeas.V1 {
               }
               case 66: {
                 remediations_.AddEntriesFrom(ref input, _repeated_remediations_codec);
+                break;
+              }
+              case 74: {
+                VulnerabilityId = input.ReadString();
                 break;
               }
             }

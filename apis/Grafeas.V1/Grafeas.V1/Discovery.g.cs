@@ -28,7 +28,7 @@ namespace Grafeas.V1 {
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
             "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
             "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
-            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi/AUKE0Rp",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQi6QcKE0Rp",
             "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
             "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
             "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
@@ -39,20 +39,27 @@ namespace Grafeas.V1 {
             "cnJvchgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEgsKA2NwZRgEIAEoCRIy",
             "Cg5sYXN0X3NjYW5fdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
             "c3RhbXASNQoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDGioKEUFuYWx5c2lzQ29tcGxldGVkEhUKDWFuYWx5",
-            "c2lzX3R5cGUYASADKAkiUwoSQ29udGludW91c0FuYWx5c2lzEiMKH0NPTlRJ",
-            "TlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJ",
-            "TkFDVElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtBTkFMWVNJU19TVEFU",
-            "VVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoIU0NBTk5JTkcQAhIU",
-            "ChBGSU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQAxITCg9GSU5JU0hF",
-            "RF9GQUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRFRBAFGgIQAUJRCg1p",
-            "by5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "LlRpbWVzdGFtcEID4EEDEj8KC3Nib21fc3RhdHVzGAkgASgLMiouZ3JhZmVh",
+            "cy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLlNCT01TdGF0dXMaKgoRQW5hbHlz",
+            "aXNDb21wbGV0ZWQSFQoNYW5hbHlzaXNfdHlwZRgBIAMoCRqpAQoKU0JPTVN0",
+            "YXR1cxJICgpzYm9tX3N0YXRlGAEgASgOMjQuZ3JhZmVhcy52MS5EaXNjb3Zl",
+            "cnlPY2N1cnJlbmNlLlNCT01TdGF0dXMuU0JPTVN0YXRlEg0KBWVycm9yGAIg",
+            "ASgJIkIKCVNCT01TdGF0ZRIaChZTQk9NX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHUEVORElORxABEgwKCENPTVBMRVRFEAIiUwoSQ29udGludW91c0FuYWx5",
+            "c2lzEiMKH0NPTlRJTlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIKCgZB",
+            "Q1RJVkUQARIMCghJTkFDVElWRRACIqMBCg5BbmFseXNpc1N0YXR1cxIfChtB",
+            "TkFMWVNJU19TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoI",
+            "U0NBTk5JTkcQAhIUChBGSU5JU0hFRF9TVUNDRVNTEAMSDAoIQ09NUExFVEUQ",
+            "AxITCg9GSU5JU0hFRF9GQUlMRUQQBBIYChRGSU5JU0hFRF9VTlNVUFBPUlRF",
+            "RBAFGgIQAUJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JB",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryNote), global::Grafeas.V1.DiscoveryNote.Parser, new[]{ "AnalysisKind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisCompleted", "AnalysisError", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime", "SbomStatus" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted), global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisCompleted.Parser, new[]{ "AnalysisType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus), global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Parser, new[]{ "SbomState", "Error" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) }, null, null)})
           }));
     }
     #endregion
@@ -304,6 +311,7 @@ namespace Grafeas.V1 {
       cpe_ = other.cpe_;
       lastScanTime_ = other.lastScanTime_ != null ? other.lastScanTime_.Clone() : null;
       archiveTime_ = other.archiveTime_ != null ? other.archiveTime_.Clone() : null;
+      sbomStatus_ = other.sbomStatus_ != null ? other.sbomStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -432,6 +440,21 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "sbom_status" field.</summary>
+    public const int SbomStatusFieldNumber = 9;
+    private global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus sbomStatus_;
+    /// <summary>
+    /// The status of an SBOM generation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus SbomStatus {
+      get { return sbomStatus_; }
+      set {
+        sbomStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -455,6 +478,7 @@ namespace Grafeas.V1 {
       if (Cpe != other.Cpe) return false;
       if (!object.Equals(LastScanTime, other.LastScanTime)) return false;
       if (!object.Equals(ArchiveTime, other.ArchiveTime)) return false;
+      if (!object.Equals(SbomStatus, other.SbomStatus)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -470,6 +494,7 @@ namespace Grafeas.V1 {
       if (Cpe.Length != 0) hash ^= Cpe.GetHashCode();
       if (lastScanTime_ != null) hash ^= LastScanTime.GetHashCode();
       if (archiveTime_ != null) hash ^= ArchiveTime.GetHashCode();
+      if (sbomStatus_ != null) hash ^= SbomStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -517,6 +542,10 @@ namespace Grafeas.V1 {
         output.WriteMessage(AnalysisCompleted);
       }
       analysisError_.WriteTo(output, _repeated_analysisError_codec);
+      if (sbomStatus_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SbomStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -556,6 +585,10 @@ namespace Grafeas.V1 {
         output.WriteMessage(AnalysisCompleted);
       }
       analysisError_.WriteTo(ref output, _repeated_analysisError_codec);
+      if (sbomStatus_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SbomStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -587,6 +620,9 @@ namespace Grafeas.V1 {
       }
       if (archiveTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArchiveTime);
+      }
+      if (sbomStatus_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SbomStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -633,6 +669,12 @@ namespace Grafeas.V1 {
           ArchiveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ArchiveTime.MergeFrom(other.ArchiveTime);
+      }
+      if (other.sbomStatus_ != null) {
+        if (sbomStatus_ == null) {
+          SbomStatus = new global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus();
+        }
+        SbomStatus.MergeFrom(other.SbomStatus);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -693,6 +735,13 @@ namespace Grafeas.V1 {
             analysisError_.AddEntriesFrom(input, _repeated_analysisError_codec);
             break;
           }
+          case 74: {
+            if (sbomStatus_ == null) {
+              SbomStatus = new global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus();
+            }
+            input.ReadMessage(SbomStatus);
+            break;
+          }
         }
       }
     #endif
@@ -750,6 +799,13 @@ namespace Grafeas.V1 {
           }
           case 66: {
             analysisError_.AddEntriesFrom(ref input, _repeated_analysisError_codec);
+            break;
+          }
+          case 74: {
+            if (sbomStatus_ == null) {
+              SbomStatus = new global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus();
+            }
+            input.ReadMessage(SbomStatus);
             break;
           }
         }
@@ -996,6 +1052,269 @@ namespace Grafeas.V1 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// The status of an SBOM generation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SBOMStatus : pb::IMessage<SBOMStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SBOMStatus> _parser = new pb::MessageParser<SBOMStatus>(() => new SBOMStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SBOMStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Grafeas.V1.DiscoveryOccurrence.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SBOMStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SBOMStatus(SBOMStatus other) : this() {
+          sbomState_ = other.sbomState_;
+          error_ = other.error_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SBOMStatus Clone() {
+          return new SBOMStatus(this);
+        }
+
+        /// <summary>Field number for the "sbom_state" field.</summary>
+        public const int SbomStateFieldNumber = 1;
+        private global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState sbomState_ = global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified;
+        /// <summary>
+        /// The progress of the SBOM generation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState SbomState {
+          get { return sbomState_; }
+          set {
+            sbomState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "error" field.</summary>
+        public const int ErrorFieldNumber = 2;
+        private string error_ = "";
+        /// <summary>
+        /// If there was an error generating an SBOM, this will indicate what that
+        /// error was.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Error {
+          get { return error_; }
+          set {
+            error_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SBOMStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SBOMStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SbomState != other.SbomState) return false;
+          if (Error != other.Error) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SbomState != global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified) hash ^= SbomState.GetHashCode();
+          if (Error.Length != 0) hash ^= Error.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SbomState != global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SbomState);
+          }
+          if (Error.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SbomState != global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SbomState);
+          }
+          if (Error.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SbomState != global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SbomState);
+          }
+          if (Error.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Error);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SBOMStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SbomState != global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState.Unspecified) {
+            SbomState = other.SbomState;
+          }
+          if (other.Error.Length != 0) {
+            Error = other.Error;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                SbomState = (global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Error = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                SbomState = (global::Grafeas.V1.DiscoveryOccurrence.Types.SBOMStatus.Types.SBOMState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Error = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SBOMStatus message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// An enum indicating the progress of the SBOM generation.
+          /// </summary>
+          public enum SBOMState {
+            /// <summary>
+            /// Default unknown state.
+            /// </summary>
+            [pbr::OriginalName("SBOM_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// SBOM scanning is pending.
+            /// </summary>
+            [pbr::OriginalName("PENDING")] Pending = 1,
+            /// <summary>
+            /// SBOM scanning has completed.
+            /// </summary>
+            [pbr::OriginalName("COMPLETE")] Complete = 2,
+          }
+
+        }
+        #endregion
 
       }
 
