@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.0.0-beta05, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
 ## Version 3.0.0-beta04, released 2024-02-09
 
 ### Bug fixes
