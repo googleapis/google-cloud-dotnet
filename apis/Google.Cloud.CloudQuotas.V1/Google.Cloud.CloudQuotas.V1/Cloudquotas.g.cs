@@ -965,11 +965,8 @@ namespace Google.Cloud.CloudQuotas.V1 {
     /// create/update time range.
     ///
     /// Example filters:
-    /// `state=PENDING OR state=PENDING_PARTIALLY_GRANTED`
-    /// `state=PENDING OR state=PENDING_PARTIALLY_GRANTED AND
-    ///  creation_time>2022-12-03T10:30:00`
-    ///
-    /// If no filter is provided, returns all pending quota preferences.
+    /// `reconciling=true AND request_type=CLOUD_CONSOLE`,
+    /// `reconciling=true OR creation_time>2022-12-03T10:30:00`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -988,8 +985,8 @@ namespace Google.Cloud.CloudQuotas.V1 {
     /// by create time.
     ///
     /// Example orders:
-    /// `type`
-    /// `state, create_time`
+    /// `quota_id`,
+    /// `service, create_time`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
