@@ -15468,6 +15468,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     /// <summary>
     /// The source processor version to import from. The source processor version
     /// and destination processor need to be in the same environment and region.
+    /// Note that ProcessorVersions with `model_type` `MODEL_TYPE_LLM` are not
+    /// supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
