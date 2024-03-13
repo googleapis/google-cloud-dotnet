@@ -1,5 +1,9 @@
 # Version history
 
+## Version 4.2.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
 ## Version 4.1.0, released 2023-09-25
 
 ### Bug fixes
