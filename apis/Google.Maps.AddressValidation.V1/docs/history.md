@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.2.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
 ## Version 1.1.0, released 2024-02-20
 
 ### New features
