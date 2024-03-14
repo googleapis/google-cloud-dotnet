@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.8.0, released 2024-03-14
+
+### New features
+
+- Expose GetQueryResultsResponse.CacheHit ([commit 8a349d9](https://github.com/googleapis/google-cloud-dotnet/commit/8a349d9c62c1f5bbca89323af6d5764f4692f861))
+
 ## Version 3.7.0, released 2024-03-06
 
 No API surface changes; just dependency updates.
