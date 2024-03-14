@@ -1,7 +1,6 @@
 [
   {
     "method": "ListSecrets",
-    "skip": "See b/328550238",
     "client": "SecretManagerServiceClient",
     "arguments": {
       "parent": "projects/${PROJECT_ID}"
