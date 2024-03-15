@@ -2223,5 +2223,753 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupRequestObject()
+        {
+            // Snippet: GetBackup(GetBackupRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::GetBackupRequest request = new gcfav::GetBackupRequest
+            {
+                BackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            gcfav::Backup response = firestoreAdminClient.GetBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupRequestObjectAsync()
+        {
+            // Snippet: GetBackupAsync(GetBackupRequest, CallSettings)
+            // Additional: GetBackupAsync(GetBackupRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::GetBackupRequest request = new gcfav::GetBackupRequest
+            {
+                BackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            gcfav::Backup response = await firestoreAdminClient.GetBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackup()
+        {
+            // Snippet: GetBackup(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backups/[BACKUP]";
+            // Make the request
+            gcfav::Backup response = firestoreAdminClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupAsync()
+        {
+            // Snippet: GetBackupAsync(string, CallSettings)
+            // Additional: GetBackupAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backups/[BACKUP]";
+            // Make the request
+            gcfav::Backup response = await firestoreAdminClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackup</summary>
+        public void GetBackupResourceNames()
+        {
+            // Snippet: GetBackup(BackupName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BackupName name = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]");
+            // Make the request
+            gcfav::Backup response = firestoreAdminClient.GetBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupAsync</summary>
+        public async Task GetBackupResourceNamesAsync()
+        {
+            // Snippet: GetBackupAsync(BackupName, CallSettings)
+            // Additional: GetBackupAsync(BackupName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BackupName name = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]");
+            // Make the request
+            gcfav::Backup response = await firestoreAdminClient.GetBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsRequestObject()
+        {
+            // Snippet: ListBackups(ListBackupsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::ListBackupsRequest request = new gcfav::ListBackupsRequest
+            {
+                ParentAsLocationName = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            gcfav::ListBackupsResponse response = firestoreAdminClient.ListBackups(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsRequestObjectAsync()
+        {
+            // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
+            // Additional: ListBackupsAsync(ListBackupsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::ListBackupsRequest request = new gcfav::ListBackupsRequest
+            {
+                ParentAsLocationName = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            gcfav::ListBackupsResponse response = await firestoreAdminClient.ListBackupsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackups()
+        {
+            // Snippet: ListBackups(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            gcfav::ListBackupsResponse response = firestoreAdminClient.ListBackups(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsAsync()
+        {
+            // Snippet: ListBackupsAsync(string, CallSettings)
+            // Additional: ListBackupsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            gcfav::ListBackupsResponse response = await firestoreAdminClient.ListBackupsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackups</summary>
+        public void ListBackupsResourceNames()
+        {
+            // Snippet: ListBackups(LocationName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::LocationName parent = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            gcfav::ListBackupsResponse response = firestoreAdminClient.ListBackups(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupsAsync</summary>
+        public async Task ListBackupsResourceNamesAsync()
+        {
+            // Snippet: ListBackupsAsync(LocationName, CallSettings)
+            // Additional: ListBackupsAsync(LocationName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::LocationName parent = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            gcfav::ListBackupsResponse response = await firestoreAdminClient.ListBackupsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupRequestObject()
+        {
+            // Snippet: DeleteBackup(DeleteBackupRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DeleteBackupRequest request = new gcfav::DeleteBackupRequest
+            {
+                BackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            firestoreAdminClient.DeleteBackup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupAsync(DeleteBackupRequest, CallSettings)
+            // Additional: DeleteBackupAsync(DeleteBackupRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DeleteBackupRequest request = new gcfav::DeleteBackupRequest
+            {
+                BackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            await firestoreAdminClient.DeleteBackupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackup()
+        {
+            // Snippet: DeleteBackup(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backups/[BACKUP]";
+            // Make the request
+            firestoreAdminClient.DeleteBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupAsync()
+        {
+            // Snippet: DeleteBackupAsync(string, CallSettings)
+            // Additional: DeleteBackupAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/backups/[BACKUP]";
+            // Make the request
+            await firestoreAdminClient.DeleteBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackup</summary>
+        public void DeleteBackupResourceNames()
+        {
+            // Snippet: DeleteBackup(BackupName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BackupName name = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]");
+            // Make the request
+            firestoreAdminClient.DeleteBackup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupAsync</summary>
+        public async Task DeleteBackupResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupAsync(BackupName, CallSettings)
+            // Additional: DeleteBackupAsync(BackupName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BackupName name = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]");
+            // Make the request
+            await firestoreAdminClient.DeleteBackupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatabase</summary>
+        public void RestoreDatabaseRequestObject()
+        {
+            // Snippet: RestoreDatabase(RestoreDatabaseRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::RestoreDatabaseRequest request = new gcfav::RestoreDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DatabaseId = "",
+                BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = firestoreAdminClient.RestoreDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceRestoreDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatabaseAsync</summary>
+        public async Task RestoreDatabaseRequestObjectAsync()
+        {
+            // Snippet: RestoreDatabaseAsync(RestoreDatabaseRequest, CallSettings)
+            // Additional: RestoreDatabaseAsync(RestoreDatabaseRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::RestoreDatabaseRequest request = new gcfav::RestoreDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DatabaseId = "",
+                BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = await firestoreAdminClient.RestoreDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceRestoreDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupScheduleRequestObject()
+        {
+            // Snippet: CreateBackupSchedule(CreateBackupScheduleRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::CreateBackupScheduleRequest request = new gcfav::CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                BackupSchedule = new gcfav::BackupSchedule(),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.CreateBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(CreateBackupScheduleRequest, CallSettings)
+            // Additional: CreateBackupScheduleAsync(CreateBackupScheduleRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::CreateBackupScheduleRequest request = new gcfav::CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                BackupSchedule = new gcfav::BackupSchedule(),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.CreateBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupSchedule()
+        {
+            // Snippet: CreateBackupSchedule(string, BackupSchedule, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.CreateBackupSchedule(parent, backupSchedule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(string, BackupSchedule, CallSettings)
+            // Additional: CreateBackupScheduleAsync(string, BackupSchedule, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.CreateBackupScheduleAsync(parent, backupSchedule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupScheduleResourceNames()
+        {
+            // Snippet: CreateBackupSchedule(DatabaseName, BackupSchedule, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.CreateBackupSchedule(parent, backupSchedule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(DatabaseName, BackupSchedule, CallSettings)
+            // Additional: CreateBackupScheduleAsync(DatabaseName, BackupSchedule, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.CreateBackupScheduleAsync(parent, backupSchedule);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupScheduleRequestObject()
+        {
+            // Snippet: GetBackupSchedule(GetBackupScheduleRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::GetBackupScheduleRequest request = new gcfav::GetBackupScheduleRequest
+            {
+                BackupScheduleName = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]"),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.GetBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(GetBackupScheduleRequest, CallSettings)
+            // Additional: GetBackupScheduleAsync(GetBackupScheduleRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::GetBackupScheduleRequest request = new gcfav::GetBackupScheduleRequest
+            {
+                BackupScheduleName = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]"),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.GetBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupSchedule()
+        {
+            // Snippet: GetBackupSchedule(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/backupSchedules/[BACKUP_SCHEDULE]";
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.GetBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(string, CallSettings)
+            // Additional: GetBackupScheduleAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/backupSchedules/[BACKUP_SCHEDULE]";
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.GetBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupScheduleResourceNames()
+        {
+            // Snippet: GetBackupSchedule(BackupScheduleName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BackupScheduleName name = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]");
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.GetBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(BackupScheduleName, CallSettings)
+            // Additional: GetBackupScheduleAsync(BackupScheduleName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BackupScheduleName name = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]");
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.GetBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedulesRequestObject()
+        {
+            // Snippet: ListBackupSchedules(ListBackupSchedulesRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::ListBackupSchedulesRequest request = new gcfav::ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = firestoreAdminClient.ListBackupSchedules(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesRequestObjectAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(ListBackupSchedulesRequest, CallSettings)
+            // Additional: ListBackupSchedulesAsync(ListBackupSchedulesRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::ListBackupSchedulesRequest request = new gcfav::ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = await firestoreAdminClient.ListBackupSchedulesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedules()
+        {
+            // Snippet: ListBackupSchedules(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = firestoreAdminClient.ListBackupSchedules(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(string, CallSettings)
+            // Additional: ListBackupSchedulesAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = await firestoreAdminClient.ListBackupSchedulesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedulesResourceNames()
+        {
+            // Snippet: ListBackupSchedules(DatabaseName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = firestoreAdminClient.ListBackupSchedules(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesResourceNamesAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(DatabaseName, CallSettings)
+            // Additional: ListBackupSchedulesAsync(DatabaseName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            gcfav::ListBackupSchedulesResponse response = await firestoreAdminClient.ListBackupSchedulesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupSchedule</summary>
+        public void UpdateBackupScheduleRequestObject()
+        {
+            // Snippet: UpdateBackupSchedule(UpdateBackupScheduleRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UpdateBackupScheduleRequest request = new gcfav::UpdateBackupScheduleRequest
+            {
+                BackupSchedule = new gcfav::BackupSchedule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.UpdateBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupScheduleAsync</summary>
+        public async Task UpdateBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupScheduleAsync(UpdateBackupScheduleRequest, CallSettings)
+            // Additional: UpdateBackupScheduleAsync(UpdateBackupScheduleRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UpdateBackupScheduleRequest request = new gcfav::UpdateBackupScheduleRequest
+            {
+                BackupSchedule = new gcfav::BackupSchedule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.UpdateBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupSchedule</summary>
+        public void UpdateBackupSchedule()
+        {
+            // Snippet: UpdateBackupSchedule(BackupSchedule, FieldMask, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcfav::BackupSchedule response = firestoreAdminClient.UpdateBackupSchedule(backupSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupScheduleAsync</summary>
+        public async Task UpdateBackupScheduleAsync()
+        {
+            // Snippet: UpdateBackupScheduleAsync(BackupSchedule, FieldMask, CallSettings)
+            // Additional: UpdateBackupScheduleAsync(BackupSchedule, FieldMask, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BackupSchedule backupSchedule = new gcfav::BackupSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcfav::BackupSchedule response = await firestoreAdminClient.UpdateBackupScheduleAsync(backupSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupScheduleRequestObject()
+        {
+            // Snippet: DeleteBackupSchedule(DeleteBackupScheduleRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DeleteBackupScheduleRequest request = new gcfav::DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]"),
+            };
+            // Make the request
+            firestoreAdminClient.DeleteBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(DeleteBackupScheduleRequest, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(DeleteBackupScheduleRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DeleteBackupScheduleRequest request = new gcfav::DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]"),
+            };
+            // Make the request
+            await firestoreAdminClient.DeleteBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupSchedule()
+        {
+            // Snippet: DeleteBackupSchedule(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/backupSchedules/[BACKUP_SCHEDULE]";
+            // Make the request
+            firestoreAdminClient.DeleteBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(string, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/backupSchedules/[BACKUP_SCHEDULE]";
+            // Make the request
+            await firestoreAdminClient.DeleteBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupScheduleResourceNames()
+        {
+            // Snippet: DeleteBackupSchedule(BackupScheduleName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::BackupScheduleName name = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]");
+            // Make the request
+            firestoreAdminClient.DeleteBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(BackupScheduleName, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(BackupScheduleName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::BackupScheduleName name = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]");
+            // Make the request
+            await firestoreAdminClient.DeleteBackupScheduleAsync(name);
+            // End snippet
+        }
     }
 }

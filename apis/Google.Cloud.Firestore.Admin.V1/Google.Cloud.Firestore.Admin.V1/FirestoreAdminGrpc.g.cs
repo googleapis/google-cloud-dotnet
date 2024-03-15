@@ -134,6 +134,32 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest> __Marshaller_google_firestore_admin_v1_UpdateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest> __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest> __Marshaller_google_firestore_admin_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Backup> __Marshaller_google_firestore_admin_v1_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Backup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest> __Marshaller_google_firestore_admin_v1_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse> __Marshaller_google_firestore_admin_v1_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest> __Marshaller_google_firestore_admin_v1_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest> __Marshaller_google_firestore_admin_v1_RestoreDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_CreateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> __Marshaller_google_firestore_admin_v1_BackupSchedule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_GetBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest> __Marshaller_google_firestore_admin_v1_ListBackupSchedulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse> __Marshaller_google_firestore_admin_v1_ListBackupSchedulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_UpdateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest> __Marshaller_google_firestore_admin_v1_DeleteBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
@@ -246,6 +272,78 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         "DeleteDatabase",
         __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackup",
+        __Marshaller_google_firestore_admin_v1_GetBackupRequest,
+        __Marshaller_google_firestore_admin_v1_Backup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse> __Method_ListBackups = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackups",
+        __Marshaller_google_firestore_admin_v1_ListBackupsRequest,
+        __Marshaller_google_firestore_admin_v1_ListBackupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackup = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackup",
+        __Marshaller_google_firestore_admin_v1_DeleteBackupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation> __Method_RestoreDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RestoreDatabase",
+        __Marshaller_google_firestore_admin_v1_RestoreDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> __Method_CreateBackupSchedule = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupSchedule",
+        __Marshaller_google_firestore_admin_v1_CreateBackupScheduleRequest,
+        __Marshaller_google_firestore_admin_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> __Method_GetBackupSchedule = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupSchedule",
+        __Marshaller_google_firestore_admin_v1_GetBackupScheduleRequest,
+        __Marshaller_google_firestore_admin_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse> __Method_ListBackupSchedules = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupSchedules",
+        __Marshaller_google_firestore_admin_v1_ListBackupSchedulesRequest,
+        __Marshaller_google_firestore_admin_v1_ListBackupSchedulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> __Method_UpdateBackupSchedule = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupSchedule",
+        __Marshaller_google_firestore_admin_v1_UpdateBackupScheduleRequest,
+        __Marshaller_google_firestore_admin_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackupSchedule = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupSchedule",
+        __Marshaller_google_firestore_admin_v1_DeleteBackupScheduleRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -462,6 +560,133 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatabase(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about a backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.Backup> GetBackup(global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the backups.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse> ListBackups(global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a backup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackup(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new database by restoring from an existing backup.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing backup. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// backup.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the restore, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the restore was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreDatabase(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a backup schedule on a database.
+      /// At most two backup schedules can be configured on a database, one daily
+      /// backup schedule with retention up to 7 days and one weekly backup schedule
+      /// with retention up to 14 weeks.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> CreateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> GetBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List backup schedules.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse> ListBackupSchedules(global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> UpdateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1331,6 +1556,514 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDatabase, null, options, request);
       }
+      /// <summary>
+      /// Gets information about a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.Backup GetBackup(global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.Backup GetBackup(global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.Backup> GetBackupAsync(global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.Backup> GetBackupAsync(global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse ListBackups(global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backups.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new database by restoring from an existing backup.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing backup. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// backup.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the restore, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the restore was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreDatabase(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new database by restoring from an existing backup.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing backup. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// backup.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the restore, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the restore was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RestoreDatabase(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RestoreDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new database by restoring from an existing backup.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing backup. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// backup.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the restore, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the restore was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RestoreDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new database by restoring from an existing backup.
+      ///
+      /// The new database must be in the same cloud region or multi-region location
+      /// as the existing backup. This behaves similar to
+      /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.CreateDatabase]
+      /// except instead of creating a new empty database, a new database is created
+      /// with the database type, index configuration, and documents from an existing
+      /// backup.
+      ///
+      /// The [long-running operation][google.longrunning.Operation] can be used to
+      /// track the progress of the restore, with the Operation's
+      /// [metadata][google.longrunning.Operation.metadata] field type being the
+      /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] type is the
+      /// [Database][google.firestore.admin.v1.Database] if the restore was
+      /// successful. The new database is not readable or writeable until the LRO has
+      /// completed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RestoreDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Creates a backup schedule on a database.
+      /// At most two backup schedules can be configured on a database, one daily
+      /// backup schedule with retention up to 7 days and one weekly backup schedule
+      /// with retention up to 14 weeks.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a backup schedule on a database.
+      /// At most two backup schedules can be configured on a database, one daily
+      /// backup schedule with retention up to 7 days and one weekly backup schedule
+      /// with retention up to 14 weeks.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a backup schedule on a database.
+      /// At most two backup schedules can be configured on a database, one daily
+      /// backup schedule with retention up to 7 days and one weekly backup schedule
+      /// with retention up to 14 weeks.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a backup schedule on a database.
+      /// At most two backup schedules can be configured on a database, one daily
+      /// backup schedule with retention up to 7 days and one weekly backup schedule
+      /// with retention up to 14 weeks.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// List backup schedules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List backup schedules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
+      /// <summary>
+      /// List backup schedules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List backup schedules.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirestoreAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -1358,7 +2091,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase)
-          .AddMethod(__Method_DeleteDatabase, serviceImpl.DeleteDatabase).Build();
+          .AddMethod(__Method_DeleteDatabase, serviceImpl.DeleteDatabase)
+          .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
+          .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
+          .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
+          .AddMethod(__Method_RestoreDatabase, serviceImpl.RestoreDatabase)
+          .AddMethod(__Method_CreateBackupSchedule, serviceImpl.CreateBackupSchedule)
+          .AddMethod(__Method_GetBackupSchedule, serviceImpl.GetBackupSchedule)
+          .AddMethod(__Method_ListBackupSchedules, serviceImpl.ListBackupSchedules)
+          .AddMethod(__Method_UpdateBackupSchedule, serviceImpl.UpdateBackupSchedule)
+          .AddMethod(__Method_DeleteBackupSchedule, serviceImpl.DeleteBackupSchedule).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1382,6 +2124,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
       serviceBinder.AddMethod(__Method_DeleteDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatabase));
+      serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup>(serviceImpl.GetBackup));
+      serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse>(serviceImpl.ListBackups));
+      serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));
+      serviceBinder.AddMethod(__Method_RestoreDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreDatabase));
+      serviceBinder.AddMethod(__Method_CreateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CreateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(serviceImpl.CreateBackupSchedule));
+      serviceBinder.AddMethod(__Method_GetBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(serviceImpl.GetBackupSchedule));
+      serviceBinder.AddMethod(__Method_ListBackupSchedules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupSchedulesResponse>(serviceImpl.ListBackupSchedules));
+      serviceBinder.AddMethod(__Method_UpdateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Firestore.Admin.V1.BackupSchedule>(serviceImpl.UpdateBackupSchedule));
+      serviceBinder.AddMethod(__Method_DeleteBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackupSchedule));
     }
 
   }

@@ -75,17 +75,25 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIYChBpbnB1dF91",
             "cmlfcHJlZml4GAcgASgJEhUKDW5hbWVzcGFjZV9pZHMYCCADKAkiNAoXRXhw",
             "b3J0RG9jdW1lbnRzUmVzcG9uc2USGQoRb3V0cHV0X3VyaV9wcmVmaXgYASAB",
-            "KAkiOgoIUHJvZ3Jlc3MSFgoOZXN0aW1hdGVkX3dvcmsYASABKAMSFgoOY29t",
-            "cGxldGVkX3dvcmsYAiABKAMqngEKDk9wZXJhdGlvblN0YXRlEh8KG09QRVJB",
-            "VElPTl9TVEFURV9VTlNQRUNJRklFRBAAEhAKDElOSVRJQUxJWklORxABEg4K",
-            "ClBST0NFU1NJTkcQAhIOCgpDQU5DRUxMSU5HEAMSDgoKRklOQUxJWklORxAE",
-            "Eg4KClNVQ0NFU1NGVUwQBRIKCgZGQUlMRUQQBhINCglDQU5DRUxMRUQQB0Ld",
-            "AQodY29tLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjFCDk9wZXJhdGlvblBy",
-            "b3RvUAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2Fk",
-            "bWluL2FkbWlucGI7YWRtaW5wYqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmly",
-            "ZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1p",
-            "blxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZw",
-            "cm90bzM="));
+            "KAki7QIKF1Jlc3RvcmVEYXRhYmFzZU1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUY",
+            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1l",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCg9vcGVyYXRp",
+            "b25fc3RhdGUYAyABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9w",
+            "ZXJhdGlvblN0YXRlEjgKCGRhdGFiYXNlGAQgASgJQib6QSMKIWZpcmVzdG9y",
+            "ZS5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI0CgZiYWNrdXAYBSABKAlCJPpB",
+            "IQofZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL0JhY2t1cBJAChNwcm9ncmVz",
+            "c19wZXJjZW50YWdlGAggASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
+            "MS5Qcm9ncmVzcyI6CghQcm9ncmVzcxIWCg5lc3RpbWF0ZWRfd29yaxgBIAEo",
+            "AxIWCg5jb21wbGV0ZWRfd29yaxgCIAEoAyqeAQoOT3BlcmF0aW9uU3RhdGUS",
+            "HwobT1BFUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASEAoMSU5JVElBTEla",
+            "SU5HEAESDgoKUFJPQ0VTU0lORxACEg4KCkNBTkNFTExJTkcQAxIOCgpGSU5B",
+            "TElaSU5HEAQSDgoKU1VDQ0VTU0ZVTBAFEgoKBkZBSUxFRBAGEg0KCUNBTkNF",
+            "TExFRBAHQt0BCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUIOT3Bl",
+            "cmF0aW9uUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3RvcmUv",
+            "YXBpdjEvYWRtaW4vYWRtaW5wYjthZG1pbnBiogIER0NGU6oCH0dvb2dsZS5D",
+            "bG91ZC5GaXJlc3RvcmUuQWRtaW4uVjHKAh9Hb29nbGVcQ2xvdWRcRmlyZXN0",
+            "b3JlXEFkbWluXFYx6gIjR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpBZG1p",
+            "bjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,6 +103,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "OutputUriPrefix", "NamespaceIds", "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "InputUriPrefix", "NamespaceIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseMetadata), global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "Database", "Backup", "ProgressPercentage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Progress), global::Google.Cloud.Firestore.Admin.V1.Progress.Parser, new[]{ "EstimatedWork", "CompletedWork" }, null, null, null, null)
           }));
     }
@@ -2835,6 +2844,430 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
+  /// Metadata for the [long-running operation][google.longrunning.Operation] from
+  /// the [RestoreDatabase][google.firestore.admin.v1.RestoreDatabase] request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RestoreDatabaseMetadata : pb::IMessage<RestoreDatabaseMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RestoreDatabaseMetadata> _parser = new pb::MessageParser<RestoreDatabaseMetadata>(() => new RestoreDatabaseMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RestoreDatabaseMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestoreDatabaseMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestoreDatabaseMetadata(RestoreDatabaseMetadata other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      operationState_ = other.operationState_;
+      database_ = other.database_;
+      backup_ = other.backup_;
+      progressPercentage_ = other.progressPercentage_ != null ? other.progressPercentage_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestoreDatabaseMetadata Clone() {
+      return new RestoreDatabaseMetadata(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time the restore was started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the restore finished, unset for ongoing restores.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operation_state" field.</summary>
+    public const int OperationStateFieldNumber = 3;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
+    /// <summary>
+    /// The operation state of the restore.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.OperationState OperationState {
+      get { return operationState_; }
+      set {
+        operationState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database" field.</summary>
+    public const int DatabaseFieldNumber = 4;
+    private string database_ = "";
+    /// <summary>
+    /// The name of the database being restored to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Database {
+      get { return database_; }
+      set {
+        database_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "backup" field.</summary>
+    public const int BackupFieldNumber = 5;
+    private string backup_ = "";
+    /// <summary>
+    /// The name of the backup restoring from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Backup {
+      get { return backup_; }
+      set {
+        backup_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "progress_percentage" field.</summary>
+    public const int ProgressPercentageFieldNumber = 8;
+    private global::Google.Cloud.Firestore.Admin.V1.Progress progressPercentage_;
+    /// <summary>
+    /// How far along the restore is as an estimated percentage of remaining time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Progress ProgressPercentage {
+      get { return progressPercentage_; }
+      set {
+        progressPercentage_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RestoreDatabaseMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RestoreDatabaseMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (OperationState != other.OperationState) return false;
+      if (Database != other.Database) return false;
+      if (Backup != other.Backup) return false;
+      if (!object.Equals(ProgressPercentage, other.ProgressPercentage)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= OperationState.GetHashCode();
+      if (Database.Length != 0) hash ^= Database.GetHashCode();
+      if (Backup.Length != 0) hash ^= Backup.GetHashCode();
+      if (progressPercentage_ != null) hash ^= ProgressPercentage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Database);
+      }
+      if (Backup.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Backup);
+      }
+      if (progressPercentage_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ProgressPercentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Database);
+      }
+      if (Backup.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Backup);
+      }
+      if (progressPercentage_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ProgressPercentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Database);
+      }
+      if (Backup.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Backup);
+      }
+      if (progressPercentage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProgressPercentage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RestoreDatabaseMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        OperationState = other.OperationState;
+      }
+      if (other.Database.Length != 0) {
+        Database = other.Database;
+      }
+      if (other.Backup.Length != 0) {
+        Backup = other.Backup;
+      }
+      if (other.progressPercentage_ != null) {
+        if (progressPercentage_ == null) {
+          ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+        }
+        ProgressPercentage.MergeFrom(other.ProgressPercentage);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Database = input.ReadString();
+            break;
+          }
+          case 42: {
+            Backup = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (progressPercentage_ == null) {
+              ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressPercentage);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Database = input.ReadString();
+            break;
+          }
+          case 42: {
+            Backup = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (progressPercentage_ == null) {
+              ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressPercentage);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Describes the progress of the operation.
   /// Unit of work is generic and must be interpreted based on where
   /// [Progress][google.firestore.admin.v1.Progress] is used.
@@ -2854,7 +3287,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

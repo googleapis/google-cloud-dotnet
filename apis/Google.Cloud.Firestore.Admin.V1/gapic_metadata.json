@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "FirestoreAdminClient",
           "rpcs": {
+            "CreateBackupSchedule": {
+              "methods": [
+                "CreateBackupSchedule",
+                "CreateBackupScheduleAsync"
+              ]
+            },
             "CreateDatabase": {
               "methods": [
                 "CreateDatabase",
@@ -20,6 +26,18 @@
               "methods": [
                 "CreateIndex",
                 "CreateIndexAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteBackupSchedule": {
+              "methods": [
+                "DeleteBackupSchedule",
+                "DeleteBackupScheduleAsync"
               ]
             },
             "DeleteDatabase": {
@@ -38,6 +56,18 @@
               "methods": [
                 "ExportDocuments",
                 "ExportDocumentsAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupSchedule": {
+              "methods": [
+                "GetBackupSchedule",
+                "GetBackupScheduleAsync"
               ]
             },
             "GetDatabase": {
@@ -64,6 +94,18 @@
                 "ImportDocumentsAsync"
               ]
             },
+            "ListBackupSchedules": {
+              "methods": [
+                "ListBackupSchedules",
+                "ListBackupSchedulesAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
             "ListDatabases": {
               "methods": [
                 "ListDatabases",
@@ -80,6 +122,18 @@
               "methods": [
                 "ListIndexes",
                 "ListIndexesAsync"
+              ]
+            },
+            "RestoreDatabase": {
+              "methods": [
+                "RestoreDatabase",
+                "RestoreDatabaseAsync"
+              ]
+            },
+            "UpdateBackupSchedule": {
+              "methods": [
+                "UpdateBackupSchedule",
+                "UpdateBackupScheduleAsync"
               ]
             },
             "UpdateDatabase": {

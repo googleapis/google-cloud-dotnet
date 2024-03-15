@@ -552,6 +552,54 @@ namespace Google.Cloud.Firestore.Admin.V1
         }
     }
 
+    public partial class CreateBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupScheduleName BackupScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupScheduleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupSchedulesRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupScheduleRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupScheduleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupScheduleName BackupScheduleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupScheduleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateIndexRequest
     {
         /// <summary>
@@ -645,6 +693,61 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupsRequest
+    {
+        /// <summary>
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestoreDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
         }
     }
 }
