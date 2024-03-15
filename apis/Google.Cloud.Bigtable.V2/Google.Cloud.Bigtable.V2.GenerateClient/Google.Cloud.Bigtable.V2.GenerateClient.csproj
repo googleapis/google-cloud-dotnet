@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Grpc" Version="4.6.0" />
-    <PackageReference Include="Microsoft.Build.Locator" Version="1.7.1" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.7.8" />
     
     <!-- 
       - Note: do not upgrade 4.8.0 until we're using .NET SDK v8
