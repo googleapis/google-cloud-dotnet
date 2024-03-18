@@ -1079,6 +1079,269 @@ namespace Google.Cloud.Config.V1
         public static bool operator !=(PreviewName a, PreviewName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>TerraformVersion</c> resource.</summary>
+    public sealed partial class TerraformVersionName : gax::IResourceName, sys::IEquatable<TerraformVersionName>
+    {
+        /// <summary>The possible contents of <see cref="TerraformVersionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+            /// </summary>
+            ProjectLocationTerraformVersion = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTerraformVersion = new gax::PathTemplate("projects/{project}/locations/{location}/terraformVersions/{terraform_version}");
+
+        /// <summary>Creates a <see cref="TerraformVersionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TerraformVersionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TerraformVersionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TerraformVersionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TerraformVersionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="terraformVersionId">The <c>TerraformVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TerraformVersionName"/> constructed from the provided ids.</returns>
+        public static TerraformVersionName FromProjectLocationTerraformVersion(string projectId, string locationId, string terraformVersionId) =>
+            new TerraformVersionName(ResourceNameType.ProjectLocationTerraformVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), terraformVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(terraformVersionId, nameof(terraformVersionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TerraformVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="terraformVersionId">The <c>TerraformVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TerraformVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string terraformVersionId) =>
+            FormatProjectLocationTerraformVersion(projectId, locationId, terraformVersionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TerraformVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="terraformVersionId">The <c>TerraformVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TerraformVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTerraformVersion(string projectId, string locationId, string terraformVersionId) =>
+            s_projectLocationTerraformVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(terraformVersionId, nameof(terraformVersionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TerraformVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="terraformVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TerraformVersionName"/> if successful.</returns>
+        public static TerraformVersionName Parse(string terraformVersionName) => Parse(terraformVersionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TerraformVersionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="terraformVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TerraformVersionName"/> if successful.</returns>
+        public static TerraformVersionName Parse(string terraformVersionName, bool allowUnparsed) =>
+            TryParse(terraformVersionName, allowUnparsed, out TerraformVersionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TerraformVersionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="terraformVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TerraformVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string terraformVersionName, out TerraformVersionName result) =>
+            TryParse(terraformVersionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TerraformVersionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="terraformVersionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TerraformVersionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string terraformVersionName, bool allowUnparsed, out TerraformVersionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(terraformVersionName, nameof(terraformVersionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTerraformVersion.TryParseName(terraformVersionName, out resourceName))
+            {
+                result = FromProjectLocationTerraformVersion(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(terraformVersionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TerraformVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string terraformVersionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TerraformVersionId = terraformVersionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TerraformVersionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/terraformVersions/{terraform_version}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="terraformVersionId">The <c>TerraformVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        public TerraformVersionName(string projectId, string locationId, string terraformVersionId) : this(ResourceNameType.ProjectLocationTerraformVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), terraformVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(terraformVersionId, nameof(terraformVersionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TerraformVersion</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TerraformVersionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTerraformVersion: return s_projectLocationTerraformVersion.Expand(ProjectId, LocationId, TerraformVersionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TerraformVersionName);
+
+        /// <inheritdoc/>
+        public bool Equals(TerraformVersionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TerraformVersionName a, TerraformVersionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TerraformVersionName a, TerraformVersionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ServiceAccount</c> resource.</summary>
     public sealed partial class ServiceAccountName : gax::IResourceName, sys::IEquatable<ServiceAccountName>
     {
@@ -1914,6 +2177,42 @@ namespace Google.Cloud.Config.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : PreviewName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTerraformVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::TerraformVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::TerraformVersionName TerraformVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::TerraformVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListTerraformVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TerraformVersion
+    {
+        /// <summary>
+        /// <see cref="gccv::TerraformVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::TerraformVersionName TerraformVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::TerraformVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

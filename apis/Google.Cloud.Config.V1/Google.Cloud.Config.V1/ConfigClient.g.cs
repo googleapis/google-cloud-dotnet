@@ -78,6 +78,8 @@ namespace Google.Cloud.Config.V1
             DeletePreviewSettings = existing.DeletePreviewSettings;
             DeletePreviewOperationsSettings = existing.DeletePreviewOperationsSettings.Clone();
             ExportPreviewResultSettings = existing.ExportPreviewResultSettings;
+            ListTerraformVersionsSettings = existing.ListTerraformVersionsSettings;
+            GetTerraformVersionSettings = existing.GetTerraformVersionSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -462,6 +464,30 @@ namespace Google.Cloud.Config.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ExportPreviewResultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ListTerraformVersions</c> and <c>ConfigClient.ListTerraformVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTerraformVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetTerraformVersion</c> and <c>ConfigClient.GetTerraformVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTerraformVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3070,6 +3096,254 @@ namespace Google.Cloud.Config.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ExportPreviewResultResponse> ExportPreviewResultAsync(ExportPreviewResultRequest request, st::CancellationToken cancellationToken) =>
             ExportPreviewResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(ListTerraformVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(ListTerraformVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the TerraformVersions are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTerraformVersions(new ListTerraformVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the TerraformVersions are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTerraformVersionsAsync(new ListTerraformVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the TerraformVersions are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTerraformVersions(new ListTerraformVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the TerraformVersions are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTerraformVersionsAsync(new ListTerraformVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerraformVersion GetTerraformVersion(GetTerraformVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(GetTerraformVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(GetTerraformVersionRequest request, st::CancellationToken cancellationToken) =>
+            GetTerraformVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerraformVersion GetTerraformVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTerraformVersion(new GetTerraformVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTerraformVersionAsync(new GetTerraformVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTerraformVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TerraformVersion GetTerraformVersion(TerraformVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTerraformVersion(new GetTerraformVersionRequest
+            {
+                TerraformVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(TerraformVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTerraformVersionAsync(new GetTerraformVersionRequest
+            {
+                TerraformVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the TerraformVersion. Format:
+        /// 'projects/{project_id}/locations/{location}/terraformVersions/{terraform_version}'
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(TerraformVersionName name, st::CancellationToken cancellationToken) =>
+            GetTerraformVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Config client wrapper implementation, for convenient use.</summary>
@@ -3120,6 +3394,10 @@ namespace Google.Cloud.Config.V1
         private readonly gaxgrpc::ApiCall<DeletePreviewRequest, lro::Operation> _callDeletePreview;
 
         private readonly gaxgrpc::ApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse> _callExportPreviewResult;
+
+        private readonly gaxgrpc::ApiCall<ListTerraformVersionsRequest, ListTerraformVersionsResponse> _callListTerraformVersions;
+
+        private readonly gaxgrpc::ApiCall<GetTerraformVersionRequest, TerraformVersion> _callGetTerraformVersion;
 
         /// <summary>
         /// Constructs a client wrapper for the Config service, with the specified gRPC client and settings.
@@ -3204,6 +3482,12 @@ namespace Google.Cloud.Config.V1
             _callExportPreviewResult = clientHelper.BuildApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse>("ExportPreviewResult", grpcClient.ExportPreviewResultAsync, grpcClient.ExportPreviewResult, effectiveSettings.ExportPreviewResultSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportPreviewResult);
             Modify_ExportPreviewResultApiCall(ref _callExportPreviewResult);
+            _callListTerraformVersions = clientHelper.BuildApiCall<ListTerraformVersionsRequest, ListTerraformVersionsResponse>("ListTerraformVersions", grpcClient.ListTerraformVersionsAsync, grpcClient.ListTerraformVersions, effectiveSettings.ListTerraformVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTerraformVersions);
+            Modify_ListTerraformVersionsApiCall(ref _callListTerraformVersions);
+            _callGetTerraformVersion = clientHelper.BuildApiCall<GetTerraformVersionRequest, TerraformVersion>("GetTerraformVersion", grpcClient.GetTerraformVersionAsync, grpcClient.GetTerraformVersion, effectiveSettings.GetTerraformVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTerraformVersion);
+            Modify_GetTerraformVersionApiCall(ref _callGetTerraformVersion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3250,6 +3534,10 @@ namespace Google.Cloud.Config.V1
         partial void Modify_DeletePreviewApiCall(ref gaxgrpc::ApiCall<DeletePreviewRequest, lro::Operation> call);
 
         partial void Modify_ExportPreviewResultApiCall(ref gaxgrpc::ApiCall<ExportPreviewResultRequest, ExportPreviewResultResponse> call);
+
+        partial void Modify_ListTerraformVersionsApiCall(ref gaxgrpc::ApiCall<ListTerraformVersionsRequest, ListTerraformVersionsResponse> call);
+
+        partial void Modify_GetTerraformVersionApiCall(ref gaxgrpc::ApiCall<GetTerraformVersionRequest, TerraformVersion> call);
 
         partial void OnConstruction(Config.ConfigClient grpcClient, ConfigSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3303,6 +3591,10 @@ namespace Google.Cloud.Config.V1
         partial void Modify_DeletePreviewRequest(ref DeletePreviewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportPreviewResultRequest(ref ExportPreviewResultRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTerraformVersionsRequest(ref ListTerraformVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTerraformVersionRequest(ref GetTerraformVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -3836,6 +4128,58 @@ namespace Google.Cloud.Config.V1
             Modify_ExportPreviewResultRequest(ref request, ref callSettings);
             return _callExportPreviewResult.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersions(ListTerraformVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTerraformVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTerraformVersionsRequest, ListTerraformVersionsResponse, TerraformVersion>(_callListTerraformVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+        /// given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TerraformVersion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> ListTerraformVersionsAsync(ListTerraformVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTerraformVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTerraformVersionsRequest, ListTerraformVersionsResponse, TerraformVersion>(_callListTerraformVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TerraformVersion GetTerraformVersion(GetTerraformVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTerraformVersionRequest(ref request, ref callSettings);
+            return _callGetTerraformVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details about a
+        /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TerraformVersion> GetTerraformVersionAsync(GetTerraformVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTerraformVersionRequest(ref request, ref callSettings);
+            return _callGetTerraformVersion.Async(request, callSettings);
+        }
     }
 
     public partial class ListDeploymentsRequest : gaxgrpc::IPageRequest
@@ -3851,6 +4195,10 @@ namespace Google.Cloud.Config.V1
     }
 
     public partial class ListPreviewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTerraformVersionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3882,6 +4230,14 @@ namespace Google.Cloud.Config.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Preview> GetEnumerator() => Previews.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTerraformVersionsResponse : gaxgrpc::IPageResponse<TerraformVersion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<TerraformVersion> GetEnumerator() => TerraformVersions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

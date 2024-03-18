@@ -3133,5 +3133,372 @@ namespace GoogleCSharpSnippets
             ExportPreviewResultResponse response = await configClient.ExportPreviewResultAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for ListTerraformVersions</summary>
+        public void ListTerraformVersionsRequestObject()
+        {
+            // Snippet: ListTerraformVersions(ListTerraformVersionsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TerraformVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTerraformVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTerraformVersionsAsync</summary>
+        public async Task ListTerraformVersionsRequestObjectAsync()
+        {
+            // Snippet: ListTerraformVersionsAsync(ListTerraformVersionsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTerraformVersionsRequest request = new ListTerraformVersionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TerraformVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTerraformVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTerraformVersions</summary>
+        public void ListTerraformVersions()
+        {
+            // Snippet: ListTerraformVersions(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TerraformVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTerraformVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTerraformVersionsAsync</summary>
+        public async Task ListTerraformVersionsAsync()
+        {
+            // Snippet: ListTerraformVersionsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TerraformVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTerraformVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTerraformVersions</summary>
+        public void ListTerraformVersionsResourceNames()
+        {
+            // Snippet: ListTerraformVersions(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TerraformVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTerraformVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTerraformVersionsAsync</summary>
+        public async Task ListTerraformVersionsResourceNamesAsync()
+        {
+            // Snippet: ListTerraformVersionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListTerraformVersionsResponse, TerraformVersion> response = configClient.ListTerraformVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TerraformVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTerraformVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TerraformVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TerraformVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TerraformVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersion</summary>
+        public void GetTerraformVersionRequestObject()
+        {
+            // Snippet: GetTerraformVersion(GetTerraformVersionRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetTerraformVersionRequest request = new GetTerraformVersionRequest
+            {
+                TerraformVersionName = TerraformVersionName.FromProjectLocationTerraformVersion("[PROJECT]", "[LOCATION]", "[TERRAFORM_VERSION]"),
+            };
+            // Make the request
+            TerraformVersion response = configClient.GetTerraformVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersionAsync</summary>
+        public async Task GetTerraformVersionRequestObjectAsync()
+        {
+            // Snippet: GetTerraformVersionAsync(GetTerraformVersionRequest, CallSettings)
+            // Additional: GetTerraformVersionAsync(GetTerraformVersionRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTerraformVersionRequest request = new GetTerraformVersionRequest
+            {
+                TerraformVersionName = TerraformVersionName.FromProjectLocationTerraformVersion("[PROJECT]", "[LOCATION]", "[TERRAFORM_VERSION]"),
+            };
+            // Make the request
+            TerraformVersion response = await configClient.GetTerraformVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersion</summary>
+        public void GetTerraformVersion()
+        {
+            // Snippet: GetTerraformVersion(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/terraformVersions/[TERRAFORM_VERSION]";
+            // Make the request
+            TerraformVersion response = configClient.GetTerraformVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersionAsync</summary>
+        public async Task GetTerraformVersionAsync()
+        {
+            // Snippet: GetTerraformVersionAsync(string, CallSettings)
+            // Additional: GetTerraformVersionAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/terraformVersions/[TERRAFORM_VERSION]";
+            // Make the request
+            TerraformVersion response = await configClient.GetTerraformVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersion</summary>
+        public void GetTerraformVersionResourceNames()
+        {
+            // Snippet: GetTerraformVersion(TerraformVersionName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            TerraformVersionName name = TerraformVersionName.FromProjectLocationTerraformVersion("[PROJECT]", "[LOCATION]", "[TERRAFORM_VERSION]");
+            // Make the request
+            TerraformVersion response = configClient.GetTerraformVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTerraformVersionAsync</summary>
+        public async Task GetTerraformVersionResourceNamesAsync()
+        {
+            // Snippet: GetTerraformVersionAsync(TerraformVersionName, CallSettings)
+            // Additional: GetTerraformVersionAsync(TerraformVersionName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            TerraformVersionName name = TerraformVersionName.FromProjectLocationTerraformVersion("[PROJECT]", "[LOCATION]", "[TERRAFORM_VERSION]");
+            // Make the request
+            TerraformVersion response = await configClient.GetTerraformVersionAsync(name);
+            // End snippet
+        }
     }
 }
