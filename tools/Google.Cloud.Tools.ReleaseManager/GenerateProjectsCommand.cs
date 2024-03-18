@@ -55,7 +55,6 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly bool NewMajorVersionMode = false;
 
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
-        private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
         private static readonly Regex AnyDesktopFramework = new Regex(@";net4\d+");
 
         // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
@@ -298,21 +297,6 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
         {
-            // Update any previously-defaulted versions to be explicit, if the new version is GA.
-            // (This only affects production dependencies, so is not performed in UpdateDependencyDictionary.)
-            // Implicit dependencies are always present in DefaultPackageVersions, so we don't need to worry about
-            // "internal" dependencies.
-            if (api.IsReleaseVersion && PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
-            {
-                foreach (var implicitDependency in implicitDependencies)
-                {
-                    if (!api.Dependencies.ContainsKey(implicitDependency))
-                    {
-                        api.Dependencies[implicitDependency] = DefaultPackageVersions[implicitDependency];
-                    }
-                }
-            }
-
             UpdateDependencyDictionary(api.Dependencies, "dependencies");
             UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
 
@@ -627,7 +611,7 @@ api-name: {api.Id}
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" })))
             );
-            var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
+            var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.StructuredVersion, testProject: false, apiNames: apiNames);
             WriteProjectFile(directory, propertyGroup, dependenciesElement);
         }
 
@@ -667,7 +651,7 @@ api-name: {api.Id}
                     new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013")
                 );
             string project = Path.GetFileName(directory);
-            var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
+            var dependenciesElement = CreateDependenciesElement(project, dependencies, api.StructuredVersion, testProject: true, apiNames: apiNames);
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
             dependenciesElement.Add(new XElement("Service", new XAttribute("Include", "{82a7f48d-3b50-4b1e-b82e-3ada8210c358}")));
             WriteProjectFile(directory, propertyGroup, dependenciesElement);
@@ -748,10 +732,10 @@ api-name: {api.Id}
             }
         }
 
-        private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
+        private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, StructuredVersion projectVersion, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
-                dependencies.Select(pair => CreateDependencyElement(project, pair.Key, pair.Value, stableRelease, testProject, apiNames)));
+                dependencies.Select(pair => CreateDependencyElement(project, pair.Key, pair.Value, projectVersion, testProject, apiNames)));
 
         /// <summary>
         /// Creates a single XElement for a dependency. This can be a package reference or a project reference:
@@ -764,13 +748,14 @@ api-name: {api.Id}
         /// </summary>
         /// <param name="project">The project depending on <paramref name="package"/></param>
         /// <param name="package">Package name of dependency</param>
-        /// <param name="version">Version of dependency, or "project" or "default"</param>
+        /// <param name="dependencyVersion">Version of dependency, or "project" or "default"</param>
+        /// <param name="projectVersion">Version of <paramref name="project"/>.</param>
         /// <param name="allowDefaultVersions">Whether to allow default versions for </param>
         /// <param name="apiNames">Names of all APIs in apis.json, valid for project references</param>
         /// <returns>The element to include in the project file to represent the dependency</returns>
-        private static XElement CreateDependencyElement(string project, string package, string version, bool stableRelease, bool testProject, HashSet<string> apiNames)
+        private static XElement CreateDependencyElement(string project, string package, string dependencyVersion, StructuredVersion projectVersion, bool testProject, HashSet<string> apiNames)
         {
-            if (version == ProjectVersionValue)
+            if (dependencyVersion == ProjectVersionValue)
             {
                 string path;
                 if (apiNames.Contains(package))
@@ -791,13 +776,13 @@ api-name: {api.Id}
                 return new XElement("ProjectReference", new XAttribute("Include", path));
             }
 
-            if (version == DefaultVersionValue)
+            if (dependencyVersion == DefaultVersionValue)
             {
-                if (stableRelease)
+                if (projectVersion.IsStable && projectVersion.Patch > 0)
                 {
-                    throw new UserErrorException($"Project {project} cannot use the default version for {package}");
+                    throw new UserErrorException($"Project {project} cannot use the default version for {package}. (Stable patch releases must list dependencies explicitly.)");
                 }
-                if (!DefaultPackageVersions.TryGetValue(package, out version))
+                if (!DefaultPackageVersions.TryGetValue(package, out dependencyVersion))
                 {
                     throw new UserErrorException($"Project {project} depends on default version of unknown package {package}");
                 }
@@ -807,16 +792,16 @@ api-name: {api.Id}
 
             if (!IsValidVersion())
             {
-                throw new UserErrorException($"Project {project} has invalid version '{version}' for package {package}");
+                throw new UserErrorException($"Project {project} has invalid version '{dependencyVersion}' for package {package}");
             }
             // Dependencies from production projects, other than "hidden" packages, must be stable
-            if (stableRelease && !testProject && !StableVersionPattern.IsMatch(version) && privateAssetValue != "All")
+            if (projectVersion.IsStable && !testProject && !StructuredVersion.FromString(dependencyVersion).IsStable && privateAssetValue != "All")
             {
-                throw new UserErrorException($"Project {project} uses prerelease version '{version}' for package {package}");
+                throw new UserErrorException($"Project {project} uses prerelease version '{dependencyVersion}' for package {package}");
             }
             var element = new XElement("PackageReference",
                 new XAttribute("Include", package),
-                new XAttribute("Version", GetDependencyVersionRange(package, version)));
+                new XAttribute("Version", GetDependencyVersionRange(package, dependencyVersion)));
             if (privateAssetValue != null)
             {
                 element.Add(new XAttribute("PrivateAssets", privateAssetValue));
@@ -834,8 +819,8 @@ api-name: {api.Id}
 
             // We allow MSBuild properties, e.g. $(XUnitVersion), just for test dependencies.
             bool IsValidVersion() =>
-                (testProject && version.StartsWith('$')) ||
-                AnyVersionPattern.IsMatch(version);
+                (testProject && dependencyVersion.StartsWith('$')) ||
+                AnyVersionPattern.IsMatch(dependencyVersion);
         }
 
         /// <summary>

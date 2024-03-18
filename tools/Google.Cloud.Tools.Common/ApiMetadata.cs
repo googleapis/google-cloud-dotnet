@@ -43,7 +43,6 @@ namespace Google.Cloud.Tools.Common
         // Pattern to extract the underlying API version from the package name.
         private static readonly Regex PackageIdVersionPattern = new Regex(@"\.V[1-9]\d*[-A-Za-z0-9]*$");
         private static readonly Regex PrereleaseApiPattern = new Regex(@"^V[1-9]\d*[^\d]+.*$");
-        private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
         public string Id { get; set; }
         public string Version { get; set; }
@@ -178,9 +177,6 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         [JsonIgnore]
         public string EffectivePackageOwner => PackageOwner ?? (Id.StartsWith("Google.Cloud") ? "google-cloud" : "google-apis-packages");
-
-        [JsonIgnore]
-        public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
         [JsonIgnore]
         public StructuredVersion StructuredVersion => StructuredVersion.FromString(Version);
