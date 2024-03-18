@@ -88,6 +88,12 @@
                 "GetRevisionAsync"
               ]
             },
+            "GetTerraformVersion": {
+              "methods": [
+                "GetTerraformVersion",
+                "GetTerraformVersionAsync"
+              ]
+            },
             "ImportStatefile": {
               "methods": [
                 "ImportStatefile",
@@ -116,6 +122,12 @@
               "methods": [
                 "ListRevisions",
                 "ListRevisionsAsync"
+              ]
+            },
+            "ListTerraformVersions": {
+              "methods": [
+                "ListTerraformVersions",
+                "ListTerraformVersionsAsync"
               ]
             },
             "LockDeployment": {

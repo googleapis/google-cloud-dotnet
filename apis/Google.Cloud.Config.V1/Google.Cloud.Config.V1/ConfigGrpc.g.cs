@@ -132,6 +132,14 @@ namespace Google.Cloud.Config.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ExportPreviewResultRequest> __Marshaller_google_cloud_config_v1_ExportPreviewResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ExportPreviewResultRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> __Marshaller_google_cloud_config_v1_ExportPreviewResultResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ExportPreviewResultResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListTerraformVersionsRequest> __Marshaller_google_cloud_config_v1_ListTerraformVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListTerraformVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.ListTerraformVersionsResponse> __Marshaller_google_cloud_config_v1_ListTerraformVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.ListTerraformVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.GetTerraformVersionRequest> __Marshaller_google_cloud_config_v1_GetTerraformVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.GetTerraformVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Config.V1.TerraformVersion> __Marshaller_google_cloud_config_v1_TerraformVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Config.V1.TerraformVersion.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.Config.V1.ListDeploymentsRequest, global::Google.Cloud.Config.V1.ListDeploymentsResponse>(
@@ -300,6 +308,22 @@ namespace Google.Cloud.Config.V1 {
         "ExportPreviewResult",
         __Marshaller_google_cloud_config_v1_ExportPreviewResultRequest,
         __Marshaller_google_cloud_config_v1_ExportPreviewResultResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.ListTerraformVersionsRequest, global::Google.Cloud.Config.V1.ListTerraformVersionsResponse> __Method_ListTerraformVersions = new grpc::Method<global::Google.Cloud.Config.V1.ListTerraformVersionsRequest, global::Google.Cloud.Config.V1.ListTerraformVersionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTerraformVersions",
+        __Marshaller_google_cloud_config_v1_ListTerraformVersionsRequest,
+        __Marshaller_google_cloud_config_v1_ListTerraformVersionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Config.V1.GetTerraformVersionRequest, global::Google.Cloud.Config.V1.TerraformVersion> __Method_GetTerraformVersion = new grpc::Method<global::Google.Cloud.Config.V1.GetTerraformVersionRequest, global::Google.Cloud.Config.V1.TerraformVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTerraformVersion",
+        __Marshaller_google_cloud_config_v1_GetTerraformVersionRequest,
+        __Marshaller_google_cloud_config_v1_TerraformVersion);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -563,6 +587,32 @@ namespace Google.Cloud.Config.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ExportPreviewResultResponse> ExportPreviewResult(global::Google.Cloud.Config.V1.ExportPreviewResultRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+      /// given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.ListTerraformVersionsResponse> ListTerraformVersions(global::Google.Cloud.Config.V1.ListTerraformVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details about a
+      /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Config.V1.TerraformVersion> GetTerraformVersion(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1620,6 +1670,110 @@ namespace Google.Cloud.Config.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportPreviewResult, null, options, request);
       }
+      /// <summary>
+      /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+      /// given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListTerraformVersionsResponse ListTerraformVersions(global::Google.Cloud.Config.V1.ListTerraformVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTerraformVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+      /// given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.ListTerraformVersionsResponse ListTerraformVersions(global::Google.Cloud.Config.V1.ListTerraformVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTerraformVersions, null, options, request);
+      }
+      /// <summary>
+      /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+      /// given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListTerraformVersionsResponse> ListTerraformVersionsAsync(global::Google.Cloud.Config.V1.ListTerraformVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTerraformVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists [TerraformVersion][google.cloud.config.v1.TerraformVersion]s in a
+      /// given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.ListTerraformVersionsResponse> ListTerraformVersionsAsync(global::Google.Cloud.Config.V1.ListTerraformVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTerraformVersions, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.TerraformVersion GetTerraformVersion(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTerraformVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Config.V1.TerraformVersion GetTerraformVersion(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTerraformVersion, null, options, request);
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.TerraformVersion> GetTerraformVersionAsync(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTerraformVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details about a
+      /// [TerraformVersion][google.cloud.config.v1.TerraformVersion].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Config.V1.TerraformVersion> GetTerraformVersionAsync(global::Google.Cloud.Config.V1.GetTerraformVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTerraformVersion, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConfigClient NewInstance(ClientBaseConfiguration configuration)
@@ -1654,7 +1808,9 @@ namespace Google.Cloud.Config.V1 {
           .AddMethod(__Method_GetPreview, serviceImpl.GetPreview)
           .AddMethod(__Method_ListPreviews, serviceImpl.ListPreviews)
           .AddMethod(__Method_DeletePreview, serviceImpl.DeletePreview)
-          .AddMethod(__Method_ExportPreviewResult, serviceImpl.ExportPreviewResult).Build();
+          .AddMethod(__Method_ExportPreviewResult, serviceImpl.ExportPreviewResult)
+          .AddMethod(__Method_ListTerraformVersions, serviceImpl.ListTerraformVersions)
+          .AddMethod(__Method_GetTerraformVersion, serviceImpl.GetTerraformVersion).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1685,6 +1841,8 @@ namespace Google.Cloud.Config.V1 {
       serviceBinder.AddMethod(__Method_ListPreviews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListPreviewsRequest, global::Google.Cloud.Config.V1.ListPreviewsResponse>(serviceImpl.ListPreviews));
       serviceBinder.AddMethod(__Method_DeletePreview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.DeletePreviewRequest, global::Google.LongRunning.Operation>(serviceImpl.DeletePreview));
       serviceBinder.AddMethod(__Method_ExportPreviewResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ExportPreviewResultRequest, global::Google.Cloud.Config.V1.ExportPreviewResultResponse>(serviceImpl.ExportPreviewResult));
+      serviceBinder.AddMethod(__Method_ListTerraformVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.ListTerraformVersionsRequest, global::Google.Cloud.Config.V1.ListTerraformVersionsResponse>(serviceImpl.ListTerraformVersions));
+      serviceBinder.AddMethod(__Method_GetTerraformVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Config.V1.GetTerraformVersionRequest, global::Google.Cloud.Config.V1.TerraformVersion>(serviceImpl.GetTerraformVersion));
     }
 
   }
