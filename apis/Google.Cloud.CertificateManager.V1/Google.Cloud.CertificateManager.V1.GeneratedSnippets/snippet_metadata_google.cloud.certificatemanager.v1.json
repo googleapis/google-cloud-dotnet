@@ -6869,6 +6869,1418 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_sync",
+      "title": "ListTrustConfigsRequestObject",
+      "description": "Snippet for ListTrustConfigs",
+      "file": "CertificateManagerClient.ListTrustConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_async",
+      "title": "ListTrustConfigsRequestObjectAsync",
+      "description": "Snippet for ListTrustConfigsAsync",
+      "file": "CertificateManagerClient.ListTrustConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_sync_flattened",
+      "title": "ListTrustConfigs",
+      "description": "Snippet for ListTrustConfigs",
+      "file": "CertificateManagerClient.ListTrustConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_async_flattened",
+      "title": "ListTrustConfigsAsync",
+      "description": "Snippet for ListTrustConfigsAsync",
+      "file": "CertificateManagerClient.ListTrustConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_sync_flattened_resourceNames",
+      "title": "ListTrustConfigsResourceNames",
+      "description": "Snippet for ListTrustConfigs",
+      "file": "CertificateManagerClient.ListTrustConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigs",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_ListTrustConfigs_async_flattened_resourceNames",
+      "title": "ListTrustConfigsResourceNamesAsync",
+      "description": "Snippet for ListTrustConfigsAsync",
+      "file": "CertificateManagerClient.ListTrustConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTrustConfigsAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.ListTrustConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse, Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "ListTrustConfigs",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.ListTrustConfigs",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_sync",
+      "title": "GetTrustConfigRequestObject",
+      "description": "Snippet for GetTrustConfig",
+      "file": "CertificateManagerClient.GetTrustConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CertificateManager.V1.TrustConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_async",
+      "title": "GetTrustConfigRequestObjectAsync",
+      "description": "Snippet for GetTrustConfigAsync",
+      "file": "CertificateManagerClient.GetTrustConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.GetTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_sync_flattened",
+      "title": "GetTrustConfig",
+      "description": "Snippet for GetTrustConfig",
+      "file": "CertificateManagerClient.GetTrustConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CertificateManager.V1.TrustConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_async_flattened",
+      "title": "GetTrustConfigAsync",
+      "description": "Snippet for GetTrustConfigAsync",
+      "file": "CertificateManagerClient.GetTrustConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_sync_flattened_resourceNames",
+      "title": "GetTrustConfigResourceNames",
+      "description": "Snippet for GetTrustConfig",
+      "file": "CertificateManagerClient.GetTrustConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CertificateManager.V1.TrustConfig",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_GetTrustConfig_async_flattened_resourceNames",
+      "title": "GetTrustConfigResourceNamesAsync",
+      "description": "Snippet for GetTrustConfigAsync",
+      "file": "CertificateManagerClient.GetTrustConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.GetTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CertificateManager.V1.TrustConfig>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "GetTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.GetTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_sync",
+      "title": "CreateTrustConfigRequestObject",
+      "description": "Snippet for CreateTrustConfig",
+      "file": "CertificateManagerClient.CreateTrustConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_async",
+      "title": "CreateTrustConfigRequestObjectAsync",
+      "description": "Snippet for CreateTrustConfigAsync",
+      "file": "CertificateManagerClient.CreateTrustConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_sync_flattened",
+      "title": "CreateTrustConfig",
+      "description": "Snippet for CreateTrustConfig",
+      "file": "CertificateManagerClient.CreateTrustConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "trustConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_async_flattened",
+      "title": "CreateTrustConfigAsync",
+      "description": "Snippet for CreateTrustConfigAsync",
+      "file": "CertificateManagerClient.CreateTrustConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "trustConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_sync_flattened_resourceNames",
+      "title": "CreateTrustConfigResourceNames",
+      "description": "Snippet for CreateTrustConfig",
+      "file": "CertificateManagerClient.CreateTrustConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "trustConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_CreateTrustConfig_async_flattened_resourceNames",
+      "title": "CreateTrustConfigResourceNamesAsync",
+      "description": "Snippet for CreateTrustConfigAsync",
+      "file": "CertificateManagerClient.CreateTrustConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.CreateTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "trustConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "CreateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.CreateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateTrustConfig_sync",
+      "title": "UpdateTrustConfigRequestObject",
+      "description": "Snippet for UpdateTrustConfig",
+      "file": "CertificateManagerClient.UpdateTrustConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateTrustConfig_async",
+      "title": "UpdateTrustConfigRequestObjectAsync",
+      "description": "Snippet for UpdateTrustConfigAsync",
+      "file": "CertificateManagerClient.UpdateTrustConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateTrustConfig_sync_flattened",
+      "title": "UpdateTrustConfig",
+      "description": "Snippet for UpdateTrustConfig",
+      "file": "CertificateManagerClient.UpdateTrustConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_UpdateTrustConfig_async_flattened",
+      "title": "UpdateTrustConfigAsync",
+      "description": "Snippet for UpdateTrustConfigAsync",
+      "file": "CertificateManagerClient.UpdateTrustConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.UpdateTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfig",
+            "name": "trustConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CertificateManager.V1.TrustConfig, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.UpdateTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_sync",
+      "title": "DeleteTrustConfigRequestObject",
+      "description": "Snippet for DeleteTrustConfig",
+      "file": "CertificateManagerClient.DeleteTrustConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_async",
+      "title": "DeleteTrustConfigRequestObjectAsync",
+      "description": "Snippet for DeleteTrustConfigAsync",
+      "file": "CertificateManagerClient.DeleteTrustConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_sync_flattened",
+      "title": "DeleteTrustConfig",
+      "description": "Snippet for DeleteTrustConfig",
+      "file": "CertificateManagerClient.DeleteTrustConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_async_flattened",
+      "title": "DeleteTrustConfigAsync",
+      "description": "Snippet for DeleteTrustConfigAsync",
+      "file": "CertificateManagerClient.DeleteTrustConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_sync_flattened_resourceNames",
+      "title": "DeleteTrustConfigResourceNames",
+      "description": "Snippet for DeleteTrustConfig",
+      "file": "CertificateManagerClient.DeleteTrustConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfig",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "certificatemanager_v1_generated_CertificateManager_DeleteTrustConfig_async_flattened_resourceNames",
+      "title": "DeleteTrustConfigResourceNamesAsync",
+      "description": "Snippet for DeleteTrustConfigAsync",
+      "file": "CertificateManagerClient.DeleteTrustConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrustConfigAsync",
+        "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient.DeleteTrustConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CertificateManager.V1.TrustConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.CertificateManager.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CertificateManagerClient",
+          "fullName": "Google.Cloud.CertificateManager.V1.CertificateManagerClient"
+        },
+        "method": {
+          "shortName": "DeleteTrustConfig",
+          "fullName": "google.cloud.certificatemanager.v1.CertificateManager.DeleteTrustConfig",
+          "service": {
+            "shortName": "CertificateManager",
+            "fullName": "google.cloud.certificatemanager.v1.CertificateManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -40,6 +40,12 @@
                 "CreateDnsAuthorizationAsync"
               ]
             },
+            "CreateTrustConfig": {
+              "methods": [
+                "CreateTrustConfig",
+                "CreateTrustConfigAsync"
+              ]
+            },
             "DeleteCertificate": {
               "methods": [
                 "DeleteCertificate",
@@ -68,6 +74,12 @@
               "methods": [
                 "DeleteDnsAuthorization",
                 "DeleteDnsAuthorizationAsync"
+              ]
+            },
+            "DeleteTrustConfig": {
+              "methods": [
+                "DeleteTrustConfig",
+                "DeleteTrustConfigAsync"
               ]
             },
             "GetCertificate": {
@@ -100,6 +112,12 @@
                 "GetDnsAuthorizationAsync"
               ]
             },
+            "GetTrustConfig": {
+              "methods": [
+                "GetTrustConfig",
+                "GetTrustConfigAsync"
+              ]
+            },
             "ListCertificateIssuanceConfigs": {
               "methods": [
                 "ListCertificateIssuanceConfigs",
@@ -130,6 +148,12 @@
                 "ListDnsAuthorizationsAsync"
               ]
             },
+            "ListTrustConfigs": {
+              "methods": [
+                "ListTrustConfigs",
+                "ListTrustConfigsAsync"
+              ]
+            },
             "UpdateCertificate": {
               "methods": [
                 "UpdateCertificate",
@@ -152,6 +176,12 @@
               "methods": [
                 "UpdateDnsAuthorization",
                 "UpdateDnsAuthorizationAsync"
+              ]
+            },
+            "UpdateTrustConfig": {
+              "methods": [
+                "UpdateTrustConfig",
+                "UpdateTrustConfigAsync"
               ]
             }
           }

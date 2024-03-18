@@ -3,7 +3,7 @@
 //     source: google/cloud/certificatemanager/v1/certificate_manager.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -158,6 +158,20 @@ namespace Google.Cloud.CertificateManager.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_CreateCertificateIssuanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_DeleteCertificateIssuanceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest> __Marshaller_google_cloud_certificatemanager_v1_ListTrustConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse> __Marshaller_google_cloud_certificatemanager_v1_ListTrustConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_GetTrustConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.TrustConfig> __Marshaller_google_cloud_certificatemanager_v1_TrustConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.TrustConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_CreateTrustConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_UpdateTrustConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest> __Marshaller_google_cloud_certificatemanager_v1_DeleteTrustConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificatesRequest, global::Google.Cloud.CertificateManager.V1.ListCertificatesResponse> __Method_ListCertificates = new grpc::Method<global::Google.Cloud.CertificateManager.V1.ListCertificatesRequest, global::Google.Cloud.CertificateManager.V1.ListCertificatesResponse>(
@@ -349,6 +363,46 @@ namespace Google.Cloud.CertificateManager.V1 {
         __ServiceName,
         "DeleteCertificateIssuanceConfig",
         __Marshaller_google_cloud_certificatemanager_v1_DeleteCertificateIssuanceConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse> __Method_ListTrustConfigs = new grpc::Method<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTrustConfigs",
+        __Marshaller_google_cloud_certificatemanager_v1_ListTrustConfigsRequest,
+        __Marshaller_google_cloud_certificatemanager_v1_ListTrustConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest, global::Google.Cloud.CertificateManager.V1.TrustConfig> __Method_GetTrustConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest, global::Google.Cloud.CertificateManager.V1.TrustConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTrustConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_GetTrustConfigRequest,
+        __Marshaller_google_cloud_certificatemanager_v1_TrustConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest, global::Google.LongRunning.Operation> __Method_CreateTrustConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateTrustConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_CreateTrustConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateTrustConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateTrustConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_UpdateTrustConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteTrustConfig = new grpc::Method<global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTrustConfig",
+        __Marshaller_google_cloud_certificatemanager_v1_DeleteTrustConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -647,6 +701,66 @@ namespace Google.Cloud.CertificateManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteCertificateIssuanceConfig(global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists TrustConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse> ListTrustConfigs(global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CertificateManager.V1.TrustConfig> GetTrustConfig(global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new TrustConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateTrustConfig(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a TrustConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateTrustConfig(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTrustConfig(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1840,6 +1954,246 @@ namespace Google.Cloud.CertificateManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCertificateIssuanceConfig, null, options, request);
       }
+      /// <summary>
+      /// Lists TrustConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse ListTrustConfigs(global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTrustConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists TrustConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse ListTrustConfigs(global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTrustConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists TrustConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse> ListTrustConfigsAsync(global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTrustConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists TrustConfigs in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse> ListTrustConfigsAsync(global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTrustConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.TrustConfig GetTrustConfig(global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrustConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CertificateManager.V1.TrustConfig GetTrustConfig(global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.TrustConfig> GetTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrustConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CertificateManager.V1.TrustConfig> GetTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TrustConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateTrustConfig(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTrustConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TrustConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateTrustConfig(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new TrustConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateTrustConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new TrustConfig in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateTrustConfig(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTrustConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateTrustConfig(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateTrustConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTrustConfig(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTrustConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTrustConfig(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTrustConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTrustConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single TrustConfig.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTrustConfigAsync(global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTrustConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CertificateManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1877,7 +2231,12 @@ namespace Google.Cloud.CertificateManager.V1 {
           .AddMethod(__Method_ListCertificateIssuanceConfigs, serviceImpl.ListCertificateIssuanceConfigs)
           .AddMethod(__Method_GetCertificateIssuanceConfig, serviceImpl.GetCertificateIssuanceConfig)
           .AddMethod(__Method_CreateCertificateIssuanceConfig, serviceImpl.CreateCertificateIssuanceConfig)
-          .AddMethod(__Method_DeleteCertificateIssuanceConfig, serviceImpl.DeleteCertificateIssuanceConfig).Build();
+          .AddMethod(__Method_DeleteCertificateIssuanceConfig, serviceImpl.DeleteCertificateIssuanceConfig)
+          .AddMethod(__Method_ListTrustConfigs, serviceImpl.ListTrustConfigs)
+          .AddMethod(__Method_GetTrustConfig, serviceImpl.GetTrustConfig)
+          .AddMethod(__Method_CreateTrustConfig, serviceImpl.CreateTrustConfig)
+          .AddMethod(__Method_UpdateTrustConfig, serviceImpl.UpdateTrustConfig)
+          .AddMethod(__Method_DeleteTrustConfig, serviceImpl.DeleteTrustConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1911,6 +2270,11 @@ namespace Google.Cloud.CertificateManager.V1 {
       serviceBinder.AddMethod(__Method_GetCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.GetCertificateIssuanceConfigRequest, global::Google.Cloud.CertificateManager.V1.CertificateIssuanceConfig>(serviceImpl.GetCertificateIssuanceConfig));
       serviceBinder.AddMethod(__Method_CreateCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.CreateCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCertificateIssuanceConfig));
       serviceBinder.AddMethod(__Method_DeleteCertificateIssuanceConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.DeleteCertificateIssuanceConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCertificateIssuanceConfig));
+      serviceBinder.AddMethod(__Method_ListTrustConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.ListTrustConfigsRequest, global::Google.Cloud.CertificateManager.V1.ListTrustConfigsResponse>(serviceImpl.ListTrustConfigs));
+      serviceBinder.AddMethod(__Method_GetTrustConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.GetTrustConfigRequest, global::Google.Cloud.CertificateManager.V1.TrustConfig>(serviceImpl.GetTrustConfig));
+      serviceBinder.AddMethod(__Method_CreateTrustConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.CreateTrustConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateTrustConfig));
+      serviceBinder.AddMethod(__Method_UpdateTrustConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.UpdateTrustConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTrustConfig));
+      serviceBinder.AddMethod(__Method_DeleteTrustConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CertificateManager.V1.DeleteTrustConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTrustConfig));
     }
 
   }

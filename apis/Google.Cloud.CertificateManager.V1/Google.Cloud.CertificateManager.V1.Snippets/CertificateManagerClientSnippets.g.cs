@@ -4264,5 +4264,880 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListTrustConfigs</summary>
+        public void ListTrustConfigsRequestObject()
+        {
+            // Snippet: ListTrustConfigs(ListTrustConfigsRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TrustConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTrustConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTrustConfigsAsync</summary>
+        public async Task ListTrustConfigsRequestObjectAsync()
+        {
+            // Snippet: ListTrustConfigsAsync(ListTrustConfigsRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTrustConfigsRequest request = new ListTrustConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TrustConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTrustConfigs</summary>
+        public void ListTrustConfigs()
+        {
+            // Snippet: ListTrustConfigs(string, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TrustConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTrustConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTrustConfigsAsync</summary>
+        public async Task ListTrustConfigsAsync()
+        {
+            // Snippet: ListTrustConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TrustConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTrustConfigs</summary>
+        public void ListTrustConfigsResourceNames()
+        {
+            // Snippet: ListTrustConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TrustConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTrustConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTrustConfigsAsync</summary>
+        public async Task ListTrustConfigsResourceNamesAsync()
+        {
+            // Snippet: ListTrustConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> response = certificateManagerClient.ListTrustConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TrustConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTrustConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TrustConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TrustConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TrustConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfig</summary>
+        public void GetTrustConfigRequestObject()
+        {
+            // Snippet: GetTrustConfig(GetTrustConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            GetTrustConfigRequest request = new GetTrustConfigRequest
+            {
+                TrustConfigName = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]"),
+            };
+            // Make the request
+            TrustConfig response = certificateManagerClient.GetTrustConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfigAsync</summary>
+        public async Task GetTrustConfigRequestObjectAsync()
+        {
+            // Snippet: GetTrustConfigAsync(GetTrustConfigRequest, CallSettings)
+            // Additional: GetTrustConfigAsync(GetTrustConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTrustConfigRequest request = new GetTrustConfigRequest
+            {
+                TrustConfigName = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]"),
+            };
+            // Make the request
+            TrustConfig response = await certificateManagerClient.GetTrustConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfig</summary>
+        public void GetTrustConfig()
+        {
+            // Snippet: GetTrustConfig(string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/trustConfigs/[TRUST_CONFIG]";
+            // Make the request
+            TrustConfig response = certificateManagerClient.GetTrustConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfigAsync</summary>
+        public async Task GetTrustConfigAsync()
+        {
+            // Snippet: GetTrustConfigAsync(string, CallSettings)
+            // Additional: GetTrustConfigAsync(string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/trustConfigs/[TRUST_CONFIG]";
+            // Make the request
+            TrustConfig response = await certificateManagerClient.GetTrustConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfig</summary>
+        public void GetTrustConfigResourceNames()
+        {
+            // Snippet: GetTrustConfig(TrustConfigName, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            TrustConfigName name = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]");
+            // Make the request
+            TrustConfig response = certificateManagerClient.GetTrustConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTrustConfigAsync</summary>
+        public async Task GetTrustConfigResourceNamesAsync()
+        {
+            // Snippet: GetTrustConfigAsync(TrustConfigName, CallSettings)
+            // Additional: GetTrustConfigAsync(TrustConfigName, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            TrustConfigName name = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]");
+            // Make the request
+            TrustConfig response = await certificateManagerClient.GetTrustConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfig</summary>
+        public void CreateTrustConfigRequestObject()
+        {
+            // Snippet: CreateTrustConfig(CreateTrustConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            CreateTrustConfigRequest request = new CreateTrustConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TrustConfigId = "",
+                TrustConfig = new TrustConfig(),
+            };
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = certificateManagerClient.CreateTrustConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfigAsync</summary>
+        public async Task CreateTrustConfigRequestObjectAsync()
+        {
+            // Snippet: CreateTrustConfigAsync(CreateTrustConfigRequest, CallSettings)
+            // Additional: CreateTrustConfigAsync(CreateTrustConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateTrustConfigRequest request = new CreateTrustConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                TrustConfigId = "",
+                TrustConfig = new TrustConfig(),
+            };
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = await certificateManagerClient.CreateTrustConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfig</summary>
+        public void CreateTrustConfig()
+        {
+            // Snippet: CreateTrustConfig(string, TrustConfig, string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            TrustConfig trustConfig = new TrustConfig();
+            string trustConfigId = "";
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = certificateManagerClient.CreateTrustConfig(parent, trustConfig, trustConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfigAsync</summary>
+        public async Task CreateTrustConfigAsync()
+        {
+            // Snippet: CreateTrustConfigAsync(string, TrustConfig, string, CallSettings)
+            // Additional: CreateTrustConfigAsync(string, TrustConfig, string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            TrustConfig trustConfig = new TrustConfig();
+            string trustConfigId = "";
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = await certificateManagerClient.CreateTrustConfigAsync(parent, trustConfig, trustConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfig</summary>
+        public void CreateTrustConfigResourceNames()
+        {
+            // Snippet: CreateTrustConfig(LocationName, TrustConfig, string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            TrustConfig trustConfig = new TrustConfig();
+            string trustConfigId = "";
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = certificateManagerClient.CreateTrustConfig(parent, trustConfig, trustConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceCreateTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateTrustConfigAsync</summary>
+        public async Task CreateTrustConfigResourceNamesAsync()
+        {
+            // Snippet: CreateTrustConfigAsync(LocationName, TrustConfig, string, CallSettings)
+            // Additional: CreateTrustConfigAsync(LocationName, TrustConfig, string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            TrustConfig trustConfig = new TrustConfig();
+            string trustConfigId = "";
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = await certificateManagerClient.CreateTrustConfigAsync(parent, trustConfig, trustConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceCreateTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTrustConfig</summary>
+        public void UpdateTrustConfigRequestObject()
+        {
+            // Snippet: UpdateTrustConfig(UpdateTrustConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            UpdateTrustConfigRequest request = new UpdateTrustConfigRequest
+            {
+                TrustConfig = new TrustConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = certificateManagerClient.UpdateTrustConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceUpdateTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTrustConfigAsync</summary>
+        public async Task UpdateTrustConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateTrustConfigAsync(UpdateTrustConfigRequest, CallSettings)
+            // Additional: UpdateTrustConfigAsync(UpdateTrustConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateTrustConfigRequest request = new UpdateTrustConfigRequest
+            {
+                TrustConfig = new TrustConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = await certificateManagerClient.UpdateTrustConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceUpdateTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTrustConfig</summary>
+        public void UpdateTrustConfig()
+        {
+            // Snippet: UpdateTrustConfig(TrustConfig, FieldMask, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            TrustConfig trustConfig = new TrustConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = certificateManagerClient.UpdateTrustConfig(trustConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceUpdateTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateTrustConfigAsync</summary>
+        public async Task UpdateTrustConfigAsync()
+        {
+            // Snippet: UpdateTrustConfigAsync(TrustConfig, FieldMask, CallSettings)
+            // Additional: UpdateTrustConfigAsync(TrustConfig, FieldMask, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            TrustConfig trustConfig = new TrustConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<TrustConfig, OperationMetadata> response = await certificateManagerClient.UpdateTrustConfigAsync(trustConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TrustConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TrustConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TrustConfig, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceUpdateTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TrustConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfig</summary>
+        public void DeleteTrustConfigRequestObject()
+        {
+            // Snippet: DeleteTrustConfig(DeleteTrustConfigRequest, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            DeleteTrustConfigRequest request = new DeleteTrustConfigRequest
+            {
+                TrustConfigName = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteTrustConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfigAsync</summary>
+        public async Task DeleteTrustConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteTrustConfigAsync(DeleteTrustConfigRequest, CallSettings)
+            // Additional: DeleteTrustConfigAsync(DeleteTrustConfigRequest, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteTrustConfigRequest request = new DeleteTrustConfigRequest
+            {
+                TrustConfigName = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteTrustConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfig</summary>
+        public void DeleteTrustConfig()
+        {
+            // Snippet: DeleteTrustConfig(string, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/trustConfigs/[TRUST_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteTrustConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfigAsync</summary>
+        public async Task DeleteTrustConfigAsync()
+        {
+            // Snippet: DeleteTrustConfigAsync(string, CallSettings)
+            // Additional: DeleteTrustConfigAsync(string, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/trustConfigs/[TRUST_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteTrustConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfig</summary>
+        public void DeleteTrustConfigResourceNames()
+        {
+            // Snippet: DeleteTrustConfig(TrustConfigName, CallSettings)
+            // Create client
+            CertificateManagerClient certificateManagerClient = CertificateManagerClient.Create();
+            // Initialize request argument(s)
+            TrustConfigName name = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = certificateManagerClient.DeleteTrustConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = certificateManagerClient.PollOnceDeleteTrustConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrustConfigAsync</summary>
+        public async Task DeleteTrustConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteTrustConfigAsync(TrustConfigName, CallSettings)
+            // Additional: DeleteTrustConfigAsync(TrustConfigName, CancellationToken)
+            // Create client
+            CertificateManagerClient certificateManagerClient = await CertificateManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            TrustConfigName name = TrustConfigName.FromProjectLocationTrustConfig("[PROJECT]", "[LOCATION]", "[TRUST_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await certificateManagerClient.DeleteTrustConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await certificateManagerClient.PollOnceDeleteTrustConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

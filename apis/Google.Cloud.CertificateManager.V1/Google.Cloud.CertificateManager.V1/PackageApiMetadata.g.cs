@@ -68,6 +68,7 @@ namespace Google.Cloud.CertificateManager.V1
         {
             yield return CertificateIssuanceConfigReflection.Descriptor;
             yield return CertificateManagerReflection.Descriptor;
+            yield return TrustConfigReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
