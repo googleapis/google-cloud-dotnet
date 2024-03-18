@@ -87,6 +87,14 @@ namespace Google.Cloud.CertificateManager.V1
             CreateCertificateIssuanceConfigOperationsSettings = existing.CreateCertificateIssuanceConfigOperationsSettings.Clone();
             DeleteCertificateIssuanceConfigSettings = existing.DeleteCertificateIssuanceConfigSettings;
             DeleteCertificateIssuanceConfigOperationsSettings = existing.DeleteCertificateIssuanceConfigOperationsSettings.Clone();
+            ListTrustConfigsSettings = existing.ListTrustConfigsSettings;
+            GetTrustConfigSettings = existing.GetTrustConfigSettings;
+            CreateTrustConfigSettings = existing.CreateTrustConfigSettings;
+            CreateTrustConfigOperationsSettings = existing.CreateTrustConfigOperationsSettings.Clone();
+            UpdateTrustConfigSettings = existing.UpdateTrustConfigSettings;
+            UpdateTrustConfigOperationsSettings = existing.UpdateTrustConfigOperationsSettings.Clone();
+            DeleteTrustConfigSettings = existing.DeleteTrustConfigSettings;
+            DeleteTrustConfigOperationsSettings = existing.DeleteTrustConfigOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -795,6 +803,123 @@ namespace Google.Cloud.CertificateManager.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteCertificateIssuanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.ListTrustConfigs</c> and <c>CertificateManagerClient.ListTrustConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTrustConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.GetTrustConfig</c> and <c>CertificateManagerClient.GetTrustConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTrustConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.CreateTrustConfig</c> and <c>CertificateManagerClient.CreateTrustConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateTrustConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.CreateTrustConfig</c> and
+        /// <c>CertificateManagerClient.CreateTrustConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateTrustConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.UpdateTrustConfig</c> and <c>CertificateManagerClient.UpdateTrustConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateTrustConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.UpdateTrustConfig</c> and
+        /// <c>CertificateManagerClient.UpdateTrustConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateTrustConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CertificateManagerClient.DeleteTrustConfig</c> and <c>CertificateManagerClient.DeleteTrustConfigAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTrustConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CertificateManagerClient.DeleteTrustConfig</c> and
+        /// <c>CertificateManagerClient.DeleteTrustConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteTrustConfigOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4182,6 +4307,671 @@ namespace Google.Cloud.CertificateManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteCertificateIssuanceConfigAsync(CertificateIssuanceConfigName name, st::CancellationToken cancellationToken) =>
             DeleteCertificateIssuanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(ListTrustConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(ListTrustConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the TrustConfigs should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTrustConfigs(new ListTrustConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the TrustConfigs should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTrustConfigsAsync(new ListTrustConfigsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the TrustConfigs should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTrustConfigs(new ListTrustConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the TrustConfigs should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTrustConfigsAsync(new ListTrustConfigsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TrustConfig GetTrustConfig(GetTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(GetTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(GetTrustConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetTrustConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TrustConfig GetTrustConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTrustConfig(new GetTrustConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTrustConfigAsync(new GetTrustConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTrustConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TrustConfig GetTrustConfig(TrustConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTrustConfig(new GetTrustConfigRequest
+            {
+                TrustConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(TrustConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTrustConfigAsync(new GetTrustConfigRequest
+            {
+                TrustConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to describe. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TrustConfig> GetTrustConfigAsync(TrustConfigName name, st::CancellationToken cancellationToken) =>
+            GetTrustConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> CreateTrustConfig(CreateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(CreateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(CreateTrustConfigRequest request, st::CancellationToken cancellationToken) =>
+            CreateTrustConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateTrustConfig</c>.</summary>
+        public virtual lro::OperationsClient CreateTrustConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateTrustConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> PollOnceCreateTrustConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrustConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateTrustConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> PollOnceCreateTrustConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrustConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> CreateTrustConfig(string parent, TrustConfig trustConfig, string trustConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTrustConfig(new CreateTrustConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TrustConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(trustConfigId, nameof(trustConfigId)),
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(string parent, TrustConfig trustConfig, string trustConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTrustConfigAsync(new CreateTrustConfigRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                TrustConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(trustConfigId, nameof(trustConfigId)),
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(string parent, TrustConfig trustConfig, string trustConfigId, st::CancellationToken cancellationToken) =>
+            CreateTrustConfigAsync(parent, trustConfig, trustConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> CreateTrustConfig(gagr::LocationName parent, TrustConfig trustConfig, string trustConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTrustConfig(new CreateTrustConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TrustConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(trustConfigId, nameof(trustConfigId)),
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(gagr::LocationName parent, TrustConfig trustConfig, string trustConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateTrustConfigAsync(new CreateTrustConfigRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                TrustConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(trustConfigId, nameof(trustConfigId)),
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the TrustConfig. Must be in the format
+        /// `projects/*/locations/*`.
+        /// </param>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to create.
+        /// </param>
+        /// <param name="trustConfigId">
+        /// Required. A user-provided name of the TrustConfig. Must match the regexp
+        /// `[a-z0-9-]{1,63}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(gagr::LocationName parent, TrustConfig trustConfig, string trustConfigId, st::CancellationToken cancellationToken) =>
+            CreateTrustConfigAsync(parent, trustConfig, trustConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> UpdateTrustConfig(UpdateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> UpdateTrustConfigAsync(UpdateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> UpdateTrustConfigAsync(UpdateTrustConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateTrustConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateTrustConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateTrustConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateTrustConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> PollOnceUpdateTrustConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrustConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateTrustConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> PollOnceUpdateTrustConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TrustConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TrustConfig, OperationMetadata> UpdateTrustConfig(TrustConfig trustConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTrustConfig(new UpdateTrustConfigRequest
+            {
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> UpdateTrustConfigAsync(TrustConfig trustConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateTrustConfigAsync(new UpdateTrustConfigRequest
+            {
+                TrustConfig = gax::GaxPreconditions.CheckNotNull(trustConfig, nameof(trustConfig)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="trustConfig">
+        /// Required. A definition of the TrustConfig to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource. For the `FieldMask`
+        /// definition, see
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TrustConfig, OperationMetadata>> UpdateTrustConfigAsync(TrustConfig trustConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateTrustConfigAsync(trustConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTrustConfig(DeleteTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(DeleteTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(DeleteTrustConfigRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTrustConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteTrustConfig</c>.</summary>
+        public virtual lro::OperationsClient DeleteTrustConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteTrustConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteTrustConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteTrustConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteTrustConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTrustConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTrustConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrustConfig(new DeleteTrustConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrustConfigAsync(new DeleteTrustConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTrustConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTrustConfig(TrustConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrustConfig(new DeleteTrustConfigRequest
+            {
+                TrustConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(TrustConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrustConfigAsync(new DeleteTrustConfigRequest
+            {
+                TrustConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the TrustConfig to delete. Must be in the format
+        /// `projects/*/locations/*/trustConfigs/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(TrustConfigName name, st::CancellationToken cancellationToken) =>
+            DeleteTrustConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CertificateManager client wrapper implementation, for convenient use.</summary>
@@ -4263,6 +5053,16 @@ namespace Google.Cloud.CertificateManager.V1
 
         private readonly gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> _callDeleteCertificateIssuanceConfig;
 
+        private readonly gaxgrpc::ApiCall<ListTrustConfigsRequest, ListTrustConfigsResponse> _callListTrustConfigs;
+
+        private readonly gaxgrpc::ApiCall<GetTrustConfigRequest, TrustConfig> _callGetTrustConfig;
+
+        private readonly gaxgrpc::ApiCall<CreateTrustConfigRequest, lro::Operation> _callCreateTrustConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateTrustConfigRequest, lro::Operation> _callUpdateTrustConfig;
+
+        private readonly gaxgrpc::ApiCall<DeleteTrustConfigRequest, lro::Operation> _callDeleteTrustConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the CertificateManager service, with the specified gRPC client and settings.
         /// </summary>
@@ -4288,6 +5088,9 @@ namespace Google.Cloud.CertificateManager.V1
             DeleteDnsAuthorizationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDnsAuthorizationOperationsSettings, logger);
             CreateCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateIssuanceConfigOperationsSettings, logger);
             DeleteCertificateIssuanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateIssuanceConfigOperationsSettings, logger);
+            CreateTrustConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTrustConfigOperationsSettings, logger);
+            UpdateTrustConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTrustConfigOperationsSettings, logger);
+            DeleteTrustConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTrustConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCertificates = clientHelper.BuildApiCall<ListCertificatesRequest, ListCertificatesResponse>("ListCertificates", grpcClient.ListCertificatesAsync, grpcClient.ListCertificates, effectiveSettings.ListCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCertificates);
@@ -4361,6 +5164,21 @@ namespace Google.Cloud.CertificateManager.V1
             _callDeleteCertificateIssuanceConfig = clientHelper.BuildApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation>("DeleteCertificateIssuanceConfig", grpcClient.DeleteCertificateIssuanceConfigAsync, grpcClient.DeleteCertificateIssuanceConfig, effectiveSettings.DeleteCertificateIssuanceConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCertificateIssuanceConfig);
             Modify_DeleteCertificateIssuanceConfigApiCall(ref _callDeleteCertificateIssuanceConfig);
+            _callListTrustConfigs = clientHelper.BuildApiCall<ListTrustConfigsRequest, ListTrustConfigsResponse>("ListTrustConfigs", grpcClient.ListTrustConfigsAsync, grpcClient.ListTrustConfigs, effectiveSettings.ListTrustConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTrustConfigs);
+            Modify_ListTrustConfigsApiCall(ref _callListTrustConfigs);
+            _callGetTrustConfig = clientHelper.BuildApiCall<GetTrustConfigRequest, TrustConfig>("GetTrustConfig", grpcClient.GetTrustConfigAsync, grpcClient.GetTrustConfig, effectiveSettings.GetTrustConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTrustConfig);
+            Modify_GetTrustConfigApiCall(ref _callGetTrustConfig);
+            _callCreateTrustConfig = clientHelper.BuildApiCall<CreateTrustConfigRequest, lro::Operation>("CreateTrustConfig", grpcClient.CreateTrustConfigAsync, grpcClient.CreateTrustConfig, effectiveSettings.CreateTrustConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateTrustConfig);
+            Modify_CreateTrustConfigApiCall(ref _callCreateTrustConfig);
+            _callUpdateTrustConfig = clientHelper.BuildApiCall<UpdateTrustConfigRequest, lro::Operation>("UpdateTrustConfig", grpcClient.UpdateTrustConfigAsync, grpcClient.UpdateTrustConfig, effectiveSettings.UpdateTrustConfigSettings).WithGoogleRequestParam("trust_config.name", request => request.TrustConfig?.Name);
+            Modify_ApiCall(ref _callUpdateTrustConfig);
+            Modify_UpdateTrustConfigApiCall(ref _callUpdateTrustConfig);
+            _callDeleteTrustConfig = clientHelper.BuildApiCall<DeleteTrustConfigRequest, lro::Operation>("DeleteTrustConfig", grpcClient.DeleteTrustConfigAsync, grpcClient.DeleteTrustConfig, effectiveSettings.DeleteTrustConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTrustConfig);
+            Modify_DeleteTrustConfigApiCall(ref _callDeleteTrustConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4413,6 +5231,16 @@ namespace Google.Cloud.CertificateManager.V1
         partial void Modify_CreateCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<CreateCertificateIssuanceConfigRequest, lro::Operation> call);
 
         partial void Modify_DeleteCertificateIssuanceConfigApiCall(ref gaxgrpc::ApiCall<DeleteCertificateIssuanceConfigRequest, lro::Operation> call);
+
+        partial void Modify_ListTrustConfigsApiCall(ref gaxgrpc::ApiCall<ListTrustConfigsRequest, ListTrustConfigsResponse> call);
+
+        partial void Modify_GetTrustConfigApiCall(ref gaxgrpc::ApiCall<GetTrustConfigRequest, TrustConfig> call);
+
+        partial void Modify_CreateTrustConfigApiCall(ref gaxgrpc::ApiCall<CreateTrustConfigRequest, lro::Operation> call);
+
+        partial void Modify_UpdateTrustConfigApiCall(ref gaxgrpc::ApiCall<UpdateTrustConfigRequest, lro::Operation> call);
+
+        partial void Modify_DeleteTrustConfigApiCall(ref gaxgrpc::ApiCall<DeleteTrustConfigRequest, lro::Operation> call);
 
         partial void OnConstruction(CertificateManager.CertificateManagerClient grpcClient, CertificateManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4469,6 +5297,16 @@ namespace Google.Cloud.CertificateManager.V1
         partial void Modify_CreateCertificateIssuanceConfigRequest(ref CreateCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteCertificateIssuanceConfigRequest(ref DeleteCertificateIssuanceConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTrustConfigsRequest(ref ListTrustConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTrustConfigRequest(ref GetTrustConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateTrustConfigRequest(ref CreateTrustConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateTrustConfigRequest(ref UpdateTrustConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTrustConfigRequest(ref DeleteTrustConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Certificates in a given project and location.
@@ -5091,6 +5929,135 @@ namespace Google.Cloud.CertificateManager.V1
             Modify_DeleteCertificateIssuanceConfigRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteCertificateIssuanceConfig.Async(request, callSettings).ConfigureAwait(false), DeleteCertificateIssuanceConfigOperationsClient);
         }
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TrustConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigs(ListTrustConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTrustConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTrustConfigsRequest, ListTrustConfigsResponse, TrustConfig>(_callListTrustConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists TrustConfigs in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TrustConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTrustConfigsResponse, TrustConfig> ListTrustConfigsAsync(ListTrustConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTrustConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTrustConfigsRequest, ListTrustConfigsResponse, TrustConfig>(_callListTrustConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TrustConfig GetTrustConfig(GetTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTrustConfigRequest(ref request, ref callSettings);
+            return _callGetTrustConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TrustConfig> GetTrustConfigAsync(GetTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTrustConfigRequest(ref request, ref callSettings);
+            return _callGetTrustConfig.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateTrustConfig</c>.</summary>
+        public override lro::OperationsClient CreateTrustConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TrustConfig, OperationMetadata> CreateTrustConfig(CreateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<TrustConfig, OperationMetadata>(_callCreateTrustConfig.Sync(request, callSettings), CreateTrustConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new TrustConfig in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TrustConfig, OperationMetadata>> CreateTrustConfigAsync(CreateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<TrustConfig, OperationMetadata>(await _callCreateTrustConfig.Async(request, callSettings).ConfigureAwait(false), CreateTrustConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateTrustConfig</c>.</summary>
+        public override lro::OperationsClient UpdateTrustConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TrustConfig, OperationMetadata> UpdateTrustConfig(UpdateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<TrustConfig, OperationMetadata>(_callUpdateTrustConfig.Sync(request, callSettings), UpdateTrustConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TrustConfig, OperationMetadata>> UpdateTrustConfigAsync(UpdateTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<TrustConfig, OperationMetadata>(await _callUpdateTrustConfig.Async(request, callSettings).ConfigureAwait(false), UpdateTrustConfigOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteTrustConfig</c>.</summary>
+        public override lro::OperationsClient DeleteTrustConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteTrustConfig(DeleteTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteTrustConfig.Sync(request, callSettings), DeleteTrustConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single TrustConfig.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTrustConfigAsync(DeleteTrustConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTrustConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteTrustConfig.Async(request, callSettings).ConfigureAwait(false), DeleteTrustConfigOperationsClient);
+        }
     }
 
     public partial class ListCertificatesRequest : gaxgrpc::IPageRequest
@@ -5110,6 +6077,10 @@ namespace Google.Cloud.CertificateManager.V1
     }
 
     public partial class ListCertificateIssuanceConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTrustConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5149,6 +6120,14 @@ namespace Google.Cloud.CertificateManager.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<CertificateIssuanceConfig> GetEnumerator() => CertificateIssuanceConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTrustConfigsResponse : gaxgrpc::IPageResponse<TrustConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<TrustConfig> GetEnumerator() => TrustConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
