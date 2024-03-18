@@ -957,7 +957,7 @@
       "type": "rest",
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
-        "Google.Api.Gax.Rest": "4.6.0",
+        "Google.Api.Gax.Rest": "4.7.0",
         "Google.Apis.Bigquery.v2": "1.67.0.3331"
       },
       "testDependencies": {
@@ -1005,7 +1005,7 @@
         "Google.LongRunning": "3.1.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.6.0"
+        "Google.Api.Gax.Grpc.Testing": "4.7.0"
       },
       "shortName": "bigtableadmin",
       "serviceConfigFile": "bigtableadmin_v2.yaml",
@@ -1022,7 +1022,7 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.6.0",
+        "Google.Api.Gax": "4.7.0",
         "Google.Protobuf": "3.25.0"
       }
     },
@@ -1044,7 +1044,7 @@
         "Google.Cloud.Bigtable.Common.V2": "3.1.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.6.0",
+        "Google.Api.Gax.Grpc.Testing": "4.7.0",
         "Google.Cloud.Bigtable.Admin.V2": "project"
       },
       "shortName": "bigtable",
@@ -1746,7 +1746,7 @@
         "System.Linq.Async": "6.0.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.6.0",
+        "Google.Api.Gax.Grpc.Testing": "4.7.0",
         "Google.Cloud.Firestore.Admin.V1": "3.6.0"
       },
       "shortName": "datastore",
@@ -1916,7 +1916,7 @@
         "System.Diagnostics.StackTrace": "4.3.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0",
+        "Google.Api.Gax.Testing": "4.7.0",
         "Google.Cloud.ErrorReporting.V1Beta1": "3.0.0-beta03",
         "Microsoft.Extensions.Hosting": "6.0.1"
       }
@@ -2353,8 +2353,8 @@
         "System.Linq.Async": "6.0.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Grpc.Testing": "4.6.0",
-        "Google.Api.Gax.Testing": "4.6.0",
+        "Google.Api.Gax.Grpc.Testing": "4.7.0",
+        "Google.Api.Gax.Testing": "4.7.0",
         "Google.Cloud.Firestore.Admin.V1": "3.6.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
@@ -2379,7 +2379,7 @@
         "firebase"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "4.6.0",
+        "Google.Api.Gax.Grpc": "4.7.0",
         "Google.Cloud.Location": "2.1.0",
         "Google.LongRunning": "3.1.0",
         "Grpc.Core": "2.46.6"
@@ -2884,7 +2884,7 @@
         "log4net": "2.0.14"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0"
+        "Google.Api.Gax.Testing": "4.7.0"
       }
     },
     {
@@ -2926,7 +2926,7 @@
         "NLog": "5.2.8"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0"
+        "Google.Api.Gax.Testing": "4.7.0"
       }
     },
     {
@@ -3507,7 +3507,7 @@
       ],
       "dependencies": {
         "Google.Api.CommonProtos": "2.14.0",
-        "Google.Api.Gax": "4.6.0"
+        "Google.Api.Gax": "4.7.0"
       },
       "noVersionHistory": true,
       "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place.",
@@ -3725,7 +3725,7 @@
         "Google.Cloud.Iam.V1": "3.1.0"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0",
+        "Google.Api.Gax.Testing": "4.7.0",
         "Google.Apis.CloudResourceManager.v1": "1.67.0.3314",
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "Microsoft.Extensions.Hosting": "6.0.1",
@@ -4499,8 +4499,8 @@
       },
       "testDependencies": {
         "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-        "Google.Api.Gax.Grpc.Testing": "4.6.0",
-        "Google.Api.Gax.Testing": "4.6.0",
+        "Google.Api.Gax.Grpc.Testing": "4.7.0",
+        "Google.Api.Gax.Testing": "4.7.0",
         "Microsoft.Extensions.Configuration": "6.0.1",
         "Microsoft.Extensions.DependencyInjection": "6.0.1",
         "Xunit.Combinatorial": "1.6.24"
@@ -4516,7 +4516,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.6.0"
+        "Google.Api.Gax": "4.7.0"
       },
       "noVersionHistory": true
     },
@@ -4621,11 +4621,11 @@
       "type": "rest",
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
-        "Google.Api.Gax.Rest": "4.6.0",
+        "Google.Api.Gax.Rest": "4.7.0",
         "Google.Apis.Storage.v1": "1.67.0.3326"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0",
+        "Google.Api.Gax.Testing": "4.7.0",
         "Google.Apis.Iam.v1": "1.67.0.3304",
         "Google.Cloud.PubSub.V1": "project"
       },
@@ -4974,7 +4974,7 @@
       "type": "rest",
       "description": "Recommended Google client library to access the Translate v2 API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
       "dependencies": {
-        "Google.Api.Gax.Rest": "4.6.0",
+        "Google.Api.Gax.Rest": "4.7.0",
         "Google.Apis.Translate.v2": "1.67.0.875"
       },
       "tags": [
@@ -5244,7 +5244,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.6.0"
+        "Google.Api.Gax": "4.7.0"
       },
       "noVersionHistory": true
     },
@@ -5258,7 +5258,7 @@
         "Spanner"
       ],
       "dependencies": {
-        "Google.Api.Gax": "4.6.0"
+        "Google.Api.Gax": "4.7.0"
       },
       "noVersionHistory": true
     },
@@ -5442,7 +5442,7 @@
       ],
       "dependencies": {},
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.6.0"
+        "Google.Api.Gax.Testing": "4.7.0"
       },
       "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml",
