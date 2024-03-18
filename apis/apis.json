@@ -4887,6 +4887,30 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Storage.Control.V2",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Cloud Storage",
+      "productUrl": "https://cloud.google.com/storage/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud Storage Control API (v2), providing control-plane functionality for Google Cloud Storage.",
+      "tags": [
+        "storage",
+        "admin",
+        "control",
+        "control-plane",
+        "gcs"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/storage/control/v2",
+      "includeCommonResourcesProto": true,
+      "shortName": "storage",
+      "serviceConfigFile": "storage_v2.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Storage.V1",
       "productName": "Google Cloud Storage",
       "productUrl": "https://cloud.google.com/storage/",
