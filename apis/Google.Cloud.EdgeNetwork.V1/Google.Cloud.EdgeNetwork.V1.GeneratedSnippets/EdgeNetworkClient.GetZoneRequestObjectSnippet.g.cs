@@ -34,12 +34,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = EdgeNetworkClient.Create();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
-            {
-                ZoneName = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]"),
-            };
+#pragma warning disable CS0612
+            GetZoneRequest request = new GetZoneRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Zone response = edgeNetworkClient.GetZone(request);
+#pragma warning restore CS0612
         }
     }
     // [END edgenetwork_v1_generated_EdgeNetwork_GetZone_sync]
