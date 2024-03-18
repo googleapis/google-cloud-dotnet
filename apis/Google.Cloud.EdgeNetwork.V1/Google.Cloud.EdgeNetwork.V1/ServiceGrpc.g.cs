@@ -384,11 +384,13 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       }
 
       /// <summary>
+      /// Deprecated: not implemented.
       /// Lists Zones in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EdgeNetwork.V1.ListZonesResponse> ListZones(global::Google.Cloud.EdgeNetwork.V1.ListZonesRequest request, grpc::ServerCallContext context)
       {
@@ -396,11 +398,13 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       }
 
       /// <summary>
+      /// Deprecated: not implemented.
       /// Gets details of a single Zone.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EdgeNetwork.V1.Zone> GetZone(global::Google.Cloud.EdgeNetwork.V1.GetZoneRequest request, grpc::ServerCallContext context)
       {
@@ -761,6 +765,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_InitializeZone, null, options, request);
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Lists Zones in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -768,23 +773,27 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EdgeNetwork.V1.ListZonesResponse ListZones(global::Google.Cloud.EdgeNetwork.V1.ListZonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListZones(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Lists Zones in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EdgeNetwork.V1.ListZonesResponse ListZones(global::Google.Cloud.EdgeNetwork.V1.ListZonesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListZones, null, options, request);
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Lists Zones in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -792,23 +801,27 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EdgeNetwork.V1.ListZonesResponse> ListZonesAsync(global::Google.Cloud.EdgeNetwork.V1.ListZonesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListZonesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Lists Zones in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EdgeNetwork.V1.ListZonesResponse> ListZonesAsync(global::Google.Cloud.EdgeNetwork.V1.ListZonesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListZones, null, options, request);
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Gets details of a single Zone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -816,23 +829,27 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EdgeNetwork.V1.Zone GetZone(global::Google.Cloud.EdgeNetwork.V1.GetZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetZone(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Gets details of a single Zone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EdgeNetwork.V1.Zone GetZone(global::Google.Cloud.EdgeNetwork.V1.GetZoneRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetZone, null, options, request);
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Gets details of a single Zone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -840,17 +857,20 @@ namespace Google.Cloud.EdgeNetwork.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EdgeNetwork.V1.Zone> GetZoneAsync(global::Google.Cloud.EdgeNetwork.V1.GetZoneRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetZoneAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: not implemented.
       /// Gets details of a single Zone.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EdgeNetwork.V1.Zone> GetZoneAsync(global::Google.Cloud.EdgeNetwork.V1.GetZoneRequest request, grpc::CallOptions options)
       {

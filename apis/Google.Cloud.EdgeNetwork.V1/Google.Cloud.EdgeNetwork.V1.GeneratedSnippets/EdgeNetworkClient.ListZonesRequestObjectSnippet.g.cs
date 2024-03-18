@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START edgenetwork_v1_generated_EdgeNetwork_ListZones_sync]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.EdgeNetwork.V1;
     using System;
 
@@ -37,14 +36,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = EdgeNetworkClient.Create();
             // Initialize request argument(s)
-            ListZonesRequest request = new ListZonesRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+#pragma warning disable CS0612
+            ListZonesRequest request = new ListZonesRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZones(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Zone item in response)
@@ -54,7 +52,9 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListZonesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

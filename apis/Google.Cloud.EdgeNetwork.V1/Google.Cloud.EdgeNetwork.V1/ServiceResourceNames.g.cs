@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcev = Google.Cloud.EdgeNetwork.V1;
+using sys = System;
 
 namespace Google.Cloud.EdgeNetwork.V1
 {
@@ -25,6 +26,7 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -37,6 +39,7 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// <summary>
         /// <see cref="gcev::ZoneName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcev::ZoneName ZoneName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcev::ZoneName.Parse(Name, allowUnparsed: true);

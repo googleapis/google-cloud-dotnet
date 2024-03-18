@@ -40,7 +40,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZonesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Zone item) =>
@@ -50,7 +52,9 @@ namespace GoogleCSharpSnippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

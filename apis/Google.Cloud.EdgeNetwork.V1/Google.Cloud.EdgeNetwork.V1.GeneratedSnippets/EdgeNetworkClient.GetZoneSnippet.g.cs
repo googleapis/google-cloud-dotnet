@@ -36,7 +36,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/zones/[ZONE]";
             // Make the request
+#pragma warning disable CS0612
             Zone response = edgeNetworkClient.GetZone(name);
+#pragma warning restore CS0612
         }
     }
     // [END edgenetwork_v1_generated_EdgeNetwork_GetZone_sync_flattened]

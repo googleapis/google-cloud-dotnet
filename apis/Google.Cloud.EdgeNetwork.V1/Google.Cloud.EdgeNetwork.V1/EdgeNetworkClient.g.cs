@@ -922,24 +922,33 @@ namespace Google.Cloud.EdgeNetwork.V1
             InitializeZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(ListZonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(ListZonesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="parent">
@@ -955,8 +964,11 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListZones(new ListZonesRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -964,6 +976,7 @@ namespace Google.Cloud.EdgeNetwork.V1
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="parent">
@@ -979,8 +992,11 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListZonesAsync(new ListZonesRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -988,6 +1004,7 @@ namespace Google.Cloud.EdgeNetwork.V1
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="parent">
@@ -1003,8 +1020,11 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListZones(new ListZonesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -1012,6 +1032,7 @@ namespace Google.Cloud.EdgeNetwork.V1
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="parent">
@@ -1027,8 +1048,11 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListZonesAsync(new ListZonesRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
@@ -1036,33 +1060,46 @@ namespace Google.Cloud.EdgeNetwork.V1
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual Zone GetZone(GetZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<Zone> GetZoneAsync(GetZoneRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<Zone> GetZoneAsync(GetZoneRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetZoneAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1070,13 +1107,17 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Zone GetZone(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             GetZone(new GetZoneRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1084,13 +1125,17 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Zone> GetZoneAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             GetZoneAsync(new GetZoneRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1098,10 +1143,12 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Zone> GetZoneAsync(string name, st::CancellationToken cancellationToken) =>
             GetZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1109,13 +1156,17 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Zone GetZone(ZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             GetZone(new GetZoneRequest
+#pragma warning restore CS0612
             {
                 ZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1123,13 +1174,17 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Zone> GetZoneAsync(ZoneName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             GetZoneAsync(new GetZoneRequest
+#pragma warning restore CS0612
             {
                 ZoneName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="name">
@@ -1137,6 +1192,7 @@ namespace Google.Cloud.EdgeNetwork.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Zone> GetZoneAsync(ZoneName name, st::CancellationToken cancellationToken) =>
             GetZoneAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4066,9 +4122,11 @@ namespace Google.Cloud.EdgeNetwork.V1
     {
         private readonly gaxgrpc::ApiCall<InitializeZoneRequest, InitializeZoneResponse> _callInitializeZone;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<ListZonesRequest, ListZonesResponse> _callListZones;
 
         private readonly gaxgrpc::ApiCall<GetZoneRequest, Zone> _callGetZone;
+#pragma warning restore CS0612
 
         private readonly gaxgrpc::ApiCall<ListNetworksRequest, ListNetworksResponse> _callListNetworks;
 
@@ -4141,10 +4199,14 @@ namespace Google.Cloud.EdgeNetwork.V1
             _callInitializeZone = clientHelper.BuildApiCall<InitializeZoneRequest, InitializeZoneResponse>("InitializeZone", grpcClient.InitializeZoneAsync, grpcClient.InitializeZone, effectiveSettings.InitializeZoneSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callInitializeZone);
             Modify_InitializeZoneApiCall(ref _callInitializeZone);
+#pragma warning disable CS0612
             _callListZones = clientHelper.BuildApiCall<ListZonesRequest, ListZonesResponse>("ListZones", grpcClient.ListZonesAsync, grpcClient.ListZones, effectiveSettings.ListZonesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListZones);
             Modify_ListZonesApiCall(ref _callListZones);
+#pragma warning disable CS0612
             _callGetZone = clientHelper.BuildApiCall<GetZoneRequest, Zone>("GetZone", grpcClient.GetZoneAsync, grpcClient.GetZone, effectiveSettings.GetZoneSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetZone);
             Modify_GetZoneApiCall(ref _callGetZone);
             _callListNetworks = clientHelper.BuildApiCall<ListNetworksRequest, ListNetworksResponse>("ListNetworks", grpcClient.ListNetworksAsync, grpcClient.ListNetworks, effectiveSettings.ListNetworksSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -4223,9 +4285,11 @@ namespace Google.Cloud.EdgeNetwork.V1
 
         partial void Modify_InitializeZoneApiCall(ref gaxgrpc::ApiCall<InitializeZoneRequest, InitializeZoneResponse> call);
 
+#pragma warning disable CS0612
         partial void Modify_ListZonesApiCall(ref gaxgrpc::ApiCall<ListZonesRequest, ListZonesResponse> call);
 
         partial void Modify_GetZoneApiCall(ref gaxgrpc::ApiCall<GetZoneRequest, Zone> call);
+#pragma warning restore CS0612
 
         partial void Modify_ListNetworksApiCall(ref gaxgrpc::ApiCall<ListNetworksRequest, ListNetworksResponse> call);
 
@@ -4283,9 +4347,11 @@ namespace Google.Cloud.EdgeNetwork.V1
 
         partial void Modify_InitializeZoneRequest(ref InitializeZoneRequest request, ref gaxgrpc::CallSettings settings);
 
+#pragma warning disable CS0612
         partial void Modify_ListZonesRequest(ref ListZonesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetZoneRequest(ref GetZoneRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         partial void Modify_ListNetworksRequest(ref ListNetworksRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4358,48 +4424,68 @@ namespace Google.Cloud.EdgeNetwork.V1
         }
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListZonesResponse, Zone> ListZones(ListZonesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListZonesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListZonesRequest, ListZonesResponse, Zone>(_callListZones, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Lists Zones in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Zone"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListZonesResponse, Zone> ListZonesAsync(ListZonesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListZonesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListZonesRequest, ListZonesResponse, Zone>(_callListZones, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override Zone GetZone(GetZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetZoneRequest(ref request, ref callSettings);
             return _callGetZone.Sync(request, callSettings);
         }
 
         /// <summary>
+        /// Deprecated: not implemented.
         /// Gets details of a single Zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<Zone> GetZoneAsync(GetZoneRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetZoneRequest(ref request, ref callSettings);
             return _callGetZone.Async(request, callSettings);

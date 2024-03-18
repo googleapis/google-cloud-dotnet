@@ -122,14 +122,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = EdgeNetworkClient.Create();
             // Initialize request argument(s)
-            ListZonesRequest request = new ListZonesRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+#pragma warning disable CS0612
+            ListZonesRequest request = new ListZonesRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZones(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Zone item in response)
@@ -139,7 +138,9 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListZonesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -172,14 +173,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = await EdgeNetworkClient.CreateAsync();
             // Initialize request argument(s)
-            ListZonesRequest request = new ListZonesRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+#pragma warning disable CS0612
+            ListZonesRequest request = new ListZonesRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZonesAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Zone item) =>
@@ -189,7 +189,9 @@ namespace GoogleCSharpSnippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -224,7 +226,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZones(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Zone item in response)
@@ -234,7 +238,9 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListZonesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -269,7 +275,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZonesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Zone item) =>
@@ -279,7 +287,9 @@ namespace GoogleCSharpSnippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -314,7 +324,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZones(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Zone item in response)
@@ -324,7 +336,9 @@ namespace GoogleCSharpSnippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListZonesResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -359,7 +373,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListZonesResponse, Zone> response = edgeNetworkClient.ListZonesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Zone item) =>
@@ -369,7 +385,9 @@ namespace GoogleCSharpSnippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListZonesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -402,12 +420,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = EdgeNetworkClient.Create();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
-            {
-                ZoneName = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]"),
-            };
+#pragma warning disable CS0612
+            GetZoneRequest request = new GetZoneRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Zone response = edgeNetworkClient.GetZone(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -419,12 +438,13 @@ namespace GoogleCSharpSnippets
             // Create client
             EdgeNetworkClient edgeNetworkClient = await EdgeNetworkClient.CreateAsync();
             // Initialize request argument(s)
-            GetZoneRequest request = new GetZoneRequest
-            {
-                ZoneName = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]"),
-            };
+#pragma warning disable CS0612
+            GetZoneRequest request = new GetZoneRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Zone response = await edgeNetworkClient.GetZoneAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -437,7 +457,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/zones/[ZONE]";
             // Make the request
+#pragma warning disable CS0612
             Zone response = edgeNetworkClient.GetZone(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -451,7 +473,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/zones/[ZONE]";
             // Make the request
+#pragma warning disable CS0612
             Zone response = await edgeNetworkClient.GetZoneAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -464,7 +488,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ZoneName name = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]");
             // Make the request
+#pragma warning disable CS0612
             Zone response = edgeNetworkClient.GetZone(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -478,7 +504,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ZoneName name = ZoneName.FromProjectLocationZone("[PROJECT]", "[LOCATION]", "[ZONE]");
             // Make the request
+#pragma warning disable CS0612
             Zone response = await edgeNetworkClient.GetZoneAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
