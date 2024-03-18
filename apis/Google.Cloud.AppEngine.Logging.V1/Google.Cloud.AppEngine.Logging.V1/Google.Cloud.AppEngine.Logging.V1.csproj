@@ -9,6 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Cloud.Logging.Type" Version="[4.0.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Logging.Type" Version="[4.1.0, 5.0.0)" />
   </ItemGroup>
 </Project>
