@@ -114,18 +114,12 @@ specified:
   and Grpc.Core
 - "rest" projects always have a dependency on Google.Api.Gax.Rest
 
-The best dependency version to specify depends on the version of the
-project itself:
-
-- For GA versions, every version must be explicitly specified. This
-  prevents us from accidentally upgrading a dependency minor version
-  when creating a patch version of the project itself.
-- For alpha/beta versions, specify as little as possible: allow
-  the "grpc"/"rest" dependencies above to be added automatically,
-  and use the "default" version number where possible. Explicit
-  versions should only be used either for dependencies without
-  default versions, or when the desired version is ahead of the
-  default version, for example to use a GAX prerelease.
+Note that as of 2024-03-18, even GA versions can use default
+dependencies. This means that when creating a patch release (which
+is relatively rare) the previous version's dependencies should be
+checked in NuGet and the same versions (or patch-level only changes)
+should be explicitly listed. This is checked within the project
+generator.
 
 ## Releasing
 
