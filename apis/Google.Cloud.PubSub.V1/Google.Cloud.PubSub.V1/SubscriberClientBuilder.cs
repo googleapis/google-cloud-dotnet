@@ -113,6 +113,7 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
         var clientCount = ClientCount ?? Environment.ProcessorCount;
         var clients = new SubscriberServiceApiClient[clientCount];
         var settings = Settings?.Clone() ?? new SubscriberClient.Settings();
+        settings.Logger = Logger;
         var shutdowns = new Func<Task>[clientCount];
         for (int i = 0; i < clientCount; i++)
         {
