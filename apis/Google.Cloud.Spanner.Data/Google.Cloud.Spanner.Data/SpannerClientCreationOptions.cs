@@ -63,6 +63,8 @@ namespace Google.Cloud.Spanner.Data
 
         internal bool LeaderRoutingEnabled { get; }
 
+        internal DirectedReadOptions DirectedReadOptions { get; }
+
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
 
@@ -92,6 +94,7 @@ namespace Google.Cloud.Spanner.Data
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
             LeaderRoutingEnabled = builder.EnableLeaderRouting;
+            DirectedReadOptions = builder.DirectedReadOptions;
 
             // TODO: add a way of setting this from the SpannerConnectionStringBuilder.
             GrpcAdapter = GrpcAdapter.GetFallbackAdapter(SpannerClient.ServiceMetadata);
@@ -109,6 +112,7 @@ namespace Google.Cloud.Spanner.Data
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark &&
             LeaderRoutingEnabled == other.LeaderRoutingEnabled &&
+            Equals(DirectedReadOptions, other.DirectedReadOptions) &&
             GrpcAdapter.Equals(other.GrpcAdapter);
 
         public override int GetHashCode()
@@ -124,6 +128,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
                 hash = hash * 23 + LeaderRoutingEnabled.GetHashCode();
+                hash = hash * 23 + (DirectedReadOptions?.GetHashCode() ?? 0);
                 hash = hash * 23 + GrpcAdapter.GetHashCode();
                 return hash;
             }
@@ -152,6 +157,7 @@ namespace Google.Cloud.Spanner.Data
             builder.Append($"; MaximumGrpcChannels: {MaximumGrpcChannels}");
             builder.Append($"; MaximumConcurrentStreamsLowWatermark: {MaximumConcurrentStreamsLowWatermark}");
             builder.Append($"; LeaderRoutingEnabled: {LeaderRoutingEnabled}");
+            builder.Append($"; DirectedReadOptions: {DirectedReadOptions?.ToString() ?? "None"}");
             builder.Append($"; GrpcAdapter: {GrpcAdapter.GetType().Name}");
             return builder.ToString();
         }

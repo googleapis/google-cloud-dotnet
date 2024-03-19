@@ -339,7 +339,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 CallInvoker = callInvoker,
                 Settings = spannerSettings,
-                LeaderRoutingEnabled = clientCreationOptions.LeaderRoutingEnabled
+                LeaderRoutingEnabled = clientCreationOptions.LeaderRoutingEnabled,
+                DirectedReadOptions = clientCreationOptions.DirectedReadOptions,
             }.Build();
         }
     }

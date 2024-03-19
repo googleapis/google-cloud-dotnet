@@ -218,6 +218,22 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void DirectedReadOptionsNullByDefault() =>
+            Assert.Null(new SpannerConnectionStringBuilder().DirectedReadOptions);
+
+        [Fact]
+        public void Clone_WithDirectedReadOptions()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder();
+            connectionStringBuilder.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+
+            var cloned = connectionStringBuilder.Clone();
+            Assert.NotSame(connectionStringBuilder.DirectedReadOptions, cloned.DirectedReadOptions);
+            Assert.Equal(connectionStringBuilder.DirectedReadOptions, cloned.DirectedReadOptions);
+            Assert.Equal(DirectedReadTests.IncludeDirectedReadOptions, cloned.DirectedReadOptions);
+        }
+
+        [Fact]
         public void WithDatabase()
         {
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");
