@@ -93,6 +93,10 @@ namespace Google.Cloud.Dataplex.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest> __Marshaller_google_cloud_dataplex_v1_ListDataScanJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse> __Marshaller_google_cloud_dataplex_v1_ListDataScanJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest> __Marshaller_google_cloud_dataplex_v1_GenerateDataQualityRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse> __Marshaller_google_cloud_dataplex_v1_GenerateDataQualityRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.CreateDataScanRequest, global::Google.LongRunning.Operation> __Method_CreateDataScan = new grpc::Method<global::Google.Cloud.Dataplex.V1.CreateDataScanRequest, global::Google.LongRunning.Operation>(
@@ -157,6 +161,14 @@ namespace Google.Cloud.Dataplex.V1 {
         "ListDataScanJobs",
         __Marshaller_google_cloud_dataplex_v1_ListDataScanJobsRequest,
         __Marshaller_google_cloud_dataplex_v1_ListDataScanJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest, global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse> __Method_GenerateDataQualityRules = new grpc::Method<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest, global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateDataQualityRules",
+        __Marshaller_google_cloud_dataplex_v1_GenerateDataQualityRulesRequest,
+        __Marshaller_google_cloud_dataplex_v1_GenerateDataQualityRulesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -260,6 +272,18 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse> ListDataScanJobs(global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse> GenerateDataQualityRules(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -677,6 +701,54 @@ namespace Google.Cloud.Dataplex.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataScanJobs, null, options, request);
       }
+      /// <summary>
+      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse GenerateDataQualityRules(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateDataQualityRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse GenerateDataQualityRules(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateDataQualityRules, null, options, request);
+      }
+      /// <summary>
+      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateDataQualityRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates recommended DataQualityRule from a data profiling DataScan.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateDataQualityRules, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataScanServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -698,7 +770,8 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_ListDataScans, serviceImpl.ListDataScans)
           .AddMethod(__Method_RunDataScan, serviceImpl.RunDataScan)
           .AddMethod(__Method_GetDataScanJob, serviceImpl.GetDataScanJob)
-          .AddMethod(__Method_ListDataScanJobs, serviceImpl.ListDataScanJobs).Build();
+          .AddMethod(__Method_ListDataScanJobs, serviceImpl.ListDataScanJobs)
+          .AddMethod(__Method_GenerateDataQualityRules, serviceImpl.GenerateDataQualityRules).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -716,6 +789,7 @@ namespace Google.Cloud.Dataplex.V1 {
       serviceBinder.AddMethod(__Method_RunDataScan, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.RunDataScanRequest, global::Google.Cloud.Dataplex.V1.RunDataScanResponse>(serviceImpl.RunDataScan));
       serviceBinder.AddMethod(__Method_GetDataScanJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest, global::Google.Cloud.Dataplex.V1.DataScanJob>(serviceImpl.GetDataScanJob));
       serviceBinder.AddMethod(__Method_ListDataScanJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest, global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse>(serviceImpl.ListDataScanJobs));
+      serviceBinder.AddMethod(__Method_GenerateDataQualityRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest, global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse>(serviceImpl.GenerateDataQualityRules));
     }
 
   }

@@ -83,6 +83,7 @@ namespace Google.Cloud.Dataplex.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AnalyzeReflection.Descriptor;
+            yield return CatalogReflection.Descriptor;
             yield return ContentReflection.Descriptor;
             yield return DataProfileReflection.Descriptor;
             yield return DataQualityReflection.Descriptor;
