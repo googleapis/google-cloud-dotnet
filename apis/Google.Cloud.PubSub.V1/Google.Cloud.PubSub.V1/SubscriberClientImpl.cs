@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +71,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _useLegacyFlowControl = settings.UseLegacyFlowControl;
         _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
+        Logger = settings.Logger;
     }
 
     private readonly object _lock = new object();
@@ -101,6 +103,8 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     // for exactly-once delivery (assuming it hasn't been handled).
     // This is calculated from AckDeadline, AckExtensionWindow, MinimumAckExtensionWindowForExactlyOnce and MinimumLeaseExtensionDelay.
     internal TimeSpan AutoExtendDelayForExactlyOnceDelivery => _exactlyOnceDeliveryLeaseTiming.AutoExtendDelay;
+
+    internal ILogger Logger { get; }
 
     /// <inheritdoc />
     public override SubscriptionName SubscriptionName { get; }

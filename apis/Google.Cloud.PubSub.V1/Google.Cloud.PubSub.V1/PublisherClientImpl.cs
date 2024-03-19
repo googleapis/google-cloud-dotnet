@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -113,8 +114,6 @@ public sealed class PublisherClientImpl : PublisherClient
         public Batch Batch { get; }
     }
 
-    // TODO: Logging
-
     /// <summary>
     /// Instantiate a <see cref="PublisherClientImpl"/> associated with the specified <see cref="TopicName"/>.
     /// </summary>
@@ -140,6 +139,7 @@ public sealed class PublisherClientImpl : PublisherClient
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
         _enableCompression = settings.EnableCompression;
         _compressionBytesThreshold = settings.CompressionBytesThreshold ?? DefaultCompressionBytesThreshold;
+        _logger = settings.Logger;
 
         // Initialise batching settings. Use ApiMax settings for components not given.
         var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
@@ -165,6 +165,8 @@ public sealed class PublisherClientImpl : PublisherClient
     private readonly TimeSpan _disposeTimeout;
     private readonly bool _enableCompression;
     private readonly long _compressionBytesThreshold;
+
+    private readonly ILogger _logger;
 
     // Batching settings
     private readonly long _batchElementCountThreshold;
@@ -494,12 +496,14 @@ public sealed class PublisherClientImpl : PublisherClient
                         {
                             if (publishTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
                             {
+                                _logger?.LogWarning(publishTask.Exception, "Recoverable error when publishing; will retry this batch.");
                                 // Rebatch failed messages.
                                 batches.AddLast(batch);
                                 postLockAction = () => { };
                             }
                             else
                             {
+                                _logger?.LogWarning(publishTask.Exception, "Unrecoverable error when publishing. Failing all current batches with the same ordering key.");
                                 // Prepare to fail all batches, clear all batches, and mark ordering-key as in error state.
                                 var batchesToFail = new List<Batch>(batches) { batch };
                                 postLockAction = () =>
@@ -515,6 +519,7 @@ public sealed class PublisherClientImpl : PublisherClient
                         }
                         else
                         {
+                            _logger?.LogWarning(publishTask.Exception, "Unrecoverable error when publishing without ordering key. Failing the current batch.");
                             // No ordering-key, just fail the batch.
                             postLockAction = () => batch.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
                         }

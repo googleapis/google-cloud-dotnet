@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -176,6 +177,7 @@ public sealed partial class SubscriberClientImpl
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
         private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
         private TimeSpan? _pullBackoff = null;
+        private readonly ILogger _logger;
 
         internal SingleChannel(SubscriberClientImpl subscriber,
             SubscriberServiceApiClient client, SubscriptionHandler handler,
@@ -203,6 +205,7 @@ public sealed partial class SubscriberClientImpl
             _eventPush = new AsyncAutoResetEvent(subscriber._taskHelper);
             _eventReceiptModAckForExactlyOnceDelivery = new AsyncAutoResetEvent(subscriber._taskHelper);
             _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
+            _logger = subscriber.Logger;
         }
 
         internal async Task StartAsync()
@@ -298,6 +301,7 @@ public sealed partial class SubscriberClientImpl
             if (_pullBackoff is TimeSpan backoff)
             {
                 // Delay, then start the streaming-pull.
+                _logger?.LogDebug("Delaying for {seconds}s before streaming pull call.", (int) backoff.TotalSeconds);
                 Task delayTask = _scheduler.Delay(backoff, _softStopCts.Token);
                 Add(delayTask, Next(true, HandleStartStreamingPullWithoutBackoff));
             }
@@ -330,6 +334,7 @@ public sealed partial class SubscriberClientImpl
             {
                 if (e.As<RpcException>()?.IsRecoverable() ?? false)
                 {
+                    _logger?.LogWarning(e, "Recoverable error in streaming pull; will retry.");
                     // Recoverable RPC error, stop and restart pull.
                     StopStreamingPull();
                     // Increase backoff internal and start stream again.
@@ -340,6 +345,7 @@ public sealed partial class SubscriberClientImpl
                 }
                 else
                 {
+                    _logger?.LogError(e, "Unrecoverable error in streaming pull; aborting subscriber.");
                     // Unrecoverable error; throw it.
                     throw e.FlattenIfPossible();
                 }

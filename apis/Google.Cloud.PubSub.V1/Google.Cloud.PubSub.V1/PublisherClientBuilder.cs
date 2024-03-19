@@ -114,6 +114,7 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
         var clientCount = ClientCount ?? Environment.ProcessorCount;
         var clients = new PublisherServiceApiClient[clientCount];
         var settings = Settings?.Clone() ?? new PublisherClient.Settings();
+        settings.Logger = Logger;
         var shutdowns = new Func<Task>[clientCount];
         for (int i = 0; i < clientCount; i++)
         {

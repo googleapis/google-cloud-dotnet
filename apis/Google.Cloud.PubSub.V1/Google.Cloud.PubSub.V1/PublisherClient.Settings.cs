@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace Google.Cloud.PubSub.V1;
@@ -66,6 +67,13 @@ public abstract partial class PublisherClient
         public long? CompressionBytesThreshold { get; set; }
 
         /// <summary>
+        /// The logger to use in <see cref="PublisherClient"/>. This is propagated from the
+        /// logger in the <see cref="PublisherClientBuilder"/> when building the client. This is
+        /// to ensure there's only a single public place to set the logger (i.e. the builder).
+        /// </summary>
+        internal ILogger Logger { get; set; }
+
+        /// <summary>
         /// Create a new instance.
         /// </summary>
         public Settings() { }
@@ -78,6 +86,7 @@ public abstract partial class PublisherClient
             DisposeTimeout = other.DisposeTimeout;
             EnableCompression = other.EnableCompression;
             CompressionBytesThreshold = other.CompressionBytesThreshold;
+            Logger = other.Logger;
         }
 
         internal void Validate()
