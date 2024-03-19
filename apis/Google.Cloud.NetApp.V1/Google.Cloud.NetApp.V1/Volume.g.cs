@@ -283,7 +283,7 @@ namespace Google.Cloud.NetApp.V1 {
     /// </summary>
     [pbr::OriginalName("NTFS")] Ntfs = 1,
     /// <summary>
-    /// SecurityStyle uses NTFS
+    /// SecurityStyle uses UNIX
     /// </summary>
     [pbr::OriginalName("UNIX")] Unix = 2,
   }
@@ -2291,8 +2291,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PsaRangeFieldNumber = 6;
     private string psaRange_ = "";
     /// <summary>
-    /// Output only. This field is currently not implemented. Currently values
-    /// provided in this field will be ignored.
+    /// Output only. This field is not implemented. The values provided in this
+    /// field are ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

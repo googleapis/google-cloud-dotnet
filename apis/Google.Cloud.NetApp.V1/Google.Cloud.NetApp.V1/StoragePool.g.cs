@@ -1925,8 +1925,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int PsaRangeFieldNumber = 15;
     private string psaRange_ = "";
     /// <summary>
-    /// Optional. This field is currently not implemented. Currently values
-    /// provided in this field will be ignored.
+    /// Optional. This field is not implemented. The values provided in this field
+    /// are ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
