@@ -730,8 +730,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a <see cref="ReliableStreamReader"/> for the given request.
         /// </summary>
-        /// <param name="request">The read request. Must not be null. The request will be modified with session and transaction details
-        /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
+        /// <param name="request">
+        /// The read request. Must not be null.
+        /// Will be modified to include session information from this pooled session.
+        /// May be modified to include transaction and directed read options information
+        /// from this pooled session and its underlying <see cref="SpannerClient"/>.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
         public ReliableStreamReader ReadStreamReader(ReadRequest request, CallSettings callSettings) =>
@@ -740,8 +744,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a <see cref="ReliableStreamReader"/> for the given request.
         /// </summary>
-        /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
-        /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
+        /// <param name="request">
+        /// The query request. Must not be null.
+        /// Will be modified to include session information from this pooled session.
+        /// May be modified to include transaction and directed read options information
+        /// from this pooled session and its underlying <see cref="SpannerClient"/>.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
         public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, CallSettings callSettings) =>
@@ -762,6 +770,7 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);
             Client.MaybeApplyRouteToLeaderHeader(ref callSettings, TransactionMode);
+            MaybeApplyDirectedReadOptions(request.UnderlyingRequest);
 
             ResultStream stream = new ResultStream(Client, request, this, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
@@ -770,8 +779,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Executes an ExecuteSql RPC asynchronously.
         /// </summary>
-        /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
-        /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
+        /// <param name="request">The query request. Must not be null.
+        /// Will be modified to include session information from this pooled session.
+        /// May be modified to include transaction and directed read options information
+        /// from this pooled session and its underlying <see cref="SpannerClient"/>.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
         public Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings)
@@ -793,6 +805,7 @@ namespace Google.Cloud.Spanner.V1
             Task<ResultSet> ExecuteSqlAsync()
             {
                 Client.MaybeApplyRouteToLeaderHeader(ref callSettings, TransactionMode);
+                MaybeApplyDirectedReadOptions(request);
                 return RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, callSettings));
             }
 
@@ -825,6 +838,19 @@ namespace Google.Cloud.Spanner.V1
             Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync() => RecordSuccessAndExpiredSessions(Client.ExecuteBatchDmlAsync(request, callSettings));
 
             Transaction GetInlinedTransaction(ExecuteBatchDmlResponse response) => response?.ResultSets?.FirstOrDefault()?.Metadata?.Transaction;
+        }
+
+        private void MaybeApplyDirectedReadOptions(IReadOrQueryRequest request)
+        {
+            if (TransactionMode == ModeOneofCase.ReadOnly // Directed reads apply only to single use or read only transactions. Single use are read only.
+                && request.DirectedReadOptions is null) // Request specific options have priority over client options.
+            {
+                request.DirectedReadOptions = Client.Settings.DirectedReadOptions;
+            }
+
+            // We don't validate that DirectedReadOptions is null when this is a non-read-only transaction.
+            // We just pass the request along as we received it. The service should fail if there are options set.
+            // This was agreed as part of the client library desing.
         }
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task)
