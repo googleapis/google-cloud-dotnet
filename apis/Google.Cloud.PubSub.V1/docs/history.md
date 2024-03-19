@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.1, released 2024-03-19
+
+### New features
+
+- Add initial logging to PublisherClient and SubscriberClient ([commit 931bd76](https://github.com/googleapis/google-cloud-dotnet/commit/931bd762983688864b5f7fb22bdda6c563435d46))
+
 ## Version 3.10.0, released 2024-03-05
 
 ### Documentation improvements
