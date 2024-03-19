@@ -102,6 +102,20 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public async Task DefaultClientFactory_UsesDirectedReadOptions()
+        {
+            var manager = new SessionPoolManager(new SessionPoolOptions(), new SpannerSettings(), Logger.DefaultLogger, SessionPoolManager.CreateClientAsync);
+
+            var pool = await manager.AcquireSessionPoolAsync(
+                new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString, GoogleCredential.FromAccessToken("token"))
+                {
+                    DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions,
+                }));
+            Assert.Equal(DirectedReadTests.IncludeDirectedReadOptions, pool.Client.Settings.DirectedReadOptions);
+            Assert.NotSame(DirectedReadTests.IncludeDirectedReadOptions, pool.Client.Settings.DirectedReadOptions);
+        }
+
+        [Fact]
         public void Create_UsesDefaultLogger()
         {
             var manager = SessionPoolManager.Create(new SessionPoolOptions());

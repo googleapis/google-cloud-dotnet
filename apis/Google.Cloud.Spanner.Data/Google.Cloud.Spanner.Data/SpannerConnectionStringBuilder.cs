@@ -451,6 +451,21 @@ namespace Google.Cloud.Spanner.Data
             set => this[EnableLeaderRoutingKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
+        /// <summary>
+        /// Specifies which replicas or regions should be used for non-transactional reads or queries. May be null.
+        /// When set, all queries and reads executed on this connection within a read-only or single-use transaction
+        /// will include these options. If a query or read command specifies directed read options itself
+        /// then those have precedence over these.
+        /// For other operations or for non read-only or single-use transactions, these options are ignored.
+        /// </summary>
+        /// <remarks>
+        /// These options are not settable through the connection string actual string value.
+        /// Instead they are only settable via code on <see cref="SpannerConnectionStringBuilder"/> instances.
+        /// This may change in the future and directed read options may be made available through the actual string
+        /// value of the connection string.
+        /// </remarks>
+        public DirectedReadOptions DirectedReadOptions { get; set; }
+
         // Credential overrides: at most one will be non-null.
         internal ChannelCredentials CredentialOverride { get; }
         internal GoogleCredential GoogleCredential { get; }
@@ -485,6 +500,7 @@ namespace Google.Cloud.Spanner.Data
             GoogleCredential = other.GoogleCredential;
             SessionPoolManager = other.SessionPoolManager;
             EnvironmentVariableProvider = other.EnvironmentVariableProvider;
+            DirectedReadOptions = other.DirectedReadOptions?.Clone();
             // Note: ConversionOptions is populated by the connection string.
         }
 
