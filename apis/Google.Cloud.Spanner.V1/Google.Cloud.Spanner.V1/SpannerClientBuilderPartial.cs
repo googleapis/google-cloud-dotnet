@@ -45,6 +45,18 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public bool LeaderRoutingEnabled { get; set; } = true;
 
+        /// <summary>
+        /// Specifies which replicas or regions should be used for non-transactional reads or queries.
+        /// </summary>
+        /// <remarks>
+        /// These options will be applied to ExecuteSql, ExecuteStreamingSql, Read and StreamingRead
+        /// operations being executed within a single use or read-only transaction. Otherwise, they will
+        /// be ignored.
+        /// For these options to be automatically applied to requests, use <see cref="PooledSession"/> to execute
+        /// operations instead of <see cref="SpannerClient"/> directly.
+        /// </remarks>
+        public DirectedReadOptions DirectedReadOptions { get; set; }
+
         private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
         private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
 
@@ -96,6 +108,7 @@ namespace Google.Cloud.Spanner.V1
             // settings will always be a SpannerSettings here.
             var spannerSettings = settings as SpannerSettings;
             spannerSettings.LeaderRoutingEnabled = LeaderRoutingEnabled;
+            spannerSettings.DirectedReadOptions = DirectedReadOptions?.Clone();
 
             return settings;
         }

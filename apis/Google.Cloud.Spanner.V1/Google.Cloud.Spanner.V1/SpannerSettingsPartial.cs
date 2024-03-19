@@ -23,6 +23,7 @@ public sealed partial class SpannerSettings
     {
         Logger = existing.Logger;
         LeaderRoutingEnabled = existing.LeaderRoutingEnabled;
+        DirectedReadOptions = existing.DirectedReadOptions;
     }
 
     private Logger _logger = Logger.DefaultLogger;
@@ -45,4 +46,14 @@ public sealed partial class SpannerSettings
     /// be routed to the leader depending on the transaction type they are using.
     /// </remarks>
     internal bool LeaderRoutingEnabled { get; set; } = true;
+
+    /// <summary>
+    /// Specifies which replicas or regions should be used for non-transactional reads or queries.
+    /// </summary>
+    /// <remarks>
+    /// These options will be applied to ExecuteSql, ExecuteStreamingSql, Read and StreamingRead
+    /// operation being executed within a single use or read-only transaction. Otherwise, they will
+    /// be ignored.
+    /// </remarks>
+    internal DirectedReadOptions DirectedReadOptions { get; set; }
 }
