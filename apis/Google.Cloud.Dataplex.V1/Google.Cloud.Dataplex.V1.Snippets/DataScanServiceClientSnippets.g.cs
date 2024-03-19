@@ -1362,5 +1362,59 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GenerateDataQualityRules</summary>
+        public void GenerateDataQualityRulesRequestObject()
+        {
+            // Snippet: GenerateDataQualityRules(GenerateDataQualityRulesRequest, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::GenerateDataQualityRulesRequest request = new gcdv::GenerateDataQualityRulesRequest { Name = "", };
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = dataScanServiceClient.GenerateDataQualityRules(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRulesAsync</summary>
+        public async Task GenerateDataQualityRulesRequestObjectAsync()
+        {
+            // Snippet: GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest, CallSettings)
+            // Additional: GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::GenerateDataQualityRulesRequest request = new gcdv::GenerateDataQualityRulesRequest { Name = "", };
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = await dataScanServiceClient.GenerateDataQualityRulesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRules</summary>
+        public void GenerateDataQualityRules()
+        {
+            // Snippet: GenerateDataQualityRules(string, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = dataScanServiceClient.GenerateDataQualityRules(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateDataQualityRulesAsync</summary>
+        public async Task GenerateDataQualityRulesAsync()
+        {
+            // Snippet: GenerateDataQualityRulesAsync(string, CallSettings)
+            // Additional: GenerateDataQualityRulesAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            gcdv::GenerateDataQualityRulesResponse response = await dataScanServiceClient.GenerateDataQualityRulesAsync(name);
+            // End snippet
+        }
     }
 }

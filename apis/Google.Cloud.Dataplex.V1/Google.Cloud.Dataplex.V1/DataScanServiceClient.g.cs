@@ -61,6 +61,7 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanSettings = existing.RunDataScanSettings;
             GetDataScanJobSettings = existing.GetDataScanJobSettings;
             ListDataScanJobsSettings = existing.ListDataScanJobsSettings;
+            GenerateDataQualityRulesSettings = existing.GenerateDataQualityRulesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -217,6 +218,19 @@ namespace Google.Cloud.Dataplex.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDataScanJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataScanServiceClient.GenerateDataQualityRules</c> and
+        /// <c>DataScanServiceClient.GenerateDataQualityRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateDataQualityRulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1496,6 +1510,81 @@ namespace Google.Cloud.Dataplex.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateDataQualityRulesResponse GenerateDataQualityRules(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, st::CancellationToken cancellationToken) =>
+            GenerateDataQualityRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name should be either
+        /// * the name of a datascan with at least one successful completed data
+        /// profiling job, or
+        /// * the name of a successful completed data profiling datascan job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateDataQualityRulesResponse GenerateDataQualityRules(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateDataQualityRules(new GenerateDataQualityRulesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name should be either
+        /// * the name of a datascan with at least one successful completed data
+        /// profiling job, or
+        /// * the name of a successful completed data profiling datascan job.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateDataQualityRulesAsync(new GenerateDataQualityRulesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name should be either
+        /// * the name of a datascan with at least one successful completed data
+        /// profiling job, or
+        /// * the name of a successful completed data profiling datascan job.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(string name, st::CancellationToken cancellationToken) =>
+            GenerateDataQualityRulesAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataScanService client wrapper implementation, for convenient use.</summary>
@@ -1521,6 +1610,8 @@ namespace Google.Cloud.Dataplex.V1
         private readonly gaxgrpc::ApiCall<GetDataScanJobRequest, DataScanJob> _callGetDataScanJob;
 
         private readonly gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> _callListDataScanJobs;
+
+        private readonly gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> _callGenerateDataQualityRules;
 
         /// <summary>
         /// Constructs a client wrapper for the DataScanService service, with the specified gRPC client and settings.
@@ -1562,6 +1653,9 @@ namespace Google.Cloud.Dataplex.V1
             _callListDataScanJobs = clientHelper.BuildApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse>("ListDataScanJobs", grpcClient.ListDataScanJobsAsync, grpcClient.ListDataScanJobs, effectiveSettings.ListDataScanJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataScanJobs);
             Modify_ListDataScanJobsApiCall(ref _callListDataScanJobs);
+            _callGenerateDataQualityRules = clientHelper.BuildApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse>("GenerateDataQualityRules", grpcClient.GenerateDataQualityRulesAsync, grpcClient.GenerateDataQualityRules, effectiveSettings.GenerateDataQualityRulesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGenerateDataQualityRules);
+            Modify_GenerateDataQualityRulesApiCall(ref _callGenerateDataQualityRules);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1582,6 +1676,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobApiCall(ref gaxgrpc::ApiCall<GetDataScanJobRequest, DataScanJob> call);
 
         partial void Modify_ListDataScanJobsApiCall(ref gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> call);
+
+        partial void Modify_GenerateDataQualityRulesApiCall(ref gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> call);
 
         partial void OnConstruction(DataScanService.DataScanServiceClient grpcClient, DataScanServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1609,6 +1705,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobRequest(ref GetDataScanJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataScanJobsRequest(ref ListDataScanJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateDataQualityRulesRequest(ref GenerateDataQualityRulesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateDataScan</c>.</summary>
         public override lro::OperationsClient CreateDataScanOperationsClient { get; }
@@ -1809,6 +1907,30 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_ListDataScanJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataScanJobsRequest, ListDataScanJobsResponse, DataScanJob>(_callListDataScanJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateDataQualityRulesResponse GenerateDataQualityRules(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateDataQualityRulesRequest(ref request, ref callSettings);
+            return _callGenerateDataQualityRules.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates recommended DataQualityRule from a data profiling DataScan.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateDataQualityRulesResponse> GenerateDataQualityRulesAsync(GenerateDataQualityRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateDataQualityRulesRequest(ref request, ref callSettings);
+            return _callGenerateDataQualityRules.Async(request, callSettings);
         }
     }
 
