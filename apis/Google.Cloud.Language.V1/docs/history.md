@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.6.0-alpha01, released 2024-03-20
+
+Experimental release targeting netstandard2.0 instead of netstandard2.1.
+
 ## Version 3.5.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
