@@ -1,0 +1,1889 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Language.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.language.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_sync",
+      "title": "AnalyzeSentimentRequestObject",
+      "description": "Snippet for AnalyzeSentiment",
+      "file": "LanguageServiceClient.AnalyzeSentimentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeSentimentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_async",
+      "title": "AnalyzeSentimentRequestObjectAsync",
+      "description": "Snippet for AnalyzeSentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeSentimentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeSentimentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_sync_flattened1",
+      "title": "AnalyzeSentiment1",
+      "description": "Snippet for AnalyzeSentiment",
+      "file": "LanguageServiceClient.AnalyzeSentiment1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_async_flattened1",
+      "title": "AnalyzeSentiment1Async",
+      "description": "Snippet for AnalyzeSentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeSentiment1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_sync_flattened2",
+      "title": "AnalyzeSentiment2",
+      "description": "Snippet for AnalyzeSentiment",
+      "file": "LanguageServiceClient.AnalyzeSentiment2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSentiment_async_flattened2",
+      "title": "AnalyzeSentiment2Async",
+      "description": "Snippet for AnalyzeSentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeSentiment2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_sync",
+      "title": "AnalyzeEntitiesRequestObject",
+      "description": "Snippet for AnalyzeEntities",
+      "file": "LanguageServiceClient.AnalyzeEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntities",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitiesResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_async",
+      "title": "AnalyzeEntitiesRequestObjectAsync",
+      "description": "Snippet for AnalyzeEntitiesAsync",
+      "file": "LanguageServiceClient.AnalyzeEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitiesAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitiesResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_sync_flattened1",
+      "title": "AnalyzeEntities1",
+      "description": "Snippet for AnalyzeEntities",
+      "file": "LanguageServiceClient.AnalyzeEntities1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntities",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitiesResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_async_flattened1",
+      "title": "AnalyzeEntities1Async",
+      "description": "Snippet for AnalyzeEntitiesAsync",
+      "file": "LanguageServiceClient.AnalyzeEntities1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitiesAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitiesResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_sync_flattened2",
+      "title": "AnalyzeEntities2",
+      "description": "Snippet for AnalyzeEntities",
+      "file": "LanguageServiceClient.AnalyzeEntities2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntities",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitiesResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntities_async_flattened2",
+      "title": "AnalyzeEntities2Async",
+      "description": "Snippet for AnalyzeEntitiesAsync",
+      "file": "LanguageServiceClient.AnalyzeEntities2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitiesAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitiesResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntities",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntities",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_sync",
+      "title": "AnalyzeEntitySentimentRequestObject",
+      "description": "Snippet for AnalyzeEntitySentiment",
+      "file": "LanguageServiceClient.AnalyzeEntitySentimentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_async",
+      "title": "AnalyzeEntitySentimentRequestObjectAsync",
+      "description": "Snippet for AnalyzeEntitySentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeEntitySentimentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_sync_flattened1",
+      "title": "AnalyzeEntitySentiment1",
+      "description": "Snippet for AnalyzeEntitySentiment",
+      "file": "LanguageServiceClient.AnalyzeEntitySentiment1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_async_flattened1",
+      "title": "AnalyzeEntitySentiment1Async",
+      "description": "Snippet for AnalyzeEntitySentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeEntitySentiment1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_sync_flattened2",
+      "title": "AnalyzeEntitySentiment2",
+      "description": "Snippet for AnalyzeEntitySentiment",
+      "file": "LanguageServiceClient.AnalyzeEntitySentiment2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentiment",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentiment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeEntitySentiment_async_flattened2",
+      "title": "AnalyzeEntitySentiment2Async",
+      "description": "Snippet for AnalyzeEntitySentimentAsync",
+      "file": "LanguageServiceClient.AnalyzeEntitySentiment2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeEntitySentimentAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeEntitySentimentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeEntitySentiment",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeEntitySentiment",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_sync",
+      "title": "AnalyzeSyntaxRequestObject",
+      "description": "Snippet for AnalyzeSyntax",
+      "file": "LanguageServiceClient.AnalyzeSyntaxRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntax",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeSyntaxRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSyntaxResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_async",
+      "title": "AnalyzeSyntaxRequestObjectAsync",
+      "description": "Snippet for AnalyzeSyntaxAsync",
+      "file": "LanguageServiceClient.AnalyzeSyntaxRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntaxAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnalyzeSyntaxRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSyntaxResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_sync_flattened1",
+      "title": "AnalyzeSyntax1",
+      "description": "Snippet for AnalyzeSyntax",
+      "file": "LanguageServiceClient.AnalyzeSyntax1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntax",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSyntaxResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_async_flattened1",
+      "title": "AnalyzeSyntax1Async",
+      "description": "Snippet for AnalyzeSyntaxAsync",
+      "file": "LanguageServiceClient.AnalyzeSyntax1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntaxAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSyntaxResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_sync_flattened2",
+      "title": "AnalyzeSyntax2",
+      "description": "Snippet for AnalyzeSyntax",
+      "file": "LanguageServiceClient.AnalyzeSyntax2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntax",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntax",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnalyzeSyntaxResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnalyzeSyntax_async_flattened2",
+      "title": "AnalyzeSyntax2Async",
+      "description": "Snippet for AnalyzeSyntaxAsync",
+      "file": "LanguageServiceClient.AnalyzeSyntax2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeSyntaxAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnalyzeSyntaxAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnalyzeSyntaxResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeSyntax",
+          "fullName": "google.cloud.language.v1.LanguageService.AnalyzeSyntax",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ClassifyText_sync",
+      "title": "ClassifyTextRequestObject",
+      "description": "Snippet for ClassifyText",
+      "file": "LanguageServiceClient.ClassifyTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClassifyText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ClassifyTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ClassifyTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ClassifyText",
+          "fullName": "google.cloud.language.v1.LanguageService.ClassifyText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ClassifyText_async",
+      "title": "ClassifyTextRequestObjectAsync",
+      "description": "Snippet for ClassifyTextAsync",
+      "file": "LanguageServiceClient.ClassifyTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClassifyTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ClassifyTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ClassifyTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ClassifyText",
+          "fullName": "google.cloud.language.v1.LanguageService.ClassifyText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ClassifyText_sync_flattened",
+      "title": "ClassifyText",
+      "description": "Snippet for ClassifyText",
+      "file": "LanguageServiceClient.ClassifyTextSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClassifyText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ClassifyText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ClassifyTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ClassifyText",
+          "fullName": "google.cloud.language.v1.LanguageService.ClassifyText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ClassifyText_async_flattened",
+      "title": "ClassifyTextAsync",
+      "description": "Snippet for ClassifyTextAsync",
+      "file": "LanguageServiceClient.ClassifyTextAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ClassifyTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ClassifyTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ClassifyTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ClassifyText",
+          "fullName": "google.cloud.language.v1.LanguageService.ClassifyText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_sync",
+      "title": "ModerateTextRequestObject",
+      "description": "Snippet for ModerateText",
+      "file": "LanguageServiceClient.ModerateTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ModerateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ModerateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_async",
+      "title": "ModerateTextRequestObjectAsync",
+      "description": "Snippet for ModerateTextAsync",
+      "file": "LanguageServiceClient.ModerateTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.ModerateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ModerateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_sync_flattened",
+      "title": "ModerateText",
+      "description": "Snippet for ModerateText",
+      "file": "LanguageServiceClient.ModerateTextSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.ModerateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_ModerateText_async_flattened",
+      "title": "ModerateTextAsync",
+      "description": "Snippet for ModerateTextAsync",
+      "file": "LanguageServiceClient.ModerateTextAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModerateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.ModerateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.ModerateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "ModerateText",
+          "fullName": "google.cloud.language.v1.LanguageService.ModerateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_sync",
+      "title": "AnnotateTextRequestObject",
+      "description": "Snippet for AnnotateText",
+      "file": "LanguageServiceClient.AnnotateTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnnotateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_async",
+      "title": "AnnotateTextRequestObjectAsync",
+      "description": "Snippet for AnnotateTextAsync",
+      "file": "LanguageServiceClient.AnnotateTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnnotateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_sync_flattened1",
+      "title": "AnnotateText1",
+      "description": "Snippet for AnnotateText",
+      "file": "LanguageServiceClient.AnnotateText1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest+Types+Features",
+            "name": "features"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnnotateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_async_flattened1",
+      "title": "AnnotateText1Async",
+      "description": "Snippet for AnnotateTextAsync",
+      "file": "LanguageServiceClient.AnnotateText1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest+Types+Features",
+            "name": "features"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.EncodingType",
+            "name": "encodingType"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnnotateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_sync_flattened2",
+      "title": "AnnotateText2",
+      "description": "Snippet for AnnotateText",
+      "file": "LanguageServiceClient.AnnotateText2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateText",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateText",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest+Types+Features",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Language.V1.AnnotateTextResponse",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "language_v1_generated_LanguageService_AnnotateText_async_flattened2",
+      "title": "AnnotateText2Async",
+      "description": "Snippet for AnnotateTextAsync",
+      "file": "LanguageServiceClient.AnnotateText2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnnotateTextAsync",
+        "fullName": "Google.Cloud.Language.V1.LanguageServiceClient.AnnotateTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Language.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Language.V1.AnnotateTextRequest+Types+Features",
+            "name": "features"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Language.V1.AnnotateTextResponse>",
+        "client": {
+          "shortName": "LanguageServiceClient",
+          "fullName": "Google.Cloud.Language.V1.LanguageServiceClient"
+        },
+        "method": {
+          "shortName": "AnnotateText",
+          "fullName": "google.cloud.language.v1.LanguageService.AnnotateText",
+          "service": {
+            "shortName": "LanguageService",
+            "fullName": "google.cloud.language.v1.LanguageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

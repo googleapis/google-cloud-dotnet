@@ -1,0 +1,2557 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.GSuiteAddOns.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.gsuiteaddons.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_sync",
+      "title": "GetAuthorizationRequestObject",
+      "description": "Snippet for GetAuthorization",
+      "file": "GSuiteAddOnsClient.GetAuthorizationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorization",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_async",
+      "title": "GetAuthorizationRequestObjectAsync",
+      "description": "Snippet for GetAuthorizationAsync",
+      "file": "GSuiteAddOnsClient.GetAuthorizationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_sync_flattened",
+      "title": "GetAuthorization",
+      "description": "Snippet for GetAuthorization",
+      "file": "GSuiteAddOnsClient.GetAuthorizationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorization",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_async_flattened",
+      "title": "GetAuthorizationAsync",
+      "description": "Snippet for GetAuthorizationAsync",
+      "file": "GSuiteAddOnsClient.GetAuthorizationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_sync_flattened_resourceNames",
+      "title": "GetAuthorizationResourceNames",
+      "description": "Snippet for GetAuthorization",
+      "file": "GSuiteAddOnsClient.GetAuthorizationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorization",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorization",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.AuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Authorization",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetAuthorization_async_flattened_resourceNames",
+      "title": "GetAuthorizationResourceNamesAsync",
+      "description": "Snippet for GetAuthorizationAsync",
+      "file": "GSuiteAddOnsClient.GetAuthorizationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthorizationAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetAuthorizationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.AuthorizationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Authorization>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetAuthorization",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetAuthorization",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_sync",
+      "title": "CreateDeploymentRequestObject",
+      "description": "Snippet for CreateDeployment",
+      "file": "GSuiteAddOnsClient.CreateDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_async",
+      "title": "CreateDeploymentRequestObjectAsync",
+      "description": "Snippet for CreateDeploymentAsync",
+      "file": "GSuiteAddOnsClient.CreateDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_sync_flattened",
+      "title": "CreateDeployment",
+      "description": "Snippet for CreateDeployment",
+      "file": "GSuiteAddOnsClient.CreateDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_async_flattened",
+      "title": "CreateDeploymentAsync",
+      "description": "Snippet for CreateDeploymentAsync",
+      "file": "GSuiteAddOnsClient.CreateDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_sync_flattened_resourceNames",
+      "title": "CreateDeploymentResourceNames",
+      "description": "Snippet for CreateDeployment",
+      "file": "GSuiteAddOnsClient.CreateDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeployment",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_CreateDeployment_async_flattened_resourceNames",
+      "title": "CreateDeploymentResourceNamesAsync",
+      "description": "Snippet for CreateDeploymentAsync",
+      "file": "GSuiteAddOnsClient.CreateDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.CreateDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "System.String",
+            "name": "deploymentId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "CreateDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.CreateDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ReplaceDeployment_sync",
+      "title": "ReplaceDeploymentRequestObject",
+      "description": "Snippet for ReplaceDeployment",
+      "file": "GSuiteAddOnsClient.ReplaceDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ReplaceDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ReplaceDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ReplaceDeployment_async",
+      "title": "ReplaceDeploymentRequestObjectAsync",
+      "description": "Snippet for ReplaceDeploymentAsync",
+      "file": "GSuiteAddOnsClient.ReplaceDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ReplaceDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ReplaceDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ReplaceDeployment_sync_flattened",
+      "title": "ReplaceDeployment",
+      "description": "Snippet for ReplaceDeployment",
+      "file": "GSuiteAddOnsClient.ReplaceDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ReplaceDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ReplaceDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ReplaceDeployment_async_flattened",
+      "title": "ReplaceDeploymentAsync",
+      "description": "Snippet for ReplaceDeploymentAsync",
+      "file": "GSuiteAddOnsClient.ReplaceDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReplaceDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ReplaceDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+            "name": "deployment"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ReplaceDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ReplaceDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_sync",
+      "title": "GetDeploymentRequestObject",
+      "description": "Snippet for GetDeployment",
+      "file": "GSuiteAddOnsClient.GetDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_async",
+      "title": "GetDeploymentRequestObjectAsync",
+      "description": "Snippet for GetDeploymentAsync",
+      "file": "GSuiteAddOnsClient.GetDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_sync_flattened",
+      "title": "GetDeployment",
+      "description": "Snippet for GetDeployment",
+      "file": "GSuiteAddOnsClient.GetDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_async_flattened",
+      "title": "GetDeploymentAsync",
+      "description": "Snippet for GetDeploymentAsync",
+      "file": "GSuiteAddOnsClient.GetDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_sync_flattened_resourceNames",
+      "title": "GetDeploymentResourceNames",
+      "description": "Snippet for GetDeployment",
+      "file": "GSuiteAddOnsClient.GetDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.Deployment",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetDeployment_async_flattened_resourceNames",
+      "title": "GetDeploymentResourceNamesAsync",
+      "description": "Snippet for GetDeploymentAsync",
+      "file": "GSuiteAddOnsClient.GetDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_sync",
+      "title": "ListDeploymentsRequestObject",
+      "description": "Snippet for ListDeployments",
+      "file": "GSuiteAddOnsClient.ListDeploymentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeployments",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_async",
+      "title": "ListDeploymentsRequestObjectAsync",
+      "description": "Snippet for ListDeploymentsAsync",
+      "file": "GSuiteAddOnsClient.ListDeploymentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentsAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_sync_flattened",
+      "title": "ListDeployments",
+      "description": "Snippet for ListDeployments",
+      "file": "GSuiteAddOnsClient.ListDeploymentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeployments",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_async_flattened",
+      "title": "ListDeploymentsAsync",
+      "description": "Snippet for ListDeploymentsAsync",
+      "file": "GSuiteAddOnsClient.ListDeploymentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentsAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_sync_flattened_resourceNames",
+      "title": "ListDeploymentsResourceNames",
+      "description": "Snippet for ListDeployments",
+      "file": "GSuiteAddOnsClient.ListDeploymentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeployments",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeployments",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_ListDeployments_async_flattened_resourceNames",
+      "title": "ListDeploymentsResourceNamesAsync",
+      "description": "Snippet for ListDeploymentsAsync",
+      "file": "GSuiteAddOnsClient.ListDeploymentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeploymentsAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.ListDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse, Google.Cloud.GSuiteAddOns.V1.Deployment>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "ListDeployments",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.ListDeployments",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_sync",
+      "title": "DeleteDeploymentRequestObject",
+      "description": "Snippet for DeleteDeployment",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_async",
+      "title": "DeleteDeploymentRequestObjectAsync",
+      "description": "Snippet for DeleteDeploymentAsync",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_sync_flattened",
+      "title": "DeleteDeployment",
+      "description": "Snippet for DeleteDeployment",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_async_flattened",
+      "title": "DeleteDeploymentAsync",
+      "description": "Snippet for DeleteDeploymentAsync",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_sync_flattened_resourceNames",
+      "title": "DeleteDeploymentResourceNames",
+      "description": "Snippet for DeleteDeployment",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_DeleteDeployment_async_flattened_resourceNames",
+      "title": "DeleteDeploymentResourceNamesAsync",
+      "description": "Snippet for DeleteDeploymentAsync",
+      "file": "GSuiteAddOnsClient.DeleteDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.DeleteDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "DeleteDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.DeleteDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_sync",
+      "title": "InstallDeploymentRequestObject",
+      "description": "Snippet for InstallDeployment",
+      "file": "GSuiteAddOnsClient.InstallDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_async",
+      "title": "InstallDeploymentRequestObjectAsync",
+      "description": "Snippet for InstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.InstallDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_sync_flattened",
+      "title": "InstallDeployment",
+      "description": "Snippet for InstallDeployment",
+      "file": "GSuiteAddOnsClient.InstallDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_async_flattened",
+      "title": "InstallDeploymentAsync",
+      "description": "Snippet for InstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.InstallDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_sync_flattened_resourceNames",
+      "title": "InstallDeploymentResourceNames",
+      "description": "Snippet for InstallDeployment",
+      "file": "GSuiteAddOnsClient.InstallDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_InstallDeployment_async_flattened_resourceNames",
+      "title": "InstallDeploymentResourceNamesAsync",
+      "description": "Snippet for InstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.InstallDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.InstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "InstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.InstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_sync",
+      "title": "UninstallDeploymentRequestObject",
+      "description": "Snippet for UninstallDeployment",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_async",
+      "title": "UninstallDeploymentRequestObjectAsync",
+      "description": "Snippet for UninstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_sync_flattened",
+      "title": "UninstallDeployment",
+      "description": "Snippet for UninstallDeployment",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_async_flattened",
+      "title": "UninstallDeploymentAsync",
+      "description": "Snippet for UninstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_sync_flattened_resourceNames",
+      "title": "UninstallDeploymentResourceNames",
+      "description": "Snippet for UninstallDeployment",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeployment",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_UninstallDeployment_async_flattened_resourceNames",
+      "title": "UninstallDeploymentResourceNamesAsync",
+      "description": "Snippet for UninstallDeploymentAsync",
+      "file": "GSuiteAddOnsClient.UninstallDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UninstallDeploymentAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.UninstallDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.DeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "UninstallDeployment",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.UninstallDeployment",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_sync",
+      "title": "GetInstallStatusRequestObject",
+      "description": "Snippet for GetInstallStatus",
+      "file": "GSuiteAddOnsClient.GetInstallStatusRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatus",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_async",
+      "title": "GetInstallStatusRequestObjectAsync",
+      "description": "Snippet for GetInstallStatusAsync",
+      "file": "GSuiteAddOnsClient.GetInstallStatusRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatusAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_sync_flattened",
+      "title": "GetInstallStatus",
+      "description": "Snippet for GetInstallStatus",
+      "file": "GSuiteAddOnsClient.GetInstallStatusSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatus",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_async_flattened",
+      "title": "GetInstallStatusAsync",
+      "description": "Snippet for GetInstallStatusAsync",
+      "file": "GSuiteAddOnsClient.GetInstallStatusAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatusAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_sync_flattened_resourceNames",
+      "title": "GetInstallStatusResourceNames",
+      "description": "Snippet for GetInstallStatus",
+      "file": "GSuiteAddOnsClient.GetInstallStatusResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatus",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatus",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GSuiteAddOns.V1.InstallStatus",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gsuiteaddons_v1_generated_GSuiteAddOns_GetInstallStatus_async_flattened_resourceNames",
+      "title": "GetInstallStatusResourceNamesAsync",
+      "description": "Snippet for GetInstallStatusAsync",
+      "file": "GSuiteAddOnsClient.GetInstallStatusResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInstallStatusAsync",
+        "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient.GetInstallStatusAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GSuiteAddOns.V1.InstallStatusName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GSuiteAddOns.V1.InstallStatus>",
+        "client": {
+          "shortName": "GSuiteAddOnsClient",
+          "fullName": "Google.Cloud.GSuiteAddOns.V1.GSuiteAddOnsClient"
+        },
+        "method": {
+          "shortName": "GetInstallStatus",
+          "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns.GetInstallStatus",
+          "service": {
+            "shortName": "GSuiteAddOns",
+            "fullName": "google.cloud.gsuiteaddons.v1.GSuiteAddOns"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
