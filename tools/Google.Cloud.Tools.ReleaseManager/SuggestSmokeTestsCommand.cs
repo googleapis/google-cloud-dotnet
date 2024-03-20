@@ -35,8 +35,6 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SuggestSmokeTestsCommand : CommandBase
     {
-        private const string PublishTargetFramework = "netstandard2.1";
-
         public SuggestSmokeTestsCommand()
             : base("suggest-smoke-tests", "Analyzes a client library for possible simple smoke tests", "id")
         {
@@ -83,9 +81,10 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             Console.WriteLine($"Publishing release version of library");
             var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", PublishTargetFramework);
+            string tfm = GenerateProjectsCommand.GetTargetForReflectionLoad(id);
+            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
 
-            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
+            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
             return Assembly.LoadFrom(assemblyFile);
         }
 

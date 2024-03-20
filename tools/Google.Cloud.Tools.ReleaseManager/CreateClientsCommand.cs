@@ -24,8 +24,6 @@ namespace Google.Cloud.Tools.ReleaseManager;
 
 public class CreateClientsCommand : CommandBase
 {
-    private const string PublishTargetFramework = "netstandard2.1";
-
     public CreateClientsCommand()
         : base("create-clients", "Checks that we can create clients for a pure-GAPIC package", "id")
     {
@@ -55,11 +53,15 @@ public class CreateClientsCommand : CommandBase
     private Assembly PublishAndLoadAssembly(string id)
     {
         var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
+
+        // Work out the TFM to publish, based on specified target frameworks.
+        string tfm = GenerateProjectsCommand.GetTargetForReflectionLoad(id);
+
         // Note: we explicitly don't build here, as this code is normally run from a build script which has
         // has already built. Avoiding the rebuild saves a lot of time.
-        Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", id, "-f", PublishTargetFramework);
+        Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", id, "-f", tfm);
 
-        var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
+        var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
         return Assembly.LoadFrom(assemblyFile);
     }
 
