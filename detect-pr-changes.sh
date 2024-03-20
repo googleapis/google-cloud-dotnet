@@ -53,19 +53,22 @@ for api in $apis
 do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
-    # We expect almost all libraries to support netstandard2.1.
-    # When moving from GAX v3 to GAX v4 this will fail as we used to target
-    # netstandard2.0, but that's a single PR (which we expect to have breaking changes anyway).
-    targetVersion="netstandard2.1"
-    if [[ $api == "Google.Cloud.Diagnostics.AspNetCore3" ]]
+    # Work out the TFM based on the local csproj file.
+    # This will fail at times when we change from one target to another, but that should be relatively
+    # rare.
+    all_tfms=$(grep '<TargetFrameworks>' apis/$api/$api/$api.csproj | cut -d '>' -f 2 | cut -d '<' -f 1)
+    tfm=$(echo $all_tfms | sed 's/;/\n/g' | grep netstandard || true)
+    if [[ "$tfm" == "" ]]
     then
-      targetVersion="netcoreapp3.1"
+      # No netstandard TFM? Just use the first.
+      tfm=$(echo $all_tfms | cut -d ';' -f 1)
     fi
-    log_header "Building $api"
+    
+    log_header "Building $api ($tfm)"
     apidir=apis/$api/$api
-    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
-    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
-    asm=apis/$api/$api/bin/Release/$targetVersion/$api.dll
+    dotnet build -c Release -f $tfm -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
+    dotnet build -c Release -f $tfm -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
+    asm=apis/$api/$api/bin/Release/$tfm/$api.dll
     cp tmpgit/$asm tmpgit/old
     cp $asm tmpgit/new
   fi
