@@ -5006,7 +5006,11 @@ namespace Google.Cloud.Storage.V2
         {
             GrpcClient = grpcClient;
             StorageSettings effectiveSettings = settings ?? StorageSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callDeleteBucket = clientHelper.BuildApiCall<DeleteBucketRequest, wkt::Empty>("DeleteBucket", grpcClient.DeleteBucketAsync, grpcClient.DeleteBucket, effectiveSettings.DeleteBucketSettings).WithGoogleRequestParam("bucket", request => request.Name);
             Modify_ApiCall(ref _callDeleteBucket);
             Modify_DeleteBucketApiCall(ref _callDeleteBucket);

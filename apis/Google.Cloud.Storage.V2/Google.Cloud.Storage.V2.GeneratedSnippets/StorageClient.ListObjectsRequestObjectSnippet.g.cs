@@ -50,6 +50,7 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 SoftDeleted = false,
+                IncludeFoldersAsPrefixes = false,
                 MatchGlob = "",
             };
             // Make the request
