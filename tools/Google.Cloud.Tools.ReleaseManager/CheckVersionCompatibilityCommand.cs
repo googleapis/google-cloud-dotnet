@@ -137,7 +137,18 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Returning 'identical' as the change level; please check carefully before release.");
                 return Level.Identical;
             }
-            var sourceAssembly = Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", "netstandard2.1", $"{api.Id}.dll");
+            string[] candidateTfms = { "netstandard2.1", "netstandard2.0" };
+            var sourceAssembly = candidateTfms
+                .Select(tfm => Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", tfm, $"{api.Id}.dll"))
+                .FirstOrDefault(File.Exists);
+            if (sourceAssembly is null)
+            {
+                Console.WriteLine($"Unable to find the built assembly for {api.Id}. Some possible causes:");
+                Console.WriteLine("- Package has not been built (in Release configuration).");
+                Console.WriteLine("- Package does not target netstandard2.0 or netstandard2.1.");
+                Console.WriteLine($"Returning 'major' as the change level to strongly encourage diagnosis.");
+                return Level.Major;
+            }
             var newMetadata = Assemblies.LoadFile(sourceAssembly);
 
             var diff = Assemblies.Compare(oldMetadata, newMetadata, null);
