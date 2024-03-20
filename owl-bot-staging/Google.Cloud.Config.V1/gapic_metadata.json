@@ -1,0 +1,156 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.config.v1",
+  "libraryPackage": "Google.Cloud.Config.V1",
+  "services": {
+    "Config": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConfigClient",
+          "rpcs": {
+            "CreateDeployment": {
+              "methods": [
+                "CreateDeployment",
+                "CreateDeploymentAsync"
+              ]
+            },
+            "CreatePreview": {
+              "methods": [
+                "CreatePreview",
+                "CreatePreviewAsync"
+              ]
+            },
+            "DeleteDeployment": {
+              "methods": [
+                "DeleteDeployment",
+                "DeleteDeploymentAsync"
+              ]
+            },
+            "DeletePreview": {
+              "methods": [
+                "DeletePreview",
+                "DeletePreviewAsync"
+              ]
+            },
+            "DeleteStatefile": {
+              "methods": [
+                "DeleteStatefile",
+                "DeleteStatefileAsync"
+              ]
+            },
+            "ExportDeploymentStatefile": {
+              "methods": [
+                "ExportDeploymentStatefile",
+                "ExportDeploymentStatefileAsync"
+              ]
+            },
+            "ExportLockInfo": {
+              "methods": [
+                "ExportLockInfo",
+                "ExportLockInfoAsync"
+              ]
+            },
+            "ExportPreviewResult": {
+              "methods": [
+                "ExportPreviewResult",
+                "ExportPreviewResultAsync"
+              ]
+            },
+            "ExportRevisionStatefile": {
+              "methods": [
+                "ExportRevisionStatefile",
+                "ExportRevisionStatefileAsync"
+              ]
+            },
+            "GetDeployment": {
+              "methods": [
+                "GetDeployment",
+                "GetDeploymentAsync"
+              ]
+            },
+            "GetPreview": {
+              "methods": [
+                "GetPreview",
+                "GetPreviewAsync"
+              ]
+            },
+            "GetResource": {
+              "methods": [
+                "GetResource",
+                "GetResourceAsync"
+              ]
+            },
+            "GetRevision": {
+              "methods": [
+                "GetRevision",
+                "GetRevisionAsync"
+              ]
+            },
+            "GetTerraformVersion": {
+              "methods": [
+                "GetTerraformVersion",
+                "GetTerraformVersionAsync"
+              ]
+            },
+            "ImportStatefile": {
+              "methods": [
+                "ImportStatefile",
+                "ImportStatefileAsync"
+              ]
+            },
+            "ListDeployments": {
+              "methods": [
+                "ListDeployments",
+                "ListDeploymentsAsync"
+              ]
+            },
+            "ListPreviews": {
+              "methods": [
+                "ListPreviews",
+                "ListPreviewsAsync"
+              ]
+            },
+            "ListResources": {
+              "methods": [
+                "ListResources",
+                "ListResourcesAsync"
+              ]
+            },
+            "ListRevisions": {
+              "methods": [
+                "ListRevisions",
+                "ListRevisionsAsync"
+              ]
+            },
+            "ListTerraformVersions": {
+              "methods": [
+                "ListTerraformVersions",
+                "ListTerraformVersionsAsync"
+              ]
+            },
+            "LockDeployment": {
+              "methods": [
+                "LockDeployment",
+                "LockDeploymentAsync"
+              ]
+            },
+            "UnlockDeployment": {
+              "methods": [
+                "UnlockDeployment",
+                "UnlockDeploymentAsync"
+              ]
+            },
+            "UpdateDeployment": {
+              "methods": [
+                "UpdateDeployment",
+                "UpdateDeploymentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
