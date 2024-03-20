@@ -219,6 +219,81 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void ExecuteSqlRequestHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void ReadRequestHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateReadCommand("FOO", ReadOptions.FromColumns("Col1", "Col2"), KeySet.All);
+            command.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(1).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public async Task PartitionHasDirectedReadOptionsSetOnCommand()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupPartitionAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
+            command.Transaction = transaction;
+            var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10));
+
+            foreach (var partition in partitions)
+            {
+                // Normally we would send this information to another client to read, but we are just simulating it here
+                // by serializing and deserializing the information locally.
+                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
+                cmd.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+                using var reader = await cmd.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(10).StreamingRead(
+                Arg.Is<ReadRequest>(request => request.DirectedReadOptions.Equals(DirectedReadTests.IncludeDirectedReadOptions)),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
         public void CloneWithPriority()
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
