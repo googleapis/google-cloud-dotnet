@@ -1,0 +1,102 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.cloudbuild.v2",
+  "libraryPackage": "Google.Cloud.CloudBuild.V2",
+  "services": {
+    "RepositoryManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RepositoryManagerClient",
+          "rpcs": {
+            "BatchCreateRepositories": {
+              "methods": [
+                "BatchCreateRepositories",
+                "BatchCreateRepositoriesAsync"
+              ]
+            },
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "FetchGitRefs": {
+              "methods": [
+                "FetchGitRefs",
+                "FetchGitRefsAsync"
+              ]
+            },
+            "FetchLinkableRepositories": {
+              "methods": [
+                "FetchLinkableRepositories",
+                "FetchLinkableRepositoriesAsync"
+              ]
+            },
+            "FetchReadToken": {
+              "methods": [
+                "FetchReadToken",
+                "FetchReadTokenAsync"
+              ]
+            },
+            "FetchReadWriteToken": {
+              "methods": [
+                "FetchReadWriteToken",
+                "FetchReadWriteTokenAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
