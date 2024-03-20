@@ -63,6 +63,7 @@ namespace Google.Cloud.Spanner.Data
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
+            internal DirectedReadOptions DirectedReadOptions { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
 
             public ExecutableCommand(SpannerCommand command)
@@ -78,6 +79,7 @@ namespace Google.Cloud.Spanner.Data
                 QueryOptions = command.QueryOptions;
                 Priority = command.Priority;
                 Tag = command.Tag;
+                DirectedReadOptions = command.DirectedReadOptions;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -445,23 +447,32 @@ namespace Google.Cloud.Spanner.Data
 
             private ReadOrQueryRequest GetReadOrQueryRequest()
             {
-                if (Partition != null)
+                ReadOrQueryRequest request = Partition switch
                 {
-                    return Partition.Request;
+                    // If this is not a partition, then it's a query or read. We build the right request.
+                    null => CommandTextBuilder.SpannerCommandType switch
+                    {
+                        SpannerCommandType.Select => ReadOrQueryRequest.FromQueryRequest(GetExecuteSqlRequest()),
+                        SpannerCommandType.Read => ReadOrQueryRequest.FromReadRequest(GetReadRequest()),
+                        _ => throw new InvalidOperationException($"Implementation error: Invalid command type ${CommandTextBuilder.SpannerCommandType} for read or query. This should not happen.")
+                    },
+                    // If this is a partition, we already have a request, but we need to clone it if we are applying
+                    // directed read options later on.
+                    _ => DirectedReadOptions switch
+                    {
+                        null => Partition.Request,
+                        _ => Partition.Request.CloneRequest()
+                    }
+                };
+
+                // We don't validate that DirectedReadOptions is null when this is a non-read-only transaction.
+                // The service should fail if there are options set.
+                // This was agreed as part of the client library desing.
+                if (DirectedReadOptions is not null)
+                {
+                    request.DirectedReadOptions = DirectedReadOptions;
                 }
 
-                ReadOrQueryRequest request;
-                switch (CommandTextBuilder.SpannerCommandType)
-                {
-                    case SpannerCommandType.Select:
-                        request = ReadOrQueryRequest.FromQueryRequest(GetExecuteSqlRequest());
-                        break;
-                    case SpannerCommandType.Read:
-                        request = ReadOrQueryRequest.FromReadRequest(GetReadRequest());
-                        break;
-                    default:
-                        throw new InvalidOperationException($"Implementation error: Invalid command type ${CommandTextBuilder.SpannerCommandType} for read or query. This should not happen.");
-                }
                 return request;
             }
 

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -269,6 +270,17 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Tag { get; set; }
 
+        /// <summary>
+        /// Specifies which replicas or regions should be used for non-transactional reads or queries. May be null.
+        /// </summary>
+        /// <remarks>
+        /// These options will only be applied to read and query commands, including partitioned reads and queries.
+        /// They will be ignored for all other operations.
+        /// Directed reads are only supported for read-only and single use transactions. If you set this value on a read or query
+        /// operation that is then executed in a read-write or partioned DML transaction, the Spanner service will fail.
+        /// </remarks>
+        public DirectedReadOptions DirectedReadOptions { get; set; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -309,7 +321,8 @@ namespace Google.Cloud.Spanner.Data
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
             Priority = Priority,
-            Tag = Tag
+            Tag = Tag,
+            DirectedReadOptions = DirectedReadOptions?.Clone(),
         };
 
         /// <inheritdoc />
