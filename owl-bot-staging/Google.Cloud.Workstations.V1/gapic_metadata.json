@@ -1,0 +1,138 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.workstations.v1",
+  "libraryPackage": "Google.Cloud.Workstations.V1",
+  "services": {
+    "Workstations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WorkstationsClient",
+          "rpcs": {
+            "CreateWorkstation": {
+              "methods": [
+                "CreateWorkstation",
+                "CreateWorkstationAsync"
+              ]
+            },
+            "CreateWorkstationCluster": {
+              "methods": [
+                "CreateWorkstationCluster",
+                "CreateWorkstationClusterAsync"
+              ]
+            },
+            "CreateWorkstationConfig": {
+              "methods": [
+                "CreateWorkstationConfig",
+                "CreateWorkstationConfigAsync"
+              ]
+            },
+            "DeleteWorkstation": {
+              "methods": [
+                "DeleteWorkstation",
+                "DeleteWorkstationAsync"
+              ]
+            },
+            "DeleteWorkstationCluster": {
+              "methods": [
+                "DeleteWorkstationCluster",
+                "DeleteWorkstationClusterAsync"
+              ]
+            },
+            "DeleteWorkstationConfig": {
+              "methods": [
+                "DeleteWorkstationConfig",
+                "DeleteWorkstationConfigAsync"
+              ]
+            },
+            "GenerateAccessToken": {
+              "methods": [
+                "GenerateAccessToken",
+                "GenerateAccessTokenAsync"
+              ]
+            },
+            "GetWorkstation": {
+              "methods": [
+                "GetWorkstation",
+                "GetWorkstationAsync"
+              ]
+            },
+            "GetWorkstationCluster": {
+              "methods": [
+                "GetWorkstationCluster",
+                "GetWorkstationClusterAsync"
+              ]
+            },
+            "GetWorkstationConfig": {
+              "methods": [
+                "GetWorkstationConfig",
+                "GetWorkstationConfigAsync"
+              ]
+            },
+            "ListUsableWorkstationConfigs": {
+              "methods": [
+                "ListUsableWorkstationConfigs",
+                "ListUsableWorkstationConfigsAsync"
+              ]
+            },
+            "ListUsableWorkstations": {
+              "methods": [
+                "ListUsableWorkstations",
+                "ListUsableWorkstationsAsync"
+              ]
+            },
+            "ListWorkstationClusters": {
+              "methods": [
+                "ListWorkstationClusters",
+                "ListWorkstationClustersAsync"
+              ]
+            },
+            "ListWorkstationConfigs": {
+              "methods": [
+                "ListWorkstationConfigs",
+                "ListWorkstationConfigsAsync"
+              ]
+            },
+            "ListWorkstations": {
+              "methods": [
+                "ListWorkstations",
+                "ListWorkstationsAsync"
+              ]
+            },
+            "StartWorkstation": {
+              "methods": [
+                "StartWorkstation",
+                "StartWorkstationAsync"
+              ]
+            },
+            "StopWorkstation": {
+              "methods": [
+                "StopWorkstation",
+                "StopWorkstationAsync"
+              ]
+            },
+            "UpdateWorkstation": {
+              "methods": [
+                "UpdateWorkstation",
+                "UpdateWorkstationAsync"
+              ]
+            },
+            "UpdateWorkstationCluster": {
+              "methods": [
+                "UpdateWorkstationCluster",
+                "UpdateWorkstationClusterAsync"
+              ]
+            },
+            "UpdateWorkstationConfig": {
+              "methods": [
+                "UpdateWorkstationConfig",
+                "UpdateWorkstationConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
