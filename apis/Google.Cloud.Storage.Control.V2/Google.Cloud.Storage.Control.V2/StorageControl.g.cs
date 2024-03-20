@@ -123,14 +123,13 @@ namespace Google.Cloud.Storage.Control.V2 {
             "bS9hdXRoL2RldnN0b3JhZ2UuZnVsbF9jb250cm9sLGh0dHBzOi8vd3d3Lmdv",
             "b2dsZWFwaXMuY29tL2F1dGgvZGV2c3RvcmFnZS5yZWFkX29ubHksaHR0cHM6",
             "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kZXZzdG9yYWdlLnJlYWRfd3Jp",
-            "dGVCtAIKHWNvbS5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyQhNTdG9yYWdl",
-            "Q29udHJvbFByb3RvUAFaS2Nsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFnZS9j",
-            "b250cm9sL2FwaXYyL3N0b3JhZ2Vjb250cm9scGI7c3RvcmFnZWNvbnRyb2xw",
-            "YqoCH0dvb2dsZS5DbG91ZC5TdG9yYWdlLkNvbnRyb2wuVjLKAh9Hb29nbGVc",
-            "Q2xvdWRcU3RvcmFnZVxDb250cm9sXFYy6gIjR29vZ2xlOjpDbG91ZDo6U3Rv",
-            "cmFnZTo6Q29udHJvbDo6VjLqQUQKHXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20v",
-            "QnVja2V0EiNwcm9qZWN0cy97cHJvamVjdH0vYnVja2V0cy97YnVja2V0fWIG",
-            "cHJvdG8z"));
+            "dGVCpgIKHWNvbS5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyQhNTdG9yYWdl",
+            "Q29udHJvbFByb3RvUAFaPWNsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFnZS9j",
+            "b250cm9sL2FwaXYyL2NvbnRyb2xwYjtjb250cm9scGKqAh9Hb29nbGUuQ2xv",
+            "dWQuU3RvcmFnZS5Db250cm9sLlYyygIfR29vZ2xlXENsb3VkXFN0b3JhZ2Vc",
+            "Q29udHJvbFxWMuoCI0dvb2dsZTo6Q2xvdWQ6OlN0b3JhZ2U6OkNvbnRyb2w6",
+            "OlYy6kFECh1zdG9yYWdlLmdvb2dsZWFwaXMuY29tL0J1Y2tldBIjcHJvamVj",
+            "dHMve3Byb2plY3R9L2J1Y2tldHMve2J1Y2tldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
