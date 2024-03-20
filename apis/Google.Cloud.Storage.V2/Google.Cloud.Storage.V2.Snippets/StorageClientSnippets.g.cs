@@ -2419,6 +2419,7 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 SoftDeleted = false,
+                IncludeFoldersAsPrefixes = false,
                 MatchGlob = "",
             };
             // Make the request
@@ -2476,6 +2477,7 @@ namespace GoogleCSharpSnippets
                 LexicographicStart = "",
                 LexicographicEnd = "",
                 SoftDeleted = false,
+                IncludeFoldersAsPrefixes = false,
                 MatchGlob = "",
             };
             // Make the request
