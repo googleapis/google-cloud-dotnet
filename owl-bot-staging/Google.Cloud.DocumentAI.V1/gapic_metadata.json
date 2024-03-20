@@ -1,0 +1,150 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.documentai.v1",
+  "libraryPackage": "Google.Cloud.DocumentAI.V1",
+  "services": {
+    "DocumentProcessorService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DocumentProcessorServiceClient",
+          "rpcs": {
+            "BatchProcessDocuments": {
+              "methods": [
+                "BatchProcessDocuments",
+                "BatchProcessDocumentsAsync"
+              ]
+            },
+            "CreateProcessor": {
+              "methods": [
+                "CreateProcessor",
+                "CreateProcessorAsync"
+              ]
+            },
+            "DeleteProcessor": {
+              "methods": [
+                "DeleteProcessor",
+                "DeleteProcessorAsync"
+              ]
+            },
+            "DeleteProcessorVersion": {
+              "methods": [
+                "DeleteProcessorVersion",
+                "DeleteProcessorVersionAsync"
+              ]
+            },
+            "DeployProcessorVersion": {
+              "methods": [
+                "DeployProcessorVersion",
+                "DeployProcessorVersionAsync"
+              ]
+            },
+            "DisableProcessor": {
+              "methods": [
+                "DisableProcessor",
+                "DisableProcessorAsync"
+              ]
+            },
+            "EnableProcessor": {
+              "methods": [
+                "EnableProcessor",
+                "EnableProcessorAsync"
+              ]
+            },
+            "EvaluateProcessorVersion": {
+              "methods": [
+                "EvaluateProcessorVersion",
+                "EvaluateProcessorVersionAsync"
+              ]
+            },
+            "FetchProcessorTypes": {
+              "methods": [
+                "FetchProcessorTypes",
+                "FetchProcessorTypesAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
+              ]
+            },
+            "GetProcessor": {
+              "methods": [
+                "GetProcessor",
+                "GetProcessorAsync"
+              ]
+            },
+            "GetProcessorType": {
+              "methods": [
+                "GetProcessorType",
+                "GetProcessorTypeAsync"
+              ]
+            },
+            "GetProcessorVersion": {
+              "methods": [
+                "GetProcessorVersion",
+                "GetProcessorVersionAsync"
+              ]
+            },
+            "ListEvaluations": {
+              "methods": [
+                "ListEvaluations",
+                "ListEvaluationsAsync"
+              ]
+            },
+            "ListProcessorTypes": {
+              "methods": [
+                "ListProcessorTypes",
+                "ListProcessorTypesAsync"
+              ]
+            },
+            "ListProcessorVersions": {
+              "methods": [
+                "ListProcessorVersions",
+                "ListProcessorVersionsAsync"
+              ]
+            },
+            "ListProcessors": {
+              "methods": [
+                "ListProcessors",
+                "ListProcessorsAsync"
+              ]
+            },
+            "ProcessDocument": {
+              "methods": [
+                "ProcessDocument",
+                "ProcessDocumentAsync"
+              ]
+            },
+            "ReviewDocument": {
+              "methods": [
+                "ReviewDocument",
+                "ReviewDocumentAsync"
+              ]
+            },
+            "SetDefaultProcessorVersion": {
+              "methods": [
+                "SetDefaultProcessorVersion",
+                "SetDefaultProcessorVersionAsync"
+              ]
+            },
+            "TrainProcessorVersion": {
+              "methods": [
+                "TrainProcessorVersion",
+                "TrainProcessorVersionAsync"
+              ]
+            },
+            "UndeployProcessorVersion": {
+              "methods": [
+                "UndeployProcessorVersion",
+                "UndeployProcessorVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
