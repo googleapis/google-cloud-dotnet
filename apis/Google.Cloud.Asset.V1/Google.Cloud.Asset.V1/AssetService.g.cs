@@ -8320,10 +8320,10 @@ namespace Google.Cloud.Asset.V1 {
     /// folder number (such as "folders/123"), a project ID (such as
     /// "projects/my-project-id"), or a project number (such as "projects/12345").
     ///
-    /// To know how to get organization id, visit [here
+    /// To know how to get organization ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
     ///
-    /// To know how to get folder or project id, visit [here
+    /// To know how to get folder or project ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18354,10 +18354,10 @@ namespace Google.Cloud.Asset.V1 {
     /// folder number (such as "folders/123"), a project ID (such as
     /// "projects/my-project-id"), or a project number (such as "projects/12345").
     ///
-    /// To know how to get organization id, visit [here
+    /// To know how to get organization ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
     ///
-    /// To know how to get folder or project id, visit [here
+    /// To know how to get folder or project ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19680,8 +19680,8 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>Field number for the "values" field.</summary>
         public const int ValuesFieldNumber = 3;
         /// <summary>
-        /// List of values to be used for this PolicyRule. This field can be set
-        /// only in Policies for list constraints.
+        /// List of values to be used for this policy rule. This field can be set
+        /// only in policies for list constraints.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19805,14 +19805,18 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>
         /// The condition evaluation result for this rule.
         /// Only populated if it meets all the following criteria:
-        /// * there is a
+        ///
+        /// * There is a
         /// [condition][google.cloud.asset.v1.AnalyzerOrgPolicy.Rule.condition]
-        /// defined for this rule
-        /// * this rule is within a consolidated_policy
-        /// * the consolidated_policy is within
-        ///   [AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer]
+        /// defined for this rule.
+        /// * This rule is within
+        ///   [AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy],
         ///   or
-        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource]
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy]
+        ///   when the
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset]
+        ///   has
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

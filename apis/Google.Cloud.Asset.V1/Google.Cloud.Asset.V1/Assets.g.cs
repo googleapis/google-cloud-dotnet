@@ -3060,7 +3060,7 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// The key and value for a
-  /// [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview),
+  /// [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Tag : pb::IMessage<Tag>
@@ -7067,7 +7067,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// The Condition evaluation.
+  /// The condition evaluation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConditionEvaluation : pb::IMessage<ConditionEvaluation>
@@ -7284,7 +7284,7 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>
         /// The evaluation result is `conditional` when the condition expression
         /// contains variables that are either missing input values or have not been
-        /// supported by Analyzer yet.
+        /// supported by Policy Analyzer yet.
         /// </summary>
         [pbr::OriginalName("CONDITIONAL")] Conditional = 3,
       }
