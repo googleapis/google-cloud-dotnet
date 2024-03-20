@@ -65,11 +65,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
         };
 
+        private const string DefaultNetstandardTarget = "netstandard2.1";
+
         private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
         {
-            { ApiType.Rest, "netstandard2.1;net462" },
-            { ApiType.Grpc, "netstandard2.1;net462" },
-            { ApiType.Regapic, "netstandard2.1;net462" }
+            { ApiType.Rest, $"{DefaultNetstandardTarget};net462" },
+            { ApiType.Grpc, $"{DefaultNetstandardTarget};net462" },
+            { ApiType.Regapic, $"{DefaultNetstandardTarget};net462" }
         };
 
         private const string DefaultTestTargetFrameworks = "net6.0;net462";
@@ -166,6 +168,20 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateMetadataFile(path, api);
             }
             return 0;
+        }
+
+        /// <summary>
+        /// Returns the tfm (e.g. netstandard2.0 or netstandard2.1) to build/load for tools
+        /// that need to load the library with reflection, e.g. for smoke tests.
+        /// </summary>
+        internal static string GetTargetForReflectionLoad(string id)
+        {
+            // Work out the TFM to publish, based on specified target frameworks.
+            var api = ApiCatalog.Load()[id];
+            return api.TargetFrameworks?
+                .Split(';')
+                .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
+                ?? DefaultNetstandardTarget;
         }
 
         /// <summary>
