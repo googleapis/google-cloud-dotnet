@@ -1322,7 +1322,7 @@
       "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Cloud Quotas",
-      "productUrl": "https://cloud.google.com/cloudquotas/docs/overview",
+      "productUrl": "https://cloud.google.com/docs/quotas/api-overview",
       "description": "Recommended Google client library to access the Google Cloud Quotas API, which provides GCP service consumers with management and observability for resource usage, quotas, and restrictions of the services they consume.",
       "tags": [
         "usage",
