@@ -7405,7 +7405,11 @@ namespace Google.Cloud.MigrationCenter.V1
         {
             GrpcClient = grpcClient;
             MigrationCenterSettings effectiveSettings = settings ?? MigrationCenterSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateImportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateImportJobOperationsSettings, logger);
             DeleteImportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteImportJobOperationsSettings, logger);
             UpdateImportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateImportJobOperationsSettings, logger);

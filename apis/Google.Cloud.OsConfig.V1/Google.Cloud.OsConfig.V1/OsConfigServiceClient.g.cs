@@ -1725,7 +1725,11 @@ namespace Google.Cloud.OsConfig.V1
         {
             GrpcClient = grpcClient;
             OsConfigServiceSettings effectiveSettings = settings ?? OsConfigServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callExecutePatchJob = clientHelper.BuildApiCall<ExecutePatchJobRequest, PatchJob>("ExecutePatchJob", grpcClient.ExecutePatchJobAsync, grpcClient.ExecutePatchJob, effectiveSettings.ExecutePatchJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExecutePatchJob);
             Modify_ExecutePatchJobApiCall(ref _callExecutePatchJob);

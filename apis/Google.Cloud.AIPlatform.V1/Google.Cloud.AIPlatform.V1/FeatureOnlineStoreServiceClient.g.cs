@@ -433,7 +433,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             FeatureOnlineStoreServiceSettings effectiveSettings = settings ?? FeatureOnlineStoreServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callFetchFeatureValues = clientHelper.BuildApiCall<FetchFeatureValuesRequest, FetchFeatureValuesResponse>("FetchFeatureValues", grpcClient.FetchFeatureValuesAsync, grpcClient.FetchFeatureValues, effectiveSettings.FetchFeatureValuesSettings).WithGoogleRequestParam("feature_view", request => request.FeatureView);

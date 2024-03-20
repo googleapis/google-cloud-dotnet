@@ -428,7 +428,11 @@ namespace Google.Shopping.Css.V1
         {
             GrpcClient = grpcClient;
             CssProductInputsServiceSettings effectiveSettings = settings ?? CssProductInputsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callInsertCssProductInput = clientHelper.BuildApiCall<InsertCssProductInputRequest, CssProductInput>("InsertCssProductInput", grpcClient.InsertCssProductInputAsync, grpcClient.InsertCssProductInput, effectiveSettings.InsertCssProductInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInsertCssProductInput);
             Modify_InsertCssProductInputApiCall(ref _callInsertCssProductInput);

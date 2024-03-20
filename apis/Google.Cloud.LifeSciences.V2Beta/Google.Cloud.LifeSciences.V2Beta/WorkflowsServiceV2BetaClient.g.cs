@@ -363,7 +363,11 @@ namespace Google.Cloud.LifeSciences.V2Beta
         {
             GrpcClient = grpcClient;
             WorkflowsServiceV2BetaSettings effectiveSettings = settings ?? WorkflowsServiceV2BetaSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunPipelineOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callRunPipeline = clientHelper.BuildApiCall<RunPipelineRequest, lro::Operation>("RunPipeline", grpcClient.RunPipelineAsync, grpcClient.RunPipeline, effectiveSettings.RunPipelineSettings).WithGoogleRequestParam("parent", request => request.Parent);

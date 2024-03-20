@@ -1888,7 +1888,11 @@ namespace Google.Analytics.Data.V1Beta
         {
             GrpcClient = grpcClient;
             BetaAnalyticsDataSettings effectiveSettings = settings ?? BetaAnalyticsDataSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAudienceExportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAudienceExportOperationsSettings, logger);
             _callRunReport = clientHelper.BuildApiCall<RunReportRequest, RunReportResponse>("RunReport", grpcClient.RunReportAsync, grpcClient.RunReport, effectiveSettings.RunReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunReport);

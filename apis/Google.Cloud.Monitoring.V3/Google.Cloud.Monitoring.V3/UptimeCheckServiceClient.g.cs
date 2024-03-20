@@ -1478,7 +1478,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             UptimeCheckServiceSettings effectiveSettings = settings ?? UptimeCheckServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListUptimeCheckConfigs = clientHelper.BuildApiCall<ListUptimeCheckConfigsRequest, ListUptimeCheckConfigsResponse>("ListUptimeCheckConfigs", grpcClient.ListUptimeCheckConfigsAsync, grpcClient.ListUptimeCheckConfigs, effectiveSettings.ListUptimeCheckConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUptimeCheckConfigs);
             Modify_ListUptimeCheckConfigsApiCall(ref _callListUptimeCheckConfigs);

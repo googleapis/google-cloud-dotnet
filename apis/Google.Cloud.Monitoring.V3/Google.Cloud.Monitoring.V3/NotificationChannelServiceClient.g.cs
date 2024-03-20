@@ -3321,7 +3321,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             NotificationChannelServiceSettings effectiveSettings = settings ?? NotificationChannelServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListNotificationChannelDescriptors = clientHelper.BuildApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse>("ListNotificationChannelDescriptors", grpcClient.ListNotificationChannelDescriptorsAsync, grpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);

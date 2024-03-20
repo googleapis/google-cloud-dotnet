@@ -2384,7 +2384,11 @@ namespace Grafeas.V1
         {
             GrpcClient = grpcClient;
             GrafeasSettings effectiveSettings = settings ?? GrafeasSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetOccurrence = clientHelper.BuildApiCall<GetOccurrenceRequest, Occurrence>("GetOccurrence", grpcClient.GetOccurrenceAsync, grpcClient.GetOccurrence, effectiveSettings.GetOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOccurrence);
             Modify_GetOccurrenceApiCall(ref _callGetOccurrence);

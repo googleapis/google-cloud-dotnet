@@ -4220,7 +4220,11 @@ namespace Google.Cloud.GkeBackup.V1
         {
             GrpcClient = grpcClient;
             BackupForGKESettings effectiveSettings = settings ?? BackupForGKESettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanOperationsSettings, logger);
             UpdateBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPlanOperationsSettings, logger);
             DeleteBackupPlanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanOperationsSettings, logger);

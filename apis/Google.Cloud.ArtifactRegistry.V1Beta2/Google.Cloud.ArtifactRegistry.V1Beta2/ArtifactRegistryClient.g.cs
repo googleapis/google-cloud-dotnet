@@ -2773,7 +2773,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         {
             GrpcClient = grpcClient;
             ArtifactRegistrySettings effectiveSettings = settings ?? ArtifactRegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportAptArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAptArtifactsOperationsSettings, logger);
             ImportYumArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportYumArtifactsOperationsSettings, logger);
             CreateRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRepositoryOperationsSettings, logger);

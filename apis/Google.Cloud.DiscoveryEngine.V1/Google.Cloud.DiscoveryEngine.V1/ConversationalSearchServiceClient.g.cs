@@ -1174,7 +1174,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             GrpcClient = grpcClient;
             ConversationalSearchServiceSettings effectiveSettings = settings ?? ConversationalSearchServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callConverseConversation = clientHelper.BuildApiCall<ConverseConversationRequest, ConverseConversationResponse>("ConverseConversation", grpcClient.ConverseConversationAsync, grpcClient.ConverseConversation, effectiveSettings.ConverseConversationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callConverseConversation);

@@ -921,7 +921,11 @@ namespace Google.Cloud.Iam.V2
         {
             GrpcClient = grpcClient;
             PoliciesSettings effectiveSettings = settings ?? PoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreatePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePolicyOperationsSettings, logger);
             UpdatePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePolicyOperationsSettings, logger);
             DeletePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePolicyOperationsSettings, logger);

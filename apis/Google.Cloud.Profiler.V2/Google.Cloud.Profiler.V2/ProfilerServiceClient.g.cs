@@ -669,7 +669,11 @@ namespace Google.Cloud.Profiler.V2
         {
             GrpcClient = grpcClient;
             ProfilerServiceSettings effectiveSettings = settings ?? ProfilerServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateProfile = clientHelper.BuildApiCall<CreateProfileRequest, Profile>("CreateProfile", grpcClient.CreateProfileAsync, grpcClient.CreateProfile, effectiveSettings.CreateProfileSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateProfile);
             Modify_CreateProfileApiCall(ref _callCreateProfile);

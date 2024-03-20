@@ -820,7 +820,11 @@ namespace Google.Cloud.Vision.V1
         {
             GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AsyncBatchAnnotateImagesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateImagesOperationsSettings, logger);
             AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings, logger);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>("BatchAnnotateImages", grpcClient.BatchAnnotateImagesAsync, grpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);

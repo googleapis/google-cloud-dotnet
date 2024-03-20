@@ -248,7 +248,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             QueryServiceSettings effectiveSettings = settings ?? QueryServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callQueryTimeSeries = clientHelper.BuildApiCall<QueryTimeSeriesRequest, QueryTimeSeriesResponse>("QueryTimeSeries", grpcClient.QueryTimeSeriesAsync, grpcClient.QueryTimeSeries, effectiveSettings.QueryTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callQueryTimeSeries);
             Modify_QueryTimeSeriesApiCall(ref _callQueryTimeSeries);

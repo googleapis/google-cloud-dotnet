@@ -1102,7 +1102,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             JobControllerSettings effectiveSettings = settings ?? JobControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SubmitJobAsOperationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SubmitJobAsOperationOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callSubmitJob = clientHelper.BuildApiCall<SubmitJobRequest, Job>("SubmitJob", grpcClient.SubmitJobAsync, grpcClient.SubmitJob, effectiveSettings.SubmitJobSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);

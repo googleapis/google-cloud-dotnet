@@ -523,7 +523,11 @@ namespace Google.Cloud.Speech.V1
         {
             GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LongRunningRecognizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningRecognizeOperationsSettings, logger);
             _callRecognize = clientHelper.BuildApiCall<RecognizeRequest, RecognizeResponse>("Recognize", grpcClient.RecognizeAsync, grpcClient.Recognize, effectiveSettings.RecognizeSettings);
             Modify_ApiCall(ref _callRecognize);

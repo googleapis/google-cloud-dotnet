@@ -270,7 +270,11 @@ namespace Google.Cloud.PolicyTroubleshooter.Iam.V3
         {
             GrpcClient = grpcClient;
             PolicyTroubleshooterSettings effectiveSettings = settings ?? PolicyTroubleshooterSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callTroubleshootIamPolicy = clientHelper.BuildApiCall<TroubleshootIamPolicyRequest, TroubleshootIamPolicyResponse>("TroubleshootIamPolicy", grpcClient.TroubleshootIamPolicyAsync, grpcClient.TroubleshootIamPolicy, effectiveSettings.TroubleshootIamPolicySettings);
             Modify_ApiCall(ref _callTroubleshootIamPolicy);
             Modify_TroubleshootIamPolicyApiCall(ref _callTroubleshootIamPolicy);

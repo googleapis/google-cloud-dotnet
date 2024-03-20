@@ -441,7 +441,11 @@ namespace Google.Cloud.AppEngine.V1
         {
             GrpcClient = grpcClient;
             AuthorizedCertificatesSettings effectiveSettings = settings ?? AuthorizedCertificatesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListAuthorizedCertificates = clientHelper.BuildApiCall<ListAuthorizedCertificatesRequest, ListAuthorizedCertificatesResponse>("ListAuthorizedCertificates", grpcClient.ListAuthorizedCertificatesAsync, grpcClient.ListAuthorizedCertificates, effectiveSettings.ListAuthorizedCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizedCertificates);
             Modify_ListAuthorizedCertificatesApiCall(ref _callListAuthorizedCertificates);

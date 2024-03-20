@@ -1140,7 +1140,11 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             GrpcClient = grpcClient;
             BigQueryWriteSettings effectiveSettings = settings ?? BigQueryWriteSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateWriteStream = clientHelper.BuildApiCall<CreateWriteStreamRequest, WriteStream>("CreateWriteStream", grpcClient.CreateWriteStreamAsync, grpcClient.CreateWriteStream, effectiveSettings.CreateWriteStreamSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWriteStream);
             Modify_CreateWriteStreamApiCall(ref _callCreateWriteStream);

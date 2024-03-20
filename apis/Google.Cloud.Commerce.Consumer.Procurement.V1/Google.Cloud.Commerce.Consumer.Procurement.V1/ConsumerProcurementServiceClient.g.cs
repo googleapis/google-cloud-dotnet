@@ -539,7 +539,11 @@ namespace Google.Cloud.Commerce.Consumer.Procurement.V1
         {
             GrpcClient = grpcClient;
             ConsumerProcurementServiceSettings effectiveSettings = settings ?? ConsumerProcurementServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             PlaceOrderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PlaceOrderOperationsSettings, logger);
             _callPlaceOrder = clientHelper.BuildApiCall<PlaceOrderRequest, lro::Operation>("PlaceOrder", grpcClient.PlaceOrderAsync, grpcClient.PlaceOrder, effectiveSettings.PlaceOrderSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPlaceOrder);

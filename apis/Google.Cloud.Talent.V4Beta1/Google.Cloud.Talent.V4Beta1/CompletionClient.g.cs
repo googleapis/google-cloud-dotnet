@@ -261,7 +261,11 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             GrpcClient = grpcClient;
             CompletionSettings effectiveSettings = settings ?? CompletionSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCompleteQuery = clientHelper.BuildApiCall<CompleteQueryRequest, CompleteQueryResponse>("CompleteQuery", grpcClient.CompleteQueryAsync, grpcClient.CompleteQuery, effectiveSettings.CompleteQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCompleteQuery);
             Modify_CompleteQueryApiCall(ref _callCompleteQuery);

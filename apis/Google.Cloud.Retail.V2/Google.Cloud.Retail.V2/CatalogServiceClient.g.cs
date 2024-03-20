@@ -1888,7 +1888,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             CatalogServiceSettings effectiveSettings = settings ?? CatalogServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCatalogs = clientHelper.BuildApiCall<ListCatalogsRequest, ListCatalogsResponse>("ListCatalogs", grpcClient.ListCatalogsAsync, grpcClient.ListCatalogs, effectiveSettings.ListCatalogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCatalogs);

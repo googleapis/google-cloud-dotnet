@@ -1937,7 +1937,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             VizierServiceSettings effectiveSettings = settings ?? VizierServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SuggestTrialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SuggestTrialsOperationsSettings, logger);
             CheckTrialEarlyStoppingStateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CheckTrialEarlyStoppingStateOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);

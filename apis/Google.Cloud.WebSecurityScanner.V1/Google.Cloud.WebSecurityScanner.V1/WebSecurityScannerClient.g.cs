@@ -810,7 +810,11 @@ namespace Google.Cloud.WebSecurityScanner.V1
         {
             GrpcClient = grpcClient;
             WebSecurityScannerSettings effectiveSettings = settings ?? WebSecurityScannerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateScanConfig = clientHelper.BuildApiCall<CreateScanConfigRequest, ScanConfig>("CreateScanConfig", grpcClient.CreateScanConfigAsync, grpcClient.CreateScanConfig, effectiveSettings.CreateScanConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateScanConfig);
             Modify_CreateScanConfigApiCall(ref _callCreateScanConfig);

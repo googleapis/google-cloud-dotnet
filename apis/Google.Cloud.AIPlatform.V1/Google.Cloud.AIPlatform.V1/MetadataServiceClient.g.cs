@@ -5614,7 +5614,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             MetadataServiceSettings effectiveSettings = settings ?? MetadataServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataStoreOperationsSettings, logger);
             DeleteMetadataStoreOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMetadataStoreOperationsSettings, logger);
             DeleteArtifactOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteArtifactOperationsSettings, logger);

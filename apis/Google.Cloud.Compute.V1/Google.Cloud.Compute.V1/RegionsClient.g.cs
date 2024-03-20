@@ -401,7 +401,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             RegionsSettings effectiveSettings = settings ?? RegionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGet = clientHelper.BuildApiCall<GetRegionRequest, Region>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);

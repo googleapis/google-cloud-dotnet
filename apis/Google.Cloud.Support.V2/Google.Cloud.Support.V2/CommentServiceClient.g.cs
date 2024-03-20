@@ -498,7 +498,11 @@ namespace Google.Cloud.Support.V2
         {
             GrpcClient = grpcClient;
             CommentServiceSettings effectiveSettings = settings ?? CommentServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListComments = clientHelper.BuildApiCall<ListCommentsRequest, ListCommentsResponse>("ListComments", grpcClient.ListCommentsAsync, grpcClient.ListComments, effectiveSettings.ListCommentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListComments);
             Modify_ListCommentsApiCall(ref _callListComments);

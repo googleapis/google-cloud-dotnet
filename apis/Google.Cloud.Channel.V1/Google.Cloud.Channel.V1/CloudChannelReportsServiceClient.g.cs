@@ -730,7 +730,11 @@ namespace Google.Cloud.Channel.V1
         {
             GrpcClient = grpcClient;
             CloudChannelReportsServiceSettings effectiveSettings = settings ?? CloudChannelReportsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunReportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunReportJobOperationsSettings, logger);
 #pragma warning disable CS0612
             _callRunReportJob = clientHelper.BuildApiCall<RunReportJobRequest, lro::Operation>("RunReportJob", grpcClient.RunReportJobAsync, grpcClient.RunReportJob, effectiveSettings.RunReportJobSettings).WithGoogleRequestParam("name", request => request.Name);

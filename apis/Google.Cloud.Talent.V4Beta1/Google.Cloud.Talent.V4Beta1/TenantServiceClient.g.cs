@@ -900,7 +900,11 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             GrpcClient = grpcClient;
             TenantServiceSettings effectiveSettings = settings ?? TenantServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateTenant = clientHelper.BuildApiCall<CreateTenantRequest, Tenant>("CreateTenant", grpcClient.CreateTenantAsync, grpcClient.CreateTenant, effectiveSettings.CreateTenantSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTenant);
             Modify_CreateTenantApiCall(ref _callCreateTenant);

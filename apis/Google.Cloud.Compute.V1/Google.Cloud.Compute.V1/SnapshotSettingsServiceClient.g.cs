@@ -445,7 +445,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             SnapshotSettingsServiceSettings effectiveSettings = settings ?? SnapshotSettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
             _callGet = clientHelper.BuildApiCall<GetSnapshotSettingRequest, SnapshotSettings>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callGet);

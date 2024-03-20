@@ -2783,7 +2783,11 @@ namespace Google.Cloud.CloudBuild.V1
         {
             GrpcClient = grpcClient;
             CloudBuildSettings effectiveSettings = settings ?? CloudBuildSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings, logger);
             RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings, logger);
             ApproveBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApproveBuildOperationsSettings, logger);

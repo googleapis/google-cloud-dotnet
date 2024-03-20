@@ -2951,7 +2951,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateProjectOperationsSettings, logger);
             UpdateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateProjectOperationsSettings, logger);
             MoveProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveProjectOperationsSettings, logger);

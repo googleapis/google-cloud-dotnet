@@ -403,7 +403,11 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
         {
             GrpcClient = grpcClient;
             PublicCertificateAuthorityServiceSettings effectiveSettings = settings ?? PublicCertificateAuthorityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateExternalAccountKey = clientHelper.BuildApiCall<CreateExternalAccountKeyRequest, ExternalAccountKey>("CreateExternalAccountKey", grpcClient.CreateExternalAccountKeyAsync, grpcClient.CreateExternalAccountKey, effectiveSettings.CreateExternalAccountKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateExternalAccountKey);
             Modify_CreateExternalAccountKeyApiCall(ref _callCreateExternalAccountKey);

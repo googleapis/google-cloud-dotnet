@@ -2618,7 +2618,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             RegionDisksSettings effectiveSettings = settings ?? RegionDisksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings, logger);
             BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.BulkInsertOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CreateSnapshotOperationsSettings, logger);

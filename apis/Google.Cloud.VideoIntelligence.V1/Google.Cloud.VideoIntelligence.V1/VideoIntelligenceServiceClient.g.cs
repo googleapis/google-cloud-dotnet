@@ -417,7 +417,11 @@ namespace Google.Cloud.VideoIntelligence.V1
         {
             GrpcClient = grpcClient;
             VideoIntelligenceServiceSettings effectiveSettings = settings ?? VideoIntelligenceServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AnnotateVideoOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnnotateVideoOperationsSettings, logger);
             _callAnnotateVideo = clientHelper.BuildApiCall<AnnotateVideoRequest, lro::Operation>("AnnotateVideo", grpcClient.AnnotateVideoAsync, grpcClient.AnnotateVideo, effectiveSettings.AnnotateVideoSettings);
             Modify_ApiCall(ref _callAnnotateVideo);

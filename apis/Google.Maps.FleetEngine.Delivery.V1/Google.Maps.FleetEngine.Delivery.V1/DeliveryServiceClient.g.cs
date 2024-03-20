@@ -1719,7 +1719,11 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         {
             GrpcClient = grpcClient;
             DeliveryServiceSettings effectiveSettings = settings ?? DeliveryServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateDeliveryVehicle = clientHelper.BuildApiCall<CreateDeliveryVehicleRequest, DeliveryVehicle>("CreateDeliveryVehicle", grpcClient.CreateDeliveryVehicleAsync, grpcClient.CreateDeliveryVehicle, effectiveSettings.CreateDeliveryVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateDeliveryVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateDeliveryVehicle);
             Modify_CreateDeliveryVehicleApiCall(ref _callCreateDeliveryVehicle);

@@ -2728,7 +2728,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             FoldersSettings effectiveSettings = settings ?? FoldersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFolderOperationsSettings, logger);
             UpdateFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFolderOperationsSettings, logger);
             MoveFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveFolderOperationsSettings, logger);

@@ -1730,7 +1730,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             TagKeysSettings effectiveSettings = settings ?? TagKeysSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagKeyOperationsSettings, logger);
             UpdateTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTagKeyOperationsSettings, logger);
             DeleteTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagKeyOperationsSettings, logger);

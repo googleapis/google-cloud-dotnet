@@ -333,7 +333,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             GrpcClient = grpcClient;
             SystemPolicyV1Settings effectiveSettings = settings ?? SystemPolicyV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetSystemPolicy = clientHelper.BuildApiCall<GetSystemPolicyRequest, Policy>("GetSystemPolicy", grpcClient.GetSystemPolicyAsync, grpcClient.GetSystemPolicy, effectiveSettings.GetSystemPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSystemPolicy);
             Modify_GetSystemPolicyApiCall(ref _callGetSystemPolicy);

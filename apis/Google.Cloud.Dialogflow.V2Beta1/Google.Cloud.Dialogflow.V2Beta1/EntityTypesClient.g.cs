@@ -4009,7 +4009,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             EntityTypesSettings effectiveSettings = settings ?? EntityTypesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BatchUpdateEntityTypesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchUpdateEntityTypesOperationsSettings, logger);
             BatchDeleteEntityTypesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteEntityTypesOperationsSettings, logger);
             BatchCreateEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateEntitiesOperationsSettings, logger);

@@ -274,7 +274,11 @@ namespace Google.Cloud.ServiceDirectory.V1
         {
             GrpcClient = grpcClient;
             LookupServiceSettings effectiveSettings = settings ?? LookupServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callResolveService = clientHelper.BuildApiCall<ResolveServiceRequest, ResolveServiceResponse>("ResolveService", grpcClient.ResolveServiceAsync, grpcClient.ResolveService, effectiveSettings.ResolveServiceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResolveService);

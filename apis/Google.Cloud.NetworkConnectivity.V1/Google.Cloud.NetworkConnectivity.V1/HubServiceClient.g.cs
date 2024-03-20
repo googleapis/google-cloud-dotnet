@@ -3166,7 +3166,11 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             GrpcClient = grpcClient;
             HubServiceSettings effectiveSettings = settings ?? HubServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHubOperationsSettings, logger);
             UpdateHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateHubOperationsSettings, logger);
             DeleteHubOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHubOperationsSettings, logger);

@@ -2609,7 +2609,11 @@ namespace Google.Cloud.SecretManager.V1Beta2
         {
             GrpcClient = grpcClient;
             SecretManagerServiceSettings effectiveSettings = settings ?? SecretManagerServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListSecrets = clientHelper.BuildApiCall<ListSecretsRequest, ListSecretsResponse>("ListSecrets", grpcClient.ListSecretsAsync, grpcClient.ListSecrets, effectiveSettings.ListSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSecrets);

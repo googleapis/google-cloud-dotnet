@@ -1136,7 +1136,11 @@ namespace Google.Cloud.NetworkManagement.V1
         {
             GrpcClient = grpcClient;
             ReachabilityServiceSettings effectiveSettings = settings ?? ReachabilityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectivityTestOperationsSettings, logger);
             UpdateConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectivityTestOperationsSettings, logger);
             RerunConnectivityTestOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RerunConnectivityTestOperationsSettings, logger);

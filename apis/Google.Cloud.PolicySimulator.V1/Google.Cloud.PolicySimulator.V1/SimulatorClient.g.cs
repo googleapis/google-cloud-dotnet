@@ -736,7 +736,11 @@ namespace Google.Cloud.PolicySimulator.V1
         {
             GrpcClient = grpcClient;
             SimulatorSettings effectiveSettings = settings ?? SimulatorSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateReplayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReplayOperationsSettings, logger);
             _callGetReplay = clientHelper.BuildApiCall<GetReplayRequest, Replay>("GetReplay", grpcClient.GetReplayAsync, grpcClient.GetReplay, effectiveSettings.GetReplaySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReplay);

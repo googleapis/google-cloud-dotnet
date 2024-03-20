@@ -285,7 +285,11 @@ namespace Google.Cloud.Location
         {
             GrpcClient = grpcClient;
             LocationsSettings effectiveSettings = settings ?? LocationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListLocations = clientHelper.BuildApiCall<ListLocationsRequest, ListLocationsResponse>("ListLocations", grpcClient.ListLocationsAsync, grpcClient.ListLocations, effectiveSettings.ListLocationsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListLocations);
             Modify_ListLocationsApiCall(ref _callListLocations);

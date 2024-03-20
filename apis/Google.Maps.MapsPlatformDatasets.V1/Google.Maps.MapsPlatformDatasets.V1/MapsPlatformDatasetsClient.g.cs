@@ -845,7 +845,11 @@ namespace Google.Maps.MapsPlatformDatasets.V1
         {
             GrpcClient = grpcClient;
             MapsPlatformDatasetsSettings effectiveSettings = settings ?? MapsPlatformDatasetsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, Dataset>("CreateDataset", grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataset);
             Modify_CreateDatasetApiCall(ref _callCreateDataset);

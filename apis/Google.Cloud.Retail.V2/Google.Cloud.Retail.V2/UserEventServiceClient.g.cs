@@ -669,7 +669,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             UserEventServiceSettings effectiveSettings = settings ?? UserEventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             PurgeUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeUserEventsOperationsSettings, logger);
             ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
             RejoinUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejoinUserEventsOperationsSettings, logger);

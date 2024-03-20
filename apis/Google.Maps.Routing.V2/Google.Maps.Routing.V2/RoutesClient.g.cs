@@ -407,7 +407,11 @@ namespace Google.Maps.Routing.V2
         {
             GrpcClient = grpcClient;
             RoutesSettings effectiveSettings = settings ?? RoutesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callComputeRoutes = clientHelper.BuildApiCall<ComputeRoutesRequest, ComputeRoutesResponse>("ComputeRoutes", grpcClient.ComputeRoutesAsync, grpcClient.ComputeRoutes, effectiveSettings.ComputeRoutesSettings);
             Modify_ApiCall(ref _callComputeRoutes);
             Modify_ComputeRoutesApiCall(ref _callComputeRoutes);

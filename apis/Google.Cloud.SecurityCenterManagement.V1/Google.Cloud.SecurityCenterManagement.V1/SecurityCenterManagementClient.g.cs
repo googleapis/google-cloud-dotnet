@@ -4176,7 +4176,11 @@ namespace Google.Cloud.SecurityCenterManagement.V1
         {
             GrpcClient = grpcClient;
             SecurityCenterManagementSettings effectiveSettings = settings ?? SecurityCenterManagementSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListEffectiveSecurityHealthAnalyticsCustomModules = clientHelper.BuildApiCall<ListEffectiveSecurityHealthAnalyticsCustomModulesRequest, ListEffectiveSecurityHealthAnalyticsCustomModulesResponse>("ListEffectiveSecurityHealthAnalyticsCustomModules", grpcClient.ListEffectiveSecurityHealthAnalyticsCustomModulesAsync, grpcClient.ListEffectiveSecurityHealthAnalyticsCustomModules, effectiveSettings.ListEffectiveSecurityHealthAnalyticsCustomModulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEffectiveSecurityHealthAnalyticsCustomModules);

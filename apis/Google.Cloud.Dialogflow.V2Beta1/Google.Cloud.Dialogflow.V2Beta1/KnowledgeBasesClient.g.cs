@@ -1180,7 +1180,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             KnowledgeBasesSettings effectiveSettings = settings ?? KnowledgeBasesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListKnowledgeBases = clientHelper.BuildApiCall<ListKnowledgeBasesRequest, ListKnowledgeBasesResponse>("ListKnowledgeBases", grpcClient.ListKnowledgeBasesAsync, grpcClient.ListKnowledgeBases, effectiveSettings.ListKnowledgeBasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListKnowledgeBases);

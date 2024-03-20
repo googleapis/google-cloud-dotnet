@@ -8115,7 +8115,11 @@ namespace Google.Cloud.SecurityCenter.V2
         {
             GrpcClient = grpcClient;
             SecurityCenterSettings effectiveSettings = settings ?? SecurityCenterSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BulkMuteFindingsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkMuteFindingsOperationsSettings, logger);
             _callBatchCreateResourceValueConfigs = clientHelper.BuildApiCall<BatchCreateResourceValueConfigsRequest, BatchCreateResourceValueConfigsResponse>("BatchCreateResourceValueConfigs", grpcClient.BatchCreateResourceValueConfigsAsync, grpcClient.BatchCreateResourceValueConfigs, effectiveSettings.BatchCreateResourceValueConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchCreateResourceValueConfigs);

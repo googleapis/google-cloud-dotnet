@@ -2539,7 +2539,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             GrpcClient = grpcClient;
             DataTransferServiceSettings effectiveSettings = settings ?? DataTransferServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetDataSource = clientHelper.BuildApiCall<GetDataSourceRequest, DataSource>("GetDataSource", grpcClient.GetDataSourceAsync, grpcClient.GetDataSource, effectiveSettings.GetDataSourceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDataSource);

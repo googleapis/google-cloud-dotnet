@@ -2725,7 +2725,11 @@ namespace Google.Cloud.Spanner.V1
         {
             GrpcClient = grpcClient;
             SpannerSettings effectiveSettings = settings ?? SpannerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>("CreateSession", grpcClient.CreateSessionAsync, grpcClient.CreateSession, effectiveSettings.CreateSessionSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callCreateSession);
             Modify_CreateSessionApiCall(ref _callCreateSession);

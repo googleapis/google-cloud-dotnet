@@ -8314,7 +8314,11 @@ namespace Google.Cloud.Channel.V1
         {
             GrpcClient = grpcClient;
             CloudChannelServiceSettings effectiveSettings = settings ?? CloudChannelServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ProvisionCloudIdentityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ProvisionCloudIdentityOperationsSettings, logger);
             CreateEntitlementOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEntitlementOperationsSettings, logger);
             ChangeParametersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ChangeParametersOperationsSettings, logger);

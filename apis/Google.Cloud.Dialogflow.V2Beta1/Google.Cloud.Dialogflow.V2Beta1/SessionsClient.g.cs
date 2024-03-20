@@ -725,7 +725,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             SessionsSettings effectiveSettings = settings ?? SessionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callDetectIntent = clientHelper.BuildApiCall<DetectIntentRequest, DetectIntentResponse>("DetectIntent", grpcClient.DetectIntentAsync, grpcClient.DetectIntent, effectiveSettings.DetectIntentSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callDetectIntent);

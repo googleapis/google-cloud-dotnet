@@ -650,7 +650,11 @@ namespace Google.Cloud.ServiceUsage.V1
         {
             GrpcClient = grpcClient;
             ServiceUsageSettings effectiveSettings = settings ?? ServiceUsageSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             EnableServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableServiceOperationsSettings, logger);
             DisableServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableServiceOperationsSettings, logger);
             BatchEnableServicesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchEnableServicesOperationsSettings, logger);

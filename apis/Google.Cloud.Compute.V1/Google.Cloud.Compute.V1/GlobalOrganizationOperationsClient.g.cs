@@ -471,7 +471,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             GlobalOrganizationOperationsSettings effectiveSettings = settings ?? GlobalOrganizationOperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callDelete = clientHelper.BuildApiCall<DeleteGlobalOrganizationOperationRequest, DeleteGlobalOrganizationOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);

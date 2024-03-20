@@ -4464,7 +4464,11 @@ namespace Google.Identity.AccessContextManager.V1
         {
             GrpcClient = grpcClient;
             AccessContextManagerSettings effectiveSettings = settings ?? AccessContextManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccessPolicyOperationsSettings, logger);
             UpdateAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccessPolicyOperationsSettings, logger);
             DeleteAccessPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccessPolicyOperationsSettings, logger);

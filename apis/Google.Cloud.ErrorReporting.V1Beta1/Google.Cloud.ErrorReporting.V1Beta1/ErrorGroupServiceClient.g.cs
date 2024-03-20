@@ -462,7 +462,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GrpcClient = grpcClient;
             ErrorGroupServiceSettings effectiveSettings = settings ?? ErrorGroupServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>("GetGroup", grpcClient.GetGroupAsync, grpcClient.GetGroup, effectiveSettings.GetGroupSettings).WithGoogleRequestParam("group_name", request => request.GroupName);
             Modify_ApiCall(ref _callGetGroup);
             Modify_GetGroupApiCall(ref _callGetGroup);

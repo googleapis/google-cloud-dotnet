@@ -8089,7 +8089,11 @@ namespace Google.Cloud.NetApp.V1
         {
             GrpcClient = grpcClient;
             NetAppSettings effectiveSettings = settings ?? NetAppSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateStoragePoolOperationsSettings, logger);
             UpdateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateStoragePoolOperationsSettings, logger);
             DeleteStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteStoragePoolOperationsSettings, logger);

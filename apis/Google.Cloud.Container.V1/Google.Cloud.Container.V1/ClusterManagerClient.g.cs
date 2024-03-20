@@ -5312,7 +5312,11 @@ namespace Google.Cloud.Container.V1
         {
             GrpcClient = grpcClient;
             ClusterManagerSettings effectiveSettings = settings ?? ClusterManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>("ListClusters", grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);

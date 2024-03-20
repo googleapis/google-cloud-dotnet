@@ -890,7 +890,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             WebhooksSettings effectiveSettings = settings ?? WebhooksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListWebhooks = clientHelper.BuildApiCall<ListWebhooksRequest, ListWebhooksResponse>("ListWebhooks", grpcClient.ListWebhooksAsync, grpcClient.ListWebhooks, effectiveSettings.ListWebhooksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWebhooks);

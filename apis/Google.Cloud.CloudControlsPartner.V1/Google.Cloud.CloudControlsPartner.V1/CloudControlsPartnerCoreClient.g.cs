@@ -1302,7 +1302,11 @@ namespace Google.Cloud.CloudControlsPartner.V1
         {
             GrpcClient = grpcClient;
             CloudControlsPartnerCoreSettings effectiveSettings = settings ?? CloudControlsPartnerCoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetWorkload = clientHelper.BuildApiCall<GetWorkloadRequest, Workload>("GetWorkload", grpcClient.GetWorkloadAsync, grpcClient.GetWorkload, effectiveSettings.GetWorkloadSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetWorkload);
             Modify_GetWorkloadApiCall(ref _callGetWorkload);

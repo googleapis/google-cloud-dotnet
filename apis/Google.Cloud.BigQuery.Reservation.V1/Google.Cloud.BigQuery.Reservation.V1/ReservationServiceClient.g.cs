@@ -4297,7 +4297,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             GrpcClient = grpcClient;
             ReservationServiceSettings effectiveSettings = settings ?? ReservationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateReservation = clientHelper.BuildApiCall<CreateReservationRequest, Reservation>("CreateReservation", grpcClient.CreateReservationAsync, grpcClient.CreateReservation, effectiveSettings.CreateReservationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateReservation);
             Modify_CreateReservationApiCall(ref _callCreateReservation);

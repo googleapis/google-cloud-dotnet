@@ -250,7 +250,11 @@ namespace Google.Cloud.AppEngine.V1
         {
             GrpcClient = grpcClient;
             AuthorizedDomainsSettings effectiveSettings = settings ?? AuthorizedDomainsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListAuthorizedDomains = clientHelper.BuildApiCall<ListAuthorizedDomainsRequest, ListAuthorizedDomainsResponse>("ListAuthorizedDomains", grpcClient.ListAuthorizedDomainsAsync, grpcClient.ListAuthorizedDomains, effectiveSettings.ListAuthorizedDomainsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizedDomains);
             Modify_ListAuthorizedDomainsApiCall(ref _callListAuthorizedDomains);

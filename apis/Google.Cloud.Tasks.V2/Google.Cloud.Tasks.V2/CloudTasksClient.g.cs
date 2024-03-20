@@ -3794,7 +3794,11 @@ namespace Google.Cloud.Tasks.V2
         {
             GrpcClient = grpcClient;
             CloudTasksSettings effectiveSettings = settings ?? CloudTasksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListQueues = clientHelper.BuildApiCall<ListQueuesRequest, ListQueuesResponse>("ListQueues", grpcClient.ListQueuesAsync, grpcClient.ListQueues, effectiveSettings.ListQueuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListQueues);

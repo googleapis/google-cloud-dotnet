@@ -1640,7 +1640,11 @@ namespace Google.Cloud.OsLogin.V1Beta
         {
             GrpcClient = grpcClient;
             OsLoginServiceSettings effectiveSettings = settings ?? OsLoginServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateSshPublicKey = clientHelper.BuildApiCall<CreateSshPublicKeyRequest, gcoc::SshPublicKey>("CreateSshPublicKey", grpcClient.CreateSshPublicKeyAsync, grpcClient.CreateSshPublicKey, effectiveSettings.CreateSshPublicKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSshPublicKey);
             Modify_CreateSshPublicKeyApiCall(ref _callCreateSshPublicKey);

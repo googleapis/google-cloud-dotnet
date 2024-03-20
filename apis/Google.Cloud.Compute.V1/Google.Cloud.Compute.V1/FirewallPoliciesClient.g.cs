@@ -2239,7 +2239,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             FirewallPoliciesSettings effectiveSettings = settings ?? FirewallPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
             CloneRulesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOrganizationOperations(), effectiveSettings.CloneRulesOperationsSettings, logger);

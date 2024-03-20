@@ -5727,7 +5727,11 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             GrpcClient = grpcClient;
             ContactCenterInsightsSettings effectiveSettings = settings ?? ContactCenterInsightsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             UploadConversationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadConversationOperationsSettings, logger);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
             BulkAnalyzeConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkAnalyzeConversationsOperationsSettings, logger);

@@ -5451,7 +5451,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
         {
             GrpcClient = grpcClient;
             RegistrySettings effectiveSettings = settings ?? RegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListApis = clientHelper.BuildApiCall<ListApisRequest, ListApisResponse>("ListApis", grpcClient.ListApisAsync, grpcClient.ListApis, effectiveSettings.ListApisSettings).WithGoogleRequestParam("parent", request => request.Parent);

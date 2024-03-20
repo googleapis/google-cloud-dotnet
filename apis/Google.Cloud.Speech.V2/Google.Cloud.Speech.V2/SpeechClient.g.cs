@@ -4752,7 +4752,11 @@ namespace Google.Cloud.Speech.V2
         {
             GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRecognizerOperationsSettings, logger);
             UpdateRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRecognizerOperationsSettings, logger);
             DeleteRecognizerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRecognizerOperationsSettings, logger);

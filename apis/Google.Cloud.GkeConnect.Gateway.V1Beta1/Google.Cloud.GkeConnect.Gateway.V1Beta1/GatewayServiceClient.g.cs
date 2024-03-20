@@ -426,7 +426,11 @@ namespace Google.Cloud.GkeConnect.Gateway.V1Beta1
         {
             GrpcClient = grpcClient;
             GatewayServiceSettings effectiveSettings = settings ?? GatewayServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetResource = clientHelper.BuildApiCall<ga::HttpBody, ga::HttpBody>("GetResource", grpcClient.GetResourceAsync, grpcClient.GetResource, effectiveSettings.GetResourceSettings);
             Modify_ApiCall(ref _callGetResource);
             Modify_GetResourceApiCall(ref _callGetResource);

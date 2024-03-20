@@ -310,7 +310,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             GrpcClient = grpcClient;
             SearchTuningServiceSettings effectiveSettings = settings ?? SearchTuningServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             TrainCustomModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TrainCustomModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callTrainCustomModel = clientHelper.BuildApiCall<TrainCustomModelRequest, lro::Operation>("TrainCustomModel", grpcClient.TrainCustomModelAsync, grpcClient.TrainCustomModel, effectiveSettings.TrainCustomModelSettings).WithGoogleRequestParam("data_store", request => request.DataStore);

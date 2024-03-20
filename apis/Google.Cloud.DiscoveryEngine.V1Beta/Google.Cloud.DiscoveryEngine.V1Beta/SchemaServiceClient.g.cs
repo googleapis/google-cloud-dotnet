@@ -1030,7 +1030,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             GrpcClient = grpcClient;
             SchemaServiceSettings effectiveSettings = settings ?? SchemaServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSchemaOperationsSettings, logger);
             UpdateSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSchemaOperationsSettings, logger);
             DeleteSchemaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSchemaOperationsSettings, logger);

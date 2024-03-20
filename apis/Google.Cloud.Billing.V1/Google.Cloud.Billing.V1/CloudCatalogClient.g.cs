@@ -421,7 +421,11 @@ namespace Google.Cloud.Billing.V1
         {
             GrpcClient = grpcClient;
             CloudCatalogSettings effectiveSettings = settings ?? CloudCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);

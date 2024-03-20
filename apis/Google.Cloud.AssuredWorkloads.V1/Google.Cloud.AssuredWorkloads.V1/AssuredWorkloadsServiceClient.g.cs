@@ -1362,7 +1362,11 @@ namespace Google.Cloud.AssuredWorkloads.V1
         {
             GrpcClient = grpcClient;
             AssuredWorkloadsServiceSettings effectiveSettings = settings ?? AssuredWorkloadsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateWorkloadOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkloadOperationsSettings, logger);
             _callCreateWorkload = clientHelper.BuildApiCall<CreateWorkloadRequest, lro::Operation>("CreateWorkload", grpcClient.CreateWorkloadAsync, grpcClient.CreateWorkload, effectiveSettings.CreateWorkloadSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateWorkload);

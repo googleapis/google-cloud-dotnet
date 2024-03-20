@@ -339,7 +339,11 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             GrpcClient = grpcClient;
             SnapshotsV1Beta3Settings effectiveSettings = settings ?? SnapshotsV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>("GetSnapshot", grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
             Modify_ApiCall(ref _callGetSnapshot);
             Modify_GetSnapshotApiCall(ref _callGetSnapshot);

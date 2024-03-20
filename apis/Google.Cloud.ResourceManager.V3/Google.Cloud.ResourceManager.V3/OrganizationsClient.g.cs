@@ -1053,7 +1053,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             OrganizationsSettings effectiveSettings = settings ?? OrganizationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetOrganization = clientHelper.BuildApiCall<GetOrganizationRequest, Organization>("GetOrganization", grpcClient.GetOrganizationAsync, grpcClient.GetOrganization, effectiveSettings.GetOrganizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOrganization);
             Modify_GetOrganizationApiCall(ref _callGetOrganization);

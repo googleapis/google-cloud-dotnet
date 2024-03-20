@@ -2908,7 +2908,11 @@ namespace Google.Cloud.Recommender.V1
         {
             GrpcClient = grpcClient;
             RecommenderSettings effectiveSettings = settings ?? RecommenderSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListInsights = clientHelper.BuildApiCall<ListInsightsRequest, ListInsightsResponse>("ListInsights", grpcClient.ListInsightsAsync, grpcClient.ListInsights, effectiveSettings.ListInsightsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInsights);
             Modify_ListInsightsApiCall(ref _callListInsights);

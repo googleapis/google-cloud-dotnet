@@ -271,7 +271,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             GrpcClient = grpcClient;
             RecommendationServiceSettings effectiveSettings = settings ?? RecommendationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callRecommend = clientHelper.BuildApiCall<RecommendRequest, RecommendResponse>("Recommend", grpcClient.RecommendAsync, grpcClient.Recommend, effectiveSettings.RecommendSettings).WithGoogleRequestParam("serving_config", request => request.ServingConfig);
             Modify_ApiCall(ref _callRecommend);

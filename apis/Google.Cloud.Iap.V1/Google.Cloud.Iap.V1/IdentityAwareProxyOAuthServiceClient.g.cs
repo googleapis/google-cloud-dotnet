@@ -596,7 +596,11 @@ namespace Google.Cloud.Iap.V1
         {
             GrpcClient = grpcClient;
             IdentityAwareProxyOAuthServiceSettings effectiveSettings = settings ?? IdentityAwareProxyOAuthServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListBrands = clientHelper.BuildApiCall<ListBrandsRequest, ListBrandsResponse>("ListBrands", grpcClient.ListBrandsAsync, grpcClient.ListBrands, effectiveSettings.ListBrandsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBrands);
             Modify_ListBrandsApiCall(ref _callListBrands);

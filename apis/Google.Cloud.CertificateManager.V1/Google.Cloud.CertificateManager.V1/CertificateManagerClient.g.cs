@@ -5073,7 +5073,11 @@ namespace Google.Cloud.CertificateManager.V1
         {
             GrpcClient = grpcClient;
             CertificateManagerSettings effectiveSettings = settings ?? CertificateManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateCertificateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateOperationsSettings, logger);
             UpdateCertificateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateOperationsSettings, logger);
             DeleteCertificateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCertificateOperationsSettings, logger);

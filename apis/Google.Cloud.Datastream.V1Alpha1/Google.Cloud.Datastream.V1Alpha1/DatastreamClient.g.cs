@@ -3382,7 +3382,11 @@ namespace Google.Cloud.Datastream.V1Alpha1
         {
             GrpcClient = grpcClient;
             DatastreamSettings effectiveSettings = settings ?? DatastreamSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateConnectionProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectionProfileOperationsSettings, logger);
             UpdateConnectionProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectionProfileOperationsSettings, logger);
             DeleteConnectionProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectionProfileOperationsSettings, logger);

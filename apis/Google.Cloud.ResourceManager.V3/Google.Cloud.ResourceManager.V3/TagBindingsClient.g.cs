@@ -772,7 +772,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             TagBindingsSettings effectiveSettings = settings ?? TagBindingsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagBindingOperationsSettings, logger);
             DeleteTagBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagBindingOperationsSettings, logger);
             _callListTagBindings = clientHelper.BuildApiCall<ListTagBindingsRequest, ListTagBindingsResponse>("ListTagBindings", grpcClient.ListTagBindingsAsync, grpcClient.ListTagBindings, effectiveSettings.ListTagBindingsSettings);

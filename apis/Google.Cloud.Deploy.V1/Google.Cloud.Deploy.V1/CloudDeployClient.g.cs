@@ -6459,7 +6459,11 @@ namespace Google.Cloud.Deploy.V1
         {
             GrpcClient = grpcClient;
             CloudDeploySettings effectiveSettings = settings ?? CloudDeploySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDeliveryPipelineOperationsSettings, logger);
             UpdateDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDeliveryPipelineOperationsSettings, logger);
             DeleteDeliveryPipelineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDeliveryPipelineOperationsSettings, logger);

@@ -438,7 +438,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             GrpcClient = grpcClient;
             UserEventServiceSettings effectiveSettings = settings ?? UserEventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>("WriteUserEvent", grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);

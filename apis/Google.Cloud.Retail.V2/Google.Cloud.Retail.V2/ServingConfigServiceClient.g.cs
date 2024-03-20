@@ -1322,7 +1322,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             ServingConfigServiceSettings effectiveSettings = settings ?? ServingConfigServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateServingConfig = clientHelper.BuildApiCall<CreateServingConfigRequest, ServingConfig>("CreateServingConfig", grpcClient.CreateServingConfigAsync, grpcClient.CreateServingConfig, effectiveSettings.CreateServingConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateServingConfig);

@@ -1602,7 +1602,11 @@ namespace Google.Cloud.Tpu.V1
         {
             GrpcClient = grpcClient;
             TpuSettings effectiveSettings = settings ?? TpuSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNodeOperationsSettings, logger);
             DeleteNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNodeOperationsSettings, logger);
             ReimageNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReimageNodeOperationsSettings, logger);

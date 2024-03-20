@@ -3799,7 +3799,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             ProductServiceSettings effectiveSettings = settings ?? ProductServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductsOperationsSettings, logger);
             SetInventoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInventoryOperationsSettings, logger);
             AddFulfillmentPlacesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddFulfillmentPlacesOperationsSettings, logger);

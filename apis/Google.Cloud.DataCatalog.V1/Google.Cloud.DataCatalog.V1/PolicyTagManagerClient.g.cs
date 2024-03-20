@@ -1666,7 +1666,11 @@ namespace Google.Cloud.DataCatalog.V1
         {
             GrpcClient = grpcClient;
             PolicyTagManagerSettings effectiveSettings = settings ?? PolicyTagManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateTaxonomy = clientHelper.BuildApiCall<CreateTaxonomyRequest, Taxonomy>("CreateTaxonomy", grpcClient.CreateTaxonomyAsync, grpcClient.CreateTaxonomy, effectiveSettings.CreateTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTaxonomy);

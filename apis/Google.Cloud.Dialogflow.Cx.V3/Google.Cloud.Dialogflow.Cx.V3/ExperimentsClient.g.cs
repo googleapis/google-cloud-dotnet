@@ -1261,7 +1261,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             ExperimentsSettings effectiveSettings = settings ?? ExperimentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListExperiments = clientHelper.BuildApiCall<ListExperimentsRequest, ListExperimentsResponse>("ListExperiments", grpcClient.ListExperimentsAsync, grpcClient.ListExperiments, effectiveSettings.ListExperimentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExperiments);

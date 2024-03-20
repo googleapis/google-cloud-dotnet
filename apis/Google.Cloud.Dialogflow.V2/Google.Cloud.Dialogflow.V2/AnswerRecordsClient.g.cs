@@ -525,7 +525,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             AnswerRecordsSettings effectiveSettings = settings ?? AnswerRecordsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListAnswerRecords = clientHelper.BuildApiCall<ListAnswerRecordsRequest, ListAnswerRecordsResponse>("ListAnswerRecords", grpcClient.ListAnswerRecordsAsync, grpcClient.ListAnswerRecords, effectiveSettings.ListAnswerRecordsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnswerRecords);

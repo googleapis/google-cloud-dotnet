@@ -493,7 +493,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
         {
             GrpcClient = grpcClient;
             BudgetServiceSettings effectiveSettings = settings ?? BudgetServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateBudget = clientHelper.BuildApiCall<CreateBudgetRequest, Budget>("CreateBudget", grpcClient.CreateBudgetAsync, grpcClient.CreateBudget, effectiveSettings.CreateBudgetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBudget);
             Modify_CreateBudgetApiCall(ref _callCreateBudget);

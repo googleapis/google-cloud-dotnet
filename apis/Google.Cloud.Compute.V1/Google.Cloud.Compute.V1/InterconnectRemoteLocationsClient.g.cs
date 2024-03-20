@@ -411,7 +411,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             InterconnectRemoteLocationsSettings effectiveSettings = settings ?? InterconnectRemoteLocationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGet = clientHelper.BuildApiCall<GetInterconnectRemoteLocationRequest, InterconnectRemoteLocation>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("interconnect_remote_location", request => request.InterconnectRemoteLocation);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);

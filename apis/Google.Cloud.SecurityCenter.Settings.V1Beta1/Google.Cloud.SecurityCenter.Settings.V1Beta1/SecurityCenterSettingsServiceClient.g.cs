@@ -2041,7 +2041,11 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
         {
             GrpcClient = grpcClient;
             SecurityCenterSettingsServiceSettings effectiveSettings = settings ?? SecurityCenterSettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetServiceAccount = clientHelper.BuildApiCall<GetServiceAccountRequest, ServiceAccount>("GetServiceAccount", grpcClient.GetServiceAccountAsync, grpcClient.GetServiceAccount, effectiveSettings.GetServiceAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetServiceAccount);
             Modify_GetServiceAccountApiCall(ref _callGetServiceAccount);

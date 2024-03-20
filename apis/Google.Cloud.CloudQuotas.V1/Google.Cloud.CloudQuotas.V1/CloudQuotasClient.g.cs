@@ -1270,7 +1270,11 @@ namespace Google.Cloud.CloudQuotas.V1
         {
             GrpcClient = grpcClient;
             CloudQuotasSettings effectiveSettings = settings ?? CloudQuotasSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListQuotaInfos = clientHelper.BuildApiCall<ListQuotaInfosRequest, ListQuotaInfosResponse>("ListQuotaInfos", grpcClient.ListQuotaInfosAsync, grpcClient.ListQuotaInfos, effectiveSettings.ListQuotaInfosSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListQuotaInfos);
             Modify_ListQuotaInfosApiCall(ref _callListQuotaInfos);

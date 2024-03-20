@@ -400,7 +400,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             ZonesSettings effectiveSettings = settings ?? ZonesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGet = clientHelper.BuildApiCall<GetZoneRequest, Zone>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);

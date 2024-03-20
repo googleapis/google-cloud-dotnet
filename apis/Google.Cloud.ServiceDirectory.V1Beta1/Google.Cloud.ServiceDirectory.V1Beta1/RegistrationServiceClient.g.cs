@@ -2564,7 +2564,11 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
         {
             GrpcClient = grpcClient;
             RegistrationServiceSettings effectiveSettings = settings ?? RegistrationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateNamespace = clientHelper.BuildApiCall<CreateNamespaceRequest, Namespace>("CreateNamespace", grpcClient.CreateNamespaceAsync, grpcClient.CreateNamespace, effectiveSettings.CreateNamespaceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateNamespace);

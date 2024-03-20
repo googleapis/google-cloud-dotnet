@@ -850,7 +850,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             BatchControllerSettings effectiveSettings = settings ?? BatchControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBatchOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateBatch = clientHelper.BuildApiCall<CreateBatchRequest, lro::Operation>("CreateBatch", grpcClient.CreateBatchAsync, grpcClient.CreateBatch, effectiveSettings.CreateBatchSettings).WithGoogleRequestParam("parent", request => request.Parent);

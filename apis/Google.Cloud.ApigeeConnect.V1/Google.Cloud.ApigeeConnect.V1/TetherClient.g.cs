@@ -256,7 +256,11 @@ namespace Google.Cloud.ApigeeConnect.V1
         {
             GrpcClient = grpcClient;
             TetherSettings effectiveSettings = settings ?? TetherSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callEgress = clientHelper.BuildApiCall<EgressResponse, EgressRequest>("Egress", grpcClient.Egress, effectiveSettings.EgressSettings, effectiveSettings.EgressStreamingSettings);
             Modify_ApiCall(ref _callEgress);
             Modify_EgressApiCall(ref _callEgress);

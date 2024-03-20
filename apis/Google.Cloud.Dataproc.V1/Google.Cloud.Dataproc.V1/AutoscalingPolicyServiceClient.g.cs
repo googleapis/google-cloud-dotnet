@@ -1222,7 +1222,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             AutoscalingPolicyServiceSettings effectiveSettings = settings ?? AutoscalingPolicyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateAutoscalingPolicy = clientHelper.BuildApiCall<CreateAutoscalingPolicyRequest, AutoscalingPolicy>("CreateAutoscalingPolicy", grpcClient.CreateAutoscalingPolicyAsync, grpcClient.CreateAutoscalingPolicy, effectiveSettings.CreateAutoscalingPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAutoscalingPolicy);

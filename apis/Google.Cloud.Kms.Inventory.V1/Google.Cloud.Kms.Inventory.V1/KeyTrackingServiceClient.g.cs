@@ -537,7 +537,11 @@ namespace Google.Cloud.Kms.Inventory.V1
         {
             GrpcClient = grpcClient;
             KeyTrackingServiceSettings effectiveSettings = settings ?? KeyTrackingServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetProtectedResourcesSummary = clientHelper.BuildApiCall<GetProtectedResourcesSummaryRequest, ProtectedResourcesSummary>("GetProtectedResourcesSummary", grpcClient.GetProtectedResourcesSummaryAsync, grpcClient.GetProtectedResourcesSummary, effectiveSettings.GetProtectedResourcesSummarySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProtectedResourcesSummary);
             Modify_GetProtectedResourcesSummaryApiCall(ref _callGetProtectedResourcesSummary);

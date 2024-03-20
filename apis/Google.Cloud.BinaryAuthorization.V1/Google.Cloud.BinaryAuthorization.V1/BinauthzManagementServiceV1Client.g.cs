@@ -1287,7 +1287,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             GrpcClient = grpcClient;
             BinauthzManagementServiceV1Settings effectiveSettings = settings ?? BinauthzManagementServiceV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicy);
             Modify_GetPolicyApiCall(ref _callGetPolicy);

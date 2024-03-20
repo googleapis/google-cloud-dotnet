@@ -1381,7 +1381,11 @@ namespace Google.Cloud.Functions.V2
         {
             GrpcClient = grpcClient;
             FunctionServiceSettings effectiveSettings = settings ?? FunctionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings, logger);
             UpdateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings, logger);
             DeleteFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings, logger);

@@ -1180,7 +1180,11 @@ namespace Google.Cloud.BigQuery.Migration.V2
         {
             GrpcClient = grpcClient;
             MigrationServiceSettings effectiveSettings = settings ?? MigrationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateMigrationWorkflow = clientHelper.BuildApiCall<CreateMigrationWorkflowRequest, MigrationWorkflow>("CreateMigrationWorkflow", grpcClient.CreateMigrationWorkflowAsync, grpcClient.CreateMigrationWorkflow, effectiveSettings.CreateMigrationWorkflowSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMigrationWorkflow);
             Modify_CreateMigrationWorkflowApiCall(ref _callCreateMigrationWorkflow);

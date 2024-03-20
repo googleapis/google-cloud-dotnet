@@ -4440,7 +4440,11 @@ namespace Google.Cloud.Vision.V1
         {
             GrpcClient = grpcClient;
             ProductSearchSettings effectiveSettings = settings ?? ProductSearchSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportProductSetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings, logger);
             PurgeProductsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeProductsOperationsSettings, logger);
             _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>("CreateProductSet", grpcClient.CreateProductSetAsync, grpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings).WithGoogleRequestParam("parent", request => request.Parent);

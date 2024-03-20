@@ -2261,7 +2261,11 @@ namespace Google.Cloud.Billing.V1
         {
             GrpcClient = grpcClient;
             CloudBillingSettings effectiveSettings = settings ?? CloudBillingSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetBillingAccount = clientHelper.BuildApiCall<GetBillingAccountRequest, BillingAccount>("GetBillingAccount", grpcClient.GetBillingAccountAsync, grpcClient.GetBillingAccount, effectiveSettings.GetBillingAccountSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBillingAccount);
             Modify_GetBillingAccountApiCall(ref _callGetBillingAccount);

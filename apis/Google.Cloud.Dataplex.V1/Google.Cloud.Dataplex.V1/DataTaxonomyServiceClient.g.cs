@@ -2733,7 +2733,11 @@ namespace Google.Cloud.Dataplex.V1
         {
             GrpcClient = grpcClient;
             DataTaxonomyServiceSettings effectiveSettings = settings ?? DataTaxonomyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateDataTaxonomyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDataTaxonomyOperationsSettings, logger);
             UpdateDataTaxonomyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDataTaxonomyOperationsSettings, logger);
             DeleteDataTaxonomyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataTaxonomyOperationsSettings, logger);

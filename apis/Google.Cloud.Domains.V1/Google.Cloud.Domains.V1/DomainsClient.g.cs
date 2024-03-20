@@ -3587,7 +3587,11 @@ namespace Google.Cloud.Domains.V1
         {
             GrpcClient = grpcClient;
             DomainsSettings effectiveSettings = settings ?? DomainsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RegisterDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RegisterDomainOperationsSettings, logger);
             TransferDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TransferDomainOperationsSettings, logger);
             UpdateRegistrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRegistrationOperationsSettings, logger);

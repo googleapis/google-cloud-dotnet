@@ -434,7 +434,11 @@ namespace Google.Cloud.ConfidentialComputing.V1Alpha1
         {
             GrpcClient = grpcClient;
             ConfidentialComputingSettings effectiveSettings = settings ?? ConfidentialComputingSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateChallenge = clientHelper.BuildApiCall<CreateChallengeRequest, Challenge>("CreateChallenge", grpcClient.CreateChallengeAsync, grpcClient.CreateChallenge, effectiveSettings.CreateChallengeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateChallenge);

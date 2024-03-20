@@ -3894,7 +3894,11 @@ namespace Google.Cloud.Video.Stitcher.V1
         {
             GrpcClient = grpcClient;
             VideoStitcherServiceSettings effectiveSettings = settings ?? VideoStitcherServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCdnKeyOperationsSettings, logger);
             DeleteCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteCdnKeyOperationsSettings, logger);
             UpdateCdnKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCdnKeyOperationsSettings, logger);

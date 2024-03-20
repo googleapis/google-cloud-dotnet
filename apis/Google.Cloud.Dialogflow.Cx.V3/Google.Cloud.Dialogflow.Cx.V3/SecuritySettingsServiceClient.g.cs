@@ -953,7 +953,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             SecuritySettingsServiceSettings effectiveSettings = settings ?? SecuritySettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateSecuritySettings = clientHelper.BuildApiCall<CreateSecuritySettingsRequest, SecuritySettings>("CreateSecuritySettings", grpcClient.CreateSecuritySettingsAsync, grpcClient.CreateSecuritySettings, effectiveSettings.CreateSecuritySettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSecuritySettings);

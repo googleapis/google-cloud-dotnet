@@ -354,7 +354,11 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             GrpcClient = grpcClient;
             MetricsV1Beta3Settings effectiveSettings = settings ?? MetricsV1Beta3Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetJobMetrics = clientHelper.BuildApiCall<GetJobMetricsRequest, JobMetrics>("GetJobMetrics", grpcClient.GetJobMetricsAsync, grpcClient.GetJobMetrics, effectiveSettings.GetJobMetricsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callGetJobMetrics);
             Modify_GetJobMetricsApiCall(ref _callGetJobMetrics);

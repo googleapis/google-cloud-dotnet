@@ -2722,7 +2722,11 @@ namespace Google.Cloud.Bigtable.V2
         {
             GrpcClient = grpcClient;
             BigtableServiceApiSettings effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callReadRows = clientHelper.BuildApiCall<ReadRowsRequest, ReadRowsResponse>("ReadRows", grpcClient.ReadRows, effectiveSettings.ReadRowsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReadRowsRequest>().WithExtractedParameter("table_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+)/?$", request => request.TableName).WithExtractedParameter("app_profile_id", "^(.+)$", request => request.AppProfileId).WithExtractedParameter("authorized_view_name", "^(projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+)/?$", request => request.AuthorizedViewName));
             Modify_ApiCall(ref _callReadRows);
             Modify_ReadRowsApiCall(ref _callReadRows);

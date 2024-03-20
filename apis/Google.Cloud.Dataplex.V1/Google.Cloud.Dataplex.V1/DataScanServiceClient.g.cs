@@ -1623,7 +1623,11 @@ namespace Google.Cloud.Dataplex.V1
         {
             GrpcClient = grpcClient;
             DataScanServiceSettings effectiveSettings = settings ?? DataScanServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDataScanOperationsSettings, logger);
             UpdateDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDataScanOperationsSettings, logger);
             DeleteDataScanOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataScanOperationsSettings, logger);

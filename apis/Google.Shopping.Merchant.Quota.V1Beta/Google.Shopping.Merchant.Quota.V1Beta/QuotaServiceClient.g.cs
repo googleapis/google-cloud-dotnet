@@ -350,7 +350,11 @@ namespace Google.Shopping.Merchant.Quota.V1Beta
         {
             GrpcClient = grpcClient;
             QuotaServiceSettings effectiveSettings = settings ?? QuotaServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListQuotaGroups = clientHelper.BuildApiCall<ListQuotaGroupsRequest, ListQuotaGroupsResponse>("ListQuotaGroups", grpcClient.ListQuotaGroupsAsync, grpcClient.ListQuotaGroups, effectiveSettings.ListQuotaGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListQuotaGroups);
             Modify_ListQuotaGroupsApiCall(ref _callListQuotaGroups);

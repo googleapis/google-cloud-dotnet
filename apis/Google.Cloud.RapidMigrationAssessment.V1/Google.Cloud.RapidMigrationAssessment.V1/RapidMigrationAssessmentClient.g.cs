@@ -1859,7 +1859,11 @@ namespace Google.Cloud.RapidMigrationAssessment.V1
         {
             GrpcClient = grpcClient;
             RapidMigrationAssessmentSettings effectiveSettings = settings ?? RapidMigrationAssessmentSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateCollectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCollectorOperationsSettings, logger);
             CreateAnnotationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnnotationOperationsSettings, logger);
             UpdateCollectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCollectorOperationsSettings, logger);

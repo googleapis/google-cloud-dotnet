@@ -7371,7 +7371,11 @@ namespace Google.Cloud.VMMigration.V1
         {
             GrpcClient = grpcClient;
             VmMigrationSettings effectiveSettings = settings ?? VmMigrationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSourceOperationsSettings, logger);
             UpdateSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSourceOperationsSettings, logger);
             DeleteSourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSourceOperationsSettings, logger);

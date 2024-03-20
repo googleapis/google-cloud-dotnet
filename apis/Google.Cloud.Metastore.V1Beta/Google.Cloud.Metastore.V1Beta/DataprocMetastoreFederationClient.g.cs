@@ -1153,7 +1153,11 @@ namespace Google.Cloud.Metastore.V1Beta
         {
             GrpcClient = grpcClient;
             DataprocMetastoreFederationSettings effectiveSettings = settings ?? DataprocMetastoreFederationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFederationOperationsSettings, logger);
             UpdateFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFederationOperationsSettings, logger);
             DeleteFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFederationOperationsSettings, logger);

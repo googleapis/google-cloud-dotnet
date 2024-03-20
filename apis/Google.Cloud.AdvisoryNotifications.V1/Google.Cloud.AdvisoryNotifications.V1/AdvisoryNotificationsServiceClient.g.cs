@@ -720,7 +720,11 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         {
             GrpcClient = grpcClient;
             AdvisoryNotificationsServiceSettings effectiveSettings = settings ?? AdvisoryNotificationsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListNotifications = clientHelper.BuildApiCall<ListNotificationsRequest, ListNotificationsResponse>("ListNotifications", grpcClient.ListNotificationsAsync, grpcClient.ListNotifications, effectiveSettings.ListNotificationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNotifications);
             Modify_ListNotificationsApiCall(ref _callListNotifications);
