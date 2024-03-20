@@ -30,8 +30,6 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTestCommand : CommandBase
     {
-        private const string PublishTargetFramework = "netstandard2.1";
-
         public SmokeTestCommand()
             : base("smoke-test", "Runs smoke tests for a package", "id")
         {
@@ -63,10 +61,20 @@ namespace Google.Cloud.Tools.ReleaseManager
         private Assembly PublishAndLoadAssembly(string id)
         {
             Console.WriteLine($"Publishing release version of library");
-            var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", PublishTargetFramework);
 
-            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
+            // Work out the TFM to publish, based on specified target frameworks.
+            var api = ApiCatalog.Load()[id];
+            var tfm = api.TargetFrameworks?
+                .Split(';')
+                .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
+                ?? GenerateProjectsCommand.DefaultNetstandardTarget;
+
+            // Publish the assembly.
+            var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;            
+            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
+
+            // Load it with reflection.
+            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
             return Assembly.LoadFrom(assemblyFile);
         }
 
@@ -98,7 +106,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                         e = e.InnerException;
                     }
                     failed.Add($"{test.Client}.{test.Method}");
-                    Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message}");
+                    Console.WriteLine($"{test.Client}.{test.Method} failed: {e.GetType().Name} {e.Message} {e}");
                 }
             }
             Console.WriteLine($"Passed: {tests.Count - skipped.Count - failed.Count}");

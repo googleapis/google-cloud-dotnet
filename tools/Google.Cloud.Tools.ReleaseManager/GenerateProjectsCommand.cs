@@ -65,11 +65,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
         };
 
+        internal const string DefaultNetstandardTarget = "netstandard2.1";
+
         private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
         {
-            { ApiType.Rest, "netstandard2.1;net462" },
-            { ApiType.Grpc, "netstandard2.1;net462" },
-            { ApiType.Regapic, "netstandard2.1;net462" }
+            { ApiType.Rest, $"{DefaultNetstandardTarget};net462" },
+            { ApiType.Grpc, $"{DefaultNetstandardTarget};net462" },
+            { ApiType.Regapic, $"{DefaultNetstandardTarget};net462" }
         };
 
         private const string DefaultTestTargetFrameworks = "net6.0;net462";
