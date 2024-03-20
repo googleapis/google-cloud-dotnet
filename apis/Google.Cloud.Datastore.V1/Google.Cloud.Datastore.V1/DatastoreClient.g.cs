@@ -1112,7 +1112,11 @@ namespace Google.Cloud.Datastore.V1
         {
             GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>("Lookup", grpcClient.LookupAsync, grpcClient.Lookup, effectiveSettings.LookupSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<LookupRequest>().WithExtractedParameter("project_id", "^(.+)$", request => request.ProjectId).WithExtractedParameter("database_id", "^(.+)$", request => request.DatabaseId));
             Modify_ApiCall(ref _callLookup);
             Modify_LookupApiCall(ref _callLookup);

@@ -1299,7 +1299,11 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             GrpcClient = grpcClient;
             CatalogServiceSettings effectiveSettings = settings ?? CatalogServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportCatalogItemsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportCatalogItemsOperationsSettings, logger);
             _callCreateCatalogItem = clientHelper.BuildApiCall<CreateCatalogItemRequest, CatalogItem>("CreateCatalogItem", grpcClient.CreateCatalogItemAsync, grpcClient.CreateCatalogItem, effectiveSettings.CreateCatalogItemSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCatalogItem);

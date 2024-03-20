@@ -1220,7 +1220,11 @@ namespace Google.Cloud.EssentialContacts.V1
         {
             GrpcClient = grpcClient;
             EssentialContactsServiceSettings effectiveSettings = settings ?? EssentialContactsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateContact = clientHelper.BuildApiCall<CreateContactRequest, Contact>("CreateContact", grpcClient.CreateContactAsync, grpcClient.CreateContact, effectiveSettings.CreateContactSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateContact);
             Modify_CreateContactApiCall(ref _callCreateContact);

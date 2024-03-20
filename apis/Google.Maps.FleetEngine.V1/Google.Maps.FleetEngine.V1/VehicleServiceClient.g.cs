@@ -727,7 +727,11 @@ namespace Google.Maps.FleetEngine.V1
         {
             GrpcClient = grpcClient;
             VehicleServiceSettings effectiveSettings = settings ?? VehicleServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateVehicle = clientHelper.BuildApiCall<CreateVehicleRequest, Vehicle>("CreateVehicle", grpcClient.CreateVehicleAsync, grpcClient.CreateVehicle, effectiveSettings.CreateVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateVehicle);
             Modify_CreateVehicleApiCall(ref _callCreateVehicle);

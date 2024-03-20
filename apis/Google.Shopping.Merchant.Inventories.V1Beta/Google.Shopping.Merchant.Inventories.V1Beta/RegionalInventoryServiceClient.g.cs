@@ -575,7 +575,11 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         {
             GrpcClient = grpcClient;
             RegionalInventoryServiceSettings effectiveSettings = settings ?? RegionalInventoryServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListRegionalInventories = clientHelper.BuildApiCall<ListRegionalInventoriesRequest, ListRegionalInventoriesResponse>("ListRegionalInventories", grpcClient.ListRegionalInventoriesAsync, grpcClient.ListRegionalInventories, effectiveSettings.ListRegionalInventoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRegionalInventories);
             Modify_ListRegionalInventoriesApiCall(ref _callListRegionalInventories);

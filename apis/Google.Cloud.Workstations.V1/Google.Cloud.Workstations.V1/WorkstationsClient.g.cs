@@ -3325,7 +3325,11 @@ namespace Google.Cloud.Workstations.V1
         {
             GrpcClient = grpcClient;
             WorkstationsSettings effectiveSettings = settings ?? WorkstationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateWorkstationClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkstationClusterOperationsSettings, logger);
             UpdateWorkstationClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkstationClusterOperationsSettings, logger);
             DeleteWorkstationClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkstationClusterOperationsSettings, logger);

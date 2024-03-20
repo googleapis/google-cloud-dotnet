@@ -3275,7 +3275,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             GrpcClient = grpcClient;
             AwsClustersSettings effectiveSettings = settings ?? AwsClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAwsClusterOperationsSettings, logger);
             UpdateAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsClusterOperationsSettings, logger);
             DeleteAwsClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsClusterOperationsSettings, logger);

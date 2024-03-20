@@ -1086,7 +1086,11 @@ namespace Google.Cloud.Support.V2
         {
             GrpcClient = grpcClient;
             CaseServiceSettings effectiveSettings = settings ?? CaseServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetCase = clientHelper.BuildApiCall<GetCaseRequest, Case>("GetCase", grpcClient.GetCaseAsync, grpcClient.GetCase, effectiveSettings.GetCaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCase);
             Modify_GetCaseApiCall(ref _callGetCase);

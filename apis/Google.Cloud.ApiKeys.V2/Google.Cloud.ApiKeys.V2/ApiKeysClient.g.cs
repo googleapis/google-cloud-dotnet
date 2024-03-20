@@ -1499,7 +1499,11 @@ namespace Google.Cloud.ApiKeys.V2
         {
             GrpcClient = grpcClient;
             ApiKeysSettings effectiveSettings = settings ?? ApiKeysSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateKeyOperationsSettings, logger);
             UpdateKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateKeyOperationsSettings, logger);
             DeleteKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteKeyOperationsSettings, logger);

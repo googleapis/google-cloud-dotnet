@@ -1108,7 +1108,11 @@ namespace Google.Cloud.Workflows.V1Beta
         {
             GrpcClient = grpcClient;
             WorkflowsSettings effectiveSettings = settings ?? WorkflowsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkflowOperationsSettings, logger);
             DeleteWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkflowOperationsSettings, logger);
             UpdateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkflowOperationsSettings, logger);

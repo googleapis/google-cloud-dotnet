@@ -4167,7 +4167,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             GrpcClient = grpcClient;
             AzureClustersSettings effectiveSettings = settings ?? AzureClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClientOperationsSettings, logger);
             DeleteAzureClientOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAzureClientOperationsSettings, logger);
             CreateAzureClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAzureClusterOperationsSettings, logger);

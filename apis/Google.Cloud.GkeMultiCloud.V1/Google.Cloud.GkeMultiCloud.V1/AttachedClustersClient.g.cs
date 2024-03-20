@@ -2192,7 +2192,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             GrpcClient = grpcClient;
             AttachedClustersSettings effectiveSettings = settings ?? AttachedClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAttachedClusterOperationsSettings, logger);
             UpdateAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAttachedClusterOperationsSettings, logger);
             ImportAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAttachedClusterOperationsSettings, logger);

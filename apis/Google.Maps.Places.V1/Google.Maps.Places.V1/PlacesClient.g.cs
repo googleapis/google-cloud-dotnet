@@ -618,7 +618,11 @@ namespace Google.Maps.Places.V1
         {
             GrpcClient = grpcClient;
             PlacesSettings effectiveSettings = settings ?? PlacesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callSearchNearby = clientHelper.BuildApiCall<SearchNearbyRequest, SearchNearbyResponse>("SearchNearby", grpcClient.SearchNearbyAsync, grpcClient.SearchNearby, effectiveSettings.SearchNearbySettings);
             Modify_ApiCall(ref _callSearchNearby);
             Modify_SearchNearbyApiCall(ref _callSearchNearby);

@@ -1244,7 +1244,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             TransitionRouteGroupsSettings effectiveSettings = settings ?? TransitionRouteGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListTransitionRouteGroups = clientHelper.BuildApiCall<ListTransitionRouteGroupsRequest, ListTransitionRouteGroupsResponse>("ListTransitionRouteGroups", grpcClient.ListTransitionRouteGroupsAsync, grpcClient.ListTransitionRouteGroups, effectiveSettings.ListTransitionRouteGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTransitionRouteGroups);

@@ -452,7 +452,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             FulfillmentsSettings effectiveSettings = settings ?? FulfillmentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callGetFulfillment = clientHelper.BuildApiCall<GetFulfillmentRequest, Fulfillment>("GetFulfillment", grpcClient.GetFulfillmentAsync, grpcClient.GetFulfillment, effectiveSettings.GetFulfillmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetFulfillment);

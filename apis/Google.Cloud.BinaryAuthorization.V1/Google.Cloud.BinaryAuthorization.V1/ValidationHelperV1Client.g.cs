@@ -256,7 +256,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             GrpcClient = grpcClient;
             ValidationHelperV1Settings effectiveSettings = settings ?? ValidationHelperV1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callValidateAttestationOccurrence = clientHelper.BuildApiCall<ValidateAttestationOccurrenceRequest, ValidateAttestationOccurrenceResponse>("ValidateAttestationOccurrence", grpcClient.ValidateAttestationOccurrenceAsync, grpcClient.ValidateAttestationOccurrence, effectiveSettings.ValidateAttestationOccurrenceSettings).WithGoogleRequestParam("attestor", request => request.Attestor);
             Modify_ApiCall(ref _callValidateAttestationOccurrence);
             Modify_ValidateAttestationOccurrenceApiCall(ref _callValidateAttestationOccurrence);

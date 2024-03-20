@@ -890,7 +890,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             GrpcClient = grpcClient;
             GeneratorsSettings effectiveSettings = settings ?? GeneratorsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListGenerators = clientHelper.BuildApiCall<ListGeneratorsRequest, ListGeneratorsResponse>("ListGenerators", grpcClient.ListGeneratorsAsync, grpcClient.ListGenerators, effectiveSettings.ListGeneratorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListGenerators);

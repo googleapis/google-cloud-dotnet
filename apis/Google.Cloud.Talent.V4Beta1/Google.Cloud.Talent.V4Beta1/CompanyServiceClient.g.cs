@@ -1097,7 +1097,11 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             GrpcClient = grpcClient;
             CompanyServiceSettings effectiveSettings = settings ?? CompanyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateCompany = clientHelper.BuildApiCall<CreateCompanyRequest, Company>("CreateCompany", grpcClient.CreateCompanyAsync, grpcClient.CreateCompany, effectiveSettings.CreateCompanySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCompany);
             Modify_CreateCompanyApiCall(ref _callCreateCompany);

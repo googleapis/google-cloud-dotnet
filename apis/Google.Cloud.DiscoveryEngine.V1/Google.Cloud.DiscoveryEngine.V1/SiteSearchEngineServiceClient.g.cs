@@ -1790,7 +1790,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             GrpcClient = grpcClient;
             SiteSearchEngineServiceSettings effectiveSettings = settings ?? SiteSearchEngineServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTargetSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetSiteOperationsSettings, logger);
             BatchCreateTargetSitesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateTargetSitesOperationsSettings, logger);
             UpdateTargetSiteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetSiteOperationsSettings, logger);

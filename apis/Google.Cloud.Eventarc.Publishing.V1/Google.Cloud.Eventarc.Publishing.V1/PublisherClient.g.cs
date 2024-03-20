@@ -337,7 +337,11 @@ namespace Google.Cloud.Eventarc.Publishing.V1
         {
             GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callPublishChannelConnectionEvents = clientHelper.BuildApiCall<PublishChannelConnectionEventsRequest, PublishChannelConnectionEventsResponse>("PublishChannelConnectionEvents", grpcClient.PublishChannelConnectionEventsAsync, grpcClient.PublishChannelConnectionEvents, effectiveSettings.PublishChannelConnectionEventsSettings).WithGoogleRequestParam("channel_connection", request => request.ChannelConnection);
             Modify_ApiCall(ref _callPublishChannelConnectionEvents);
             Modify_PublishChannelConnectionEventsApiCall(ref _callPublishChannelConnectionEvents);

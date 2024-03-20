@@ -1836,7 +1836,11 @@ namespace Google.Apps.Meet.V2
         {
             GrpcClient = grpcClient;
             ConferenceRecordsServiceSettings effectiveSettings = settings ?? ConferenceRecordsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetConferenceRecord = clientHelper.BuildApiCall<GetConferenceRecordRequest, ConferenceRecord>("GetConferenceRecord", grpcClient.GetConferenceRecordAsync, grpcClient.GetConferenceRecord, effectiveSettings.GetConferenceRecordSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetConferenceRecord);
             Modify_GetConferenceRecordApiCall(ref _callGetConferenceRecord);

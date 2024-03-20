@@ -359,7 +359,11 @@ namespace Google.Cloud.Kms.Inventory.V1
         {
             GrpcClient = grpcClient;
             KeyDashboardServiceSettings effectiveSettings = settings ?? KeyDashboardServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListCryptoKeys = clientHelper.BuildApiCall<ListCryptoKeysRequest, ListCryptoKeysResponse>("ListCryptoKeys", grpcClient.ListCryptoKeysAsync, grpcClient.ListCryptoKeys, effectiveSettings.ListCryptoKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCryptoKeys);
             Modify_ListCryptoKeysApiCall(ref _callListCryptoKeys);

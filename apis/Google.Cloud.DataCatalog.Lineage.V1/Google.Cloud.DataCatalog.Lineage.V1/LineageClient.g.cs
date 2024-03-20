@@ -2408,7 +2408,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         {
             GrpcClient = grpcClient;
             LineageSettings effectiveSettings = settings ?? LineageSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteProcessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteProcessOperationsSettings, logger);
             DeleteRunOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRunOperationsSettings, logger);
             _callProcessOpenLineageRunEvent = clientHelper.BuildApiCall<ProcessOpenLineageRunEventRequest, ProcessOpenLineageRunEventResponse>("ProcessOpenLineageRunEvent", grpcClient.ProcessOpenLineageRunEventAsync, grpcClient.ProcessOpenLineageRunEvent, effectiveSettings.ProcessOpenLineageRunEventSettings).WithGoogleRequestParam("parent", request => request.Parent);

@@ -447,7 +447,11 @@ namespace Google.Cloud.Optimization.V1
         {
             GrpcClient = grpcClient;
             FleetRoutingSettings effectiveSettings = settings ?? FleetRoutingSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             BatchOptimizeToursOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BatchOptimizeToursOperationsSettings, logger);
             _callOptimizeTours = clientHelper.BuildApiCall<OptimizeToursRequest, OptimizeToursResponse>("OptimizeTours", grpcClient.OptimizeToursAsync, grpcClient.OptimizeTours, effectiveSettings.OptimizeToursSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callOptimizeTours);

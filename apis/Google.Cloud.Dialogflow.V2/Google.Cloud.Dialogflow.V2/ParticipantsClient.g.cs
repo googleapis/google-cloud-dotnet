@@ -1603,7 +1603,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             ParticipantsSettings effectiveSettings = settings ?? ParticipantsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateParticipant = clientHelper.BuildApiCall<CreateParticipantRequest, Participant>("CreateParticipant", grpcClient.CreateParticipantAsync, grpcClient.CreateParticipant, effectiveSettings.CreateParticipantSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateParticipant);

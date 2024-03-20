@@ -635,7 +635,11 @@ namespace Google.Apps.Meet.V2
         {
             GrpcClient = grpcClient;
             SpacesServiceSettings effectiveSettings = settings ?? SpacesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateSpace = clientHelper.BuildApiCall<CreateSpaceRequest, Space>("CreateSpace", grpcClient.CreateSpaceAsync, grpcClient.CreateSpace, effectiveSettings.CreateSpaceSettings);
             Modify_ApiCall(ref _callCreateSpace);
             Modify_CreateSpaceApiCall(ref _callCreateSpace);

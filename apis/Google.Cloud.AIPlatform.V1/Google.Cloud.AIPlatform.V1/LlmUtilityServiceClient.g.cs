@@ -572,7 +572,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             LlmUtilityServiceSettings effectiveSettings = settings ?? LlmUtilityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCountTokens = clientHelper.BuildApiCall<CountTokensRequest, CountTokensResponse>("CountTokens", grpcClient.CountTokensAsync, grpcClient.CountTokens, effectiveSettings.CountTokensSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);

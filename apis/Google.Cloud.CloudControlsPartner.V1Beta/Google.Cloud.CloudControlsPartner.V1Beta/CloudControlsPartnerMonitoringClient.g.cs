@@ -530,7 +530,11 @@ namespace Google.Cloud.CloudControlsPartner.V1Beta
         {
             GrpcClient = grpcClient;
             CloudControlsPartnerMonitoringSettings effectiveSettings = settings ?? CloudControlsPartnerMonitoringSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListViolations = clientHelper.BuildApiCall<ListViolationsRequest, ListViolationsResponse>("ListViolations", grpcClient.ListViolationsAsync, grpcClient.ListViolations, effectiveSettings.ListViolationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListViolations);
             Modify_ListViolationsApiCall(ref _callListViolations);

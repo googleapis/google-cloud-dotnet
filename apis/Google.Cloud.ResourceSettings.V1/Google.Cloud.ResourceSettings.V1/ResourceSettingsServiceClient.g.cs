@@ -660,7 +660,11 @@ namespace Google.Cloud.ResourceSettings.V1
         {
             GrpcClient = grpcClient;
             ResourceSettingsServiceSettings effectiveSettings = settings ?? ResourceSettingsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListSettings = clientHelper.BuildApiCall<ListSettingsRequest, ListSettingsResponse>("ListSettings", grpcClient.ListSettingsAsync, grpcClient.ListSettings, effectiveSettings.ListSettingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSettings);
             Modify_ListSettingsApiCall(ref _callListSettings);

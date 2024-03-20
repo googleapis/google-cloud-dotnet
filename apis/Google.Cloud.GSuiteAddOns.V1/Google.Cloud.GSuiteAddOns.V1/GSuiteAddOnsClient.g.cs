@@ -1551,7 +1551,11 @@ namespace Google.Cloud.GSuiteAddOns.V1
         {
             GrpcClient = grpcClient;
             GSuiteAddOnsSettings effectiveSettings = settings ?? GSuiteAddOnsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetAuthorization = clientHelper.BuildApiCall<GetAuthorizationRequest, Authorization>("GetAuthorization", grpcClient.GetAuthorizationAsync, grpcClient.GetAuthorization, effectiveSettings.GetAuthorizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAuthorization);
             Modify_GetAuthorizationApiCall(ref _callGetAuthorization);

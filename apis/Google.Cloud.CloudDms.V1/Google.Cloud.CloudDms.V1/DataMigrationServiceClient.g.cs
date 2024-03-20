@@ -5302,7 +5302,11 @@ namespace Google.Cloud.CloudDms.V1
         {
             GrpcClient = grpcClient;
             DataMigrationServiceSettings effectiveSettings = settings ?? DataMigrationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMigrationJobOperationsSettings, logger);
             UpdateMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMigrationJobOperationsSettings, logger);
             DeleteMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteMigrationJobOperationsSettings, logger);

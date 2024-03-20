@@ -435,7 +435,11 @@ namespace Google.Cloud.TextToSpeech.V1
         {
             GrpcClient = grpcClient;
             TextToSpeechSettings effectiveSettings = settings ?? TextToSpeechSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListVoices = clientHelper.BuildApiCall<ListVoicesRequest, ListVoicesResponse>("ListVoices", grpcClient.ListVoicesAsync, grpcClient.ListVoices, effectiveSettings.ListVoicesSettings);
             Modify_ApiCall(ref _callListVoices);
             Modify_ListVoicesApiCall(ref _callListVoices);

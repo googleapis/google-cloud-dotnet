@@ -1306,7 +1306,11 @@ namespace Google.Cloud.StorageTransfer.V1
         {
             GrpcClient = grpcClient;
             StorageTransferServiceSettings effectiveSettings = settings ?? StorageTransferServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RunTransferJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunTransferJobOperationsSettings, logger);
             _callGetGoogleServiceAccount = clientHelper.BuildApiCall<GetGoogleServiceAccountRequest, GoogleServiceAccount>("GetGoogleServiceAccount", grpcClient.GetGoogleServiceAccountAsync, grpcClient.GetGoogleServiceAccount, effectiveSettings.GetGoogleServiceAccountSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callGetGoogleServiceAccount);

@@ -1207,7 +1207,11 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             GrpcClient = grpcClient;
             TablesServiceSettings effectiveSettings = settings ?? TablesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetTable = clientHelper.BuildApiCall<GetTableRequest, Table>("GetTable", grpcClient.GetTableAsync, grpcClient.GetTable, effectiveSettings.GetTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTable);
             Modify_GetTableApiCall(ref _callGetTable);

@@ -1883,7 +1883,11 @@ namespace Google.Cloud.Speech.V1P1Beta1
         {
             GrpcClient = grpcClient;
             AdaptationSettings effectiveSettings = settings ?? AdaptationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreatePhraseSet = clientHelper.BuildApiCall<CreatePhraseSetRequest, PhraseSet>("CreatePhraseSet", grpcClient.CreatePhraseSetAsync, grpcClient.CreatePhraseSet, effectiveSettings.CreatePhraseSetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePhraseSet);
             Modify_CreatePhraseSetApiCall(ref _callCreatePhraseSet);

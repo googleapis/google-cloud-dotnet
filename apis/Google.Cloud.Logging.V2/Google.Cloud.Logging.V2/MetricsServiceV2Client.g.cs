@@ -1005,7 +1005,11 @@ namespace Google.Cloud.Logging.V2
         {
             GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>("ListLogMetrics", grpcClient.ListLogMetricsAsync, grpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLogMetrics);
             Modify_ListLogMetricsApiCall(ref _callListLogMetrics);

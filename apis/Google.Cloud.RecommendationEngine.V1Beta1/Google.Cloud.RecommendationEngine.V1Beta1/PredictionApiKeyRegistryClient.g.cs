@@ -662,7 +662,11 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             GrpcClient = grpcClient;
             PredictionApiKeyRegistrySettings effectiveSettings = settings ?? PredictionApiKeyRegistrySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreatePredictionApiKeyRegistration = clientHelper.BuildApiCall<CreatePredictionApiKeyRegistrationRequest, PredictionApiKeyRegistration>("CreatePredictionApiKeyRegistration", grpcClient.CreatePredictionApiKeyRegistrationAsync, grpcClient.CreatePredictionApiKeyRegistration, effectiveSettings.CreatePredictionApiKeyRegistrationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreatePredictionApiKeyRegistration);
             Modify_CreatePredictionApiKeyRegistrationApiCall(ref _callCreatePredictionApiKeyRegistration);

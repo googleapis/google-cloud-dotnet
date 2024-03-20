@@ -776,7 +776,11 @@ namespace Google.Cloud.BigQuery.Storage.V1
         {
             GrpcClient = grpcClient;
             BigQueryReadSettings effectiveSettings = settings ?? BigQueryReadSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateReadSession = clientHelper.BuildApiCall<CreateReadSessionRequest, ReadSession>("CreateReadSession", grpcClient.CreateReadSessionAsync, grpcClient.CreateReadSession, effectiveSettings.CreateReadSessionSettings).WithGoogleRequestParam("read_session.table", request => request.ReadSession?.Table);
             Modify_ApiCall(ref _callCreateReadSession);
             Modify_CreateReadSessionApiCall(ref _callCreateReadSession);

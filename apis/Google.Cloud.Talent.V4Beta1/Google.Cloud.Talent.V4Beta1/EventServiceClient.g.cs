@@ -518,7 +518,11 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             GrpcClient = grpcClient;
             EventServiceSettings effectiveSettings = settings ?? EventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateClientEvent = clientHelper.BuildApiCall<CreateClientEventRequest, ClientEvent>("CreateClientEvent", grpcClient.CreateClientEventAsync, grpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateClientEvent);
             Modify_CreateClientEventApiCall(ref _callCreateClientEvent);

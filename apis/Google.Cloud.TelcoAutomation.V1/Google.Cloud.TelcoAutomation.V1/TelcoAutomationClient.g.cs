@@ -5270,7 +5270,11 @@ namespace Google.Cloud.TelcoAutomation.V1
         {
             GrpcClient = grpcClient;
             TelcoAutomationSettings effectiveSettings = settings ?? TelcoAutomationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateOrchestrationClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOrchestrationClusterOperationsSettings, logger);
             DeleteOrchestrationClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOrchestrationClusterOperationsSettings, logger);
             CreateEdgeSlmOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEdgeSlmOperationsSettings, logger);

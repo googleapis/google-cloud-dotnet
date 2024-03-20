@@ -2343,7 +2343,11 @@ namespace Google.Cloud.Notebooks.V1
         {
             GrpcClient = grpcClient;
             ManagedNotebookServiceSettings effectiveSettings = settings ?? ManagedNotebookServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRuntimeOperationsSettings, logger);
             UpdateRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRuntimeOperationsSettings, logger);
             DeleteRuntimeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRuntimeOperationsSettings, logger);

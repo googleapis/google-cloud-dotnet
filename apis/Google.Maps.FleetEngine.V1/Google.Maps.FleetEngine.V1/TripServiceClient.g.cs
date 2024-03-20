@@ -433,7 +433,11 @@ namespace Google.Maps.FleetEngine.V1
         {
             GrpcClient = grpcClient;
             TripServiceSettings effectiveSettings = settings ?? TripServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateTrip = clientHelper.BuildApiCall<CreateTripRequest, Trip>("CreateTrip", grpcClient.CreateTripAsync, grpcClient.CreateTrip, effectiveSettings.CreateTripSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateTripRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateTrip);
             Modify_CreateTripApiCall(ref _callCreateTrip);

@@ -327,7 +327,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             AnalyticsServiceSettings effectiveSettings = settings ?? AnalyticsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ExportAnalyticsMetricsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAnalyticsMetricsOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callExportAnalyticsMetrics = clientHelper.BuildApiCall<ExportAnalyticsMetricsRequest, lro::Operation>("ExportAnalyticsMetrics", grpcClient.ExportAnalyticsMetricsAsync, grpcClient.ExportAnalyticsMetrics, effectiveSettings.ExportAnalyticsMetricsSettings).WithGoogleRequestParam("catalog", request => request.Catalog);

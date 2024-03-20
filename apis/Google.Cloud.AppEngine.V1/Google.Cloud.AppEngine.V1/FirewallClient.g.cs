@@ -485,7 +485,11 @@ namespace Google.Cloud.AppEngine.V1
         {
             GrpcClient = grpcClient;
             FirewallSettings effectiveSettings = settings ?? FirewallSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListIngressRules = clientHelper.BuildApiCall<ListIngressRulesRequest, ListIngressRulesResponse>("ListIngressRules", grpcClient.ListIngressRulesAsync, grpcClient.ListIngressRules, effectiveSettings.ListIngressRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIngressRules);
             Modify_ListIngressRulesApiCall(ref _callListIngressRules);

@@ -308,7 +308,11 @@ namespace Google.Maps.AddressValidation.V1
         {
             GrpcClient = grpcClient;
             AddressValidationSettings effectiveSettings = settings ?? AddressValidationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callValidateAddress = clientHelper.BuildApiCall<ValidateAddressRequest, ValidateAddressResponse>("ValidateAddress", grpcClient.ValidateAddressAsync, grpcClient.ValidateAddress, effectiveSettings.ValidateAddressSettings);
             Modify_ApiCall(ref _callValidateAddress);
             Modify_ValidateAddressApiCall(ref _callValidateAddress);

@@ -2117,7 +2117,11 @@ namespace Google.Cloud.Logging.V2
         {
             GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, wkt::Empty>("DeleteLog", grpcClient.DeleteLogAsync, grpcClient.DeleteLog, effectiveSettings.DeleteLogSettings).WithGoogleRequestParam("log_name", request => request.LogName);
             Modify_ApiCall(ref _callDeleteLog);
             Modify_DeleteLogApiCall(ref _callDeleteLog);

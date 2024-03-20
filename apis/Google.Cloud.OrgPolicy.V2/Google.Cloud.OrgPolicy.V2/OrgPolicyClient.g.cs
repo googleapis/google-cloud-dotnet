@@ -2686,7 +2686,11 @@ namespace Google.Cloud.OrgPolicy.V2
         {
             GrpcClient = grpcClient;
             OrgPolicySettings effectiveSettings = settings ?? OrgPolicySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListConstraints = clientHelper.BuildApiCall<ListConstraintsRequest, ListConstraintsResponse>("ListConstraints", grpcClient.ListConstraintsAsync, grpcClient.ListConstraints, effectiveSettings.ListConstraintsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConstraints);
             Modify_ListConstraintsApiCall(ref _callListConstraints);

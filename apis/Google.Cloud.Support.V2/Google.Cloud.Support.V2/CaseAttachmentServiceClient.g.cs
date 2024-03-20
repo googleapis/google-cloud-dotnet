@@ -354,7 +354,11 @@ namespace Google.Cloud.Support.V2
         {
             GrpcClient = grpcClient;
             CaseAttachmentServiceSettings effectiveSettings = settings ?? CaseAttachmentServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListAttachments = clientHelper.BuildApiCall<ListAttachmentsRequest, ListAttachmentsResponse>("ListAttachments", grpcClient.ListAttachmentsAsync, grpcClient.ListAttachments, effectiveSettings.ListAttachmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAttachments);
             Modify_ListAttachmentsApiCall(ref _callListAttachments);

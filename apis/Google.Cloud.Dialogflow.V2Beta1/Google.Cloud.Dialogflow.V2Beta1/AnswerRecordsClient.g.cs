@@ -579,7 +579,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             AnswerRecordsSettings effectiveSettings = settings ?? AnswerRecordsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
 #pragma warning disable CS0612
             _callGetAnswerRecord = clientHelper.BuildApiCall<GetAnswerRecordRequest, AnswerRecord>("GetAnswerRecord", grpcClient.GetAnswerRecordAsync, grpcClient.GetAnswerRecord, effectiveSettings.GetAnswerRecordSettings).WithGoogleRequestParam("name", request => request.Name);

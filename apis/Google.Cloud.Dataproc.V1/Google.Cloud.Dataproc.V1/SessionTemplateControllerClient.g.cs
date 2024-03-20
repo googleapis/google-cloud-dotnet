@@ -825,7 +825,11 @@ namespace Google.Cloud.Dataproc.V1
         {
             GrpcClient = grpcClient;
             SessionTemplateControllerSettings effectiveSettings = settings ?? SessionTemplateControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSessionTemplate = clientHelper.BuildApiCall<CreateSessionTemplateRequest, SessionTemplate>("CreateSessionTemplate", grpcClient.CreateSessionTemplateAsync, grpcClient.CreateSessionTemplate, effectiveSettings.CreateSessionTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSessionTemplate);

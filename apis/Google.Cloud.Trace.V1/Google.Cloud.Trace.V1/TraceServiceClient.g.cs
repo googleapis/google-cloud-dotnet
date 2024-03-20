@@ -536,7 +536,11 @@ namespace Google.Cloud.Trace.V1
         {
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>("ListTraces", grpcClient.ListTracesAsync, grpcClient.ListTraces, effectiveSettings.ListTracesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListTraces);
             Modify_ListTracesApiCall(ref _callListTraces);

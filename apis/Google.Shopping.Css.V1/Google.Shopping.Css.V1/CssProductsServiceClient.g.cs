@@ -530,7 +530,11 @@ namespace Google.Shopping.Css.V1
         {
             GrpcClient = grpcClient;
             CssProductsServiceSettings effectiveSettings = settings ?? CssProductsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetCssProduct = clientHelper.BuildApiCall<GetCssProductRequest, CssProduct>("GetCssProduct", grpcClient.GetCssProductAsync, grpcClient.GetCssProduct, effectiveSettings.GetCssProductSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCssProduct);
             Modify_GetCssProductApiCall(ref _callGetCssProduct);

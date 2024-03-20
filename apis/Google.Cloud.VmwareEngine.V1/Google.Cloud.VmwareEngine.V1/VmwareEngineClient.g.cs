@@ -14705,7 +14705,11 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             GrpcClient = grpcClient;
             VmwareEngineSettings effectiveSettings = settings ?? VmwareEngineSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreatePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePrivateCloudOperationsSettings, logger);
             UpdatePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePrivateCloudOperationsSettings, logger);
             DeletePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateCloudOperationsSettings, logger);

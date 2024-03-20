@@ -306,7 +306,11 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         {
             GrpcClient = grpcClient;
             TextToSpeechLongAudioSynthesizeSettings effectiveSettings = settings ?? TextToSpeechLongAudioSynthesizeSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SynthesizeLongAudioOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SynthesizeLongAudioOperationsSettings, logger);
             _callSynthesizeLongAudio = clientHelper.BuildApiCall<SynthesizeLongAudioRequest, lro::Operation>("SynthesizeLongAudio", grpcClient.SynthesizeLongAudioAsync, grpcClient.SynthesizeLongAudio, effectiveSettings.SynthesizeLongAudioSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSynthesizeLongAudio);

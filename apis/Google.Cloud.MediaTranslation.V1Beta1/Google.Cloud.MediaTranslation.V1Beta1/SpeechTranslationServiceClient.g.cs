@@ -258,7 +258,11 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         {
             GrpcClient = grpcClient;
             SpeechTranslationServiceSettings effectiveSettings = settings ?? SpeechTranslationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callStreamingTranslateSpeech = clientHelper.BuildApiCall<StreamingTranslateSpeechRequest, StreamingTranslateSpeechResponse>("StreamingTranslateSpeech", grpcClient.StreamingTranslateSpeech, effectiveSettings.StreamingTranslateSpeechSettings, effectiveSettings.StreamingTranslateSpeechStreamingSettings);
             Modify_ApiCall(ref _callStreamingTranslateSpeech);
             Modify_StreamingTranslateSpeechApiCall(ref _callStreamingTranslateSpeech);

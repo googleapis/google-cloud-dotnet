@@ -1357,7 +1357,11 @@ namespace Google.Cloud.Iam.Credentials.V1
         {
             GrpcClient = grpcClient;
             IAMCredentialsSettings effectiveSettings = settings ?? IAMCredentialsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGenerateAccessToken = clientHelper.BuildApiCall<GenerateAccessTokenRequest, GenerateAccessTokenResponse>("GenerateAccessToken", grpcClient.GenerateAccessTokenAsync, grpcClient.GenerateAccessToken, effectiveSettings.GenerateAccessTokenSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateAccessToken);
             Modify_GenerateAccessTokenApiCall(ref _callGenerateAccessToken);

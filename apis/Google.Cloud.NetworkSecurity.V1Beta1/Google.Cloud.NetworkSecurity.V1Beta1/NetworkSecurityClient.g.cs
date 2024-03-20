@@ -2703,7 +2703,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
         {
             GrpcClient = grpcClient;
             NetworkSecuritySettings effectiveSettings = settings ?? NetworkSecuritySettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizationPolicyOperationsSettings, logger);
             UpdateAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizationPolicyOperationsSettings, logger);
             DeleteAuthorizationPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthorizationPolicyOperationsSettings, logger);

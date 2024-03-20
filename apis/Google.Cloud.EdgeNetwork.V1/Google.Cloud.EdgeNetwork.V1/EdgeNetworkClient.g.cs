@@ -4184,7 +4184,11 @@ namespace Google.Cloud.EdgeNetwork.V1
         {
             GrpcClient = grpcClient;
             EdgeNetworkSettings effectiveSettings = settings ?? EdgeNetworkSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNetworkOperationsSettings, logger);
             DeleteNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNetworkOperationsSettings, logger);
             CreateSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSubnetOperationsSettings, logger);

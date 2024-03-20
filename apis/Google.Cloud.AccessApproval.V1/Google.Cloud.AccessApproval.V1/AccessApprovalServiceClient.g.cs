@@ -1354,7 +1354,11 @@ namespace Google.Cloud.AccessApproval.V1
         {
             GrpcClient = grpcClient;
             AccessApprovalServiceSettings effectiveSettings = settings ?? AccessApprovalServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListApprovalRequests = clientHelper.BuildApiCall<ListApprovalRequestsMessage, ListApprovalRequestsResponse>("ListApprovalRequests", grpcClient.ListApprovalRequestsAsync, grpcClient.ListApprovalRequests, effectiveSettings.ListApprovalRequestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApprovalRequests);
             Modify_ListApprovalRequestsApiCall(ref _callListApprovalRequests);

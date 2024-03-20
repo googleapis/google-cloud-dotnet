@@ -340,7 +340,11 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             GrpcClient = grpcClient;
             TemplatesServiceSettings effectiveSettings = settings ?? TemplatesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateJobFromTemplate = clientHelper.BuildApiCall<CreateJobFromTemplateRequest, Job>("CreateJobFromTemplate", grpcClient.CreateJobFromTemplateAsync, grpcClient.CreateJobFromTemplate, effectiveSettings.CreateJobFromTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCreateJobFromTemplate);
             Modify_CreateJobFromTemplateApiCall(ref _callCreateJobFromTemplate);

@@ -1253,7 +1253,11 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1
         {
             GrpcClient = grpcClient;
             AppConnectionsServiceSettings effectiveSettings = settings ?? AppConnectionsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAppConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAppConnectionOperationsSettings, logger);
             UpdateAppConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppConnectionOperationsSettings, logger);
             DeleteAppConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAppConnectionOperationsSettings, logger);

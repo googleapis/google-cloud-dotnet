@@ -882,7 +882,11 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             GrpcClient = grpcClient;
             PolicyBasedRoutingServiceSettings effectiveSettings = settings ?? PolicyBasedRoutingServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreatePolicyBasedRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePolicyBasedRouteOperationsSettings, logger);
             DeletePolicyBasedRouteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePolicyBasedRouteOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);

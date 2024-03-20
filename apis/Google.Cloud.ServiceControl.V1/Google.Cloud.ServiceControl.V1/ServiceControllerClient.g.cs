@@ -395,7 +395,11 @@ namespace Google.Cloud.ServiceControl.V1
         {
             GrpcClient = grpcClient;
             ServiceControllerSettings effectiveSettings = settings ?? ServiceControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCheck = clientHelper.BuildApiCall<CheckRequest, CheckResponse>("Check", grpcClient.CheckAsync, grpcClient.Check, effectiveSettings.CheckSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
             Modify_ApiCall(ref _callCheck);
             Modify_CheckApiCall(ref _callCheck);

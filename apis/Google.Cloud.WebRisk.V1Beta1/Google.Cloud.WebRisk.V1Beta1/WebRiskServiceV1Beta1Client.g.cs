@@ -572,7 +572,11 @@ namespace Google.Cloud.WebRisk.V1Beta1
         {
             GrpcClient = grpcClient;
             WebRiskServiceV1Beta1Settings effectiveSettings = settings ?? WebRiskServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callComputeThreatListDiff = clientHelper.BuildApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse>("ComputeThreatListDiff", grpcClient.ComputeThreatListDiffAsync, grpcClient.ComputeThreatListDiff, effectiveSettings.ComputeThreatListDiffSettings);
             Modify_ApiCall(ref _callComputeThreatListDiff);
             Modify_ComputeThreatListDiffApiCall(ref _callComputeThreatListDiff);

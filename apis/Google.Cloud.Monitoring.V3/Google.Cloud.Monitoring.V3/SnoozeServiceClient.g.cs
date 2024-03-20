@@ -864,7 +864,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             SnoozeServiceSettings effectiveSettings = settings ?? SnoozeServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateSnooze = clientHelper.BuildApiCall<CreateSnoozeRequest, Snooze>("CreateSnooze", grpcClient.CreateSnoozeAsync, grpcClient.CreateSnooze, effectiveSettings.CreateSnoozeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSnooze);
             Modify_CreateSnoozeApiCall(ref _callCreateSnooze);

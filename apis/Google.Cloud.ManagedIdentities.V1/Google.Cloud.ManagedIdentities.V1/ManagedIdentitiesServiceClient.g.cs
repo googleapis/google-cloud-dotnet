@@ -2110,7 +2110,11 @@ namespace Google.Cloud.ManagedIdentities.V1
         {
             GrpcClient = grpcClient;
             ManagedIdentitiesServiceSettings effectiveSettings = settings ?? ManagedIdentitiesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateMicrosoftAdDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMicrosoftAdDomainOperationsSettings, logger);
             UpdateDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDomainOperationsSettings, logger);
             DeleteDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDomainOperationsSettings, logger);

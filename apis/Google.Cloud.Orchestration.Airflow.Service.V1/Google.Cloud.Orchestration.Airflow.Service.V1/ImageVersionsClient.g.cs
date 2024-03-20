@@ -291,7 +291,11 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         {
             GrpcClient = grpcClient;
             ImageVersionsSettings effectiveSettings = settings ?? ImageVersionsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListImageVersions = clientHelper.BuildApiCall<ListImageVersionsRequest, ListImageVersionsResponse>("ListImageVersions", grpcClient.ListImageVersionsAsync, grpcClient.ListImageVersions, effectiveSettings.ListImageVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListImageVersions);
             Modify_ListImageVersionsApiCall(ref _callListImageVersions);

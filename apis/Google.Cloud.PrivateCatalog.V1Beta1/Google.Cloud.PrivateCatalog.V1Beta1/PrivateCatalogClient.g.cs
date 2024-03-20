@@ -353,7 +353,11 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1
         {
             GrpcClient = grpcClient;
             PrivateCatalogSettings effectiveSettings = settings ?? PrivateCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callSearchCatalogs = clientHelper.BuildApiCall<SearchCatalogsRequest, SearchCatalogsResponse>("SearchCatalogs", grpcClient.SearchCatalogsAsync, grpcClient.SearchCatalogs, effectiveSettings.SearchCatalogsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSearchCatalogs);
             Modify_SearchCatalogsApiCall(ref _callSearchCatalogs);

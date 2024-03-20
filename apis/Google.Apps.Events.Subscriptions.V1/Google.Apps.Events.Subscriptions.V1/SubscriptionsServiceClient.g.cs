@@ -1293,7 +1293,11 @@ namespace Google.Apps.Events.Subscriptions.V1
         {
             GrpcClient = grpcClient;
             SubscriptionsServiceSettings effectiveSettings = settings ?? SubscriptionsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateSubscriptionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSubscriptionOperationsSettings, logger);
             DeleteSubscriptionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSubscriptionOperationsSettings, logger);
             UpdateSubscriptionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSubscriptionOperationsSettings, logger);

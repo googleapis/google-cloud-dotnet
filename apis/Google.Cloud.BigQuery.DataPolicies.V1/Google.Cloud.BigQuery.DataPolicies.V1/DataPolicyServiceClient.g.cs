@@ -1159,7 +1159,11 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1
         {
             GrpcClient = grpcClient;
             DataPolicyServiceSettings effectiveSettings = settings ?? DataPolicyServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateDataPolicy = clientHelper.BuildApiCall<CreateDataPolicyRequest, DataPolicy>("CreateDataPolicy", grpcClient.CreateDataPolicyAsync, grpcClient.CreateDataPolicy, effectiveSettings.CreateDataPolicySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataPolicy);
             Modify_CreateDataPolicyApiCall(ref _callCreateDataPolicy);

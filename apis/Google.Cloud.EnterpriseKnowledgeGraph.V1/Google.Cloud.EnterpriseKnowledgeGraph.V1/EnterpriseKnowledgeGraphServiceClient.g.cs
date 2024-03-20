@@ -1599,7 +1599,11 @@ namespace Google.Cloud.EnterpriseKnowledgeGraph.V1
         {
             GrpcClient = grpcClient;
             EnterpriseKnowledgeGraphServiceSettings effectiveSettings = settings ?? EnterpriseKnowledgeGraphServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateEntityReconciliationJob = clientHelper.BuildApiCall<CreateEntityReconciliationJobRequest, EntityReconciliationJob>("CreateEntityReconciliationJob", grpcClient.CreateEntityReconciliationJobAsync, grpcClient.CreateEntityReconciliationJob, effectiveSettings.CreateEntityReconciliationJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEntityReconciliationJob);
             Modify_CreateEntityReconciliationJobApiCall(ref _callCreateEntityReconciliationJob);

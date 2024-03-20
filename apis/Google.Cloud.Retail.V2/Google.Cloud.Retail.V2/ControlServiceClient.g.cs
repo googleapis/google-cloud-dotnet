@@ -998,7 +998,11 @@ namespace Google.Cloud.Retail.V2
         {
             GrpcClient = grpcClient;
             ControlServiceSettings effectiveSettings = settings ?? ControlServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateControl = clientHelper.BuildApiCall<CreateControlRequest, Control>("CreateControl", grpcClient.CreateControlAsync, grpcClient.CreateControl, effectiveSettings.CreateControlSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateControl);

@@ -10628,7 +10628,11 @@ namespace Google.Cloud.Dlp.V2
         {
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>("InspectContent", grpcClient.InspectContentAsync, grpcClient.InspectContent, effectiveSettings.InspectContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInspectContent);

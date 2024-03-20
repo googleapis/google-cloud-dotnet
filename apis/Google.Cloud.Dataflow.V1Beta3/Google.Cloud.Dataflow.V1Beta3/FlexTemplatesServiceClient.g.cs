@@ -260,7 +260,11 @@ namespace Google.Cloud.Dataflow.V1Beta3
         {
             GrpcClient = grpcClient;
             FlexTemplatesServiceSettings effectiveSettings = settings ?? FlexTemplatesServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callLaunchFlexTemplate = clientHelper.BuildApiCall<LaunchFlexTemplateRequest, LaunchFlexTemplateResponse>("LaunchFlexTemplate", grpcClient.LaunchFlexTemplateAsync, grpcClient.LaunchFlexTemplate, effectiveSettings.LaunchFlexTemplateSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callLaunchFlexTemplate);
             Modify_LaunchFlexTemplateApiCall(ref _callLaunchFlexTemplate);

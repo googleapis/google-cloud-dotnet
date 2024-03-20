@@ -744,7 +744,11 @@ namespace Google.Cloud.Shell.V1
         {
             GrpcClient = grpcClient;
             CloudShellServiceSettings effectiveSettings = settings ?? CloudShellServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             StartEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartEnvironmentOperationsSettings, logger);
             AuthorizeEnvironmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AuthorizeEnvironmentOperationsSettings, logger);
             AddPublicKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddPublicKeyOperationsSettings, logger);

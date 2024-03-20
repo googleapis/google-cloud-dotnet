@@ -287,7 +287,11 @@ namespace Google.Cloud.ServiceControl.V1
         {
             GrpcClient = grpcClient;
             QuotaControllerSettings effectiveSettings = settings ?? QuotaControllerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callAllocateQuota = clientHelper.BuildApiCall<AllocateQuotaRequest, AllocateQuotaResponse>("AllocateQuota", grpcClient.AllocateQuotaAsync, grpcClient.AllocateQuota, effectiveSettings.AllocateQuotaSettings).WithGoogleRequestParam("service_name", request => request.ServiceName);
             Modify_ApiCall(ref _callAllocateQuota);
             Modify_AllocateQuotaApiCall(ref _callAllocateQuota);

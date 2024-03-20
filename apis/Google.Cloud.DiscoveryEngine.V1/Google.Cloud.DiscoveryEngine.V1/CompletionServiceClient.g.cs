@@ -468,7 +468,11 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             GrpcClient = grpcClient;
             CompletionServiceSettings effectiveSettings = settings ?? CompletionServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ImportSuggestionDenyListEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportSuggestionDenyListEntriesOperationsSettings, logger);
             PurgeSuggestionDenyListEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeSuggestionDenyListEntriesOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);

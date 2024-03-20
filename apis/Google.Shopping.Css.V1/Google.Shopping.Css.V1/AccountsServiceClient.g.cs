@@ -609,7 +609,11 @@ namespace Google.Shopping.Css.V1
         {
             GrpcClient = grpcClient;
             AccountsServiceSettings effectiveSettings = settings ?? AccountsServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListChildAccounts = clientHelper.BuildApiCall<ListChildAccountsRequest, ListChildAccountsResponse>("ListChildAccounts", grpcClient.ListChildAccountsAsync, grpcClient.ListChildAccounts, effectiveSettings.ListChildAccountsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListChildAccounts);
             Modify_ListChildAccountsApiCall(ref _callListChildAccounts);

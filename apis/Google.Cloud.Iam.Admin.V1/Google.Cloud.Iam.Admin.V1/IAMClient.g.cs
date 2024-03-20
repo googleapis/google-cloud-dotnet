@@ -4370,7 +4370,11 @@ namespace Google.Cloud.Iam.Admin.V1
         {
             GrpcClient = grpcClient;
             IAMSettings effectiveSettings = settings ?? IAMSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListServiceAccounts = clientHelper.BuildApiCall<ListServiceAccountsRequest, ListServiceAccountsResponse>("ListServiceAccounts", grpcClient.ListServiceAccountsAsync, grpcClient.ListServiceAccounts, effectiveSettings.ListServiceAccountsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListServiceAccounts);
             Modify_ListServiceAccountsApiCall(ref _callListServiceAccounts);

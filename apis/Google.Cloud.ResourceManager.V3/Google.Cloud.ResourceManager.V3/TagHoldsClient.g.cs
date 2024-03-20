@@ -725,7 +725,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             TagHoldsSettings effectiveSettings = settings ?? TagHoldsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTagHoldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagHoldOperationsSettings, logger);
             DeleteTagHoldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagHoldOperationsSettings, logger);
             _callCreateTagHold = clientHelper.BuildApiCall<CreateTagHoldRequest, lro::Operation>("CreateTagHold", grpcClient.CreateTagHoldAsync, grpcClient.CreateTagHold, effectiveSettings.CreateTagHoldSettings).WithGoogleRequestParam("parent", request => request.Parent);

@@ -457,7 +457,11 @@ namespace Google.Cloud.Trace.V2
         {
             GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callBatchWriteSpans = clientHelper.BuildApiCall<BatchWriteSpansRequest, wkt::Empty>("BatchWriteSpans", grpcClient.BatchWriteSpansAsync, grpcClient.BatchWriteSpans, effectiveSettings.BatchWriteSpansSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBatchWriteSpans);
             Modify_BatchWriteSpansApiCall(ref _callBatchWriteSpans);

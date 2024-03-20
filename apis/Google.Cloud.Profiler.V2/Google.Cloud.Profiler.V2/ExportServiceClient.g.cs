@@ -360,7 +360,11 @@ namespace Google.Cloud.Profiler.V2
         {
             GrpcClient = grpcClient;
             ExportServiceSettings effectiveSettings = settings ?? ExportServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListProfiles = clientHelper.BuildApiCall<ListProfilesRequest, ListProfilesResponse>("ListProfiles", grpcClient.ListProfilesAsync, grpcClient.ListProfiles, effectiveSettings.ListProfilesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListProfiles);
             Modify_ListProfilesApiCall(ref _callListProfiles);

@@ -986,7 +986,11 @@ namespace Google.Cloud.Language.V1
         {
             GrpcClient = grpcClient;
             LanguageServiceSettings effectiveSettings = settings ?? LanguageServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callAnalyzeSentiment = clientHelper.BuildApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse>("AnalyzeSentiment", grpcClient.AnalyzeSentimentAsync, grpcClient.AnalyzeSentiment, effectiveSettings.AnalyzeSentimentSettings);
             Modify_ApiCall(ref _callAnalyzeSentiment);
             Modify_AnalyzeSentimentApiCall(ref _callAnalyzeSentiment);

@@ -1108,7 +1108,11 @@ namespace Google.Cloud.StorageInsights.V1
         {
             GrpcClient = grpcClient;
             StorageInsightsSettings effectiveSettings = settings ?? StorageInsightsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListReportConfigs = clientHelper.BuildApiCall<ListReportConfigsRequest, ListReportConfigsResponse>("ListReportConfigs", grpcClient.ListReportConfigsAsync, grpcClient.ListReportConfigs, effectiveSettings.ListReportConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReportConfigs);
