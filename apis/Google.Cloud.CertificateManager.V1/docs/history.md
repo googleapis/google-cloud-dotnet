@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2024-03-21
+
+### New features
+
+- Added Trust Configs and DnsAuthorization.Type to Certificate Manager ([commit ac4eb8a](https://github.com/googleapis/google-cloud-dotnet/commit/ac4eb8a1afb11a6885101a658e5b0094192c6e03))
+
 ## Version 2.4.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
