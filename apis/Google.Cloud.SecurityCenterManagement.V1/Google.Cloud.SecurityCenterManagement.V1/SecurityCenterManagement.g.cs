@@ -35,7 +35,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
             "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
             "LnByb3RvGhZnb29nbGUvdHlwZS9leHByLnByb3RvIu4HCixFZmZlY3RpdmVT",
             "ZWN1cml0eUhlYWx0aEFuYWx5dGljc0N1c3RvbU1vZHVsZRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQMSUgoNY3VzdG9tX2NvbmZpZxgCIAEoCzI2Lmdvb2dsZS5jbG91",
+            "ASgJQgPgQQgSUgoNY3VzdG9tX2NvbmZpZxgCIAEoCzI2Lmdvb2dsZS5jbG91",
             "ZC5zZWN1cml0eWNlbnRlcm1hbmFnZW1lbnQudjEuQ3VzdG9tQ29uZmlnQgPg",
             "QQMShQEKEGVuYWJsZW1lbnRfc3RhdGUYAyABKA4yZi5nb29nbGUuY2xvdWQu",
             "c2VjdXJpdHljZW50ZXJtYW5hZ2VtZW50LnYxLkVmZmVjdGl2ZVNlY3VyaXR5",
@@ -71,7 +71,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
             "VgpUc2VjdXJpdHljZW50ZXJtYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29tL0Vm",
             "ZmVjdGl2ZVNlY3VyaXR5SGVhbHRoQW5hbHl0aWNzQ3VzdG9tTW9kdWxlItII",
             "CiNTZWN1cml0eUhlYWx0aEFuYWx5dGljc0N1c3RvbU1vZHVsZRIRCgRuYW1l",
-            "GAEgASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESfAoQZW5h",
+            "GAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESfAoQZW5h",
             "YmxlbWVudF9zdGF0ZRgDIAEoDjJdLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
             "bnRlcm1hbmFnZW1lbnQudjEuU2VjdXJpdHlIZWFsdGhBbmFseXRpY3NDdXN0",
             "b21Nb2R1bGUuRW5hYmxlbWVudFN0YXRlQgPgQQESNAoLdXBkYXRlX3RpbWUY",
@@ -195,7 +195,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
             "X3Zpb2xhdGlvbhgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eUgAEiMK",
             "BWVycm9yGAMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNIAEIICgZyZXN1bHQi",
             "1AcKKUVmZmVjdGl2ZUV2ZW50VGhyZWF0RGV0ZWN0aW9uQ3VzdG9tTW9kdWxl",
-            "EhEKBG5hbWUYASABKAlCA+BBBRIsCgZjb25maWcYAiABKAsyFy5nb29nbGUu",
+            "EhEKBG5hbWUYASABKAlCA+BBCBIsCgZjb25maWcYAiABKAsyFy5nb29nbGUu",
             "cHJvdG9idWYuU3RydWN0QgPgQQMSggEKEGVuYWJsZW1lbnRfc3RhdGUYAyAB",
             "KA4yYy5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXJtYW5hZ2VtZW50LnYx",
             "LkVmZmVjdGl2ZUV2ZW50VGhyZWF0RGV0ZWN0aW9uQ3VzdG9tTW9kdWxlLkVu",
@@ -230,7 +230,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
             "bWUYASABKAlCWeBBAvpBUwpRc2VjdXJpdHljZW50ZXJtYW5hZ2VtZW50Lmdv",
             "b2dsZWFwaXMuY29tL0VmZmVjdGl2ZUV2ZW50VGhyZWF0RGV0ZWN0aW9uQ3Vz",
             "dG9tTW9kdWxlIrQICiBFdmVudFRocmVhdERldGVjdGlvbkN1c3RvbU1vZHVs",
-            "ZRIRCgRuYW1lGAEgASgJQgPgQQUSLAoGY29uZmlnGAIgASgLMhcuZ29vZ2xl",
+            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSLAoGY29uZmlnGAIgASgLMhcuZ29vZ2xl",
             "LnByb3RvYnVmLlN0cnVjdEID4EEBEmkKD2FuY2VzdG9yX21vZHVsZRgDIAEo",
             "CUJQ4EED+kFKCkhzZWN1cml0eWNlbnRlcm1hbmFnZW1lbnQuZ29vZ2xlYXBp",
             "cy5jb20vRXZlbnRUaHJlYXREZXRlY3Rpb25DdXN0b21Nb2R1bGUSeQoQZW5h",
@@ -640,7 +640,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name of the custom module.
+    /// Identifier. The resource name of the custom module.
     /// Its format is
     /// "organizations/{organization}/locations/{location}/effectiveSecurityHealthAnalyticsCustomModules/{effective_security_health_analytics_custom_module}",
     /// or
@@ -1717,7 +1717,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The resource name of the custom module.
+    /// Identifier. The resource name of the custom module.
     /// Its format is
     /// "organizations/{organization}/locations/{location}/securityHealthAnalyticsCustomModules/{security_health_analytics_custom_module}",
     /// or
@@ -7224,7 +7224,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The resource name of the ETD custom module.
+    /// Identifier. The resource name of the ETD custom module.
     ///
     /// Its format is:
     ///
@@ -8377,7 +8377,7 @@ namespace Google.Cloud.SecurityCenterManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The resource name of the ETD custom module.
+    /// Identifier. The resource name of the ETD custom module.
     ///
     /// Its format is:
     ///
