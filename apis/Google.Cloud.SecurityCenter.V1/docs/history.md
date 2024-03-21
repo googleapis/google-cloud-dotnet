@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.17.0, released 2024-03-21
+
+### New features
+
+- Add security_posture, external_system.case_uri, external_system.case_priority, external_system.case_sla, external_system.case_create_time, external_system.case_close_time, and external_system.ticket_info to finding's list of attributes ([commit 3f92c8d](https://github.com/googleapis/google-cloud-dotnet/commit/3f92c8da4a36daf678f4aca62f2fca18269fbb8b))
+
 ## Version 3.16.0, released 2024-03-04
 
 ### New features
