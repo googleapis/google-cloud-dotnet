@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.8.0, released 2024-03-21
+
+### New features
+
+- Add RPCs for getting and listing project, table, and column data profiles ([commit 5dd8bca](https://github.com/googleapis/google-cloud-dotnet/commit/5dd8bca0b4def432d3c7714d21947a2632208431))
+
+### Documentation improvements
+
+- Update urls to reflect branding change to Sensitive Data Protection ([commit 5dd8bca](https://github.com/googleapis/google-cloud-dotnet/commit/5dd8bca0b4def432d3c7714d21947a2632208431))
+
 ## Version 4.7.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
