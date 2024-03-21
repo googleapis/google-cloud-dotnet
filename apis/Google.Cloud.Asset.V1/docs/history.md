@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.9.0, released 2024-03-21
+
+### New features
+
+- Add `asset_type` field to `GovernedIamPolicy` and `GovernedResource` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add `effective_tags` field to `GovernedResource` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add fields `project`, `folders`, `organization` and `effective_tags` to `GovernedContainer` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add fields `project`, `folders` and `organization` to `OrgPolicyResult` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add field `condition_evaluation` to `AnalyzerOrgPolicy.Rule` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+
+### Documentation improvements
+
+- Minor comment updates ([commit ddb9f51](https://github.com/googleapis/google-cloud-dotnet/commit/ddb9f5135966f10b5a3a76b4778b37019cef5346))
+- Update comment for rpc `AnalyzeOrgPolicyGovernedAssets` to include additional canned constraints ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+
 ## Version 3.8.0, released 2024-02-28
 
 ### Documentation improvements
