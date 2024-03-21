@@ -54,48 +54,48 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhSW5jcmVhc2VFbGlnaWJpbGl0eS5J",
             "bmVsaWdpYmlsaXR5UmVhc29uImQKE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
             "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIcChhOT19WQUxJ",
-            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIoMGCg9RdW90YVByZWZl",
-            "cmVuY2USDAoEbmFtZRgBIAEoCRJOCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
+            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIogGCg9RdW90YVByZWZl",
+            "cmVuY2USDAoEbmFtZRgBIAEoCRJTCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
             "Z2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5z",
-            "aW9uc0VudHJ5EkEKDHF1b3RhX2NvbmZpZxgDIAEoCzImLmdvb2dsZS5hcGku",
-            "Y2xvdWRxdW90YXMudjEuUXVvdGFDb25maWdCA+BBAhIRCgRldGFnGAQgASgJ",
-            "QgPgQQESNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHc2VydmljZRgHIAEoCUID4EEC",
-            "EhUKCHF1b3RhX2lkGAggASgJQgPgQQISGAoLcmVjb25jaWxpbmcYCiABKAhC",
-            "A+BBAxIVCg1qdXN0aWZpY2F0aW9uGAsgASgJEh0KDWNvbnRhY3RfZW1haWwY",
-            "DCABKAlCBuBBBOBBAhoxCg9EaW1lbnNpb25zRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ATqfAupBmwIKKmNsb3VkcXVvdGFzLmdvb2ds",
-            "ZWFwaXMuY29tL1F1b3RhUHJlZmVyZW5jZRJLcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3Rh",
-            "X3ByZWZlcmVuY2V9Eklmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9ElVv",
-            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3F1b3RhUHJlZmVyZW5jZXMve3F1b3RhX3ByZWZlcmVuY2V9IqwDCgtR",
-            "dW90YUNvbmZpZxIcCg9wcmVmZXJyZWRfdmFsdWUYASABKANCA+BBAhIZCgxz",
-            "dGF0ZV9kZXRhaWwYAiABKAlCA+BBAxI3Cg1ncmFudGVkX3ZhbHVlGAMgASgL",
-            "MhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBAxIVCgh0cmFjZV9p",
-            "ZBgEIAEoCUID4EEDEkwKC2Fubm90YXRpb25zGAUgAygLMjcuZ29vZ2xlLmFw",
-            "aS5jbG91ZHF1b3Rhcy52MS5RdW90YUNvbmZpZy5Bbm5vdGF0aW9uc0VudHJ5",
-            "EkoKDnJlcXVlc3Rfb3JpZ2luGAYgASgOMi0uZ29vZ2xlLmFwaS5jbG91ZHF1",
-            "b3Rhcy52MS5RdW90YUNvbmZpZy5PcmlnaW5CA+BBAxoyChBBbm5vdGF0aW9u",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiRgoGT3Jp",
-            "Z2luEhYKEk9SSUdJTl9VTlNQRUNJRklFRBAAEhEKDUNMT1VEX0NPTlNPTEUQ",
-            "ARIRCg1BVVRPX0FESlVTVEVSEAIi6gEKDkRpbWVuc2lvbnNJbmZvEk0KCmRp",
-            "bWVuc2lvbnMYASADKAsyOS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLkRp",
-            "bWVuc2lvbnNJbmZvLkRpbWVuc2lvbnNFbnRyeRI4CgdkZXRhaWxzGAIgASgL",
-            "MicuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YURldGFpbHMSHAoU",
-            "YXBwbGljYWJsZV9sb2NhdGlvbnMYAyADKAkaMQoPRGltZW5zaW9uc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiHQoMUXVvdGFEZXRh",
-            "aWxzEg0KBXZhbHVlGAEgASgDKn4KEFF1b3RhU2FmZXR5Q2hlY2sSIgoeUVVP",
-            "VEFfU0FGRVRZX0NIRUNLX1VOU1BFQ0lGSUVEEAASHgoaUVVPVEFfREVDUkVB",
-            "U0VfQkVMT1dfVVNBR0UQARImCiJRVU9UQV9ERUNSRUFTRV9QRVJDRU5UQUdF",
-            "X1RPT19ISUdIEAJC0QEKHWNvbS5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYx",
-            "Qg5SZXNvdXJjZXNQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3Vk",
-            "cXVvdGFzL2FwaXYxL2Nsb3VkcXVvdGFzcGI7Y2xvdWRxdW90YXNwYqoCG0dv",
-            "b2dsZS5DbG91ZC5DbG91ZFF1b3Rhcy5WMcoCG0dvb2dsZVxDbG91ZFxDbG91",
-            "ZFF1b3Rhc1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkNsb3VkUXVvdGFzOjpWMWIG",
-            "cHJvdG8z"));
+            "aW9uc0VudHJ5QgPgQQUSQQoMcXVvdGFfY29uZmlnGAMgASgLMiYuZ29vZ2xl",
+            "LmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YUNvbmZpZ0ID4EECEhEKBGV0YWcY",
+            "BCABKAlCA+BBARI0CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIUCgdzZXJ2aWNlGAcgASgJ",
+            "QgPgQQISFQoIcXVvdGFfaWQYCCABKAlCA+BBAhIYCgtyZWNvbmNpbGluZxgK",
+            "IAEoCEID4EEDEhUKDWp1c3RpZmljYXRpb24YCyABKAkSHQoNY29udGFjdF9l",
+            "bWFpbBgMIAEoCUIG4EEE4EECGjEKD0RpbWVuc2lvbnNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOp8C6kGbAgoqY2xvdWRxdW90YXMu",
+            "Z29vZ2xlYXBpcy5jb20vUXVvdGFQcmVmZXJlbmNlEktwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97",
+            "cXVvdGFfcHJlZmVyZW5jZX0SSWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5j",
+            "ZX0SVW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5jZX0i",
+            "sQMKC1F1b3RhQ29uZmlnEhwKD3ByZWZlcnJlZF92YWx1ZRgBIAEoA0ID4EEC",
+            "EhkKDHN0YXRlX2RldGFpbBgCIAEoCUID4EEDEjcKDWdyYW50ZWRfdmFsdWUY",
+            "AyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEDEhUKCHRy",
+            "YWNlX2lkGAQgASgJQgPgQQMSUQoLYW5ub3RhdGlvbnMYBSADKAsyNy5nb29n",
+            "bGUuYXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhQ29uZmlnLkFubm90YXRpb25z",
+            "RW50cnlCA+BBARJKCg5yZXF1ZXN0X29yaWdpbhgGIAEoDjItLmdvb2dsZS5h",
+            "cGkuY2xvdWRxdW90YXMudjEuUXVvdGFDb25maWcuT3JpZ2luQgPgQQMaMgoQ",
+            "QW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBIkYKBk9yaWdpbhIWChJPUklHSU5fVU5TUEVDSUZJRUQQABIRCg1DTE9V",
+            "RF9DT05TT0xFEAESEQoNQVVUT19BREpVU1RFUhACIuoBCg5EaW1lbnNpb25z",
+            "SW5mbxJNCgpkaW1lbnNpb25zGAEgAygLMjkuZ29vZ2xlLmFwaS5jbG91ZHF1",
+            "b3Rhcy52MS5EaW1lbnNpb25zSW5mby5EaW1lbnNpb25zRW50cnkSOAoHZGV0",
+            "YWlscxgCIAEoCzInLmdvb2dsZS5hcGkuY2xvdWRxdW90YXMudjEuUXVvdGFE",
+            "ZXRhaWxzEhwKFGFwcGxpY2FibGVfbG9jYXRpb25zGAMgAygJGjEKD0RpbWVu",
+            "c2lvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIh0K",
+            "DFF1b3RhRGV0YWlscxINCgV2YWx1ZRgBIAEoAyp+ChBRdW90YVNhZmV0eUNo",
+            "ZWNrEiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh4KGlFV",
+            "T1RBX0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiUVVPVEFfREVDUkVBU0Vf",
+            "UEVSQ0VOVEFHRV9UT09fSElHSBACQtEBCh1jb20uZ29vZ2xlLmFwaS5jbG91",
+            "ZHF1b3Rhcy52MUIOUmVzb3VyY2VzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9jbG91ZHF1b3Rhcy9hcGl2MS9jbG91ZHF1b3Rhc3BiO2Nsb3VkcXVv",
+            "dGFzcGKqAhtHb29nbGUuQ2xvdWQuQ2xvdWRRdW90YXMuVjHKAhtHb29nbGVc",
+            "Q2xvdWRcQ2xvdWRRdW90YXNcVjHqAh5Hb29nbGU6OkNsb3VkOjpDbG91ZFF1",
+            "b3Rhczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudQuotas.V1.QuotaSafetyCheck), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1319,9 +1319,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> dimensions_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The dimensions that this quota preference applies to. The key of the map
-    /// entry is the name of a dimension, such as "region", "zone", "network_id",
-    /// and the value of the map entry is the dimension value.
+    /// Immutable. The dimensions that this quota preference applies to. The key of
+    /// the map entry is the name of a dimension, such as "region", "zone",
+    /// "network_id", and the value of the map entry is the dimension value.
     ///
     /// If a dimension is missing from the map of dimensions, the quota preference
     /// applies to all the dimension values except for those that have other quota
@@ -2002,9 +2002,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The annotations map for clients to store small amounts of arbitrary data.
-    /// Do not put PII or other sensitive information here.
-    /// See https://google.aip.dev/128#annotations
+    /// Optional. The annotations map for clients to store small amounts of
+    /// arbitrary data. Do not put PII or other sensitive information here. See
+    /// https://google.aip.dev/128#annotations
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
