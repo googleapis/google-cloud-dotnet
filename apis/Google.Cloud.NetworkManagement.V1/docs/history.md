@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.7.0, released 2024-03-21
+
+### New features
+
+- Add new enum values related to Google services ([commit b0981d5](https://github.com/googleapis/google-cloud-dotnet/commit/b0981d53d5e43a1c16f391bf175981a2478fe05d))
+- Add new final state fields to Network Management API version v1 ([commit ce12129](https://github.com/googleapis/google-cloud-dotnet/commit/ce121296f5c2a5691ed39cb354f3f5ffd22b62e8))
+- Add Location & IAM mixins ([commit 7ae5fe0](https://github.com/googleapis/google-cloud-dotnet/commit/7ae5fe0175b0bfbae93d81039d3de0e6674a767f))
+- Add new NAT fields to Network Management API definition ([commit 3066235](https://github.com/googleapis/google-cloud-dotnet/commit/3066235b3cd11c24bbdaf6f99cc5b73197e01067))
+- Add new load balancer fields to public API ([commit 9bb5f5a](https://github.com/googleapis/google-cloud-dotnet/commit/9bb5f5aebfe99dbdcfc837ea49239c1fd20eff7e))
+
+### Documentation improvements
+
+- Update final state comments in Network Management API version v1 ([commit ce12129](https://github.com/googleapis/google-cloud-dotnet/commit/ce121296f5c2a5691ed39cb354f3f5ffd22b62e8))
 ## Version 2.6.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
