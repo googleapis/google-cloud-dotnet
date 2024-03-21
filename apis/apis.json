@@ -1438,7 +1438,7 @@
     },
     {
       "id": "Google.Cloud.Config.V1",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "type": "grpc",
       "productName": "Infrastructure Manager",
       "productUrl": "https://cloud.google.com/infrastructure-manager/docs/overview",
