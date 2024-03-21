@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2024-03-21
+
+### New features
+
+- Added text sections to the submitted summary ([commit b036872](https://github.com/googleapis/google-cloud-dotnet/commit/b0368725f22b282abd78dcc39c1c8205d6be7594))
+- Added conformer model migration opt out flag ([commit b036872](https://github.com/googleapis/google-cloud-dotnet/commit/b0368725f22b282abd78dcc39c1c8205d6be7594))
+- Added intent input to StreamingAnalyzeContentRequest ([commit b036872](https://github.com/googleapis/google-cloud-dotnet/commit/b0368725f22b282abd78dcc39c1c8205d6be7594))
+
+### Documentation improvements
+
+- Clarified wording around END_OF_SINGLE_UTTERANCE ([commit b036872](https://github.com/googleapis/google-cloud-dotnet/commit/b0368725f22b282abd78dcc39c1c8205d6be7594))
+
 ## Version 1.0.0-beta13, released 2024-02-28
 
 No API surface changes; just dependency updates.
