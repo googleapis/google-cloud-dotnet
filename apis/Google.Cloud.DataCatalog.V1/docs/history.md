@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.10.0, released 2024-03-21
+
+### New features
+
+- Add RANGE type to Data Catalog ([commit e436bee](https://github.com/googleapis/google-cloud-dotnet/commit/e436bee75f303e206ee364c63aa7ef85c51ad50a))
+
 ## Version 2.9.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
