@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2024-03-21
+
+### New features
+
+- Publish new bigtable APIs for types and aggregates ([commit 485f4e8](https://github.com/googleapis/google-cloud-dotnet/commit/485f4e88c7f2e2f153e79f76b04e5a3eb1eba15d))
+
 ## Version 3.10.0, released 2024-03-05
 
 ### New features
