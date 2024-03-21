@@ -1,5 +1,37 @@
 # Version history
 
+## Version 3.7.0, released 2024-03-21
+
+### New features
+
+- A new message `Backup` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new resource_definition `firestore.googleapis.com/Backup` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `GetBackup` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `ListBackups` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `DeleteBackup` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `RestoreDatabase` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `CreateBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `GetBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `ListBackupSchedules` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `UpdateBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `DeleteBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `CreateBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `GetBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `UpdateBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupSchedulesRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupSchedulesResponse` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DeleteBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `GetBackupRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupsRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupsResponse` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DeleteBackupRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `RestoreDatabaseRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `RestoreDatabaseMetadata` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `BackupSchedule` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new resource_definition `firestore.googleapis.com/BackupSchedule` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DailyRecurrence` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `WeeklyRecurrence` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+
 ## Version 3.6.0, released 2024-02-28
 
 ### Documentation improvements
