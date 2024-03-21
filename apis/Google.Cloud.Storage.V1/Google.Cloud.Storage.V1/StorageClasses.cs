@@ -60,5 +60,17 @@ namespace Google.Cloud.Storage.V1
         /// Name for the Archive storage class.
         /// </summary>
         public const string Archive = "ARCHIVE";
+        
+        /// <summary>
+        /// This is just a sample addition.
+        /// </summary>
+        public const string FixmeSampleChange = "FIXME";
+        
+        /// <summary>
+        /// This is just a sample addition.
+        /// </summary>
+        public static void Method()
+        {
+        }
     }
 }
