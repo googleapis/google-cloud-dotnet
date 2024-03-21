@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.5.0, released 2024-03-21
+
+### New features
+
+- Add custom subject key identifier field ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- Add support for fine-grained maximum certificate lifetime controls ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+
+### Documentation improvements
+
+- A comment for field `subject` in message `.google.cloud.security.privateca.v1.CertificateConfig` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- A comment for method `FetchCaCerts` in service `CertificateAuthorityService` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- A comment for field `ca_certs` in message `.google.cloud.security.privateca.v1.FetchCaCertsResponse` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+
 ## Version 3.4.0, released 2024-02-29
 
 No API surface changes; just dependency updates.
