@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -63,6 +63,25 @@ public class ServiceCollectionExtensionsTest
     }
 
     [Fact]
+    public void AddPublisherClient_WithAction_WithTopicNameResolver()
+    {
+        // Arrange.
+        TopicName topicName = TopicName.FromProjectTopic("projectId", "topicId");
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+
+        // Act.
+        serviceCollection.AddPublisherClient(builder => builder.TopicNameResolver = _ => topicName);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<PublisherClient>();
+
+        // Assert.
+        Assert.NotNull(client);
+        Assert.Equal(topicName, client.TopicName);
+    }
+
+    [Fact]
     public void AddPublisherClient_WithAction_NoTopicName()
     {
         // Arrange.
@@ -71,6 +90,22 @@ public class ServiceCollectionExtensionsTest
 
         // Act.
         serviceCollection.AddPublisherClient(builder => { });
+        var provider = serviceCollection.BuildServiceProvider();
+
+        // Assert.
+        // When TopicName isn't specified, it results in an InvalidOperationException.
+        Assert.Throws<InvalidOperationException>(provider.GetRequiredService<PublisherClient>);
+    }
+
+    [Fact]
+    public void AddPublisherClient_WithAction_WhichReturnsNullTopicName()
+    {
+        // Arrange.
+        IServiceCollection serviceCollection = new ServiceCollection();
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+
+        // Act.
+        serviceCollection.AddPublisherClient(builder => { builder.TopicNameResolver = _ => null; });
         var provider = serviceCollection.BuildServiceProvider();
 
         // Assert.
@@ -139,6 +174,25 @@ public class ServiceCollectionExtensionsTest
     }
 
     [Fact]
+    public void AddSubscriberClient_WithAction_WithSubscriptionNameResolver()
+    {
+        // Arrange.
+        SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription("projectId", "subscriptionId");
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+
+        // Act.
+        serviceCollection.AddSubscriberClient(builder => builder.SubscriptionNameResolver = _ => subscriptionName);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<SubscriberClient>();
+
+        // Assert.
+        Assert.NotNull(client);
+        Assert.Equal(subscriptionName, client.SubscriptionName);
+    }
+
+    [Fact]
     public void AddSubscriberClient_WithAction_NoSubscriptionName()
     {
         // Arrange.
@@ -147,6 +201,21 @@ public class ServiceCollectionExtensionsTest
 
         //Act.
         serviceCollection.AddSubscriberClient(builder => { });
+        var provider = serviceCollection.BuildServiceProvider();
+
+        // Assert.
+        Assert.Throws<InvalidOperationException>(provider.GetRequiredService<SubscriberClient>);
+    }
+
+    [Fact]
+    public void AddSubscriberClient_WithAction_WhichReturnsNullSubscriptionName()
+    {
+        // Arrange.
+        // When SubscriptionName isn't specified in the builder, it should result in an InvalidOperationException.
+        IServiceCollection serviceCollection = new ServiceCollection();
+
+        //Act.
+        serviceCollection.AddSubscriberClient(builder => { builder.SubscriptionNameResolver = _ => null; });
         var provider = serviceCollection.BuildServiceProvider();
 
         // Assert.
