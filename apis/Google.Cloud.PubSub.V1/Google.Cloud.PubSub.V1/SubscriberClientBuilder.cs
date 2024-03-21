@@ -1,4 +1,4 @@
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -41,6 +41,13 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
     {
         get; set;
     }
+
+    /// <summary>
+    /// The lambda that resolves the name of the subscription that the subscriber subscribes to.
+    /// Either this or <see cref="SubscriptionName"/> must be non-null by the time <see cref="Build"/> or <see cref="BuildAsync(CancellationToken)"/> is called.
+    /// This takes precedence, value returned always overwrites value in <see cref="SubscriptionName"/>.
+    /// </summary>
+    public Func<IServiceProvider, SubscriptionName> SubscriptionNameResolver { get; set; }
 
     private int? _clientCount;
 
@@ -146,6 +153,17 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
             return channel.ShutdownAsync();
         }
 
+    }
+
+    /// <inheritdoc />
+    protected override void Configure(IServiceProvider provider)
+    {
+        base.Configure(provider);
+
+        if (SubscriptionNameResolver is not null)
+        {
+            SubscriptionName = SubscriptionNameResolver.Invoke(provider);
+        }
     }
 
     /// <summary>

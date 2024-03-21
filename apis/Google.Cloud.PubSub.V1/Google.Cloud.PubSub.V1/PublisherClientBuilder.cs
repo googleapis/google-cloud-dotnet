@@ -1,4 +1,4 @@
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
@@ -41,6 +41,13 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
     {
         get; set;
     }
+
+    /// <summary>
+    /// The lambda that resolves name of the topic that the publisher publishes to.
+    /// Either this or <see cref="TopicName"/> must be non-null by the time <see cref="Build"/> or <see cref="BuildAsync(CancellationToken)"/> is called.
+    /// This takes precedence, value returned always overwrites value in <see cref="TopicName"/>.
+    /// </summary>
+    public Func<IServiceProvider, TopicName> TopicNameResolver { get; set; }
 
     private int? _clientCount;
 
@@ -145,6 +152,17 @@ public sealed class PublisherClientBuilder : ClientBuilderBase<PublisherClient>
             }
 
             return channel.ShutdownAsync();
+        }
+    }
+
+    /// <inheritdoc />
+    protected override void Configure(IServiceProvider provider)
+    {
+        base.Configure(provider);
+
+        if (TopicNameResolver is not null)
+        {
+            TopicName = TopicNameResolver.Invoke(provider);
         }
     }
 
