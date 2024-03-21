@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.17.0, released 2024-03-21
+
+### New features
+
+- Added text sections to the submitted summary ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+- Added conformer model migration opt out flag ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+
+### Documentation improvements
+
+- Clarified wording around END_OF_SINGLE_UTTERANCE ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+
 ## Version 4.16.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
