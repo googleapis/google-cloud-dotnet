@@ -67,7 +67,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "AhIMCghSRVNJWklORxADEgwKCERJU0FCTEVEEAQ6ZepBYgokYmlndGFibGVh",
             "ZG1pbi5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVj",
             "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9QggK",
-            "BmNvbmZpZyLoBgoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcY",
+            "BmNvbmZpZyLSCQoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcY",
             "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9y",
             "b3V0aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
             "djIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoW",
@@ -76,34 +76,42 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "RQoIcHJpb3JpdHkYByABKA4yLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
             "QXBwUHJvZmlsZS5Qcmlvcml0eUICGAFIARJUChJzdGFuZGFyZF9pc29sYXRp",
             "b24YCyABKAsyNi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmls",
-            "ZS5TdGFuZGFyZElzb2xhdGlvbkgBGjAKGU11bHRpQ2x1c3RlclJvdXRpbmdV",
-            "c2VBbnkSEwoLY2x1c3Rlcl9pZHMYASADKAkaTgoUU2luZ2xlQ2x1c3RlclJv",
-            "dXRpbmcSEgoKY2x1c3Rlcl9pZBgBIAEoCRIiChphbGxvd190cmFuc2FjdGlv",
-            "bmFsX3dyaXRlcxgCIAEoCBpUChFTdGFuZGFyZElzb2xhdGlvbhI/Cghwcmlv",
-            "cml0eRgBIAEoDjItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9m",
-            "aWxlLlByaW9yaXR5Il4KCFByaW9yaXR5EhgKFFBSSU9SSVRZX1VOU1BFQ0lG",
-            "SUVEEAASEAoMUFJJT1JJVFlfTE9XEAESEwoPUFJJT1JJVFlfTUVESVVNEAIS",
-            "EQoNUFJJT1JJVFlfSElHSBADOm/qQWwKJ2JpZ3RhYmxlYWRtaW4uZ29vZ2xl",
-            "YXBpcy5jb20vQXBwUHJvZmlsZRJBcHJvamVjdHMve3Byb2plY3R9L2luc3Rh",
-            "bmNlcy97aW5zdGFuY2V9L2FwcFByb2ZpbGVzL3thcHBfcHJvZmlsZX1CEAoO",
-            "cm91dGluZ19wb2xpY3lCCwoJaXNvbGF0aW9uIogDCglIb3RUYWJsZXQSDAoE",
-            "bmFtZRgBIAEoCRI7Cgp0YWJsZV9uYW1lGAIgASgJQif6QSQKImJpZ3RhYmxl",
-            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vVGFibGUSMwoKc3RhcnRfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGlt",
-            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCglz",
-            "dGFydF9rZXkYBSABKAkSDwoHZW5kX2tleRgGIAEoCRIjChZub2RlX2NwdV91",
-            "c2FnZV9wZXJjZW50GAcgASgCQgPgQQM6f+pBfAomYmlndGFibGVhZG1pbi5n",
-            "b29nbGVhcGlzLmNvbS9Ib3RUYWJsZXQSUnByb2plY3RzL3twcm9qZWN0fS9p",
-            "bnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vaG90VGFi",
-            "bGV0cy97aG90X3RhYmxldH1C0AIKHGNvbS5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjJCDUluc3RhbmNlUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS9hZG1pbi92MjthZG1pbqoCHkdv",
-            "b2dsZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxC",
-            "aWd0YWJsZVxBZG1pblxWMuoCIkdvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpB",
-            "ZG1pbjo6VjLqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
-            "eRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tl",
-            "eVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnBy",
-            "b3RvMw=="));
+            "ZS5TdGFuZGFyZElzb2xhdGlvbkgBEmkKHmRhdGFfYm9vc3RfaXNvbGF0aW9u",
+            "X3JlYWRfb25seRgKIAEoCzI/Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5B",
+            "cHBQcm9maWxlLkRhdGFCb29zdElzb2xhdGlvblJlYWRPbmx5SAEaMAoZTXVs",
+            "dGlDbHVzdGVyUm91dGluZ1VzZUFueRITCgtjbHVzdGVyX2lkcxgBIAMoCRpO",
+            "ChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEgASgJEiIK",
+            "GmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIGlQKEVN0YW5kYXJk",
+            "SXNvbGF0aW9uEj8KCHByaW9yaXR5GAEgASgOMi0uZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLkFwcFByb2ZpbGUuUHJpb3JpdHka/AEKGkRhdGFCb29zdElz",
+            "b2xhdGlvblJlYWRPbmx5EncKFWNvbXB1dGVfYmlsbGluZ19vd25lchgBIAEo",
+            "DjJTLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLkRhdGFC",
+            "b29zdElzb2xhdGlvblJlYWRPbmx5LkNvbXB1dGVCaWxsaW5nT3duZXJIAIgB",
+            "ASJLChNDb21wdXRlQmlsbGluZ093bmVyEiUKIUNPTVBVVEVfQklMTElOR19P",
+            "V05FUl9VTlNQRUNJRklFRBAAEg0KCUhPU1RfUEFZUxABQhgKFl9jb21wdXRl",
+            "X2JpbGxpbmdfb3duZXIiXgoIUHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5TUEVD",
+            "SUZJRUQQABIQCgxQUklPUklUWV9MT1cQARITCg9QUklPUklUWV9NRURJVU0Q",
+            "AhIRCg1QUklPUklUWV9ISUdIEAM6b+pBbAonYmlndGFibGVhZG1pbi5nb29n",
+            "bGVhcGlzLmNvbS9BcHBQcm9maWxlEkFwcm9qZWN0cy97cHJvamVjdH0vaW5z",
+            "dGFuY2VzL3tpbnN0YW5jZX0vYXBwUHJvZmlsZXMve2FwcF9wcm9maWxlfUIQ",
+            "Cg5yb3V0aW5nX3BvbGljeUILCglpc29sYXRpb24iiAMKCUhvdFRhYmxldBIM",
+            "CgRuYW1lGAEgASgJEjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoiYmlndGFi",
+            "bGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEK",
+            "CXN0YXJ0X2tleRgFIAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5vZGVfY3B1",
+            "X3VzYWdlX3BlcmNlbnQYByABKAJCA+BBAzp/6kF8CiZiaWd0YWJsZWFkbWlu",
+            "Lmdvb2dsZWFwaXMuY29tL0hvdFRhYmxldBJScHJvamVjdHMve3Byb2plY3R9",
+            "L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9ob3RU",
+            "YWJsZXRzL3tob3RfdGFibGV0fULQAgocY29tLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIe",
+            "R29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3Vk",
+            "XEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
+            "OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "a2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,9 +121,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting", "Priority", "StandardIsolation" }, new[]{ "RoutingPolicy", "Isolation" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting", "Priority", "StandardIsolation", "DataBoostIsolationReadOnly" }, new[]{ "RoutingPolicy", "Isolation" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Parser, new[]{ "ComputeBillingOwner" }, new[]{ "ComputeBillingOwner" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null)
           }));
     }
@@ -2383,6 +2392,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         case IsolationOneofCase.StandardIsolation:
           StandardIsolation = other.StandardIsolation.Clone();
           break;
+        case IsolationOneofCase.DataBoostIsolationReadOnly:
+          DataBoostIsolationReadOnly = other.DataBoostIsolationReadOnly.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2528,6 +2540,22 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "data_boost_isolation_read_only" field.</summary>
+    public const int DataBoostIsolationReadOnlyFieldNumber = 10;
+    /// <summary>
+    /// Specifies that this app profile is intended for read-only usage via the
+    /// Data Boost feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly DataBoostIsolationReadOnly {
+      get { return isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly) isolation_ : null; }
+      set {
+        isolation_ = value;
+        isolationCase_ = value == null ? IsolationOneofCase.None : IsolationOneofCase.DataBoostIsolationReadOnly;
+      }
+    }
+
     private object routingPolicy_;
     /// <summary>Enum of possible cases for the "routing_policy" oneof.</summary>
     public enum RoutingPolicyOneofCase {
@@ -2555,6 +2583,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       None = 0,
       Priority = 7,
       StandardIsolation = 11,
+      DataBoostIsolationReadOnly = 10,
     }
     private IsolationOneofCase isolationCase_ = IsolationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2592,6 +2621,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (!object.Equals(SingleClusterRouting, other.SingleClusterRouting)) return false;
       if (Priority != other.Priority) return false;
       if (!object.Equals(StandardIsolation, other.StandardIsolation)) return false;
+      if (!object.Equals(DataBoostIsolationReadOnly, other.DataBoostIsolationReadOnly)) return false;
       if (RoutingPolicyCase != other.RoutingPolicyCase) return false;
       if (IsolationCase != other.IsolationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2608,6 +2638,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) hash ^= SingleClusterRouting.GetHashCode();
       if (HasPriority) hash ^= Priority.GetHashCode();
       if (isolationCase_ == IsolationOneofCase.StandardIsolation) hash ^= StandardIsolation.GetHashCode();
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) hash ^= DataBoostIsolationReadOnly.GetHashCode();
       hash ^= (int) routingPolicyCase_;
       hash ^= (int) isolationCase_;
       if (_unknownFields != null) {
@@ -2652,6 +2683,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Priority);
       }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DataBoostIsolationReadOnly);
+      }
       if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
         output.WriteRawTag(90);
         output.WriteMessage(StandardIsolation);
@@ -2690,6 +2725,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Priority);
       }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DataBoostIsolationReadOnly);
+      }
       if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
         output.WriteRawTag(90);
         output.WriteMessage(StandardIsolation);
@@ -2724,6 +2763,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StandardIsolation);
+      }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataBoostIsolationReadOnly);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2770,6 +2812,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             StandardIsolation = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
           }
           StandardIsolation.MergeFrom(other.StandardIsolation);
+          break;
+        case IsolationOneofCase.DataBoostIsolationReadOnly:
+          if (DataBoostIsolationReadOnly == null) {
+            DataBoostIsolationReadOnly = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+          }
+          DataBoostIsolationReadOnly.MergeFrom(other.DataBoostIsolationReadOnly);
           break;
       }
 
@@ -2821,6 +2869,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           case 56: {
             isolation_ = input.ReadEnum();
             isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+            if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+              subBuilder.MergeFrom(DataBoostIsolationReadOnly);
+            }
+            input.ReadMessage(subBuilder);
+            DataBoostIsolationReadOnly = subBuilder;
             break;
           }
           case 90: {
@@ -2880,6 +2937,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           case 56: {
             isolation_ = input.ReadEnum();
             isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+            if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+              subBuilder.MergeFrom(DataBoostIsolationReadOnly);
+            }
+            input.ReadMessage(subBuilder);
+            DataBoostIsolationReadOnly = subBuilder;
             break;
           }
           case 90: {
@@ -3540,6 +3606,255 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Data Boost is a serverless compute capability that lets you run
+      /// high-throughput read jobs on your Bigtable data, without impacting the
+      /// performance of the clusters that handle your application traffic.
+      /// Currently, Data Boost exclusively supports read-only use-cases with
+      /// single-cluster routing.
+      ///
+      /// Data Boost reads are only guaranteed to see the results of writes that
+      /// were written at least 30 minutes ago. This means newly written values may
+      /// not become visible for up to 30m, and also means that old values may
+      /// remain visible for up to 30m after being deleted or overwritten. To
+      /// mitigate the staleness of the data, users may either wait 30m, or use
+      /// CheckConsistency.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataBoostIsolationReadOnly : pb::IMessage<DataBoostIsolationReadOnly>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataBoostIsolationReadOnly> _parser = new pb::MessageParser<DataBoostIsolationReadOnly>(() => new DataBoostIsolationReadOnly());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataBoostIsolationReadOnly> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly(DataBoostIsolationReadOnly other) : this() {
+          _hasBits0 = other._hasBits0;
+          computeBillingOwner_ = other.computeBillingOwner_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly Clone() {
+          return new DataBoostIsolationReadOnly(this);
+        }
+
+        /// <summary>Field number for the "compute_billing_owner" field.</summary>
+        public const int ComputeBillingOwnerFieldNumber = 1;
+        private readonly static global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner ComputeBillingOwnerDefaultValue = global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner.Unspecified;
+
+        private global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner computeBillingOwner_;
+        /// <summary>
+        /// The Compute Billing Owner for this Data Boost App Profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner ComputeBillingOwner {
+          get { if ((_hasBits0 & 1) != 0) { return computeBillingOwner_; } else { return ComputeBillingOwnerDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            computeBillingOwner_ = value;
+          }
+        }
+        /// <summary>Gets whether the "compute_billing_owner" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasComputeBillingOwner {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "compute_billing_owner" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearComputeBillingOwner() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataBoostIsolationReadOnly);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataBoostIsolationReadOnly other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ComputeBillingOwner != other.ComputeBillingOwner) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasComputeBillingOwner) hash ^= ComputeBillingOwner.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasComputeBillingOwner) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasComputeBillingOwner) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasComputeBillingOwner) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataBoostIsolationReadOnly other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasComputeBillingOwner) {
+            ComputeBillingOwner = other.ComputeBillingOwner;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ComputeBillingOwner = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ComputeBillingOwner = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DataBoostIsolationReadOnly message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Compute Billing Owner specifies how usage should be accounted when using
+          /// Data Boost. Compute Billing Owner also configures which Cloud Project is
+          /// charged for relevant quota.
+          /// </summary>
+          public enum ComputeBillingOwner {
+            /// <summary>
+            /// Unspecified value.
+            /// </summary>
+            [pbr::OriginalName("COMPUTE_BILLING_OWNER_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The host Cloud Project containing the targeted Bigtable Instance /
+            /// Table pays for compute.
+            /// </summary>
+            [pbr::OriginalName("HOST_PAYS")] HostPays = 1,
+          }
+
+        }
+        #endregion
 
       }
 

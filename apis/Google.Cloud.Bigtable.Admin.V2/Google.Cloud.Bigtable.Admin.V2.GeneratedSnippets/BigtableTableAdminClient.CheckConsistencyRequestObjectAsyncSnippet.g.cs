@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "",
+                StandardReadRemoteWrites = new StandardReadRemoteWrites(),
             };
             // Make the request
             CheckConsistencyResponse response = await bigtableTableAdminClient.CheckConsistencyAsync(request);
