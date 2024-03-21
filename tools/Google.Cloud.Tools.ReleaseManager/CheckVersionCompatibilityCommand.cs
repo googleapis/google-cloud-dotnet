@@ -48,28 +48,33 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var api in apisToCheck)
             {
-                Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
-                var prefix = api.Id + "-";
-
-                var taggedVersions = tags
-                    .Where(tag => tag.StartsWith(prefix))
-                    .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
-                    .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
-                    .Select(StructuredVersion.FromString)
-                    .OrderBy(v => v)
-                    .ToList();
-
-                var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
-                foreach (var (oldVersion, requiredLevel) in comparisons)
-                {
-                    var actualLevel = CheckCompatibility(api, oldVersion);
-                    if (actualLevel < requiredLevel)
-                    {
-                        throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
-                    }
-                }
+                CheckCompatibilityWithPreviousRelease(tags, api);
             }
             return 0;
+        }
+
+        internal static void CheckCompatibilityWithPreviousRelease(HashSet<string> allRepoTags, ApiMetadata api)
+        {
+            Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
+            var prefix = api.Id + "-";
+
+            var taggedVersions = allRepoTags
+                .Where(tag => tag.StartsWith(prefix))
+                .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
+                .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
+                .Select(StructuredVersion.FromString)
+                .OrderBy(v => v)
+                .ToList();
+
+            var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
+            foreach (var (oldVersion, requiredLevel) in comparisons)
+            {
+                var actualLevel = CheckCompatibility(api, oldVersion);
+                if (actualLevel < requiredLevel)
+                {
+                    throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
+                }
+            }
         }
 
         // Visible for testing
