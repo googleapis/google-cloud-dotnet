@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.9.0, released 2024-03-21
+
+### New features
+
+- Add new types ExplainOptions, ExplainMetrics, PlanSummary, ExecutionStats ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainOptions field to RunQueryRequest ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainMetrics field to RunQueryResponse ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainOptions field to RunAggregationQueryRequest ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+- Add ExplainMetrics field to RunAggregationQueryResponse ([commit 6049921](https://github.com/googleapis/google-cloud-dotnet/commit/60499218b493f600c9920abd0bc9471191200d3c))
+
 ## Version 4.8.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
