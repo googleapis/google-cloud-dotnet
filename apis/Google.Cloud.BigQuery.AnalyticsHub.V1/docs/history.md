@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.3.0, released 2024-03-21
+
+### New features
+
+- Support selective sharing on data clean room Listings ([commit 6aa0d67](https://github.com/googleapis/google-cloud-dotnet/commit/6aa0d67da6e11bb3d621d4b9756b52b0c28a2588))
+- Support output fields on DcrExchangeConfig specifying selective sharing behavior on a data clean room ([commit 6aa0d67](https://github.com/googleapis/google-cloud-dotnet/commit/6aa0d67da6e11bb3d621d4b9756b52b0c28a2588))
+
 ## Version 1.2.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
