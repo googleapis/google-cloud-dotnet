@@ -1,5 +1,48 @@
 # Version history
 
+## Version 2.25.0, released 2024-03-21
+
+### New features
+
+- A new value `NVIDIA_H100_80GB` is added to enum `AcceleratorType` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new enum `HarmSeverity` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `probability_score` is added to message `.google.cloud.aiplatform.v1.SafetyRating` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `severity` is added to message `.google.cloud.aiplatform.v1.SafetyRating` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `severity_score` is added to message `.google.cloud.aiplatform.v1.SafetyRating` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new value `BLOCKLIST` is added to enum `FinishReason` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new value `PROHIBITED_CONTENT` is added to enum `FinishReason` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new value `SPII` is added to enum `FinishReason` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `grounding_metadata` is added to message `.google.cloud.aiplatform.v1.Candidate` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `Segment` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `GroundingAttribution` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `GroundingMetadata` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `display_name` is added to message `.google.cloud.aiplatform.v1.DatasetVersion` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `metadata` is added to message `.google.cloud.aiplatform.v1.DatasetVersion` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `project_number` is added to message `.google.cloud.aiplatform.v1.FeatureView` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `SyncSummary` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `sync_summary` is added to message `.google.cloud.aiplatform.v1.FeatureViewSync` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new value `NOT_EQUAL` is added to enum `Operator` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BaseModelSource` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `base_model_source` is added to message `.google.cloud.aiplatform.v1.Model` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `ModelGardenSource` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `GenieSource` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new method `BatchDeletePipelineJobs` is added to service `PipelineService` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new method `BatchCancelPipelineJobs` is added to service `PipelineService` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BatchCancelPipelineJobsOperationMetadata` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BatchDeletePipelineJobsRequest` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BatchDeletePipelineJobsResponse` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BatchCancelPipelineJobsRequest` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `BatchCancelPipelineJobsResponse` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `retrieval` is added to message `.google.cloud.aiplatform.v1.Tool` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new field `google_search_retrieval` is added to message `.google.cloud.aiplatform.v1.Tool` ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `Retrieval` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `VertexAISearch` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+- A new message `GoogleSearchRetrieval` is added ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+
+### Documentation improvements
+
+- Various documentation improvements ([commit 4c7dfcf](https://github.com/googleapis/google-cloud-dotnet/commit/4c7dfcf7d26b5e51f96fc650a70789ff128cbec2))
+
 ## Version 2.24.0, released 2024-02-27
 
 ### New features
