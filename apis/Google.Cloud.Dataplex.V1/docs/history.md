@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.14.0, released 2024-03-21
+
+### New features
+
+- Added Unified Metastore APIs and CRUD Metastore APIs ([commit 547bc55](https://github.com/googleapis/google-cloud-dotnet/commit/547bc5514bdda3379e506f5ea121edf55895800a))
+
 ## Version 2.13.0, released 2024-03-13
 
 No API surface changes; just dependency updates.
