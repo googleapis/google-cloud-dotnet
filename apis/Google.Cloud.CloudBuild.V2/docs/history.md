@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2024-03-21
+
+### New features
+
+- Add Bitbucket Data Center Config and Bitbucket Cloud config for Cloud Build Repositories ([commit b83a2e4](https://github.com/googleapis/google-cloud-dotnet/commit/b83a2e49ffbd146d681d93349bab8b50d03fd40f))
+
 ## Version 1.1.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
