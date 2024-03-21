@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.23.0, released 2024-03-21
+
+### New features
+
+- Add API to enable/disable secret manager csi component on GKE clusters ([commit caeb6be](https://github.com/googleapis/google-cloud-dotnet/commit/caeb6be38fa69608c26e48a91bc9e0884a21b4a6))
+- Add secondary boot disks field to NodePool API ([commit a48dfdc](https://github.com/googleapis/google-cloud-dotnet/commit/a48dfdcfbe195846f236a3f562551180ad708cd5))
+
 ## Version 3.22.0, released 2024-02-27
 
 ### New features
