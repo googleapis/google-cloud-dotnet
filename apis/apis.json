@@ -783,7 +783,8 @@
       "protoPath": "google/cloud/bigquery/analyticshub/v1",
       "shortName": "analyticshub",
       "serviceConfigFile": "analyticshub_v1.yaml",
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
