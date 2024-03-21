@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.3.0, released 2024-03-21
+
+### New features
+
+- Infrastructure Manager supports the deployment of infrastructure from Terraform configurations in a private Git repository ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- Infrastructure Manager can validate and enforce quota limits, preventing infrastructure that exceeds quota limits from being deployed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- Infrastructure manager supports the following versions of Terraform when creating a deployment: Terraform version 1.2.3, 1.3.10, 1.4.7, 1.5.7 ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+
+### Documentation improvements
+
+- A comment for field `page_size` in message `.google.cloud.config.v1.ListDeploymentsRequest` is changed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- A comment for field `page_size` in message `.google.cloud.config.v1.ListRevisionsRequest` is changed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- A comment for field `page_size` in message `.google.cloud.config.v1.ListResourcesRequest` is changed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- A comment for field `service_account` in message `.google.cloud.config.v1.Preview` is changed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+- A comment for field `page_size` in message `.google.cloud.config.v1.ListPreviewsRequest` is changed ([commit 647e24d](https://github.com/googleapis/google-cloud-dotnet/commit/647e24d9395300fd1ed5d9d5fa7abf7ac507ea01))
+
 ## Version 1.2.0, released 2024-02-28
 
 No API surface changes; just dependency updates.
