@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2024-03-21
+
+### Bug fixes
+
+- Deprecate unimplemented Zone fields and methods ([commit 448a115](https://github.com/googleapis/google-cloud-dotnet/commit/448a115588ae828f33c669df2321f9221e295bd9))
+
 ## Version 1.0.0, released 2024-03-12
 
 No API surface changes; just dependency updates and promotion to GA.
