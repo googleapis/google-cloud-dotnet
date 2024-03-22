@@ -165,7 +165,7 @@ public sealed class SubscriberClientBuilder : ClientBuilderBase<SubscriberClient
         var settingsToModify = ApiSettings?.Clone() ?? new SubscriberServiceApiSettings();
         var requestHeader = CallSettings.FromGoogleRequestParamsHeader("subscription", subscriptionName.ToString());
         settingsToModify.StreamingPullSettings = settingsToModify.StreamingPullSettings.MergedWith(requestHeader);
-        return settingsToModify;        
+        return settingsToModify;
     }
 
     /// <inheritdoc />

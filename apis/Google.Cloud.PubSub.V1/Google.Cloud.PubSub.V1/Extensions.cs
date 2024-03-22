@@ -64,7 +64,7 @@ namespace Google.Cloud.PubSub.V1
         internal static bool IsRpcCancellation(this Exception e) => e.As<RpcException>()?.Status.StatusCode == StatusCode.Cancelled;
 
         internal static IEnumerable<Exception> AllExceptions(this Exception e) =>
-            (IEnumerable<Exception>)(e as AggregateException)?.Flatten().InnerExceptions ?? new[] { e };
+            (IEnumerable<Exception>) (e as AggregateException)?.Flatten().InnerExceptions ?? new[] { e };
 
         internal static Exception FlattenIfPossible(this Exception e)
         {

@@ -69,7 +69,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
         _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
         _useLegacyFlowControl = settings.UseLegacyFlowControl;
-        _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
+        _maxAckExtendQueue = (int) Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
         Logger = settings.Logger;
     }

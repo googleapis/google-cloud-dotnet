@@ -75,7 +75,7 @@ namespace Google.Cloud.PubSub.V1
             }
             // We don't set the EmulatorDetection property here to avoid recursively calling
             // MaybeCreateEmulatorClientBuilder().
-            var builder =  new PublisherServiceApiClientBuilder
+            var builder = new PublisherServiceApiClientBuilder
             {
                 Settings = Settings,
                 Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
