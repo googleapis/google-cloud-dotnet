@@ -2675,10 +2675,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
+                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
@@ -2712,10 +2712,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
         /// </returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(gagr::ProjectName project, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
+                ProjectAsProjectName = gax::GaxPreconditions.CheckNotNull(project, nameof(project)),
                 HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,

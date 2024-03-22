@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_SearchRelatedAccountGroupMemberships_sync]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.RecaptchaEnterprise.V1;
     using System;
 
@@ -38,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AccountId = "",
             };
             // Make the request

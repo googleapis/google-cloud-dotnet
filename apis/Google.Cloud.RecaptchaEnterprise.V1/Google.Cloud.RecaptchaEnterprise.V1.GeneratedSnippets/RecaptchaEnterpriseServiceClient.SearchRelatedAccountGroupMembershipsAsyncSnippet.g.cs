@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612
