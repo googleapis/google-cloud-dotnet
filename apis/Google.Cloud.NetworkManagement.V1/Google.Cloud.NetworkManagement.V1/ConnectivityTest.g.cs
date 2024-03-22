@@ -911,9 +911,6 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private string ipAddress_ = "";
     /// <summary>
     /// The IP address of the endpoint, which can be an external or internal IP.
-    /// An IPv6 address is only allowed when the test's destination is a
-    /// [global load balancer
-    /// VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
