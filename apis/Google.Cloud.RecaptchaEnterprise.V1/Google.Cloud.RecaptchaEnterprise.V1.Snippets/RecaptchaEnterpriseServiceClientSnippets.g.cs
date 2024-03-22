@@ -2324,7 +2324,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AccountId = "",
             };
             // Make the request
@@ -2373,7 +2373,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AccountId = "",
             };
             // Make the request
@@ -2420,7 +2420,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612
@@ -2468,7 +2468,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612
@@ -2512,11 +2512,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for SearchRelatedAccountGroupMemberships</summary>
         public void SearchRelatedAccountGroupMembershipsResourceNames()
         {
-            // Snippet: SearchRelatedAccountGroupMemberships(RelatedAccountGroupName, ByteString, string, int?, CallSettings)
+            // Snippet: SearchRelatedAccountGroupMemberships(ProjectName, ByteString, string, int?, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612
@@ -2560,11 +2560,11 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for SearchRelatedAccountGroupMembershipsAsync</summary>
         public async Task SearchRelatedAccountGroupMembershipsResourceNamesAsync()
         {
-            // Snippet: SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName, ByteString, string, int?, CallSettings)
+            // Snippet: SearchRelatedAccountGroupMembershipsAsync(ProjectName, ByteString, string, int?, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612

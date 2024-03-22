@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START recaptchaenterprise_v1_generated_RecaptchaEnterpriseService_SearchRelatedAccountGroupMemberships_async_flattened_resourceNames]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.RecaptchaEnterprise.V1;
     using Google.Protobuf;
     using System;
@@ -39,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
 #pragma warning disable CS0612

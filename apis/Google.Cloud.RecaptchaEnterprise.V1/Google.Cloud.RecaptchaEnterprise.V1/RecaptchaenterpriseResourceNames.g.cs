@@ -1719,11 +1719,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     public partial class SearchRelatedAccountGroupMembershipsRequest
     {
         /// <summary>
-        /// <see cref="RelatedAccountGroupName"/>-typed view over the <see cref="Project"/> resource name property.
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
         /// </summary>
-        public RelatedAccountGroupName ProjectAsRelatedAccountGroupName
+        public gagr::ProjectName ProjectAsProjectName
         {
-            get => string.IsNullOrEmpty(Project) ? null : RelatedAccountGroupName.Parse(Project, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Project) ? null : gagr::ProjectName.Parse(Project, allowUnparsed: true);
             set => Project = value?.ToString() ?? "";
         }
     }
