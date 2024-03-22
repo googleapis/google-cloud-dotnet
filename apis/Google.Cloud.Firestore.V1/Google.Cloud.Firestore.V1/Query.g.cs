@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore.V1 {
             "Ch9nb29nbGUvZmlyZXN0b3JlL3YxL3F1ZXJ5LnByb3RvEhNnb29nbGUuZmly",
             "ZXN0b3JlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGiJn",
             "b29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvGh5nb29nbGUvcHJv",
-            "dG9idWYvd3JhcHBlcnMucHJvdG8ivg8KD1N0cnVjdHVyZWRRdWVyeRI/CgZz",
+            "dG9idWYvd3JhcHBlcnMucHJvdG8ilRMKD1N0cnVjdHVyZWRRdWVyeRI/CgZz",
             "ZWxlY3QYASABKAsyLy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRR",
             "dWVyeS5Qcm9qZWN0aW9uEkUKBGZyb20YAiADKAsyNy5nb29nbGUuZmlyZXN0",
             "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5Db2xsZWN0aW9uU2VsZWN0b3ISOgoF",
@@ -37,74 +37,85 @@ namespace Google.Cloud.Firestore.V1 {
             "CzIbLmdvb2dsZS5maXJlc3RvcmUudjEuQ3Vyc29yEisKBmVuZF9hdBgIIAEo",
             "CzIbLmdvb2dsZS5maXJlc3RvcmUudjEuQ3Vyc29yEg4KBm9mZnNldBgGIAEo",
             "BRIqCgVsaW1pdBgFIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVl",
-            "GkQKEkNvbGxlY3Rpb25TZWxlY3RvchIVCg1jb2xsZWN0aW9uX2lkGAIgASgJ",
-            "EhcKD2FsbF9kZXNjZW5kYW50cxgDIAEoCBr9AQoGRmlsdGVyElAKEGNvbXBv",
-            "c2l0ZV9maWx0ZXIYASABKAsyNC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVj",
-            "dHVyZWRRdWVyeS5Db21wb3NpdGVGaWx0ZXJIABJICgxmaWVsZF9maWx0ZXIY",
-            "AiABKAsyMC5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5G",
-            "aWVsZEZpbHRlckgAEkgKDHVuYXJ5X2ZpbHRlchgDIAEoCzIwLmdvb2dsZS5m",
-            "aXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LlVuYXJ5RmlsdGVySABCDQoL",
-            "ZmlsdGVyX3R5cGUa0QEKD0NvbXBvc2l0ZUZpbHRlchJJCgJvcBgBIAEoDjI9",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkNvbXBvc2l0",
-            "ZUZpbHRlci5PcGVyYXRvchI8CgdmaWx0ZXJzGAIgAygLMisuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmlsdGVyIjUKCE9wZXJhdG9y",
-            "EhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAhqY",
-            "AwoLRmllbGRGaWx0ZXISQgoFZmllbGQYASABKAsyMy5nb29nbGUuZmlyZXN0",
-            "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZRJFCgJvcBgC",
-            "IAEoDjI5Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZp",
-            "ZWxkRmlsdGVyLk9wZXJhdG9yEikKBXZhbHVlGAMgASgLMhouZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5WYWx1ZSLSAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5T",
-            "UEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFV",
-            "QUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFV",
-            "QUwQBBIJCgVFUVVBTBAFEg0KCU5PVF9FUVVBTBAGEhIKDkFSUkFZX0NPTlRB",
-            "SU5TEAcSBgoCSU4QCBIWChJBUlJBWV9DT05UQUlOU19BTlkQCRIKCgZOT1Rf",
-            "SU4QChqKAgoLVW5hcnlGaWx0ZXISRQoCb3AYASABKA4yOS5nb29nbGUuZmly",
-            "ZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5VbmFyeUZpbHRlci5PcGVyYXRv",
-            "chJECgVmaWVsZBgCIAEoCzIzLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
-            "dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlSAAiXgoIT3BlcmF0b3ISGAoUT1BF",
-            "UkFUT1JfVU5TUEVDSUZJRUQQABIKCgZJU19OQU4QAhILCgdJU19OVUxMEAMS",
-            "DgoKSVNfTk9UX05BThAEEg8KC0lTX05PVF9OVUxMEAVCDgoMb3BlcmFuZF90",
-            "eXBlGo4BCgVPcmRlchJCCgVmaWVsZBgBIAEoCzIzLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlEkEKCWRpcmVj",
-            "dGlvbhgCIAEoDjIuLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1",
-            "ZXJ5LkRpcmVjdGlvbhokCg5GaWVsZFJlZmVyZW5jZRISCgpmaWVsZF9wYXRo",
-            "GAIgASgJGlEKClByb2plY3Rpb24SQwoGZmllbGRzGAIgAygLMjMuZ29vZ2xl",
-            "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2Ui",
-            "RQoJRGlyZWN0aW9uEhkKFURJUkVDVElPTl9VTlNQRUNJRklFRBAAEg0KCUFT",
-            "Q0VORElORxABEg4KCkRFU0NFTkRJTkcQAiK4BQoaU3RydWN0dXJlZEFnZ3Jl",
-            "Z2F0aW9uUXVlcnkSQAoQc3RydWN0dXJlZF9xdWVyeRgBIAEoCzIkLmdvb2ds",
-            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5SAASVgoMYWdncmVnYXRp",
-            "b25zGAMgAygLMjsuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkQWdn",
-            "cmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlvbkID4EEBGvEDCgtBZ2dyZWdhdGlv",
-            "bhJSCgVjb3VudBgBIAEoCzJBLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
-            "dXJlZEFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQ291bnRIABJOCgNz",
-            "dW0YAiABKAsyPy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRBZ2dy",
-            "ZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9uLlN1bUgAEk4KA2F2ZxgDIAEoCzI/",
-            "Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVl",
-            "cnkuQWdncmVnYXRpb24uQXZnSAASEgoFYWxpYXMYByABKAlCA+BBARo4CgVD",
-            "b3VudBIvCgV1cF90bxgBIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZh",
-            "bHVlQgPgQQEaSQoDU3VtEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2UaSQoDQXZn",
+            "EksKDGZpbmRfbmVhcmVzdBgJIAEoCzIwLmdvb2dsZS5maXJlc3RvcmUudjEu",
+            "U3RydWN0dXJlZFF1ZXJ5LkZpbmROZWFyZXN0QgPgQQEaRAoSQ29sbGVjdGlv",
+            "blNlbGVjdG9yEhUKDWNvbGxlY3Rpb25faWQYAiABKAkSFwoPYWxsX2Rlc2Nl",
+            "bmRhbnRzGAMgASgIGv0BCgZGaWx0ZXISUAoQY29tcG9zaXRlX2ZpbHRlchgB",
+            "IAEoCzI0Lmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkNv",
+            "bXBvc2l0ZUZpbHRlckgAEkgKDGZpZWxkX2ZpbHRlchgCIAEoCzIwLmdvb2ds",
+            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkRmlsdGVySAAS",
+            "SAoMdW5hcnlfZmlsdGVyGAMgASgLMjAuZ29vZ2xlLmZpcmVzdG9yZS52MS5T",
+            "dHJ1Y3R1cmVkUXVlcnkuVW5hcnlGaWx0ZXJIAEINCgtmaWx0ZXJfdHlwZRrR",
+            "AQoPQ29tcG9zaXRlRmlsdGVyEkkKAm9wGAEgASgOMj0uZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuQ29tcG9zaXRlRmlsdGVyLk9wZXJh",
+            "dG9yEjwKB2ZpbHRlcnMYAiADKAsyKy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0",
+            "cnVjdHVyZWRRdWVyeS5GaWx0ZXIiNQoIT3BlcmF0b3ISGAoUT1BFUkFUT1Jf",
+            "VU5TUEVDSUZJRUQQABIHCgNBTkQQARIGCgJPUhACGpgDCgtGaWVsZEZpbHRl",
+            "chJCCgVmaWVsZBgBIAEoCzIzLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0",
+            "dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlEkUKAm9wGAIgASgOMjkuZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRGaWx0ZXIuT3Bl",
+            "cmF0b3ISKQoFdmFsdWUYAyABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZh",
+            "bHVlItIBCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEg0K",
+            "CUxFU1NfVEhBThABEhYKEkxFU1NfVEhBTl9PUl9FUVVBTBACEhAKDEdSRUFU",
+            "RVJfVEhBThADEhkKFUdSRUFURVJfVEhBTl9PUl9FUVVBTBAEEgkKBUVRVUFM",
+            "EAUSDQoJTk9UX0VRVUFMEAYSEgoOQVJSQVlfQ09OVEFJTlMQBxIGCgJJThAI",
+            "EhYKEkFSUkFZX0NPTlRBSU5TX0FOWRAJEgoKBk5PVF9JThAKGooCCgtVbmFy",
+            "eUZpbHRlchJFCgJvcBgBIAEoDjI5Lmdvb2dsZS5maXJlc3RvcmUudjEuU3Ry",
+            "dWN0dXJlZFF1ZXJ5LlVuYXJ5RmlsdGVyLk9wZXJhdG9yEkQKBWZpZWxkGAIg",
+            "ASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmll",
+            "bGRSZWZlcmVuY2VIACJeCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJ",
+            "RklFRBAAEgoKBklTX05BThACEgsKB0lTX05VTEwQAxIOCgpJU19OT1RfTkFO",
+            "EAQSDwoLSVNfTk9UX05VTEwQBUIOCgxvcGVyYW5kX3R5cGUajgEKBU9yZGVy",
             "EkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1",
-            "cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VCCgoIb3BlcmF0b3JCDAoKcXVlcnlf",
-            "dHlwZSJECgZDdXJzb3ISKgoGdmFsdWVzGAEgAygLMhouZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MS5WYWx1ZRIOCgZiZWZvcmUYAiABKAhCwgEKF2NvbS5nb29nbGUu",
-            "ZmlyZXN0b3JlLnYxQgpRdWVyeVByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBiogIE",
-            "R0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xv",
-            "dWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpW",
-            "MWIGcHJvdG8z"));
+            "cmVkUXVlcnkuRmllbGRSZWZlcmVuY2USQQoJZGlyZWN0aW9uGAIgASgOMi4u",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRGlyZWN0aW9u",
+            "GiQKDkZpZWxkUmVmZXJlbmNlEhIKCmZpZWxkX3BhdGgYAiABKAkaUQoKUHJv",
+            "amVjdGlvbhJDCgZmaWVsZHMYAiADKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYx",
+            "LlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZRqHAwoLRmluZE5lYXJl",
+            "c3QSTgoMdmVjdG9yX2ZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VCA+BBAhI1CgxxdWVy",
+            "eV92ZWN0b3IYAiABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVlQgPg",
+            "QQISXwoQZGlzdGFuY2VfbWVhc3VyZRgDIAEoDjJALmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpbmROZWFyZXN0LkRpc3RhbmNlTWVh",
+            "c3VyZUID4EECEi8KBWxpbWl0GAQgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
+            "dDMyVmFsdWVCA+BBAiJfCg9EaXN0YW5jZU1lYXN1cmUSIAocRElTVEFOQ0Vf",
+            "TUVBU1VSRV9VTlNQRUNJRklFRBAAEg0KCUVVQ0xJREVBThABEgoKBkNPU0lO",
+            "RRACEg8KC0RPVF9QUk9EVUNUEAMiRQoJRGlyZWN0aW9uEhkKFURJUkVDVElP",
+            "Tl9VTlNQRUNJRklFRBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQ",
+            "AiK4BQoaU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVlcnkSQAoQc3RydWN0dXJl",
+            "ZF9xdWVyeRgBIAEoCzIkLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJl",
+            "ZFF1ZXJ5SAASVgoMYWdncmVnYXRpb25zGAMgAygLMjsuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5TdHJ1Y3R1cmVkQWdncmVnYXRpb25RdWVyeS5BZ2dyZWdhdGlv",
+            "bkID4EEBGvEDCgtBZ2dyZWdhdGlvbhJSCgVjb3VudBgBIAEoCzJBLmdvb2ds",
+            "ZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZEFnZ3JlZ2F0aW9uUXVlcnkuQWdn",
+            "cmVnYXRpb24uQ291bnRIABJOCgNzdW0YAiABKAsyPy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlN0cnVjdHVyZWRBZ2dyZWdhdGlvblF1ZXJ5LkFnZ3JlZ2F0aW9u",
+            "LlN1bUgAEk4KA2F2ZxgDIAEoCzI/Lmdvb2dsZS5maXJlc3RvcmUudjEuU3Ry",
+            "dWN0dXJlZEFnZ3JlZ2F0aW9uUXVlcnkuQWdncmVnYXRpb24uQXZnSAASEgoF",
+            "YWxpYXMYByABKAlCA+BBARo4CgVDb3VudBIvCgV1cF90bxgBIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgPgQQEaSQoDU3VtEkIKBWZpZWxk",
+            "GAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnku",
+            "RmllbGRSZWZlcmVuY2UaSQoDQXZnEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xl",
+            "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VC",
+            "CgoIb3BlcmF0b3JCDAoKcXVlcnlfdHlwZSJECgZDdXJzb3ISKgoGdmFsdWVz",
+            "GAEgAygLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZRIOCgZiZWZvcmUY",
+            "AiABKAhCwgEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQgpRdWVyeVByb3Rv",
+            "UAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVz",
+            "dG9yZXBiO2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJl",
+            "c3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xl",
+            "OjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery), global::Google.Cloud.Firestore.V1.StructuredQuery.Parser, new[]{ "Select", "From", "Where", "OrderBy", "StartAt", "EndAt", "Offset", "Limit" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector.Parser, new[]{ "CollectionId", "AllDescendants" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery), global::Google.Cloud.Firestore.V1.StructuredQuery.Parser, new[]{ "Select", "From", "Where", "OrderBy", "StartAt", "EndAt", "Offset", "Limit", "FindNearest" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector.Parser, new[]{ "CollectionId", "AllDescendants" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter.Parser, new[]{ "CompositeFilter", "FieldFilter", "UnaryFilter" }, new[]{ "FilterType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Parser, new[]{ "VectorField", "QueryVector", "DistanceMeasure", "Limit" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Parser, new[]{ "StructuredQuery", "Aggregations" }, new[]{ "QueryType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Parser, new[]{ "Count", "Sum", "Avg", "Alias" }, new[]{ "Operator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Count.Parser, new[]{ "UpTo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Sum), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Sum.Parser, new[]{ "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Avg), global::Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types.Avg.Parser, new[]{ "Field" }, null, null, null, null)})}),
@@ -169,6 +180,7 @@ namespace Google.Cloud.Firestore.V1 {
       endAt_ = other.endAt_ != null ? other.endAt_.Clone() : null;
       offset_ = other.offset_;
       Limit = other.Limit;
+      findNearest_ = other.findNearest_ != null ? other.findNearest_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -372,6 +384,25 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
 
+    /// <summary>Field number for the "find_nearest" field.</summary>
+    public const int FindNearestFieldNumber = 9;
+    private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest findNearest_;
+    /// <summary>
+    /// Optional. A potential Nearest Neighbors Search.
+    ///
+    /// Applies after all other filters and ordering.
+    ///
+    /// Finds the closest vector embeddings to the given query vector.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest FindNearest {
+      get { return findNearest_; }
+      set {
+        findNearest_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -395,6 +426,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(EndAt, other.EndAt)) return false;
       if (Offset != other.Offset) return false;
       if (Limit != other.Limit) return false;
+      if (!object.Equals(FindNearest, other.FindNearest)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -410,6 +442,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (endAt_ != null) hash ^= EndAt.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
       if (limit_ != null) hash ^= Limit.GetHashCode();
+      if (findNearest_ != null) hash ^= FindNearest.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -453,6 +486,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(EndAt);
       }
+      if (findNearest_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FindNearest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -488,6 +525,10 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(EndAt);
       }
+      if (findNearest_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FindNearest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -517,6 +558,9 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (limit_ != null) {
         size += _single_limit_codec.CalculateSizeWithTag(Limit);
+      }
+      if (findNearest_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FindNearest);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -563,6 +607,12 @@ namespace Google.Cloud.Firestore.V1 {
         if (limit_ == null || other.Limit != 0) {
           Limit = other.Limit;
         }
+      }
+      if (other.findNearest_ != null) {
+        if (findNearest_ == null) {
+          FindNearest = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest();
+        }
+        FindNearest.MergeFrom(other.FindNearest);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -626,6 +676,13 @@ namespace Google.Cloud.Firestore.V1 {
             input.ReadMessage(EndAt);
             break;
           }
+          case 74: {
+            if (findNearest_ == null) {
+              FindNearest = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest();
+            }
+            input.ReadMessage(FindNearest);
+            break;
+          }
         }
       }
     #endif
@@ -686,6 +743,13 @@ namespace Google.Cloud.Firestore.V1 {
               EndAt = new global::Google.Cloud.Firestore.V1.Cursor();
             }
             input.ReadMessage(EndAt);
+            break;
+          }
+          case 74: {
+            if (findNearest_ == null) {
+              FindNearest = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest();
+            }
+            input.ReadMessage(FindNearest);
             break;
           }
         }
@@ -2910,6 +2974,391 @@ namespace Google.Cloud.Firestore.V1 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Nearest Neighbors search config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FindNearest : pb::IMessage<FindNearest>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FindNearest> _parser = new pb::MessageParser<FindNearest>(() => new FindNearest());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FindNearest> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FindNearest() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FindNearest(FindNearest other) : this() {
+          vectorField_ = other.vectorField_ != null ? other.vectorField_.Clone() : null;
+          queryVector_ = other.queryVector_ != null ? other.queryVector_.Clone() : null;
+          distanceMeasure_ = other.distanceMeasure_;
+          Limit = other.Limit;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FindNearest Clone() {
+          return new FindNearest(this);
+        }
+
+        /// <summary>Field number for the "vector_field" field.</summary>
+        public const int VectorFieldFieldNumber = 1;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference vectorField_;
+        /// <summary>
+        /// Required. An indexed vector field to search upon. Only documents which
+        /// contain vectors whose dimensionality match the query_vector can be
+        /// returned.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference VectorField {
+          get { return vectorField_; }
+          set {
+            vectorField_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "query_vector" field.</summary>
+        public const int QueryVectorFieldNumber = 2;
+        private global::Google.Cloud.Firestore.V1.Value queryVector_;
+        /// <summary>
+        /// Required. The query vector that we are searching on. Must be a vector of
+        /// no more than 2048 dimensions.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.V1.Value QueryVector {
+          get { return queryVector_; }
+          set {
+            queryVector_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "distance_measure" field.</summary>
+        public const int DistanceMeasureFieldNumber = 3;
+        private global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure distanceMeasure_ = global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified;
+        /// <summary>
+        /// Required. The Distance Measure to use, required.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure DistanceMeasure {
+          get { return distanceMeasure_; }
+          set {
+            distanceMeasure_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "limit" field.</summary>
+        public const int LimitFieldNumber = 4;
+        private static readonly pb::FieldCodec<int?> _single_limit_codec = pb::FieldCodec.ForStructWrapper<int>(34);
+        private int? limit_;
+        /// <summary>
+        /// Required. The number of nearest neighbors to return. Must be a positive
+        /// integer of no more than 1000.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int? Limit {
+          get { return limit_; }
+          set {
+            limit_ = value;
+          }
+        }
+
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FindNearest);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FindNearest other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(VectorField, other.VectorField)) return false;
+          if (!object.Equals(QueryVector, other.QueryVector)) return false;
+          if (DistanceMeasure != other.DistanceMeasure) return false;
+          if (Limit != other.Limit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (vectorField_ != null) hash ^= VectorField.GetHashCode();
+          if (queryVector_ != null) hash ^= QueryVector.GetHashCode();
+          if (DistanceMeasure != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified) hash ^= DistanceMeasure.GetHashCode();
+          if (limit_ != null) hash ^= Limit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (vectorField_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(VectorField);
+          }
+          if (queryVector_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(QueryVector);
+          }
+          if (DistanceMeasure != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) DistanceMeasure);
+          }
+          if (limit_ != null) {
+            _single_limit_codec.WriteTagAndValue(output, Limit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (vectorField_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(VectorField);
+          }
+          if (queryVector_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(QueryVector);
+          }
+          if (DistanceMeasure != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) DistanceMeasure);
+          }
+          if (limit_ != null) {
+            _single_limit_codec.WriteTagAndValue(ref output, Limit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (vectorField_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VectorField);
+          }
+          if (queryVector_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryVector);
+          }
+          if (DistanceMeasure != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DistanceMeasure);
+          }
+          if (limit_ != null) {
+            size += _single_limit_codec.CalculateSizeWithTag(Limit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FindNearest other) {
+          if (other == null) {
+            return;
+          }
+          if (other.vectorField_ != null) {
+            if (vectorField_ == null) {
+              VectorField = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+            }
+            VectorField.MergeFrom(other.VectorField);
+          }
+          if (other.queryVector_ != null) {
+            if (queryVector_ == null) {
+              QueryVector = new global::Google.Cloud.Firestore.V1.Value();
+            }
+            QueryVector.MergeFrom(other.QueryVector);
+          }
+          if (other.DistanceMeasure != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure.Unspecified) {
+            DistanceMeasure = other.DistanceMeasure;
+          }
+          if (other.limit_ != null) {
+            if (limit_ == null || other.Limit != 0) {
+              Limit = other.Limit;
+            }
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (vectorField_ == null) {
+                  VectorField = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+                }
+                input.ReadMessage(VectorField);
+                break;
+              }
+              case 18: {
+                if (queryVector_ == null) {
+                  QueryVector = new global::Google.Cloud.Firestore.V1.Value();
+                }
+                input.ReadMessage(QueryVector);
+                break;
+              }
+              case 24: {
+                DistanceMeasure = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                int? value = _single_limit_codec.Read(input);
+                if (limit_ == null || value != 0) {
+                  Limit = value;
+                }
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (vectorField_ == null) {
+                  VectorField = new global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference();
+                }
+                input.ReadMessage(VectorField);
+                break;
+              }
+              case 18: {
+                if (queryVector_ == null) {
+                  QueryVector = new global::Google.Cloud.Firestore.V1.Value();
+                }
+                input.ReadMessage(QueryVector);
+                break;
+              }
+              case 24: {
+                DistanceMeasure = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FindNearest.Types.DistanceMeasure) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                int? value = _single_limit_codec.Read(ref input);
+                if (limit_ == null || value != 0) {
+                  Limit = value;
+                }
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FindNearest message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The distance measure to use when comparing vectors.
+          /// </summary>
+          public enum DistanceMeasure {
+            /// <summary>
+            /// Should not be set.
+            /// </summary>
+            [pbr::OriginalName("DISTANCE_MEASURE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Measures the EUCLIDEAN distance between the vectors. See
+            /// [Euclidean](https://en.wikipedia.org/wiki/Euclidean_distance) to learn
+            /// more
+            /// </summary>
+            [pbr::OriginalName("EUCLIDEAN")] Euclidean = 1,
+            /// <summary>
+            /// Compares vectors based on the angle between them, which allows you to
+            /// measure similarity that isn't based on the vectors magnitude.
+            /// We recommend using DOT_PRODUCT with unit normalized vectors instead of
+            /// COSINE distance, which is mathematically equivalent with better
+            /// performance. See [Cosine
+            /// Similarity](https://en.wikipedia.org/wiki/Cosine_similarity) to learn
+            /// more.
+            /// </summary>
+            [pbr::OriginalName("COSINE")] Cosine = 2,
+            /// <summary>
+            /// Similar to cosine but is affected by the magnitude of the vectors. See
+            /// [Dot Product](https://en.wikipedia.org/wiki/Dot_product) to learn more.
+            /// </summary>
+            [pbr::OriginalName("DOT_PRODUCT")] DotProduct = 3,
+          }
+
+        }
+        #endregion
 
       }
 
