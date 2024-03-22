@@ -57,22 +57,22 @@ namespace Google.Cloud.PubSub.V1.Tasks
             return Task.FromResult(0);
         });
 
-        public virtual Task WhenAll(params Task[] tasks) => WhenAll((IEnumerable<Task>)tasks);
+        public virtual Task WhenAll(params Task[] tasks) => WhenAll((IEnumerable<Task>) tasks);
 
         public virtual async Task<T[]> WhenAll<T>(IEnumerable<Task<T>> tasks)
         {
-            await ConfigureAwait(WhenAll((IEnumerable<Task>)tasks));
+            await ConfigureAwait(WhenAll((IEnumerable<Task>) tasks));
             return tasks.Select(x => x.Result).ToArray();
         }
 
-        public virtual Task<T[]> WhenAll<T>(params Task<T>[] tasks) => WhenAll((IEnumerable<Task<T>>)tasks);
+        public virtual Task<T[]> WhenAll<T>(params Task<T>[] tasks) => WhenAll((IEnumerable<Task<T>>) tasks);
 
-        public virtual Task<Task> WhenAny(params Task[] tasks) => WhenAny((IEnumerable<Task>)tasks);
+        public virtual Task<Task> WhenAny(params Task[] tasks) => WhenAny((IEnumerable<Task>) tasks);
 
         public virtual async Task<Task<T>> WhenAny<T>(IEnumerable<Task<T>> tasks) =>
-            (Task<T>)(await ConfigureAwait(WhenAny((IEnumerable<Task>)tasks)));
+            (Task<T>) (await ConfigureAwait(WhenAny((IEnumerable<Task>) tasks)));
 
-        public virtual Task<Task<T>> WhenAny<T>(params Task<T>[] tasks) => WhenAny((IEnumerable<Task<T>>)tasks);
+        public virtual Task<Task<T>> WhenAny<T>(params Task<T>[] tasks) => WhenAny((IEnumerable<Task<T>>) tasks);
     }
 
     internal static class Extensions

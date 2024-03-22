@@ -34,6 +34,6 @@ namespace Google.Cloud.PubSub.V1
         /// have dead-letter queues enabled.</returns>
         public static int? GetDeliveryAttempt(this PubsubMessage msg) =>
             msg.Attributes.TryGetValue(SubscriberClientImpl.DeliveryAttemptAttrKey, out var valueStr) ?
-                int.TryParse(valueStr, NumberStyles.Integer, CultureInfo.InvariantCulture, out var valueInt) ? (int?)valueInt : null : null;
+                int.TryParse(valueStr, NumberStyles.Integer, CultureInfo.InvariantCulture, out var valueInt) ? (int?) valueInt : null : null;
     }
 }
