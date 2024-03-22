@@ -27,36 +27,44 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjVnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX29ubGluZV9z",
             "dG9yZS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6wYK",
+            "Y2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/wgK",
             "EkZlYXR1cmVPbmxpbmVTdG9yZRJLCghiaWd0YWJsZRgIIAEoCzI3Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVPbmxpbmVTdG9yZS5CaWd0",
-            "YWJsZUgAEhEKBG5hbWUYASABKAlCA+BBCBI0CgtjcmVhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIR",
-            "CgRldGFnGAUgASgJQgPgQQESTwoGbGFiZWxzGAYgAygLMjouZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZU9ubGluZVN0b3JlLkxhYmVsc0Vu",
-            "dHJ5QgPgQQESSAoFc3RhdGUYByABKA4yNC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5GZWF0dXJlT25saW5lU3RvcmUuU3RhdGVCA+BBAxrYAQoIQmln",
-            "dGFibGUSXgoMYXV0b19zY2FsaW5nGAEgASgLMkMuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuRmVhdHVyZU9ubGluZVN0b3JlLkJpZ3RhYmxlLkF1dG9T",
-            "Y2FsaW5nQgPgQQIabAoLQXV0b1NjYWxpbmcSGwoObWluX25vZGVfY291bnQY",
-            "ASABKAVCA+BBAhIbCg5tYXhfbm9kZV9jb3VudBgCIAEoBUID4EECEiMKFmNw",
-            "dV91dGlsaXphdGlvbl90YXJnZXQYAyABKAVCA+BBARotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0YXRlEhUK",
-            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBEQVRJTkcQ",
-            "AjqGAepBggEKLGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZU9u",
-            "bGluZVN0b3JlElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxpbmVfc3Rv",
-            "cmV9Qg4KDHN0b3JhZ2VfdHlwZULVAQoeY29tLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxQhdGZWF0dXJlT25saW5lU3RvcmVQcm90b1ABWj5jbG91ZC5n",
-            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2Fp",
-            "cGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
-            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
-            "YXRmb3JtOjpWMWIGcHJvdG8z"));
+            "YWJsZUgAEk0KCW9wdGltaXplZBgMIAEoCzI4Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZlYXR1cmVPbmxpbmVTdG9yZS5PcHRpbWl6ZWRIABIRCgRu",
+            "YW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgFIAEo",
+            "CUID4EEBEk8KBmxhYmVscxgGIAMoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkZlYXR1cmVPbmxpbmVTdG9yZS5MYWJlbHNFbnRyeUID4EEBEkgK",
+            "BXN0YXRlGAcgASgOMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVh",
+            "dHVyZU9ubGluZVN0b3JlLlN0YXRlQgPgQQMScAoaZGVkaWNhdGVkX3NlcnZp",
+            "bmdfZW5kcG9pbnQYCiABKAsyRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5GZWF0dXJlT25saW5lU3RvcmUuRGVkaWNhdGVkU2VydmluZ0VuZHBvaW50",
+            "QgPgQQEa2AEKCEJpZ3RhYmxlEl4KDGF1dG9fc2NhbGluZxgBIAEoCzJDLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVPbmxpbmVTdG9yZS5C",
+            "aWd0YWJsZS5BdXRvU2NhbGluZ0ID4EECGmwKC0F1dG9TY2FsaW5nEhsKDm1p",
+            "bl9ub2RlX2NvdW50GAEgASgFQgPgQQISGwoObWF4X25vZGVfY291bnQYAiAB",
+            "KAVCA+BBAhIjChZjcHVfdXRpbGl6YXRpb25fdGFyZ2V0GAMgASgFQgPgQQEa",
+            "CwoJT3B0aW1pemVkGkQKGERlZGljYXRlZFNlcnZpbmdFbmRwb2ludBIoChtw",
+            "dWJsaWNfZW5kcG9pbnRfZG9tYWluX25hbWUYAiABKAlCA+BBAxotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIjgKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGU1RBQkxFEAESDAoIVVBE",
+            "QVRJTkcQAjqGAepBggEKLGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVh",
+            "dHVyZU9ubGluZVN0b3JlElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxp",
+            "bmVfc3RvcmV9Qg4KDHN0b3JhZ2VfdHlwZULVAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxQhdGZWF0dXJlT25saW5lU3RvcmVQcm90b1ABWj5j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
+            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Parser, new[]{ "Bigtable", "Optimized", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "State", "DedicatedServingEndpoint" }, new[]{ "StorageType" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Parser, new[]{ "AutoScaling" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable.Types.AutoScaling.Parser, new[]{ "MinNodeCount", "MaxNodeCount", "CpuUtilizationTarget" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint), global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint.Parser, new[]{ "PublicEndpointDomainName" }, null, null, null, null),
             null, })
           }));
     }
@@ -110,9 +118,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       etag_ = other.etag_;
       labels_ = other.labels_.Clone();
       state_ = other.state_;
+      dedicatedServingEndpoint_ = other.dedicatedServingEndpoint_ != null ? other.dedicatedServingEndpoint_.Clone() : null;
       switch (other.StorageTypeCase) {
         case StorageTypeOneofCase.Bigtable:
           Bigtable = other.Bigtable.Clone();
+          break;
+        case StorageTypeOneofCase.Optimized:
+          Optimized = other.Optimized.Clone();
           break;
       }
 
@@ -139,6 +151,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         storageType_ = value;
         storageTypeCase_ = value == null ? StorageTypeOneofCase.None : StorageTypeOneofCase.Bigtable;
+      }
+    }
+
+    /// <summary>Field number for the "optimized" field.</summary>
+    public const int OptimizedFieldNumber = 12;
+    /// <summary>
+    /// Contains settings for the Optimized store that will be created
+    /// to serve featureValues for all FeatureViews under this
+    /// FeatureOnlineStore. When choose Optimized storage type, need to set
+    /// [PrivateServiceConnectConfig.enable_private_service_connect][google.cloud.aiplatform.v1.PrivateServiceConnectConfig.enable_private_service_connect]
+    /// to use private endpoint. Otherwise will use public endpoint by default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized Optimized {
+      get { return storageTypeCase_ == StorageTypeOneofCase.Optimized ? (global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized) storageType_ : null; }
+      set {
+        storageType_ = value;
+        storageTypeCase_ = value == null ? StorageTypeOneofCase.None : StorageTypeOneofCase.Optimized;
       }
     }
 
@@ -243,11 +274,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "dedicated_serving_endpoint" field.</summary>
+    public const int DedicatedServingEndpointFieldNumber = 10;
+    private global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint dedicatedServingEndpoint_;
+    /// <summary>
+    /// Optional. The dedicated serving endpoint for this FeatureOnlineStore, which
+    /// is different from common Vertex service endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint DedicatedServingEndpoint {
+      get { return dedicatedServingEndpoint_; }
+      set {
+        dedicatedServingEndpoint_ = value;
+      }
+    }
+
     private object storageType_;
     /// <summary>Enum of possible cases for the "storage_type" oneof.</summary>
     public enum StorageTypeOneofCase {
       None = 0,
       Bigtable = 8,
+      Optimized = 12,
     }
     private StorageTypeOneofCase storageTypeCase_ = StorageTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -279,12 +327,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (!object.Equals(Bigtable, other.Bigtable)) return false;
+      if (!object.Equals(Optimized, other.Optimized)) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (State != other.State) return false;
+      if (!object.Equals(DedicatedServingEndpoint, other.DedicatedServingEndpoint)) return false;
       if (StorageTypeCase != other.StorageTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -294,12 +344,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (storageTypeCase_ == StorageTypeOneofCase.Bigtable) hash ^= Bigtable.GetHashCode();
+      if (storageTypeCase_ == StorageTypeOneofCase.Optimized) hash ^= Optimized.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (State != global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (dedicatedServingEndpoint_ != null) hash ^= DedicatedServingEndpoint.GetHashCode();
       hash ^= (int) storageTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -344,6 +396,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Bigtable);
       }
+      if (dedicatedServingEndpoint_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DedicatedServingEndpoint);
+      }
+      if (storageTypeCase_ == StorageTypeOneofCase.Optimized) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Optimized);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -379,6 +439,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Bigtable);
       }
+      if (dedicatedServingEndpoint_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DedicatedServingEndpoint);
+      }
+      if (storageTypeCase_ == StorageTypeOneofCase.Optimized) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Optimized);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -391,6 +459,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       int size = 0;
       if (storageTypeCase_ == StorageTypeOneofCase.Bigtable) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Bigtable);
+      }
+      if (storageTypeCase_ == StorageTypeOneofCase.Optimized) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Optimized);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -407,6 +478,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (State != global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (dedicatedServingEndpoint_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DedicatedServingEndpoint);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -442,12 +516,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.State != global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.State.Unspecified) {
         State = other.State;
       }
+      if (other.dedicatedServingEndpoint_ != null) {
+        if (dedicatedServingEndpoint_ == null) {
+          DedicatedServingEndpoint = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint();
+        }
+        DedicatedServingEndpoint.MergeFrom(other.DedicatedServingEndpoint);
+      }
       switch (other.StorageTypeCase) {
         case StorageTypeOneofCase.Bigtable:
           if (Bigtable == null) {
             Bigtable = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Bigtable();
           }
           Bigtable.MergeFrom(other.Bigtable);
+          break;
+        case StorageTypeOneofCase.Optimized:
+          if (Optimized == null) {
+            Optimized = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized();
+          }
+          Optimized.MergeFrom(other.Optimized);
           break;
       }
 
@@ -505,6 +591,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             Bigtable = subBuilder;
             break;
           }
+          case 82: {
+            if (dedicatedServingEndpoint_ == null) {
+              DedicatedServingEndpoint = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint();
+            }
+            input.ReadMessage(DedicatedServingEndpoint);
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized();
+            if (storageTypeCase_ == StorageTypeOneofCase.Optimized) {
+              subBuilder.MergeFrom(Optimized);
+            }
+            input.ReadMessage(subBuilder);
+            Optimized = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -557,6 +659,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             Bigtable = subBuilder;
+            break;
+          }
+          case 82: {
+            if (dedicatedServingEndpoint_ == null) {
+              DedicatedServingEndpoint = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.DedicatedServingEndpoint();
+            }
+            input.ReadMessage(DedicatedServingEndpoint);
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Types.Optimized();
+            if (storageTypeCase_ == StorageTypeOneofCase.Optimized) {
+              subBuilder.MergeFrom(Optimized);
+            }
+            input.ReadMessage(subBuilder);
+            Optimized = subBuilder;
             break;
           }
         }
@@ -1079,6 +1197,361 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Optimized storage type
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Optimized : pb::IMessage<Optimized>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Optimized> _parser = new pb::MessageParser<Optimized>(() => new Optimized());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Optimized> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Optimized() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Optimized(Optimized other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Optimized Clone() {
+          return new Optimized(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Optimized);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Optimized other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Optimized other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The dedicated serving endpoint for this FeatureOnlineStore. Only need to
+      /// set when you choose Optimized storage type. Public endpoint is provisioned
+      /// by default.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DedicatedServingEndpoint : pb::IMessage<DedicatedServingEndpoint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DedicatedServingEndpoint> _parser = new pb::MessageParser<DedicatedServingEndpoint>(() => new DedicatedServingEndpoint());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DedicatedServingEndpoint> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureOnlineStore.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DedicatedServingEndpoint() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DedicatedServingEndpoint(DedicatedServingEndpoint other) : this() {
+          publicEndpointDomainName_ = other.publicEndpointDomainName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DedicatedServingEndpoint Clone() {
+          return new DedicatedServingEndpoint(this);
+        }
+
+        /// <summary>Field number for the "public_endpoint_domain_name" field.</summary>
+        public const int PublicEndpointDomainNameFieldNumber = 2;
+        private string publicEndpointDomainName_ = "";
+        /// <summary>
+        /// Output only. This field will be populated with the domain name to use for
+        /// this FeatureOnlineStore
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PublicEndpointDomainName {
+          get { return publicEndpointDomainName_; }
+          set {
+            publicEndpointDomainName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DedicatedServingEndpoint);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DedicatedServingEndpoint other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PublicEndpointDomainName != other.PublicEndpointDomainName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PublicEndpointDomainName.Length != 0) hash ^= PublicEndpointDomainName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PublicEndpointDomainName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PublicEndpointDomainName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PublicEndpointDomainName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PublicEndpointDomainName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PublicEndpointDomainName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PublicEndpointDomainName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DedicatedServingEndpoint other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PublicEndpointDomainName.Length != 0) {
+            PublicEndpointDomainName = other.PublicEndpointDomainName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                PublicEndpointDomainName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 18: {
+                PublicEndpointDomainName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
