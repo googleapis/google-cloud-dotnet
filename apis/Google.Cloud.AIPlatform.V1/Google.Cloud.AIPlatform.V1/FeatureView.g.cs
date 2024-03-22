@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX3ZpZXcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqoICgtGZWF0dXJl",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuQOCgtGZWF0dXJl",
             "VmlldxJXChBiaWdfcXVlcnlfc291cmNlGAYgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuQmlnUXVlcnlTb3VyY2VCA+BB",
             "AUgAEmUKF2ZlYXR1cmVfcmVnaXN0cnlfc291cmNlGAkgASgLMj0uZ29vZ2xl",
@@ -38,30 +38,50 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YW1wQgPgQQMSEQoEZXRhZxgEIAEoCUID4EEBEkgKBmxhYmVscxgFIAMoCzIz",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVWaWV3LkxhYmVs",
             "c0VudHJ5QgPgQQESRwoLc3luY19jb25maWcYByABKAsyMi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5TeW5jQ29uZmlnGkIKDkJp",
-            "Z1F1ZXJ5U291cmNlEhAKA3VyaRgBIAEoCUID4EECEh4KEWVudGl0eV9pZF9j",
-            "b2x1bW5zGAIgAygJQgPgQQIaGgoKU3luY0NvbmZpZxIMCgRjcm9uGAEgASgJ",
-            "Gv4BChVGZWF0dXJlUmVnaXN0cnlTb3VyY2USZwoOZmVhdHVyZV9ncm91cHMY",
-            "ASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmll",
-            "dy5GZWF0dXJlUmVnaXN0cnlTb3VyY2UuRmVhdHVyZUdyb3VwQgPgQQISIAoO",
-            "cHJvamVjdF9udW1iZXIYAiABKANCA+BBAUgAiAEBGkcKDEZlYXR1cmVHcm91",
-            "cBIdChBmZWF0dXJlX2dyb3VwX2lkGAEgASgJQgPgQQISGAoLZmVhdHVyZV9p",
-            "ZHMYAiADKAlCA+BBAkIRCg9fcHJvamVjdF9udW1iZXIaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqbAepBlwEKJWFp",
-            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZVZpZXcSbnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mZWF0dXJlT25saW5l",
-            "U3RvcmVzL3tmZWF0dXJlX29ubGluZV9zdG9yZX0vZmVhdHVyZVZpZXdzL3tm",
-            "ZWF0dXJlX3ZpZXd9QggKBnNvdXJjZULOAQoeY29tLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxQhBGZWF0dXJlVmlld1Byb3RvUAFaPmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0",
-            "Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVc",
-            "Q2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZv",
-            "cm06OlYxYgZwcm90bzM="));
+            "dWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5TeW5jQ29uZmlnEk4KDGlu",
+            "ZGV4X2NvbmZpZxgPIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnQgPgQQEaQgoOQmlnUXVlcnlTb3Vy",
+            "Y2USEAoDdXJpGAEgASgJQgPgQQISHgoRZW50aXR5X2lkX2NvbHVtbnMYAiAD",
+            "KAlCA+BBAhoaCgpTeW5jQ29uZmlnEgwKBGNyb24YASABKAka5wUKC0luZGV4",
+            "Q29uZmlnEl8KDnRyZWVfYWhfY29uZmlnGAYgASgLMkAuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuSW5kZXhDb25maWcuVHJlZUFI",
+            "Q29uZmlnQgPgQQFIABJnChJicnV0ZV9mb3JjZV9jb25maWcYByABKAsyRC5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmlldy5JbmRleENv",
+            "bmZpZy5CcnV0ZUZvcmNlQ29uZmlnQgPgQQFIABIdChBlbWJlZGRpbmdfY29s",
+            "dW1uGAEgASgJQgPgQQESGwoOZmlsdGVyX2NvbHVtbnMYAiADKAlCA+BBARIc",
+            "Cg9jcm93ZGluZ19jb2x1bW4YAyABKAlCA+BBARIlChNlbWJlZGRpbmdfZGlt",
+            "ZW5zaW9uGAQgASgFQgPgQQFIAYgBARJrChVkaXN0YW5jZV9tZWFzdXJlX3R5",
+            "cGUYBSABKA4yRy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJl",
+            "Vmlldy5JbmRleENvbmZpZy5EaXN0YW5jZU1lYXN1cmVUeXBlQgPgQQEaEgoQ",
+            "QnJ1dGVGb3JjZUNvbmZpZxpZCgxUcmVlQUhDb25maWcSKwoZbGVhZl9ub2Rl",
+            "X2VtYmVkZGluZ19jb3VudBgBIAEoA0ID4EEBSACIAQFCHAoaX2xlYWZfbm9k",
+            "ZV9lbWJlZGRpbmdfY291bnQihAEKE0Rpc3RhbmNlTWVhc3VyZVR5cGUSJQoh",
+            "RElTVEFOQ0VfTUVBU1VSRV9UWVBFX1VOU1BFQ0lGSUVEEAASFwoTU1FVQVJF",
+            "RF9MMl9ESVNUQU5DRRABEhMKD0NPU0lORV9ESVNUQU5DRRACEhgKFERPVF9Q",
+            "Uk9EVUNUX0RJU1RBTkNFEANCEgoQYWxnb3JpdGhtX2NvbmZpZ0IWChRfZW1i",
+            "ZWRkaW5nX2RpbWVuc2lvbhr+AQoVRmVhdHVyZVJlZ2lzdHJ5U291cmNlEmcK",
+            "DmZlYXR1cmVfZ3JvdXBzGAEgAygLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuRmVhdHVyZVZpZXcuRmVhdHVyZVJlZ2lzdHJ5U291cmNlLkZlYXR1",
+            "cmVHcm91cEID4EECEiAKDnByb2plY3RfbnVtYmVyGAIgASgDQgPgQQFIAIgB",
+            "ARpHCgxGZWF0dXJlR3JvdXASHQoQZmVhdHVyZV9ncm91cF9pZBgBIAEoCUID",
+            "4EECEhgKC2ZlYXR1cmVfaWRzGAIgAygJQgPgQQJCEQoPX3Byb2plY3RfbnVt",
+            "YmVyGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6mwHqQZcBCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1",
+            "cmVWaWV3Em5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxpbmVfc3RvcmV9",
+            "L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92aWV3fUIICgZzb3VyY2VCzgEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIQRmVhdHVyZVZpZXdQcm90",
+            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlw",
+            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
+            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig.Parser, new[]{ "Cron" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Parser, new[]{ "TreeAhConfig", "BruteForceConfig", "EmbeddingColumn", "FilterColumns", "CrowdingColumn", "EmbeddingDimension", "DistanceMeasureType" }, new[]{ "AlgorithmConfig", "EmbeddingDimension" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig.Parser, new[]{ "LeafNodeEmbeddingCount" }, new[]{ "LeafNodeEmbeddingCount" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Parser, new[]{ "FeatureGroups", "ProjectNumber" }, new[]{ "ProjectNumber" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup.Parser, new[]{ "FeatureGroupId", "FeatureIds" }, null, null, null, null)}),
             null, })
           }));
@@ -115,6 +135,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       etag_ = other.etag_;
       labels_ = other.labels_.Clone();
       syncConfig_ = other.syncConfig_ != null ? other.syncConfig_.Clone() : null;
+      indexConfig_ = other.indexConfig_ != null ? other.indexConfig_.Clone() : null;
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
           BigQuerySource = other.BigQuerySource.Clone();
@@ -268,6 +289,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "index_config" field.</summary>
+    public const int IndexConfigFieldNumber = 15;
+    private global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig indexConfig_;
+    /// <summary>
+    /// Optional. Configuration for index preparation for vector search. It
+    /// contains the required configurations to create an index from source data,
+    /// so that approximate nearest neighbor (a.k.a ANN) algorithms search can be
+    /// performed during online serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig IndexConfig {
+      get { return indexConfig_; }
+      set {
+        indexConfig_ = value;
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -312,6 +351,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(SyncConfig, other.SyncConfig)) return false;
+      if (!object.Equals(IndexConfig, other.IndexConfig)) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -328,6 +368,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (syncConfig_ != null) hash ^= SyncConfig.GetHashCode();
+      if (indexConfig_ != null) hash ^= IndexConfig.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -376,6 +417,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(FeatureRegistrySource);
       }
+      if (indexConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(IndexConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -415,6 +460,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(FeatureRegistrySource);
       }
+      if (indexConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(IndexConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -446,6 +495,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (syncConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SyncConfig);
+      }
+      if (indexConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -483,6 +535,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           SyncConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig();
         }
         SyncConfig.MergeFrom(other.SyncConfig);
+      }
+      if (other.indexConfig_ != null) {
+        if (indexConfig_ == null) {
+          IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
+        }
+        IndexConfig.MergeFrom(other.IndexConfig);
       }
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
@@ -565,6 +623,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             FeatureRegistrySource = subBuilder;
             break;
           }
+          case 122: {
+            if (indexConfig_ == null) {
+              IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
+            }
+            input.ReadMessage(IndexConfig);
+            break;
+          }
         }
       }
     #endif
@@ -629,6 +694,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             FeatureRegistrySource = subBuilder;
+            break;
+          }
+          case 122: {
+            if (indexConfig_ == null) {
+              IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
+            }
+            input.ReadMessage(IndexConfig);
             break;
           }
         }
@@ -1066,6 +1138,929 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// Configuration for vector indexing.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IndexConfig : pb::IMessage<IndexConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IndexConfig> _parser = new pb::MessageParser<IndexConfig>(() => new IndexConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IndexConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexConfig(IndexConfig other) : this() {
+          _hasBits0 = other._hasBits0;
+          embeddingColumn_ = other.embeddingColumn_;
+          filterColumns_ = other.filterColumns_.Clone();
+          crowdingColumn_ = other.crowdingColumn_;
+          embeddingDimension_ = other.embeddingDimension_;
+          distanceMeasureType_ = other.distanceMeasureType_;
+          switch (other.AlgorithmConfigCase) {
+            case AlgorithmConfigOneofCase.TreeAhConfig:
+              TreeAhConfig = other.TreeAhConfig.Clone();
+              break;
+            case AlgorithmConfigOneofCase.BruteForceConfig:
+              BruteForceConfig = other.BruteForceConfig.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexConfig Clone() {
+          return new IndexConfig(this);
+        }
+
+        /// <summary>Field number for the "tree_ah_config" field.</summary>
+        public const int TreeAhConfigFieldNumber = 6;
+        /// <summary>
+        /// Optional. Configuration options for the tree-AH algorithm (Shallow tree
+        /// + Asymmetric Hashing). Please refer to this paper for more details:
+        /// https://arxiv.org/abs/1908.10396
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig TreeAhConfig {
+          get { return algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig ? (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig) algorithmConfig_ : null; }
+          set {
+            algorithmConfig_ = value;
+            algorithmConfigCase_ = value == null ? AlgorithmConfigOneofCase.None : AlgorithmConfigOneofCase.TreeAhConfig;
+          }
+        }
+
+        /// <summary>Field number for the "brute_force_config" field.</summary>
+        public const int BruteForceConfigFieldNumber = 7;
+        /// <summary>
+        /// Optional. Configuration options for using brute force search, which
+        /// simply implements the standard linear search in the database for each
+        /// query. It is primarily meant for benchmarking and to generate the
+        /// ground truth for approximate search.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig BruteForceConfig {
+          get { return algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig ? (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig) algorithmConfig_ : null; }
+          set {
+            algorithmConfig_ = value;
+            algorithmConfigCase_ = value == null ? AlgorithmConfigOneofCase.None : AlgorithmConfigOneofCase.BruteForceConfig;
+          }
+        }
+
+        /// <summary>Field number for the "embedding_column" field.</summary>
+        public const int EmbeddingColumnFieldNumber = 1;
+        private string embeddingColumn_ = "";
+        /// <summary>
+        /// Optional. Column of embedding. This column contains the source data to
+        /// create index for vector search. embedding_column must be set when using
+        /// vector search.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EmbeddingColumn {
+          get { return embeddingColumn_; }
+          set {
+            embeddingColumn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "filter_columns" field.</summary>
+        public const int FilterColumnsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_filterColumns_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> filterColumns_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Columns of features that're used to filter vector search
+        /// results.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> FilterColumns {
+          get { return filterColumns_; }
+        }
+
+        /// <summary>Field number for the "crowding_column" field.</summary>
+        public const int CrowdingColumnFieldNumber = 3;
+        private string crowdingColumn_ = "";
+        /// <summary>
+        /// Optional. Column of crowding. This column contains crowding attribute
+        /// which is a constraint on a neighbor list produced by
+        /// [FeatureOnlineStoreService.SearchNearestEntities][google.cloud.aiplatform.v1.FeatureOnlineStoreService.SearchNearestEntities]
+        /// to diversify search results. If
+        /// [NearestNeighborQuery.per_crowding_attribute_neighbor_count][google.cloud.aiplatform.v1.NearestNeighborQuery.per_crowding_attribute_neighbor_count]
+        /// is set to K in
+        /// [SearchNearestEntitiesRequest][google.cloud.aiplatform.v1.SearchNearestEntitiesRequest],
+        /// it's guaranteed that no more than K entities of the same crowding
+        /// attribute are returned in the response.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CrowdingColumn {
+          get { return crowdingColumn_; }
+          set {
+            crowdingColumn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "embedding_dimension" field.</summary>
+        public const int EmbeddingDimensionFieldNumber = 4;
+        private readonly static int EmbeddingDimensionDefaultValue = 0;
+
+        private int embeddingDimension_;
+        /// <summary>
+        /// Optional. The number of dimensions of the input embedding.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int EmbeddingDimension {
+          get { if ((_hasBits0 & 1) != 0) { return embeddingDimension_; } else { return EmbeddingDimensionDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            embeddingDimension_ = value;
+          }
+        }
+        /// <summary>Gets whether the "embedding_dimension" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasEmbeddingDimension {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "embedding_dimension" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearEmbeddingDimension() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "distance_measure_type" field.</summary>
+        public const int DistanceMeasureTypeFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType distanceMeasureType_ = global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified;
+        /// <summary>
+        /// Optional. The distance measure used in nearest neighbor search.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType DistanceMeasureType {
+          get { return distanceMeasureType_; }
+          set {
+            distanceMeasureType_ = value;
+          }
+        }
+
+        private object algorithmConfig_;
+        /// <summary>Enum of possible cases for the "algorithm_config" oneof.</summary>
+        public enum AlgorithmConfigOneofCase {
+          None = 0,
+          TreeAhConfig = 6,
+          BruteForceConfig = 7,
+        }
+        private AlgorithmConfigOneofCase algorithmConfigCase_ = AlgorithmConfigOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AlgorithmConfigOneofCase AlgorithmConfigCase {
+          get { return algorithmConfigCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAlgorithmConfig() {
+          algorithmConfigCase_ = AlgorithmConfigOneofCase.None;
+          algorithmConfig_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IndexConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IndexConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(TreeAhConfig, other.TreeAhConfig)) return false;
+          if (!object.Equals(BruteForceConfig, other.BruteForceConfig)) return false;
+          if (EmbeddingColumn != other.EmbeddingColumn) return false;
+          if(!filterColumns_.Equals(other.filterColumns_)) return false;
+          if (CrowdingColumn != other.CrowdingColumn) return false;
+          if (EmbeddingDimension != other.EmbeddingDimension) return false;
+          if (DistanceMeasureType != other.DistanceMeasureType) return false;
+          if (AlgorithmConfigCase != other.AlgorithmConfigCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) hash ^= TreeAhConfig.GetHashCode();
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) hash ^= BruteForceConfig.GetHashCode();
+          if (EmbeddingColumn.Length != 0) hash ^= EmbeddingColumn.GetHashCode();
+          hash ^= filterColumns_.GetHashCode();
+          if (CrowdingColumn.Length != 0) hash ^= CrowdingColumn.GetHashCode();
+          if (HasEmbeddingDimension) hash ^= EmbeddingDimension.GetHashCode();
+          if (DistanceMeasureType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified) hash ^= DistanceMeasureType.GetHashCode();
+          hash ^= (int) algorithmConfigCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EmbeddingColumn.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EmbeddingColumn);
+          }
+          filterColumns_.WriteTo(output, _repeated_filterColumns_codec);
+          if (CrowdingColumn.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(CrowdingColumn);
+          }
+          if (HasEmbeddingDimension) {
+            output.WriteRawTag(32);
+            output.WriteInt32(EmbeddingDimension);
+          }
+          if (DistanceMeasureType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) DistanceMeasureType);
+          }
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) {
+            output.WriteRawTag(50);
+            output.WriteMessage(TreeAhConfig);
+          }
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) {
+            output.WriteRawTag(58);
+            output.WriteMessage(BruteForceConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EmbeddingColumn.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EmbeddingColumn);
+          }
+          filterColumns_.WriteTo(ref output, _repeated_filterColumns_codec);
+          if (CrowdingColumn.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(CrowdingColumn);
+          }
+          if (HasEmbeddingDimension) {
+            output.WriteRawTag(32);
+            output.WriteInt32(EmbeddingDimension);
+          }
+          if (DistanceMeasureType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified) {
+            output.WriteRawTag(40);
+            output.WriteEnum((int) DistanceMeasureType);
+          }
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) {
+            output.WriteRawTag(50);
+            output.WriteMessage(TreeAhConfig);
+          }
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) {
+            output.WriteRawTag(58);
+            output.WriteMessage(BruteForceConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TreeAhConfig);
+          }
+          if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(BruteForceConfig);
+          }
+          if (EmbeddingColumn.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EmbeddingColumn);
+          }
+          size += filterColumns_.CalculateSize(_repeated_filterColumns_codec);
+          if (CrowdingColumn.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CrowdingColumn);
+          }
+          if (HasEmbeddingDimension) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(EmbeddingDimension);
+          }
+          if (DistanceMeasureType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DistanceMeasureType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IndexConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EmbeddingColumn.Length != 0) {
+            EmbeddingColumn = other.EmbeddingColumn;
+          }
+          filterColumns_.Add(other.filterColumns_);
+          if (other.CrowdingColumn.Length != 0) {
+            CrowdingColumn = other.CrowdingColumn;
+          }
+          if (other.HasEmbeddingDimension) {
+            EmbeddingDimension = other.EmbeddingDimension;
+          }
+          if (other.DistanceMeasureType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType.Unspecified) {
+            DistanceMeasureType = other.DistanceMeasureType;
+          }
+          switch (other.AlgorithmConfigCase) {
+            case AlgorithmConfigOneofCase.TreeAhConfig:
+              if (TreeAhConfig == null) {
+                TreeAhConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig();
+              }
+              TreeAhConfig.MergeFrom(other.TreeAhConfig);
+              break;
+            case AlgorithmConfigOneofCase.BruteForceConfig:
+              if (BruteForceConfig == null) {
+                BruteForceConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig();
+              }
+              BruteForceConfig.MergeFrom(other.BruteForceConfig);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                EmbeddingColumn = input.ReadString();
+                break;
+              }
+              case 18: {
+                filterColumns_.AddEntriesFrom(input, _repeated_filterColumns_codec);
+                break;
+              }
+              case 26: {
+                CrowdingColumn = input.ReadString();
+                break;
+              }
+              case 32: {
+                EmbeddingDimension = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                DistanceMeasureType = (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) input.ReadEnum();
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig();
+                if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) {
+                  subBuilder.MergeFrom(TreeAhConfig);
+                }
+                input.ReadMessage(subBuilder);
+                TreeAhConfig = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig();
+                if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) {
+                  subBuilder.MergeFrom(BruteForceConfig);
+                }
+                input.ReadMessage(subBuilder);
+                BruteForceConfig = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                EmbeddingColumn = input.ReadString();
+                break;
+              }
+              case 18: {
+                filterColumns_.AddEntriesFrom(ref input, _repeated_filterColumns_codec);
+                break;
+              }
+              case 26: {
+                CrowdingColumn = input.ReadString();
+                break;
+              }
+              case 32: {
+                EmbeddingDimension = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                DistanceMeasureType = (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) input.ReadEnum();
+                break;
+              }
+              case 50: {
+                global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig();
+                if (algorithmConfigCase_ == AlgorithmConfigOneofCase.TreeAhConfig) {
+                  subBuilder.MergeFrom(TreeAhConfig);
+                }
+                input.ReadMessage(subBuilder);
+                TreeAhConfig = subBuilder;
+                break;
+              }
+              case 58: {
+                global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig subBuilder = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig();
+                if (algorithmConfigCase_ == AlgorithmConfigOneofCase.BruteForceConfig) {
+                  subBuilder.MergeFrom(BruteForceConfig);
+                }
+                input.ReadMessage(subBuilder);
+                BruteForceConfig = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the IndexConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The distance measure used in nearest neighbor search.
+          /// </summary>
+          public enum DistanceMeasureType {
+            /// <summary>
+            /// Should not be set.
+            /// </summary>
+            [pbr::OriginalName("DISTANCE_MEASURE_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Euclidean (L_2) Distance.
+            /// </summary>
+            [pbr::OriginalName("SQUARED_L2_DISTANCE")] SquaredL2Distance = 1,
+            /// <summary>
+            /// Cosine Distance. Defined as 1 - cosine similarity.
+            ///
+            /// We strongly suggest using DOT_PRODUCT_DISTANCE + UNIT_L2_NORM instead
+            /// of COSINE distance. Our algorithms have been more optimized for
+            /// DOT_PRODUCT distance which, when combined with UNIT_L2_NORM, is
+            /// mathematically equivalent to COSINE distance and results in the same
+            /// ranking.
+            /// </summary>
+            [pbr::OriginalName("COSINE_DISTANCE")] CosineDistance = 2,
+            /// <summary>
+            /// Dot Product Distance. Defined as a negative of the dot product.
+            /// </summary>
+            [pbr::OriginalName("DOT_PRODUCT_DISTANCE")] DotProductDistance = 3,
+          }
+
+          /// <summary>
+          /// Configuration options for using brute force search.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class BruteForceConfig : pb::IMessage<BruteForceConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<BruteForceConfig> _parser = new pb::MessageParser<BruteForceConfig>(() => new BruteForceConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<BruteForceConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BruteForceConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BruteForceConfig(BruteForceConfig other) : this() {
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public BruteForceConfig Clone() {
+              return new BruteForceConfig(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as BruteForceConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(BruteForceConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(BruteForceConfig other) {
+              if (other == null) {
+                return;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Configuration options for the tree-AH algorithm.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TreeAHConfig : pb::IMessage<TreeAHConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TreeAHConfig> _parser = new pb::MessageParser<TreeAHConfig>(() => new TreeAHConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TreeAHConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TreeAHConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TreeAHConfig(TreeAHConfig other) : this() {
+              _hasBits0 = other._hasBits0;
+              leafNodeEmbeddingCount_ = other.leafNodeEmbeddingCount_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TreeAHConfig Clone() {
+              return new TreeAHConfig(this);
+            }
+
+            /// <summary>Field number for the "leaf_node_embedding_count" field.</summary>
+            public const int LeafNodeEmbeddingCountFieldNumber = 1;
+            private readonly static long LeafNodeEmbeddingCountDefaultValue = 0L;
+
+            private long leafNodeEmbeddingCount_;
+            /// <summary>
+            /// Optional. Number of embeddings on each leaf node. The default value is
+            /// 1000 if not set.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long LeafNodeEmbeddingCount {
+              get { if ((_hasBits0 & 1) != 0) { return leafNodeEmbeddingCount_; } else { return LeafNodeEmbeddingCountDefaultValue; } }
+              set {
+                _hasBits0 |= 1;
+                leafNodeEmbeddingCount_ = value;
+              }
+            }
+            /// <summary>Gets whether the "leaf_node_embedding_count" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasLeafNodeEmbeddingCount {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "leaf_node_embedding_count" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearLeafNodeEmbeddingCount() {
+              _hasBits0 &= ~1;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TreeAHConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TreeAHConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (LeafNodeEmbeddingCount != other.LeafNodeEmbeddingCount) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasLeafNodeEmbeddingCount) hash ^= LeafNodeEmbeddingCount.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasLeafNodeEmbeddingCount) {
+                output.WriteRawTag(8);
+                output.WriteInt64(LeafNodeEmbeddingCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasLeafNodeEmbeddingCount) {
+                output.WriteRawTag(8);
+                output.WriteInt64(LeafNodeEmbeddingCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasLeafNodeEmbeddingCount) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(LeafNodeEmbeddingCount);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TreeAHConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.HasLeafNodeEmbeddingCount) {
+                LeafNodeEmbeddingCount = other.LeafNodeEmbeddingCount;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    LeafNodeEmbeddingCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    LeafNodeEmbeddingCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// A Feature Registry source for features that need to be synced to Online
       /// Store.
       /// </summary>
@@ -1085,7 +2080,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
