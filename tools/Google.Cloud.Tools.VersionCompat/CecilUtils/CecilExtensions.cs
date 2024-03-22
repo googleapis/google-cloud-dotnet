@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static bool IsExported(this MethodDefinition method) =>
             method.IsPublic || method.IsFamily || method.IsFamilyOrAssembly;
+
+        public static bool IsExported(this FieldDefinition field) =>
+            field.IsPublic || field.IsFamily || field.IsFamilyOrAssembly;
 
         public static bool IsExported(this PropertyDefinition prop) =>
             (prop.GetMethod?.IsExported() ?? false) || (prop.SetMethod?.IsExported() ?? false);

@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -323,6 +323,52 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         yield return inO ?
                             diff(Cause.PropertyMadeExported, $"{prefix} made public.") :
                             diff(Cause.PropertyAdded, $"{prefix} added.");
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<Diff> Constants(TypeType typeType)
+        {
+            var oConstants = _o.Fields.Where(f => f.HasConstant).ToImmutableHashSet(SameFieldComparer.Instance);
+            var nConstants = _n.Fields.Where(f => f.HasConstant).ToImmutableHashSet(SameFieldComparer.Instance);
+
+            foreach (var constant in oConstants.Union(nConstants).OrderBy(x => x.FullName))
+            {
+                var inO = oConstants.TryGetValue(constant, out var o);
+                var inN = nConstants.TryGetValue(constant, out var n);
+                FormattableString prefix = $"{_o.TypeType()} '{_o}'; constant '{o}'";
+                if (inO && inN && o.IsExported() && n.IsExported())
+                {
+                    if (!SameTypeComparer.Instance.Equals(o.FieldType, n.FieldType))
+                    {
+                        yield return Diff.Major(Cause.ConstantTypeChanged, $"{prefix} type changed to '{n.FieldType}'.");
+                    }
+                    // Note: if the type has changed, we don't bother checking the value as well.
+                    else if (!Equals(o.Constant, n.Constant))
+                    {
+                        yield return Diff.Major(Cause.ConstantValueChanged, $"{prefix} type changed to '{n.FieldType}'.");
+                    }
+
+                    foreach (var diff in Obsoleteness(o, n, prefix))
+                    {
+                        yield return diff;
+                    }
+                }
+                else
+                {
+                    // Presence/visibility changes.
+                    if (inO && o.IsExported())
+                    {
+                        yield return inN ?
+                            Diff.Major(Cause.ConstantMadeNotExported, $"{prefix} made non-public.") :
+                            Diff.Major(Cause.ConstantRemoved, $"{prefix} removed.");
+                    }
+                    else if (inN && n.IsExported())
+                    {
+                        yield return inO ?
+                            Diff.Minor(Cause.ConstantMadeExported, $"{prefix} made public.") :
+                            Diff.Minor(Cause.ConstantAdded, $"{prefix} added.");
                     }
                 }
             }

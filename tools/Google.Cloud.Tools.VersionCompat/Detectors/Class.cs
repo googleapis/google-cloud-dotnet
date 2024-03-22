@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,6 +34,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .Concat(classStructInterface.Ctors(TypeType.Class))
                 .Concat(classStructInterface.Methods(TypeType.Class))
                 .Concat(classStructInterface.Properties(TypeType.Class))
+                .Concat(classStructInterface.Constants(TypeType.Class))
                 .Concat(classStructInterface.Obsoleteness());
         }
 

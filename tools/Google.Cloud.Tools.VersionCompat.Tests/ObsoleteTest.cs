@@ -62,6 +62,9 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Obsolete
     namespace PropertyObsolete.A { public class C { public int P { get; } } }
     namespace PropertyObsolete.B { public class C {[Obsolete] public int P { get; } } }
 
+    namespace ConstantObsolete.A { public class C { public const int A = 0; } }
+    namespace ConstantObsolete.B { public class C { [Obsolete] public const int A = 0; } }
+
     public class ObsoleteTest : TestBase
     {
         [Fact] public void UnchangedClassWarning() => TestNone();
@@ -79,5 +82,6 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Obsolete
         [Fact] public void CtorObsolete() => TestMinor(Cause.ObsoleteChanged);
         [Fact] public void MethodObsolete() => TestMinor(Cause.ObsoleteChanged);
         [Fact] public void PropertyObsolete() => TestMinor(Cause.ObsoleteChanged);
+        [Fact] public void ConstantObsolete() => TestMinor(Cause.ObsoleteChanged);
     }
 }
