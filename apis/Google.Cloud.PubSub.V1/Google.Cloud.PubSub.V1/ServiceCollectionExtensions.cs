@@ -37,10 +37,27 @@ public static partial class ServiceCollectionExtensions
     public static IServiceCollection AddPublisherClient(this IServiceCollection services, Action<PublisherClientBuilder> action)
     {
         GaxPreconditions.CheckNotNull(action, nameof(action));
+        return AddPublisherClient(services, (_, builder) => action(builder));
+    }
+
+    /// <summary>
+    /// Adds a singleton <see cref="PublisherClient"/> to the <see cref="IServiceCollection"/> as customized by the <paramref name="action"/>.
+    /// </summary>
+    /// <param name="services">
+    /// The <see cref="IServiceCollection"/> to add the singleton client to.
+    /// </param>
+    /// <param name="action">
+    /// An action delegate to invoke on the <see cref="PublisherClientBuilder"/> for configuring the <see cref="PublisherClient"/>. This is invoked before <paramref name="services"/> are used.
+    /// Must not be null and at-least <see cref="PublisherClientBuilder.TopicName"/> must be set.
+    /// </param>
+    /// <returns>The updated <see cref="IServiceCollection"/>, for method chaining.</returns>
+    public static IServiceCollection AddPublisherClient(this IServiceCollection services, Action<IServiceProvider, PublisherClientBuilder> action)
+    {
+        GaxPreconditions.CheckNotNull(action, nameof(action));
         return services.AddSingleton(provider =>
         {
             var builder = new PublisherClientBuilder();
-            action.Invoke(builder);
+            action.Invoke(provider, builder);
             return builder.Build(provider);
         });
     }
@@ -73,10 +90,27 @@ public static partial class ServiceCollectionExtensions
     public static IServiceCollection AddSubscriberClient(this IServiceCollection services, Action<SubscriberClientBuilder> action)
     {
         GaxPreconditions.CheckNotNull(action, nameof(action));
+        return AddSubscriberClient(services, (_, builder) => action(builder));
+    }
+
+    /// <summary>
+    /// Adds a singleton <see cref="SubscriberClient"/> to the <see cref="IServiceCollection"/> as customized by the <paramref name="action"/>.
+    /// </summary>
+    /// <param name="services">
+    /// The <see cref="IServiceCollection"/> to add the singleton client to.
+    /// </param>
+    /// <param name="action">
+    /// An action to invoke on the <see cref="SubscriberClientBuilder"/> for configuring the <see cref="SubscriberClient"/>. This is invoked before <paramref name="services"/> are used.
+    /// Must not be null and at-least <see cref="SubscriberClientBuilder.SubscriptionName"/> must be set.
+    /// </param>
+    /// <returns>The updated <see cref="IServiceCollection"/>, for method chaining.</returns>
+    public static IServiceCollection AddSubscriberClient(this IServiceCollection services, Action<IServiceProvider, SubscriberClientBuilder> action)
+    {
+        GaxPreconditions.CheckNotNull(action, nameof(action));
         return services.AddSingleton(provider =>
         {
             var builder = new SubscriberClientBuilder();
-            action.Invoke(builder);
+            action.Invoke(provider, builder);
             return builder.Build(provider);
         });
     }

@@ -97,7 +97,18 @@ public class ServiceCollectionExtensionsTest
         IServiceCollection serviceCollection = new ServiceCollection();
 
         // Act and assert.
-        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: null));
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: (Action<PublisherClientBuilder>) null));
+    }
+
+    [Fact]
+    public void AddPublisherClient_WithNullAction2()
+    {
+        // Arrange.
+        // Passing null action to AddPublisherClient should throw ArgumentNullException.
+        IServiceCollection serviceCollection = new ServiceCollection();
+
+        // Act and assert.
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddPublisherClient(action: (Action<IServiceProvider, PublisherClientBuilder>) null));
     }
 
     [Fact]
@@ -172,7 +183,18 @@ public class ServiceCollectionExtensionsTest
         IServiceCollection serviceCollection = new ServiceCollection();
 
         // Act and assert.
-        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: null));
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: (Action<SubscriberClientBuilder>) null));
+    }
+
+    [Fact]
+    public void AddSubscriberClient_WithNullAction2()
+    {
+        // Arrange.
+        // Passing null action to AddPublisherClient should throw ArgumentNullException.
+        IServiceCollection serviceCollection = new ServiceCollection();
+
+        // Act and assert.
+        Assert.Throws<ArgumentNullException>(() => serviceCollection.AddSubscriberClient(action: (Action<IServiceProvider, SubscriberClientBuilder>) null));
     }
 
     // Fake credential used just to ensure that we don't fetch the application default credentials
