@@ -727,6 +727,114 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CommitDelay_DefaultsToNull_ExplicitTransaction()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_Propagates_ExplicitTransaction()
+        {
+            var commitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.CommitDelay = commitDelay;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(commitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_CanBeSetAfterCommandExecution_ExplicitTransaction()
+        {
+            var commitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.CommitDelay = commitDelay;
+            transaction.Commit();
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(commitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_Propagates_RunWithRetryableTransaction()
+        {
+            var commitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
+                .SetupRollbackAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
+
+            connection.RunWithRetriableTransaction(tx =>
+            {
+                tx.CommitDelay = commitDelay;
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                command.Transaction = tx;
+                using (var reader = command.ExecuteReader())
+                {
+                    Assert.True(reader.HasRows);
+                }
+            });
+
+            spannerClientMock.Received(2).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(commitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
             SpannerClient spannerClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);

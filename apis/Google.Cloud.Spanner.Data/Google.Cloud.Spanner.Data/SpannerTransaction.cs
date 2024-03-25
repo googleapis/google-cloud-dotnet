@@ -122,6 +122,16 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The maximum amount of time the commit may be delayed server side for batching with other commits.
+        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
+        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
+        /// May be null, in which case commits will continue to be batched as they had been before this configuration
+        /// option was made available to Spaner API consumers.
+        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
+        /// </summary>
+        public TimeSpan? CommitDelay { get; set; }
+
+        /// <summary>
         /// Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
         /// transactions.
         /// </summary>
@@ -412,7 +422,13 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
+
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
+            if (CommitDelay is not null)
+            {
+                request.MaxCommitDelay = Duration.FromTimeSpan(CommitDelay.Value);
+            }
+
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
