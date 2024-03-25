@@ -5460,18 +5460,22 @@
       "id": "Google.LongRunning",
       "packageOwner": "google-cloud",
       "generator": "micro",
+      "targetFrameworks": "netstandard2.0;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "protoPath": "google/longrunning",
       "listingDescription": "Support for the Long-Running Operations API pattern",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "metadataType": "CORE",
       "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
       "tags": [
         "LongRunning"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.8.0"
+      },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "4.7.0"
+        "Google.Api.Gax.Testing": "4.8.0"
       },
       "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
       "serviceConfigFile": "longrunning.yaml",
