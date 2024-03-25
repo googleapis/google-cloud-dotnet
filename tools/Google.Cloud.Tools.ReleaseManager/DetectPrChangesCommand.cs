@@ -103,7 +103,7 @@ public class DetectPrChangesCommand : ICommand
         Processes.RunDotnet(".", "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "-f", oldTfm, oldProjectFile);
         Processes.RunDotnet(".", "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "-f", newTfm, newProjectFile);
         string oldAssemblyFile = Path.Combine(oldCommitDirectory, $"apis/{id}/{id}/bin/Release/{oldTfm}/{id}.dll");
-        string newAssemblyFile = $"apis/{id}/{id}/bin/Release/{oldTfm}/{id}.dll";
+        string newAssemblyFile = $"apis/{id}/{id}/bin/Release/{newTfm}/{id}.dll";
 
         // Now compare them
         var oldAssembly = Assemblies.LoadFile(oldAssemblyFile);
