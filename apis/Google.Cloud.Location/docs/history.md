@@ -1,5 +1,13 @@
 # Version history
 
+## Version 2.2.0, released 2024-03-25
+
+### New features
+
+This library now targets netstandard2.0 instead of netstandard2.1.
+This should be compatible with existing libraries that depend on it,
+but will allow new libraries to also target netstandard2.0.
+
 ## Version 2.1.0, released 2024-02-28
 
 No API surface changes; just dependency updates.

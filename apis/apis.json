@@ -2852,8 +2852,10 @@
     },
     {
       "id": "Google.Cloud.Location",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
+      "targetFrameworks": "netstandard2.0;net462",
+      "testTargetFrameworks": "net6.0;net462",
       "listingDescription": "Support for the Google Cloud Locations mix-in API pattern",
       "metadataType": "CORE",
       "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
@@ -2861,7 +2863,9 @@
         "locations",
         "zones"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "4.8.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/location",
       "serviceConfigFile": "none",
