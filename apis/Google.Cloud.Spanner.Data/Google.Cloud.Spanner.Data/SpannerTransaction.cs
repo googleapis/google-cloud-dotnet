@@ -106,6 +106,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly PooledSession _session;
 
         private int _commitTimeout;
+        private TimeSpan? _commitDelay;
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
@@ -119,6 +120,20 @@ namespace Google.Cloud.Spanner.Data
         {
             get => _commitTimeout;
             set => _commitTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
+        }
+
+        /// <summary>
+        /// The maximum amount of time the commit may be delayed server side for batching with other commits.
+        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
+        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
+        /// May be null, in which case commits will continue to be batched as they had been before this configuration
+        /// option was made available to Spanner API consumers.
+        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
+        /// </summary>
+        public TimeSpan? CommitDelay
+        {
+            get => _commitDelay;
+            set => _commitDelay = SpannerTransaction.CheckCommitDelayRange(value);
         }
 
         /// <summary>
@@ -412,7 +427,15 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
+
+            var request = new CommitRequest
+            {
+                Mutations = { _mutations },
+                ReturnCommitStats = LogCommitStats,
+                RequestOptions = BuildCommitRequestOptions(),
+                MaxCommitDelay = CommitDelay is null ? null : Duration.FromTimeSpan(CommitDelay.Value),
+            };
+
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -547,5 +570,8 @@ namespace Google.Cloud.Spanner.Data
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
         }
+
+        internal static TimeSpan? CheckCommitDelayRange(TimeSpan? commitDelay) =>
+            commitDelay is null ? commitDelay : GaxPreconditions.CheckArgumentRange(commitDelay.Value, nameof(CommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }
 }
