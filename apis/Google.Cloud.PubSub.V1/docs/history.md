@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.11.0, released 2024-03-25
+
+### New features
+
+- Added TopicName and SubsciptionName resolution from container as an extension point. ([issue 12215](https://github.com/googleapis/google-cloud-dotnet/issues/12215)) ([commit 73c457d](https://github.com/googleapis/google-cloud-dotnet/commit/73c457d2f8f915656d9c14eaeb594c189072f4a7))
+
 ## Version 3.10.1, released 2024-03-19
 
 ### New features
