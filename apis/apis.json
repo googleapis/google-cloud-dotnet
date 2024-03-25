@@ -124,7 +124,7 @@
     {
       "id": "Google.Apps.Script.Type",
       "version": "2.2.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "type": "other",
       "description": "Version-agnostic types for Apps Script APIs.",
       "tags": [
@@ -382,7 +382,7 @@
     {
       "id": "Google.Cloud.AppEngine.Logging.V1",
       "version": "1.1.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "productName": "App Engine Logging Data",
       "productUrl": "https://cloud.google.com/appengine",
       "type": "other",
@@ -569,7 +569,7 @@
     {
       "id": "Google.Cloud.Audit",
       "version": "2.3.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "productName": "Google Cloud Audit",
       "productUrl": "https://cloud.google.com/logging/docs/audit",
       "type": "other",
@@ -896,7 +896,7 @@
     {
       "id": "Google.Cloud.BigQuery.Logging.V1",
       "version": "1.2.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "productName": "BigQuery Audit Data Logging",
       "productUrl": "https://cloud.google.com/bigquery",
       "type": "other",
@@ -1016,7 +1016,7 @@
     {
       "id": "Google.Cloud.Bigtable.Common.V2",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "version": "3.1.0",
       "description": "Common code used by Bigtable V2 APIs",
       "tags": [
@@ -1361,7 +1361,7 @@
     {
       "id": "Google.Cloud.Common",
       "version": "2.1.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "type": "other",
       "description": "Common protos for Cloud APIs.",
       "tags": [],
@@ -1834,7 +1834,7 @@
       "id": "Google.Cloud.DevTools.Common",
       "version": "3.1.1",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
       "tags": [
@@ -1898,7 +1898,7 @@
       "id": "Google.Cloud.Diagnostics.Common",
       "version": "5.2.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
@@ -2312,7 +2312,7 @@
       "listingDescription": "Firestore Administration (e.g. index management)",
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "version": "3.7.0",
       "type": "grpc",
@@ -2340,7 +2340,7 @@
       "version": "3.5.1",
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "Recommended Google client library to access the Firestore API.",
       "tags": [
@@ -2372,7 +2372,7 @@
       "listingDescription": "Firestore low-level API access",
       "version": "3.5.1",
       "type": "grpc",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
       "tags": [
@@ -2873,7 +2873,7 @@
       "version": "4.2.0",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "Log4Net client library for the Google Cloud Logging API.",
       "tags": [
@@ -2897,7 +2897,7 @@
       "version": "1.2.0",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.1",
+      "targetFrameworks": "netstandard2.0",
       "testTargetFrameworks": "net6.0",
       "description": "ConsoleFormatter for Google Cloud Logging.",
       "tags": [
@@ -2915,7 +2915,7 @@
       "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "description": "NLog target for the Google Cloud Logging API.",
       "tags": [
@@ -2940,7 +2940,7 @@
       "protoPath": "google/logging/type",
       "version": "4.1.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "description": "Version-agnostic types for the Google Cloud Logging API.",
       "tags": [
         "Logging",
@@ -3420,7 +3420,7 @@
       "protoPath": "google/cloud/orgpolicy/v1",
       "version": "3.1.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "description": "OrgPolicy API messages.",
       "tags": [],
       "dependencies": {
@@ -3504,7 +3504,7 @@
       "protoPath": "google/cloud/oslogin/common",
       "version": "3.2.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "description": "Version-agnostic types for the Google OS Login API.",
       "tags": [
         "OsLogin",
@@ -4484,7 +4484,7 @@
     },
     {
       "id": "Google.Cloud.Spanner.Data",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "testTargetFrameworks": "net6.0;net462",
       "version": "5.0.0-beta01",
       "type": "other",
@@ -4514,7 +4514,7 @@
     {
       "id": "Google.Cloud.Spanner.Common.V1",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "version": "5.0.0-beta01",
       "description": "Common resource names used by all Spanner V1 APIs",
       "tags": [
@@ -5266,7 +5266,7 @@
     {
       "id": "Google.Cloud.Workflows.Common.V1",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "version": "2.3.0",
       "description": "Common resource names used by all Workflows V1 APIs",
       "tags": [
@@ -5280,7 +5280,7 @@
     {
       "id": "Google.Cloud.Workflows.Common.V1Beta",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "version": "2.0.0-beta03",
       "description": "Common resource names used by all Workflows V1Beta APIs",
       "tags": [
@@ -5404,7 +5404,7 @@
     {
       "id": "Google.Geo.Type",
       "version": "1.1.0",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "type": "other",
       "description": "Version-agnostic types for Geo APIs.",
       "tags": [
@@ -5423,7 +5423,7 @@
       "protoPath": "google/identity/accesscontextmanager/type",
       "version": "2.1.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
       "tags": [
         "identity"
@@ -5696,7 +5696,7 @@
     {
       "id": "Google.Shopping.Type",
       "version": "1.0.0-beta03",
-      "targetFrameworks": "netstandard2.1;net462",
+      "targetFrameworks": "netstandard2.0;net462",
       "type": "other",
       "description": "Version-agnostic types for Shopping APIs.",
       "tags": [
