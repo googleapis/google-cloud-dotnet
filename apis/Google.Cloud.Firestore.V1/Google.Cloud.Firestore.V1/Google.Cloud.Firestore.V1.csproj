@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>3.5.1</Version>
-    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.</Description>
     <PackageTags>firestore;firebase;Google;Cloud</PackageTags>

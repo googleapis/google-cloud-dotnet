@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>5.0.0-beta01</Version>
-    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Google ADO.NET Provider for Google Cloud Spanner.</Description>
     <PackageTags>Spanner;ADO;Google;Cloud</PackageTags>
