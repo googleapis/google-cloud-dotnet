@@ -1,5 +1,25 @@
 # Version history
 
+## Version 2.11.0, released 2024-03-25
+
+### Breaking changes
+
+The `SearchRelatedAccountGroupMemberships` method and related
+request now accept a ProjectName instead of a
+`RelatedAccountGroupName`. This is a bug fix; the server-side
+behavior has not changed. Although this is clearly a breaking change
+in the client library, no caller would have been able to use the
+previous functionality, so we are releasing this as a minor version
+rather than the normal new major version after a breaking change. We
+believe this will minimize customer disruption. Please file an issue
+if this change causes problems for you.
+
+### New features
+
+- Existing resource_reference option of the field name is removed from message `google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMemberShip` ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+- Existing resource_reference option of the field name is removed from message `google.cloud.recaptchaenterprise.v1.RelatedAccountGroup` ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+- Add Cloudflare key creation support ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+
 ## Version 2.10.0, released 2024-03-13
 
 ### New features
