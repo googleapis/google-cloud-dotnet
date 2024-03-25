@@ -73,6 +73,22 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        public void AddCustomizedSubscriberClientWithProvider()
+        {
+            string projectId = "projectId";
+            string subscriptionId = "subscriptionId";
+            var services = new ServiceCollection();
+
+            // Sample: AddCustomizedSubscriberClientWithProvider
+            // In one piece of configuration code...
+            services.AddSingleton(SubscriptionName.FromProjectSubscription(projectId, subscriptionId));
+            // Elsewhere...
+            services.AddSubscriberClient((provider, builder) =>
+                builder.SubscriptionName = provider.GetRequiredService<SubscriptionName>());
+            // End sample
+        }
+
+        [Fact]
         public void AddHostedService()
         {
             var services = new ServiceCollection();

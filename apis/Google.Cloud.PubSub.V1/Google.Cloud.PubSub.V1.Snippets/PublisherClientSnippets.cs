@@ -51,6 +51,22 @@ public class PublisherClientSnippets
     }
 
     [Fact]
+    public void AddCustomizedPublisherClientWithProvider()
+    {
+        string projectId = "projectId";
+        string topicId = "topicId";
+        var services = new ServiceCollection();
+
+        // Sample: AddCustomizedPublisherClientWithProvider
+        // In one piece of configuration code...
+        services.AddSingleton(TopicName.FromProjectTopic(projectId, topicId));
+        // Elsewhere...
+        services.AddPublisherClient((provider, builder) =>
+            builder.TopicName = provider.GetRequiredService<TopicName>());
+        // End sample
+    }
+
+    [Fact]
     public void AddPublisherClientAndService()
     {
         string projectId = "projectId";
