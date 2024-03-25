@@ -65,7 +65,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
         };
 
-        private const string DefaultNetstandardTarget = "netstandard2.1";
+        private const string DefaultNetstandardTarget = "netstandard2.0";
 
         private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
         {
@@ -87,7 +87,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private const string DefaultVersionValue = "default";
         private const string GrpcCorePackage = "Grpc.Core";
         private const string GrpcCorePackageConditionFramework = "net462";
-        private const string DefaultGaxVersion = "4.7.0";
+        private const string DefaultGaxVersion = "4.8.0";
         private const string GrpcCoreVersion = "2.46.6";
         private static readonly Dictionary<string, string> DefaultPackageVersions = new Dictionary<string, string>
         {
