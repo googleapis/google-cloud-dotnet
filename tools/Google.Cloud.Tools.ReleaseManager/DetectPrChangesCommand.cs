@@ -77,8 +77,8 @@ public class DetectPrChangesCommand : ICommand
 
         // Initial presence checks, working out the old/new locations and TFMs.
         var projectFile = $"apis/{id}/{id}/{id}.csproj";
-        var oldProjectFile = projectFile;
-        var newProjectFile = Path.Combine(oldCommitDirectory, projectFile);
+        var oldProjectFile = Path.Combine(oldCommitDirectory, projectFile);
+        var newProjectFile = projectFile;
         if (!File.Exists(oldProjectFile))
         {
             Console.WriteLine("API does not exist in earlier commit. Nothing to compare.");
