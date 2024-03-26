@@ -64,6 +64,12 @@
                 "GetBackupAsync"
               ]
             },
+            "GetBackupIndexDownloadUrl": {
+              "methods": [
+                "GetBackupIndexDownloadUrl",
+                "GetBackupIndexDownloadUrlAsync"
+              ]
+            },
             "GetBackupPlan": {
               "methods": [
                 "GetBackupPlan",

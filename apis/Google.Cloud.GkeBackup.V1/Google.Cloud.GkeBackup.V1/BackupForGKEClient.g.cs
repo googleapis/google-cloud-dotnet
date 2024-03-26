@@ -86,6 +86,7 @@ namespace Google.Cloud.GkeBackup.V1
             DeleteRestoreOperationsSettings = existing.DeleteRestoreOperationsSettings.Clone();
             ListVolumeRestoresSettings = existing.ListVolumeRestoresSettings;
             GetVolumeRestoreSettings = existing.GetVolumeRestoreSettings;
+            GetBackupIndexDownloadUrlSettings = existing.GetBackupIndexDownloadUrlSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -668,6 +669,25 @@ namespace Google.Cloud.GkeBackup.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetVolumeRestoreSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupForGKEClient.GetBackupIndexDownloadUrl</c> and <c>BackupForGKEClient.GetBackupIndexDownloadUrlAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupIndexDownloadUrlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1339,7 +1359,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1366,7 +1386,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1393,7 +1413,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// BackupPlan targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource
@@ -1606,10 +1626,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1636,10 +1656,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1666,10 +1686,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1691,10 +1711,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1721,10 +1741,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -1751,10 +1771,10 @@ namespace Google.Cloud.GkeBackup.V1
         /// Format: `projects/*/locations/*/backupPlans/*`
         /// </param>
         /// <param name="backup">
-        /// The Backup resource to create.
+        /// Optional. The Backup resource to create.
         /// </param>
         /// <param name="backupId">
-        /// The client-provided short name for the Backup resource.
+        /// Optional. The client-provided short name for the Backup resource.
         /// This name must:
         /// 
         /// - be between 1 and 63 characters long (inclusive)
@@ -2058,7 +2078,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -2084,7 +2104,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -2110,7 +2130,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Backup targeted for update. The values for each of these
         /// updated fields will be taken from the `backup_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3005,7 +3025,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3031,7 +3051,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3057,7 +3077,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// RestorePlan targeted for update. The values for each of these
         /// updated fields will be taken from the `restore_plan` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3722,7 +3742,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3748,7 +3768,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -3774,7 +3794,7 @@ namespace Google.Cloud.GkeBackup.V1
         /// fields. This may be sparsely populated if an `update_mask` is provided.
         /// </param>
         /// <param name="updateMask">
-        /// This is used to specify the fields to be overwritten in the
+        /// Optional. This is used to specify the fields to be overwritten in the
         /// Restore targeted for update. The values for each of these
         /// updated fields will be taken from the `restore` provided
         /// with this request. Field names are relative to the root of the resource.
@@ -4153,6 +4173,123 @@ namespace Google.Cloud.GkeBackup.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<VolumeRestore> GetVolumeRestoreAsync(VolumeRestoreName name, st::CancellationToken cancellationToken) =>
             GetVolumeRestoreAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(string backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrl(new GetBackupIndexDownloadUrlRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(string backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrlAsync(new GetBackupIndexDownloadUrlRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(string backup, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrl(new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupIndexDownloadUrlAsync(new GetBackupIndexDownloadUrlRequest
+            {
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. Full name of Backup resource.
+        /// Format:
+        /// projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(BackupName backup, st::CancellationToken cancellationToken) =>
+            GetBackupIndexDownloadUrlAsync(backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>BackupForGKE client wrapper implementation, for convenient use.</summary>
@@ -4209,6 +4346,8 @@ namespace Google.Cloud.GkeBackup.V1
         private readonly gaxgrpc::ApiCall<ListVolumeRestoresRequest, ListVolumeRestoresResponse> _callListVolumeRestores;
 
         private readonly gaxgrpc::ApiCall<GetVolumeRestoreRequest, VolumeRestore> _callGetVolumeRestore;
+
+        private readonly gaxgrpc::ApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse> _callGetBackupIndexDownloadUrl;
 
         /// <summary>
         /// Constructs a client wrapper for the BackupForGKE service, with the specified gRPC client and settings.
@@ -4311,6 +4450,9 @@ namespace Google.Cloud.GkeBackup.V1
             _callGetVolumeRestore = clientHelper.BuildApiCall<GetVolumeRestoreRequest, VolumeRestore>("GetVolumeRestore", grpcClient.GetVolumeRestoreAsync, grpcClient.GetVolumeRestore, effectiveSettings.GetVolumeRestoreSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetVolumeRestore);
             Modify_GetVolumeRestoreApiCall(ref _callGetVolumeRestore);
+            _callGetBackupIndexDownloadUrl = clientHelper.BuildApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse>("GetBackupIndexDownloadUrl", grpcClient.GetBackupIndexDownloadUrlAsync, grpcClient.GetBackupIndexDownloadUrl, effectiveSettings.GetBackupIndexDownloadUrlSettings).WithGoogleRequestParam("backup", request => request.Backup);
+            Modify_ApiCall(ref _callGetBackupIndexDownloadUrl);
+            Modify_GetBackupIndexDownloadUrlApiCall(ref _callGetBackupIndexDownloadUrl);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4363,6 +4505,8 @@ namespace Google.Cloud.GkeBackup.V1
         partial void Modify_ListVolumeRestoresApiCall(ref gaxgrpc::ApiCall<ListVolumeRestoresRequest, ListVolumeRestoresResponse> call);
 
         partial void Modify_GetVolumeRestoreApiCall(ref gaxgrpc::ApiCall<GetVolumeRestoreRequest, VolumeRestore> call);
+
+        partial void Modify_GetBackupIndexDownloadUrlApiCall(ref gaxgrpc::ApiCall<GetBackupIndexDownloadUrlRequest, GetBackupIndexDownloadUrlResponse> call);
 
         partial void OnConstruction(BackupForGKE.BackupForGKEClient grpcClient, BackupForGKESettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4422,6 +4566,8 @@ namespace Google.Cloud.GkeBackup.V1
         partial void Modify_ListVolumeRestoresRequest(ref ListVolumeRestoresRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetVolumeRestoreRequest(ref GetVolumeRestoreRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupIndexDownloadUrlRequest(ref GetBackupIndexDownloadUrlRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateBackupPlan</c>.</summary>
         public override lro::OperationsClient CreateBackupPlanOperationsClient { get; }
@@ -5033,6 +5179,30 @@ namespace Google.Cloud.GkeBackup.V1
         {
             Modify_GetVolumeRestoreRequest(ref request, ref callSettings);
             return _callGetVolumeRestore.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupIndexDownloadUrlRequest(ref request, ref callSettings);
+            return _callGetBackupIndexDownloadUrl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve the link to the backupIndex.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(GetBackupIndexDownloadUrlRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupIndexDownloadUrlRequest(ref request, ref callSettings);
+            return _callGetBackupIndexDownloadUrl.Async(request, callSettings);
         }
     }
 

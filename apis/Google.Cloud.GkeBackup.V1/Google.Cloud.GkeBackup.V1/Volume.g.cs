@@ -89,7 +89,6 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// Represents the backup of a specific persistent volume as a component of a
   /// Backup - both the record of the operation and a pointer to the underlying
   /// storage-specific artifacts.
-  /// Next id: 14
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VolumeBackup : pb::IMessage<VolumeBackup>
@@ -881,7 +880,6 @@ namespace Google.Cloud.GkeBackup.V1 {
 
   /// <summary>
   /// Represents the operation of restoring a volume from a VolumeBackup.
-  /// Next id: 13
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VolumeRestore : pb::IMessage<VolumeRestore>

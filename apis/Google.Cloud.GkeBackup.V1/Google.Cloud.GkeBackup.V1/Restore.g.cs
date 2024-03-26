@@ -51,67 +51,70 @@ namespace Google.Cloud.GkeBackup.V1 {
             "SUxFRBAEEgwKCERFTEVUSU5HEAU6fepBegogZ2tlYmFja3VwLmdvb2dsZWFw",
             "aXMuY29tL1Jlc3RvcmUSVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
             "e2xvY2F0aW9ufS9yZXN0b3JlUGxhbnMve3Jlc3RvcmVfcGxhbn0vcmVzdG9y",
-            "ZXMve3Jlc3RvcmV9IsQTCg1SZXN0b3JlQ29uZmlnEmQKGnZvbHVtZV9kYXRh",
+            "ZXMve3Jlc3RvcmV9IrwUCg1SZXN0b3JlQ29uZmlnEmkKGnZvbHVtZV9kYXRh",
             "X3Jlc3RvcmVfcG9saWN5GAEgASgOMkAuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1",
-            "cC52MS5SZXN0b3JlQ29uZmlnLlZvbHVtZURhdGFSZXN0b3JlUG9saWN5EnAK",
-            "IGNsdXN0ZXJfcmVzb3VyY2VfY29uZmxpY3RfcG9saWN5GAIgASgOMkYuZ29v",
-            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLkNsdXN0ZXJS",
-            "ZXNvdXJjZUNvbmZsaWN0UG9saWN5EnAKIG5hbWVzcGFjZWRfcmVzb3VyY2Vf",
-            "cmVzdG9yZV9tb2RlGAMgASgOMkYuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
-            "MS5SZXN0b3JlQ29uZmlnLk5hbWVzcGFjZWRSZXNvdXJjZVJlc3RvcmVNb2Rl",
-            "EmwKHmNsdXN0ZXJfcmVzb3VyY2VfcmVzdG9yZV9zY29wZRgEIAEoCzJELmdv",
-            "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5DbHVzdGVy",
-            "UmVzb3VyY2VSZXN0b3JlU2NvcGUSGAoOYWxsX25hbWVzcGFjZXMYBSABKAhI",
-            "ABJEChNzZWxlY3RlZF9uYW1lc3BhY2VzGAYgASgLMiUuZ29vZ2xlLmNsb3Vk",
-            "LmdrZWJhY2t1cC52MS5OYW1lc3BhY2VzSAASSwoVc2VsZWN0ZWRfYXBwbGlj",
-            "YXRpb25zGAcgASgLMiouZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5OYW1l",
-            "c3BhY2VkTmFtZXNIABIXCg1ub19uYW1lc3BhY2VzGAkgASgISAASRAoTZXhj",
-            "bHVkZWRfbmFtZXNwYWNlcxgKIAEoCzIlLmdvb2dsZS5jbG91ZC5na2ViYWNr",
-            "dXAudjEuTmFtZXNwYWNlc0gAElUKEnN1YnN0aXR1dGlvbl9ydWxlcxgIIAMo",
-            "CzI5Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5T",
-            "dWJzdGl0dXRpb25SdWxlElkKFHRyYW5zZm9ybWF0aW9uX3J1bGVzGAsgAygL",
-            "MjsuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLlRy",
-            "YW5zZm9ybWF0aW9uUnVsZRo6CglHcm91cEtpbmQSFgoOcmVzb3VyY2VfZ3Jv",
-            "dXAYASABKAkSFQoNcmVzb3VyY2Vfa2luZBgCIAEoCRryAQobQ2x1c3RlclJl",
-            "c291cmNlUmVzdG9yZVNjb3BlElAKFHNlbGVjdGVkX2dyb3VwX2tpbmRzGAEg",
-            "AygLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmln",
-            "Lkdyb3VwS2luZBJQChRleGNsdWRlZF9ncm91cF9raW5kcxgCIAMoCzIyLmdv",
+            "cC52MS5SZXN0b3JlQ29uZmlnLlZvbHVtZURhdGFSZXN0b3JlUG9saWN5QgPg",
+            "QQESdQogY2x1c3Rlcl9yZXNvdXJjZV9jb25mbGljdF9wb2xpY3kYAiABKA4y",
+            "Ri5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuQ2x1",
+            "c3RlclJlc291cmNlQ29uZmxpY3RQb2xpY3lCA+BBARJ1CiBuYW1lc3BhY2Vk",
+            "X3Jlc291cmNlX3Jlc3RvcmVfbW9kZRgDIAEoDjJGLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5OYW1lc3BhY2VkUmVzb3VyY2VS",
+            "ZXN0b3JlTW9kZUID4EEBEnEKHmNsdXN0ZXJfcmVzb3VyY2VfcmVzdG9yZV9z",
+            "Y29wZRgEIAEoCzJELmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9y",
+            "ZUNvbmZpZy5DbHVzdGVyUmVzb3VyY2VSZXN0b3JlU2NvcGVCA+BBARIYCg5h",
+            "bGxfbmFtZXNwYWNlcxgFIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMY",
+            "BiABKAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNI",
+            "ABJLChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYByABKAsyKi5nb29nbGUuY2xv",
+            "dWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEhcKDW5vX25hbWVz",
+            "cGFjZXMYCSABKAhIABJEChNleGNsdWRlZF9uYW1lc3BhY2VzGAogASgLMiUu",
+            "Z29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5OYW1lc3BhY2VzSAASWgoSc3Vi",
+            "c3RpdHV0aW9uX3J1bGVzGAggAygLMjkuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1",
+            "cC52MS5SZXN0b3JlQ29uZmlnLlN1YnN0aXR1dGlvblJ1bGVCA+BBARJeChR0",
+            "cmFuc2Zvcm1hdGlvbl9ydWxlcxgLIAMoCzI7Lmdvb2dsZS5jbG91ZC5na2Vi",
+            "YWNrdXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1hdGlvblJ1bGVCA+BB",
+            "ARpECglHcm91cEtpbmQSGwoOcmVzb3VyY2VfZ3JvdXAYASABKAlCA+BBARIa",
+            "Cg1yZXNvdXJjZV9raW5kGAIgASgJQgPgQQEahgIKG0NsdXN0ZXJSZXNvdXJj",
+            "ZVJlc3RvcmVTY29wZRJVChRzZWxlY3RlZF9ncm91cF9raW5kcxgBIAMoCzIy",
+            "Lmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91",
+            "cEtpbmRCA+BBARJVChRleGNsdWRlZF9ncm91cF9raW5kcxgCIAMoCzIyLmdv",
             "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91cEtp",
-            "bmQSFwoPYWxsX2dyb3VwX2tpbmRzGAMgASgIEhYKDm5vX2dyb3VwX2tpbmRz",
-            "GAQgASgIGs8BChBTdWJzdGl0dXRpb25SdWxlEhkKEXRhcmdldF9uYW1lc3Bh",
-            "Y2VzGAEgAygJEk4KEnRhcmdldF9ncm91cF9raW5kcxgCIAMoCzIyLmdvb2ds",
-            "ZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5Hcm91cEtpbmQS",
-            "HQoQdGFyZ2V0X2pzb25fcGF0aBgDIAEoCUID4EECEh4KFm9yaWdpbmFsX3Zh",
-            "bHVlX3BhdHRlcm4YBCABKAkSEQoJbmV3X3ZhbHVlGAUgASgJGvsBChhUcmFu",
-            "c2Zvcm1hdGlvblJ1bGVBY3Rpb24SVQoCb3AYASABKA4yRC5nb29nbGUuY2xv",
-            "dWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuVHJhbnNmb3JtYXRpb25S",
-            "dWxlQWN0aW9uLk9wQgPgQQISEQoJZnJvbV9wYXRoGAIgASgJEgwKBHBhdGgY",
-            "AyABKAkSDQoFdmFsdWUYBCABKAkiWAoCT3ASEgoOT1BfVU5TUEVDSUZJRUQQ",
-            "ABIKCgZSRU1PVkUQARIICgRNT1ZFEAISCAoEQ09QWRADEgcKA0FERBAEEggK",
-            "BFRFU1QQBRILCgdSRVBMQUNFEAYagAEKDlJlc291cmNlRmlsdGVyEhIKCm5h",
-            "bWVzcGFjZXMYASADKAkSRwoLZ3JvdXBfa2luZHMYAiADKAsyMi5nb29nbGUu",
-            "Y2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuR3JvdXBLaW5kEhEK",
-            "CWpzb25fcGF0aBgDIAEoCRraAQoSVHJhbnNmb3JtYXRpb25SdWxlEl0KDWZp",
-            "ZWxkX2FjdGlvbnMYASADKAsyQS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYx",
-            "LlJlc3RvcmVDb25maWcuVHJhbnNmb3JtYXRpb25SdWxlQWN0aW9uQgPgQQIS",
-            "UAoPcmVzb3VyY2VfZmlsdGVyGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmdrZWJh",
-            "Y2t1cC52MS5SZXN0b3JlQ29uZmlnLlJlc291cmNlRmlsdGVyEhMKC2Rlc2Ny",
-            "aXB0aW9uGAMgASgJIq8BChdWb2x1bWVEYXRhUmVzdG9yZVBvbGljeRIqCiZW",
-            "T0xVTUVfREFUQV9SRVNUT1JFX1BPTElDWV9VTlNQRUNJRklFRBAAEiMKH1JF",
-            "U1RPUkVfVk9MVU1FX0RBVEFfRlJPTV9CQUNLVVAQARIjCh9SRVVTRV9WT0xV",
-            "TUVfSEFORExFX0ZST01fQkFDS1VQEAISHgoaTk9fVk9MVU1FX0RBVEFfUkVT",
-            "VE9SQVRJT04QAyKDAQodQ2x1c3RlclJlc291cmNlQ29uZmxpY3RQb2xpY3kS",
-            "MAosQ0xVU1RFUl9SRVNPVVJDRV9DT05GTElDVF9QT0xJQ1lfVU5TUEVDSUZJ",
-            "RUQQABIYChRVU0VfRVhJU1RJTkdfVkVSU0lPThABEhYKElVTRV9CQUNLVVBf",
-            "VkVSU0lPThACIn8KHU5hbWVzcGFjZWRSZXNvdXJjZVJlc3RvcmVNb2RlEjAK",
-            "LE5BTUVTUEFDRURfUkVTT1VSQ0VfUkVTVE9SRV9NT0RFX1VOU1BFQ0lGSUVE",
-            "EAASFgoSREVMRVRFX0FORF9SRVNUT1JFEAESFAoQRkFJTF9PTl9DT05GTElD",
-            "VBACQiMKIW5hbWVzcGFjZWRfcmVzb3VyY2VfcmVzdG9yZV9zY29wZULDAQod",
-            "Y29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCDFJlc3RvcmVQcm90b1AB",
-            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNr",
-            "dXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHK",
-            "AhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6",
-            "R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "bmRCA+BBARIcCg9hbGxfZ3JvdXBfa2luZHMYAyABKAhCA+BBARIbCg5ub19n",
+            "cm91cF9raW5kcxgEIAEoCEID4EEBGuMBChBTdWJzdGl0dXRpb25SdWxlEh4K",
+            "EXRhcmdldF9uYW1lc3BhY2VzGAEgAygJQgPgQQESUwoSdGFyZ2V0X2dyb3Vw",
+            "X2tpbmRzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0",
+            "b3JlQ29uZmlnLkdyb3VwS2luZEID4EEBEh0KEHRhcmdldF9qc29uX3BhdGgY",
+            "AyABKAlCA+BBAhIjChZvcmlnaW5hbF92YWx1ZV9wYXR0ZXJuGAQgASgJQgPg",
+            "QQESFgoJbmV3X3ZhbHVlGAUgASgJQgPgQQEaigIKGFRyYW5zZm9ybWF0aW9u",
+            "UnVsZUFjdGlvbhJVCgJvcBgBIAEoDjJELmdvb2dsZS5jbG91ZC5na2ViYWNr",
+            "dXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1hdGlvblJ1bGVBY3Rpb24u",
+            "T3BCA+BBAhIWCglmcm9tX3BhdGgYAiABKAlCA+BBARIRCgRwYXRoGAMgASgJ",
+            "QgPgQQESEgoFdmFsdWUYBCABKAlCA+BBASJYCgJPcBISCg5PUF9VTlNQRUNJ",
+            "RklFRBAAEgoKBlJFTU9WRRABEggKBE1PVkUQAhIICgRDT1BZEAMSBwoDQURE",
+            "EAQSCAoEVEVTVBAFEgsKB1JFUExBQ0UQBhqPAQoOUmVzb3VyY2VGaWx0ZXIS",
+            "FwoKbmFtZXNwYWNlcxgBIAMoCUID4EEBEkwKC2dyb3VwX2tpbmRzGAIgAygL",
+            "MjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5SZXN0b3JlQ29uZmlnLkdy",
+            "b3VwS2luZEID4EEBEhYKCWpzb25fcGF0aBgDIAEoCUID4EEBGuQBChJUcmFu",
+            "c2Zvcm1hdGlvblJ1bGUSXQoNZmllbGRfYWN0aW9ucxgBIAMoCzJBLmdvb2ds",
+            "ZS5jbG91ZC5na2ViYWNrdXAudjEuUmVzdG9yZUNvbmZpZy5UcmFuc2Zvcm1h",
+            "dGlvblJ1bGVBY3Rpb25CA+BBAhJVCg9yZXNvdXJjZV9maWx0ZXIYAiABKAsy",
+            "Ny5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLlJlc3RvcmVDb25maWcuUmVz",
+            "b3VyY2VGaWx0ZXJCA+BBARIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBIq8B",
+            "ChdWb2x1bWVEYXRhUmVzdG9yZVBvbGljeRIqCiZWT0xVTUVfREFUQV9SRVNU",
+            "T1JFX1BPTElDWV9VTlNQRUNJRklFRBAAEiMKH1JFU1RPUkVfVk9MVU1FX0RB",
+            "VEFfRlJPTV9CQUNLVVAQARIjCh9SRVVTRV9WT0xVTUVfSEFORExFX0ZST01f",
+            "QkFDS1VQEAISHgoaTk9fVk9MVU1FX0RBVEFfUkVTVE9SQVRJT04QAyKDAQod",
+            "Q2x1c3RlclJlc291cmNlQ29uZmxpY3RQb2xpY3kSMAosQ0xVU1RFUl9SRVNP",
+            "VVJDRV9DT05GTElDVF9QT0xJQ1lfVU5TUEVDSUZJRUQQABIYChRVU0VfRVhJ",
+            "U1RJTkdfVkVSU0lPThABEhYKElVTRV9CQUNLVVBfVkVSU0lPThACIn8KHU5h",
+            "bWVzcGFjZWRSZXNvdXJjZVJlc3RvcmVNb2RlEjAKLE5BTUVTUEFDRURfUkVT",
+            "T1VSQ0VfUkVTVE9SRV9NT0RFX1VOU1BFQ0lGSUVEEAASFgoSREVMRVRFX0FO",
+            "RF9SRVNUT1JFEAESFAoQRkFJTF9PTl9DT05GTElDVBACQiMKIW5hbWVzcGFj",
+            "ZWRfcmVzb3VyY2VfcmVzdG9yZV9zY29wZULDAQodY29tLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjFCDFJlc3RvcmVQcm90b1ABWjtjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNrdXBw",
+            "YqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xvdWRc",
+            "R2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -131,7 +134,6 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// Represents both a request to Restore some portion of a Backup into
   /// a target GKE cluster and a record of the restore operation itself.
-  /// Next id: 18
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Restore : pb::IMessage<Restore>
@@ -1060,7 +1062,6 @@ namespace Google.Cloud.GkeBackup.V1 {
 
   /// <summary>
   /// Configuration of a restore.
-  /// Next id: 12
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RestoreConfig : pb::IMessage<RestoreConfig>
@@ -1134,7 +1135,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int VolumeDataRestorePolicyFieldNumber = 1;
     private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy volumeDataRestorePolicy_ = global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.VolumeDataRestorePolicy.Unspecified;
     /// <summary>
-    /// Specifies the mechanism to be used to restore volume data.
+    /// Optional. Specifies the mechanism to be used to restore volume data.
     /// Default: VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as
     /// NO_VOLUME_DATA_RESTORATION).
     /// </summary>
@@ -1151,9 +1152,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterResourceConflictPolicyFieldNumber = 2;
     private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceConflictPolicy clusterResourceConflictPolicy_ = global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceConflictPolicy.Unspecified;
     /// <summary>
-    /// Defines the behavior for handling the situation where cluster-scoped
-    /// resources being restored already exist in the target cluster. This MUST be
-    /// set to a value other than CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if
+    /// Optional. Defines the behavior for handling the situation where
+    /// cluster-scoped resources being restored already exist in the target
+    /// cluster. This MUST be set to a value other than
+    /// CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if
     /// [cluster_resource_restore_scope][google.cloud.gkebackup.v1.RestoreConfig.cluster_resource_restore_scope]
     /// is not empty.
     /// </summary>
@@ -1170,9 +1172,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int NamespacedResourceRestoreModeFieldNumber = 3;
     private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.NamespacedResourceRestoreMode namespacedResourceRestoreMode_ = global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.NamespacedResourceRestoreMode.Unspecified;
     /// <summary>
-    /// Defines the behavior for handling the situation where sets of namespaced
-    /// resources being restored already exist in the target cluster. This MUST be
-    /// set to a value other than NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
+    /// Optional. Defines the behavior for handling the situation where sets of
+    /// namespaced resources being restored already exist in the target cluster.
+    /// This MUST be set to a value other than
+    /// NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1187,8 +1190,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterResourceRestoreScopeFieldNumber = 4;
     private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ClusterResourceRestoreScope clusterResourceRestoreScope_;
     /// <summary>
-    /// Identifies the cluster-scoped resources to restore from the Backup.
-    /// Not specifying it means NO cluster resource will be restored.
+    /// Optional. Identifies the cluster-scoped resources to restore from the
+    /// Backup. Not specifying it means NO cluster resource will be restored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1314,10 +1317,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.SubstitutionRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.SubstitutionRule> substitutionRules_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.SubstitutionRule>();
     /// <summary>
-    /// A list of transformation rules to be applied against Kubernetes resources
-    /// as they are selected for restoration from a Backup. Rules are executed in
-    /// order defined - this order matters, as changes made by a rule may impact
-    /// the filtering logic of subsequent rules. An empty list means no
+    /// Optional. A list of transformation rules to be applied against Kubernetes
+    /// resources as they are selected for restoration from a Backup. Rules are
+    /// executed in order defined - this order matters, as changes made by a rule
+    /// may impact the filtering logic of subsequent rules. An empty list means no
     /// substitution will occur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1332,10 +1335,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule> transformationRules_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.TransformationRule>();
     /// <summary>
-    /// A list of transformation rules to be applied against Kubernetes resources
-    /// as they are selected for restoration from a Backup. Rules are executed in
-    /// order defined - this order matters, as changes made by a rule may impact
-    /// the filtering logic of subsequent rules. An empty list means no
+    /// Optional. A list of transformation rules to be applied against Kubernetes
+    /// resources as they are selected for restoration from a Backup. Rules are
+    /// executed in order defined - this order matters, as changes made by a rule
+    /// may impact the filtering logic of subsequent rules. An empty list means no
     /// transformation will occur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1912,7 +1915,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ResourceGroupFieldNumber = 1;
         private string resourceGroup_ = "";
         /// <summary>
-        /// API group string of a Kubernetes resource, e.g.
+        /// Optional. API group string of a Kubernetes resource, e.g.
         /// "apiextensions.k8s.io", "storage.k8s.io", etc.
         /// Note: use empty string for core API group
         /// </summary>
@@ -1929,8 +1932,9 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ResourceKindFieldNumber = 2;
         private string resourceKind_ = "";
         /// <summary>
-        /// Kind of a Kubernetes resource, e.g.
-        /// "CustomResourceDefinition", "StorageClass", etc.
+        /// Optional. Kind of a Kubernetes resource, must be in UpperCamelCase
+        /// (PascalCase) and singular form. E.g. "CustomResourceDefinition",
+        /// "StorageClass", etc.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2172,8 +2176,8 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind> selectedGroupKinds_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind>();
         /// <summary>
-        /// A list of cluster-scoped resource group kinds to restore from the
-        /// backup. If specified, only the selected resources will be restored.
+        /// Optional. A list of cluster-scoped resource group kinds to restore from
+        /// the backup. If specified, only the selected resources will be restored.
         /// Mutually exclusive to any other field in the message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2188,8 +2192,8 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind> excludedGroupKinds_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind>();
         /// <summary>
-        /// A list of cluster-scoped resource group kinds to NOT restore from the
-        /// backup. If specified, all valid cluster-scoped resources will be
+        /// Optional. A list of cluster-scoped resource group kinds to NOT restore
+        /// from the backup. If specified, all valid cluster-scoped resources will be
         /// restored except for those specified in the list.
         /// Mutually exclusive to any other field in the message.
         /// </summary>
@@ -2203,7 +2207,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int AllGroupKindsFieldNumber = 3;
         private bool allGroupKinds_;
         /// <summary>
-        /// If True, all valid cluster-scoped resources will be restored.
+        /// Optional. If True, all valid cluster-scoped resources will be restored.
         /// Mutually exclusive to any other field in the message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2219,7 +2223,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int NoGroupKindsFieldNumber = 4;
         private bool noGroupKinds_;
         /// <summary>
-        /// If True, no cluster-scoped resources will be restored.
+        /// Optional. If True, no cluster-scoped resources will be restored.
         /// This has the same restore scope as if the message is not defined.
         /// Mutually exclusive to any other field in the message.
         /// </summary>
@@ -2477,8 +2481,8 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> targetNamespaces_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// (Filtering parameter) Any resource subject to substitution must be
-        /// contained within one of the listed Kubernetes Namespace in the Backup.
+        /// Optional. (Filtering parameter) Any resource subject to substitution must
+        /// be contained within one of the listed Kubernetes Namespace in the Backup.
         /// If this field is not provided, no namespace filtering will be performed
         /// (all resources in all Namespaces, including all cluster-scoped resources,
         /// will be candidates for substitution).
@@ -2497,11 +2501,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind> targetGroupKinds_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind>();
         /// <summary>
-        /// (Filtering parameter) Any resource subject to substitution must belong to
-        /// one of the listed "types".
-        /// If this field is not provided, no type filtering will be performed (all
-        /// resources of all types matching previous filtering parameters will be
-        /// candidates for substitution).
+        /// Optional. (Filtering parameter) Any resource subject to substitution must
+        /// belong to one of the listed "types". If this field is not provided, no
+        /// type filtering will be performed (all resources of all types matching
+        /// previous filtering parameters will be candidates for substitution).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2534,7 +2537,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int OriginalValuePatternFieldNumber = 4;
         private string originalValuePattern_ = "";
         /// <summary>
-        /// (Filtering parameter) This is a [regular expression]
+        /// Optional. (Filtering parameter) This is a [regular expression]
         /// (https://en.wikipedia.org/wiki/Regular_expression)
         /// that is compared against the fields matched by the target_json_path
         /// expression (and must also have passed the previous filters).
@@ -2557,9 +2560,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int NewValueFieldNumber = 5;
         private string newValue_ = "";
         /// <summary>
-        /// This is the new value to set for any fields that pass the filtering and
-        /// selection criteria. To remove a value from a Kubernetes resource, either
-        /// leave this field unspecified, or set it to the empty string ("").
+        /// Optional. This is the new value to set for any fields that pass the
+        /// filtering and selection criteria. To remove a value from a Kubernetes
+        /// resource, either leave this field unspecified, or set it to the empty
+        /// string ("").
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2850,8 +2854,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int FromPathFieldNumber = 2;
         private string fromPath_ = "";
         /// <summary>
-        /// A string containing a JSON Pointer value that references the location in
-        /// the target document to move the value from.
+        /// Optional. A string containing a JSON Pointer value that references the
+        /// location in the target document to move the value from.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2866,8 +2870,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int PathFieldNumber = 3;
         private string path_ = "";
         /// <summary>
-        /// A string containing a JSON-Pointer value that references a location
-        /// within the target document where the operation is performed.
+        /// Optional. A string containing a JSON-Pointer value that references a
+        /// location within the target document where the operation is performed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2882,7 +2886,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ValueFieldNumber = 4;
         private string value_ = "";
         /// <summary>
-        /// A string that specifies the desired value in string format to
+        /// Optional. A string that specifies the desired value in string format to
         /// use for transformation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3211,13 +3215,11 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> namespaces_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// (Filtering parameter) Any resource subject to transformation must be
-        /// contained within one of the listed Kubernetes Namespace in the Backup.
-        /// If this field is not provided, no namespace filtering will be performed
-        /// (all resources in all Namespaces, including all cluster-scoped resources,
-        /// will be candidates for transformation).
-        /// To mix cluster-scoped and namespaced resources in the same rule, use an
-        /// empty string ("") as one of the target namespaces.
+        /// Optional. (Filtering parameter) Any resource subject to transformation
+        /// must be contained within one of the listed Kubernetes Namespace in the
+        /// Backup. If this field is not provided, no namespace filtering will be
+        /// performed (all resources in all Namespaces, including all cluster-scoped
+        /// resources, will be candidates for transformation).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3231,10 +3233,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind> groupKinds_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.GroupKind>();
         /// <summary>
-        /// (Filtering parameter) Any resource subject to transformation must belong
-        /// to one of the listed "types". If this field is not provided, no type
-        /// filtering will be performed (all resources of all types matching previous
-        /// filtering parameters will be candidates for transformation).
+        /// Optional. (Filtering parameter) Any resource subject to transformation
+        /// must belong to one of the listed "types". If this field is not provided,
+        /// no type filtering will be performed (all resources of all types matching
+        /// previous filtering parameters will be candidates for transformation).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3246,7 +3248,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int JsonPathFieldNumber = 3;
         private string jsonPath_ = "";
         /// <summary>
-        /// This is a [JSONPath]
+        /// Optional. This is a [JSONPath]
         /// (https://github.com/json-path/JsonPath/blob/master/README.md)
         /// expression that matches specific fields of candidate
         /// resources and it operates as a filtering parameter (resources that
@@ -3496,10 +3498,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ResourceFilterFieldNumber = 2;
         private global::Google.Cloud.GkeBackup.V1.RestoreConfig.Types.ResourceFilter resourceFilter_;
         /// <summary>
-        /// This field is used to specify a set of fields that should be used to
-        /// determine which resources in backup should be acted upon by the supplied
-        /// transformation rule actions, and this will ensure that only specific
-        /// resources are affected by transformation rule actions.
+        /// Optional. This field is used to specify a set of fields that should be
+        /// used to determine which resources in backup should be acted upon by the
+        /// supplied transformation rule actions, and this will ensure that only
+        /// specific resources are affected by transformation rule actions.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3514,7 +3516,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int DescriptionFieldNumber = 3;
         private string description_ = "";
         /// <summary>
-        /// The description is a user specified string description of the
+        /// Optional. The description is a user specified string description of the
         /// transformation rule.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

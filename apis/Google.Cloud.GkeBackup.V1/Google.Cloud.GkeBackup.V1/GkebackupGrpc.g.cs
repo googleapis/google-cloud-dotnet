@@ -138,6 +138,10 @@ namespace Google.Cloud.GkeBackup.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest> __Marshaller_google_cloud_gkebackup_v1_GetVolumeRestoreRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.VolumeRestore> __Marshaller_google_cloud_gkebackup_v1_VolumeRestore = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.VolumeRestore.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest> __Marshaller_google_cloud_gkebackup_v1_GetBackupIndexDownloadUrlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse> __Marshaller_google_cloud_gkebackup_v1_GetBackupIndexDownloadUrlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupPlanRequest, global::Google.LongRunning.Operation> __Method_CreateBackupPlan = new grpc::Method<global::Google.Cloud.GkeBackup.V1.CreateBackupPlanRequest, global::Google.LongRunning.Operation>(
@@ -330,6 +334,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         "GetVolumeRestore",
         __Marshaller_google_cloud_gkebackup_v1_GetVolumeRestoreRequest,
         __Marshaller_google_cloud_gkebackup_v1_VolumeRestore);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest, global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse> __Method_GetBackupIndexDownloadUrl = new grpc::Method<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest, global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupIndexDownloadUrl",
+        __Marshaller_google_cloud_gkebackup_v1_GetBackupIndexDownloadUrlRequest,
+        __Marshaller_google_cloud_gkebackup_v1_GetBackupIndexDownloadUrlResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -625,6 +637,18 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.VolumeRestore> GetVolumeRestore(global::Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve the link to the backupIndex.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrl(global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1810,6 +1834,54 @@ namespace Google.Cloud.GkeBackup.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetVolumeRestore, null, options, request);
       }
+      /// <summary>
+      /// Retrieve the link to the backupIndex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupIndexDownloadUrl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the link to the backupIndex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse GetBackupIndexDownloadUrl(global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupIndexDownloadUrl, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve the link to the backupIndex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupIndexDownloadUrlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve the link to the backupIndex.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse> GetBackupIndexDownloadUrlAsync(global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupIndexDownloadUrl, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BackupForGKEClient NewInstance(ClientBaseConfiguration configuration)
@@ -1847,7 +1919,8 @@ namespace Google.Cloud.GkeBackup.V1 {
           .AddMethod(__Method_UpdateRestore, serviceImpl.UpdateRestore)
           .AddMethod(__Method_DeleteRestore, serviceImpl.DeleteRestore)
           .AddMethod(__Method_ListVolumeRestores, serviceImpl.ListVolumeRestores)
-          .AddMethod(__Method_GetVolumeRestore, serviceImpl.GetVolumeRestore).Build();
+          .AddMethod(__Method_GetVolumeRestore, serviceImpl.GetVolumeRestore)
+          .AddMethod(__Method_GetBackupIndexDownloadUrl, serviceImpl.GetBackupIndexDownloadUrl).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1881,6 +1954,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       serviceBinder.AddMethod(__Method_DeleteRestore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.DeleteRestoreRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRestore));
       serviceBinder.AddMethod(__Method_ListVolumeRestores, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.ListVolumeRestoresRequest, global::Google.Cloud.GkeBackup.V1.ListVolumeRestoresResponse>(serviceImpl.ListVolumeRestores));
       serviceBinder.AddMethod(__Method_GetVolumeRestore, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetVolumeRestoreRequest, global::Google.Cloud.GkeBackup.V1.VolumeRestore>(serviceImpl.GetVolumeRestore));
+      serviceBinder.AddMethod(__Method_GetBackupIndexDownloadUrl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest, global::Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse>(serviceImpl.GetBackupIndexDownloadUrl));
     }
 
   }
