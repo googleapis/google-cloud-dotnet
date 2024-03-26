@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.1.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+### Documentation improvements
+
+- Rephrase comment on psa_range ([commit 0387455](https://github.com/googleapis/google-cloud-dotnet/commit/038745567fb5baf838ac550c5733a08113a602df))
+- Fix comment for UNIX of SecurityStyle ([commit 0387455](https://github.com/googleapis/google-cloud-dotnet/commit/038745567fb5baf838ac550c5733a08113a602df))
+
 ## Version 1.0.0, released 2024-03-12
 
 This is the first GA release of the library.
