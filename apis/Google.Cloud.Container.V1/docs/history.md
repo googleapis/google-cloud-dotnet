@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.24.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add optional secondary_boot_disk_update_strategy field to NodePool API ([commit 0ad229c](https://github.com/googleapis/google-cloud-dotnet/commit/0ad229ca2762b397839871dbc12762e86a338a7b))
+- Allow existing clusters to enable multi-networking ([commit 0ad229c](https://github.com/googleapis/google-cloud-dotnet/commit/0ad229ca2762b397839871dbc12762e86a338a7b))
+
 ## Version 3.23.0, released 2024-03-21
 
 ### New features
