@@ -3943,7 +3943,7 @@
     },
     {
       "id": "Google.Cloud.ResourceSettings.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Resource Settings",
       "productUrl": "https://cloud.google.com/resource-settings/docs",
