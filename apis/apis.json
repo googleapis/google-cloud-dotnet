@@ -722,7 +722,7 @@
     },
     {
       "id": "Google.Cloud.BeyondCorp.AppGateways.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "BeyondCorp AppGateways",
       "productUrl": "https://cloud.google.com/beyondcorp-enterprise",
