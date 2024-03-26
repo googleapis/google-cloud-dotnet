@@ -68,6 +68,8 @@ namespace Google.Cloud.Batch.V1Alpha
         {
             yield return BatchReflection.Descriptor;
             yield return JobReflection.Descriptor;
+            yield return NotificationReflection.Descriptor;
+            yield return ResourceAllowanceReflection.Descriptor;
             yield return TaskReflection.Descriptor;
             yield return VolumeReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
