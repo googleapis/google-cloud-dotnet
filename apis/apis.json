@@ -3356,7 +3356,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V2",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Notebooks",
       "productUrl": "https://cloud.google.com/vertex-ai/docs/workbench/instances/introduction",
