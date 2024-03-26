@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.4.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add smart scheduling ([commit 41a63ef](https://github.com/googleapis/google-cloud-dotnet/commit/41a63ef2d51dec24dd60ce04f2000841fe67245e))
+- Add backup indexing ([commit 41a63ef](https://github.com/googleapis/google-cloud-dotnet/commit/41a63ef2d51dec24dd60ce04f2000841fe67245e))
+
+### Documentation improvements
+
+- Remove the next id annotation ([commit 41a63ef](https://github.com/googleapis/google-cloud-dotnet/commit/41a63ef2d51dec24dd60ce04f2000841fe67245e))
+- Add output only and optional api field behavior label ([commit 41a63ef](https://github.com/googleapis/google-cloud-dotnet/commit/41a63ef2d51dec24dd60ce04f2000841fe67245e))
+- Update retention policy and cron schedule comment to include new constraints from smart scheduling ([commit 41a63ef](https://github.com/googleapis/google-cloud-dotnet/commit/41a63ef2d51dec24dd60ce04f2000841fe67245e))
+
 ## Version 2.3.0, released 2024-02-28
 
 ### Documentation improvements
