@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add Vector Index API ([commit 6d2a003](https://github.com/googleapis/google-cloud-dotnet/commit/6d2a0034b46c52254739cbd097fbe56f6d02b2b8))
+
 ## Version 3.7.0, released 2024-03-21
 
 ### New features
