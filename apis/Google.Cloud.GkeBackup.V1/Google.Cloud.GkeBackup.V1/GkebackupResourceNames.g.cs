@@ -769,4 +769,14 @@ namespace Google.Cloud.GkeBackup.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetBackupIndexDownloadUrlRequest
+    {
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+    }
 }

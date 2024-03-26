@@ -65,8 +65,8 @@ namespace Google.Cloud.GkeBackup.V1
                 },
                 {
                     "google.longrunning.Operations.DeleteOperation",
-                    // { "delete": "/v1/{name=projects/*/locations/*}/operations" }
-                    proto::ByteString.FromBase64("KiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9ucw==")
+                    // { "delete": "/v1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ki4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
                 },
                 {
                     "google.longrunning.Operations.GetOperation",

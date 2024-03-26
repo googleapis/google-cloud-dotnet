@@ -28,37 +28,38 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xl",
             "L2Nsb3VkL2drZWJhY2t1cC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8iuw0KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
+            "b2J1Zi90aW1lc3RhbXAucHJvdG8i6A0KBkJhY2t1cBIRCgRuYW1lGAEgASgJ",
             "QgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
             "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoG",
-            "bWFudWFsGAUgASgIQgPgQQMSPQoGbGFiZWxzGAYgAygLMi0uZ29vZ2xlLmNs",
-            "b3VkLmdrZWJhY2t1cC52MS5CYWNrdXAuTGFiZWxzRW50cnkSGAoQZGVsZXRl",
-            "X2xvY2tfZGF5cxgHIAEoBRJAChdkZWxldGVfbG9ja19leHBpcmVfdGltZRgI",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgtyZXRh",
-            "aW5fZGF5cxgJIAEoBRI7ChJyZXRhaW5fZXhwaXJlX3RpbWUYCiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRQoOZW5jcnlwdGlvbl9r",
-            "ZXkYCyABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkVuY3J5cHRp",
-            "b25LZXlCA+BBAxIdCg5hbGxfbmFtZXNwYWNlcxgMIAEoCEID4EEDSAASSQoT",
-            "c2VsZWN0ZWRfbmFtZXNwYWNlcxgNIAEoCzIlLmdvb2dsZS5jbG91ZC5na2Vi",
-            "YWNrdXAudjEuTmFtZXNwYWNlc0ID4EEDSAASUAoVc2VsZWN0ZWRfYXBwbGlj",
-            "YXRpb25zGA4gASgLMiouZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5OYW1l",
-            "c3BhY2VkTmFtZXNCA+BBA0gAEiEKFGNvbnRhaW5zX3ZvbHVtZV9kYXRhGA8g",
-            "ASgIQgPgQQMSHQoQY29udGFpbnNfc2VjcmV0cxgQIAEoCEID4EEDElAKEGNs",
-            "dXN0ZXJfbWV0YWRhdGEYESABKAsyMS5nb29nbGUuY2xvdWQuZ2tlYmFja3Vw",
-            "LnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRhdGFCA+BBAxI7CgVzdGF0ZRgSIAEo",
-            "DjInLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuQmFja3VwLlN0YXRlQgPg",
-            "QQMSGQoMc3RhdGVfcmVhc29uGBMgASgJQgPgQQMSNgoNY29tcGxldGVfdGlt",
-            "ZRgUIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIbCg5y",
-            "ZXNvdXJjZV9jb3VudBgVIAEoBUID4EEDEhkKDHZvbHVtZV9jb3VudBgWIAEo",
-            "BUID4EEDEhcKCnNpemVfYnl0ZXMYFyABKANCA+BBAxIRCgRldGFnGBggASgJ",
-            "QgPgQQMSEwoLZGVzY3JpcHRpb24YGSABKAkSFgoJcG9kX2NvdW50GBogASgF",
-            "QgPgQQMSJQoYY29uZmlnX2JhY2t1cF9zaXplX2J5dGVzGBsgASgDQgPgQQMa",
-            "nQIKD0NsdXN0ZXJNZXRhZGF0YRIPCgdjbHVzdGVyGAEgASgJEhMKC2s4c192",
-            "ZXJzaW9uGAIgASgJEmUKE2JhY2t1cF9jcmRfdmVyc2lvbnMYAyADKAsySC5n",
-            "b29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRh",
-            "dGEuQmFja3VwQ3JkVmVyc2lvbnNFbnRyeRIVCgtna2VfdmVyc2lvbhgEIAEo",
-            "CUgAEhgKDmFudGhvc192ZXJzaW9uGAUgASgJSAAaOAoWQmFja3VwQ3JkVmVy",
+            "bWFudWFsGAUgASgIQgPgQQMSQgoGbGFiZWxzGAYgAygLMi0uZ29vZ2xlLmNs",
+            "b3VkLmdrZWJhY2t1cC52MS5CYWNrdXAuTGFiZWxzRW50cnlCA+BBARIdChBk",
+            "ZWxldGVfbG9ja19kYXlzGAcgASgFQgPgQQESQAoXZGVsZXRlX2xvY2tfZXhw",
+            "aXJlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSGAoLcmV0YWluX2RheXMYCSABKAVCA+BBARI7ChJyZXRhaW5fZXhwaXJl",
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "RQoOZW5jcnlwdGlvbl9rZXkYCyABKAsyKC5nb29nbGUuY2xvdWQuZ2tlYmFj",
+            "a3VwLnYxLkVuY3J5cHRpb25LZXlCA+BBAxIdCg5hbGxfbmFtZXNwYWNlcxgM",
+            "IAEoCEID4EEDSAASSQoTc2VsZWN0ZWRfbmFtZXNwYWNlcxgNIAEoCzIlLmdv",
+            "b2dsZS5jbG91ZC5na2ViYWNrdXAudjEuTmFtZXNwYWNlc0ID4EEDSAASUAoV",
+            "c2VsZWN0ZWRfYXBwbGljYXRpb25zGA4gASgLMiouZ29vZ2xlLmNsb3VkLmdr",
+            "ZWJhY2t1cC52MS5OYW1lc3BhY2VkTmFtZXNCA+BBA0gAEiEKFGNvbnRhaW5z",
+            "X3ZvbHVtZV9kYXRhGA8gASgIQgPgQQMSHQoQY29udGFpbnNfc2VjcmV0cxgQ",
+            "IAEoCEID4EEDElAKEGNsdXN0ZXJfbWV0YWRhdGEYESABKAsyMS5nb29nbGUu",
+            "Y2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRhdGFCA+BB",
+            "AxI7CgVzdGF0ZRgSIAEoDjInLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEu",
+            "QmFja3VwLlN0YXRlQgPgQQMSGQoMc3RhdGVfcmVhc29uGBMgASgJQgPgQQMS",
+            "NgoNY29tcGxldGVfdGltZRgUIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIbCg5yZXNvdXJjZV9jb3VudBgVIAEoBUID4EEDEhkKDHZv",
+            "bHVtZV9jb3VudBgWIAEoBUID4EEDEhcKCnNpemVfYnl0ZXMYFyABKANCA+BB",
+            "AxIRCgRldGFnGBggASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YGSABKAlCA+BB",
+            "ARIWCglwb2RfY291bnQYGiABKAVCA+BBAxIlChhjb25maWdfYmFja3VwX3Np",
+            "emVfYnl0ZXMYGyABKANCA+BBAxq2AgoPQ2x1c3Rlck1ldGFkYXRhEhQKB2Ns",
+            "dXN0ZXIYASABKAlCA+BBAxIYCgtrOHNfdmVyc2lvbhgCIAEoCUID4EEDEmoK",
+            "E2JhY2t1cF9jcmRfdmVyc2lvbnMYAyADKAsySC5nb29nbGUuY2xvdWQuZ2tl",
+            "YmFja3VwLnYxLkJhY2t1cC5DbHVzdGVyTWV0YWRhdGEuQmFja3VwQ3JkVmVy",
+            "c2lvbnNFbnRyeUID4EEDEhoKC2drZV92ZXJzaW9uGAQgASgJQgPgQQNIABId",
+            "Cg5hbnRob3NfdmVyc2lvbhgFIAEoCUID4EEDSAAaOAoWQmFja3VwQ3JkVmVy",
             "c2lvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhIK",
             "EHBsYXRmb3JtX3ZlcnNpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
             "Eg0KBXZhbHVlGAIgASgJOgI4ASJmCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
@@ -88,7 +89,6 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// some portion of the state of a GKE cluster, the record of the backup
   /// operation itself, and an anchor for the underlying artifacts that
   /// comprise the Backup (the config backup and VolumeBackups).
-  /// Next id: 28
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Backup : pb::IMessage<Backup>
@@ -255,7 +255,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// A set of custom labels supplied by user.
+    /// Optional. A set of custom labels supplied by user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -267,9 +267,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DeleteLockDaysFieldNumber = 7;
     private int deleteLockDays_;
     /// <summary>
-    /// Minimum age for this Backup (in days). If this field is set to a non-zero
-    /// value, the Backup will be "locked" against deletion (either manual or
-    /// automatic deletion) for the number of days provided (measured from the
+    /// Optional. Minimum age for this Backup (in days). If this field is set to a
+    /// non-zero value, the Backup will be "locked" against deletion (either manual
+    /// or automatic deletion) for the number of days provided (measured from the
     /// creation time of the Backup).  MUST be an integer value between 0-90
     /// (inclusive).
     ///
@@ -308,8 +308,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int RetainDaysFieldNumber = 9;
     private int retainDays_;
     /// <summary>
-    /// The age (in days) after which this Backup will be automatically deleted.
-    /// Must be an integer value >= 0:
+    /// Optional. The age (in days) after which this Backup will be automatically
+    /// deleted. Must be an integer value >= 0:
     ///
     /// - If 0, no automatic deletion will occur for this Backup.
     /// - If not 0, this must be >=
@@ -598,7 +598,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DescriptionFieldNumber = 25;
     private string description_ = "";
     /// <summary>
-    /// User specified descriptive string for this Backup.
+    /// Optional. User specified descriptive string for this Backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1601,7 +1601,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int ClusterFieldNumber = 1;
         private string cluster_ = "";
         /// <summary>
-        /// The source cluster from which this Backup was created.
+        /// Output only. The source cluster from which this Backup was created.
         /// Valid formats:
         ///
         ///   - `projects/*/locations/*/clusters/*`
@@ -1623,7 +1623,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int K8SVersionFieldNumber = 2;
         private string k8SVersion_ = "";
         /// <summary>
-        /// The Kubernetes server version of the source cluster.
+        /// Output only. The Kubernetes server version of the source cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1640,7 +1640,8 @@ namespace Google.Cloud.GkeBackup.V1 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
         private readonly pbc::MapField<string, string> backupCrdVersions_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// A list of the Backup for GKE CRD versions found in the cluster.
+        /// Output only. A list of the Backup for GKE CRD versions found in the
+        /// cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1651,7 +1652,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// <summary>Field number for the "gke_version" field.</summary>
         public const int GkeVersionFieldNumber = 4;
         /// <summary>
-        /// GKE version
+        /// Output only. GKE version
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1680,7 +1681,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         /// <summary>Field number for the "anthos_version" field.</summary>
         public const int AnthosVersionFieldNumber = 5;
         /// <summary>
-        /// Anthos version
+        /// Output only. Anthos version
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

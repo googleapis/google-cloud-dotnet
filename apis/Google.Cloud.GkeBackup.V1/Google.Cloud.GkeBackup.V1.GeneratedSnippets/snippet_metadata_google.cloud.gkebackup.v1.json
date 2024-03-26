@@ -6869,6 +6869,293 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_sync",
+      "title": "GetBackupIndexDownloadUrlRequestObject",
+      "description": "Snippet for GetBackupIndexDownloadUrl",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrl",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_async",
+      "title": "GetBackupIndexDownloadUrlRequestObjectAsync",
+      "description": "Snippet for GetBackupIndexDownloadUrlAsync",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrlAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_sync_flattened",
+      "title": "GetBackupIndexDownloadUrl",
+      "description": "Snippet for GetBackupIndexDownloadUrl",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrl",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrl",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_async_flattened",
+      "title": "GetBackupIndexDownloadUrlAsync",
+      "description": "Snippet for GetBackupIndexDownloadUrlAsync",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrlAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_sync_flattened_resourceNames",
+      "title": "GetBackupIndexDownloadUrlResourceNames",
+      "description": "Snippet for GetBackupIndexDownloadUrl",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrl",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrl",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gkebackup_v1_generated_BackupForGKE_GetBackupIndexDownloadUrl_async_flattened_resourceNames",
+      "title": "GetBackupIndexDownloadUrlResourceNamesAsync",
+      "description": "Snippet for GetBackupIndexDownloadUrlAsync",
+      "file": "BackupForGKEClient.GetBackupIndexDownloadUrlResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBackupIndexDownloadUrlAsync",
+        "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient.GetBackupIndexDownloadUrlAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeBackup.V1.BackupName",
+            "name": "backup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeBackup.V1.GetBackupIndexDownloadUrlResponse>",
+        "client": {
+          "shortName": "BackupForGKEClient",
+          "fullName": "Google.Cloud.GkeBackup.V1.BackupForGKEClient"
+        },
+        "method": {
+          "shortName": "GetBackupIndexDownloadUrl",
+          "fullName": "google.cloud.gkebackup.v1.BackupForGKE.GetBackupIndexDownloadUrl",
+          "service": {
+            "shortName": "BackupForGKE",
+            "fullName": "google.cloud.gkebackup.v1.BackupForGKE"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

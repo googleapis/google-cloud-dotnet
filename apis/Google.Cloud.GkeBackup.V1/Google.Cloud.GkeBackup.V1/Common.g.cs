@@ -25,20 +25,21 @@ namespace Google.Cloud.GkeBackup.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxIZZ29v",
-            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90byIgCgpOYW1lc3BhY2VzEhIKCm5hbWVzcGFjZXMYASADKAkiMQoOTmFt",
-            "ZXNwYWNlZE5hbWUSEQoJbmFtZXNwYWNlGAEgASgJEgwKBG5hbWUYAiABKAki",
-            "VgoPTmFtZXNwYWNlZE5hbWVzEkMKEG5hbWVzcGFjZWRfbmFtZXMYASADKAsy",
-            "KS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lIlcK",
-            "DUVuY3J5cHRpb25LZXkSRgoWZ2NwX2ttc19lbmNyeXB0aW9uX2tleRgBIAEo",
-            "CUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlCwgEK",
-            "HWNvbS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxQgtDb21tb25Qcm90b1AB",
-            "WjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNr",
-            "dXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHK",
-            "AhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6",
-            "R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byIlCgpOYW1l",
+            "c3BhY2VzEhcKCm5hbWVzcGFjZXMYASADKAlCA+BBASI7Cg5OYW1lc3BhY2Vk",
+            "TmFtZRIWCgluYW1lc3BhY2UYASABKAlCA+BBARIRCgRuYW1lGAIgASgJQgPg",
+            "QQEiWwoPTmFtZXNwYWNlZE5hbWVzEkgKEG5hbWVzcGFjZWRfbmFtZXMYASAD",
+            "KAsyKS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1l",
+            "QgPgQQEiWgoNRW5jcnlwdGlvbktleRJJChZnY3Bfa21zX2VuY3J5cHRpb25f",
+            "a2V5GAEgASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
+            "eXB0b0tleULCAQodY29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCC0Nv",
+            "bW1vblByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZ2tlYmFja3VwL2Fw",
+            "aXYxL2drZWJhY2t1cHBiO2drZWJhY2t1cHBiqgIZR29vZ2xlLkNsb3VkLkdr",
+            "ZUJhY2t1cC5WMcoCGUdvb2dsZVxDbG91ZFxHa2VCYWNrdXBcVjHqAhxHb29n",
+            "bGU6OkNsb3VkOjpHa2VCYWNrdXA6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.Namespaces), global::Google.Cloud.GkeBackup.V1.Namespaces.Parser, new[]{ "Namespaces_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.NamespacedName), global::Google.Cloud.GkeBackup.V1.NamespacedName.Parser, new[]{ "Namespace", "Name" }, null, null, null, null),
@@ -104,7 +105,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> namespaces_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of Kubernetes Namespaces
+    /// Optional. A list of Kubernetes Namespaces
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -288,7 +289,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int NamespaceFieldNumber = 1;
     private string namespace_ = "";
     /// <summary>
-    /// The Namespace of the Kubernetes resource.
+    /// Optional. The Namespace of the Kubernetes resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -303,7 +304,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// The name of the Kubernetes resource.
+    /// Optional. The name of the Kubernetes resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -525,7 +526,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GkeBackup.V1.NamespacedName.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.NamespacedName> namespacedNames_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.NamespacedName>();
     /// <summary>
-    /// A list of namespaced Kubernetes resources.
+    /// Optional. A list of namespaced Kubernetes resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -709,7 +710,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int GcpKmsEncryptionKeyFieldNumber = 1;
     private string gcpKmsEncryptionKey_ = "";
     /// <summary>
-    /// Google Cloud KMS encryption key. Format:
+    /// Optional. Google Cloud KMS encryption key. Format:
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
