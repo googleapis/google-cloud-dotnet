@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.0.0-beta07, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
 ## Version 3.0.0-beta06, released 2024-02-29
 
 ### Documentation improvements
