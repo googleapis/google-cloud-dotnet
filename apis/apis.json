@@ -1575,7 +1575,7 @@
     },
     {
       "id": "Google.Cloud.DataFusion.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Cloud Data Fusion",
       "productUrl": "https://cloud.google.com/data-fusion/docs/",
