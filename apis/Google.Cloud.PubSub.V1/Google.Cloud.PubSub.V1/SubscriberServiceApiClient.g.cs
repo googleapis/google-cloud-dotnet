@@ -3470,7 +3470,11 @@ namespace Google.Cloud.PubSub.V1
         {
             GrpcClient = grpcClient;
             SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>("CreateSubscription", grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSubscription);
