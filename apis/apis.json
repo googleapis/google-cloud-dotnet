@@ -1638,7 +1638,7 @@
     },
     {
       "id": "Google.Cloud.Dataform.V1Beta1",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "Dataform",
       "productUrl": "https://cloud.google.com/dataform",
