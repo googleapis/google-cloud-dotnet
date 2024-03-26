@@ -345,7 +345,8 @@ namespace Google.Cloud.Tools.ReleaseManager
                         var structuredDefaultVersion = StructuredVersion.FromString(defaultVersion);
                         var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
                         if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
-                            structuredDefaultVersion.Major == structuredCurrentVersion.Major)
+                            structuredDefaultVersion.Major == structuredCurrentVersion.Major &&
+                            structuredDefaultVersion.IsStable)
                         {
                             dependencies[package] = defaultVersion;
                         }
