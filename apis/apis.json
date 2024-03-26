@@ -423,7 +423,7 @@
     },
     {
       "id": "Google.Cloud.AppHub.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "App Hub",
       "productUrl": "https://cloud.google.com/app-hub/docs/overview",
