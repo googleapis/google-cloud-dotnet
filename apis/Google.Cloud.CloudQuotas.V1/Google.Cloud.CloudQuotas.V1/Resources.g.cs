@@ -54,7 +54,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhSW5jcmVhc2VFbGlnaWJpbGl0eS5J",
             "bmVsaWdpYmlsaXR5UmVhc29uImQKE0luZWxpZ2liaWxpdHlSZWFzb24SJAog",
             "SU5FTElHSUJJTElUWV9SRUFTT05fVU5TUEVDSUZJRUQQABIcChhOT19WQUxJ",
-            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIogGCg9RdW90YVByZWZl",
+            "RF9CSUxMSU5HX0FDQ09VTlQQARIJCgVPVEhFUhACIoUGCg9RdW90YVByZWZl",
             "cmVuY2USDAoEbmFtZRgBIAEoCRJTCgpkaW1lbnNpb25zGAIgAygLMjouZ29v",
             "Z2xlLmFwaS5jbG91ZHF1b3Rhcy52MS5RdW90YVByZWZlcmVuY2UuRGltZW5z",
             "aW9uc0VudHJ5QgPgQQUSQQoMcXVvdGFfY29uZmlnGAMgASgLMiYuZ29vZ2xl",
@@ -63,39 +63,39 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIUCgdzZXJ2aWNlGAcgASgJ",
             "QgPgQQISFQoIcXVvdGFfaWQYCCABKAlCA+BBAhIYCgtyZWNvbmNpbGluZxgK",
-            "IAEoCEID4EEDEhUKDWp1c3RpZmljYXRpb24YCyABKAkSHQoNY29udGFjdF9l",
-            "bWFpbBgMIAEoCUIG4EEE4EECGjEKD0RpbWVuc2lvbnNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOp8C6kGbAgoqY2xvdWRxdW90YXMu",
-            "Z29vZ2xlYXBpcy5jb20vUXVvdGFQcmVmZXJlbmNlEktwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97",
-            "cXVvdGFfcHJlZmVyZW5jZX0SSWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5j",
-            "ZX0SVW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5jZX0i",
-            "sQMKC1F1b3RhQ29uZmlnEhwKD3ByZWZlcnJlZF92YWx1ZRgBIAEoA0ID4EEC",
-            "EhkKDHN0YXRlX2RldGFpbBgCIAEoCUID4EEDEjcKDWdyYW50ZWRfdmFsdWUY",
-            "AyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEDEhUKCHRy",
-            "YWNlX2lkGAQgASgJQgPgQQMSUQoLYW5ub3RhdGlvbnMYBSADKAsyNy5nb29n",
-            "bGUuYXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhQ29uZmlnLkFubm90YXRpb25z",
-            "RW50cnlCA+BBARJKCg5yZXF1ZXN0X29yaWdpbhgGIAEoDjItLmdvb2dsZS5h",
-            "cGkuY2xvdWRxdW90YXMudjEuUXVvdGFDb25maWcuT3JpZ2luQgPgQQMaMgoQ",
-            "QW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIkYKBk9yaWdpbhIWChJPUklHSU5fVU5TUEVDSUZJRUQQABIRCg1DTE9V",
-            "RF9DT05TT0xFEAESEQoNQVVUT19BREpVU1RFUhACIuoBCg5EaW1lbnNpb25z",
-            "SW5mbxJNCgpkaW1lbnNpb25zGAEgAygLMjkuZ29vZ2xlLmFwaS5jbG91ZHF1",
-            "b3Rhcy52MS5EaW1lbnNpb25zSW5mby5EaW1lbnNpb25zRW50cnkSOAoHZGV0",
-            "YWlscxgCIAEoCzInLmdvb2dsZS5hcGkuY2xvdWRxdW90YXMudjEuUXVvdGFE",
-            "ZXRhaWxzEhwKFGFwcGxpY2FibGVfbG9jYXRpb25zGAMgAygJGjEKD0RpbWVu",
-            "c2lvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIh0K",
-            "DFF1b3RhRGV0YWlscxINCgV2YWx1ZRgBIAEoAyp+ChBRdW90YVNhZmV0eUNo",
-            "ZWNrEiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh4KGlFV",
-            "T1RBX0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiUVVPVEFfREVDUkVBU0Vf",
-            "UEVSQ0VOVEFHRV9UT09fSElHSBACQtEBCh1jb20uZ29vZ2xlLmFwaS5jbG91",
-            "ZHF1b3Rhcy52MUIOUmVzb3VyY2VzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9jbG91ZHF1b3Rhcy9hcGl2MS9jbG91ZHF1b3Rhc3BiO2Nsb3VkcXVv",
-            "dGFzcGKqAhtHb29nbGUuQ2xvdWQuQ2xvdWRRdW90YXMuVjHKAhtHb29nbGVc",
-            "Q2xvdWRcQ2xvdWRRdW90YXNcVjHqAh5Hb29nbGU6OkNsb3VkOjpDbG91ZFF1",
-            "b3Rhczo6VjFiBnByb3RvMw=="));
+            "IAEoCEID4EEDEhUKDWp1c3RpZmljYXRpb24YCyABKAkSGgoNY29udGFjdF9l",
+            "bWFpbBgMIAEoCUID4EEEGjEKD0RpbWVuc2lvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBOp8C6kGbAgoqY2xvdWRxdW90YXMuZ29v",
+            "Z2xlYXBpcy5jb20vUXVvdGFQcmVmZXJlbmNlEktwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVv",
+            "dGFfcHJlZmVyZW5jZX0SSWZvbGRlcnMve2ZvbGRlcn0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5jZX0S",
+            "VW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcXVvdGFQcmVmZXJlbmNlcy97cXVvdGFfcHJlZmVyZW5jZX0isQMK",
+            "C1F1b3RhQ29uZmlnEhwKD3ByZWZlcnJlZF92YWx1ZRgBIAEoA0ID4EECEhkK",
+            "DHN0YXRlX2RldGFpbBgCIAEoCUID4EEDEjcKDWdyYW50ZWRfdmFsdWUYAyAB",
+            "KAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEDEhUKCHRyYWNl",
+            "X2lkGAQgASgJQgPgQQMSUQoLYW5ub3RhdGlvbnMYBSADKAsyNy5nb29nbGUu",
+            "YXBpLmNsb3VkcXVvdGFzLnYxLlF1b3RhQ29uZmlnLkFubm90YXRpb25zRW50",
+            "cnlCA+BBARJKCg5yZXF1ZXN0X29yaWdpbhgGIAEoDjItLmdvb2dsZS5hcGku",
+            "Y2xvdWRxdW90YXMudjEuUXVvdGFDb25maWcuT3JpZ2luQgPgQQMaMgoQQW5u",
+            "b3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IkYKBk9yaWdpbhIWChJPUklHSU5fVU5TUEVDSUZJRUQQABIRCg1DTE9VRF9D",
+            "T05TT0xFEAESEQoNQVVUT19BREpVU1RFUhACIuoBCg5EaW1lbnNpb25zSW5m",
+            "bxJNCgpkaW1lbnNpb25zGAEgAygLMjkuZ29vZ2xlLmFwaS5jbG91ZHF1b3Rh",
+            "cy52MS5EaW1lbnNpb25zSW5mby5EaW1lbnNpb25zRW50cnkSOAoHZGV0YWls",
+            "cxgCIAEoCzInLmdvb2dsZS5hcGkuY2xvdWRxdW90YXMudjEuUXVvdGFEZXRh",
+            "aWxzEhwKFGFwcGxpY2FibGVfbG9jYXRpb25zGAMgAygJGjEKD0RpbWVuc2lv",
+            "bnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIh0KDFF1",
+            "b3RhRGV0YWlscxINCgV2YWx1ZRgBIAEoAyp+ChBRdW90YVNhZmV0eUNoZWNr",
+            "EiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh4KGlFVT1RB",
+            "X0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiUVVPVEFfREVDUkVBU0VfUEVS",
+            "Q0VOVEFHRV9UT09fSElHSBACQtEBCh1jb20uZ29vZ2xlLmFwaS5jbG91ZHF1",
+            "b3Rhcy52MUIOUmVzb3VyY2VzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9jbG91ZHF1b3Rhcy9hcGl2MS9jbG91ZHF1b3Rhc3BiO2Nsb3VkcXVvdGFz",
+            "cGKqAhtHb29nbGUuQ2xvdWQuQ2xvdWRRdW90YXMuVjHKAhtHb29nbGVcQ2xv",
+            "dWRcQ2xvdWRRdW90YXNcVjHqAh5Hb29nbGU6OkNsb3VkOjpDbG91ZFF1b3Rh",
+            "czo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudQuotas.V1.QuotaSafetyCheck), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -438,15 +438,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int ServiceRequestQuotaUriFieldNumber = 17;
     private string serviceRequestQuotaUri_ = "";
     /// <summary>
-    /// URI to the page where the user can request more quotas for the cloud
-    /// service, such as
-    /// https://docs.google.com/spreadsheet/viewform?formkey=abc123&amp;entry_0={email}&amp;entry_1={id}.
-    /// Google Developers Console UI replace {email} with the current
-    /// user's e-mail, {id} with the current project number, or organization ID
-    /// with "organizations/" prefix. For example,
-    /// https://docs.google.com/spreadsheet/viewform?formkey=abc123&amp;entry_0=johndoe@gmail.com&amp;entry_1=25463754,
-    /// or
-    /// https://docs.google.com/spreadsheet/viewform?formkey=abc123&amp;entry_0=johndoe@gmail.com&amp;entry_1=organizations/26474422.
+    /// URI to the page where users can request more quota for the cloud
+    /// service—for example,
+    /// https://console.cloud.google.com/iam-admin/quotas.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1469,11 +1463,14 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public const int ContactEmailFieldNumber = 12;
     private string contactEmail_ = "";
     /// <summary>
-    /// Required. Input only. An email address that can be used for quota related
+    /// Input only. An email address that can be used for quota related
     /// communication between the Google Cloud and the user in case the Google
     /// Cloud needs further information to make a decision on whether the user
     /// preferred quota can be granted.
     ///
+    /// The email address is optional for decrease quota preferences. In another
+    /// word, QuotaConfig.preferred_value is smaller than the
+    /// QuotaDetails.reset_value. It is required for increase quota preferences.
     /// The Google account for the email address must have quota update permission
     /// for the project, folder or organization this quota preference is for.
     /// </summary>
