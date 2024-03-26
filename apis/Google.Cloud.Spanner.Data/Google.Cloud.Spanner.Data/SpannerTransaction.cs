@@ -69,6 +69,15 @@ namespace Google.Cloud.Spanner.Data
         // or more statements.
         private bool _hasExecutedStatements = false;
 
+        // Flag indicating whether the transaction has been committed or rolled back and
+        // therefore cannot be used for any further operations.
+        private bool _hasCommittedOrRolledBack = false;
+
+        // Keep track of any commit response that has been returned for this transaction
+        // so we can return it again if the application tries to commit the same transaction
+        // twice.
+        private CommitResponse _commitResponse = null;
+
         /// <summary>
         /// When executing multiple DML commands in a single transaction, each is given a specific sequence number
         /// to indicate the difference between "apply this DML command twice" and "I'm replaying a request due to a transient failure".
@@ -412,22 +421,49 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
-            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
+            // Return the original response if this transaction has already successfully committed.
+            // Committing the same transaction twice on Cloud Spanner will return the same commit
+            // timestamp, and there's no need for us to repeat the RPC here when we already know the
+            // result. This also allows us to more aggressively return the session to the pool after
+            // committing/rolling back a transaction.
+            if (_commitResponse != null)
             {
-                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
-                var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
-                if (response.CommitTimestamp == null)
+                return Task.FromResult(_commitResponse.CommitTimestamp.ToDateTime());
+            }
+            CheckNotHasCommittedOrRolledBack();
+            _hasCommittedOrRolledBack = true;
+            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
                 {
-                    throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
-                }
-                if (LogCommitStats)
-                {
-                    SpannerConnection.Logger.LogCommitStats(request, response);
-                }
-                return response.CommitTimestamp.ToDateTime();
-            },
-            "SpannerTransaction.Commit", SpannerConnection.Logger);
+                    try
+                    {
+                        var callSettings = SpannerConnection.CreateCallSettings(
+                            settings => settings.CommitSettings, CommitTimeout, cancellationToken);
+                        _commitResponse = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
+                        if (_commitResponse.CommitTimestamp == null)
+                        {
+                            throw new SpannerException(
+                                ErrorCode.Internal,
+                                "Commit succeeded, but returned a response with no commit timestamp");
+                        }
+
+                        if (LogCommitStats)
+                        {
+                            SpannerConnection.Logger.LogCommitStats(request, _commitResponse);
+                        }
+
+                        return _commitResponse.CommitTimestamp.ToDateTime();
+                    }
+                    finally
+                    {
+                        // Dispose the transaction. Disposing the transaction will return the session to the pool,
+                        // unless it is a retriable transaction. Retriable transactions reuse the same session for a new
+                        // transaction if the transaction is aborted by Cloud Spanner, and will make sure the session is
+                        // returned to the pool when done.
+                        Dispose();
+                    }
+                }, "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
         private RequestOptions BuildCommitRequestOptions() =>
             new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
@@ -447,10 +483,23 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
+            CheckNotHasCommittedOrRolledBack();
+            _hasCommittedOrRolledBack = true;
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                () => _session.RollbackAsync(new RollbackRequest(), callSettings),
-                "SpannerTransaction.Rollback", SpannerConnection.Logger);
+            try
+            {
+                return ExecuteHelper.WithErrorTranslationAndProfiling(
+                    () => _session.RollbackAsync(new RollbackRequest(), callSettings),
+                    "SpannerTransaction.Rollback", SpannerConnection.Logger);
+            }
+            finally
+            {
+                // Dispose the transaction. Disposing the transaction will return the session to the pool,
+                // unless it is a retriable transaction. Retriable transactions reuse the same session for a new
+                // transaction if the transaction is aborted by Cloud Spanner, and will make sure the session is
+                // returned to the pool when done.
+                Dispose();
+            }
         }
 
         /// <summary>
@@ -527,6 +576,7 @@ namespace Google.Cloud.Spanner.Data
 
         private void CheckCompatibleMode(TransactionMode mode)
         {
+            CheckNotHasCommittedOrRolledBack();
             switch (mode)
             {
                 case TransactionMode.ReadOnly:
@@ -545,6 +595,17 @@ namespace Google.Cloud.Spanner.Data
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
+            }
+        }
+
+        private void CheckNotHasCommittedOrRolledBack()
+        {
+            if (_hasCommittedOrRolledBack)
+            {
+                // Throw a SpannerException to be consistent with the type of exception that would
+                // otherwise have been thrown if we executed an RPC on a committed/rolled back transaction.
+                throw new SpannerException(
+                    ErrorCode.FailedPrecondition, "This transaction has committed or rolled back.");
             }
         }
     }

@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
@@ -132,6 +133,87 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync());
                 }
             }
+        }
+
+        [Theory]
+        [CombinatorialData]
+        public async Task CommittingOrRollingBackTransactionReturnsSessionToPool(bool commit)
+        {
+            // Use a session pool with at most 1 session. This means that we cannot run
+            // two transactions simultaneously, as there are not enough sessions.
+            // Committing the previous transaction should however be enough to return
+            // the session to the pool, and allow us to start another transaction.
+            var builder = new SpannerConnectionStringBuilder
+            {
+                ConnectionString = _fixture.ConnectionString,
+                SessionPoolManager = SessionPoolManager.Create(
+                    new SessionPoolOptions
+                    {
+                        MinimumPooledSessions = 1,
+                        MaximumActiveSessions = 1,
+                        WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Fail
+                    })
+            };
+            using var connection = new SpannerConnection(builder);
+            connection.Open();
+
+            using var tx1 = await connection.BeginTransactionAsync();
+            using var cmd1 = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd1.Transaction = tx1;
+            cmd1.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd1.ExecuteScalarAsync().ConfigureAwait(false));
+            // Committing the transaction returns the session to the pool.
+            var commitTimestamp = await tx1.CommitAsync();
+            // Committing a transaction twice will return the same commit timestamp twice.
+            Assert.Equal(commitTimestamp, await tx1.CommitAsync());
+            // It is possible to get transaction properties after committing the transaction.
+            Assert.Null(tx1.ReadTimestamp);
+            Assert.NotNull(tx1.TransactionId);
+
+            // It is possible to start another transaction, as the previous session was returned to the pool.
+            using var tx2 = await connection.BeginTransactionAsync();
+            using var cmd2 = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd2.Transaction = tx2;
+            cmd2.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd2.ExecuteScalarAsync().ConfigureAwait(false));
+            await (commit ? tx2.CommitAsync() : tx2.RollbackAsync());
+
+            // Trying to start two transactions in parallel will fail as we don't have enough sessions.
+            using var tx3 = await connection.BeginTransactionAsync();
+            var exception = await Assert.ThrowsAsync<SpannerException>(() => connection.BeginTransactionAsync());
+            Assert.Equal(ErrorCode.ResourceExhausted, exception.ErrorCode);
+
+            // Commit/rollback the transaction to return the session to the pool.
+            await (commit ? tx3.CommitAsync() : tx3.RollbackAsync());
+            // This will now work.
+            using var tx4 = await connection.BeginTransactionAsync();
+            await (commit ? tx4.CommitAsync() : tx4.RollbackAsync());
+        }
+
+        [Theory]
+        [CombinatorialData]
+        public async Task TransactionCannotBeUsedAfterCommitOrRollback(bool commit)
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var tx = await connection.BeginTransactionAsync();
+            using var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            cmd.Transaction = tx;
+            cmd.Parameters.Add("k", SpannerDbType.String, _key);
+            Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
+            // Committing/rolling back the transaction makes the transaction unusable for any further actions.
+            await (commit ? tx.CommitAsync() : tx.RollbackAsync());
+
+            var exception = await Assert.ThrowsAsync<SpannerException>(
+                async () =>
+                {
+                    using var selectCommand = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+                    selectCommand.Transaction = tx;
+                    selectCommand.Parameters.Add("k", SpannerDbType.String, _key);
+                    await selectCommand.ExecuteScalarAsync();
+                });
+            Assert.Equal(ErrorCode.FailedPrecondition, exception.ErrorCode);
         }
 
         [Fact]
