@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta17, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+### Documentation improvements
+
+- A comment for field `processor_version_source` in message `.google.cloud.documentai.v1beta3.ImportProcessorVersionRequest` is changed ([commit afadd88](https://github.com/googleapis/google-cloud-dotnet/commit/afadd88ce9ef29741f665be9c3b2d9867562f8d8))
+
 ## Version 2.0.0-beta16, released 2024-03-13
 
 No API surface changes; just dependency updates.
