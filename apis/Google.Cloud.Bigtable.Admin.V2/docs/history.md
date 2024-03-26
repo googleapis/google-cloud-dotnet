@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.12.0, released 2024-03-26
+
+### New features
+
+- Add Data Boost configurations to admin API ([commit 1f88775](https://github.com/googleapis/google-cloud-dotnet/commit/1f88775b5da903268208aa11098a99b5283108e2))
+
 ## Version 3.11.0, released 2024-03-21
 
 ### New features
