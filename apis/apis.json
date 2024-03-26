@@ -2813,7 +2813,7 @@
     },
     {
       "id": "Google.Cloud.Language.V2",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Natural Language",
       "productUrl": "https://cloud.google.com/natural-language/docs",
