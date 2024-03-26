@@ -2,16 +2,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.0</Version>
-    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library for the Redis Cluster API (v1), which creates and manages Redis instances on the Google Cloud Platform.</Description>
     <PackageTags>Redis;Memorystore;Cluster;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.7.0, 5.0.0)" />
-    <PackageReference Include="Google.Cloud.Location" Version="[2.1.0, 3.0.0)" />
-    <PackageReference Include="Google.LongRunning" Version="[3.1.0, 4.0.0)" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
+    <PackageReference Include="Google.Cloud.Location" Version="[2.2.0, 3.0.0)" />
+    <PackageReference Include="Google.LongRunning" Version="[3.2.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
