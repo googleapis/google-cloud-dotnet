@@ -2717,7 +2717,7 @@
     },
     {
       "id": "Google.Cloud.Ids.V1",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "productName": "Cloud IDS",
       "productUrl": "https://cloud.google.com/intrusion-detection-system",
