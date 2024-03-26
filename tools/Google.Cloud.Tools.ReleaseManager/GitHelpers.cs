@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,12 +38,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             var predicates = apiIds.Select(CreateCommitPredicateForId).ToList();
             return commit => predicates.Any(p => p(commit));
 
-            Func<Commit, bool> CreateCommitPredicateForId(string id)
-            {
-                var pathPrefix = $"apis/{id}/{id}/";
-                var projectFile = $"apis/{id}/{id}/{id}.csproj";
-                Func<string, bool> pathFilter = path => path.StartsWith(pathPrefix) && path != projectFile;
-                return commit =>
+            Func<Commit, bool> CreateCommitPredicateForId(string id) =>
+                commit =>
                 {
                     if (commit.Parents.Count() != 1)
                     {
@@ -51,17 +47,10 @@ namespace Google.Cloud.Tools.ReleaseManager
                     }
                     var tree = commit.Tree;
                     var parentTree = commit.Parents.First().Tree;
-                    // If nothing has changed under apis/{id}/{id}, it's definitely not relevant.
-                    if (tree[pathPrefix]?.Target.Sha == parentTree[pathPrefix]?.Target.Sha)
-                    {
-                        return false;
-                    }
-                    // Otherwise, check whether something *other* than the project file has changed.
-                    var comparison = repo.Diff.Compare<TreeChanges>(parentTree, tree);
-                    // Some versions return forward slashes, some return backslashes :(
-                    return comparison.Select(change => change.Path.Replace('\\', '/')).Any(pathFilter);
+                    var pathPrefix = $"apis/{id}/{id}/";
+                    // The commit is relevant if and only if the production code (or project) has changed.
+                    return tree[pathPrefix]?.Target.Sha != parentTree[pathPrefix]?.Target.Sha;
                 };
-            }
         }
 
         /// <summary>
