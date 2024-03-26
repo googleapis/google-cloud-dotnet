@@ -1690,7 +1690,11 @@ namespace Google.Cloud.PubSub.V1
         {
             GrpcClient = grpcClient;
             SchemaServiceSettings effectiveSettings = settings ?? SchemaServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateSchema = clientHelper.BuildApiCall<CreateSchemaRequest, Schema>("CreateSchema", grpcClient.CreateSchemaAsync, grpcClient.CreateSchema, effectiveSettings.CreateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSchema);
