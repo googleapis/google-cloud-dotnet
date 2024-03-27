@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha24, released 2024-03-27
+
+### New features
+
+- Two new proto files added to the build ([commit 605583b](https://github.com/googleapis/google-cloud-dotnet/commit/605583b72f1f50f0d1d8cc0c75e9bc6209aa0a58))
+
 ## Version 1.0.0-alpha23, released 2024-03-26
 
 ### New features
