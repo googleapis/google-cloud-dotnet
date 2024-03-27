@@ -71,7 +71,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             { ApiType.Rest, $"{DefaultNetstandardTarget};net462" },
             { ApiType.Grpc, $"{DefaultNetstandardTarget};net462" },
-            { ApiType.Regapic, $"{DefaultNetstandardTarget};net462" }
+            { ApiType.Regapic, $"{DefaultNetstandardTarget};net462" },
+            { ApiType.Other, $"{DefaultNetstandardTarget};net462" }
         };
 
         private const string DefaultTestTargetFrameworks = "net6.0;net462";
