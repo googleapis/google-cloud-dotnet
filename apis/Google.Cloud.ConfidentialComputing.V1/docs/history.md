@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2024-03-27
+
+### New features
+
+- Add additional `TokenType` options (`TOKEN_TYPE_PKI` and `TOKEN_TYPE_LIMITED_AWS`) ([commit 5d1d8fe](https://github.com/googleapis/google-cloud-dotnet/commit/5d1d8fe7295eeb162356566e737d784c10e5da85))
+
 ## Version 1.3.0, released 2024-03-26
 
 ### New features
