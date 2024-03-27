@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.10.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Support object soft delete ([commit ae28cb4](https://github.com/googleapis/google-cloud-dotnet/commit/ae28cb432f96ebaebb330ee59ff7c8bf31272621))
 ## Version 4.9.0, released 2024-03-07
 
 ### Bug fixes
