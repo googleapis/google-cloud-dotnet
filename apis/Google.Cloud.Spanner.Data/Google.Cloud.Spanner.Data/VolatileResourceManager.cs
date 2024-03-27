@@ -27,15 +27,17 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerConnection _spannerConnection;
         private readonly TimestampBound _timestampBound;
         private readonly TransactionId _transactionId;
+        private readonly TimeSpan? _commitDelay;
         private Lazy<Task<SpannerTransaction>> _transaction;
         private bool _hasExecutedDml;
 
-        internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
+        internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId, TimeSpan? commitDelay)
         {
             _spannerConnection = spannerConnection;
             _timestampBound = timestampBound;
             _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransactionAsync, LazyThreadSafetyMode.ExecutionAndPublication);
             _transactionId = transactionId;
+            _commitDelay = commitDelay;
         }
 
         private SpannerTransaction SpannerTransaction => SpannerTransactionTask.Result;
@@ -50,11 +52,17 @@ namespace Google.Cloud.Spanner.Data
 
         private Logger Logger => _spannerConnection.Logger;
 
-        private Task<SpannerTransaction> CreateTransactionAsync()
+        private async Task<SpannerTransaction> CreateTransactionAsync()
         {
-            return _timestampBound != null ? _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound)
-                : _transactionId != null ? Task.FromResult(_spannerConnection.BeginReadOnlyTransaction(_transactionId))
-                : _spannerConnection.BeginTransactionAsync();
+            SpannerTransaction transaction = _timestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound).ConfigureAwait(false)
+                : _transactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionId)
+                : await _spannerConnection.BeginTransactionAsync().ConfigureAwait(false);
+
+            if (_commitDelay is not null)
+            {
+                transaction.CommitDelay = _commitDelay;
+            }
+            return transaction;
         }
 
         public void Dispose()

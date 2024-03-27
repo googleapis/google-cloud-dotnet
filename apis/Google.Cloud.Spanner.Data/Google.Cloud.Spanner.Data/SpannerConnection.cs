@@ -902,7 +902,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
-            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null));
+            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, transactionId: null, commitDelay: null));
         }
 
         /// <summary>
@@ -922,7 +922,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
-            Open(() => EnlistTransaction(transaction, null, transactionId));
+            Open(() => EnlistTransaction(transaction, timestampBound: null, transactionId, commitDelay: null));
         }
 
         /// <summary>
@@ -943,8 +943,48 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
-            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null);
+            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, transactionId: null, commitDelay: null);
             return OpenAsyncImpl(transactionEnlister, cancellationToken);
+        }
+
+        /// <summary>
+        /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
+        /// <see cref="AmbientTransactionOptions"/>.
+        /// </summary>
+        public void Open(AmbientTransactionOptions options)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            var transaction = Transaction.Current;
+            if (transaction == null)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+
+            Open(() => EnlistTransaction(transaction, timestampBound: null, transactionId: null, options.CommitDelay));
+        }
+
+        /// <summary>
+        /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
+        /// <see cref="AmbientTransactionOptions"/>.
+        /// </summary>
+        public Task OpenAsync(AmbientTransactionOptions options, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            var transaction = Transaction.Current;
+            if (transaction == null)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+
+            return OpenAsyncImpl(() => EnlistTransaction(transaction, timestampBound: null, transactionId: null, options.CommitDelay), cancellationToken);
         }
 
         /// <summary>
@@ -953,9 +993,9 @@ namespace Google.Cloud.Spanner.Data
         public bool EnlistInTransaction { get; set; } = true;
 
         /// <inheritdoc />
-        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, null, null);
+        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, null, null, null);
 
-        private void EnlistTransaction(Transaction transaction, TimestampBound timestampBound, TransactionId transactionId)
+        private void EnlistTransaction(Transaction transaction, TimestampBound timestampBound, TransactionId transactionId, TimeSpan? commitDelay)
         {
             if (!EnlistInTransaction)
             {
@@ -965,7 +1005,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("This connection is already enlisted to a transaction.");
             }
-            _volatileResourceManager = new VolatileResourceManager(this, timestampBound, transactionId);
+            _volatileResourceManager = new VolatileResourceManager(this, timestampBound, transactionId, commitDelay);
             transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
 

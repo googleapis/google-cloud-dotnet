@@ -958,6 +958,111 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CommitDelay_DefaultsToNull_AmbientTransaction()
+        {
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open();
+                var command = connection.CreateInsertCommand("FOO");
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_Propagates_AmbientTransaction()
+        {
+            var commitDelay = TimeSpan.FromMilliseconds(100);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open(AmbientTransactionOptions.Default.WithCommitDelay(commitDelay));
+                var command = connection.CreateInsertCommand("FOO");
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(commitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_SetOnCommand_SetOnAmbientTransaction_CommandIgnored()
+        {
+            var transactionCommitDelay = TimeSpan.FromMilliseconds(100);
+            var commandCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open(AmbientTransactionOptions.Default.WithCommitDelay(transactionCommitDelay));
+                var command = connection.CreateInsertCommand("FOO");
+                command.CommitDelay = commandCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay.Equals(Duration.FromTimeSpan(transactionCommitDelay))),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void CommitDelay_SetOnCommand_UnsetOnAmbientTransaction_CommandIgnored()
+        {
+            var commandCommitDelay = TimeSpan.FromMilliseconds(300);
+
+            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+            {
+                connection.Open();
+                var command = connection.CreateInsertCommand("FOO");
+                command.CommitDelay = commandCommitDelay;
+                command.ExecuteNonQuery();
+
+                scope.Complete();
+            }
+
+            spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.MaxCommitDelay == null),
+                Arg.Any<CallSettings>());
+        }
+
+        [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
             SpannerClient spannerClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
