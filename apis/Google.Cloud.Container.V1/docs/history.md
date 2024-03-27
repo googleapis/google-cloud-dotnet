@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.25.0, released 2024-03-27
+
+### New features
+
+- Add several fields to manage state of database encryption update ([commit 98c684c](https://github.com/googleapis/google-cloud-dotnet/commit/98c684ca1ae5cbf12945d64ff884139755c6df77))
+
 ## Version 3.24.0, released 2024-03-26
 
 ### New features
