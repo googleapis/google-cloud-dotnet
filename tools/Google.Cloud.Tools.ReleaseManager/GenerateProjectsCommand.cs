@@ -314,6 +314,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
         {
+            bool stableOnly = api.StructuredVersion.IsStable;
             UpdateDependencyDictionary(api.Dependencies, "dependencies");
             UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
 
@@ -347,7 +348,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                         var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
                         if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
                             structuredDefaultVersion.Major == structuredCurrentVersion.Major &&
-                            structuredDefaultVersion.IsStable)
+                            (structuredDefaultVersion.IsStable || !stableOnly))
                         {
                             dependencies[package] = defaultVersion;
                         }
