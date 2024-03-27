@@ -391,7 +391,7 @@
         "appengine"
       ],
       "dependencies": {
-        "Google.Cloud.Logging.Type": "4.1.0"
+        "Google.Cloud.Logging.Type": "4.2.0"
       },
       "generator": "proto",
       "protoPath": "google/appengine/logging/v1"
@@ -499,13 +499,14 @@
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
+      "targetFrameworks": "netstandard2.1;net462",
       "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.OrgPolicy.V1": "3.1.0",
-        "Google.Cloud.OsConfig.V1": "2.2.0",
+        "Google.Cloud.OrgPolicy.V1": "3.2.0",
+        "Google.Cloud.OsConfig.V1": "2.3.0",
         "Google.Identity.AccessContextManager.V1": "2.3.0",
         "Google.LongRunning": "3.2.0"
       },
@@ -997,7 +998,7 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Cloud.Bigtable.Common.V2": "3.1.0",
+        "Google.Cloud.Bigtable.Common.V2": "3.2.0",
         "Google.Cloud.Iam.V1": "3.2.0",
         "Google.LongRunning": "3.2.0"
       },
@@ -1037,7 +1038,7 @@
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Cloud.Bigtable.Common.V2": "3.1.0"
+        "Google.Cloud.Bigtable.Common.V2": "3.2.0"
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
@@ -1114,6 +1115,7 @@
       "id": "Google.Cloud.BinaryAuthorization.V1",
       "version": "2.3.0",
       "type": "grpc",
+      "targetFrameworks": "netstandard2.1;net462",
       "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
       "description": "Recommended Google client library to access the Google Cloud Binary Authorization API v1, providing policy control for images deployed to Kubernetes Engine clusters.",
@@ -1742,7 +1744,7 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
-        "Google.Cloud.Firestore.Admin.V1": "3.7.0"
+        "Google.Cloud.Firestore.Admin.V1": "3.8.0"
       },
       "shortName": "datastore",
       "serviceConfigFile": "datastore_v1.yaml",
@@ -1903,7 +1905,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
         "Google.Cloud.Logging.V2": "4.2.0",
-        "Google.Cloud.Trace.V1": "3.2.0",
+        "Google.Cloud.Trace.V1": "3.3.0",
         "Microsoft.Extensions.Http": "6.0.0",
         "System.Diagnostics.StackTrace": "4.3.0"
       },
@@ -2284,7 +2286,7 @@
       "description": "The Cloud Filestore API is used for creating and managing cloud file servers.",
       "tags": [],
       "dependencies": {
-        "Google.Cloud.Common": "2.1.0",
+        "Google.Cloud.Common": "2.2.0",
         "Google.Cloud.Location": "2.2.0",
         "Google.LongRunning": "3.2.0"
       },
@@ -2343,7 +2345,7 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
         "Google.Api.Gax.Testing": "default",
-        "Google.Cloud.Firestore.Admin.V1": "3.7.0",
+        "Google.Cloud.Firestore.Admin.V1": "3.8.0",
         "Grpc.Core.Testing": "2.46.6",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.6.24"
@@ -2457,7 +2459,7 @@
         "add-ons"
       ],
       "dependencies": {
-        "Google.Apps.Script.Type": "2.2.0"
+        "Google.Apps.Script.Type": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/gsuiteaddons/v1",
@@ -2738,7 +2740,7 @@
         "cryptography"
       ],
       "dependencies": {
-        "Google.Cloud.Kms.V1": "3.9.0"
+        "Google.Cloud.Kms.V1": "3.10.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/kms/inventory/v1",
@@ -2948,7 +2950,7 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "Google.Cloud.Logging.Type": "4.1.0",
+        "Google.Cloud.Logging.Type": "4.2.0",
         "Google.LongRunning": "3.2.0"
       },
       "shortName": "logging",
@@ -3515,7 +3517,7 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Cloud.OsLogin.Common": "3.2.0"
+        "Google.Cloud.OsLogin.Common": "3.3.0"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
@@ -3539,7 +3541,7 @@
         "Login"
       ],
       "dependencies": {
-        "Google.Cloud.OsLogin.Common": "3.2.0"
+        "Google.Cloud.OsLogin.Common": "3.3.0"
       },
       "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
       "shortName": "oslogin",
@@ -3625,7 +3627,7 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Iam.V2": "1.1.0"
+        "Google.Cloud.Iam.V2": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/policytroubleshooter/iam/v3",
@@ -4272,7 +4274,7 @@
         "services"
       ],
       "dependencies": {
-        "Google.Cloud.Logging.Type": "4.1.0"
+        "Google.Cloud.Logging.Type": "4.2.0"
       },
       "generator": "micro",
       "protoPath": "google/api/servicecontrol/v1",
@@ -4658,7 +4660,7 @@
         "Google.Cloud.Iam.V1": "3.2.0"
       },
       "testDependencies": {
-        "Google.Cloud.Storage.V1": "4.9.0"
+        "Google.Cloud.Storage.V1": "4.10.0"
       },
       "generator": "micro",
       "protoPath": "google/storage/v2",
@@ -5281,7 +5283,7 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Workflows.Common.V1": "2.3.0"
+        "Google.Cloud.Workflows.Common.V1": "2.4.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/workflows/executions/v1",
@@ -5301,7 +5303,7 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta03"
+        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta04"
       },
       "generator": "micro",
       "protoPath": "google/cloud/workflows/executions/v1beta",
@@ -5322,7 +5324,7 @@
       ],
       "dependencies": {
         "Google.Cloud.Location": "2.2.0",
-        "Google.Cloud.Workflows.Common.V1": "2.3.0",
+        "Google.Cloud.Workflows.Common.V1": "2.4.0",
         "Google.LongRunning": "3.2.0"
       },
       "generator": "micro",
@@ -5345,7 +5347,7 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta03",
+        "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta04",
         "Google.LongRunning": "3.2.0"
       },
       "generator": "micro",
@@ -5423,7 +5425,7 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Identity.AccessContextManager.Type": "2.1.0",
+        "Google.Identity.AccessContextManager.Type": "2.2.0",
         "Google.LongRunning": "3.2.0"
       },
       "shortName": "accesscontextmanager",
@@ -5468,7 +5470,7 @@
         "geocoding"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.1.0"
+        "Google.Geo.Type": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/addressvalidation/v1",
@@ -5489,7 +5491,7 @@
         "deliveries"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.1.0"
+        "Google.Geo.Type": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/fleetengine/delivery/v1",
@@ -5513,7 +5515,7 @@
         "fleet"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.1.0"
+        "Google.Geo.Type": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/fleetengine/v1",
@@ -5575,7 +5577,7 @@
         "maps"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.1.0"
+        "Google.Geo.Type": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/places/v1",
@@ -5598,7 +5600,7 @@
         "geo"
       ],
       "dependencies": {
-        "Google.Geo.Type": "1.1.0"
+        "Google.Geo.Type": "1.2.0"
       },
       "generator": "micro",
       "protoPath": "google/maps/routing/v2",
@@ -5620,7 +5622,7 @@
         "comparison"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta03"
+        "Google.Shopping.Type": "1.0.0-beta04"
       },
       "generator": "micro",
       "protoPath": "google/shopping/css/v1",
@@ -5642,7 +5644,7 @@
         "inventory"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta03"
+        "Google.Shopping.Type": "1.0.0-beta04"
       },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/inventories/v1beta",
