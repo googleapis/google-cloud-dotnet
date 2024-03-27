@@ -1412,7 +1412,7 @@
     },
     {
       "id": "Google.Cloud.ConfidentialComputing.V1Alpha1",
-      "version": "1.0.0-alpha03",
+      "version": "1.0.0-alpha04",
       "type": "grpc",
       "productName": "Confidential Computing",
       "productUrl": "https://cloud.google.com/confidential-computing",
