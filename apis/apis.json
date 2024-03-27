@@ -3117,7 +3117,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1Beta",
-      "version": "2.0.0-beta08",
+      "version": "2.0.0-beta09",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
