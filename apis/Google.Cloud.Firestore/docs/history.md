@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.6.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Throw if an must-exist precondition is explicitly set to false for update. ([commit 5cfc625](https://github.com/googleapis/google-cloud-dotnet/commit/5cfc625fe2edfd7a7c565bd020ccfc9332b41be6))
+
 ## Version 3.5.1, released 2024-02-14
 
 ### Bug fixes
