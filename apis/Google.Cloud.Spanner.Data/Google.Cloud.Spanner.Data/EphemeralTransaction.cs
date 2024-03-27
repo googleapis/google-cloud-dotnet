@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,12 +30,14 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
         private readonly Priority _commitPriority;
+        private readonly TimeSpan? _commitDelay;
         private readonly TransactionOptions _singleUseTransactionOptions;
 
-        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, TransactionOptions singleUseTransactionOptions)
+        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, TimeSpan? commitDelay, TransactionOptions singleUseTransactionOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _commitPriority = commitPriority;
+            _commitDelay = commitDelay;
             _singleUseTransactionOptions = singleUseTransactionOptions;
         }
 
@@ -47,6 +50,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
+                if (_commitDelay is not null)
+                {
+                    transaction.CommitDelay = _commitDelay;
+                }
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
@@ -68,6 +75,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
+                if (_commitDelay is not null)
+                {
+                    transaction.CommitDelay = _commitDelay;
+                }
 
                 return await ((ISpannerTransaction) transaction)
                     .ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds)
@@ -87,6 +98,10 @@ namespace Google.Cloud.Spanner.Data
                 {
                     transaction.CommitTimeout = timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;
+                    if (_commitDelay is not null)
+                    {
+                        transaction.CommitDelay = _commitDelay;
+                    }
 
                     while (true)
                     {
@@ -120,6 +135,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
+                if (_commitDelay is not null)
+                {
+                    transaction.CommitDelay = _commitDelay;
+                }
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
@@ -149,6 +168,10 @@ namespace Google.Cloud.Spanner.Data
                 // until you commit or rollback.
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
+                if (_commitDelay is not null)
+                {
+                    transaction.CommitDelay = _commitDelay;
+                }
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)

@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
+        private TimeSpan? _commitDelay;
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>, using a default command timeout.
@@ -281,6 +282,26 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         public DirectedReadOptions DirectedReadOptions { get; set; }
 
+        /// <summary>
+        /// The maximum amount of time the commit of the implicit transaction associated with this command, if any,
+        /// may be delayed server side for batching with other commits.
+        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
+        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
+        /// May be null, in which case commits will continue to be batched as they had been before this configuration
+        /// option was made available to Spanner API consumers.
+        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
+        /// </summary>
+        /// <remarks>
+        /// When a DML or mutation command is executed with no explicit or ambient transaction, an implicit transaction is created
+        /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
+        /// if there is any. Otherwise, this value will be ignored.
+        /// </remarks>
+        public TimeSpan? CommitDelay
+        {
+            get => _commitDelay;
+            set => _commitDelay = SpannerTransaction.CheckCommitDelayRange(value);
+        }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -323,6 +344,7 @@ namespace Google.Cloud.Spanner.Data
             Priority = Priority,
             Tag = Tag,
             DirectedReadOptions = DirectedReadOptions?.Clone(),
+            CommitDelay = CommitDelay,
         };
 
         /// <inheritdoc />
