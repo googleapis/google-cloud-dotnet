@@ -1835,7 +1835,6 @@
       "version": "3.2.0-beta00",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
       "tags": [
         "Tools"
@@ -1899,7 +1898,6 @@
       "version": "5.2.0",
       "type": "other",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -2313,7 +2311,6 @@
       "productName": "Firestore Admin",
       "productUrl": "https://firebase.google.com",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "version": "3.8.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
@@ -2341,7 +2338,6 @@
       "type": "other",
       "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "description": "Recommended Google client library to access the Firestore API.",
       "tags": [
         "firestore",
@@ -2649,7 +2645,6 @@
       "id": "Google.Cloud.Iam.V1",
       "generator": "micro",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "protoPath": "google/iam/v1",
       "productName": "Google Cloud Identity and Access Management (IAM)",
       "productUrl": "https://cloud.google.com/iam/",
@@ -2796,7 +2791,6 @@
       "productUrl": "https://cloud.google.com/natural-language",
       "version": "3.6.0-alpha01",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Natural Language API (v1), which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
       "dependencies": {
@@ -2857,7 +2851,6 @@
       "version": "2.2.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "listingDescription": "Support for the Google Cloud Locations mix-in API pattern",
       "metadataType": "CORE",
       "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
@@ -2880,7 +2873,6 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "description": "Log4Net client library for the Google Cloud Logging API.",
       "tags": [
         "Log4Net",
@@ -2922,7 +2914,6 @@
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "description": "NLog target for the Google Cloud Logging API.",
       "tags": [
         "NLog",
@@ -4491,7 +4482,6 @@
     {
       "id": "Google.Cloud.Spanner.Data",
       "targetFrameworks": "netstandard2.1;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "version": "5.0.0-beta01",
       "type": "other",
       "metadataType": "INTEGRATION",
@@ -5467,7 +5457,6 @@
       "packageOwner": "google-cloud",
       "generator": "micro",
       "targetFrameworks": "netstandard2.0;net462",
-      "testTargetFrameworks": "net6.0;net462",
       "protoPath": "google/longrunning",
       "listingDescription": "Support for the Long-Running Operations API pattern",
       "version": "3.2.0",
