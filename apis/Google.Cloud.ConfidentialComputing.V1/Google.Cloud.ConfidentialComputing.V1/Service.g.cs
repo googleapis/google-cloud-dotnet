@@ -77,28 +77,29 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "b21wdXRpbmcudjEuU2lnbmluZ0FsZ29yaXRobUID4EEBKn8KEFNpZ25pbmdB",
             "bGdvcml0aG0SIQodU0lHTklOR19BTEdPUklUSE1fVU5TUEVDSUZJRUQQABIV",
             "ChFSU0FTU0FfUFNTX1NIQTI1NhABEhoKFlJTQVNTQV9QS0NTMVYxNV9TSEEy",
-            "NTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1NhADKjwKCVRva2VuVHlwZRIaChZU",
-            "T0tFTl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPVE9LRU5fVFlQRV9PSURDEAEy",
-            "twQKFUNvbmZpZGVudGlhbENvbXB1dGluZxLYAQoPQ3JlYXRlQ2hhbGxlbmdl",
-            "Ej0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DcmVh",
-            "dGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlh",
-            "bGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpBEHBhcmVudCxjaGFsbGVuZ2WC",
-            "0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2No",
-            "YWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVyaWZ5QXR0ZXN0YXRpb24SPy5n",
-            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUF0",
-            "dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxj",
-            "b21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRpb25SZXNwb25zZSJQgtPkkwJK",
-            "IkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NoYWxs",
-            "ZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246ASoaWMpBJGNvbmZpZGVudGlh",
-            "bGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIKKWNvbS5nb29nbGUu",
-            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJvdG9Q",
-            "AVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRpbmcv",
-            "YXBpdjEvY29uZmlkZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFsY29t",
-            "cHV0aW5ncGKqAiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0aW5n",
-            "LlYxygIlR29vZ2xlXENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xWMeoC",
-            "KEdvb2dsZTo6Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjFiBnBy",
-            "b3RvMw=="));
+            "NTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1NhADKmwKCVRva2VuVHlwZRIaChZU",
+            "T0tFTl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPVE9LRU5fVFlQRV9PSURDEAES",
+            "EgoOVE9LRU5fVFlQRV9QS0kQAhIaChZUT0tFTl9UWVBFX0xJTUlURURfQVdT",
+            "EAMytwQKFUNvbmZpZGVudGlhbENvbXB1dGluZxLYAQoPQ3JlYXRlQ2hhbGxl",
+            "bmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5D",
+            "cmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpBEHBhcmVudCxjaGFsbGVu",
+            "Z2WC0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVyaWZ5QXR0ZXN0YXRpb24S",
+            "Py5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlm",
+            "eUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRpb25SZXNwb25zZSJQgtPk",
+            "kwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2No",
+            "YWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246ASoaWMpBJGNvbmZpZGVu",
+            "dGlhbGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIKKWNvbS5nb29n",
+            "bGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJv",
+            "dG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcvYXBpdjEvY29uZmlkZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFs",
+            "Y29tcHV0aW5ncGKqAiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0",
+            "aW5nLlYxygIlR29vZ2xlXENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xW",
+            "MeoCKEdvb2dsZTo6Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -153,6 +154,14 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     /// OpenID Connect (OIDC) token type
     /// </summary>
     [pbr::OriginalName("TOKEN_TYPE_OIDC")] Oidc = 1,
+    /// <summary>
+    /// Public Key Infrastructure (PKI) token type
+    /// </summary>
+    [pbr::OriginalName("TOKEN_TYPE_PKI")] Pki = 2,
+    /// <summary>
+    /// Limited claim token type for AWS integration
+    /// </summary>
+    [pbr::OriginalName("TOKEN_TYPE_LIMITED_AWS")] LimitedAws = 3,
   }
 
   #endregion
