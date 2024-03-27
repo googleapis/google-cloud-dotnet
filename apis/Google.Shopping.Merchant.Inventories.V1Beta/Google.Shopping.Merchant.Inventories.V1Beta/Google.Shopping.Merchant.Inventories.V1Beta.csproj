@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.0-beta03</Version>
-    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Merchant Inventories API (v1beta) which allows developers to programmatically showcase products with local (in-store) or regional availability for free on Google.</Description>
     <PackageTags>shopping;inventory;Google;Cloud</PackageTags>
@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Shopping.Type" Version="[1.0.0-beta03, 2.0.0)" />
+    <PackageReference Include="Google.Shopping.Type" Version="[1.0.0-beta04, 2.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
