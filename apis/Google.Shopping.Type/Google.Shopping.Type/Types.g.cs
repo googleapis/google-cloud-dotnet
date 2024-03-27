@@ -34,20 +34,21 @@ namespace Google.Shopping.Type {
             "Cg9EZXN0aW5hdGlvbkVudW0SIAocREVTVElOQVRJT05fRU5VTV9VTlNQRUNJ",
             "RklFRBAAEhAKDFNIT1BQSU5HX0FEUxABEg8KC0RJU1BMQVlfQURTEAISFwoT",
             "TE9DQUxfSU5WRU5UT1JZX0FEUxADEhEKDUZSRUVfTElTVElOR1MQBBIXChNG",
-            "UkVFX0xPQ0FMX0xJU1RJTkdTEAUSFAoQWU9VVFVCRV9TSE9QUElORxAGItkC",
-            "ChBSZXBvcnRpbmdDb250ZXh0IsQCChRSZXBvcnRpbmdDb250ZXh0RW51bRIm",
+            "UkVFX0xPQ0FMX0xJU1RJTkdTEAUSFAoQWU9VVFVCRV9TSE9QUElORxAGIpYD",
+            "ChBSZXBvcnRpbmdDb250ZXh0IoEDChRSZXBvcnRpbmdDb250ZXh0RW51bRIm",
             "CiJSRVBPUlRJTkdfQ09OVEVYVF9FTlVNX1VOU1BFQ0lGSUVEEAASEAoMU0hP",
-            "UFBJTkdfQURTEAESEQoNRElTQ09WRVJZX0FEUxACEg0KCVZJREVPX0FEUxAD",
-            "Eg8KC0RJU1BMQVlfQURTEAQSFwoTTE9DQUxfSU5WRU5UT1JZX0FEUxAFEhkK",
-            "FVZFSElDTEVfSU5WRU5UT1JZX0FEUxAGEhEKDUZSRUVfTElTVElOR1MQBxIX",
-            "ChNGUkVFX0xPQ0FMX0xJU1RJTkdTEAgSHwobRlJFRV9MT0NBTF9WRUhJQ0xF",
-            "X0xJU1RJTkdTEAkSFAoQWU9VVFVCRV9TSE9QUElORxAKEhAKDENMT1VEX1JF",
-            "VEFJTBALEhYKEkxPQ0FMX0NMT1VEX1JFVEFJTBAMIk0KB0NoYW5uZWwiQgoL",
-            "Q2hhbm5lbEVudW0SHAoYQ0hBTk5FTF9FTlVNX1VOU1BFQ0lGSUVEEAASCgoG",
-            "T05MSU5FEAESCQoFTE9DQUwQAkJwChhjb20uZ29vZ2xlLnNob3BwaW5nLnR5",
-            "cGVCClR5cGVzUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGlu",
-            "Zy90eXBlL3R5cGVwYjt0eXBlcGKqAhRHb29nbGUuU2hvcHBpbmcuVHlwZWIG",
-            "cHJvdG8z"));
+            "UFBJTkdfQURTEAESFQoNRElTQ09WRVJZX0FEUxACGgIIARISCg5ERU1BTkRf",
+            "R0VOX0FEUxANEiMKH0RFTUFORF9HRU5fQURTX0RJU0NPVkVSX1NVUkZBQ0UQ",
+            "DhINCglWSURFT19BRFMQAxIPCgtESVNQTEFZX0FEUxAEEhcKE0xPQ0FMX0lO",
+            "VkVOVE9SWV9BRFMQBRIZChVWRUhJQ0xFX0lOVkVOVE9SWV9BRFMQBhIRCg1G",
+            "UkVFX0xJU1RJTkdTEAcSFwoTRlJFRV9MT0NBTF9MSVNUSU5HUxAIEh8KG0ZS",
+            "RUVfTE9DQUxfVkVISUNMRV9MSVNUSU5HUxAJEhQKEFlPVVRVQkVfU0hPUFBJ",
+            "TkcQChIQCgxDTE9VRF9SRVRBSUwQCxIWChJMT0NBTF9DTE9VRF9SRVRBSUwQ",
+            "DCJNCgdDaGFubmVsIkIKC0NoYW5uZWxFbnVtEhwKGENIQU5ORUxfRU5VTV9V",
+            "TlNQRUNJRklFRBAAEgoKBk9OTElORRABEgkKBUxPQ0FMEAJCcAoYY29tLmdv",
+            "b2dsZS5zaG9wcGluZy50eXBlQgpUeXBlc1Byb3RvUAFaL2Nsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vc2hvcHBpbmcvdHlwZS90eXBlcGI7dHlwZXBiqgIUR29vZ2xl",
+            "LlNob3BwaW5nLlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -839,7 +840,7 @@ namespace Google.Shopping.Type {
   /// Reporting contexts are groups of surfaces and formats for product results on
   /// Google. They can represent the entire destination (for example, [Shopping
   /// ads](https://support.google.com/merchants/answer/6149970)) or a subset of
-  /// formats within a destination (for example, [Discovery
+  /// formats within a destination (for example, [Demand Gen
   /// ads](https://support.google.com/merchants/answer/13389785)).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1011,10 +1012,21 @@ namespace Google.Shopping.Type {
         /// </summary>
         [pbr::OriginalName("SHOPPING_ADS")] ShoppingAds = 1,
         /// <summary>
+        /// Deprecated:  Use `DEMAND_GEN_ADS` instead.
         /// [Discovery and Demand Gen
         /// ads](https://support.google.com/merchants/answer/13389785).
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("DISCOVERY_ADS")] DiscoveryAds = 2,
+        /// <summary>
+        /// [Demand Gen ads](https://support.google.com/merchants/answer/13389785).
+        /// </summary>
+        [pbr::OriginalName("DEMAND_GEN_ADS")] DemandGenAds = 13,
+        /// <summary>
+        /// [Demand Gen ads on Discover
+        /// surface](https://support.google.com/merchants/answer/13389785).
+        /// </summary>
+        [pbr::OriginalName("DEMAND_GEN_ADS_DISCOVER_SURFACE")] DemandGenAdsDiscoverSurface = 14,
         /// <summary>
         /// [Video ads](https://support.google.com/google-ads/answer/6340491).
         /// </summary>
