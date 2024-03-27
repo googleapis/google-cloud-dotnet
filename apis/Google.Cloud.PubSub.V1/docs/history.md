@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.12.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add custom datetime format for Cloud Storage subscriptions ([commit cb33d77](https://github.com/googleapis/google-cloud-dotnet/commit/cb33d7762a0fb1dff89edfcaf751478119ae4801))
+
 ## Version 3.11.0, released 2024-03-25
 
 ### New features
