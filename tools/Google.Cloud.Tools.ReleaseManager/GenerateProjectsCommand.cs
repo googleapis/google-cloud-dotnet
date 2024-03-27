@@ -177,24 +177,12 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         internal static string GetTargetForReflectionLoad(string id)
         {
-
             // Work out the TFM to publish, based on specified target frameworks.
             var api = ApiCatalog.Load()[id];
-
-            // Temporary hack: keep netstandard2.1 for APIs that depend on other APIs other than mixins.
-            string defaultNetstandardTarget = DefaultNetstandardTarget;
-            var catalog = ApiCatalog.Load();
-            if (api.TargetFrameworks is null && api.Dependencies.Keys
-                .Except(new[] { "Google.LongRunning", "Google.Cloud.Iam.V1", "Google.Cloud.Location" })
-                .Any(dep => catalog.TryGetApi(dep, out _) && api.Dependencies[dep] != "project"))
-            {
-                defaultNetstandardTarget = "netstandard2.1";
-            }
-            // Mostly end temporary hack: when removing, change defaultNetstandardTarget below to DefaultNetstandardTarget
             return api.TargetFrameworks?
                 .Split(';')
                 .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
-                ?? defaultNetstandardTarget;
+                ?? DefaultNetstandardTarget;
         }
 
         /// <summary>
@@ -610,16 +598,6 @@ api-name: {api.Id}
                 throw new UserErrorException($"No version specified for {api.Id}");
             }
             string targetFrameworks = api.TargetFrameworks ?? PackageTypeToDefaultTargetFrameworks.GetValueOrDefault(api.Type);
-
-            // Temporary hack: keep netstandard2.1 for APIs that depend on other APIs other than mixins.
-            var catalog = ApiCatalog.Load();
-            if (api.TargetFrameworks is null && api.Dependencies.Keys
-                .Except(new[] { "Google.LongRunning", "Google.Cloud.Iam.V1", "Google.Cloud.Location" })
-                .Any(dep => catalog.TryGetApi(dep, out _) && api.Dependencies[dep] != "project"))
-            {
-                targetFrameworks = "netstandard2.1;net462";
-            }
-            // End of temporary hack
 
             var dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
 
