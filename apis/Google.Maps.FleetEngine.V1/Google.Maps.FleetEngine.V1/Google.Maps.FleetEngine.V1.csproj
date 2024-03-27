@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.2.0</Version>
-    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Maps Fleet Engine API (v1), which enables access to On Demand Rides and Deliveries and Last Mile Fleet Solutions.</Description>
     <PackageTags>on-demand;rides;deliveries;fleet;Google;Cloud</PackageTags>
@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
-    <PackageReference Include="Google.Geo.Type" Version="[1.1.0, 2.0.0)" />
+    <PackageReference Include="Google.Geo.Type" Version="[1.2.0, 2.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
