@@ -4,6 +4,18 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.6.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add VectorSearch API ([commit 6b45d22](https://github.com/googleapis/google-cloud-dotnet/commit/6b45d2250c9652a430fc0ae1a371353e4ff31056))
+- Add new types ExplainOptions, ExplainMetrics, PlanSummary, ExecutionStats ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainOptions field to RunQueryRequest ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainMetrics field to RunQueryResponse ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainOptions field to RunAggregationQueryRequest ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainMetrics field to RunAggregationQueryResponse ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+
 ## Version 3.5.1, released 2024-02-14
 
 ### Bug fixes
