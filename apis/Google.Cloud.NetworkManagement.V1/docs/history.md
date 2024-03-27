@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add new fields and enum values related to round-trip ([commit 9570290](https://github.com/googleapis/google-cloud-dotnet/commit/95702900d2f99bbfb4ebf393f2e54b6b99054563))
+
+### Documentation improvements
+
+- Update a few outdated comments ([commit 9570290](https://github.com/googleapis/google-cloud-dotnet/commit/95702900d2f99bbfb4ebf393f2e54b6b99054563))
+- Update comments for fields related to load balancing ([commit 0172996](https://github.com/googleapis/google-cloud-dotnet/commit/017299691b681ee74da40ad277492c6cab41fbd8))
+
 ## Version 2.7.0, released 2024-03-21
 
 ### New features
