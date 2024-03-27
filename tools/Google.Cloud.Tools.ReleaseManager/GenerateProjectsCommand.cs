@@ -655,7 +655,7 @@ api-name: {api.Id}
         }
 
         private static string GetTestTargetFrameworks(ApiMetadata api) =>
-            api.TestTargetFrameworks ?? api.TargetFrameworks ?? DefaultTestTargetFrameworks;
+            api.TestTargetFrameworks ?? DefaultTestTargetFrameworks;
 
         private static void GenerateTestProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
