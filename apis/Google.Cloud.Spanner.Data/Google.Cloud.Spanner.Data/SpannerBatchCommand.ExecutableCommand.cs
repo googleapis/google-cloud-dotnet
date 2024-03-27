@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
             internal Priority Priority { get; }
             internal string Tag { get; }
             internal SpannerConversionOptions ConversionOptions => SpannerConversionOptions.ForConnection(Connection);
+            internal TimeSpan? CommitDelay { get; }
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -52,6 +53,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandType = command.CommandType;
                 Priority = command.Priority;
                 Tag = command.Tag;
+                CommitDelay = command.CommitDelay;
             }
 
             /// <summary>
@@ -80,7 +82,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<IReadOnlyList<long>> ExecuteBatchDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, singleUseTransactionOptions: null);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, CommitDelay, singleUseTransactionOptions: null);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 return result.ToList().AsReadOnly();
