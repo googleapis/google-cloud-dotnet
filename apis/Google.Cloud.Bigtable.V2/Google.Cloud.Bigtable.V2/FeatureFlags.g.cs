@@ -25,19 +25,20 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvYmlndGFibGUvdjIvZmVhdHVyZV9mbGFncy5wcm90bxISZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyIrYBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
+            "Z2xlLmJpZ3RhYmxlLnYyItsBCgxGZWF0dXJlRmxhZ3MSFQoNcmV2ZXJzZV9z",
             "Y2FucxgBIAEoCBIeChZtdXRhdGVfcm93c19yYXRlX2xpbWl0GAMgASgIEh8K",
             "F211dGF0ZV9yb3dzX3JhdGVfbGltaXQyGAUgASgIEiIKGmxhc3Rfc2Nhbm5l",
             "ZF9yb3dfcmVzcG9uc2VzGAQgASgIEhYKDnJvdXRpbmdfY29va2llGAYgASgI",
-            "EhIKCnJldHJ5X2luZm8YByABKAhCvQEKFmNvbS5nb29nbGUuYmlndGFibGUu",
-            "djJCEUZlYXR1cmVGbGFnc1Byb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvdjI7YmlndGFibGWqAhhHb29n",
-            "bGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVc",
-            "VjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
+            "EhIKCnJldHJ5X2luZm8YByABKAgSIwobY2xpZW50X3NpZGVfbWV0cmljc19l",
+            "bmFibGVkGAggASgIQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQhFGZWF0",
+            "dXJlRmxhZ3NQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2JpZ3RhYmxlL3YyO2JpZ3RhYmxlqgIYR29vZ2xlLkNsb3Vk",
+            "LkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29v",
+            "Z2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.FeatureFlags), global::Google.Cloud.Bigtable.V2.FeatureFlags.Parser, new[]{ "ReverseScans", "MutateRowsRateLimit", "MutateRowsRateLimit2", "LastScannedRowResponses", "RoutingCookie", "RetryInfo", "ClientSideMetricsEnabled" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +96,7 @@ namespace Google.Cloud.Bigtable.V2 {
       lastScannedRowResponses_ = other.lastScannedRowResponses_;
       routingCookie_ = other.routingCookie_;
       retryInfo_ = other.retryInfo_;
+      clientSideMetricsEnabled_ = other.clientSideMetricsEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -202,6 +204,21 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "client_side_metrics_enabled" field.</summary>
+    public const int ClientSideMetricsEnabledFieldNumber = 8;
+    private bool clientSideMetricsEnabled_;
+    /// <summary>
+    /// Notify the server that the client has client side metrics enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ClientSideMetricsEnabled {
+      get { return clientSideMetricsEnabled_; }
+      set {
+        clientSideMetricsEnabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -223,6 +240,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (LastScannedRowResponses != other.LastScannedRowResponses) return false;
       if (RoutingCookie != other.RoutingCookie) return false;
       if (RetryInfo != other.RetryInfo) return false;
+      if (ClientSideMetricsEnabled != other.ClientSideMetricsEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -236,6 +254,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (LastScannedRowResponses != false) hash ^= LastScannedRowResponses.GetHashCode();
       if (RoutingCookie != false) hash ^= RoutingCookie.GetHashCode();
       if (RetryInfo != false) hash ^= RetryInfo.GetHashCode();
+      if (ClientSideMetricsEnabled != false) hash ^= ClientSideMetricsEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -278,6 +297,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(56);
         output.WriteBool(RetryInfo);
       }
+      if (ClientSideMetricsEnabled != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ClientSideMetricsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -312,6 +335,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(56);
         output.WriteBool(RetryInfo);
       }
+      if (ClientSideMetricsEnabled != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ClientSideMetricsEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -338,6 +365,9 @@ namespace Google.Cloud.Bigtable.V2 {
         size += 1 + 1;
       }
       if (RetryInfo != false) {
+        size += 1 + 1;
+      }
+      if (ClientSideMetricsEnabled != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -369,6 +399,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.RetryInfo != false) {
         RetryInfo = other.RetryInfo;
+      }
+      if (other.ClientSideMetricsEnabled != false) {
+        ClientSideMetricsEnabled = other.ClientSideMetricsEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -409,6 +442,10 @@ namespace Google.Cloud.Bigtable.V2 {
             RetryInfo = input.ReadBool();
             break;
           }
+          case 64: {
+            ClientSideMetricsEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -446,6 +483,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 56: {
             RetryInfo = input.ReadBool();
+            break;
+          }
+          case 64: {
+            ClientSideMetricsEnabled = input.ReadBool();
             break;
           }
         }
