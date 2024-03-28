@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-03-28
+
+### New features
+
+- Add DEMAND_GEN_ADS and DEMAND_GEN_ADS_DISCOVER_SURFACE in ReportingContextEnum ([commit b785634](https://github.com/googleapis/google-cloud-dotnet/commit/b785634f5b24379b3fb6cfdda30ab917283a74e3))
+
+### Documentation improvements
+
+- Deprecate DISCOVERY_ADS and document the new enum values ([commit b785634](https://github.com/googleapis/google-cloud-dotnet/commit/b785634f5b24379b3fb6cfdda30ab917283a74e3))
+
 ## Version 1.0.0-beta04, released 2024-03-26
 
 ### New features

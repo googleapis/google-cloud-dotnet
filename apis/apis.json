@@ -5670,7 +5670,7 @@
     },
     {
       "id": "Google.Shopping.Type",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "other",
       "description": "Version-agnostic types for Shopping APIs.",
       "tags": [
