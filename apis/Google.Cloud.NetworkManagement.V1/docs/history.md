@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.9.0, released 2024-03-28
+
+### New features
+
+- Add an "unsupported" type of firewall policy rule ([commit d388abc](https://github.com/googleapis/google-cloud-dotnet/commit/d388abcac50e05f4baba9c436cedb0e11879ebcf))
+
+### Documentation improvements
+
+- Update possible firewall rule actions comment ([commit 1538880](https://github.com/googleapis/google-cloud-dotnet/commit/15388808e4c683b6fbe0c201e92562221cfae219))
+
 ## Version 2.8.0, released 2024-03-26
 
 ### New features
