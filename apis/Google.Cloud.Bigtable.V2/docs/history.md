@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.12.0, released 2024-03-28
+
+### New features
+
+- Add feature flag for client side metrics ([commit 1f14edf](https://github.com/googleapis/google-cloud-dotnet/commit/1f14edf5d46734175e945ff69f28be3f2e7b0767))
+
 ## Version 3.11.0, released 2024-03-27
 
 ### New features
