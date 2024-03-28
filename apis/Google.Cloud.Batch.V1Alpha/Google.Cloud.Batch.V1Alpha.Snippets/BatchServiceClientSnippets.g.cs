@@ -902,5 +902,722 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for CreateResourceAllowance</summary>
+        public void CreateResourceAllowanceRequestObject()
+        {
+            // Snippet: CreateResourceAllowance(CreateResourceAllowanceRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::CreateResourceAllowanceRequest request = new gcbv::CreateResourceAllowanceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceAllowanceId = "",
+                ResourceAllowance = new gcbv::ResourceAllowance(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.CreateResourceAllowance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateResourceAllowanceAsync</summary>
+        public async Task CreateResourceAllowanceRequestObjectAsync()
+        {
+            // Snippet: CreateResourceAllowanceAsync(CreateResourceAllowanceRequest, CallSettings)
+            // Additional: CreateResourceAllowanceAsync(CreateResourceAllowanceRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::CreateResourceAllowanceRequest request = new gcbv::CreateResourceAllowanceRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ResourceAllowanceId = "",
+                ResourceAllowance = new gcbv::ResourceAllowance(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.CreateResourceAllowanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateResourceAllowance</summary>
+        public void CreateResourceAllowance()
+        {
+            // Snippet: CreateResourceAllowance(string, ResourceAllowance, string, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            string resourceAllowanceId = "";
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.CreateResourceAllowance(parent, resourceAllowance, resourceAllowanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateResourceAllowanceAsync</summary>
+        public async Task CreateResourceAllowanceAsync()
+        {
+            // Snippet: CreateResourceAllowanceAsync(string, ResourceAllowance, string, CallSettings)
+            // Additional: CreateResourceAllowanceAsync(string, ResourceAllowance, string, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            string resourceAllowanceId = "";
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.CreateResourceAllowanceAsync(parent, resourceAllowance, resourceAllowanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateResourceAllowance</summary>
+        public void CreateResourceAllowanceResourceNames()
+        {
+            // Snippet: CreateResourceAllowance(LocationName, ResourceAllowance, string, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            string resourceAllowanceId = "";
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.CreateResourceAllowance(parent, resourceAllowance, resourceAllowanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateResourceAllowanceAsync</summary>
+        public async Task CreateResourceAllowanceResourceNamesAsync()
+        {
+            // Snippet: CreateResourceAllowanceAsync(LocationName, ResourceAllowance, string, CallSettings)
+            // Additional: CreateResourceAllowanceAsync(LocationName, ResourceAllowance, string, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            string resourceAllowanceId = "";
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.CreateResourceAllowanceAsync(parent, resourceAllowance, resourceAllowanceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowance</summary>
+        public void GetResourceAllowanceRequestObject()
+        {
+            // Snippet: GetResourceAllowance(GetResourceAllowanceRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::GetResourceAllowanceRequest request = new gcbv::GetResourceAllowanceRequest
+            {
+                ResourceAllowanceName = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]"),
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.GetResourceAllowance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowanceAsync</summary>
+        public async Task GetResourceAllowanceRequestObjectAsync()
+        {
+            // Snippet: GetResourceAllowanceAsync(GetResourceAllowanceRequest, CallSettings)
+            // Additional: GetResourceAllowanceAsync(GetResourceAllowanceRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::GetResourceAllowanceRequest request = new gcbv::GetResourceAllowanceRequest
+            {
+                ResourceAllowanceName = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]"),
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.GetResourceAllowanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowance</summary>
+        public void GetResourceAllowance()
+        {
+            // Snippet: GetResourceAllowance(string, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/resourceAllowances/[RESOURCE_ALLOWANCE]";
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.GetResourceAllowance(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowanceAsync</summary>
+        public async Task GetResourceAllowanceAsync()
+        {
+            // Snippet: GetResourceAllowanceAsync(string, CallSettings)
+            // Additional: GetResourceAllowanceAsync(string, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/resourceAllowances/[RESOURCE_ALLOWANCE]";
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.GetResourceAllowanceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowance</summary>
+        public void GetResourceAllowanceResourceNames()
+        {
+            // Snippet: GetResourceAllowance(ResourceAllowanceName, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowanceName name = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]");
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.GetResourceAllowance(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceAllowanceAsync</summary>
+        public async Task GetResourceAllowanceResourceNamesAsync()
+        {
+            // Snippet: GetResourceAllowanceAsync(ResourceAllowanceName, CallSettings)
+            // Additional: GetResourceAllowanceAsync(ResourceAllowanceName, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowanceName name = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]");
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.GetResourceAllowanceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowance</summary>
+        public void DeleteResourceAllowanceRequestObject()
+        {
+            // Snippet: DeleteResourceAllowance(DeleteResourceAllowanceRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::DeleteResourceAllowanceRequest request = new gcbv::DeleteResourceAllowanceRequest
+            {
+                ResourceAllowanceName = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]"),
+                Reason = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = batchServiceClient.DeleteResourceAllowance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteResourceAllowance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowanceAsync</summary>
+        public async Task DeleteResourceAllowanceRequestObjectAsync()
+        {
+            // Snippet: DeleteResourceAllowanceAsync(DeleteResourceAllowanceRequest, CallSettings)
+            // Additional: DeleteResourceAllowanceAsync(DeleteResourceAllowanceRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::DeleteResourceAllowanceRequest request = new gcbv::DeleteResourceAllowanceRequest
+            {
+                ResourceAllowanceName = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]"),
+                Reason = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = await batchServiceClient.DeleteResourceAllowanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteResourceAllowanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowance</summary>
+        public void DeleteResourceAllowance()
+        {
+            // Snippet: DeleteResourceAllowance(string, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/resourceAllowances/[RESOURCE_ALLOWANCE]";
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = batchServiceClient.DeleteResourceAllowance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteResourceAllowance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowanceAsync</summary>
+        public async Task DeleteResourceAllowanceAsync()
+        {
+            // Snippet: DeleteResourceAllowanceAsync(string, CallSettings)
+            // Additional: DeleteResourceAllowanceAsync(string, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/resourceAllowances/[RESOURCE_ALLOWANCE]";
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = await batchServiceClient.DeleteResourceAllowanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteResourceAllowanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowance</summary>
+        public void DeleteResourceAllowanceResourceNames()
+        {
+            // Snippet: DeleteResourceAllowance(ResourceAllowanceName, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowanceName name = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]");
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = batchServiceClient.DeleteResourceAllowance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceDeleteResourceAllowance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteResourceAllowanceAsync</summary>
+        public async Task DeleteResourceAllowanceResourceNamesAsync()
+        {
+            // Snippet: DeleteResourceAllowanceAsync(ResourceAllowanceName, CallSettings)
+            // Additional: DeleteResourceAllowanceAsync(ResourceAllowanceName, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowanceName name = gcbv::ResourceAllowanceName.FromProjectLocationResourceAllowance("[PROJECT]", "[LOCATION]", "[RESOURCE_ALLOWANCE]");
+            // Make the request
+            Operation<Empty, gcbv::OperationMetadata> response = await batchServiceClient.DeleteResourceAllowanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceDeleteResourceAllowanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowances</summary>
+        public void ListResourceAllowancesRequestObject()
+        {
+            // Snippet: ListResourceAllowances(ListResourceAllowancesRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::ListResourceAllowancesRequest request = new gcbv::ListResourceAllowancesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowances(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcbv::ResourceAllowance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcbv::ListResourceAllowancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowancesAsync</summary>
+        public async Task ListResourceAllowancesRequestObjectAsync()
+        {
+            // Snippet: ListResourceAllowancesAsync(ListResourceAllowancesRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::ListResourceAllowancesRequest request = new gcbv::ListResourceAllowancesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowancesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcbv::ResourceAllowance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcbv::ListResourceAllowancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowances</summary>
+        public void ListResourceAllowances()
+        {
+            // Snippet: ListResourceAllowances(string, string, int?, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowances(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcbv::ResourceAllowance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcbv::ListResourceAllowancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowancesAsync</summary>
+        public async Task ListResourceAllowancesAsync()
+        {
+            // Snippet: ListResourceAllowancesAsync(string, string, int?, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcbv::ResourceAllowance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcbv::ListResourceAllowancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowances</summary>
+        public void ListResourceAllowancesResourceNames()
+        {
+            // Snippet: ListResourceAllowances(LocationName, string, int?, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowances(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcbv::ResourceAllowance item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcbv::ListResourceAllowancesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceAllowancesAsync</summary>
+        public async Task ListResourceAllowancesResourceNamesAsync()
+        {
+            // Snippet: ListResourceAllowancesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<gcbv::ListResourceAllowancesResponse, gcbv::ResourceAllowance> response = batchServiceClient.ListResourceAllowancesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((gcbv::ResourceAllowance item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((gcbv::ListResourceAllowancesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcbv::ResourceAllowance item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcbv::ResourceAllowance> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcbv::ResourceAllowance item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceAllowance</summary>
+        public void UpdateResourceAllowanceRequestObject()
+        {
+            // Snippet: UpdateResourceAllowance(UpdateResourceAllowanceRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::UpdateResourceAllowanceRequest request = new gcbv::UpdateResourceAllowanceRequest
+            {
+                ResourceAllowance = new gcbv::ResourceAllowance(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.UpdateResourceAllowance(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceAllowanceAsync</summary>
+        public async Task UpdateResourceAllowanceRequestObjectAsync()
+        {
+            // Snippet: UpdateResourceAllowanceAsync(UpdateResourceAllowanceRequest, CallSettings)
+            // Additional: UpdateResourceAllowanceAsync(UpdateResourceAllowanceRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::UpdateResourceAllowanceRequest request = new gcbv::UpdateResourceAllowanceRequest
+            {
+                ResourceAllowance = new gcbv::ResourceAllowance(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.UpdateResourceAllowanceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceAllowance</summary>
+        public void UpdateResourceAllowance()
+        {
+            // Snippet: UpdateResourceAllowance(ResourceAllowance, FieldMask, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcbv::ResourceAllowance response = batchServiceClient.UpdateResourceAllowance(resourceAllowance, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateResourceAllowanceAsync</summary>
+        public async Task UpdateResourceAllowanceAsync()
+        {
+            // Snippet: UpdateResourceAllowanceAsync(ResourceAllowance, FieldMask, CallSettings)
+            // Additional: UpdateResourceAllowanceAsync(ResourceAllowance, FieldMask, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::ResourceAllowance resourceAllowance = new gcbv::ResourceAllowance();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcbv::ResourceAllowance response = await batchServiceClient.UpdateResourceAllowanceAsync(resourceAllowance, updateMask);
+            // End snippet
+        }
     }
 }

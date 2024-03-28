@@ -87,6 +87,20 @@ namespace Google.Cloud.Batch.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.ListTasksRequest> __Marshaller_google_cloud_batch_v1alpha_ListTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.ListTasksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.ListTasksResponse> __Marshaller_google_cloud_batch_v1alpha_ListTasksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.ListTasksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest> __Marshaller_google_cloud_batch_v1alpha_CreateResourceAllowanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> __Marshaller_google_cloud_batch_v1alpha_ResourceAllowance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest> __Marshaller_google_cloud_batch_v1alpha_GetResourceAllowanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest> __Marshaller_google_cloud_batch_v1alpha_DeleteResourceAllowanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest> __Marshaller_google_cloud_batch_v1alpha_ListResourceAllowancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse> __Marshaller_google_cloud_batch_v1alpha_ListResourceAllowancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest> __Marshaller_google_cloud_batch_v1alpha_UpdateResourceAllowanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.CreateJobRequest, global::Google.Cloud.Batch.V1Alpha.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.CreateJobRequest, global::Google.Cloud.Batch.V1Alpha.Job>(
@@ -135,6 +149,46 @@ namespace Google.Cloud.Batch.V1Alpha {
         "ListTasks",
         __Marshaller_google_cloud_batch_v1alpha_ListTasksRequest,
         __Marshaller_google_cloud_batch_v1alpha_ListTasksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> __Method_CreateResourceAllowance = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateResourceAllowance",
+        __Marshaller_google_cloud_batch_v1alpha_CreateResourceAllowanceRequest,
+        __Marshaller_google_cloud_batch_v1alpha_ResourceAllowance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> __Method_GetResourceAllowance = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetResourceAllowance",
+        __Marshaller_google_cloud_batch_v1alpha_GetResourceAllowanceRequest,
+        __Marshaller_google_cloud_batch_v1alpha_ResourceAllowance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest, global::Google.LongRunning.Operation> __Method_DeleteResourceAllowance = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteResourceAllowance",
+        __Marshaller_google_cloud_batch_v1alpha_DeleteResourceAllowanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest, global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse> __Method_ListResourceAllowances = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest, global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListResourceAllowances",
+        __Marshaller_google_cloud_batch_v1alpha_ListResourceAllowancesRequest,
+        __Marshaller_google_cloud_batch_v1alpha_ListResourceAllowancesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> __Method_UpdateResourceAllowance = new grpc::Method<global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateResourceAllowance",
+        __Marshaller_google_cloud_batch_v1alpha_UpdateResourceAllowanceRequest,
+        __Marshaller_google_cloud_batch_v1alpha_ResourceAllowance);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -214,6 +268,66 @@ namespace Google.Cloud.Batch.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Batch.V1Alpha.ListTasksResponse> ListTasks(global::Google.Cloud.Batch.V1Alpha.ListTasksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> CreateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a ResourceAllowance specified by its resource name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> GetResourceAllowance(global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete a ResourceAllowance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteResourceAllowance(global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all ResourceAllowances for a project within a region.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse> ListResourceAllowances(global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> UpdateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -535,6 +649,246 @@ namespace Google.Cloud.Batch.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTasks, null, options, request);
       }
+      /// <summary>
+      /// Create a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance CreateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateResourceAllowance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance CreateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Create a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> CreateResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateResourceAllowanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> CreateResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceAllowance specified by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance GetResourceAllowance(global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceAllowance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceAllowance specified by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance GetResourceAllowance(global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Get a ResourceAllowance specified by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> GetResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetResourceAllowanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a ResourceAllowance specified by its resource name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> GetResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Delete a ResourceAllowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteResourceAllowance(global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteResourceAllowance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a ResourceAllowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteResourceAllowance(global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Delete a ResourceAllowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteResourceAllowanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a ResourceAllowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// List all ResourceAllowances for a project within a region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse ListResourceAllowances(global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceAllowances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all ResourceAllowances for a project within a region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse ListResourceAllowances(global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListResourceAllowances, null, options, request);
+      }
+      /// <summary>
+      /// List all ResourceAllowances for a project within a region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse> ListResourceAllowancesAsync(global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListResourceAllowancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all ResourceAllowances for a project within a region.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse> ListResourceAllowancesAsync(global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListResourceAllowances, null, options, request);
+      }
+      /// <summary>
+      /// Update a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance UpdateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateResourceAllowance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Batch.V1Alpha.ResourceAllowance UpdateResourceAllowance(global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateResourceAllowance, null, options, request);
+      }
+      /// <summary>
+      /// Update a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> UpdateResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateResourceAllowanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a Resource Allowance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Batch.V1Alpha.ResourceAllowance> UpdateResourceAllowanceAsync(global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateResourceAllowance, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BatchServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -554,7 +908,12 @@ namespace Google.Cloud.Batch.V1Alpha {
           .AddMethod(__Method_DeleteJob, serviceImpl.DeleteJob)
           .AddMethod(__Method_ListJobs, serviceImpl.ListJobs)
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
-          .AddMethod(__Method_ListTasks, serviceImpl.ListTasks).Build();
+          .AddMethod(__Method_ListTasks, serviceImpl.ListTasks)
+          .AddMethod(__Method_CreateResourceAllowance, serviceImpl.CreateResourceAllowance)
+          .AddMethod(__Method_GetResourceAllowance, serviceImpl.GetResourceAllowance)
+          .AddMethod(__Method_DeleteResourceAllowance, serviceImpl.DeleteResourceAllowance)
+          .AddMethod(__Method_ListResourceAllowances, serviceImpl.ListResourceAllowances)
+          .AddMethod(__Method_UpdateResourceAllowance, serviceImpl.UpdateResourceAllowance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -570,6 +929,11 @@ namespace Google.Cloud.Batch.V1Alpha {
       serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.ListJobsRequest, global::Google.Cloud.Batch.V1Alpha.ListJobsResponse>(serviceImpl.ListJobs));
       serviceBinder.AddMethod(__Method_GetTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.GetTaskRequest, global::Google.Cloud.Batch.V1Alpha.Task>(serviceImpl.GetTask));
       serviceBinder.AddMethod(__Method_ListTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.ListTasksRequest, global::Google.Cloud.Batch.V1Alpha.ListTasksResponse>(serviceImpl.ListTasks));
+      serviceBinder.AddMethod(__Method_CreateResourceAllowance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.CreateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(serviceImpl.CreateResourceAllowance));
+      serviceBinder.AddMethod(__Method_GetResourceAllowance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.GetResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(serviceImpl.GetResourceAllowance));
+      serviceBinder.AddMethod(__Method_DeleteResourceAllowance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.DeleteResourceAllowanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteResourceAllowance));
+      serviceBinder.AddMethod(__Method_ListResourceAllowances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesRequest, global::Google.Cloud.Batch.V1Alpha.ListResourceAllowancesResponse>(serviceImpl.ListResourceAllowances));
+      serviceBinder.AddMethod(__Method_UpdateResourceAllowance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1Alpha.UpdateResourceAllowanceRequest, global::Google.Cloud.Batch.V1Alpha.ResourceAllowance>(serviceImpl.UpdateResourceAllowance));
     }
 
   }
