@@ -499,7 +499,6 @@
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-      "targetFrameworks": "netstandard2.1;net462",
       "version": "3.9.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
@@ -507,7 +506,7 @@
         "Google.Cloud.Iam.V1": "3.2.0",
         "Google.Cloud.OrgPolicy.V1": "3.2.0",
         "Google.Cloud.OsConfig.V1": "2.3.0",
-        "Google.Identity.AccessContextManager.V1": "2.3.0",
+        "Google.Identity.AccessContextManager.V1": "2.4.0",
         "Google.LongRunning": "3.2.0"
       },
       "tags": [
@@ -1115,7 +1114,6 @@
       "id": "Google.Cloud.BinaryAuthorization.V1",
       "version": "2.3.0",
       "type": "grpc",
-      "targetFrameworks": "netstandard2.1;net462",
       "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
       "description": "Recommended Google client library to access the Google Cloud Binary Authorization API v1, providing policy control for images deployed to Kubernetes Engine clusters.",
@@ -1127,7 +1125,7 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Grafeas.V1": "3.5.0"
+        "Grafeas.V1": "3.6.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1",
@@ -1892,7 +1890,6 @@
       "id": "Google.Cloud.Diagnostics.Common",
       "version": "5.2.0",
       "type": "other",
-      "targetFrameworks": "netstandard2.1;net462",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -1904,7 +1901,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.Logging.V2": "4.2.0",
+        "Google.Cloud.Logging.V2": "4.3.0",
         "Google.Cloud.Trace.V1": "3.3.0",
         "Microsoft.Extensions.Http": "6.0.0",
         "System.Diagnostics.StackTrace": "4.3.0"
@@ -2862,7 +2859,6 @@
       "version": "4.2.0",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.1;net462",
       "description": "Log4Net client library for the Google Cloud Logging API.",
       "tags": [
         "Log4Net",
@@ -2871,8 +2867,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.DevTools.Common": "3.1.1",
-        "Google.Cloud.Logging.V2": "4.2.0",
+        "Google.Cloud.DevTools.Common": "3.2.0",
+        "Google.Cloud.Logging.V2": "4.3.0",
         "Grpc.Core": "default",
         "log4net": "2.0.14"
       },
@@ -2903,7 +2899,6 @@
       "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
-      "targetFrameworks": "netstandard2.1;net462",
       "description": "NLog target for the Google Cloud Logging API.",
       "tags": [
         "NLog",
@@ -2912,8 +2907,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.DevTools.Common": "3.1.1",
-        "Google.Cloud.Logging.V2": "4.2.0",
+        "Google.Cloud.DevTools.Common": "3.2.0",
+        "Google.Cloud.Logging.V2": "4.3.0",
         "Grpc.Core": "default",
         "NLog": "5.2.8"
       },
