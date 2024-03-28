@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.19.0, released 2024-03-28
+
+### New features
+
+- Add Notebook field to finding's list of attributes ([commit 8de6a4d](https://github.com/googleapis/google-cloud-dotnet/commit/8de6a4d61f397fae2ece55650f1ad5ed1d3f65f4))
+
 ## Version 3.18.0, released 2024-03-26
 
 ### New features
