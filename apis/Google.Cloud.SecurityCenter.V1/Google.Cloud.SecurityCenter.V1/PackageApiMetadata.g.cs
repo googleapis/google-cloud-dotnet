@@ -82,6 +82,7 @@ namespace Google.Cloud.SecurityCenter.V1
             yield return LogEntryReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
+            yield return NotebookReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
             yield return OrgPolicyReflection.Descriptor;
