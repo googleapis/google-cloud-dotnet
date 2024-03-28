@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha25, released 2024-03-28
+
+### New features
+
+- Onboard Resource Allowance API methods on v1alpha ([commit 7591fca](https://github.com/googleapis/google-cloud-dotnet/commit/7591fcafd36fc37ca49b64b4fdf866cda4ee36b5))
+
 ## Version 1.0.0-alpha24, released 2024-03-27
 
 ### New features
