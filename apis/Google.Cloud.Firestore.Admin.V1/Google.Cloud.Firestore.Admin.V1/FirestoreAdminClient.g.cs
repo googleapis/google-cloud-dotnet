@@ -3792,7 +3792,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
@@ -3809,7 +3809,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
@@ -3826,7 +3826,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
@@ -3840,7 +3840,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
@@ -3857,7 +3857,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
@@ -3874,7 +3874,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// Deletes a backup schedule.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of backup schedule.
+        /// Required. The name of the backup schedule.
         /// 
         /// Format
         /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`

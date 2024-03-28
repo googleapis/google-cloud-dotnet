@@ -197,7 +197,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// <summary>Field number for the "daily_recurrence" field.</summary>
     public const int DailyRecurrenceFieldNumber = 7;
     /// <summary>
-    /// For a schedule that runs daily at a specified time.
+    /// For a schedule that runs daily.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -212,7 +212,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// <summary>Field number for the "weekly_recurrence" field.</summary>
     public const int WeeklyRecurrenceFieldNumber = 8;
     /// <summary>
-    /// For a schedule that runs weekly on a specific day and time.
+    /// For a schedule that runs weekly on a specific day.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -557,7 +557,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
-  /// Represent a recurring schedule that runs at a specific time every day.
+  /// Represents a recurring schedule that runs at a specific time every day.
   ///
   /// The time zone is UTC.
   /// </summary>
