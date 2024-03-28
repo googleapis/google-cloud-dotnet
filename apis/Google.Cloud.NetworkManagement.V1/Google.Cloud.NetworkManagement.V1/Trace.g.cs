@@ -3434,7 +3434,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int ActionFieldNumber = 4;
     private string action_ = "";
     /// <summary>
-    /// Possible values: ALLOW, DENY
+    /// Possible values: ALLOW, DENY, APPLY_SECURITY_PROFILE_GROUP
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
