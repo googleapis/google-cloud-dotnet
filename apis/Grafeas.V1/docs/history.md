@@ -1,5 +1,35 @@
 # Version history
 
+## Version 3.6.0, released 2024-03-28
+
+### Bug fixes
+
+- Set the transport of grafeas back to grpc only ([commit 0b69ee2](https://github.com/googleapis/google-cloud-dotnet/commit/0b69ee2a9f0345cc4c145c9ac1b9fc6833412ff8))
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- A new field `in_toto_slsa_provenance_v1` is added to message `BuildOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new value `SBOM_REFERENCE` is added to enum `NoteKind` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `impact` is added to message `ComplianceNote` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMStatus` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_status` is added to message `DiscoveryOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_reference` is added to message `Occurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `sbom_reference` is added to message `Note` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `InTotoSlsaProvenanceV1` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMReferenceNote` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SBOMReferenceOccurrence` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SbomReferenceIntotoPayload` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new message `SbomReferenceIntotoPredicate` is added ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `vulnerability_id` is added to message `VulnerabilityAssessmentNote` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `vulnerability_id` is added to message `VulnerabilityOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A new field `extra_details` is added to message `VulnerabilityOccurrence` ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+
+### Documentation improvements
+
+- A comment for field `cve` in message `VulnerabilityAssessmentNote` is changed ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+- A comment for field `cve` in message `VulnerabilityOccurrence` is changed ([commit 416cfff](https://github.com/googleapis/google-cloud-dotnet/commit/416cfff3c6855582927a35e271a6f596227af264))
+
 ## Version 3.5.0, released 2024-03-05
 
 ### New features
