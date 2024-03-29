@@ -533,7 +533,7 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="SessionPool.CreateDetachedSession(SessionName, ByteString, ModeOneofCase)"/> (or an overload) to create an instance
         /// of <see cref="PooledSession"/> representing the shared transaction and then call <see cref="ReleaseToPool(bool)"/> passing true
         /// to force session deletion and clean up resources.
-        /// Else, the application can rely on Spaner service garbage collection to clean up this session once it becomes stale.
+        /// Else, the application can rely on Spanner service garbage collection to clean up this session once it becomes stale.
         /// </remarks>
         public void DetachFromPool()
         {
