@@ -94,29 +94,76 @@ namespace Google.Cloud.Storage.Control.V2 {
             "b3V0IoYBChdHZXRTdG9yYWdlTGF5b3V0UmVxdWVzdBI6CgRuYW1lGAEgASgJ",
             "QizgQQL6QSYKJHN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZUxheW91",
             "dBIOCgZwcmVmaXgYAiABKAkSHwoKcmVxdWVzdF9pZBgDIAEoCUIL4EEB4ozP",
-            "1wgCCAEykwoKDlN0b3JhZ2VDb250cm9sEpoBCgxDcmVhdGVGb2xkZXISLi5n",
-            "b29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkNyZWF0ZUZvbGRlclJlcXVlc3Qa",
-            "IS5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkZvbGRlciI32kEXcGFyZW50",
-            "LGZvbGRlcixmb2xkZXJfaWSK0+STAhcSFQoGcGFyZW50Egt7YnVja2V0PSoq",
-            "fRKPAQoMRGVsZXRlRm9sZGVyEi4uZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52",
-            "Mi5EZWxldGVGb2xkZXJSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IjfaQQRuYW1litPkkwIqEigKBG5hbWUSIHtidWNrZXQ9cHJvamVjdHMvKi9i",
-            "dWNrZXRzLyp9LyoqEpQBCglHZXRGb2xkZXISKy5nb29nbGUuc3RvcmFnZS5j",
-            "b250cm9sLnYyLkdldEZvbGRlclJlcXVlc3QaIS5nb29nbGUuc3RvcmFnZS5j",
-            "b250cm9sLnYyLkZvbGRlciI32kEEbmFtZYrT5JMCKhIoCgRuYW1lEiB7YnVj",
-            "a2V0PXByb2plY3RzLyovYnVja2V0cy8qfS8qKhKUAQoLTGlzdEZvbGRlcnMS",
-            "LS5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkxpc3RGb2xkZXJzUmVxdWVz",
-            "dBouLmdvb2dsZS5zdG9yYWdlLmNvbnRyb2wudjIuTGlzdEZvbGRlcnNSZXNw",
-            "b25zZSIm2kEGcGFyZW50itPkkwIXEhUKBnBhcmVudBILe2J1Y2tldD0qKn0S",
-            "zQEKDFJlbmFtZUZvbGRlchIuLmdvb2dsZS5zdG9yYWdlLmNvbnRyb2wudjIu",
-            "UmVuYW1lRm9sZGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ibspBHgoGRm9sZGVyEhRSZW5hbWVGb2xkZXJNZXRhZGF0YdpBGm5h",
-            "bWUsZGVzdGluYXRpb25fZm9sZGVyX2lkitPkkwIqEigKBG5hbWUSIHtidWNr",
-            "ZXQ9cHJvamVjdHMvKi9idWNrZXRzLyp9LyoqEqkBChBHZXRTdG9yYWdlTGF5",
-            "b3V0EjIuZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52Mi5HZXRTdG9yYWdlTGF5",
-            "b3V0UmVxdWVzdBooLmdvb2dsZS5zdG9yYWdlLmNvbnRyb2wudjIuU3RvcmFn",
-            "ZUxheW91dCI32kEEbmFtZYrT5JMCKhIoCgRuYW1lEiB7YnVja2V0PXByb2pl",
-            "Y3RzLyovYnVja2V0cy8qfS8qKhqnAspBFnN0b3JhZ2UuZ29vZ2xlYXBpcy5j",
+            "1wgCCAEivgIKDU1hbmFnZWRGb2xkZXISEQoEbmFtZRgBIAEoCUID4EEIEhsK",
+            "Dm1ldGFnZW5lcmF0aW9uGAMgASgDQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6",
+            "kAHqQYwBCiRzdG9yYWdlLmdvb2dsZWFwaXMuY29tL01hbmFnZWRGb2xkZXIS",
+            "RXByb2plY3RzL3twcm9qZWN0fS9idWNrZXRzL3tidWNrZXR9L21hbmFnZWRG",
+            "b2xkZXJzL3ttYW5hZ2VkRm9sZGVyPSoqfSoObWFuYWdlZEZvbGRlcnMyDW1h",
+            "bmFnZWRGb2xkZXIiggIKF0dldE1hbmFnZWRGb2xkZXJSZXF1ZXN0EjoKBG5h",
+            "bWUYBiABKAlCLOBBAvpBJgokc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9NYW5h",
+            "Z2VkRm9sZGVyEiQKF2lmX21ldGFnZW5lcmF0aW9uX21hdGNoGAMgASgDSACI",
+            "AQESKAobaWZfbWV0YWdlbmVyYXRpb25fbm90X21hdGNoGAQgASgDSAGIAQES",
+            "HwoKcmVxdWVzdF9pZBgFIAEoCUIL4EEB4ozP1wgCCAFCGgoYX2lmX21ldGFn",
+            "ZW5lcmF0aW9uX21hdGNoQh4KHF9pZl9tZXRhZ2VuZXJhdGlvbl9ub3RfbWF0",
+            "Y2gi4gEKGkNyZWF0ZU1hbmFnZWRGb2xkZXJSZXF1ZXN0EjwKBnBhcmVudBgB",
+            "IAEoCUIs4EEC+kEmEiRzdG9yYWdlLmdvb2dsZWFwaXMuY29tL01hbmFnZWRG",
+            "b2xkZXISRQoObWFuYWdlZF9mb2xkZXIYAiABKAsyKC5nb29nbGUuc3RvcmFn",
+            "ZS5jb250cm9sLnYyLk1hbmFnZWRGb2xkZXJCA+BBAhIeChFtYW5hZ2VkX2Zv",
+            "bGRlcl9pZBgDIAEoCUID4EECEh8KCnJlcXVlc3RfaWQYBCABKAlCC+BBAeKM",
+            "z9cIAggBIp4CChpEZWxldGVNYW5hZ2VkRm9sZGVyUmVxdWVzdBI6CgRuYW1l",
+            "GAcgASgJQizgQQL6QSYKJHN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vTWFuYWdl",
+            "ZEZvbGRlchIkChdpZl9tZXRhZ2VuZXJhdGlvbl9tYXRjaBgDIAEoA0gAiAEB",
+            "EigKG2lmX21ldGFnZW5lcmF0aW9uX25vdF9tYXRjaBgEIAEoA0gBiAEBEhcK",
+            "D2FsbG93X25vbl9lbXB0eRgFIAEoCBIfCgpyZXF1ZXN0X2lkGAYgASgJQgvg",
+            "QQHijM/XCAIIAUIaChhfaWZfbWV0YWdlbmVyYXRpb25fbWF0Y2hCHgocX2lm",
+            "X21ldGFnZW5lcmF0aW9uX25vdF9tYXRjaCLAAQoZTGlzdE1hbmFnZWRGb2xk",
+            "ZXJzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkc3RvcmFnZS5n",
+            "b29nbGVhcGlzLmNvbS9NYW5hZ2VkRm9sZGVyEhYKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZwcmVmaXgYBCAB",
+            "KAlCA+BBARIfCgpyZXF1ZXN0X2lkGAUgASgJQgvgQQHijM/XCAIIASJ4ChpM",
+            "aXN0TWFuYWdlZEZvbGRlcnNSZXNwb25zZRJBCg9tYW5hZ2VkX2ZvbGRlcnMY",
+            "ASADKAsyKC5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLk1hbmFnZWRGb2xk",
+            "ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJMs0PCg5TdG9yYWdlQ29udHJv",
+            "bBKaAQoMQ3JlYXRlRm9sZGVyEi4uZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52",
+            "Mi5DcmVhdGVGb2xkZXJSZXF1ZXN0GiEuZ29vZ2xlLnN0b3JhZ2UuY29udHJv",
+            "bC52Mi5Gb2xkZXIiN9pBF3BhcmVudCxmb2xkZXIsZm9sZGVyX2lkitPkkwIX",
+            "EhUKBnBhcmVudBILe2J1Y2tldD0qKn0SjwEKDERlbGV0ZUZvbGRlchIuLmdv",
+            "b2dsZS5zdG9yYWdlLmNvbnRyb2wudjIuRGVsZXRlRm9sZGVyUmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI32kEEbmFtZYrT5JMCKhIoCgRuYW1l",
+            "EiB7YnVja2V0PXByb2plY3RzLyovYnVja2V0cy8qfS8qKhKUAQoJR2V0Rm9s",
+            "ZGVyEisuZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52Mi5HZXRGb2xkZXJSZXF1",
+            "ZXN0GiEuZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52Mi5Gb2xkZXIiN9pBBG5h",
+            "bWWK0+STAioSKAoEbmFtZRIge2J1Y2tldD1wcm9qZWN0cy8qL2J1Y2tldHMv",
+            "Kn0vKioSlAEKC0xpc3RGb2xkZXJzEi0uZ29vZ2xlLnN0b3JhZ2UuY29udHJv",
+            "bC52Mi5MaXN0Rm9sZGVyc1JlcXVlc3QaLi5nb29nbGUuc3RvcmFnZS5jb250",
+            "cm9sLnYyLkxpc3RGb2xkZXJzUmVzcG9uc2UiJtpBBnBhcmVudIrT5JMCFxIV",
+            "CgZwYXJlbnQSC3tidWNrZXQ9Kip9Es0BCgxSZW5hbWVGb2xkZXISLi5nb29n",
+            "bGUuc3RvcmFnZS5jb250cm9sLnYyLlJlbmFtZUZvbGRlclJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIm7KQR4KBkZvbGRlchIUUmVu",
+            "YW1lRm9sZGVyTWV0YWRhdGHaQRpuYW1lLGRlc3RpbmF0aW9uX2ZvbGRlcl9p",
+            "ZIrT5JMCKhIoCgRuYW1lEiB7YnVja2V0PXByb2plY3RzLyovYnVja2V0cy8q",
+            "fS8qKhKpAQoQR2V0U3RvcmFnZUxheW91dBIyLmdvb2dsZS5zdG9yYWdlLmNv",
+            "bnRyb2wudjIuR2V0U3RvcmFnZUxheW91dFJlcXVlc3QaKC5nb29nbGUuc3Rv",
+            "cmFnZS5jb250cm9sLnYyLlN0b3JhZ2VMYXlvdXQiN9pBBG5hbWWK0+STAioS",
+            "KAoEbmFtZRIge2J1Y2tldD1wcm9qZWN0cy8qL2J1Y2tldHMvKn0vKioSvwEK",
+            "E0NyZWF0ZU1hbmFnZWRGb2xkZXISNS5nb29nbGUuc3RvcmFnZS5jb250cm9s",
+            "LnYyLkNyZWF0ZU1hbmFnZWRGb2xkZXJSZXF1ZXN0GiguZ29vZ2xlLnN0b3Jh",
+            "Z2UuY29udHJvbC52Mi5NYW5hZ2VkRm9sZGVyIkfaQSdwYXJlbnQsbWFuYWdl",
+            "ZF9mb2xkZXIsbWFuYWdlZF9mb2xkZXJfaWSK0+STAhcSFQoGcGFyZW50Egt7",
+            "YnVja2V0PSoqfRKdAQoTRGVsZXRlTWFuYWdlZEZvbGRlchI1Lmdvb2dsZS5z",
+            "dG9yYWdlLmNvbnRyb2wudjIuRGVsZXRlTWFuYWdlZEZvbGRlclJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiN9pBBG5hbWWK0+STAioSKAoEbmFt",
+            "ZRIge2J1Y2tldD1wcm9qZWN0cy8qL2J1Y2tldHMvKn0vKioSqQEKEEdldE1h",
+            "bmFnZWRGb2xkZXISMi5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkdldE1h",
+            "bmFnZWRGb2xkZXJSZXF1ZXN0GiguZ29vZ2xlLnN0b3JhZ2UuY29udHJvbC52",
+            "Mi5NYW5hZ2VkRm9sZGVyIjfaQQRuYW1litPkkwIqEigKBG5hbWUSIHtidWNr",
+            "ZXQ9cHJvamVjdHMvKi9idWNrZXRzLyp9LyoqEqkBChJMaXN0TWFuYWdlZEZv",
+            "bGRlcnMSNC5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkxpc3RNYW5hZ2Vk",
+            "Rm9sZGVyc1JlcXVlc3QaNS5nb29nbGUuc3RvcmFnZS5jb250cm9sLnYyLkxp",
+            "c3RNYW5hZ2VkRm9sZGVyc1Jlc3BvbnNlIibaQQZwYXJlbnSK0+STAhcSFQoG",
+            "cGFyZW50Egt7YnVja2V0PSoqfRqnAspBFnN0b3JhZ2UuZ29vZ2xlYXBpcy5j",
             "b23SQYoCaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
             "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLnJlYWQtb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
@@ -145,7 +192,13 @@ namespace Google.Cloud.Storage.Control.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.RenameFolderMetadata), global::Google.Cloud.Storage.Control.V2.RenameFolderMetadata.Parser, new[]{ "CommonMetadata", "SourceFolderId", "DestinationFolderId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.StorageLayout), global::Google.Cloud.Storage.Control.V2.StorageLayout.Parser, new[]{ "Name", "Location", "LocationType", "CustomPlacementConfig", "HierarchicalNamespace" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.StorageLayout.Types.CustomPlacementConfig), global::Google.Cloud.Storage.Control.V2.StorageLayout.Types.CustomPlacementConfig.Parser, new[]{ "DataLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.StorageLayout.Types.HierarchicalNamespace), global::Google.Cloud.Storage.Control.V2.StorageLayout.Types.HierarchicalNamespace.Parser, new[]{ "Enabled" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest), global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest.Parser, new[]{ "Name", "Prefix", "RequestId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest), global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest.Parser, new[]{ "Name", "Prefix", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.ManagedFolder), global::Google.Cloud.Storage.Control.V2.ManagedFolder.Parser, new[]{ "Name", "Metageneration", "CreateTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest), global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest.Parser, new[]{ "Name", "IfMetagenerationMatch", "IfMetagenerationNotMatch", "RequestId" }, new[]{ "IfMetagenerationMatch", "IfMetagenerationNotMatch" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest), global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest.Parser, new[]{ "Parent", "ManagedFolder", "ManagedFolderId", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest), global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest.Parser, new[]{ "Name", "IfMetagenerationMatch", "IfMetagenerationNotMatch", "AllowNonEmpty", "RequestId" }, new[]{ "IfMetagenerationMatch", "IfMetagenerationNotMatch" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest), global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Prefix", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse), global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse.Parser, new[]{ "ManagedFolders", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1178,7 +1231,11 @@ namespace Google.Cloud.Storage.Control.V2 {
     public const int FolderIdFieldNumber = 3;
     private string folderId_ = "";
     /// <summary>
-    /// Required. The absolute path of the folder, using a single `/` as delimiter.
+    /// Required. The full name of a folder, including all its parent folders.
+    /// Folders use single '/' characters as a delimiter.
+    /// The folder_id must end with a slash.
+    /// For example, the folder_id of "books/biographies/" would create a new
+    /// "biographies/" folder under the "books/" folder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4671,6 +4728,2009 @@ namespace Google.Cloud.Storage.Control.V2 {
           }
           case 26: {
             RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A managed folder.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ManagedFolder : pb::IMessage<ManagedFolder>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ManagedFolder> _parser = new pb::MessageParser<ManagedFolder>(() => new ManagedFolder());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ManagedFolder> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagedFolder() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagedFolder(ManagedFolder other) : this() {
+      name_ = other.name_;
+      metageneration_ = other.metageneration_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagedFolder Clone() {
+      return new ManagedFolder(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The name of this managed folder.
+    /// Format:
+    /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "metageneration" field.</summary>
+    public const int MetagenerationFieldNumber = 3;
+    private long metageneration_;
+    /// <summary>
+    /// Output only. The metadata version of this managed folder. It increases
+    /// whenever the metadata is updated. Used for preconditions and for detecting
+    /// changes in metadata. Managed folders don't have a generation number.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Metageneration {
+      get { return metageneration_; }
+      set {
+        metageneration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The creation time of the managed folder.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The modification time of the managed folder.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ManagedFolder);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ManagedFolder other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Metageneration != other.Metageneration) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Metageneration != 0L) hash ^= Metageneration.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Metageneration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Metageneration);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Metageneration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Metageneration);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Metageneration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Metageneration);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ManagedFolder other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Metageneration != 0L) {
+        Metageneration = other.Metageneration;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Metageneration = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            Metageneration = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for GetManagedFolder.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetManagedFolderRequest : pb::IMessage<GetManagedFolderRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetManagedFolderRequest> _parser = new pb::MessageParser<GetManagedFolderRequest>(() => new GetManagedFolderRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetManagedFolderRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetManagedFolderRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetManagedFolderRequest(GetManagedFolderRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      name_ = other.name_;
+      ifMetagenerationMatch_ = other.ifMetagenerationMatch_;
+      ifMetagenerationNotMatch_ = other.ifMetagenerationNotMatch_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetManagedFolderRequest Clone() {
+      return new GetManagedFolderRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the managed folder.
+    /// Format:
+    /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "if_metageneration_match" field.</summary>
+    public const int IfMetagenerationMatchFieldNumber = 3;
+    private readonly static long IfMetagenerationMatchDefaultValue = 0L;
+
+    private long ifMetagenerationMatch_;
+    /// <summary>
+    /// The operation succeeds conditional on the managed folder's current
+    /// metageneration matching the value here specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationMatch {
+      get { if ((_hasBits0 & 1) != 0) { return ifMetagenerationMatch_; } else { return IfMetagenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        ifMetagenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationMatch {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationMatch() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "if_metageneration_not_match" field.</summary>
+    public const int IfMetagenerationNotMatchFieldNumber = 4;
+    private readonly static long IfMetagenerationNotMatchDefaultValue = 0L;
+
+    private long ifMetagenerationNotMatch_;
+    /// <summary>
+    /// The operation succeeds conditional on the managed folder's current
+    /// metageneration NOT matching the value here specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationNotMatch {
+      get { if ((_hasBits0 & 2) != 0) { return ifMetagenerationNotMatch_; } else { return IfMetagenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        ifMetagenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationNotMatch {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationNotMatch() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 5;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. UUID is the recommended
+    /// format, but other formats are still accepted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetManagedFolderRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetManagedFolderRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (IfMetagenerationMatch != other.IfMetagenerationMatch) return false;
+      if (IfMetagenerationNotMatch != other.IfMetagenerationNotMatch) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasIfMetagenerationMatch) hash ^= IfMetagenerationMatch.GetHashCode();
+      if (HasIfMetagenerationNotMatch) hash ^= IfMetagenerationNotMatch.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(24);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(24);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasIfMetagenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationNotMatch);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetManagedFolderRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.HasIfMetagenerationMatch) {
+        IfMetagenerationMatch = other.IfMetagenerationMatch;
+      }
+      if (other.HasIfMetagenerationNotMatch) {
+        IfMetagenerationNotMatch = other.IfMetagenerationNotMatch;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 24: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for CreateManagedFolder.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateManagedFolderRequest : pb::IMessage<CreateManagedFolderRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateManagedFolderRequest> _parser = new pb::MessageParser<CreateManagedFolderRequest>(() => new CreateManagedFolderRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateManagedFolderRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateManagedFolderRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateManagedFolderRequest(CreateManagedFolderRequest other) : this() {
+      parent_ = other.parent_;
+      managedFolder_ = other.managedFolder_ != null ? other.managedFolder_.Clone() : null;
+      managedFolderId_ = other.managedFolderId_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateManagedFolderRequest Clone() {
+      return new CreateManagedFolderRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Name of the bucket this managed folder belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "managed_folder" field.</summary>
+    public const int ManagedFolderFieldNumber = 2;
+    private global::Google.Cloud.Storage.Control.V2.ManagedFolder managedFolder_;
+    /// <summary>
+    /// Required. Properties of the managed folder being created.
+    /// The bucket and managed folder names are specified in the `parent` and
+    /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+    /// will result in an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Storage.Control.V2.ManagedFolder ManagedFolder {
+      get { return managedFolder_; }
+      set {
+        managedFolder_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "managed_folder_id" field.</summary>
+    public const int ManagedFolderIdFieldNumber = 3;
+    private string managedFolderId_ = "";
+    /// <summary>
+    /// Required. The name of the managed folder. It uses a single `/` as delimiter
+    /// and leading and trailing `/` are allowed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ManagedFolderId {
+      get { return managedFolderId_; }
+      set {
+        managedFolderId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. UUID is the recommended
+    /// format, but other formats are still accepted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateManagedFolderRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateManagedFolderRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(ManagedFolder, other.ManagedFolder)) return false;
+      if (ManagedFolderId != other.ManagedFolderId) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (managedFolder_ != null) hash ^= ManagedFolder.GetHashCode();
+      if (ManagedFolderId.Length != 0) hash ^= ManagedFolderId.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (managedFolder_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ManagedFolder);
+      }
+      if (ManagedFolderId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ManagedFolderId);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (managedFolder_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ManagedFolder);
+      }
+      if (ManagedFolderId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ManagedFolderId);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (managedFolder_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManagedFolder);
+      }
+      if (ManagedFolderId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ManagedFolderId);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateManagedFolderRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.managedFolder_ != null) {
+        if (managedFolder_ == null) {
+          ManagedFolder = new global::Google.Cloud.Storage.Control.V2.ManagedFolder();
+        }
+        ManagedFolder.MergeFrom(other.ManagedFolder);
+      }
+      if (other.ManagedFolderId.Length != 0) {
+        ManagedFolderId = other.ManagedFolderId;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (managedFolder_ == null) {
+              ManagedFolder = new global::Google.Cloud.Storage.Control.V2.ManagedFolder();
+            }
+            input.ReadMessage(ManagedFolder);
+            break;
+          }
+          case 26: {
+            ManagedFolderId = input.ReadString();
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (managedFolder_ == null) {
+              ManagedFolder = new global::Google.Cloud.Storage.Control.V2.ManagedFolder();
+            }
+            input.ReadMessage(ManagedFolder);
+            break;
+          }
+          case 26: {
+            ManagedFolderId = input.ReadString();
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// DeleteManagedFolder RPC request message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteManagedFolderRequest : pb::IMessage<DeleteManagedFolderRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteManagedFolderRequest> _parser = new pb::MessageParser<DeleteManagedFolderRequest>(() => new DeleteManagedFolderRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteManagedFolderRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteManagedFolderRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteManagedFolderRequest(DeleteManagedFolderRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      name_ = other.name_;
+      ifMetagenerationMatch_ = other.ifMetagenerationMatch_;
+      ifMetagenerationNotMatch_ = other.ifMetagenerationNotMatch_;
+      allowNonEmpty_ = other.allowNonEmpty_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteManagedFolderRequest Clone() {
+      return new DeleteManagedFolderRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Name of the managed folder.
+    /// Format:
+    /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "if_metageneration_match" field.</summary>
+    public const int IfMetagenerationMatchFieldNumber = 3;
+    private readonly static long IfMetagenerationMatchDefaultValue = 0L;
+
+    private long ifMetagenerationMatch_;
+    /// <summary>
+    /// The operation succeeds conditional on the managed folder's current
+    /// metageneration matching the value here specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationMatch {
+      get { if ((_hasBits0 & 1) != 0) { return ifMetagenerationMatch_; } else { return IfMetagenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        ifMetagenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationMatch {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationMatch() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "if_metageneration_not_match" field.</summary>
+    public const int IfMetagenerationNotMatchFieldNumber = 4;
+    private readonly static long IfMetagenerationNotMatchDefaultValue = 0L;
+
+    private long ifMetagenerationNotMatch_;
+    /// <summary>
+    /// The operation succeeds conditional on the managed folder's current
+    /// metageneration NOT matching the value here specified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationNotMatch {
+      get { if ((_hasBits0 & 2) != 0) { return ifMetagenerationNotMatch_; } else { return IfMetagenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        ifMetagenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationNotMatch {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationNotMatch() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "allow_non_empty" field.</summary>
+    public const int AllowNonEmptyFieldNumber = 5;
+    private bool allowNonEmpty_;
+    /// <summary>
+    /// Allows deletion of a managed folder even if it is not empty.
+    /// A managed folder is empty if it manages no child managed folders or
+    /// objects. Caller must have permission for
+    /// storage.managedFolders.setIamPolicy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowNonEmpty {
+      get { return allowNonEmpty_; }
+      set {
+        allowNonEmpty_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 6;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. UUID is the recommended
+    /// format, but other formats are still accepted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteManagedFolderRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteManagedFolderRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (IfMetagenerationMatch != other.IfMetagenerationMatch) return false;
+      if (IfMetagenerationNotMatch != other.IfMetagenerationNotMatch) return false;
+      if (AllowNonEmpty != other.AllowNonEmpty) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasIfMetagenerationMatch) hash ^= IfMetagenerationMatch.GetHashCode();
+      if (HasIfMetagenerationNotMatch) hash ^= IfMetagenerationNotMatch.GetHashCode();
+      if (AllowNonEmpty != false) hash ^= AllowNonEmpty.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(24);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (AllowNonEmpty != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowNonEmpty);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(24);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (AllowNonEmpty != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AllowNonEmpty);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RequestId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasIfMetagenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationNotMatch);
+      }
+      if (AllowNonEmpty != false) {
+        size += 1 + 1;
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteManagedFolderRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.HasIfMetagenerationMatch) {
+        IfMetagenerationMatch = other.IfMetagenerationMatch;
+      }
+      if (other.HasIfMetagenerationNotMatch) {
+        IfMetagenerationNotMatch = other.IfMetagenerationNotMatch;
+      }
+      if (other.AllowNonEmpty != false) {
+        AllowNonEmpty = other.AllowNonEmpty;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 24: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            AllowNonEmpty = input.ReadBool();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            AllowNonEmpty = input.ReadBool();
+            break;
+          }
+          case 50: {
+            RequestId = input.ReadString();
+            break;
+          }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for ListManagedFolders.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListManagedFoldersRequest : pb::IMessage<ListManagedFoldersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListManagedFoldersRequest> _parser = new pb::MessageParser<ListManagedFoldersRequest>(() => new ListManagedFoldersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListManagedFoldersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersRequest(ListManagedFoldersRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      prefix_ = other.prefix_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersRequest Clone() {
+      return new ListManagedFoldersRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Name of the bucket this managed folder belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Maximum number of managed folders to return in a single response.
+    /// The service will use this parameter or 1,000 items, whichever is smaller.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A previously-returned page token representing part of the larger
+    /// set of results to view.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "prefix" field.</summary>
+    public const int PrefixFieldNumber = 4;
+    private string prefix_ = "";
+    /// <summary>
+    /// Optional. Filter results to match managed folders with name starting with
+    /// this prefix.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Prefix {
+      get { return prefix_; }
+      set {
+        prefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 5;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. UUID is the recommended
+    /// format, but other formats are still accepted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListManagedFoldersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListManagedFoldersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Prefix != other.Prefix) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Prefix.Length != 0) hash ^= Prefix.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Prefix.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Prefix);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Prefix.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Prefix);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Prefix.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Prefix);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListManagedFoldersRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Prefix.Length != 0) {
+        Prefix = other.Prefix;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Prefix = input.ReadString();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Prefix = input.ReadString();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for ListManagedFolders.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListManagedFoldersResponse : pb::IMessage<ListManagedFoldersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListManagedFoldersResponse> _parser = new pb::MessageParser<ListManagedFoldersResponse>(() => new ListManagedFoldersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListManagedFoldersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.Control.V2.StorageControlReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersResponse(ListManagedFoldersResponse other) : this() {
+      managedFolders_ = other.managedFolders_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListManagedFoldersResponse Clone() {
+      return new ListManagedFoldersResponse(this);
+    }
+
+    /// <summary>Field number for the "managed_folders" field.</summary>
+    public const int ManagedFoldersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Storage.Control.V2.ManagedFolder> _repeated_managedFolders_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Storage.Control.V2.ManagedFolder.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Storage.Control.V2.ManagedFolder> managedFolders_ = new pbc::RepeatedField<global::Google.Cloud.Storage.Control.V2.ManagedFolder>();
+    /// <summary>
+    /// The list of matching managed folders
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Storage.Control.V2.ManagedFolder> ManagedFolders {
+      get { return managedFolders_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The continuation token, used to page through large result sets. Provide
+    /// this value in a subsequent request to return the next page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListManagedFoldersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListManagedFoldersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!managedFolders_.Equals(other.managedFolders_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= managedFolders_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      managedFolders_.WriteTo(output, _repeated_managedFolders_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      managedFolders_.WriteTo(ref output, _repeated_managedFolders_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += managedFolders_.CalculateSize(_repeated_managedFolders_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListManagedFoldersResponse other) {
+      if (other == null) {
+        return;
+      }
+      managedFolders_.Add(other.managedFolders_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            managedFolders_.AddEntriesFrom(input, _repeated_managedFolders_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            managedFolders_.AddEntriesFrom(ref input, _repeated_managedFolders_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
             break;
           }
         }

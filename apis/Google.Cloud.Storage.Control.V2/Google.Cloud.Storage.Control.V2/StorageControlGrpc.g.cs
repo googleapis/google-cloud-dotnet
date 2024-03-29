@@ -85,6 +85,18 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest> __Marshaller_google_storage_control_v2_GetStorageLayoutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.StorageLayout> __Marshaller_google_storage_control_v2_StorageLayout = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.StorageLayout.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest> __Marshaller_google_storage_control_v2_CreateManagedFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ManagedFolder> __Marshaller_google_storage_control_v2_ManagedFolder = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ManagedFolder.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest> __Marshaller_google_storage_control_v2_DeleteManagedFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest> __Marshaller_google_storage_control_v2_GetManagedFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest> __Marshaller_google_storage_control_v2_ListManagedFoldersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> __Marshaller_google_storage_control_v2_ListManagedFoldersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder> __Method_CreateFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(
@@ -133,6 +145,38 @@ namespace Google.Cloud.Storage.Control.V2 {
         "GetStorageLayout",
         __Marshaller_google_storage_control_v2_GetStorageLayoutRequest,
         __Marshaller_google_storage_control_v2_StorageLayout);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder> __Method_CreateManagedFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateManagedFolder",
+        __Marshaller_google_storage_control_v2_CreateManagedFolderRequest,
+        __Marshaller_google_storage_control_v2_ManagedFolder);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteManagedFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteManagedFolder",
+        __Marshaller_google_storage_control_v2_DeleteManagedFolderRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder> __Method_GetManagedFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetManagedFolder",
+        __Marshaller_google_storage_control_v2_GetManagedFolderRequest,
+        __Marshaller_google_storage_control_v2_ManagedFolder);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> __Method_ListManagedFolders = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListManagedFolders",
+        __Marshaller_google_storage_control_v2_ListManagedFoldersRequest,
+        __Marshaller_google_storage_control_v2_ListManagedFoldersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -214,6 +258,54 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.StorageLayout> GetStorageLayout(global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new managed folder.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ManagedFolder> CreateManagedFolder(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Permanently deletes an empty managed folder.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteManagedFolder(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns metadata for the specified managed folder.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ManagedFolder> GetManagedFolder(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a list of managed folders for a given bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> ListManagedFolders(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -543,6 +635,198 @@ namespace Google.Cloud.Storage.Control.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetStorageLayout, null, options, request);
       }
+      /// <summary>
+      /// Creates a new managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ManagedFolder CreateManagedFolder(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateManagedFolder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ManagedFolder CreateManagedFolder(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ManagedFolder> CreateManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateManagedFolderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ManagedFolder> CreateManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes an empty managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteManagedFolder(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteManagedFolder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes an empty managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteManagedFolder(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes an empty managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteManagedFolderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes an empty managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Returns metadata for the specified managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ManagedFolder GetManagedFolder(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetManagedFolder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns metadata for the specified managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ManagedFolder GetManagedFolder(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Returns metadata for the specified managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ManagedFolder> GetManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetManagedFolderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns metadata for the specified managed folder.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ManagedFolder> GetManagedFolderAsync(global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetManagedFolder, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of managed folders for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse ListManagedFolders(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListManagedFolders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of managed folders for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse ListManagedFolders(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListManagedFolders, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves a list of managed folders for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> ListManagedFoldersAsync(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListManagedFoldersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a list of managed folders for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> ListManagedFoldersAsync(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListManagedFolders, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageControlClient NewInstance(ClientBaseConfiguration configuration)
@@ -562,7 +846,11 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_GetFolder, serviceImpl.GetFolder)
           .AddMethod(__Method_ListFolders, serviceImpl.ListFolders)
           .AddMethod(__Method_RenameFolder, serviceImpl.RenameFolder)
-          .AddMethod(__Method_GetStorageLayout, serviceImpl.GetStorageLayout).Build();
+          .AddMethod(__Method_GetStorageLayout, serviceImpl.GetStorageLayout)
+          .AddMethod(__Method_CreateManagedFolder, serviceImpl.CreateManagedFolder)
+          .AddMethod(__Method_DeleteManagedFolder, serviceImpl.DeleteManagedFolder)
+          .AddMethod(__Method_GetManagedFolder, serviceImpl.GetManagedFolder)
+          .AddMethod(__Method_ListManagedFolders, serviceImpl.ListManagedFolders).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -578,6 +866,10 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_ListFolders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListFoldersResponse>(serviceImpl.ListFolders));
       serviceBinder.AddMethod(__Method_RenameFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.RenameFolderRequest, global::Google.LongRunning.Operation>(serviceImpl.RenameFolder));
       serviceBinder.AddMethod(__Method_GetStorageLayout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest, global::Google.Cloud.Storage.Control.V2.StorageLayout>(serviceImpl.GetStorageLayout));
+      serviceBinder.AddMethod(__Method_CreateManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(serviceImpl.CreateManagedFolder));
+      serviceBinder.AddMethod(__Method_DeleteManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteManagedFolder));
+      serviceBinder.AddMethod(__Method_GetManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(serviceImpl.GetManagedFolder));
+      serviceBinder.AddMethod(__Method_ListManagedFolders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse>(serviceImpl.ListManagedFolders));
     }
 
   }

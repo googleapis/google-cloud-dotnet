@@ -54,6 +54,10 @@ namespace Google.Cloud.Storage.Control.V2
             RenameFolderSettings = existing.RenameFolderSettings;
             RenameFolderOperationsSettings = existing.RenameFolderOperationsSettings.Clone();
             GetStorageLayoutSettings = existing.GetStorageLayoutSettings;
+            CreateManagedFolderSettings = existing.CreateManagedFolderSettings;
+            DeleteManagedFolderSettings = existing.DeleteManagedFolderSettings;
+            GetManagedFolderSettings = existing.GetManagedFolderSettings;
+            ListManagedFoldersSettings = existing.ListManagedFoldersSettings;
             OnCopy(existing);
         }
 
@@ -188,6 +192,74 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetStorageLayoutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.CreateManagedFolder</c> and <c>StorageControlClient.CreateManagedFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateManagedFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.DeleteManagedFolder</c> and <c>StorageControlClient.DeleteManagedFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteManagedFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetManagedFolder</c> and <c>StorageControlClient.GetManagedFolderAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetManagedFolderSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ListManagedFolders</c> and <c>StorageControlClient.ListManagedFoldersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListManagedFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -378,7 +450,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -403,7 +479,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -428,7 +508,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -448,7 +532,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -473,7 +561,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -498,7 +590,11 @@ namespace Google.Cloud.Storage.Control.V2
         /// error.
         /// </param>
         /// <param name="folderId">
-        /// Required. The absolute path of the folder, using a single `/` as delimiter.
+        /// Required. The full name of a folder, including all its parent folders.
+        /// Folders use single '/' characters as a delimiter.
+        /// The folder_id must end with a slash.
+        /// For example, the folder_id of "books/biographies/" would create a new
+        /// "biographies/" folder under the "books/" folder.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1128,6 +1224,527 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<StorageLayout> GetStorageLayoutAsync(StorageLayoutName name, st::CancellationToken cancellationToken) =>
             GetStorageLayoutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder CreateManagedFolder(CreateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(CreateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(CreateManagedFolderRequest request, st::CancellationToken cancellationToken) =>
+            CreateManagedFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder CreateManagedFolder(string parent, ManagedFolder managedFolder, string managedFolderId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagedFolder(new CreateManagedFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                ManagedFolderId = gax::GaxPreconditions.CheckNotNullOrEmpty(managedFolderId, nameof(managedFolderId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(string parent, ManagedFolder managedFolder, string managedFolderId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagedFolderAsync(new CreateManagedFolderRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                ManagedFolderId = gax::GaxPreconditions.CheckNotNullOrEmpty(managedFolderId, nameof(managedFolderId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(string parent, ManagedFolder managedFolder, string managedFolderId, st::CancellationToken cancellationToken) =>
+            CreateManagedFolderAsync(parent, managedFolder, managedFolderId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder CreateManagedFolder(BucketName parent, ManagedFolder managedFolder, string managedFolderId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagedFolder(new CreateManagedFolderRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                ManagedFolderId = gax::GaxPreconditions.CheckNotNullOrEmpty(managedFolderId, nameof(managedFolderId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(BucketName parent, ManagedFolder managedFolder, string managedFolderId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagedFolderAsync(new CreateManagedFolderRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ManagedFolder = gax::GaxPreconditions.CheckNotNull(managedFolder, nameof(managedFolder)),
+                ManagedFolderId = gax::GaxPreconditions.CheckNotNullOrEmpty(managedFolderId, nameof(managedFolderId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="managedFolder">
+        /// Required. Properties of the managed folder being created.
+        /// The bucket and managed folder names are specified in the `parent` and
+        /// `managed_folder_id` fields. Populating these fields in `managed_folder`
+        /// will result in an error.
+        /// </param>
+        /// <param name="managedFolderId">
+        /// Required. The name of the managed folder. It uses a single `/` as delimiter
+        /// and leading and trailing `/` are allowed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> CreateManagedFolderAsync(BucketName parent, ManagedFolder managedFolder, string managedFolderId, st::CancellationToken cancellationToken) =>
+            CreateManagedFolderAsync(parent, managedFolder, managedFolderId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteManagedFolder(DeleteManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(DeleteManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(DeleteManagedFolderRequest request, st::CancellationToken cancellationToken) =>
+            DeleteManagedFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteManagedFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagedFolder(new DeleteManagedFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagedFolderAsync(new DeleteManagedFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteManagedFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteManagedFolder(ManagedFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagedFolder(new DeleteManagedFolderRequest
+            {
+                ManagedFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(ManagedFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagedFolderAsync(new DeleteManagedFolderRequest
+            {
+                ManagedFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteManagedFolderAsync(ManagedFolderName name, st::CancellationToken cancellationToken) =>
+            DeleteManagedFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder GetManagedFolder(GetManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(GetManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(GetManagedFolderRequest request, st::CancellationToken cancellationToken) =>
+            GetManagedFolderAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder GetManagedFolder(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagedFolder(new GetManagedFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagedFolderAsync(new GetManagedFolderRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(string name, st::CancellationToken cancellationToken) =>
+            GetManagedFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagedFolder GetManagedFolder(ManagedFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagedFolder(new GetManagedFolderRequest
+            {
+                ManagedFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(ManagedFolderName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagedFolderAsync(new GetManagedFolderRequest
+            {
+                ManagedFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the managed folder.
+        /// Format:
+        /// `projects/{project}/buckets/{bucket}/managedFolders/{managedFolder}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagedFolder> GetManagedFolderAsync(ManagedFolderName name, st::CancellationToken cancellationToken) =>
+            GetManagedFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(ListManagedFoldersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(ListManagedFoldersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListManagedFolders(new ListManagedFoldersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListManagedFoldersAsync(new ListManagedFoldersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListManagedFolders(new ListManagedFoldersRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Name of the bucket this managed folder belongs to.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListManagedFoldersAsync(new ListManagedFoldersRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -1147,6 +1764,14 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<RenameFolderRequest, lro::Operation> _callRenameFolder;
 
         private readonly gaxgrpc::ApiCall<GetStorageLayoutRequest, StorageLayout> _callGetStorageLayout;
+
+        private readonly gaxgrpc::ApiCall<CreateManagedFolderRequest, ManagedFolder> _callCreateManagedFolder;
+
+        private readonly gaxgrpc::ApiCall<DeleteManagedFolderRequest, wkt::Empty> _callDeleteManagedFolder;
+
+        private readonly gaxgrpc::ApiCall<GetManagedFolderRequest, ManagedFolder> _callGetManagedFolder;
+
+        private readonly gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> _callListManagedFolders;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
@@ -1182,6 +1807,18 @@ namespace Google.Cloud.Storage.Control.V2
             _callGetStorageLayout = clientHelper.BuildApiCall<GetStorageLayoutRequest, StorageLayout>("GetStorageLayout", grpcClient.GetStorageLayoutAsync, grpcClient.GetStorageLayout, effectiveSettings.GetStorageLayoutSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetStorageLayoutRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
             Modify_ApiCall(ref _callGetStorageLayout);
             Modify_GetStorageLayoutApiCall(ref _callGetStorageLayout);
+            _callCreateManagedFolder = clientHelper.BuildApiCall<CreateManagedFolderRequest, ManagedFolder>("CreateManagedFolder", grpcClient.CreateManagedFolderAsync, grpcClient.CreateManagedFolder, effectiveSettings.CreateManagedFolderSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callCreateManagedFolder);
+            Modify_CreateManagedFolderApiCall(ref _callCreateManagedFolder);
+            _callDeleteManagedFolder = clientHelper.BuildApiCall<DeleteManagedFolderRequest, wkt::Empty>("DeleteManagedFolder", grpcClient.DeleteManagedFolderAsync, grpcClient.DeleteManagedFolder, effectiveSettings.DeleteManagedFolderSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteManagedFolderRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteManagedFolder);
+            Modify_DeleteManagedFolderApiCall(ref _callDeleteManagedFolder);
+            _callGetManagedFolder = clientHelper.BuildApiCall<GetManagedFolderRequest, ManagedFolder>("GetManagedFolder", grpcClient.GetManagedFolderAsync, grpcClient.GetManagedFolder, effectiveSettings.GetManagedFolderSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetManagedFolderRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callGetManagedFolder);
+            Modify_GetManagedFolderApiCall(ref _callGetManagedFolder);
+            _callListManagedFolders = clientHelper.BuildApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse>("ListManagedFolders", grpcClient.ListManagedFoldersAsync, grpcClient.ListManagedFolders, effectiveSettings.ListManagedFoldersSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callListManagedFolders);
+            Modify_ListManagedFoldersApiCall(ref _callListManagedFolders);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1199,6 +1836,14 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_GetStorageLayoutApiCall(ref gaxgrpc::ApiCall<GetStorageLayoutRequest, StorageLayout> call);
 
+        partial void Modify_CreateManagedFolderApiCall(ref gaxgrpc::ApiCall<CreateManagedFolderRequest, ManagedFolder> call);
+
+        partial void Modify_DeleteManagedFolderApiCall(ref gaxgrpc::ApiCall<DeleteManagedFolderRequest, wkt::Empty> call);
+
+        partial void Modify_GetManagedFolderApiCall(ref gaxgrpc::ApiCall<GetManagedFolderRequest, ManagedFolder> call);
+
+        partial void Modify_ListManagedFoldersApiCall(ref gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -1215,6 +1860,14 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_RenameFolderRequest(ref RenameFolderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetStorageLayoutRequest(ref GetStorageLayoutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateManagedFolderRequest(ref CreateManagedFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteManagedFolderRequest(ref DeleteManagedFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetManagedFolderRequest(ref GetManagedFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListManagedFoldersRequest(ref ListManagedFoldersRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder.
@@ -1416,9 +2069,149 @@ namespace Google.Cloud.Storage.Control.V2
             Modify_GetStorageLayoutRequest(ref request, ref callSettings);
             return _callGetStorageLayout.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ManagedFolder CreateManagedFolder(CreateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_CreateManagedFolderRequest(ref request, ref callSettings);
+            return _callCreateManagedFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ManagedFolder> CreateManagedFolderAsync(CreateManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_CreateManagedFolderRequest(ref request, ref callSettings);
+            return _callCreateManagedFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteManagedFolder(DeleteManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_DeleteManagedFolderRequest(ref request, ref callSettings);
+            _callDeleteManagedFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes an empty managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteManagedFolderAsync(DeleteManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_DeleteManagedFolderRequest(ref request, ref callSettings);
+            return _callDeleteManagedFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ManagedFolder GetManagedFolder(GetManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_GetManagedFolderRequest(ref request, ref callSettings);
+            return _callGetManagedFolder.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata for the specified managed folder.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ManagedFolder> GetManagedFolderAsync(GetManagedFolderRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_GetManagedFolderRequest(ref request, ref callSettings);
+            return _callGetManagedFolder.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public override gax::PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFolders(ListManagedFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_ListManagedFoldersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListManagedFoldersRequest, ListManagedFoldersResponse, ManagedFolder>(_callListManagedFolders, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of managed folders for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagedFolder"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> ListManagedFoldersAsync(ListManagedFoldersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
+            Modify_ListManagedFoldersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListManagedFoldersRequest, ListManagedFoldersResponse, ManagedFolder>(_callListManagedFolders, request, callSettings);
+        }
     }
 
     public partial class ListFoldersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListManagedFoldersRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1426,6 +2219,14 @@ namespace Google.Cloud.Storage.Control.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Folder> GetEnumerator() => Folders.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListManagedFoldersResponse : gaxgrpc::IPageResponse<ManagedFolder>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ManagedFolder> GetEnumerator() => ManagedFolders.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
