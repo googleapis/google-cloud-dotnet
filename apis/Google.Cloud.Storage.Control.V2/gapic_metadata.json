@@ -16,16 +16,34 @@
                 "CreateFolderAsync"
               ]
             },
+            "CreateManagedFolder": {
+              "methods": [
+                "CreateManagedFolder",
+                "CreateManagedFolderAsync"
+              ]
+            },
             "DeleteFolder": {
               "methods": [
                 "DeleteFolder",
                 "DeleteFolderAsync"
               ]
             },
+            "DeleteManagedFolder": {
+              "methods": [
+                "DeleteManagedFolder",
+                "DeleteManagedFolderAsync"
+              ]
+            },
             "GetFolder": {
               "methods": [
                 "GetFolder",
                 "GetFolderAsync"
+              ]
+            },
+            "GetManagedFolder": {
+              "methods": [
+                "GetManagedFolder",
+                "GetManagedFolderAsync"
               ]
             },
             "GetStorageLayout": {
@@ -38,6 +56,12 @@
               "methods": [
                 "ListFolders",
                 "ListFoldersAsync"
+              ]
+            },
+            "ListManagedFolders": {
+              "methods": [
+                "ListManagedFolders",
+                "ListManagedFoldersAsync"
               ]
             },
             "RenameFolder": {

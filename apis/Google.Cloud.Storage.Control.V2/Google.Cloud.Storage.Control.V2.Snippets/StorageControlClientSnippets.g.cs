@@ -876,5 +876,566 @@ namespace GoogleCSharpSnippets
             StorageLayout response = await storageControlClient.GetStorageLayoutAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateManagedFolder</summary>
+        public void CreateManagedFolderRequestObject()
+        {
+            // Snippet: CreateManagedFolder(CreateManagedFolderRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            CreateManagedFolderRequest request = new CreateManagedFolderRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ManagedFolder = new ManagedFolder(),
+                ManagedFolderId = "",
+            };
+            // Make the request
+            ManagedFolder response = storageControlClient.CreateManagedFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagedFolderAsync</summary>
+        public async Task CreateManagedFolderRequestObjectAsync()
+        {
+            // Snippet: CreateManagedFolderAsync(CreateManagedFolderRequest, CallSettings)
+            // Additional: CreateManagedFolderAsync(CreateManagedFolderRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateManagedFolderRequest request = new CreateManagedFolderRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ManagedFolder = new ManagedFolder(),
+                ManagedFolderId = "",
+            };
+            // Make the request
+            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagedFolder</summary>
+        public void CreateManagedFolder()
+        {
+            // Snippet: CreateManagedFolder(string, ManagedFolder, string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            ManagedFolder managedFolder = new ManagedFolder();
+            string managedFolderId = "";
+            // Make the request
+            ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagedFolderAsync</summary>
+        public async Task CreateManagedFolderAsync()
+        {
+            // Snippet: CreateManagedFolderAsync(string, ManagedFolder, string, CallSettings)
+            // Additional: CreateManagedFolderAsync(string, ManagedFolder, string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            ManagedFolder managedFolder = new ManagedFolder();
+            string managedFolderId = "";
+            // Make the request
+            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagedFolder</summary>
+        public void CreateManagedFolderResourceNames()
+        {
+            // Snippet: CreateManagedFolder(BucketName, ManagedFolder, string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            ManagedFolder managedFolder = new ManagedFolder();
+            string managedFolderId = "";
+            // Make the request
+            ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateManagedFolderAsync</summary>
+        public async Task CreateManagedFolderResourceNamesAsync()
+        {
+            // Snippet: CreateManagedFolderAsync(BucketName, ManagedFolder, string, CallSettings)
+            // Additional: CreateManagedFolderAsync(BucketName, ManagedFolder, string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            ManagedFolder managedFolder = new ManagedFolder();
+            string managedFolderId = "";
+            // Make the request
+            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolder</summary>
+        public void DeleteManagedFolderRequestObject()
+        {
+            // Snippet: DeleteManagedFolder(DeleteManagedFolderRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            DeleteManagedFolderRequest request = new DeleteManagedFolderRequest
+            {
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                AllowNonEmpty = false,
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+            };
+            // Make the request
+            storageControlClient.DeleteManagedFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolderAsync</summary>
+        public async Task DeleteManagedFolderRequestObjectAsync()
+        {
+            // Snippet: DeleteManagedFolderAsync(DeleteManagedFolderRequest, CallSettings)
+            // Additional: DeleteManagedFolderAsync(DeleteManagedFolderRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteManagedFolderRequest request = new DeleteManagedFolderRequest
+            {
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                AllowNonEmpty = false,
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+            };
+            // Make the request
+            await storageControlClient.DeleteManagedFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolder</summary>
+        public void DeleteManagedFolder()
+        {
+            // Snippet: DeleteManagedFolder(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            // Make the request
+            storageControlClient.DeleteManagedFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolderAsync</summary>
+        public async Task DeleteManagedFolderAsync()
+        {
+            // Snippet: DeleteManagedFolderAsync(string, CallSettings)
+            // Additional: DeleteManagedFolderAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            // Make the request
+            await storageControlClient.DeleteManagedFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolder</summary>
+        public void DeleteManagedFolderResourceNames()
+        {
+            // Snippet: DeleteManagedFolder(ManagedFolderName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            // Make the request
+            storageControlClient.DeleteManagedFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteManagedFolderAsync</summary>
+        public async Task DeleteManagedFolderResourceNamesAsync()
+        {
+            // Snippet: DeleteManagedFolderAsync(ManagedFolderName, CallSettings)
+            // Additional: DeleteManagedFolderAsync(ManagedFolderName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            // Make the request
+            await storageControlClient.DeleteManagedFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolder</summary>
+        public void GetManagedFolderRequestObject()
+        {
+            // Snippet: GetManagedFolder(GetManagedFolderRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetManagedFolderRequest request = new GetManagedFolderRequest
+            {
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+            };
+            // Make the request
+            ManagedFolder response = storageControlClient.GetManagedFolder(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolderAsync</summary>
+        public async Task GetManagedFolderRequestObjectAsync()
+        {
+            // Snippet: GetManagedFolderAsync(GetManagedFolderRequest, CallSettings)
+            // Additional: GetManagedFolderAsync(GetManagedFolderRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetManagedFolderRequest request = new GetManagedFolderRequest
+            {
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+            };
+            // Make the request
+            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolder</summary>
+        public void GetManagedFolder()
+        {
+            // Snippet: GetManagedFolder(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            // Make the request
+            ManagedFolder response = storageControlClient.GetManagedFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolderAsync</summary>
+        public async Task GetManagedFolderAsync()
+        {
+            // Snippet: GetManagedFolderAsync(string, CallSettings)
+            // Additional: GetManagedFolderAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            // Make the request
+            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolder</summary>
+        public void GetManagedFolderResourceNames()
+        {
+            // Snippet: GetManagedFolder(ManagedFolderName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            // Make the request
+            ManagedFolder response = storageControlClient.GetManagedFolder(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetManagedFolderAsync</summary>
+        public async Task GetManagedFolderResourceNamesAsync()
+        {
+            // Snippet: GetManagedFolderAsync(ManagedFolderName, CallSettings)
+            // Additional: GetManagedFolderAsync(ManagedFolderName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            // Make the request
+            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFolders</summary>
+        public void ListManagedFoldersRequestObject()
+        {
+            // Snippet: ListManagedFolders(ListManagedFoldersRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                Prefix = "",
+            };
+            // Make the request
+            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagedFolder item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFoldersAsync</summary>
+        public async Task ListManagedFoldersRequestObjectAsync()
+        {
+            // Snippet: ListManagedFoldersAsync(ListManagedFoldersRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            ListManagedFoldersRequest request = new ListManagedFoldersRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                Prefix = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagedFolder item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagedFoldersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFolders</summary>
+        public void ListManagedFolders()
+        {
+            // Snippet: ListManagedFolders(string, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagedFolder item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFoldersAsync</summary>
+        public async Task ListManagedFoldersAsync()
+        {
+            // Snippet: ListManagedFoldersAsync(string, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagedFolder item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagedFoldersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFolders</summary>
+        public void ListManagedFoldersResourceNames()
+        {
+            // Snippet: ListManagedFolders(BucketName, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ManagedFolder item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListManagedFoldersAsync</summary>
+        public async Task ListManagedFoldersResourceNamesAsync()
+        {
+            // Snippet: ListManagedFoldersAsync(BucketName, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ManagedFolder item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListManagedFoldersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ManagedFolder item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ManagedFolder item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
