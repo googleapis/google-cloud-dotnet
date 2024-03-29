@@ -202,7 +202,7 @@ namespace Google.Maps.Places.V1 {
     /// </summary>
     [pbr::OriginalName("PRICE_LEVEL_EXPENSIVE")] Expensive = 4,
     /// <summary>
-    /// Place provides very expensive service s.
+    /// Place provides very expensive services.
     /// </summary>
     [pbr::OriginalName("PRICE_LEVEL_VERY_EXPENSIVE")] VeryExpensive = 5,
   }
@@ -607,7 +607,8 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(426, global::Google.Maps.Places.V1.Review.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Review> reviews_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Review>();
     /// <summary>
-    /// List of reviews about this place, sorted by relevance.
+    /// List of reviews about this place, sorted by relevance. A maximum of 5
+    /// reviews can be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -668,7 +669,8 @@ namespace Google.Maps.Places.V1 {
         = pb::FieldCodec.ForMessage(434, global::Google.Maps.Places.V1.Photo.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.Photo> photos_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.Photo>();
     /// <summary>
-    /// Information (including references) about photos of this place.
+    /// Information (including references) about photos of this place. A maximum of
+    /// 10 photos can be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
