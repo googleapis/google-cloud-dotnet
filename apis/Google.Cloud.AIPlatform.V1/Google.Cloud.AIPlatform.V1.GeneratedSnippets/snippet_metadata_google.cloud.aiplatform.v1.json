@@ -58210,6 +58210,1705 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_sync",
+      "title": "CreatePersistentResourceRequestObject",
+      "description": "Snippet for CreatePersistentResource",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreatePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_async",
+      "title": "CreatePersistentResourceRequestObjectAsync",
+      "description": "Snippet for CreatePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreatePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_sync_flattened",
+      "title": "CreatePersistentResource",
+      "description": "Snippet for CreatePersistentResource",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "System.String",
+            "name": "persistentResourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_async_flattened",
+      "title": "CreatePersistentResourceAsync",
+      "description": "Snippet for CreatePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "System.String",
+            "name": "persistentResourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_sync_flattened_resourceNames",
+      "title": "CreatePersistentResourceResourceNames",
+      "description": "Snippet for CreatePersistentResource",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "System.String",
+            "name": "persistentResourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_CreatePersistentResource_async_flattened_resourceNames",
+      "title": "CreatePersistentResourceResourceNamesAsync",
+      "description": "Snippet for CreatePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.CreatePersistentResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.CreatePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "System.String",
+            "name": "persistentResourceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.CreatePersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "CreatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.CreatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_sync",
+      "title": "GetPersistentResourceRequestObject",
+      "description": "Snippet for GetPersistentResource",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PersistentResource",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_async",
+      "title": "GetPersistentResourceRequestObjectAsync",
+      "description": "Snippet for GetPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetPersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_sync_flattened",
+      "title": "GetPersistentResource",
+      "description": "Snippet for GetPersistentResource",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PersistentResource",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_async_flattened",
+      "title": "GetPersistentResourceAsync",
+      "description": "Snippet for GetPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_sync_flattened_resourceNames",
+      "title": "GetPersistentResourceResourceNames",
+      "description": "Snippet for GetPersistentResource",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.PersistentResource",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_GetPersistentResource_async_flattened_resourceNames",
+      "title": "GetPersistentResourceResourceNamesAsync",
+      "description": "Snippet for GetPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.GetPersistentResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.GetPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "GetPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.GetPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_sync",
+      "title": "ListPersistentResourcesRequestObject",
+      "description": "Snippet for ListPersistentResources",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResources",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListPersistentResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_async",
+      "title": "ListPersistentResourcesRequestObjectAsync",
+      "description": "Snippet for ListPersistentResourcesAsync",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResourcesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListPersistentResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_sync_flattened",
+      "title": "ListPersistentResources",
+      "description": "Snippet for ListPersistentResources",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResources",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_async_flattened",
+      "title": "ListPersistentResourcesAsync",
+      "description": "Snippet for ListPersistentResourcesAsync",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResourcesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_sync_flattened_resourceNames",
+      "title": "ListPersistentResourcesResourceNames",
+      "description": "Snippet for ListPersistentResources",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResources",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResources",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_ListPersistentResources_async_flattened_resourceNames",
+      "title": "ListPersistentResourcesResourceNamesAsync",
+      "description": "Snippet for ListPersistentResourcesAsync",
+      "file": "PersistentResourceServiceClient.ListPersistentResourcesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPersistentResourcesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.ListPersistentResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListPersistentResourcesResponse, Google.Cloud.AIPlatform.V1.PersistentResource>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "ListPersistentResources",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.ListPersistentResources",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_sync",
+      "title": "DeletePersistentResourceRequestObject",
+      "description": "Snippet for DeletePersistentResource",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeletePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_async",
+      "title": "DeletePersistentResourceRequestObjectAsync",
+      "description": "Snippet for DeletePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeletePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_sync_flattened",
+      "title": "DeletePersistentResource",
+      "description": "Snippet for DeletePersistentResource",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_async_flattened",
+      "title": "DeletePersistentResourceAsync",
+      "description": "Snippet for DeletePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_sync_flattened_resourceNames",
+      "title": "DeletePersistentResourceResourceNames",
+      "description": "Snippet for DeletePersistentResource",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_DeletePersistentResource_async_flattened_resourceNames",
+      "title": "DeletePersistentResourceResourceNamesAsync",
+      "description": "Snippet for DeletePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.DeletePersistentResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.DeletePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "DeletePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.DeletePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_UpdatePersistentResource_sync",
+      "title": "UpdatePersistentResourceRequestObject",
+      "description": "Snippet for UpdatePersistentResource",
+      "file": "PersistentResourceServiceClient.UpdatePersistentResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.UpdatePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdatePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.UpdatePersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.UpdatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_UpdatePersistentResource_async",
+      "title": "UpdatePersistentResourceRequestObjectAsync",
+      "description": "Snippet for UpdatePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.UpdatePersistentResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.UpdatePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdatePersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.UpdatePersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.UpdatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_UpdatePersistentResource_sync_flattened",
+      "title": "UpdatePersistentResource",
+      "description": "Snippet for UpdatePersistentResource",
+      "file": "PersistentResourceServiceClient.UpdatePersistentResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.UpdatePersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.UpdatePersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.UpdatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_UpdatePersistentResource_async_flattened",
+      "title": "UpdatePersistentResourceAsync",
+      "description": "Snippet for UpdatePersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.UpdatePersistentResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.UpdatePersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResource",
+            "name": "persistentResource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.UpdatePersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "UpdatePersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.UpdatePersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_sync",
+      "title": "RebootPersistentResourceRequestObject",
+      "description": "Snippet for RebootPersistentResource",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RebootPersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_async",
+      "title": "RebootPersistentResourceRequestObjectAsync",
+      "description": "Snippet for RebootPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.RebootPersistentResourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_sync_flattened",
+      "title": "RebootPersistentResource",
+      "description": "Snippet for RebootPersistentResource",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_async_flattened",
+      "title": "RebootPersistentResourceAsync",
+      "description": "Snippet for RebootPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_sync_flattened_resourceNames",
+      "title": "RebootPersistentResourceResourceNames",
+      "description": "Snippet for RebootPersistentResource",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResource",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResource",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_PersistentResourceService_RebootPersistentResource_async_flattened_resourceNames",
+      "title": "RebootPersistentResourceResourceNamesAsync",
+      "description": "Snippet for RebootPersistentResourceAsync",
+      "file": "PersistentResourceServiceClient.RebootPersistentResourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RebootPersistentResourceAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient.RebootPersistentResourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.PersistentResourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.PersistentResource, Google.Cloud.AIPlatform.V1.RebootPersistentResourceOperationMetadata>>",
+        "client": {
+          "shortName": "PersistentResourceServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.PersistentResourceServiceClient"
+        },
+        "method": {
+          "shortName": "RebootPersistentResource",
+          "fullName": "google.cloud.aiplatform.v1.PersistentResourceService.RebootPersistentResource",
+          "service": {
+            "shortName": "PersistentResourceService",
+            "fullName": "google.cloud.aiplatform.v1.PersistentResourceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_PipelineService_CreateTrainingPipeline_sync",
       "title": "CreateTrainingPipelineRequestObject",
       "description": "Snippet for CreateTrainingPipeline",
@@ -63370,12 +65069,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -63419,12 +65118,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -63570,12 +65269,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]

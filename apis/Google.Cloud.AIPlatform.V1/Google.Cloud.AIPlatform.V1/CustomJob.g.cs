@@ -53,50 +53,52 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmnqQWYK",
             "I2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tSm9iEj9wcm9qZWN0",
             "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY3VzdG9tSm9icy97",
-            "Y3VzdG9tX2pvYn0iwgUKDUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xf",
-            "c3BlY3MYASADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Xb3Jr",
-            "ZXJQb29sU3BlY0ID4EECEjoKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5TY2hlZHVsaW5nEhcKD3NlcnZpY2VfYWNj",
-            "b3VudBgEIAEoCRI3CgduZXR3b3JrGAUgASgJQibgQQH6QSAKHmNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIfChJyZXNlcnZlZF9pcF9yYW5nZXMY",
-            "DSADKAlCA+BBARJJChViYXNlX291dHB1dF9kaXJlY3RvcnkYBiABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbhImCh5w",
-            "cm90ZWN0ZWRfYXJ0aWZhY3RfbG9jYXRpb25faWQYEyABKAkSQgoLdGVuc29y",
-            "Ym9hcmQYByABKAlCLeBBAfpBJwolYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9UZW5zb3Jib2FyZBIeChFlbmFibGVfd2ViX2FjY2VzcxgKIAEoCEID4EEB",
-            "EiQKF2VuYWJsZV9kYXNoYm9hcmRfYWNjZXNzGBAgASgIQgPgQQESPQoKZXhw",
-            "ZXJpbWVudBgRIAEoCUIp4EEB+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
-            "Y29tL0NvbnRleHQSQQoOZXhwZXJpbWVudF9ydW4YEiABKAlCKeBBAfpBIwoh",
-            "YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Db250ZXh0EjcKBm1vZGVscxgU",
-            "IAMoCUIn4EEB+kEhCh9haXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVs",
-            "IoYDCg5Xb3JrZXJQb29sU3BlYxJDCg5jb250YWluZXJfc3BlYxgGIAEoCzIp",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNvbnRhaW5lclNwZWNIABJM",
-            "ChNweXRob25fcGFja2FnZV9zcGVjGAcgASgLMi0uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuUHl0aG9uUGFja2FnZVNwZWNIABJFCgxtYWNoaW5lX3Nw",
-            "ZWMYASABKAsyJy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NYWNoaW5l",
-            "U3BlY0IG4EEB4EEFEhoKDXJlcGxpY2FfY291bnQYAiABKANCA+BBARI9Cgpu",
-            "ZnNfbW91bnRzGAQgAygLMiQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "TmZzTW91bnRCA+BBARI3CglkaXNrX3NwZWMYBSABKAsyJC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5EaXNrU3BlY0IGCgR0YXNrIncKDUNvbnRhaW5l",
-            "clNwZWMSFgoJaW1hZ2VfdXJpGAEgASgJQgPgQQISDwoHY29tbWFuZBgCIAMo",
-            "CRIMCgRhcmdzGAMgAygJEi8KA2VudhgEIAMoCzIiLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkVudlZhciKqAQoRUHl0aG9uUGFja2FnZVNwZWMSHwoS",
-            "ZXhlY3V0b3JfaW1hZ2VfdXJpGAEgASgJQgPgQQISGQoMcGFja2FnZV91cmlz",
-            "GAIgAygJQgPgQQISGgoNcHl0aG9uX21vZHVsZRgDIAEoCUID4EECEgwKBGFy",
-            "Z3MYBCADKAkSLwoDZW52GAUgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuRW52VmFyIn0KClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9vbl93",
-            "b3JrZXJfcmVzdGFydBgDIAEoCBIcCg9kaXNhYmxlX3JldHJpZXMYBSABKAhC",
-            "A+BBAULMAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg5DdXN0",
-            "b21Kb2JQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91",
-            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
-            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "Y3VzdG9tX2pvYn0imAYKDUN1c3RvbUpvYlNwZWMSVAoWcGVyc2lzdGVudF9y",
+            "ZXNvdXJjZV9pZBgOIAEoCUI04EEB+kEuCixhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1BlcnNpc3RlbnRSZXNvdXJjZRJKChF3b3JrZXJfcG9vbF9zcGVj",
+            "cxgBIAMoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLldvcmtlclBv",
+            "b2xTcGVjQgPgQQISOgoKc2NoZWR1bGluZxgDIAEoCzImLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlNjaGVkdWxpbmcSFwoPc2VydmljZV9hY2NvdW50",
+            "GAQgASgJEjcKB25ldHdvcmsYBSABKAlCJuBBAfpBIAoeY29tcHV0ZS5nb29n",
+            "bGVhcGlzLmNvbS9OZXR3b3JrEh8KEnJlc2VydmVkX2lwX3JhbmdlcxgNIAMo",
+            "CUID4EEBEkkKFWJhc2Vfb3V0cHV0X2RpcmVjdG9yeRgGIAEoCzIqLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uEiYKHnByb3Rl",
+            "Y3RlZF9hcnRpZmFjdF9sb2NhdGlvbl9pZBgTIAEoCRJCCgt0ZW5zb3Jib2Fy",
+            "ZBgHIAEoCUIt4EEB+kEnCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1Rl",
+            "bnNvcmJvYXJkEh4KEWVuYWJsZV93ZWJfYWNjZXNzGAogASgIQgPgQQESJAoX",
+            "ZW5hYmxlX2Rhc2hib2FyZF9hY2Nlc3MYECABKAhCA+BBARI9CgpleHBlcmlt",
+            "ZW50GBEgASgJQingQQH6QSMKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20v",
+            "Q29udGV4dBJBCg5leHBlcmltZW50X3J1bhgSIAEoCUIp4EEB+kEjCiFhaXBs",
+            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL0NvbnRleHQSNwoGbW9kZWxzGBQgAygJ",
+            "QifgQQH6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwihgMK",
+            "DldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVjGAYgASgLMikuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVyU3BlY0gAEkwKE3B5",
+            "dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gAEkUKDG1hY2hpbmVfc3BlYxgB",
+            "IAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1hY2hpbmVTcGVj",
+            "QgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgCIAEoA0ID4EEBEj0KCm5mc19t",
+            "b3VudHMYBCADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5OZnNN",
+            "b3VudEID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29udGFpbmVyU3Bl",
+            "YxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5kGAIgAygJEgwK",
+            "BGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdlU3BlYxIfChJleGVj",
+            "dXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiAD",
+            "KAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgE",
+            "IAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5FbnZWYXIifQoKU2NoZWR1bGluZxIqCgd0aW1lb3V0GAEgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEiUKHXJlc3RhcnRfam9iX29uX3dvcmtl",
+            "cl9yZXN0YXJ0GAMgASgIEhwKD2Rpc2FibGVfcmV0cmllcxgFIAEoCEID4EEB",
+            "QswBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDkN1c3RvbUpv",
+            "YlByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdv",
+            "b2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "WebAccessUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "ReservedIpRanges", "BaseOutputDirectory", "ProtectedArtifactLocationId", "Tensorboard", "EnableWebAccess", "EnableDashboardAccess", "Experiment", "ExperimentRun", "Models" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "PersistentResourceId", "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "ReservedIpRanges", "BaseOutputDirectory", "ProtectedArtifactLocationId", "Tensorboard", "EnableWebAccess", "EnableDashboardAccess", "Experiment", "ExperimentRun", "Models" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
@@ -849,6 +851,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomJobSpec(CustomJobSpec other) : this() {
+      persistentResourceId_ = other.persistentResourceId_;
       workerPoolSpecs_ = other.workerPoolSpecs_.Clone();
       scheduling_ = other.scheduling_ != null ? other.scheduling_.Clone() : null;
       serviceAccount_ = other.serviceAccount_;
@@ -869,6 +872,27 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomJobSpec Clone() {
       return new CustomJobSpec(this);
+    }
+
+    /// <summary>Field number for the "persistent_resource_id" field.</summary>
+    public const int PersistentResourceIdFieldNumber = 14;
+    private string persistentResourceId_ = "";
+    /// <summary>
+    /// Optional. The ID of the PersistentResource in the same Project and Location
+    /// which to run
+    ///
+    /// If this is specified, the job will be run on existing machines held by the
+    /// PersistentResource instead of on-demand short-live machines.
+    /// The network and CMEK configs on the job should be consistent with those on
+    /// the PersistentResource, otherwise, the job will be rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PersistentResourceId {
+      get { return persistentResourceId_; }
+      set {
+        persistentResourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "worker_pool_specs" field.</summary>
@@ -1164,6 +1188,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PersistentResourceId != other.PersistentResourceId) return false;
       if(!workerPoolSpecs_.Equals(other.workerPoolSpecs_)) return false;
       if (!object.Equals(Scheduling, other.Scheduling)) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
@@ -1184,6 +1209,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PersistentResourceId.Length != 0) hash ^= PersistentResourceId.GetHashCode();
       hash ^= workerPoolSpecs_.GetHashCode();
       if (scheduling_ != null) hash ^= Scheduling.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
@@ -1241,6 +1267,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnableWebAccess);
       }
       reservedIpRanges_.WriteTo(output, _repeated_reservedIpRanges_codec);
+      if (PersistentResourceId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(PersistentResourceId);
+      }
       if (EnableDashboardAccess != false) {
         output.WriteRawTag(128, 1);
         output.WriteBool(EnableDashboardAccess);
@@ -1294,6 +1324,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnableWebAccess);
       }
       reservedIpRanges_.WriteTo(ref output, _repeated_reservedIpRanges_codec);
+      if (PersistentResourceId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(PersistentResourceId);
+      }
       if (EnableDashboardAccess != false) {
         output.WriteRawTag(128, 1);
         output.WriteBool(EnableDashboardAccess);
@@ -1321,6 +1355,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PersistentResourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PersistentResourceId);
+      }
       size += workerPoolSpecs_.CalculateSize(_repeated_workerPoolSpecs_codec);
       if (scheduling_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scheduling);
@@ -1365,6 +1402,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(CustomJobSpec other) {
       if (other == null) {
         return;
+      }
+      if (other.PersistentResourceId.Length != 0) {
+        PersistentResourceId = other.PersistentResourceId;
       }
       workerPoolSpecs_.Add(other.workerPoolSpecs_);
       if (other.scheduling_ != null) {
@@ -1458,6 +1498,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             reservedIpRanges_.AddEntriesFrom(input, _repeated_reservedIpRanges_codec);
             break;
           }
+          case 114: {
+            PersistentResourceId = input.ReadString();
+            break;
+          }
           case 128: {
             EnableDashboardAccess = input.ReadBool();
             break;
@@ -1529,6 +1573,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 106: {
             reservedIpRanges_.AddEntriesFrom(ref input, _repeated_reservedIpRanges_codec);
+            break;
+          }
+          case 114: {
+            PersistentResourceId = input.ReadString();
             break;
           }
           case 128: {

@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 GenerationConfig = new GenerationConfig(),
                 Model = "",
                 Tools = { new Tool(), },
+                SystemInstruction = new Content(),
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(request);

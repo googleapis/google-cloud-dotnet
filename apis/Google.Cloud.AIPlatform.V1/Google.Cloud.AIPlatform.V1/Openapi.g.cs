@@ -26,29 +26,35 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9vcGVuYXBpLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byLT",
-            "AwoNT3BlbkFwaVNjaGVtYRIzCgR0eXBlGAEgASgOMiAuZ29vZ2xlLmNsb3Vk",
+            "ZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byLz",
+            "BQoNT3BlbkFwaVNjaGVtYRIzCgR0eXBlGAEgASgOMiAuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuVHlwZUID4EEBEhMKBmZvcm1hdBgHIAEoCUID4EEB",
-            "EhgKC2Rlc2NyaXB0aW9uGAggASgJQgPgQQESFQoIbnVsbGFibGUYBiABKAhC",
-            "A+BBARI9CgVpdGVtcxgCIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLk9wZW5BcGlTY2hlbWFCA+BBARIRCgRlbnVtGAkgAygJQgPgQQESUgoK",
-            "cHJvcGVydGllcxgDIAMoCzI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "Lk9wZW5BcGlTY2hlbWEuUHJvcGVydGllc0VudHJ5QgPgQQESFQoIcmVxdWly",
-            "ZWQYBSADKAlCA+BBARIsCgdleGFtcGxlGAQgASgLMhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLlZhbHVlQgPgQQEaXAoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRI4CgV2YWx1ZRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "Lk9wZW5BcGlTY2hlbWE6AjgBKmUKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgoKBlNUUklORxABEgoKBk5VTUJFUhACEgsKB0lOVEVHRVIQAxILCgdC",
-            "T09MRUFOEAQSCQoFQVJSQVkQBRIKCgZPQkpFQ1QQBkLKAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQgxPcGVuQXBpUHJvdG9QAVo+Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
-            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "EhIKBXRpdGxlGBggASgJQgPgQQESGAoLZGVzY3JpcHRpb24YCCABKAlCA+BB",
+            "ARIVCghudWxsYWJsZRgGIAEoCEID4EEBEiwKB2RlZmF1bHQYFyABKAsyFi5n",
+            "b29nbGUucHJvdG9idWYuVmFsdWVCA+BBARI9CgVpdGVtcxgCIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWFCA+BBARIW",
+            "CgltaW5faXRlbXMYFSABKANCA+BBARIWCgltYXhfaXRlbXMYFiABKANCA+BB",
+            "ARIRCgRlbnVtGAkgAygJQgPgQQESUgoKcHJvcGVydGllcxgDIAMoCzI5Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWEuUHJvcGVy",
+            "dGllc0VudHJ5QgPgQQESFQoIcmVxdWlyZWQYBSADKAlCA+BBARIbCg5taW5f",
+            "cHJvcGVydGllcxgOIAEoA0ID4EEBEhsKDm1heF9wcm9wZXJ0aWVzGA8gASgD",
+            "QgPgQQESFAoHbWluaW11bRgQIAEoAUID4EEBEhQKB21heGltdW0YESABKAFC",
+            "A+BBARIXCgptaW5fbGVuZ3RoGBIgASgDQgPgQQESFwoKbWF4X2xlbmd0aBgT",
+            "IAEoA0ID4EEBEhQKB3BhdHRlcm4YFCABKAlCA+BBARIsCgdleGFtcGxlGAQg",
+            "ASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQEaXAoPUHJvcGVydGll",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRI4CgV2YWx1ZRgCIAEoCzIpLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLk9wZW5BcGlTY2hlbWE6AjgBKmUKBFR5cGUS",
+            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUUklORxABEgoKBk5VTUJFUhAC",
+            "EgsKB0lOVEVHRVIQAxILCgdCT09MRUFOEAQSCQoFQVJSQVkQBRIKCgZPQkpF",
+            "Q1QQBkLKAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQgxPcGVu",
+            "QXBpUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2Fw",
+            "aXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQu",
+            "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
+            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.Type), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Description", "Nullable", "Items", "Enum", "Properties", "Required", "Example" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.OpenApiSchema), global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser, new[]{ "Type", "Format", "Title", "Description", "Nullable", "Default", "Items", "MinItems", "MaxItems", "Enum", "Properties", "Required", "MinProperties", "MaxProperties", "Minimum", "Maximum", "MinLength", "MaxLength", "Pattern", "Example" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -136,12 +142,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     public OpenApiSchema(OpenApiSchema other) : this() {
       type_ = other.type_;
       format_ = other.format_;
+      title_ = other.title_;
       description_ = other.description_;
       nullable_ = other.nullable_;
+      default_ = other.default_ != null ? other.default_.Clone() : null;
       items_ = other.items_ != null ? other.items_.Clone() : null;
+      minItems_ = other.minItems_;
+      maxItems_ = other.maxItems_;
       enum_ = other.enum_.Clone();
       properties_ = other.properties_.Clone();
       required_ = other.required_.Clone();
+      minProperties_ = other.minProperties_;
+      maxProperties_ = other.maxProperties_;
+      minimum_ = other.minimum_;
+      maximum_ = other.maximum_;
+      minLength_ = other.minLength_;
+      maxLength_ = other.maxLength_;
+      pattern_ = other.pattern_;
       example_ = other.example_ != null ? other.example_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -173,8 +190,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Optional. The format of the data.
     /// Supported formats:
-    ///  for NUMBER type: float, double
-    ///  for INTEGER type: int32, int64
+    ///  for NUMBER type: "float", "double"
+    ///  for INTEGER type: "int32", "int64"
+    ///  for STRING type: "email", "byte", etc
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,6 +200,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return format_; }
       set {
         format_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 24;
+    private string title_ = "";
+    /// <summary>
+    /// Optional. The title of the Schema.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Title {
+      get { return title_; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -215,11 +248,27 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "default" field.</summary>
+    public const int DefaultFieldNumber = 23;
+    private global::Google.Protobuf.WellKnownTypes.Value default_;
+    /// <summary>
+    /// Optional. Default value of the data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Value Default {
+      get { return default_; }
+      set {
+        default_ = value;
+      }
+    }
+
     /// <summary>Field number for the "items" field.</summary>
     public const int ItemsFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1.OpenApiSchema items_;
     /// <summary>
-    /// Optional. Schema of the elements of Type.ARRAY.
+    /// Optional. SCHEMA FIELDS FOR TYPE ARRAY
+    /// Schema of the elements of Type.ARRAY.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -227,6 +276,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return items_; }
       set {
         items_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_items" field.</summary>
+    public const int MinItemsFieldNumber = 21;
+    private long minItems_;
+    /// <summary>
+    /// Optional. Minimum number of the elements for Type.ARRAY.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinItems {
+      get { return minItems_; }
+      set {
+        minItems_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_items" field.</summary>
+    public const int MaxItemsFieldNumber = 22;
+    private long maxItems_;
+    /// <summary>
+    /// Optional. Maximum number of the elements for Type.ARRAY.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxItems {
+      get { return maxItems_; }
+      set {
+        maxItems_ = value;
       }
     }
 
@@ -252,7 +331,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.OpenApiSchema.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema> properties_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.OpenApiSchema>();
     /// <summary>
-    /// Optional. Properties of Type.OBJECT.
+    /// Optional. SCHEMA FIELDS FOR TYPE OBJECT
+    /// Properties of Type.OBJECT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -272,6 +352,114 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Required {
       get { return required_; }
+    }
+
+    /// <summary>Field number for the "min_properties" field.</summary>
+    public const int MinPropertiesFieldNumber = 14;
+    private long minProperties_;
+    /// <summary>
+    /// Optional. Minimum number of the properties for Type.OBJECT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinProperties {
+      get { return minProperties_; }
+      set {
+        minProperties_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_properties" field.</summary>
+    public const int MaxPropertiesFieldNumber = 15;
+    private long maxProperties_;
+    /// <summary>
+    /// Optional. Maximum number of the properties for Type.OBJECT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxProperties {
+      get { return maxProperties_; }
+      set {
+        maxProperties_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "minimum" field.</summary>
+    public const int MinimumFieldNumber = 16;
+    private double minimum_;
+    /// <summary>
+    /// Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER
+    /// Minimum value of the Type.INTEGER and Type.NUMBER
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Minimum {
+      get { return minimum_; }
+      set {
+        minimum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maximum" field.</summary>
+    public const int MaximumFieldNumber = 17;
+    private double maximum_;
+    /// <summary>
+    /// Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Maximum {
+      get { return maximum_; }
+      set {
+        maximum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_length" field.</summary>
+    public const int MinLengthFieldNumber = 18;
+    private long minLength_;
+    /// <summary>
+    /// Optional. SCHEMA FIELDS FOR TYPE STRING
+    /// Minimum length of the Type.STRING
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinLength {
+      get { return minLength_; }
+      set {
+        minLength_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_length" field.</summary>
+    public const int MaxLengthFieldNumber = 19;
+    private long maxLength_;
+    /// <summary>
+    /// Optional. Maximum length of the Type.STRING
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxLength {
+      get { return maxLength_; }
+      set {
+        maxLength_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pattern" field.</summary>
+    public const int PatternFieldNumber = 20;
+    private string pattern_ = "";
+    /// <summary>
+    /// Optional. Pattern of the Type.STRING to restrict a string to a regular
+    /// expression.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Pattern {
+      get { return pattern_; }
+      set {
+        pattern_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "example" field.</summary>
@@ -307,12 +495,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Type != other.Type) return false;
       if (Format != other.Format) return false;
+      if (Title != other.Title) return false;
       if (Description != other.Description) return false;
       if (Nullable != other.Nullable) return false;
+      if (!object.Equals(Default, other.Default)) return false;
       if (!object.Equals(Items, other.Items)) return false;
+      if (MinItems != other.MinItems) return false;
+      if (MaxItems != other.MaxItems) return false;
       if(!enum_.Equals(other.enum_)) return false;
       if (!Properties.Equals(other.Properties)) return false;
       if(!required_.Equals(other.required_)) return false;
+      if (MinProperties != other.MinProperties) return false;
+      if (MaxProperties != other.MaxProperties) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Minimum, other.Minimum)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Maximum, other.Maximum)) return false;
+      if (MinLength != other.MinLength) return false;
+      if (MaxLength != other.MaxLength) return false;
+      if (Pattern != other.Pattern) return false;
       if (!object.Equals(Example, other.Example)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -323,12 +522,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (Type != global::Google.Cloud.AIPlatform.V1.Type.Unspecified) hash ^= Type.GetHashCode();
       if (Format.Length != 0) hash ^= Format.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Nullable != false) hash ^= Nullable.GetHashCode();
+      if (default_ != null) hash ^= Default.GetHashCode();
       if (items_ != null) hash ^= Items.GetHashCode();
+      if (MinItems != 0L) hash ^= MinItems.GetHashCode();
+      if (MaxItems != 0L) hash ^= MaxItems.GetHashCode();
       hash ^= enum_.GetHashCode();
       hash ^= Properties.GetHashCode();
       hash ^= required_.GetHashCode();
+      if (MinProperties != 0L) hash ^= MinProperties.GetHashCode();
+      if (MaxProperties != 0L) hash ^= MaxProperties.GetHashCode();
+      if (Minimum != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Minimum);
+      if (Maximum != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Maximum);
+      if (MinLength != 0L) hash ^= MinLength.GetHashCode();
+      if (MaxLength != 0L) hash ^= MaxLength.GetHashCode();
+      if (Pattern.Length != 0) hash ^= Pattern.GetHashCode();
       if (example_ != null) hash ^= Example.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -375,6 +585,50 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Description);
       }
       enum_.WriteTo(output, _repeated_enum_codec);
+      if (MinProperties != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(MinProperties);
+      }
+      if (MaxProperties != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(MaxProperties);
+      }
+      if (Minimum != 0D) {
+        output.WriteRawTag(129, 1);
+        output.WriteDouble(Minimum);
+      }
+      if (Maximum != 0D) {
+        output.WriteRawTag(137, 1);
+        output.WriteDouble(Maximum);
+      }
+      if (MinLength != 0L) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt64(MinLength);
+      }
+      if (MaxLength != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(MaxLength);
+      }
+      if (Pattern.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Pattern);
+      }
+      if (MinItems != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(MinItems);
+      }
+      if (MaxItems != 0L) {
+        output.WriteRawTag(176, 1);
+        output.WriteInt64(MaxItems);
+      }
+      if (default_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(Default);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(194, 1);
+        output.WriteString(Title);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -412,6 +666,50 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteString(Description);
       }
       enum_.WriteTo(ref output, _repeated_enum_codec);
+      if (MinProperties != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(MinProperties);
+      }
+      if (MaxProperties != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(MaxProperties);
+      }
+      if (Minimum != 0D) {
+        output.WriteRawTag(129, 1);
+        output.WriteDouble(Minimum);
+      }
+      if (Maximum != 0D) {
+        output.WriteRawTag(137, 1);
+        output.WriteDouble(Maximum);
+      }
+      if (MinLength != 0L) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt64(MinLength);
+      }
+      if (MaxLength != 0L) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt64(MaxLength);
+      }
+      if (Pattern.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Pattern);
+      }
+      if (MinItems != 0L) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt64(MinItems);
+      }
+      if (MaxItems != 0L) {
+        output.WriteRawTag(176, 1);
+        output.WriteInt64(MaxItems);
+      }
+      if (default_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(Default);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(194, 1);
+        output.WriteString(Title);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -428,18 +726,51 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (Format.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Format);
       }
+      if (Title.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       if (Nullable != false) {
         size += 1 + 1;
       }
+      if (default_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Default);
+      }
       if (items_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Items);
+      }
+      if (MinItems != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MinItems);
+      }
+      if (MaxItems != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MaxItems);
       }
       size += enum_.CalculateSize(_repeated_enum_codec);
       size += properties_.CalculateSize(_map_properties_codec);
       size += required_.CalculateSize(_repeated_required_codec);
+      if (MinProperties != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinProperties);
+      }
+      if (MaxProperties != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxProperties);
+      }
+      if (Minimum != 0D) {
+        size += 2 + 8;
+      }
+      if (Maximum != 0D) {
+        size += 2 + 8;
+      }
+      if (MinLength != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MinLength);
+      }
+      if (MaxLength != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(MaxLength);
+      }
+      if (Pattern.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Pattern);
+      }
       if (example_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Example);
       }
@@ -461,11 +792,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.Format.Length != 0) {
         Format = other.Format;
       }
+      if (other.Title.Length != 0) {
+        Title = other.Title;
+      }
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
       if (other.Nullable != false) {
         Nullable = other.Nullable;
+      }
+      if (other.default_ != null) {
+        if (default_ == null) {
+          Default = new global::Google.Protobuf.WellKnownTypes.Value();
+        }
+        Default.MergeFrom(other.Default);
       }
       if (other.items_ != null) {
         if (items_ == null) {
@@ -473,9 +813,36 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         Items.MergeFrom(other.Items);
       }
+      if (other.MinItems != 0L) {
+        MinItems = other.MinItems;
+      }
+      if (other.MaxItems != 0L) {
+        MaxItems = other.MaxItems;
+      }
       enum_.Add(other.enum_);
       properties_.MergeFrom(other.properties_);
       required_.Add(other.required_);
+      if (other.MinProperties != 0L) {
+        MinProperties = other.MinProperties;
+      }
+      if (other.MaxProperties != 0L) {
+        MaxProperties = other.MaxProperties;
+      }
+      if (other.Minimum != 0D) {
+        Minimum = other.Minimum;
+      }
+      if (other.Maximum != 0D) {
+        Maximum = other.Maximum;
+      }
+      if (other.MinLength != 0L) {
+        MinLength = other.MinLength;
+      }
+      if (other.MaxLength != 0L) {
+        MaxLength = other.MaxLength;
+      }
+      if (other.Pattern.Length != 0) {
+        Pattern = other.Pattern;
+      }
       if (other.example_ != null) {
         if (example_ == null) {
           Example = new global::Google.Protobuf.WellKnownTypes.Value();
@@ -539,6 +906,53 @@ namespace Google.Cloud.AIPlatform.V1 {
             enum_.AddEntriesFrom(input, _repeated_enum_codec);
             break;
           }
+          case 112: {
+            MinProperties = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            MaxProperties = input.ReadInt64();
+            break;
+          }
+          case 129: {
+            Minimum = input.ReadDouble();
+            break;
+          }
+          case 137: {
+            Maximum = input.ReadDouble();
+            break;
+          }
+          case 144: {
+            MinLength = input.ReadInt64();
+            break;
+          }
+          case 152: {
+            MaxLength = input.ReadInt64();
+            break;
+          }
+          case 162: {
+            Pattern = input.ReadString();
+            break;
+          }
+          case 168: {
+            MinItems = input.ReadInt64();
+            break;
+          }
+          case 176: {
+            MaxItems = input.ReadInt64();
+            break;
+          }
+          case 186: {
+            if (default_ == null) {
+              Default = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Default);
+            break;
+          }
+          case 194: {
+            Title = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -594,6 +1008,53 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 74: {
             enum_.AddEntriesFrom(ref input, _repeated_enum_codec);
+            break;
+          }
+          case 112: {
+            MinProperties = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            MaxProperties = input.ReadInt64();
+            break;
+          }
+          case 129: {
+            Minimum = input.ReadDouble();
+            break;
+          }
+          case 137: {
+            Maximum = input.ReadDouble();
+            break;
+          }
+          case 144: {
+            MinLength = input.ReadInt64();
+            break;
+          }
+          case 152: {
+            MaxLength = input.ReadInt64();
+            break;
+          }
+          case 162: {
+            Pattern = input.ReadString();
+            break;
+          }
+          case 168: {
+            MinItems = input.ReadInt64();
+            break;
+          }
+          case 176: {
+            MaxItems = input.ReadInt64();
+            break;
+          }
+          case 186: {
+            if (default_ == null) {
+              Default = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            input.ReadMessage(Default);
+            break;
+          }
+          case 194: {
+            Title = input.ReadString();
             break;
           }
         }
