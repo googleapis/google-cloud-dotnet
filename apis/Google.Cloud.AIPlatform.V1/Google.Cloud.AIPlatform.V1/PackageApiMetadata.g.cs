@@ -154,6 +154,12 @@ namespace Google.Cloud.AIPlatform.V1
             yield return ModelMonitoringReflection.Descriptor;
             yield return ModelServiceReflection.Descriptor;
             yield return NasJobReflection.Descriptor;
+            yield return NetworkSpecReflection.Descriptor;
+            yield return NotebookEucConfigReflection.Descriptor;
+            yield return NotebookIdleShutdownConfigReflection.Descriptor;
+            yield return NotebookRuntimeReflection.Descriptor;
+            yield return NotebookRuntimeTemplateRefReflection.Descriptor;
+            yield return NotebookServiceReflection.Descriptor;
             yield return OpenapiReflection.Descriptor;
             yield return OperationReflection.Descriptor;
             yield return PipelineFailurePolicyReflection.Descriptor;

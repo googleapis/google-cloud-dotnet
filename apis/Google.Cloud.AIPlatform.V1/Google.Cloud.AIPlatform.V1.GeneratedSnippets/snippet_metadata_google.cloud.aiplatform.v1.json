@@ -55196,6 +55196,3020 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync",
+      "title": "CreateNotebookRuntimeTemplateRequestObject",
+      "description": "Snippet for CreateNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_async",
+      "title": "CreateNotebookRuntimeTemplateRequestObjectAsync",
+      "description": "Snippet for CreateNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync_flattened",
+      "title": "CreateNotebookRuntimeTemplate",
+      "description": "Snippet for CreateNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_async_flattened",
+      "title": "CreateNotebookRuntimeTemplateAsync",
+      "description": "Snippet for CreateNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync_flattened_resourceNames",
+      "title": "CreateNotebookRuntimeTemplateResourceNames",
+      "description": "Snippet for CreateNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_CreateNotebookRuntimeTemplate_async_flattened_resourceNames",
+      "title": "CreateNotebookRuntimeTemplateResourceNamesAsync",
+      "description": "Snippet for CreateNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.CreateNotebookRuntimeTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.CreateNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplateId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate, Google.Cloud.AIPlatform.V1.CreateNotebookRuntimeTemplateOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "CreateNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.CreateNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_sync",
+      "title": "GetNotebookRuntimeTemplateRequestObject",
+      "description": "Snippet for GetNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_async",
+      "title": "GetNotebookRuntimeTemplateRequestObjectAsync",
+      "description": "Snippet for GetNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_sync_flattened",
+      "title": "GetNotebookRuntimeTemplate",
+      "description": "Snippet for GetNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_async_flattened",
+      "title": "GetNotebookRuntimeTemplateAsync",
+      "description": "Snippet for GetNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_sync_flattened_resourceNames",
+      "title": "GetNotebookRuntimeTemplateResourceNames",
+      "description": "Snippet for GetNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntimeTemplate_async_flattened_resourceNames",
+      "title": "GetNotebookRuntimeTemplateResourceNamesAsync",
+      "description": "Snippet for GetNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_sync",
+      "title": "ListNotebookRuntimeTemplatesRequestObject",
+      "description": "Snippet for ListNotebookRuntimeTemplates",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplates",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplates",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_async",
+      "title": "ListNotebookRuntimeTemplatesRequestObjectAsync",
+      "description": "Snippet for ListNotebookRuntimeTemplatesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplatesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_sync_flattened",
+      "title": "ListNotebookRuntimeTemplates",
+      "description": "Snippet for ListNotebookRuntimeTemplates",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplates",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplates",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_async_flattened",
+      "title": "ListNotebookRuntimeTemplatesAsync",
+      "description": "Snippet for ListNotebookRuntimeTemplatesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplatesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_sync_flattened_resourceNames",
+      "title": "ListNotebookRuntimeTemplatesResourceNames",
+      "description": "Snippet for ListNotebookRuntimeTemplates",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplates",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplates",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimeTemplates_async_flattened_resourceNames",
+      "title": "ListNotebookRuntimeTemplatesResourceNamesAsync",
+      "description": "Snippet for ListNotebookRuntimeTemplatesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimeTemplatesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimeTemplatesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimeTemplatesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimeTemplatesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplate>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimeTemplates",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimeTemplates",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_sync",
+      "title": "DeleteNotebookRuntimeTemplateRequestObject",
+      "description": "Snippet for DeleteNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_async",
+      "title": "DeleteNotebookRuntimeTemplateRequestObjectAsync",
+      "description": "Snippet for DeleteNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeTemplateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_sync_flattened",
+      "title": "DeleteNotebookRuntimeTemplate",
+      "description": "Snippet for DeleteNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_async_flattened",
+      "title": "DeleteNotebookRuntimeTemplateAsync",
+      "description": "Snippet for DeleteNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_sync_flattened_resourceNames",
+      "title": "DeleteNotebookRuntimeTemplateResourceNames",
+      "description": "Snippet for DeleteNotebookRuntimeTemplate",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplate",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntimeTemplate_async_flattened_resourceNames",
+      "title": "DeleteNotebookRuntimeTemplateResourceNamesAsync",
+      "description": "Snippet for DeleteNotebookRuntimeTemplateAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeTemplateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeTemplateAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeTemplateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntimeTemplate",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntimeTemplate",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_sync",
+      "title": "AssignNotebookRuntimeRequestObject",
+      "description": "Snippet for AssignNotebookRuntime",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_async",
+      "title": "AssignNotebookRuntimeRequestObjectAsync",
+      "description": "Snippet for AssignNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_sync_flattened",
+      "title": "AssignNotebookRuntime",
+      "description": "Snippet for AssignNotebookRuntime",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+            "name": "notebookRuntime"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_async_flattened",
+      "title": "AssignNotebookRuntimeAsync",
+      "description": "Snippet for AssignNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+            "name": "notebookRuntime"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_sync_flattened_resourceNames",
+      "title": "AssignNotebookRuntimeResourceNames",
+      "description": "Snippet for AssignNotebookRuntime",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+            "name": "notebookRuntime"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_AssignNotebookRuntime_async_flattened_resourceNames",
+      "title": "AssignNotebookRuntimeResourceNamesAsync",
+      "description": "Snippet for AssignNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.AssignNotebookRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssignNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.AssignNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeTemplateName",
+            "name": "notebookRuntimeTemplate"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+            "name": "notebookRuntime"
+          },
+          {
+            "type": "System.String",
+            "name": "notebookRuntimeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.NotebookRuntime, Google.Cloud.AIPlatform.V1.AssignNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "AssignNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.AssignNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_sync",
+      "title": "GetNotebookRuntimeRequestObject",
+      "description": "Snippet for GetNotebookRuntime",
+      "file": "NotebookServiceClient.GetNotebookRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_async",
+      "title": "GetNotebookRuntimeRequestObjectAsync",
+      "description": "Snippet for GetNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_sync_flattened",
+      "title": "GetNotebookRuntime",
+      "description": "Snippet for GetNotebookRuntime",
+      "file": "NotebookServiceClient.GetNotebookRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_async_flattened",
+      "title": "GetNotebookRuntimeAsync",
+      "description": "Snippet for GetNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_sync_flattened_resourceNames",
+      "title": "GetNotebookRuntimeResourceNames",
+      "description": "Snippet for GetNotebookRuntime",
+      "file": "NotebookServiceClient.GetNotebookRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.NotebookRuntime",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_GetNotebookRuntime_async_flattened_resourceNames",
+      "title": "GetNotebookRuntimeResourceNamesAsync",
+      "description": "Snippet for GetNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.GetNotebookRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.GetNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "GetNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.GetNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_sync",
+      "title": "ListNotebookRuntimesRequestObject",
+      "description": "Snippet for ListNotebookRuntimes",
+      "file": "NotebookServiceClient.ListNotebookRuntimesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimes",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_async",
+      "title": "ListNotebookRuntimesRequestObjectAsync",
+      "description": "Snippet for ListNotebookRuntimesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListNotebookRuntimesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_sync_flattened",
+      "title": "ListNotebookRuntimes",
+      "description": "Snippet for ListNotebookRuntimes",
+      "file": "NotebookServiceClient.ListNotebookRuntimesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimes",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_async_flattened",
+      "title": "ListNotebookRuntimesAsync",
+      "description": "Snippet for ListNotebookRuntimesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_sync_flattened_resourceNames",
+      "title": "ListNotebookRuntimesResourceNames",
+      "description": "Snippet for ListNotebookRuntimes",
+      "file": "NotebookServiceClient.ListNotebookRuntimesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimes",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimes",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_ListNotebookRuntimes_async_flattened_resourceNames",
+      "title": "ListNotebookRuntimesResourceNamesAsync",
+      "description": "Snippet for ListNotebookRuntimesAsync",
+      "file": "NotebookServiceClient.ListNotebookRuntimesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListNotebookRuntimesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.ListNotebookRuntimesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListNotebookRuntimesResponse, Google.Cloud.AIPlatform.V1.NotebookRuntime>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "ListNotebookRuntimes",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.ListNotebookRuntimes",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_sync",
+      "title": "DeleteNotebookRuntimeRequestObject",
+      "description": "Snippet for DeleteNotebookRuntime",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_async",
+      "title": "DeleteNotebookRuntimeRequestObjectAsync",
+      "description": "Snippet for DeleteNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_sync_flattened",
+      "title": "DeleteNotebookRuntime",
+      "description": "Snippet for DeleteNotebookRuntime",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_async_flattened",
+      "title": "DeleteNotebookRuntimeAsync",
+      "description": "Snippet for DeleteNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_sync_flattened_resourceNames",
+      "title": "DeleteNotebookRuntimeResourceNames",
+      "description": "Snippet for DeleteNotebookRuntime",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_DeleteNotebookRuntime_async_flattened_resourceNames",
+      "title": "DeleteNotebookRuntimeResourceNamesAsync",
+      "description": "Snippet for DeleteNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.DeleteNotebookRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.DeleteNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.DeleteNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_sync",
+      "title": "UpgradeNotebookRuntimeRequestObject",
+      "description": "Snippet for UpgradeNotebookRuntime",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_async",
+      "title": "UpgradeNotebookRuntimeRequestObjectAsync",
+      "description": "Snippet for UpgradeNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_sync_flattened",
+      "title": "UpgradeNotebookRuntime",
+      "description": "Snippet for UpgradeNotebookRuntime",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_async_flattened",
+      "title": "UpgradeNotebookRuntimeAsync",
+      "description": "Snippet for UpgradeNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_sync_flattened_resourceNames",
+      "title": "UpgradeNotebookRuntimeResourceNames",
+      "description": "Snippet for UpgradeNotebookRuntime",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_UpgradeNotebookRuntime_async_flattened_resourceNames",
+      "title": "UpgradeNotebookRuntimeResourceNamesAsync",
+      "description": "Snippet for UpgradeNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.UpgradeNotebookRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpgradeNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.UpgradeNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.UpgradeNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "UpgradeNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.UpgradeNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_sync",
+      "title": "StartNotebookRuntimeRequestObject",
+      "description": "Snippet for StartNotebookRuntime",
+      "file": "NotebookServiceClient.StartNotebookRuntimeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_async",
+      "title": "StartNotebookRuntimeRequestObjectAsync",
+      "description": "Snippet for StartNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.StartNotebookRuntimeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.StartNotebookRuntimeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_sync_flattened",
+      "title": "StartNotebookRuntime",
+      "description": "Snippet for StartNotebookRuntime",
+      "file": "NotebookServiceClient.StartNotebookRuntimeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntime",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_async_flattened",
+      "title": "StartNotebookRuntimeAsync",
+      "description": "Snippet for StartNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.StartNotebookRuntimeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_sync_flattened_resourceNames",
+      "title": "StartNotebookRuntimeResourceNames",
+      "description": "Snippet for StartNotebookRuntime",
+      "file": "NotebookServiceClient.StartNotebookRuntimeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntime",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntime",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_NotebookService_StartNotebookRuntime_async_flattened_resourceNames",
+      "title": "StartNotebookRuntimeResourceNamesAsync",
+      "description": "Snippet for StartNotebookRuntimeAsync",
+      "file": "NotebookServiceClient.StartNotebookRuntimeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartNotebookRuntimeAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient.StartNotebookRuntimeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.NotebookRuntimeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.StartNotebookRuntimeResponse, Google.Cloud.AIPlatform.V1.StartNotebookRuntimeOperationMetadata>>",
+        "client": {
+          "shortName": "NotebookServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.NotebookServiceClient"
+        },
+        "method": {
+          "shortName": "StartNotebookRuntime",
+          "fullName": "google.cloud.aiplatform.v1.NotebookService.StartNotebookRuntime",
+          "service": {
+            "shortName": "NotebookService",
+            "fullName": "google.cloud.aiplatform.v1.NotebookService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_PipelineService_CreateTrainingPipeline_sync",
       "title": "CreateTrainingPipelineRequestObject",
       "description": "Snippet for CreateTrainingPipeline",
