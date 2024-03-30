@@ -1349,6 +1349,51 @@
         }
       }
     },
+    "PersistentResourceService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PersistentResourceServiceClient",
+          "rpcs": {
+            "CreatePersistentResource": {
+              "methods": [
+                "CreatePersistentResource",
+                "CreatePersistentResourceAsync"
+              ]
+            },
+            "DeletePersistentResource": {
+              "methods": [
+                "DeletePersistentResource",
+                "DeletePersistentResourceAsync"
+              ]
+            },
+            "GetPersistentResource": {
+              "methods": [
+                "GetPersistentResource",
+                "GetPersistentResourceAsync"
+              ]
+            },
+            "ListPersistentResources": {
+              "methods": [
+                "ListPersistentResources",
+                "ListPersistentResourcesAsync"
+              ]
+            },
+            "RebootPersistentResource": {
+              "methods": [
+                "RebootPersistentResource",
+                "RebootPersistentResourceAsync"
+              ]
+            },
+            "UpdatePersistentResource": {
+              "methods": [
+                "UpdatePersistentResource",
+                "UpdatePersistentResourceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "PipelineService": {
       "clients": {
         "grpc": {

@@ -427,8 +427,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The name of the function to call.
     /// Must start with a letter or an underscore.
-    /// Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum
-    /// length of 64.
+    /// Must be a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a
+    /// maximum length of 64.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -463,8 +463,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// format. Reflects the Open API 3.03 Parameter Object. string Key: the name
     /// of the parameter. Parameter names are case sensitive. Schema Value: the
     /// Schema defining the type used for the parameter. For function with no
-    /// parameters, this can be left unset. Example with 1 required and 1 optional
-    /// parameter: type: OBJECT properties:
+    /// parameters, this can be left unset. Parameter names must start with a
+    /// letter or an underscore and must only contain chars a-z, A-Z, 0-9, or
+    /// underscores with a maximum length of 64. Example with 1 required and 1
+    /// optional parameter: type: OBJECT properties:
     ///  param1:
     ///    type: STRING
     ///  param2:
@@ -1505,7 +1507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. Fully-qualified Vertex AI Search's datastore resource ID.
     /// Format:
-    /// projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

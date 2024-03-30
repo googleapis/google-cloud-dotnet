@@ -304,6 +304,16 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// <see cref="PersistentResourceName"/>-typed view over the <see cref="PersistentResourceId"/> resource name
+        /// property.
+        /// </summary>
+        public PersistentResourceName PersistentResourceIdAsPersistentResourceName
+        {
+            get => string.IsNullOrEmpty(PersistentResourceId) ? null : PersistentResourceName.Parse(PersistentResourceId, allowUnparsed: true);
+            set => PersistentResourceId = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="ContextName"/>-typed view over the <see cref="Experiment"/> resource name property.
         /// </summary>
         public ContextName ExperimentAsContextName

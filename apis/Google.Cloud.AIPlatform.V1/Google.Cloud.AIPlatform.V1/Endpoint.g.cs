@@ -56,7 +56,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbmRwb2lu",
             "dHMve2VuZHBvaW50fRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
             "bG9jYXRpb259L3B1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3ttb2Rl",
-            "bH0ivAUKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgH",
+            "bH0i2gUKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgH",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJl",
             "c291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNIABJR",
@@ -67,28 +67,28 @@ namespace Google.Cloud.AIPlatform.V1 {
             "QgPgQQMSFAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90aW1lGAYg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKEGV4cGxh",
             "bmF0aW9uX3NwZWMYCSABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5FeHBsYW5hdGlvblNwZWMSFwoPc2VydmljZV9hY2NvdW50GAsgASgJEiEK",
-            "GWRpc2FibGVfY29udGFpbmVyX2xvZ2dpbmcYDyABKAgSHQoVZW5hYmxlX2Fj",
-            "Y2Vzc19sb2dnaW5nGA0gASgIEkwKEXByaXZhdGVfZW5kcG9pbnRzGA4gASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50",
-            "c0ID4EEDQhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzIo8BChBQcml2YXRlRW5k",
-            "cG9pbnRzEh0KEHByZWRpY3RfaHR0cF91cmkYASABKAlCA+BBAxIdChBleHBs",
-            "YWluX2h0dHBfdXJpGAIgASgJQgPgQQMSHAoPaGVhbHRoX2h0dHBfdXJpGAMg",
-            "ASgJQgPgQQMSHwoSc2VydmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMinAEK",
-            "I1ByZWRpY3RSZXF1ZXN0UmVzcG9uc2VMb2dnaW5nQ29uZmlnEg8KB2VuYWJs",
-            "ZWQYASABKAgSFQoNc2FtcGxpbmdfcmF0ZRgCIAEoARJNChRiaWdxdWVyeV9k",
-            "ZXN0aW5hdGlvbhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkJpZ1F1ZXJ5RGVzdGluYXRpb25CywEKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MUINRW5kcG9pbnRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3Vk",
-            "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
-            "MWIGcHJvdG8z"));
+            "MS5FeHBsYW5hdGlvblNwZWMSHAoUZGlzYWJsZV9leHBsYW5hdGlvbnMYEyAB",
+            "KAgSFwoPc2VydmljZV9hY2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFp",
+            "bmVyX2xvZ2dpbmcYDyABKAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0g",
+            "ASgIEkwKEXByaXZhdGVfZW5kcG9pbnRzGA4gASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50c0ID4EEDQhYKFHByZWRp",
+            "Y3Rpb25fcmVzb3VyY2VzIo8BChBQcml2YXRlRW5kcG9pbnRzEh0KEHByZWRp",
+            "Y3RfaHR0cF91cmkYASABKAlCA+BBAxIdChBleHBsYWluX2h0dHBfdXJpGAIg",
+            "ASgJQgPgQQMSHAoPaGVhbHRoX2h0dHBfdXJpGAMgASgJQgPgQQMSHwoSc2Vy",
+            "dmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMinAEKI1ByZWRpY3RSZXF1ZXN0",
+            "UmVzcG9uc2VMb2dnaW5nQ29uZmlnEg8KB2VuYWJsZWQYASABKAgSFQoNc2Ft",
+            "cGxpbmdfcmF0ZRgCIAEoARJNChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgDIAEo",
+            "CzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5RGVzdGlu",
+            "YXRpb25CywEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUINRW5k",
+            "cG9pbnRQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91",
+            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
+            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints" }, new[]{ "PredictionResources" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints" }, new[]{ "PredictionResources" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null)
           }));
@@ -909,6 +909,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       displayName_ = other.displayName_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       explanationSpec_ = other.explanationSpec_ != null ? other.explanationSpec_.Clone() : null;
+      disableExplanations_ = other.disableExplanations_;
       serviceAccount_ = other.serviceAccount_;
       disableContainerLogging_ = other.disableContainerLogging_;
       enableAccessLogging_ = other.enableAccessLogging_;
@@ -1116,6 +1117,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "disable_explanations" field.</summary>
+    public const int DisableExplanationsFieldNumber = 19;
+    private bool disableExplanations_;
+    /// <summary>
+    /// If true, deploy the model without explainable feature, regardless the
+    /// existence of
+    /// [Model.explanation_spec][google.cloud.aiplatform.v1.Model.explanation_spec]
+    /// or
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableExplanations {
+      get { return disableExplanations_; }
+      set {
+        disableExplanations_ = value;
+      }
+    }
+
     /// <summary>Field number for the "service_account" field.</summary>
     public const int ServiceAccountFieldNumber = 11;
     private string serviceAccount_ = "";
@@ -1244,6 +1264,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(ExplanationSpec, other.ExplanationSpec)) return false;
+      if (DisableExplanations != other.DisableExplanations) return false;
       if (ServiceAccount != other.ServiceAccount) return false;
       if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
@@ -1265,6 +1286,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (explanationSpec_ != null) hash ^= ExplanationSpec.GetHashCode();
+      if (DisableExplanations != false) hash ^= DisableExplanations.GetHashCode();
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
@@ -1340,6 +1362,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(ModelVersionId);
       }
+      if (DisableExplanations != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(DisableExplanations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1402,6 +1428,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(ModelVersionId);
       }
+      if (DisableExplanations != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(DisableExplanations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1438,6 +1468,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (explanationSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplanationSpec);
+      }
+      if (DisableExplanations != false) {
+        size += 2 + 1;
       }
       if (ServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
@@ -1486,6 +1519,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           ExplanationSpec = new global::Google.Cloud.AIPlatform.V1.ExplanationSpec();
         }
         ExplanationSpec.MergeFrom(other.ExplanationSpec);
+      }
+      if (other.DisableExplanations != false) {
+        DisableExplanations = other.DisableExplanations;
       }
       if (other.ServiceAccount.Length != 0) {
         ServiceAccount = other.ServiceAccount;
@@ -1606,6 +1642,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             ModelVersionId = input.ReadString();
             break;
           }
+          case 152: {
+            DisableExplanations = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1690,6 +1730,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 146: {
             ModelVersionId = input.ReadString();
+            break;
+          }
+          case 152: {
+            DisableExplanations = input.ReadBool();
             break;
           }
         }
