@@ -25,19 +25,15 @@ namespace Google.Cloud.Spanner.Data
     internal sealed class VolatileResourceManager : ISinglePhaseNotification, ISpannerTransaction, IDisposable
     {
         private readonly SpannerConnection _spannerConnection;
-        private readonly TimestampBound _timestampBound;
-        private readonly TransactionId _transactionId;
-        private readonly TimeSpan? _commitDelay;
         private Lazy<Task<SpannerTransaction>> _transaction;
+        private readonly AmbientTransactionOptions _ambientTransactionOptions;
         private bool _hasExecutedDml;
 
-        internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId, TimeSpan? commitDelay)
+        internal VolatileResourceManager(SpannerConnection spannerConnection, AmbientTransactionOptions options)
         {
             _spannerConnection = spannerConnection;
-            _timestampBound = timestampBound;
             _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransactionAsync, LazyThreadSafetyMode.ExecutionAndPublication);
-            _transactionId = transactionId;
-            _commitDelay = commitDelay;
+            _ambientTransactionOptions = options;
         }
 
         private SpannerTransaction SpannerTransaction => SpannerTransactionTask.Result;
@@ -54,13 +50,13 @@ namespace Google.Cloud.Spanner.Data
 
         private async Task<SpannerTransaction> CreateTransactionAsync()
         {
-            SpannerTransaction transaction = _timestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound).ConfigureAwait(false)
-                : _transactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionId)
+            SpannerTransaction transaction = _ambientTransactionOptions.TimestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_ambientTransactionOptions.TimestampBound).ConfigureAwait(false)
+                : _ambientTransactionOptions.TransactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_ambientTransactionOptions.TransactionId)
                 : await _spannerConnection.BeginTransactionAsync().ConfigureAwait(false);
 
-            if (_commitDelay is not null)
+            if (_ambientTransactionOptions.CommitDelay is not null)
             {
-                transaction.CommitDelay = _commitDelay;
+                transaction.CommitDelay = _ambientTransactionOptions.CommitDelay;
             }
             return transaction;
         }

@@ -28,8 +28,12 @@ public class AmbientTransactionOptionsTests
     }
 
     [Fact]
-    public void Default_Values() =>
+    public void Default_Values()
+    {
         Assert.Null(AmbientTransactionOptions.Default.CommitDelay);
+        Assert.Null(AmbientTransactionOptions.Default.TimestampBound);
+        Assert.Null(AmbientTransactionOptions.Default.TransactionId);
+    }
 
     public static TheoryData<TimeSpan?> ValidCommitDelayValues => SpannerTransactionTests.ValidCommitDelayValues;
 
@@ -46,5 +50,32 @@ public class AmbientTransactionOptionsTests
     [Theory, MemberData(nameof(InvalidCommitDelayValues))]
     public void WithCommitDelay_Invalid(TimeSpan? commitDelay) =>
         Assert.Throws<ArgumentOutOfRangeException>(() => AmbientTransactionOptions.Default.WithCommitDelay(commitDelay));
-    
+
+    [Fact]
+    public void ForTimestampBoundReadOnly_Default()
+    {
+        var options = AmbientTransactionOptions.ForTimestampBoundReadOnly();
+        Assert.Equal(TimestampBound.Strong, options.TimestampBound);
+    }
+
+    [Fact]
+    public void ForTimestampBoundReadOnly_Custom()
+    {
+        var timestampBound = TimestampBound.OfMinReadTimestamp(DateTimeOffset.MinValue.UtcDateTime);
+        var options = AmbientTransactionOptions.ForTimestampBoundReadOnly(timestampBound);
+        Assert.Equal(timestampBound, options.TimestampBound);
+    }
+
+    [Fact]
+    public void FromReadOnlyTransactionId_Null() =>
+        Assert.Throws<ArgumentNullException>(() => AmbientTransactionOptions.FromReadOnlyTransactionId(null));
+
+
+    [Fact]
+    public void FromReadOnlyTransactionId_NotNull()
+    {
+        var transactionId = new TransactionId("connection-string", "session", "id", TimestampBound.Strong);
+        var options = AmbientTransactionOptions.FromReadOnlyTransactionId(transactionId);
+        Assert.Equal(transactionId, options.TransactionId);
+    }
 }
