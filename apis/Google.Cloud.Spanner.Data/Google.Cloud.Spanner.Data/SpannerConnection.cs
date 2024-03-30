@@ -889,41 +889,18 @@ namespace Google.Cloud.Spanner.Data
         /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        public void OpenAsReadOnly(TimestampBound timestampBound = null)
-        {
-            // Note: This has to be checked on the current thread, which is why we don't just use Task.Run
-            // and delegate to OpenAsReadOnlyAsync
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, transactionId: null, commitDelay: null));
-        }
+        [Obsolete($"Use the {nameof(Open)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        public void OpenAsReadOnly(TimestampBound timestampBound = null) =>
+            Open(AmbientTransactionOptions.ForTimestampBoundReadOnly(timestampBound));
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
         /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
         /// </summary>
         /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
-        public void OpenAsReadOnly(TransactionId transactionId)
-        {
-            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, timestampBound: null, transactionId, commitDelay: null));
-        }
+        [Obsolete($"Use the {nameof(Open)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        public void OpenAsReadOnly(TransactionId transactionId) =>
+            Open(AmbientTransactionOptions.FromReadOnlyTransactionId(transactionId));
 
         /// <summary>
         /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
@@ -932,20 +909,9 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
-        {
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, transactionId: null, commitDelay: null);
-            return OpenAsyncImpl(transactionEnlister, cancellationToken);
-        }
+        [Obsolete($"Use the {nameof(OpenAsync)} that takes a {nameof(AmbientTransactionOptions)} parameter instead.")]
+        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default) =>
+            OpenAsync(AmbientTransactionOptions.ForTimestampBoundReadOnly(timestampBound), cancellationToken);
 
         /// <summary>
         /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
@@ -964,7 +930,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
 
-            Open(() => EnlistTransaction(transaction, timestampBound: null, transactionId: null, options.CommitDelay));
+            Open(() => EnlistTransaction(transaction, options));
         }
 
         /// <summary>
@@ -984,7 +950,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
 
-            return OpenAsyncImpl(() => EnlistTransaction(transaction, timestampBound: null, transactionId: null, options.CommitDelay), cancellationToken);
+            return OpenAsyncImpl(() => EnlistTransaction(transaction, options), cancellationToken);
         }
 
         /// <summary>
@@ -993,9 +959,9 @@ namespace Google.Cloud.Spanner.Data
         public bool EnlistInTransaction { get; set; } = true;
 
         /// <inheritdoc />
-        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, null, null, null);
+        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, AmbientTransactionOptions.Default);
 
-        private void EnlistTransaction(Transaction transaction, TimestampBound timestampBound, TransactionId transactionId, TimeSpan? commitDelay)
+        private void EnlistTransaction(Transaction transaction, AmbientTransactionOptions options)
         {
             if (!EnlistInTransaction)
             {
@@ -1005,7 +971,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("This connection is already enlisted to a transaction.");
             }
-            _volatileResourceManager = new VolatileResourceManager(this, timestampBound, transactionId, commitDelay);
+            _volatileResourceManager = new VolatileResourceManager(this, options);
             transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
 

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 
 namespace Google.Cloud.Spanner.Data;
@@ -25,7 +26,7 @@ public sealed class AmbientTransactionOptions
     /// Default options for an ambient transaction. Using these options will result in a read-write transaction
     /// with no <see cref="CommitDelay"/> value set.
     /// </summary>
-    public static AmbientTransactionOptions Default { get; } = new AmbientTransactionOptions(null);
+    public static AmbientTransactionOptions Default { get; } = new AmbientTransactionOptions(commitDelay: null, timestampBound: null, transactionId: null);
 
     /// <summary>
     /// The maximum amount of time the commit may be delayed server side for batching with other commits.
@@ -37,12 +38,56 @@ public sealed class AmbientTransactionOptions
     /// </summary>
     public TimeSpan? CommitDelay { get; }
 
-    private AmbientTransactionOptions(TimeSpan? commitDelay) =>
+    /// <summary>
+    /// Timestamp bound settings for the ambient transaction. May be null.
+    /// When set, the ambient transaction will be read-only.
+    /// At most, one of <see cref="TimestampBound"/> and <see cref="TransactionId"/> may be set.
+    /// If none of <see cref="TimestampBound"/> and <see cref="TransactionId"/> are set,
+    /// the ambient transaction will be a read-write transaction.
+    /// </summary>
+    public TimestampBound TimestampBound { get; }
+
+    /// <summary>
+    /// The transaction ID of an active read-only transaction to use for the ambient transaction. May be null.
+    /// At most, one of <see cref="TimestampBound"/> and <see cref="TransactionId"/> may be set.
+    /// If none of <see cref="TimestampBound"/> and <see cref="TransactionId"/> are set,
+    /// the ambient transaction will be a read-write transaction.
+    /// </summary>
+    public TransactionId TransactionId { get; }
+
+    private AmbientTransactionOptions(TimeSpan? commitDelay, TimestampBound timestampBound, TransactionId transactionId)
+    {
+        GaxPreconditions.CheckArgument(
+            timestampBound is null || transactionId is null,
+            nameof(timestampBound),
+            $"At most one of {nameof(timestampBound)} and {nameof(transactionId)} may be set.");
         CommitDelay = SpannerTransaction.CheckCommitDelayRange(commitDelay);
+        TimestampBound = timestampBound;
+        TransactionId = transactionId;
+    }
+
+    /// <summary>
+    /// Creates a new set of ambient transaction options with the given <paramref name="timestampBound"/> options.
+    /// </summary>
+    /// <param name="timestampBound">
+    /// The timestamp bound options to be used for the ambient transaction. May be null, in which case
+    /// <see cref="TimestampBound.Strong"/> will be used.
+    /// </param>
+    public static AmbientTransactionOptions ForTimestampBoundReadOnly(TimestampBound timestampBound = null) =>
+        new AmbientTransactionOptions(commitDelay: null, timestampBound ?? TimestampBound.Strong, transactionId: null);
+
+    /// <summary>
+    /// Creates a new set of ambient transaction options with the given <paramref name="transactionId"/>.
+    /// </summary>
+    /// <param name="transactionId">
+    /// The transaction ID to use for the ambient transaction. Must not be null.
+    /// </param>
+    public static AmbientTransactionOptions FromReadOnlyTransactionId(TransactionId transactionId) =>
+        new AmbientTransactionOptions(commitDelay: null, timestampBound: null, transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)));
 
     /// <summary>
     /// Returns a new set of options equal to these, except for the specified <paramref name="commitDelay"/>.
     /// </summary>
     public AmbientTransactionOptions WithCommitDelay(TimeSpan? commitDelay) =>
-        new AmbientTransactionOptions(commitDelay);
+        new AmbientTransactionOptions(commitDelay, TimestampBound, TransactionId);
 }
