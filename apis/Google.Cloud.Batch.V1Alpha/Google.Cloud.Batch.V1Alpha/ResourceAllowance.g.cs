@@ -154,6 +154,8 @@ namespace Google.Cloud.Batch.V1Alpha {
   #region Messages
   /// <summary>
   /// The Resource Allowance description for Cloud Batch.
+  /// Only one Resource Allowance is supported now under a specific location and
+  /// project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceAllowance : pb::IMessage<ResourceAllowance>
@@ -1189,10 +1191,13 @@ namespace Google.Cloud.Batch.V1Alpha {
         private double limit_;
         /// <summary>
         /// Required. Limit value of a UsageResourceAllowance within its one
-        /// duration. Default is 0. For example, you can set `limit` as 10000.0 with
-        /// duration of the current month by setting `calendar_period` field as
-        /// monthly. That means in your current month, 10000.0 is the cour hour
-        /// limitation that your resources are allowed to consume.
+        /// duration.
+        ///
+        /// Limit cannot be a negative value. Default is 0.
+        /// For example, you can set `limit` as 10000.0 with duration of the current
+        /// month by setting `calendar_period` field as monthly. That means in your
+        /// current month, 10000.0 is the core hour limitation that your resources
+        /// are allowed to consume.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
