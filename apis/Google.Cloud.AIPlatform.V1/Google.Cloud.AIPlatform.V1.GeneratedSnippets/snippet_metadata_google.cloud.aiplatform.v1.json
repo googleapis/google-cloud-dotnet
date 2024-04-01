@@ -24645,6 +24645,1199 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_sync",
+      "title": "CreateTuningJobRequestObject",
+      "description": "Snippet for CreateTuningJob",
+      "file": "GenAiTuningServiceClient.CreateTuningJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_async",
+      "title": "CreateTuningJobRequestObjectAsync",
+      "description": "Snippet for CreateTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CreateTuningJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_sync_flattened",
+      "title": "CreateTuningJob",
+      "description": "Snippet for CreateTuningJob",
+      "file": "GenAiTuningServiceClient.CreateTuningJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJob",
+            "name": "tuningJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_async_flattened",
+      "title": "CreateTuningJobAsync",
+      "description": "Snippet for CreateTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CreateTuningJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJob",
+            "name": "tuningJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_sync_flattened_resourceNames",
+      "title": "CreateTuningJobResourceNames",
+      "description": "Snippet for CreateTuningJob",
+      "file": "GenAiTuningServiceClient.CreateTuningJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJob",
+            "name": "tuningJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CreateTuningJob_async_flattened_resourceNames",
+      "title": "CreateTuningJobResourceNamesAsync",
+      "description": "Snippet for CreateTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CreateTuningJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CreateTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJob",
+            "name": "tuningJob"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CreateTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_sync",
+      "title": "GetTuningJobRequestObject",
+      "description": "Snippet for GetTuningJob",
+      "file": "GenAiTuningServiceClient.GetTuningJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_async",
+      "title": "GetTuningJobRequestObjectAsync",
+      "description": "Snippet for GetTuningJobAsync",
+      "file": "GenAiTuningServiceClient.GetTuningJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_sync_flattened",
+      "title": "GetTuningJob",
+      "description": "Snippet for GetTuningJob",
+      "file": "GenAiTuningServiceClient.GetTuningJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_async_flattened",
+      "title": "GetTuningJobAsync",
+      "description": "Snippet for GetTuningJobAsync",
+      "file": "GenAiTuningServiceClient.GetTuningJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_sync_flattened_resourceNames",
+      "title": "GetTuningJobResourceNames",
+      "description": "Snippet for GetTuningJob",
+      "file": "GenAiTuningServiceClient.GetTuningJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.TuningJob",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_GetTuningJob_async_flattened_resourceNames",
+      "title": "GetTuningJobResourceNamesAsync",
+      "description": "Snippet for GetTuningJobAsync",
+      "file": "GenAiTuningServiceClient.GetTuningJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.GetTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "GetTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.GetTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_sync",
+      "title": "ListTuningJobsRequestObject",
+      "description": "Snippet for ListTuningJobs",
+      "file": "GenAiTuningServiceClient.ListTuningJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListTuningJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_async",
+      "title": "ListTuningJobsRequestObjectAsync",
+      "description": "Snippet for ListTuningJobsAsync",
+      "file": "GenAiTuningServiceClient.ListTuningJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListTuningJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_sync_flattened",
+      "title": "ListTuningJobs",
+      "description": "Snippet for ListTuningJobs",
+      "file": "GenAiTuningServiceClient.ListTuningJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_async_flattened",
+      "title": "ListTuningJobsAsync",
+      "description": "Snippet for ListTuningJobsAsync",
+      "file": "GenAiTuningServiceClient.ListTuningJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_sync_flattened_resourceNames",
+      "title": "ListTuningJobsResourceNames",
+      "description": "Snippet for ListTuningJobs",
+      "file": "GenAiTuningServiceClient.ListTuningJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobs",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_ListTuningJobs_async_flattened_resourceNames",
+      "title": "ListTuningJobsResourceNamesAsync",
+      "description": "Snippet for ListTuningJobsAsync",
+      "file": "GenAiTuningServiceClient.ListTuningJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTuningJobsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.ListTuningJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListTuningJobsResponse, Google.Cloud.AIPlatform.V1.TuningJob>",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "ListTuningJobs",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.ListTuningJobs",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_sync",
+      "title": "CancelTuningJobRequestObject",
+      "description": "Snippet for CancelTuningJob",
+      "file": "GenAiTuningServiceClient.CancelTuningJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CancelTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_async",
+      "title": "CancelTuningJobRequestObjectAsync",
+      "description": "Snippet for CancelTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CancelTuningJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CancelTuningJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_sync_flattened",
+      "title": "CancelTuningJob",
+      "description": "Snippet for CancelTuningJob",
+      "file": "GenAiTuningServiceClient.CancelTuningJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_async_flattened",
+      "title": "CancelTuningJobAsync",
+      "description": "Snippet for CancelTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CancelTuningJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_sync_flattened_resourceNames",
+      "title": "CancelTuningJobResourceNames",
+      "description": "Snippet for CancelTuningJob",
+      "file": "GenAiTuningServiceClient.CancelTuningJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJob",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_GenAiTuningService_CancelTuningJob_async_flattened_resourceNames",
+      "title": "CancelTuningJobResourceNamesAsync",
+      "description": "Snippet for CancelTuningJobAsync",
+      "file": "GenAiTuningServiceClient.CancelTuningJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelTuningJobAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient.CancelTuningJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.TuningJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GenAiTuningServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.GenAiTuningServiceClient"
+        },
+        "method": {
+          "shortName": "CancelTuningJob",
+          "fullName": "google.cloud.aiplatform.v1.GenAiTuningService.CancelTuningJob",
+          "service": {
+            "shortName": "GenAiTuningService",
+            "fullName": "google.cloud.aiplatform.v1.GenAiTuningService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_IndexEndpointService_CreateIndexEndpoint_sync",
       "title": "CreateIndexEndpointRequestObject",
       "description": "Snippet for CreateIndexEndpoint",

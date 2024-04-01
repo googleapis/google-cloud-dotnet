@@ -557,6 +557,39 @@
         }
       }
     },
+    "GenAiTuningService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenAiTuningServiceClient",
+          "rpcs": {
+            "CancelTuningJob": {
+              "methods": [
+                "CancelTuningJob",
+                "CancelTuningJobAsync"
+              ]
+            },
+            "CreateTuningJob": {
+              "methods": [
+                "CreateTuningJob",
+                "CreateTuningJobAsync"
+              ]
+            },
+            "GetTuningJob": {
+              "methods": [
+                "GetTuningJob",
+                "GetTuningJobAsync"
+              ]
+            },
+            "ListTuningJobs": {
+              "methods": [
+                "ListTuningJobs",
+                "ListTuningJobsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "IndexEndpointService": {
       "clients": {
         "grpc": {
