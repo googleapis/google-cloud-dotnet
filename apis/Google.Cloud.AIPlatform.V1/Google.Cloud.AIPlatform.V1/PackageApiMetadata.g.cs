@@ -128,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return FeaturestoreMonitoringReflection.Descriptor;
             yield return FeaturestoreOnlineServiceReflection.Descriptor;
             yield return FeaturestoreServiceReflection.Descriptor;
+            yield return GenaiTuningServiceReflection.Descriptor;
             yield return HyperparameterTuningJobReflection.Descriptor;
             yield return IndexReflection.Descriptor;
             yield return IndexEndpointReflection.Descriptor;
@@ -185,6 +186,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return TensorboardTimeSeriesReflection.Descriptor;
             yield return ToolReflection.Descriptor;
             yield return TrainingPipelineReflection.Descriptor;
+            yield return TuningJobReflection.Descriptor;
             yield return TypesReflection.Descriptor;
             yield return UnmanagedContainerModelReflection.Descriptor;
             yield return UserActionReferenceReflection.Descriptor;
