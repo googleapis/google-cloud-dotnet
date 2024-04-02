@@ -3061,7 +3061,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>
     /// Optional. This field allows this CA to be disabled even if it's being
     /// depended on by another resource. However, doing so may result in unintended
-    /// and unrecoverable effects on any dependent resource(s) since the CA will
+    /// and unrecoverable effects on any dependent resources since the CA will
     /// no longer be able to issue certificates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5112,9 +5112,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int IgnoreDependentResourcesFieldNumber = 6;
     private bool ignoreDependentResources_;
     /// <summary>
-    /// Optional. This field allows this ca to be deleted even if it's being
+    /// Optional. This field allows this CA to be deleted even if it's being
     /// depended on by another resource. However, doing so may result in unintended
-    /// and unrecoverable effects on any dependent resource(s) since the CA will
+    /// and unrecoverable effects on any dependent resources since the CA will
     /// no longer be able to issue certificates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6415,7 +6415,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>
     /// Optional. This field allows this pool to be deleted even if it's being
     /// depended on by another resource. However, doing so may result in unintended
-    /// and unrecoverable effects on any dependent resource(s) since the pool will
+    /// and unrecoverable effects on any dependent resources since the pool will
     /// no longer be able to issue certificates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6914,7 +6914,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain> caCerts_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain>();
     /// <summary>
-    /// The PEM encoded CA certificate chains of all Certificate Authorities in
+    /// The PEM encoded CA certificate chains of all certificate authorities in
     /// this [CaPool][google.cloud.security.privateca.v1.CaPool] in the ENABLED,
     /// DISABLED, or STAGED states.
     /// </summary>
