@@ -3281,8 +3281,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3293,8 +3292,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3305,8 +3303,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3317,8 +3314,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -3340,8 +3336,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -3363,8 +3358,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -3382,8 +3376,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -3405,8 +3398,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -3428,8 +3420,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent database.
@@ -4735,8 +4726,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4750,8 +4740,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Creates a backup schedule on a database.
         /// At most two backup schedules can be configured on a database, one daily
-        /// backup schedule with retention up to 7 days and one weekly backup schedule
-        /// with retention up to 14 weeks.
+        /// backup schedule and one weekly backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

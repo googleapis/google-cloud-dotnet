@@ -631,8 +631,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Creates a backup schedule on a database.
       /// At most two backup schedules can be configured on a database, one daily
-      /// backup schedule with retention up to 7 days and one weekly backup schedule
-      /// with retention up to 14 weeks.
+      /// backup schedule and one weekly backup schedule.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1815,8 +1814,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Creates a backup schedule on a database.
       /// At most two backup schedules can be configured on a database, one daily
-      /// backup schedule with retention up to 7 days and one weekly backup schedule
-      /// with retention up to 14 weeks.
+      /// backup schedule and one weekly backup schedule.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1831,8 +1829,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Creates a backup schedule on a database.
       /// At most two backup schedules can be configured on a database, one daily
-      /// backup schedule with retention up to 7 days and one weekly backup schedule
-      /// with retention up to 14 weeks.
+      /// backup schedule and one weekly backup schedule.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1845,8 +1842,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Creates a backup schedule on a database.
       /// At most two backup schedules can be configured on a database, one daily
-      /// backup schedule with retention up to 7 days and one weekly backup schedule
-      /// with retention up to 14 weeks.
+      /// backup schedule and one weekly backup schedule.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1861,8 +1857,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <summary>
       /// Creates a backup schedule on a database.
       /// At most two backup schedules can be configured on a database, one daily
-      /// backup schedule with retention up to 7 days and one weekly backup schedule
-      /// with retention up to 14 weeks.
+      /// backup schedule and one weekly backup schedule.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
