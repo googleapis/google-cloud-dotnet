@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Grpc.Auth;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,60 @@ namespace Google.Cloud.PubSub.V1.Tests;
 
 public class ServiceCollectionExtensionsTest
 {
+    [Fact]
+    public void AddPublisherServiceApiClient_WithEmulationFromConfigFromContainer()
+    {
+        // Arrange.
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+        serviceCollection.AddSingleton(new Config { Emulator = EmulatorDetection.EmulatorOrProduction });
+
+        // Act.
+        serviceCollection.AddPublisherServiceApiClient((provider, builder) => builder.EmulatorDetection = provider.GetRequiredService<Config>().Emulator);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<PublisherServiceApiClient>();
+
+        // Assert.
+        Assert.NotNull(client);
+    }
+
+    [Fact]
+    public void AdSubscriberServiceApiClient_WithEmulationFromConfigFromContainer()
+    {
+        // Arrange.
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+        serviceCollection.AddSingleton(new Config { Emulator = EmulatorDetection.EmulatorOrProduction });
+
+        // Act.
+        serviceCollection.AddSubscriberServiceApiClient((provider, builder) => builder.EmulatorDetection = provider.GetRequiredService<Config>().Emulator);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<SubscriberServiceApiClient>();
+
+        // Assert.
+        Assert.NotNull(client);
+    }
+
+    [Fact]
+    public void AdSchemaServiceClient_WithConfigFromContainer()
+    {
+        // Arrange.
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+        serviceCollection.AddSingleton(new Config { Emulator = EmulatorDetection.EmulatorOrProduction });
+
+        // Act.
+        serviceCollection.AddSchemaServiceClient((provider, builder) => _ = provider.GetRequiredService<Config>().Emulator);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<SchemaServiceClient>();
+
+        // Assert.
+        Assert.NotNull(client);
+    }
+
     [Fact]
     public void AddPublisherClient_WithTopicName()
     {
@@ -203,5 +258,10 @@ public class ServiceCollectionExtensionsTest
     {
         public Task<string> GetAccessTokenForRequestAsync(string authUri = null, CancellationToken cancellationToken = default) =>
             throw new NotImplementedException();
+    }
+
+    private class Config
+    {
+        public EmulatorDetection Emulator { get; set; }
     }
 }

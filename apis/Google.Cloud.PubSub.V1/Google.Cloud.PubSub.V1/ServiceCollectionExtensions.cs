@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -128,4 +128,56 @@ public static partial class ServiceCollectionExtensions
         GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
         return services.AddSubscriberClient(new Action<SubscriberClientBuilder>(builder => builder.SubscriptionName = subscriptionName));
     }
+
+    /// <summary>
+    /// Adds a singleton <see cref="PublisherServiceApiClient"/> to <paramref name="services"/>.
+    /// </summary>
+    /// <param name="services">
+    /// The service collection to add the client to. The services are used to configure the client when requested.
+    /// </param>
+    /// <param name="action">
+    /// An optional action to invoke on the client builder. This is invoked before services from
+    /// <paramref name="services"/> are used.
+    /// </param>
+    public static IServiceCollection AddPublisherServiceApiClient(this IServiceCollection services, Action<IServiceProvider, PublisherServiceApiClientBuilder> action = null) =>
+        services.AddSingleton(provider =>
+        {
+            PublisherServiceApiClientBuilder builder = new PublisherServiceApiClientBuilder();
+            action?.Invoke(provider, builder);
+            return builder.Build(provider);
+        });
+
+    /// <summary>Adds a singleton <see cref="SchemaServiceClient"/> to <paramref name="services"/>.</summary>
+    /// <param name="services">
+    /// The service collection to add the client to. The services are used to configure the client when requested.
+    /// </param>
+    /// <param name="action">
+    /// An optional action to invoke on the client builder. This is invoked before services from
+    /// <paramref name="services"/> are used.
+    /// </param>
+    public static IServiceCollection AddSchemaServiceClient(this IServiceCollection services, Action<IServiceProvider, SchemaServiceClientBuilder> action = null) =>
+        services.AddSingleton(provider =>
+        {
+            SchemaServiceClientBuilder builder = new SchemaServiceClientBuilder();
+            action?.Invoke(provider, builder);
+            return builder.Build(provider);
+        });
+
+    /// <summary>
+    /// Adds a singleton <see cref="SubscriberServiceApiClient"/> to <paramref name="services"/>.
+    /// </summary>
+    /// <param name="services">
+    /// The service collection to add the client to. The services are used to configure the client when requested.
+    /// </param>
+    /// <param name="action">
+    /// An optional action to invoke on the client builder. This is invoked before services from
+    /// <paramref name="services"/> are used.
+    /// </param>
+    public static IServiceCollection AddSubscriberServiceApiClient(this IServiceCollection services, Action<IServiceProvider, SubscriberServiceApiClientBuilder> action = null) =>
+        services.AddSingleton(provider =>
+        {
+            SubscriberServiceApiClientBuilder builder = new SubscriberServiceApiClientBuilder();
+            action?.Invoke(provider, builder);
+            return builder.Build(provider);
+        });
 }
