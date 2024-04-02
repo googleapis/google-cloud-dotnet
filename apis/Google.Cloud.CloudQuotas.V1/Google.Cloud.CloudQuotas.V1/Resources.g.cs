@@ -86,16 +86,18 @@ namespace Google.Cloud.CloudQuotas.V1 {
             "cy52MS5EaW1lbnNpb25zSW5mby5EaW1lbnNpb25zRW50cnkSOAoHZGV0YWls",
             "cxgCIAEoCzInLmdvb2dsZS5hcGkuY2xvdWRxdW90YXMudjEuUXVvdGFEZXRh",
             "aWxzEhwKFGFwcGxpY2FibGVfbG9jYXRpb25zGAMgAygJGjEKD0RpbWVuc2lv",
-            "bnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIh0KDFF1",
-            "b3RhRGV0YWlscxINCgV2YWx1ZRgBIAEoAyp+ChBRdW90YVNhZmV0eUNoZWNr",
-            "EiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh4KGlFVT1RB",
-            "X0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiUVVPVEFfREVDUkVBU0VfUEVS",
-            "Q0VOVEFHRV9UT09fSElHSBACQtEBCh1jb20uZ29vZ2xlLmFwaS5jbG91ZHF1",
-            "b3Rhcy52MUIOUmVzb3VyY2VzUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9jbG91ZHF1b3Rhcy9hcGl2MS9jbG91ZHF1b3Rhc3BiO2Nsb3VkcXVvdGFz",
-            "cGKqAhtHb29nbGUuQ2xvdWQuQ2xvdWRRdW90YXMuVjHKAhtHb29nbGVcQ2xv",
-            "dWRcQ2xvdWRRdW90YXNcVjHqAh5Hb29nbGU6OkNsb3VkOjpDbG91ZFF1b3Rh",
-            "czo6VjFiBnByb3RvMw=="));
+            "bnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlsKDFF1",
+            "b3RhRGV0YWlscxINCgV2YWx1ZRgBIAEoAxI8Cgxyb2xsb3V0X2luZm8YAyAB",
+            "KAsyJi5nb29nbGUuYXBpLmNsb3VkcXVvdGFzLnYxLlJvbGxvdXRJbmZvIiYK",
+            "C1JvbGxvdXRJbmZvEhcKD29uZ29pbmdfcm9sbG91dBgBIAEoCCp+ChBRdW90",
+            "YVNhZmV0eUNoZWNrEiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklF",
+            "RBAAEh4KGlFVT1RBX0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiUVVPVEFf",
+            "REVDUkVBU0VfUEVSQ0VOVEFHRV9UT09fSElHSBACQtEBCh1jb20uZ29vZ2xl",
+            "LmFwaS5jbG91ZHF1b3Rhcy52MUIOUmVzb3VyY2VzUHJvdG9QAVpBY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9jbG91ZHF1b3Rhcy9hcGl2MS9jbG91ZHF1b3Rhc3Bi",
+            "O2Nsb3VkcXVvdGFzcGKqAhtHb29nbGUuQ2xvdWQuQ2xvdWRRdW90YXMuVjHK",
+            "AhtHb29nbGVcQ2xvdWRcQ2xvdWRRdW90YXNcVjHqAh5Hb29nbGU6OkNsb3Vk",
+            "OjpDbG91ZFF1b3Rhczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.CloudQuotas.V1.QuotaSafetyCheck), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -104,7 +106,8 @@ namespace Google.Cloud.CloudQuotas.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaPreference), global::Google.Cloud.CloudQuotas.V1.QuotaPreference.Parser, new[]{ "Name", "Dimensions", "QuotaConfig", "Etag", "CreateTime", "UpdateTime", "Service", "QuotaId", "Reconciling", "Justification", "ContactEmail" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaConfig), global::Google.Cloud.CloudQuotas.V1.QuotaConfig.Parser, new[]{ "PreferredValue", "StateDetail", "GrantedValue", "TraceId", "Annotations", "RequestOrigin" }, null, new[]{ typeof(global::Google.Cloud.CloudQuotas.V1.QuotaConfig.Types.Origin) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.DimensionsInfo), global::Google.Cloud.CloudQuotas.V1.DimensionsInfo.Parser, new[]{ "Dimensions", "Details", "ApplicableLocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaDetails), global::Google.Cloud.CloudQuotas.V1.QuotaDetails.Parser, new[]{ "Value" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.QuotaDetails), global::Google.Cloud.CloudQuotas.V1.QuotaDetails.Parser, new[]{ "Value", "RolloutInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudQuotas.V1.RolloutInfo), global::Google.Cloud.CloudQuotas.V1.RolloutInfo.Parser, new[]{ "OngoingRollout" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2612,6 +2615,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaDetails(QuotaDetails other) : this() {
       value_ = other.value_;
+      rolloutInfo_ = other.rolloutInfo_ != null ? other.rolloutInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2636,6 +2640,23 @@ namespace Google.Cloud.CloudQuotas.V1 {
       }
     }
 
+    /// <summary>Field number for the "rollout_info" field.</summary>
+    public const int RolloutInfoFieldNumber = 3;
+    private global::Google.Cloud.CloudQuotas.V1.RolloutInfo rolloutInfo_;
+    /// <summary>
+    /// Rollout information of this quota.
+    /// This field is present only if the effective limit will change due to the
+    /// ongoing rollout of the service config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudQuotas.V1.RolloutInfo RolloutInfo {
+      get { return rolloutInfo_; }
+      set {
+        rolloutInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2652,6 +2673,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
         return true;
       }
       if (Value != other.Value) return false;
+      if (!object.Equals(RolloutInfo, other.RolloutInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2660,6 +2682,7 @@ namespace Google.Cloud.CloudQuotas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Value != 0L) hash ^= Value.GetHashCode();
+      if (rolloutInfo_ != null) hash ^= RolloutInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2682,6 +2705,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
         output.WriteRawTag(8);
         output.WriteInt64(Value);
       }
+      if (rolloutInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RolloutInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2696,6 +2723,10 @@ namespace Google.Cloud.CloudQuotas.V1 {
         output.WriteRawTag(8);
         output.WriteInt64(Value);
       }
+      if (rolloutInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RolloutInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2708,6 +2739,9 @@ namespace Google.Cloud.CloudQuotas.V1 {
       int size = 0;
       if (Value != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+      }
+      if (rolloutInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RolloutInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2723,6 +2757,12 @@ namespace Google.Cloud.CloudQuotas.V1 {
       }
       if (other.Value != 0L) {
         Value = other.Value;
+      }
+      if (other.rolloutInfo_ != null) {
+        if (rolloutInfo_ == null) {
+          RolloutInfo = new global::Google.Cloud.CloudQuotas.V1.RolloutInfo();
+        }
+        RolloutInfo.MergeFrom(other.RolloutInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2743,6 +2783,13 @@ namespace Google.Cloud.CloudQuotas.V1 {
             Value = input.ReadInt64();
             break;
           }
+          case 26: {
+            if (rolloutInfo_ == null) {
+              RolloutInfo = new global::Google.Cloud.CloudQuotas.V1.RolloutInfo();
+            }
+            input.ReadMessage(RolloutInfo);
+            break;
+          }
         }
       }
     #endif
@@ -2760,6 +2807,209 @@ namespace Google.Cloud.CloudQuotas.V1 {
             break;
           case 8: {
             Value = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            if (rolloutInfo_ == null) {
+              RolloutInfo = new global::Google.Cloud.CloudQuotas.V1.RolloutInfo();
+            }
+            input.ReadMessage(RolloutInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// [Output only] Rollout information of a quota.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RolloutInfo : pb::IMessage<RolloutInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RolloutInfo> _parser = new pb::MessageParser<RolloutInfo>(() => new RolloutInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RolloutInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudQuotas.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutInfo(RolloutInfo other) : this() {
+      ongoingRollout_ = other.ongoingRollout_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutInfo Clone() {
+      return new RolloutInfo(this);
+    }
+
+    /// <summary>Field number for the "ongoing_rollout" field.</summary>
+    public const int OngoingRolloutFieldNumber = 1;
+    private bool ongoingRollout_;
+    /// <summary>
+    /// Whether there is an ongoing rollout for a quota or not.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OngoingRollout {
+      get { return ongoingRollout_; }
+      set {
+        ongoingRollout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RolloutInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RolloutInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OngoingRollout != other.OngoingRollout) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (OngoingRollout != false) hash ^= OngoingRollout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (OngoingRollout != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(OngoingRollout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OngoingRollout != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(OngoingRollout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (OngoingRollout != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RolloutInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.OngoingRollout != false) {
+        OngoingRollout = other.OngoingRollout;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            OngoingRollout = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            OngoingRollout = input.ReadBool();
             break;
           }
         }
