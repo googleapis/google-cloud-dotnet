@@ -130,17 +130,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "bnN0YW5jZS52MS5JbnN0YW5jZUID4EECEjMKCmZpZWxkX21hc2sYAiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiTgoVRGVsZXRlSW5z",
             "dGFuY2VSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5n",
-            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZSLlAQoWQ3JlYXRlSW5zdGFuY2VNZXRh",
+            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZSK/AgoWQ3JlYXRlSW5zdGFuY2VNZXRh",
             "ZGF0YRI8CghpbnN0YW5jZRgBIAEoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWlu",
             "Lmluc3RhbmNlLnYxLkluc3RhbmNlEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2NhbmNlbF90aW1lGAMgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi5QEKFlVwZGF0ZUluc3Rh",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASWAobZXhwZWN0ZWRfZnVs",
+            "ZmlsbG1lbnRfcGVyaW9kGAUgASgOMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "aW5zdGFuY2UudjEuRnVsZmlsbG1lbnRQZXJpb2QivwIKFlVwZGF0ZUluc3Rh",
             "bmNlTWV0YWRhdGESPAoIaW5zdGFuY2UYASABKAsyKi5nb29nbGUuc3Bhbm5l",
             "ci5hZG1pbi5pbnN0YW5jZS52MS5JbnN0YW5jZRIuCgpzdGFydF90aW1lGAIg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtjYW5jZWxfdGlt",
             "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIuEBChxDcmVh",
+            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKG2V4cGVj",
+            "dGVkX2Z1bGZpbGxtZW50X3BlcmlvZBgFIAEoDjIzLmdvb2dsZS5zcGFubmVy",
+            "LmFkbWluLmluc3RhbmNlLnYxLkZ1bGZpbGxtZW50UGVyaW9kIuEBChxDcmVh",
             "dGVJbnN0YW5jZUNvbmZpZ01ldGFkYXRhEkkKD2luc3RhbmNlX2NvbmZpZxgB",
             "IAEoCzIwLmdvb2dsZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxLkluc3Rh",
             "bmNlQ29uZmlnEkUKCHByb2dyZXNzGAIgASgLMjMuZ29vZ2xlLnNwYW5uZXIu",
@@ -343,8 +347,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser, new[]{ "Instance", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime", "ExpectedFulfillmentPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceMetadata.Parser, new[]{ "Instance", "StartTime", "CancelTime", "EndTime", "ExpectedFulfillmentPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceConfigMetadata.Parser, new[]{ "InstanceConfig", "Progress", "CancelTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceConfigMetadata.Parser, new[]{ "InstanceConfig", "Progress", "CancelTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition), global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Parser, new[]{ "Name", "Config", "DisplayName", "NodeCount", "ProcessingUnits", "State", "CreateTime", "UpdateTime", "ReferencingDatabases", "ReferencingBackups", "Etag" }, new[]{ "ComputeCapacity" }, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.InstancePartition.Types.State) }, null, null),
@@ -6893,6 +6897,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      expectedFulfillmentPeriod_ = other.expectedFulfillmentPeriod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6966,6 +6971,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "expected_fulfillment_period" field.</summary>
+    public const int ExpectedFulfillmentPeriodFieldNumber = 5;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod expectedFulfillmentPeriod_ = global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified;
+    /// <summary>
+    /// The expected fulfillment period of this create operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod ExpectedFulfillmentPeriod {
+      get { return expectedFulfillmentPeriod_; }
+      set {
+        expectedFulfillmentPeriod_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6985,6 +7005,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CancelTime, other.CancelTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ExpectedFulfillmentPeriod != other.ExpectedFulfillmentPeriod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6996,6 +7017,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) hash ^= ExpectedFulfillmentPeriod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7030,6 +7052,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7056,6 +7082,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7077,6 +7107,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedFulfillmentPeriod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7113,6 +7146,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        ExpectedFulfillmentPeriod = other.ExpectedFulfillmentPeriod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7157,6 +7193,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -7198,6 +7238,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
             break;
           }
         }
@@ -7250,6 +7294,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       cancelTime_ = other.cancelTime_ != null ? other.cancelTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      expectedFulfillmentPeriod_ = other.expectedFulfillmentPeriod_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7323,6 +7368,21 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
     }
 
+    /// <summary>Field number for the "expected_fulfillment_period" field.</summary>
+    public const int ExpectedFulfillmentPeriodFieldNumber = 5;
+    private global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod expectedFulfillmentPeriod_ = global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified;
+    /// <summary>
+    /// The expected fulfillment period of this update operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod ExpectedFulfillmentPeriod {
+      get { return expectedFulfillmentPeriod_; }
+      set {
+        expectedFulfillmentPeriod_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7342,6 +7402,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CancelTime, other.CancelTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (ExpectedFulfillmentPeriod != other.ExpectedFulfillmentPeriod) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7353,6 +7414,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (cancelTime_ != null) hash ^= CancelTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) hash ^= ExpectedFulfillmentPeriod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7387,6 +7449,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7413,6 +7479,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(EndTime);
       }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ExpectedFulfillmentPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7434,6 +7504,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExpectedFulfillmentPeriod);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7470,6 +7543,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.ExpectedFulfillmentPeriod != global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod.Unspecified) {
+        ExpectedFulfillmentPeriod = other.ExpectedFulfillmentPeriod;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7514,6 +7590,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -7555,6 +7635,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 40: {
+            ExpectedFulfillmentPeriod = (global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod) input.ReadEnum();
             break;
           }
         }
