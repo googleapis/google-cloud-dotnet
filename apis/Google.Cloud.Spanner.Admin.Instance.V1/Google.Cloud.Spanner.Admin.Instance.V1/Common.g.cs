@@ -29,22 +29,48 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
             "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIosBChFPcGVyYXRpb25Qcm9ncmVz",
             "cxIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFEi4KCnN0YXJ0X3RpbWUYAiAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEL9AQokY29tLmdvb2ds",
-            "ZS5zcGFubmVyLmFkbWluLmluc3RhbmNlLnYxQgtDb21tb25Qcm90b1ABWkZj",
-            "bG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYWRtaW4vaW5zdGFuY2UvYXBp",
-            "djEvaW5zdGFuY2VwYjtpbnN0YW5jZXBiqgImR29vZ2xlLkNsb3VkLlNwYW5u",
-            "ZXIuQWRtaW4uSW5zdGFuY2UuVjHKAiZHb29nbGVcQ2xvdWRcU3Bhbm5lclxB",
-            "ZG1pblxJbnN0YW5jZVxWMeoCK0dvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OkFk",
-            "bWluOjpJbnN0YW5jZTo6VjFiBnByb3RvMw=="));
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCp3ChFGdWxmaWxsbWVu",
+            "dFBlcmlvZBIiCh5GVUxGSUxMTUVOVF9QRVJJT0RfVU5TUEVDSUZJRUQQABId",
+            "ChlGVUxGSUxMTUVOVF9QRVJJT0RfTk9STUFMEAESHwobRlVMRklMTE1FTlRf",
+            "UEVSSU9EX0VYVEVOREVEEAJC/QEKJGNvbS5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5pbnN0YW5jZS52MUILQ29tbW9uUHJvdG9QAVpGY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9zcGFubmVyL2FkbWluL2luc3RhbmNlL2FwaXYxL2luc3RhbmNlcGI7",
+            "aW5zdGFuY2VwYqoCJkdvb2dsZS5DbG91ZC5TcGFubmVyLkFkbWluLkluc3Rh",
+            "bmNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJcQWRtaW5cSW5zdGFuY2Vc",
+            "VjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpBZG1pbjo6SW5zdGFuY2U6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.FulfillmentPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Instance.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Indicates the expected fulfillment period of an operation.
+  /// </summary>
+  public enum FulfillmentPeriod {
+    /// <summary>
+    /// Not specified.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Normal fulfillment period. The operation is expected to complete within
+    /// minutes.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_NORMAL")] Normal = 1,
+    /// <summary>
+    /// Extended fulfillment period. It can take up to an hour for the operation
+    /// to complete.
+    /// </summary>
+    [pbr::OriginalName("FULFILLMENT_PERIOD_EXTENDED")] Extended = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Encapsulates progress related information for a Cloud Spanner long
