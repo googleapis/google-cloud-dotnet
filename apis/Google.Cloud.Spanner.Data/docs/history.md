@@ -1,5 +1,32 @@
 # Version history
 
+## Version 5.0.0-beta02, released 2024-04-04
+
+### New features
+
+- Ambient transactions support commit delays ([commit f4b4208](https://github.com/googleapis/google-cloud-dotnet/commit/f4b4208eb3d9b1ef9ce1c984d57e920c7ce0b5f1))
+- Implicit transactions support commit delay ([commit af15aaf](https://github.com/googleapis/google-cloud-dotnet/commit/af15aafce40ac46d20256cec0b47ca965c51a6e2))
+- Explicit transactions support commit delays ([commit 4934cfd](https://github.com/googleapis/google-cloud-dotnet/commit/4934cfd23e0d02376a1950bd825f72e1b388fc20))
+- Adding `EXPECTED_FULFILLMENT_PERIOD` to the indicate instance creation times (with `FULFILLMENT_PERIOD_NORMAL` or `FULFILLMENT_PERIOD_EXTENDED` ENUM) with the extended instance creation time triggered by On-Demand Capacity Feature ([commit 20bb7e7](https://github.com/googleapis/google-cloud-dotnet/commit/20bb7e736ffbcff1d9eb4f77cc5bea000d295fdc))
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- SpannerCommand supports directed reads ([commit dfeb2c0](https://github.com/googleapis/google-cloud-dotnet/commit/dfeb2c0de7889679320ffa71ef99b114511a7fbb))
+- SpannerConnection supports directed reads ([commit d7620e5](https://github.com/googleapis/google-cloud-dotnet/commit/d7620e524a3173904e4bb298615b16c2f7d13d8a))
+- PooledSession supports directed reads ([commit e26c8aa](https://github.com/googleapis/google-cloud-dotnet/commit/e26c8aab85cac8ab3bd1d9c9e286b706a43a2ec4))
+- Add PG.OID support ([commit 43818f3](https://github.com/googleapis/google-cloud-dotnet/commit/43818f3ccb9943ec83d84f3c300505cd58073532))
+- Update TransactionOptions to include new option exclude_txn_from_change_streams ([commit 89764a0](https://github.com/googleapis/google-cloud-dotnet/commit/89764a08f8fe1133bee9f89ef6fd02b8d5ce8f1d))
+- Add field for multiplexed session in spanner.proto ([commit 4bdb639](https://github.com/googleapis/google-cloud-dotnet/commit/4bdb639fe97f720a42f55305e40f6c355f109914))
+
+### Documentation improvements
+
+- Fix typo ([commit ce1be02](https://github.com/googleapis/google-cloud-dotnet/commit/ce1be0278bed346a12533f0f00c85588f3454136))
+- Update comments ([commit 4bdb639](https://github.com/googleapis/google-cloud-dotnet/commit/4bdb639fe97f720a42f55305e40f6c355f109914))
+
+### Other changes
+
+- Deprecate ambient transaction creation overloads ([commit 50f5f65](https://github.com/googleapis/google-cloud-dotnet/commit/50f5f654eb122e06fc0e0c25fcd089c2bbfac681))
+
+(This isn't a breaking change unless code is compiled with warnings as errors, but we do expect to remove these methods entirely in v6.0 of this library.)
+
 ## Version 5.0.0-beta01, released 2024-02-09
 
 ### Bug fixes
