@@ -288,7 +288,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
         /// Must be of the form "organizations/{organization}/locations/{location}"
-        /// or "projects/{project}/locations/{location}"
+        /// or "projects/{project}/locations/{location}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -314,7 +314,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
         /// Must be of the form "organizations/{organization}/locations/{location}"
-        /// or "projects/{project}/locations/{location}"
+        /// or "projects/{project}/locations/{location}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -340,7 +340,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
         /// Must be of the form "organizations/{organization}/locations/{location}"
-        /// or "projects/{project}/locations/{location}"
+        /// or "projects/{project}/locations/{location}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -366,7 +366,7 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="parent">
         /// Required. The parent, which owns this collection of notifications.
         /// Must be of the form "organizations/{organization}/locations/{location}"
-        /// or "projects/{project}/locations/{location}"
+        /// or "projects/{project}/locations/{location}".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -542,7 +542,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -558,7 +559,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -574,7 +576,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -587,7 +590,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -603,7 +607,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -619,7 +624,8 @@ namespace Google.Cloud.AdvisoryNotifications.V1
         /// <param name="name">
         /// Required. The resource name of the settings to retrieve.
         /// Format:
-        /// organizations/{organization}/locations/{location}/settings.
+        /// organizations/{organization}/locations/{location}/settings or
+        /// projects/{projects}/locations/{location}/settings.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
