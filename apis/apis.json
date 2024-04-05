@@ -604,6 +604,30 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.BackupDR.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Backup and DR Service",
+      "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr",
+      "description": "Recommended Google client library to access the Backup and DR service, which is a powerful, centralized, cloud-first backup and disaster recovery solution for cloud-based and hybrid workloads.",
+      "tags": [
+        "backup",
+        "disaster-recovery"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.2.0",
+        "Google.Cloud.Location": "2.2.0",
+        "Google.LongRunning": "3.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/backupdr/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "backupdr",
+      "serviceConfigFile": "backupdr_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.BareMetalSolution.V2",
       "version": "1.5.0",
       "type": "grpc",
