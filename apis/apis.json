@@ -60,6 +60,20 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Apps.Card.V1",
+      "version": "1.0.0-beta00",
+      "type": "other",
+      "description": "Types for Apps APIs using Cards.",
+      "tags": [
+        "gsuite"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "default"
+      },
+      "generator": "proto",
+      "protoPath": "google/apps/card/v1"
+    },
+    {
       "id": "Google.Apps.Events.Subscriptions.V1",
       "version": "1.0.0-beta02",
       "type": "grpc",
