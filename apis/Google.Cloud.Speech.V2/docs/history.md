@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0, released 2024-04-05
+
+### New features
+
+- Add `translation_config` in `RecognitionConfig` message ([commit 6808e61](https://github.com/googleapis/google-cloud-dotnet/commit/6808e61fbaf0b4230fb367a818158ca2f0355d4f))
+- Promotion from beta to General Availability
+
 ## Version 1.0.0-beta09, released 2024-03-26
 
 ### New features
