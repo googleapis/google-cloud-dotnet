@@ -26,13 +26,13 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class ShowLaggingCommand : CommandBase
     {
-        public ShowLaggingCommand() : base("show-lagging", "Shows pre-release packages where a GA should be considered")
+        public ShowLaggingCommand() : base("show-lagging", "Shows pre-release packages where a GA should be considered, and unreleased packages")
         {
         }
 
         protected override int ExecuteImpl(string[] args)
         {
-            Console.WriteLine($"Lagging packages (package ID, current version, date range of current version prerelease series):");
+            Console.WriteLine("Lagging packages (package ID, current version, date range of current version prerelease series):");
             var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
             using (var repo = new Repository(root))
@@ -42,6 +42,12 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     MaybeShowLagging(allTags, api);
                 }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Unreleased (at current minor) packages:");
+            foreach (var api in catalog.Apis.Where(api => api.Version.EndsWith("00")))
+            {
+                Console.WriteLine($"{api.Id,-50}{api.Version,-20}");
             }
             return 0;
         }
