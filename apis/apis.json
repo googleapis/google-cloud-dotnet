@@ -74,6 +74,27 @@
       "protoPath": "google/apps/card/v1"
     },
     {
+      "id": "Google.Apps.Chat.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Chat",
+      "productUrl": "https://developers.google.com/chat/concepts",
+      "description": "Recommended Google client library to access the Google Chat API, which lets you build Chat apps to integrate your services with Google Chat and manage Chat resources such as spaces, members, and messages.",
+      "tags": [
+        "gsuite"
+      ],
+      "dependencies": {
+        "Google.Apps.Card.V1": "1.0.0-beta01"
+      },
+      "generator": "micro",
+      "protoPath": "google/chat/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "chat",
+      "serviceConfigFile": "chat_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Apps.Events.Subscriptions.V1",
       "version": "1.0.0-beta02",
       "type": "grpc",
