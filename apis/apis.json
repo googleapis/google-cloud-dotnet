@@ -1430,7 +1430,8 @@
       "shortName": "confidentialcomputing",
       "serviceConfigFile": "confidentialcomputing_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.ConfidentialComputing.V1Alpha1",
@@ -1453,7 +1454,8 @@
       "shortName": "confidentialcomputing",
       "serviceConfigFile": "confidentialcomputing_v1alpha1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Config.V1",
