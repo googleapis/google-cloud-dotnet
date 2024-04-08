@@ -415,38 +415,6 @@ namespace Google.Cloud.Spanner.Data
         /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
         /// that returns a subset of data.
         /// </summary>
-        /// <param name="maxPartitions">
-        /// The desired maximum number of partitions to return. For example, this may
-        /// be set to the number of workers available. The default for this option
-        /// is currently 10,000. The maximum value is currently 200,000. This is only
-        /// a hint. The actual number of partitions returned may be smaller or larger than
-        /// this maximum count request.
-        /// </param>
-        /// <param name="partitionSizeBytes">
-        /// The desired data size for each partition generated. The default for this
-        /// option is currently 1 GiB. This is only a hint. The actual size of each
-        /// partition may be smaller or larger than this size request.
-        /// </param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>The list of partitions that can be used to create <see cref="SpannerCommand"/>
-        /// objects.</returns>
-        [Obsolete("This method is deprecated, please use GetReaderPartitionsAsync(PartitionOptions, CancellationToken) instead.")]
-        public Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(
-            long? partitionSizeBytes = null,
-            long? maxPartitions = null,
-            CancellationToken cancellationToken = default) =>
-            GetReaderPartitionsAsync(
-                PartitionOptions.Default.
-                WithPartitionSizeBytes(partitionSizeBytes).
-                WithMaxPartitions(maxPartitions),
-                cancellationToken);
-
-        /// <summary>
-        /// Creates a set of <see cref="CommandPartition"/> objects that are used to execute a query or read
-        /// operation in parallel. Each of the returned command partitions are used
-        /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
-        /// that returns a subset of data.
-        /// </summary>
         /// <param name="options">The <see cref="PartitionOptions"/> used to create and read partitions.
         /// </param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>

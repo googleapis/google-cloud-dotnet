@@ -132,19 +132,6 @@ namespace Google.Cloud.Spanner.V1
             new Statistics(_targetedPools.ToArray().Select(p => p.Value.GetStatisticsSnapshot()).ToList().AsReadOnly());
 
         /// <summary>
-        /// Provides a snapshot of statistics for a database-specific pool.
-        /// This is equivalent to calling <see cref="GetSegmentStatisticsSnapshot(SessionPoolSegmentKey)"/> passing a segment key
-        /// with a null database role.
-        /// </summary>
-        /// <returns>A snapshot of statistics for this pool.</returns>
-        [Obsolete($"Use the overload {nameof(GetSegmentStatisticsSnapshot)}(DatabaseName) instead.")]
-        public DatabaseStatistics GetStatisticsSnapshot(DatabaseName databaseName)
-        {
-            var poolStatistics = GetSegmentStatisticsSnapshot(databaseName);
-            return (poolStatistics is null) ? null : new DatabaseStatistics(poolStatistics);
-        }
-
-        /// <summary>
         /// Provides a snapshot of statistics for the pool associated with the given <see cref="SessionPoolSegmentKey"/>.
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>

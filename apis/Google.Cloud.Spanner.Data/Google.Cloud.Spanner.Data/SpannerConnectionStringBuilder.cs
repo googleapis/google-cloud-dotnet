@@ -542,23 +542,6 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
-        /// connection string, optional credential, and session pool manager.
-        /// </summary>
-        /// <param name="connectionString">>A connection string of the form
-        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
-        /// Must not be null.</param>
-        /// <param name="credentials">The credential to use for the connection. May be null.</param>
-        /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
-        [Obsolete($"Use overloads accepting credentials, then set the {nameof(SessionPoolManager)} property", error: false)]
-        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager) : this()
-        {
-            ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
-            CredentialOverride = credentials;
-            SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
-        }
-
-        /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/>.
         /// </summary>
         public SpannerConnectionStringBuilder() => ConversionOptions = SpannerConversionOptions.Default;
