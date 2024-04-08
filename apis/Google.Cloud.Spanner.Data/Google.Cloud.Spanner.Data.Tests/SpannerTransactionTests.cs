@@ -21,7 +21,7 @@ using Xunit;
 namespace Google.Cloud.Spanner.Data.Tests;
 public class SpannerTransactionTests
 {
-    public static TheoryData<TimeSpan?> ValidCommitDelayValues { get; } = new TheoryData<TimeSpan?>
+    public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues { get; } = new TheoryData<TimeSpan?>
     {
         null,
         TimeSpan.Zero,
@@ -29,7 +29,7 @@ public class SpannerTransactionTests
         TimeSpan.MaxValue,
     };
 
-    public static TheoryData<TimeSpan?> InvalidCommitDelayValues { get; } = new TheoryData<TimeSpan?>
+    public static TheoryData<TimeSpan?> InvalidMaxCommitDelayValues { get; } = new TheoryData<TimeSpan?>
     {
         TimeSpan.MinValue,
         TimeSpan.FromMilliseconds(-100),
@@ -37,36 +37,36 @@ public class SpannerTransactionTests
     };
 
     [Fact]
-    public void CommitDelay_DefaultsToNull()
+    public void MaxCommitDelay_DefaultsToNull()
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        Assert.Null(transaction.CommitDelay);
+        Assert.Null(transaction.MaxCommitDelay);
     }
 
-    [Theory, MemberData(nameof(ValidCommitDelayValues))]
-    public void CommitDelay_Valid(TimeSpan? value)
+    [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
+    public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        transaction.CommitDelay = value;
-        Assert.Equal(value, transaction.CommitDelay);
+        transaction.MaxCommitDelay = maxCommitDelay;
+        Assert.Equal(maxCommitDelay, transaction.MaxCommitDelay);
     }
 
-    [Theory, MemberData(nameof(InvalidCommitDelayValues))]
-    public void CommitDelay_Invalid(TimeSpan? value)
+    [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
+    public void MaxCommitDelay_Invalid(TimeSpan? maxCommitdelua)
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        Assert.Throws<ArgumentOutOfRangeException>(() => transaction.CommitDelay = value);
+        Assert.Throws<ArgumentOutOfRangeException>(() => transaction.MaxCommitDelay = maxCommitdelua);
     }
 }

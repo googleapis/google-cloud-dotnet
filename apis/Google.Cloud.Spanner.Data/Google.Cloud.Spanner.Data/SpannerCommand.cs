@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
-        private TimeSpan? _commitDelay;
+        private TimeSpan? _maxCommitDelay;
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>, using a default command timeout.
@@ -296,10 +296,10 @@ namespace Google.Cloud.Spanner.Data
         /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
         /// if there is any. Otherwise, this value will be ignored.
         /// </remarks>
-        public TimeSpan? CommitDelay
+        public TimeSpan? MaxCommitDelay
         {
-            get => _commitDelay;
-            set => _commitDelay = SpannerTransaction.CheckCommitDelayRange(value);
+            get => _maxCommitDelay;
+            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
         }
 
         /// <inheritdoc />
@@ -344,7 +344,7 @@ namespace Google.Cloud.Spanner.Data
             Priority = Priority,
             Tag = Tag,
             DirectedReadOptions = DirectedReadOptions?.Clone(),
-            CommitDelay = CommitDelay,
+            MaxCommitDelay = MaxCommitDelay,
         };
 
         /// <inheritdoc />

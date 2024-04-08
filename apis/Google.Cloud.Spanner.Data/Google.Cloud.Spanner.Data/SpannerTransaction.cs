@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly PooledSession _session;
 
         private int _commitTimeout;
-        private TimeSpan? _commitDelay;
+        private TimeSpan? _maxCommitDelay;
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
@@ -130,10 +130,10 @@ namespace Google.Cloud.Spanner.Data
         /// option was made available to Spanner API consumers.
         /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
         /// </summary>
-        public TimeSpan? CommitDelay
+        public TimeSpan? MaxCommitDelay
         {
-            get => _commitDelay;
-            set => _commitDelay = SpannerTransaction.CheckCommitDelayRange(value);
+            get => _maxCommitDelay;
+            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
         }
 
         /// <summary>
@@ -433,7 +433,7 @@ namespace Google.Cloud.Spanner.Data
                 Mutations = { _mutations },
                 ReturnCommitStats = LogCommitStats,
                 RequestOptions = BuildCommitRequestOptions(),
-                MaxCommitDelay = CommitDelay is null ? null : Duration.FromTimeSpan(CommitDelay.Value),
+                MaxCommitDelay = MaxCommitDelay is null ? null : Duration.FromTimeSpan(MaxCommitDelay.Value),
             };
 
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
@@ -571,7 +571,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal static TimeSpan? CheckCommitDelayRange(TimeSpan? commitDelay) =>
-            commitDelay is null ? commitDelay : GaxPreconditions.CheckArgumentRange(commitDelay.Value, nameof(CommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
+        internal static TimeSpan? CheckMaxCommitDelayRange(TimeSpan? maxCommitDelay) =>
+            maxCommitDelay is null ? maxCommitDelay : GaxPreconditions.CheckArgumentRange(maxCommitDelay.Value, nameof(MaxCommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }
 }

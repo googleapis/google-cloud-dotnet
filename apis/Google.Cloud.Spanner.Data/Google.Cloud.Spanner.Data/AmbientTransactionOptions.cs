@@ -24,9 +24,9 @@ public sealed class AmbientTransactionOptions
 {
     /// <summary>
     /// Default options for an ambient transaction. Using these options will result in a read-write transaction
-    /// with no <see cref="CommitDelay"/> value set.
+    /// with no <see cref="MaxCommitDelay"/> value set.
     /// </summary>
-    public static AmbientTransactionOptions Default { get; } = new AmbientTransactionOptions(commitDelay: null, timestampBound: null, transactionId: null);
+    public static AmbientTransactionOptions Default { get; } = new AmbientTransactionOptions(maxCommitDelay: null, timestampBound: null, transactionId: null);
 
     /// <summary>
     /// The maximum amount of time the commit may be delayed server side for batching with other commits.
@@ -36,7 +36,7 @@ public sealed class AmbientTransactionOptions
     /// option was made available to Spanner API consumers.
     /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
     /// </summary>
-    public TimeSpan? CommitDelay { get; }
+    public TimeSpan? MaxCommitDelay { get; }
 
     /// <summary>
     /// Timestamp bound settings for the ambient transaction. May be null.
@@ -55,13 +55,13 @@ public sealed class AmbientTransactionOptions
     /// </summary>
     public TransactionId TransactionId { get; }
 
-    private AmbientTransactionOptions(TimeSpan? commitDelay, TimestampBound timestampBound, TransactionId transactionId)
+    private AmbientTransactionOptions(TimeSpan? maxCommitDelay, TimestampBound timestampBound, TransactionId transactionId)
     {
         GaxPreconditions.CheckArgument(
             timestampBound is null || transactionId is null,
             nameof(timestampBound),
             $"At most one of {nameof(timestampBound)} and {nameof(transactionId)} may be set.");
-        CommitDelay = SpannerTransaction.CheckCommitDelayRange(commitDelay);
+        MaxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(maxCommitDelay);
         TimestampBound = timestampBound;
         TransactionId = transactionId;
     }
@@ -74,7 +74,7 @@ public sealed class AmbientTransactionOptions
     /// <see cref="TimestampBound.Strong"/> will be used.
     /// </param>
     public static AmbientTransactionOptions ForTimestampBoundReadOnly(TimestampBound timestampBound = null) =>
-        new AmbientTransactionOptions(commitDelay: null, timestampBound ?? TimestampBound.Strong, transactionId: null);
+        new AmbientTransactionOptions(maxCommitDelay: null, timestampBound ?? TimestampBound.Strong, transactionId: null);
 
     /// <summary>
     /// Creates a new set of ambient transaction options with the given <paramref name="transactionId"/>.
@@ -83,11 +83,11 @@ public sealed class AmbientTransactionOptions
     /// The transaction ID to use for the ambient transaction. Must not be null.
     /// </param>
     public static AmbientTransactionOptions FromReadOnlyTransactionId(TransactionId transactionId) =>
-        new AmbientTransactionOptions(commitDelay: null, timestampBound: null, transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)));
+        new AmbientTransactionOptions(maxCommitDelay: null, timestampBound: null, transactionId: GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)));
 
     /// <summary>
-    /// Returns a new set of options equal to these, except for the specified <paramref name="commitDelay"/>.
+    /// Returns a new set of options equal to these, except for the specified <paramref name="maxCommitDelay"/>.
     /// </summary>
-    public AmbientTransactionOptions WithCommitDelay(TimeSpan? commitDelay) =>
-        new AmbientTransactionOptions(commitDelay, TimestampBound, TransactionId);
+    public AmbientTransactionOptions WithMaxCommitDelay(TimeSpan? maxCommitDelay) =>
+        new AmbientTransactionOptions(maxCommitDelay, TimestampBound, TransactionId);
 }

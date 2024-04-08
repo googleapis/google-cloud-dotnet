@@ -30,26 +30,26 @@ public class AmbientTransactionOptionsTests
     [Fact]
     public void Default_Values()
     {
-        Assert.Null(AmbientTransactionOptions.Default.CommitDelay);
+        Assert.Null(AmbientTransactionOptions.Default.MaxCommitDelay);
         Assert.Null(AmbientTransactionOptions.Default.TimestampBound);
         Assert.Null(AmbientTransactionOptions.Default.TransactionId);
     }
 
-    public static TheoryData<TimeSpan?> ValidCommitDelayValues => SpannerTransactionTests.ValidCommitDelayValues;
+    public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues => SpannerTransactionTests.ValidMaxCommitDelayValues;
 
-    [Theory, MemberData(nameof(ValidCommitDelayValues))]
-    public void WithCommitDelay_Valid(TimeSpan? commitDelay)
+    [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
+    public void WithMaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
     {
-        var custom = AmbientTransactionOptions.Default.WithCommitDelay(commitDelay);
+        var custom = AmbientTransactionOptions.Default.WithMaxCommitDelay(maxCommitDelay);
         Assert.NotSame(AmbientTransactionOptions.Default, custom);
-        Assert.Equal(commitDelay, custom.CommitDelay);
+        Assert.Equal(maxCommitDelay, custom.MaxCommitDelay);
     }
 
-    public static TheoryData<TimeSpan?> InvalidCommitDelayValues => SpannerTransactionTests.InvalidCommitDelayValues;
+    public static TheoryData<TimeSpan?> InvalidMaxCommitDelayValues => SpannerTransactionTests.InvalidMaxCommitDelayValues;
 
-    [Theory, MemberData(nameof(InvalidCommitDelayValues))]
-    public void WithCommitDelay_Invalid(TimeSpan? commitDelay) =>
-        Assert.Throws<ArgumentOutOfRangeException>(() => AmbientTransactionOptions.Default.WithCommitDelay(commitDelay));
+    [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
+    public void WithMaxCommitDelay_Invalid(TimeSpan? maxCommitDelay) =>
+        Assert.Throws<ArgumentOutOfRangeException>(() => AmbientTransactionOptions.Default.WithMaxCommitDelay(maxCommitDelay));
 
     [Fact]
     public void ForTimestampBoundReadOnly_Default()
