@@ -1362,40 +1362,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Arg.Any<CallSettings>());
         }
 
-        // This unit test will be removed once we remove the obsolete method.
-        [Fact, Obsolete]
-        public async Task CanExecuteReadPartitionedReadCommand_WithoutOptions()
-        {
-            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .SetupPartitionAsync()
-                .SetupStreamingRead();
-
-            var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginReadOnlyTransactionAsync();
-            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
-            command.Transaction = transaction;
-            var partitions = await command.GetReaderPartitionsAsync(0, 10);
-
-            foreach (var partition in partitions)
-            {
-                // Normally we would send this information to another client to read, but we are just simulating it here
-                // by serializing and deserializing the information locally.
-                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
-                var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
-                var reader = await cmd.ExecuteReaderAsync();
-                Assert.True(reader.HasRows);
-            }
-
-            spannerClientMock.Received(10).StreamingRead(
-                Arg.Is<ReadRequest>(request =>
-                    !request.PartitionToken.IsEmpty &&
-                    request.DataBoostEnabled == false &&
-                    object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
-                Arg.Any<CallSettings>());
-        }
-
         public static IEnumerable<object[]> ConfiguredSpannerDbTypes()
         {
             // Format : ClrToSpannerTypeDefaultMappings value, Parameter value, expected SpannerDbType.
