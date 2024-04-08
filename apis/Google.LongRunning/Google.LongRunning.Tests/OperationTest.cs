@@ -18,11 +18,13 @@ using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Xunit;
 using GrpcStatus = Grpc.Core.Status;
 using ProtoStatus = Google.Rpc.Status;
@@ -387,6 +389,19 @@ namespace Google.LongRunning.Tests
             };
             var operation = new Operation<Timestamp, StringValue>(message, new FakeOperationsClient());
             Assert.Equal(metadata, operation.Metadata?.Value);
+        }
+
+        [Fact]
+        public void EmptyOperation()
+        {
+            // Some servers return an empty operation. We don't do any additional validation before wrapping
+            // the response in a typed Operation<,> but the test validates that the wrapper itself doesn't perform
+            // any validation. A wrapper created like this will fail if polled, but we don't expect users to do that.
+            // Ideally, the server would return a valid, pollable operation instead.
+            var message = new Operation();
+            var operation = new Operation<StringValue, Timestamp>(message, new FakeOperationsClient());
+            Assert.Empty(operation.Name);
+            Assert.False(operation.IsCompleted);
         }
 
         private static Operation<StringValue, Timestamp> ForResult(string name, string value, OperationsClient client)
