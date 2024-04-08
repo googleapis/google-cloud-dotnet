@@ -30,14 +30,14 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
         private readonly Priority _commitPriority;
-        private readonly TimeSpan? _commitDelay;
+        private readonly TimeSpan? _maxCommitDelay;
         private readonly TransactionOptions _singleUseTransactionOptions;
 
-        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, TimeSpan? commitDelay, TransactionOptions singleUseTransactionOptions)
+        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, TimeSpan? maxCommitDelay, TransactionOptions singleUseTransactionOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _commitPriority = commitPriority;
-            _commitDelay = commitDelay;
+            _maxCommitDelay = maxCommitDelay;
             _singleUseTransactionOptions = singleUseTransactionOptions;
         }
 
@@ -50,9 +50,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
-                if (_commitDelay is not null)
+                if (_maxCommitDelay is not null)
                 {
-                    transaction.CommitDelay = _commitDelay;
+                    transaction.MaxCommitDelay = _maxCommitDelay;
                 }
 
                 return await ((ISpannerTransaction)transaction)
@@ -75,9 +75,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
-                if (_commitDelay is not null)
+                if (_maxCommitDelay is not null)
                 {
-                    transaction.CommitDelay = _commitDelay;
+                    transaction.MaxCommitDelay = _maxCommitDelay;
                 }
 
                 return await ((ISpannerTransaction) transaction)
@@ -98,9 +98,9 @@ namespace Google.Cloud.Spanner.Data
                 {
                     transaction.CommitTimeout = timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;
-                    if (_commitDelay is not null)
+                    if (_maxCommitDelay is not null)
                     {
-                        transaction.CommitDelay = _commitDelay;
+                        transaction.MaxCommitDelay = _maxCommitDelay;
                     }
 
                     while (true)
@@ -135,9 +135,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
-                if (_commitDelay is not null)
+                if (_maxCommitDelay is not null)
                 {
-                    transaction.CommitDelay = _commitDelay;
+                    transaction.MaxCommitDelay = _maxCommitDelay;
                 }
 
                 return await ((ISpannerTransaction)transaction)
@@ -168,9 +168,9 @@ namespace Google.Cloud.Spanner.Data
                 // until you commit or rollback.
                 transaction.CommitTimeout = timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
-                if (_commitDelay is not null)
+                if (_maxCommitDelay is not null)
                 {
-                    transaction.CommitDelay = _commitDelay;
+                    transaction.MaxCommitDelay = _maxCommitDelay;
                 }
 
                 return await ((ISpannerTransaction)transaction)

@@ -54,9 +54,9 @@ namespace Google.Cloud.Spanner.Data
                 : _ambientTransactionOptions.TransactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_ambientTransactionOptions.TransactionId)
                 : await _spannerConnection.BeginTransactionAsync().ConfigureAwait(false);
 
-            if (_ambientTransactionOptions.CommitDelay is not null)
+            if (_ambientTransactionOptions.MaxCommitDelay is not null)
             {
-                transaction.CommitDelay = _ambientTransactionOptions.CommitDelay;
+                transaction.MaxCommitDelay = _ambientTransactionOptions.MaxCommitDelay;
             }
             return transaction;
         }

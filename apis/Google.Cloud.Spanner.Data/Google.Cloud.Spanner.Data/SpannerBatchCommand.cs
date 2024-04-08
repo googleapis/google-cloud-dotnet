@@ -39,7 +39,7 @@ namespace Google.Cloud.Spanner.Data
     {
         private int _commandTimeout;
         private SpannerBatchCommandType _commandType;
-        private TimeSpan? _commitDelay;
+        private TimeSpan? _maxCommitDelay;
 
         internal SpannerBatchCommand(SpannerConnection connection)
         {
@@ -123,10 +123,10 @@ namespace Google.Cloud.Spanner.Data
         /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
         /// if there is any. Otherwise, this value will be ignored.
         /// </remarks>
-        public TimeSpan? CommitDelay
+        public TimeSpan? MaxCommitDelay
         {
-            get => _commitDelay;
-            set => _commitDelay = SpannerTransaction.CheckCommitDelayRange(value);
+            get => _maxCommitDelay;
+            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
         }
 
         /// <summary>
