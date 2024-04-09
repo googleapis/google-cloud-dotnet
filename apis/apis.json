@@ -1768,6 +1768,7 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "default",
+        "Google.Cloud.Datastore.Admin.V1": "2.3.0",
         "Google.Cloud.Firestore.Admin.V1": "3.8.0"
       },
       "shortName": "datastore",
