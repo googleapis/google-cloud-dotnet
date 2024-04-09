@@ -374,8 +374,8 @@ namespace Google.Maps.Places.V1 {
     private readonly pbc::RepeatedField<string> types_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// A set of type tags for this result. For example, "political" and
-    /// "locality".  For the complete list of possible values, see Table A and
-    /// Table B at
+    /// "locality". For the complete list of possible values, see Table A and Table
+    /// B at
     /// https://developers.google.com/maps/documentation/places/web-service/place-types
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -408,8 +408,8 @@ namespace Google.Maps.Places.V1 {
     private global::Google.Type.LocalizedText primaryTypeDisplayName_;
     /// <summary>
     /// The display name of the primary type, localized to the request language if
-    /// applicable.  For the complete list of possible values, see Table A and
-    /// Table B at
+    /// applicable. For the complete list of possible values, see Table A and Table
+    /// B at
     /// https://developers.google.com/maps/documentation/places/web-service/place-types
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
