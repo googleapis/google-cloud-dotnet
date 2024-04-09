@@ -2844,7 +2844,17 @@ namespace Google.Cloud.Batch.V1 {
     public const int ServiceAccountFieldNumber = 9;
     private global::Google.Cloud.Batch.V1.ServiceAccount serviceAccount_;
     /// <summary>
-    /// Service account that VMs will run as.
+    /// Defines the service account for Batch-created VMs. If omitted, the [default
+    /// Compute Engine service
+    /// account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+    /// is used. Must match the service account specified in any used instance
+    /// template configured in the Batch job.
+    ///
+    /// Includes the following fields:
+    ///  * email: The service account's email address. If not set, the default
+    ///  Compute Engine service account is used.
+    ///  * scopes: Additional OAuth scopes to grant the service account, beyond the
+    ///  default cloud-platform scope. (list of strings)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6731,10 +6741,7 @@ namespace Google.Cloud.Batch.V1 {
     public const int EmailFieldNumber = 1;
     private string email_ = "";
     /// <summary>
-    /// Email address of the service account. If not specified, the default
-    /// Compute Engine service account for the project will be used. If instance
-    /// template is being used, the service account has to be specified in the
-    /// instance template and it has to match the email field here.
+    /// Email address of the service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6751,8 +6758,7 @@ namespace Google.Cloud.Batch.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> scopes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of scopes to be enabled for this service account on the VM, in
-    /// addition to the cloud-platform API scope that will be added by default.
+    /// List of scopes to be enabled for this service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
