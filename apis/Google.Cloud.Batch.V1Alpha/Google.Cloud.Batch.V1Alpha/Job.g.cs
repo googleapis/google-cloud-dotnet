@@ -145,7 +145,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "bhgBIAEoCRIUCgxtYXhfZGlzdGFuY2UYAiABKAMaLQoLTGFiZWxzRW50cnkS",
             "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJgChFQcm92aXNpb25p",
             "bmdNb2RlbBIiCh5QUk9WSVNJT05JTkdfTU9ERUxfVU5TUEVDSUZJRUQQABIM",
-            "CghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIpUGCglU",
+            "CghTVEFOREFSRBABEggKBFNQT1QQAhIPCgtQUkVFTVBUSUJMRRADIt8GCglU",
             "YXNrR3JvdXASEQoEbmFtZRgBIAEoCUID4EEDEjwKCXRhc2tfc3BlYxgDIAEo",
             "CzIkLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tTcGVjQgPgQQIS",
             "EgoKdGFza19jb3VudBgEIAEoAxITCgtwYXJhbGxlbGlzbRgFIAEoAxJRChFz",
@@ -157,19 +157,20 @@ namespace Google.Cloud.Batch.V1Alpha {
             "a19lbnZpcm9ubWVudHMYCSADKAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFh",
             "bHBoYS5FbnZpcm9ubWVudBIbChN0YXNrX2NvdW50X3Blcl9ub2RlGAogASgD",
             "EhoKEnJlcXVpcmVfaG9zdHNfZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3Nz",
-            "aBgMIAEoCBIcCg9ydW5fYXNfbm9uX3Jvb3QYDiABKAhCA+BBARotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlwKEFNj",
-            "aGVkdWxpbmdQb2xpY3kSIQodU0NIRURVTElOR19QT0xJQ1lfVU5TUEVDSUZJ",
-            "RUQQABIXChNBU19TT09OX0FTX1BPU1NJQkxFEAESDAoISU5fT1JERVIQAjpv",
-            "6kFsCh5iYXRjaC5nb29nbGVhcGlzLmNvbS9UYXNrR3JvdXASSnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9L3Rh",
-            "c2tHcm91cHMve3Rhc2tfZ3JvdXB9Ii8KDlNlcnZpY2VBY2NvdW50Eg0KBWVt",
-            "YWlsGAEgASgJEg4KBnNjb3BlcxgCIAMoCULCAQoeY29tLmdvb2dsZS5jbG91",
-            "ZC5iYXRjaC52MWFscGhhQghKb2JQcm90b1ABWjRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2JhdGNoL2FwaXYxYWxwaGEvYmF0Y2hwYjtiYXRjaHBiogIDR0NCqgIa",
-            "R29vZ2xlLkNsb3VkLkJhdGNoLlYxQWxwaGHKAhpHb29nbGVcQ2xvdWRcQmF0",
-            "Y2hcVjFhbHBoYeoCHUdvb2dsZTo6Q2xvdWQ6OkJhdGNoOjpWMWFscGhhYgZw",
-            "cm90bzM="));
+            "aBgMIAEoCBIcCg9ydW5fYXNfbm9uX3Jvb3QYDiABKAhCA+BBARJICg9zZXJ2",
+            "aWNlX2FjY291bnQYDyABKAsyKi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
+            "YS5TZXJ2aWNlQWNjb3VudEID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXAoQU2NoZWR1bGluZ1BvbGljeRIh",
+            "Ch1TQ0hFRFVMSU5HX1BPTElDWV9VTlNQRUNJRklFRBAAEhcKE0FTX1NPT05f",
+            "QVNfUE9TU0lCTEUQARIMCghJTl9PUkRFUhACOm/qQWwKHmJhdGNoLmdvb2ds",
+            "ZWFwaXMuY29tL1Rhc2tHcm91cBJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2pvYnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19n",
+            "cm91cH0iLwoOU2VydmljZUFjY291bnQSDQoFZW1haWwYASABKAkSDgoGc2Nv",
+            "cGVzGAIgAygJQsIBCh5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFC",
+            "CEpvYlByb3RvUAFaNGNsb3VkLmdvb2dsZS5jb20vZ28vYmF0Y2gvYXBpdjFh",
+            "bHBoYS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0",
+            "Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91ZFxCYXRjaFxWMWFscGhh6gIdR29v",
+            "Z2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -191,7 +192,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy.Parser, new[]{ "Collocation", "MaxDistance" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup), global::Google.Cloud.Batch.V1Alpha.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "SchedulingPolicy", "AllocationPolicy", "Labels", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh", "RunAsNonRoot" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup.Types.SchedulingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup), global::Google.Cloud.Batch.V1Alpha.TaskGroup.Parser, new[]{ "Name", "TaskSpec", "TaskCount", "Parallelism", "SchedulingPolicy", "AllocationPolicy", "Labels", "TaskEnvironments", "TaskCountPerNode", "RequireHostsFile", "PermissiveSsh", "RunAsNonRoot", "ServiceAccount" }, null, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.TaskGroup.Types.SchedulingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ServiceAccount), global::Google.Cloud.Batch.V1Alpha.ServiceAccount.Parser, new[]{ "Email", "Scopes" }, null, null, null, null)
           }));
     }
@@ -3555,7 +3556,17 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int ServiceAccountFieldNumber = 9;
     private global::Google.Cloud.Batch.V1Alpha.ServiceAccount serviceAccount_;
     /// <summary>
-    /// Service account that VMs will run as.
+    /// Defines the service account for Batch-created VMs. If omitted, the [default
+    /// Compute Engine service
+    /// account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+    /// is used. Must match the service account specified in any used instance
+    /// template configured in the Batch job.
+    ///
+    /// Includes the following fields:
+    ///  * email: The service account's email address. If not set, the default
+    ///  Compute Engine service account is used.
+    ///  * scopes: Additional OAuth scopes to grant the service account, beyond the
+    ///  default cloud-platform scope. (list of strings)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6979,6 +6990,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       requireHostsFile_ = other.requireHostsFile_;
       permissiveSsh_ = other.permissiveSsh_;
       runAsNonRoot_ = other.runAsNonRoot_;
+      serviceAccount_ = other.serviceAccount_ != null ? other.serviceAccount_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7197,6 +7209,28 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 15;
+    private global::Google.Cloud.Batch.V1Alpha.ServiceAccount serviceAccount_;
+    /// <summary>
+    /// Optional. ServiceAccount used by tasks within the task group for the access
+    /// to other Cloud resources. This allows tasks to operate with permissions
+    /// distinct from the service account for the VM set at `AllocationPolicy`. Use
+    /// this field when tasks require different access rights than those of the VM.
+    ///
+    /// Specify the service account's `email` field. Ensure `scopes`
+    /// include any necessary permissions for tasks, in addition to the default
+    /// 'cloud-platform' scope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Batch.V1Alpha.ServiceAccount ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7224,6 +7258,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (RequireHostsFile != other.RequireHostsFile) return false;
       if (PermissiveSsh != other.PermissiveSsh) return false;
       if (RunAsNonRoot != other.RunAsNonRoot) return false;
+      if (!object.Equals(ServiceAccount, other.ServiceAccount)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7243,6 +7278,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       if (RequireHostsFile != false) hash ^= RequireHostsFile.GetHashCode();
       if (PermissiveSsh != false) hash ^= PermissiveSsh.GetHashCode();
       if (RunAsNonRoot != false) hash ^= RunAsNonRoot.GetHashCode();
+      if (serviceAccount_ != null) hash ^= ServiceAccount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7303,6 +7339,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(112);
         output.WriteBool(RunAsNonRoot);
       }
+      if (serviceAccount_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7355,6 +7395,10 @@ namespace Google.Cloud.Batch.V1Alpha {
         output.WriteRawTag(112);
         output.WriteBool(RunAsNonRoot);
       }
+      if (serviceAccount_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7396,6 +7440,9 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (RunAsNonRoot != false) {
         size += 1 + 1;
+      }
+      if (serviceAccount_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceAccount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7446,6 +7493,12 @@ namespace Google.Cloud.Batch.V1Alpha {
       }
       if (other.RunAsNonRoot != false) {
         RunAsNonRoot = other.RunAsNonRoot;
+      }
+      if (other.serviceAccount_ != null) {
+        if (serviceAccount_ == null) {
+          ServiceAccount = new global::Google.Cloud.Batch.V1Alpha.ServiceAccount();
+        }
+        ServiceAccount.MergeFrom(other.ServiceAccount);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7516,6 +7569,13 @@ namespace Google.Cloud.Batch.V1Alpha {
             RunAsNonRoot = input.ReadBool();
             break;
           }
+          case 122: {
+            if (serviceAccount_ == null) {
+              ServiceAccount = new global::Google.Cloud.Batch.V1Alpha.ServiceAccount();
+            }
+            input.ReadMessage(ServiceAccount);
+            break;
+          }
         }
       }
     #endif
@@ -7583,6 +7643,13 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           case 112: {
             RunAsNonRoot = input.ReadBool();
+            break;
+          }
+          case 122: {
+            if (serviceAccount_ == null) {
+              ServiceAccount = new global::Google.Cloud.Batch.V1Alpha.ServiceAccount();
+            }
+            input.ReadMessage(ServiceAccount);
             break;
           }
         }
@@ -7674,10 +7741,7 @@ namespace Google.Cloud.Batch.V1Alpha {
     public const int EmailFieldNumber = 1;
     private string email_ = "";
     /// <summary>
-    /// Email address of the service account. If not specified, the default
-    /// Compute Engine service account for the project will be used. If instance
-    /// template is being used, the service account has to be specified in the
-    /// instance template and it has to match the email field here.
+    /// Email address of the service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7694,8 +7758,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> scopes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of scopes to be enabled for this service account on the VM, in
-    /// addition to the cloud-platform API scope that will be added by default.
+    /// List of scopes to be enabled for this service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

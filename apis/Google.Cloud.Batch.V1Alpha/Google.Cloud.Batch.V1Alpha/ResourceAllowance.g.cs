@@ -53,43 +53,45 @@ namespace Google.Cloud.Batch.V1Alpha {
             "ZVNwZWMuTGltaXRCA+BBAhqCAQoFTGltaXQSSgoPY2FsZW5kYXJfcGVyaW9k",
             "GAEgASgOMiouZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQ2FsZW5kYXJQ",
             "ZXJpb2RCA+BBAUgAEhcKBWxpbWl0GAIgASgBQgPgQQJIAYgBAUIKCghkdXJh",
-            "dGlvbkIICgZfbGltaXQiugYKHFVzYWdlUmVzb3VyY2VBbGxvd2FuY2VTdGF0",
+            "dGlvbkIICgZfbGltaXQi7gYKHFVzYWdlUmVzb3VyY2VBbGxvd2FuY2VTdGF0",
             "dXMSRgoFc3RhdGUYASABKA4yMi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBo",
             "YS5SZXNvdXJjZUFsbG93YW5jZVN0YXRlQgPgQQMSXwoMbGltaXRfc3RhdHVz",
             "GAIgASgLMkQuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVXNhZ2VSZXNv",
             "dXJjZUFsbG93YW5jZVN0YXR1cy5MaW1pdFN0YXR1c0ID4EEDEl8KBnJlcG9y",
             "dBgDIAEoCzJKLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlVzYWdlUmVz",
-            "b3VyY2VBbGxvd2FuY2VTdGF0dXMuQ29uc3VtcHRpb25SZXBvcnRCA+BBAxpy",
-            "CgtMaW1pdFN0YXR1cxI4ChRjb25zdW1wdGlvbl9pbnRlcnZhbBgBIAEoCzIV",
-            "Lmdvb2dsZS50eXBlLkludGVydmFsQgPgQQMSEgoFbGltaXQYAiABKAFCA+BB",
-            "AxIVCghjb25zdW1lZBgDIAEoAUID4EEDGmQKEVBlcmlvZENvbnN1bXB0aW9u",
-            "EjgKFGNvbnN1bXB0aW9uX2ludGVydmFsGAEgASgLMhUuZ29vZ2xlLnR5cGUu",
-            "SW50ZXJ2YWxCA+BBAxIVCghjb25zdW1lZBgCIAEoAUID4EEDGrUCChFDb25z",
-            "dW1wdGlvblJlcG9ydBKRAQoabGF0ZXN0X3BlcmlvZF9jb25zdW1wdGlvbnMY",
-            "ASADKAsyaC5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5Vc2FnZVJlc291",
-            "cmNlQWxsb3dhbmNlU3RhdHVzLkNvbnN1bXB0aW9uUmVwb3J0LkxhdGVzdFBl",
-            "cmlvZENvbnN1bXB0aW9uc0VudHJ5QgPgQQMaiwEKHUxhdGVzdFBlcmlvZENv",
-            "bnN1bXB0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRJZCgV2YWx1ZRgCIAEoCzJK",
-            "Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlVzYWdlUmVzb3VyY2VBbGxv",
-            "d2FuY2VTdGF0dXMuUGVyaW9kQ29uc3VtcHRpb246AjgBKmYKDkNhbGVuZGFy",
-            "UGVyaW9kEh8KG0NBTEVOREFSX1BFUklPRF9VTlNQRUNJRklFRBAAEgkKBU1P",
-            "TlRIEAESCwoHUVVBUlRFUhACEggKBFlFQVIQAxIICgRXRUVLEAQSBwoDREFZ",
-            "EAUqggEKFlJlc291cmNlQWxsb3dhbmNlU3RhdGUSKAokUkVTT1VSQ0VfQUxM",
-            "T1dBTkNFX1NUQVRFX1VOU1BFQ0lGSUVEEAASHQoZUkVTT1VSQ0VfQUxMT1dB",
-            "TkNFX0FDVElWRRABEh8KG1JFU09VUkNFX0FMTE9XQU5DRV9ERVBMRVRFRBAC",
-            "QtABCh5jb20uZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCFlJlc291cmNl",
-            "QWxsb3dhbmNlUHJvdG9QAVo0Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYXRjaC9h",
-            "cGl2MWFscGhhL2JhdGNocGI7YmF0Y2hwYqICA0dDQqoCGkdvb2dsZS5DbG91",
-            "ZC5CYXRjaC5WMUFscGhhygIaR29vZ2xlXENsb3VkXEJhdGNoXFYxYWxwaGHq",
-            "Ah1Hb29nbGU6OkNsb3VkOjpCYXRjaDo6VjFhbHBoYWIGcHJvdG8z"));
+            "b3VyY2VBbGxvd2FuY2VTdGF0dXMuQ29uc3VtcHRpb25SZXBvcnRCA+BBAxqT",
+            "AQoLTGltaXRTdGF0dXMSOAoUY29uc3VtcHRpb25faW50ZXJ2YWwYASABKAsy",
+            "FS5nb29nbGUudHlwZS5JbnRlcnZhbEID4EEDEhcKBWxpbWl0GAIgASgBQgPg",
+            "QQNIAIgBARIaCghjb25zdW1lZBgDIAEoAUID4EEDSAGIAQFCCAoGX2xpbWl0",
+            "QgsKCV9jb25zdW1lZBp2ChFQZXJpb2RDb25zdW1wdGlvbhI4ChRjb25zdW1w",
+            "dGlvbl9pbnRlcnZhbBgBIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsQgPg",
+            "QQMSGgoIY29uc3VtZWQYAiABKAFCA+BBA0gAiAEBQgsKCV9jb25zdW1lZBq1",
+            "AgoRQ29uc3VtcHRpb25SZXBvcnQSkQEKGmxhdGVzdF9wZXJpb2RfY29uc3Vt",
+            "cHRpb25zGAEgAygLMmguZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuVXNh",
+            "Z2VSZXNvdXJjZUFsbG93YW5jZVN0YXR1cy5Db25zdW1wdGlvblJlcG9ydC5M",
+            "YXRlc3RQZXJpb2RDb25zdW1wdGlvbnNFbnRyeUID4EEDGosBCh1MYXRlc3RQ",
+            "ZXJpb2RDb25zdW1wdGlvbnNFbnRyeRILCgNrZXkYASABKAkSWQoFdmFsdWUY",
+            "AiABKAsySi5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5Vc2FnZVJlc291",
+            "cmNlQWxsb3dhbmNlU3RhdHVzLlBlcmlvZENvbnN1bXB0aW9uOgI4ASpmCg5D",
+            "YWxlbmRhclBlcmlvZBIfChtDQUxFTkRBUl9QRVJJT0RfVU5TUEVDSUZJRUQQ",
+            "ABIJCgVNT05USBABEgsKB1FVQVJURVIQAhIICgRZRUFSEAMSCAoEV0VFSxAE",
+            "EgcKA0RBWRAFKoIBChZSZXNvdXJjZUFsbG93YW5jZVN0YXRlEigKJFJFU09V",
+            "UkNFX0FMTE9XQU5DRV9TVEFURV9VTlNQRUNJRklFRBAAEh0KGVJFU09VUkNF",
+            "X0FMTE9XQU5DRV9BQ1RJVkUQARIfChtSRVNPVVJDRV9BTExPV0FOQ0VfREVQ",
+            "TEVURUQQAkLQAQoeY29tLmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhQhZS",
+            "ZXNvdXJjZUFsbG93YW5jZVByb3RvUAFaNGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YmF0Y2gvYXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKiAgNHQ0KqAhpHb29n",
+            "bGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxDbG91ZFxCYXRjaFxW",
+            "MWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYxYWxwaGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.NotificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Batch.V1Alpha.CalendarPeriod), typeof(global::Google.Cloud.Batch.V1Alpha.ResourceAllowanceState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.ResourceAllowance), global::Google.Cloud.Batch.V1Alpha.ResourceAllowance.Parser, new[]{ "UsageResourceAllowance", "Name", "Uid", "CreateTime", "Labels", "Notifications" }, new[]{ "ResourceAllowance" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowance), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowance.Parser, new[]{ "Spec", "Status" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceSpec), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceSpec.Parser, new[]{ "Type", "Limit" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceSpec.Types.Limit), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceSpec.Types.Limit.Parser, new[]{ "CalendarPeriod", "Limit_" }, new[]{ "Duration", "Limit" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Parser, new[]{ "State", "LimitStatus", "Report" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.LimitStatus), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.LimitStatus.Parser, new[]{ "ConsumptionInterval", "Limit", "Consumed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.PeriodConsumption), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.PeriodConsumption.Parser, new[]{ "ConsumptionInterval", "Consumed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Parser, new[]{ "State", "LimitStatus", "Report" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.LimitStatus), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.LimitStatus.Parser, new[]{ "ConsumptionInterval", "Limit", "Consumed" }, new[]{ "Limit", "Consumed" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.PeriodConsumption), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.PeriodConsumption.Parser, new[]{ "ConsumptionInterval", "Consumed" }, new[]{ "Consumed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.ConsumptionReport), global::Google.Cloud.Batch.V1Alpha.UsageResourceAllowanceStatus.Types.ConsumptionReport.Parser, new[]{ "LatestPeriodConsumptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
           }));
     }
@@ -1718,6 +1720,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       {
         private static readonly pb::MessageParser<LimitStatus> _parser = new pb::MessageParser<LimitStatus>(() => new LimitStatus());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<LimitStatus> Parser { get { return _parser; } }
@@ -1745,6 +1748,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LimitStatus(LimitStatus other) : this() {
+          _hasBits0 = other._hasBits0;
           consumptionInterval_ = other.consumptionInterval_ != null ? other.consumptionInterval_.Clone() : null;
           limit_ = other.limit_;
           consumed_ = other.consumed_;
@@ -1774,6 +1778,8 @@ namespace Google.Cloud.Batch.V1Alpha {
 
         /// <summary>Field number for the "limit" field.</summary>
         public const int LimitFieldNumber = 2;
+        private readonly static double LimitDefaultValue = 0D;
+
         private double limit_;
         /// <summary>
         /// Output only. Limit value of a UsageResourceAllowance within its one
@@ -1782,14 +1788,29 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Limit {
-          get { return limit_; }
+          get { if ((_hasBits0 & 1) != 0) { return limit_; } else { return LimitDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             limit_ = value;
           }
+        }
+        /// <summary>Gets whether the "limit" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasLimit {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "limit" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearLimit() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "consumed" field.</summary>
         public const int ConsumedFieldNumber = 3;
+        private readonly static double ConsumedDefaultValue = 0D;
+
         private double consumed_;
         /// <summary>
         /// Output only. Accumulated consumption during `consumption_interval`.
@@ -1797,10 +1818,23 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Consumed {
-          get { return consumed_; }
+          get { if ((_hasBits0 & 2) != 0) { return consumed_; } else { return ConsumedDefaultValue; } }
           set {
+            _hasBits0 |= 2;
             consumed_ = value;
           }
+        }
+        /// <summary>Gets whether the "consumed" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasConsumed {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "consumed" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearConsumed() {
+          _hasBits0 &= ~2;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1829,8 +1863,8 @@ namespace Google.Cloud.Batch.V1Alpha {
         public override int GetHashCode() {
           int hash = 1;
           if (consumptionInterval_ != null) hash ^= ConsumptionInterval.GetHashCode();
-          if (Limit != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Limit);
-          if (Consumed != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Consumed);
+          if (HasLimit) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Limit);
+          if (HasConsumed) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Consumed);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1853,11 +1887,11 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(ConsumptionInterval);
           }
-          if (Limit != 0D) {
+          if (HasLimit) {
             output.WriteRawTag(17);
             output.WriteDouble(Limit);
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             output.WriteRawTag(25);
             output.WriteDouble(Consumed);
           }
@@ -1875,11 +1909,11 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(ConsumptionInterval);
           }
-          if (Limit != 0D) {
+          if (HasLimit) {
             output.WriteRawTag(17);
             output.WriteDouble(Limit);
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             output.WriteRawTag(25);
             output.WriteDouble(Consumed);
           }
@@ -1896,10 +1930,10 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (consumptionInterval_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsumptionInterval);
           }
-          if (Limit != 0D) {
+          if (HasLimit) {
             size += 1 + 8;
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -1920,10 +1954,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             }
             ConsumptionInterval.MergeFrom(other.ConsumptionInterval);
           }
-          if (other.Limit != 0D) {
+          if (other.HasLimit) {
             Limit = other.Limit;
           }
-          if (other.Consumed != 0D) {
+          if (other.HasConsumed) {
             Consumed = other.Consumed;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2001,6 +2035,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       {
         private static readonly pb::MessageParser<PeriodConsumption> _parser = new pb::MessageParser<PeriodConsumption>(() => new PeriodConsumption());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PeriodConsumption> Parser { get { return _parser; } }
@@ -2028,6 +2063,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PeriodConsumption(PeriodConsumption other) : this() {
+          _hasBits0 = other._hasBits0;
           consumptionInterval_ = other.consumptionInterval_ != null ? other.consumptionInterval_.Clone() : null;
           consumed_ = other.consumed_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2056,6 +2092,8 @@ namespace Google.Cloud.Batch.V1Alpha {
 
         /// <summary>Field number for the "consumed" field.</summary>
         public const int ConsumedFieldNumber = 2;
+        private readonly static double ConsumedDefaultValue = 0D;
+
         private double consumed_;
         /// <summary>
         /// Output only. Accumulated consumption during `consumption_interval`.
@@ -2063,10 +2101,23 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Consumed {
-          get { return consumed_; }
+          get { if ((_hasBits0 & 1) != 0) { return consumed_; } else { return ConsumedDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             consumed_ = value;
           }
+        }
+        /// <summary>Gets whether the "consumed" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasConsumed {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "consumed" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearConsumed() {
+          _hasBits0 &= ~1;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2094,7 +2145,7 @@ namespace Google.Cloud.Batch.V1Alpha {
         public override int GetHashCode() {
           int hash = 1;
           if (consumptionInterval_ != null) hash ^= ConsumptionInterval.GetHashCode();
-          if (Consumed != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Consumed);
+          if (HasConsumed) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Consumed);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2117,7 +2168,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(ConsumptionInterval);
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             output.WriteRawTag(17);
             output.WriteDouble(Consumed);
           }
@@ -2135,7 +2186,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(10);
             output.WriteMessage(ConsumptionInterval);
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             output.WriteRawTag(17);
             output.WriteDouble(Consumed);
           }
@@ -2152,7 +2203,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (consumptionInterval_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsumptionInterval);
           }
-          if (Consumed != 0D) {
+          if (HasConsumed) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -2173,7 +2224,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             }
             ConsumptionInterval.MergeFrom(other.ConsumptionInterval);
           }
-          if (other.Consumed != 0D) {
+          if (other.HasConsumed) {
             Consumed = other.Consumed;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
