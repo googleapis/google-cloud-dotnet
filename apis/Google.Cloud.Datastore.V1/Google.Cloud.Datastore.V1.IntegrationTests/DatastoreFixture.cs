@@ -14,12 +14,14 @@
 using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Datastore.Admin.V1;
 using Google.Cloud.Firestore.Admin.V1;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Datastore.Admin.V1.Index.Types;
 using static Google.Cloud.Firestore.Admin.V1.Database.Types;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -35,6 +37,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(3);
 
         private readonly FirestoreAdminClient _firestoreAdminClient;
+        private readonly DatastoreAdminClient _datastoreAdminClient;
 
         internal bool RunningOnEmulator { get; }
 
@@ -52,6 +55,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             NamespaceId = IdGenerator.FromDateTime(prefix: "test-");
             RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DATASTORE_EMULATOR_HOST"));
             _firestoreAdminClient = FirestoreAdminClient.Create();
+            _datastoreAdminClient = DatastoreAdminClient.Create();
         }
 
         public override void Dispose()
@@ -164,6 +168,28 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 databaseId);
             await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
             Console.WriteLine($"Success creating database {databaseId}");
+        }
+
+        // Convenience methods for creating fields for indexes.
+        internal IndexedProperty AscendingProperty(string name) => new IndexedProperty { Name = name, Direction = Direction.Ascending };
+        internal IndexedProperty DescendingProperty(string name) => new IndexedProperty { Name = name, Direction = Direction.Descending };
+
+        public async Task CreateIndexAsync(string kind, params IndexedProperty[] properties)
+        {
+            // Creating indexes is not supported on Datastore emulator.
+            Assert.False(RunningOnEmulator);
+            var request = new Admin.V1.CreateIndexRequest
+            {
+                Index = new Admin.V1.Index
+                {
+                    Ancestor = AncestorMode.None,
+                    Kind = kind,                    
+                    Properties = { properties }
+                },
+                ProjectId = ProjectId
+            };
+            var operation = await _datastoreAdminClient.CreateIndexAsync(request);
+            await operation.PollUntilCompletedAsync(AdminOperationPollSettings);
         }
 
         private async Task DeleteDatabaseAsync(string databaseId)
