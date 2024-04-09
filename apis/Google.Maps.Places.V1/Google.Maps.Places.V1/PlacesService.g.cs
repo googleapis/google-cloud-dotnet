@@ -6797,7 +6797,7 @@ namespace Google.Maps.Places.V1 {
             /// <summary>
             /// The predicted text. This text does not represent a Place, but rather a
             /// text query that could be used in a search endpoint (for example,
-            /// TextSearch).
+            /// Text Search).
             ///
             /// `text` is recommended for developers who wish to show a single UI
             /// element. Developers who wish to show two separate, but related, UI
