@@ -491,5 +491,23 @@ namespace Google.Cloud.Firestore.IntegrationTests
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }
+
+        [SkippableFact]
+        public async Task MultipleInequalitiesAsync()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            CollectionReference collection = _fixture.HighScoreCollection;
+            await _fixture.CreateIndexAsync(collection, _fixture.AscendingField("Level"), _fixture.AscendingField("Score"));
+            var levelFilter = Filter.GreaterThan("Level", 17);
+            var scoreFilter = Filter.GreaterThan("Score", 105);
+            var query = collection.Where(Filter.And(levelFilter, scoreFilter));
+            var snapshot = await query.GetSnapshotAsync();
+            // Dalip and Erin meet the criteria.
+            // Alice's score is too low; Carol's level is too low. (Bob fails on both counts.)
+            Assert.Equal(2, snapshot.Count);
+            var docs = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
+            Assert.Equal(new[] { "Dalip", "Erin" }, docs.Select(doc => doc.Name).OrderBy(x => x));
+        }
     }
 }
