@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -547,6 +548,56 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
             var result = db.RunQuery(query);
             Assert.Equal(2, result.Entities.Count);
+        }
+
+        [SkippableFact]
+        public async Task MultipleInequalities_StructuredQuery()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            var db = _fixture.CreateDatastoreDb();
+            string kind = await InsertMultipleInequalitiesTestData(db);
+            var query = new Query(kind)
+            {
+                Filter = Filter.And(Filter.GreaterThan("height", 60), Filter.GreaterThan("age", 35))
+            };
+            var result = await db.RunQueryAsync(query);
+            Assert.Equal(1, result.Entities.Count);
+            Assert.Equal("match", result.Entities[0].Key.Path.Last().Name);
+        }
+
+        [SkippableFact]
+        public async Task MultipleInequalities_Gql()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            var db = _fixture.CreateDatastoreDb();
+            string kind = await InsertMultipleInequalitiesTestData(db);
+            var query = new GqlQuery
+            {
+                QueryString = $"SELECT * FROM {kind} WHERE height > 60 AND age > 35",
+                AllowLiterals = true
+            };
+            var result = await db.RunQueryAsync(query);
+            Assert.Equal(1, result.Entities.Count);
+            Assert.Equal("match", result.Entities[0].Key.Path.Last().Name);
+        }
+
+        private async Task<string> InsertMultipleInequalitiesTestData(DatastoreDb db)
+        {
+            // Use a different kind for each test, to avoid index collisions.
+            string kind = IdGenerator.FromDateTime(prefix: "MultipleInequalities_");
+            await _fixture.CreateIndexAsync(kind, _fixture.AscendingProperty("height"), _fixture.AscendingProperty("age"));
+            var keyFactory = db.CreateKeyFactory(kind);
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("too-short-and-young"), ["height"] = 50, ["age"] = 10  },
+                new Entity { Key = keyFactory.CreateKey("too-short"), ["height"] = 50, ["age"] = 40  },
+                new Entity { Key = keyFactory.CreateKey("too-young"), ["height"] = 70, ["age"] = 10  },
+                new Entity { Key = keyFactory.CreateKey("match"), ["height"] = 70, ["age"] = 40  }
+            };
+            db.Insert(entities);
+            return kind;
         }
     }
 }
