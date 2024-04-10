@@ -16,6 +16,7 @@ using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -54,6 +55,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // These SpannerDbTypes are unsupported on emulator.
         public static TheoryData<SpannerDbType> BindUnsupportedNullData { get; } = new TheoryData<SpannerDbType>
         {
+            SpannerDbType.Float32,
+            SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
         };
@@ -64,7 +67,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(BindUnsupportedNullData))]
         public async Task BindNull(SpannerDbType parameterType)
         {
-            Skip.If(_fixture.RunningOnEmulator && (SpannerDbType.Json.Equals(parameterType) || SpannerDbType.ArrayOf(SpannerDbType.Json).Equals(parameterType)), "The emulator does not support the JSON type");
+            MaybeSkipIfOnEmulator(parameterType);
             using var connection = _fixture.GetConnection();
             using var cmd = connection.CreateSelectCommand("SELECT @v");
             cmd.Parameters.Add("v", parameterType, null);
@@ -166,6 +169,22 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new DateTime?[] { });
 
         [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public Task BindFloat32() => TestBindNonNull(SpannerDbType.Float32, 1.0f, r => r.GetFloat(0));
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public Task BindFloat32Array() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Float32),
+            new float?[] { 0.0f, null, 1.0f });
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public Task BindFloat32EmptyArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Float32),
+            new float[] { });
+
+        [Fact]
         public Task BindFloat64() => TestBindNonNull(SpannerDbType.Float64, 1.0, r => r.GetDouble(0));
 
         [Fact]
@@ -257,5 +276,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindJsonEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
+
+        private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
+            Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any(data => spannerDbType.Equals(data[0])),
+                $"The emulator does not support {spannerDbType}.");
     }
 }

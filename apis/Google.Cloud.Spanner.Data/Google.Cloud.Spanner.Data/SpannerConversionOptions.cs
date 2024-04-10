@@ -29,6 +29,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal static readonly HashSet<string> AllowedClrToSpannerTypeMappings = new HashSet<string>()
         {
+            SingleToFloat32,
+            SingleToFloat64,
             DecimalToFloat64,
             DecimalToNumeric,
             DecimalToPgNumeric,
@@ -46,6 +48,8 @@ namespace Google.Cloud.Spanner.Data
         };
 
         // Constants for CLR to Spanner type mappings.
+        internal const string SingleToFloat32 = nameof(SingleToFloat32);
+        internal const string SingleToFloat64 = nameof(SingleToFloat64);
         internal const string DecimalToFloat64 = nameof(DecimalToFloat64);
         internal const string DecimalToNumeric = nameof(DecimalToNumeric);
         internal const string DecimalToPgNumeric = nameof(DecimalToPgNumeric);
@@ -66,6 +70,8 @@ namespace Google.Cloud.Spanner.Data
         /// True to return DBNull.Value for null values; false to return a null reference.
         /// </summary>
         internal bool UseDBNull { get; private set; }
+
+        internal SpannerDbType SingleToConfiguredSpannerType { get; private set; }
 
         /// <summary>
         /// The configured SpannerDbType for the decimal CLR type.
@@ -132,6 +138,7 @@ namespace Google.Cloud.Spanner.Data
 
         internal void SetClrToSpannerTypeDefaults()
         {
+            SingleToConfiguredSpannerType = SpannerDbType.Float32;
             DecimalToConfiguredSpannerType = SpannerDbType.Float64;
             DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
         }
@@ -189,13 +196,22 @@ namespace Google.Cloud.Spanner.Data
             var mappingType = nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings);
 
             CheckValidMappings(mappings, AllowedClrToSpannerTypeMappings, mappingType);
+            CheckMultipleMappingsForSameType("Single", mappings, mappingType);
             CheckMultipleMappingsForSameType("Decimal", mappings, mappingType);
             CheckMultipleMappingsForSameType("DateTime", mappings, mappingType);
 
             // If we reach here all is well.
             foreach (var mapping in mappings)
             {
-                if (string.Equals(mapping, DecimalToFloat64, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(mapping, SingleToFloat32, StringComparison.OrdinalIgnoreCase))
+                {
+                    options.SingleToConfiguredSpannerType = SpannerDbType.Float32;
+                }
+                else if (string.Equals(mapping, SingleToFloat64, StringComparison.OrdinalIgnoreCase))
+                {
+                    options.SingleToConfiguredSpannerType = SpannerDbType.Float64;
+                }
+                else if (string.Equals(mapping, DecimalToFloat64, StringComparison.OrdinalIgnoreCase))
                 {
                     options.DecimalToConfiguredSpannerType = SpannerDbType.Float64;
                 }

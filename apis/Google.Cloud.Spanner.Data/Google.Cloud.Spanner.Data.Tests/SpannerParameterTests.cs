@@ -29,6 +29,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Bool, DbType.Boolean, true };
             yield return new object[] { SpannerDbType.Date, DbType.Date, true };
             yield return new object[] { SpannerDbType.Timestamp, DbType.DateTime, true };
+            yield return new object[] { SpannerDbType.Float32, DbType.Single, true };
             yield return new object[] { SpannerDbType.Float64, DbType.Double, true };
             yield return new object[] { SpannerDbType.Int64, DbType.Int64, true };
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
@@ -66,7 +67,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { new DateTime(2021, 1, 13, 12, 3, 10), SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };
             yield return new object[] { new SpannerDate(2021, 1, 13), SpannerDbType.Date, DbType.Date, typeof(DateTime) };
 
-            yield return new object[] { 3.14f, SpannerDbType.Float64, DbType.Double, typeof(double) };
+            yield return new object[] { 2.718f, SpannerDbType.Float32, DbType.Single, typeof(float) };
+
             yield return new object[] { 3.14d, SpannerDbType.Float64, DbType.Double, typeof(double) };
             yield return new object[] { 3.14m, SpannerDbType.Float64, DbType.Double, typeof(double) };
 
@@ -126,6 +128,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.String, -1 };
             yield return new object[] { SpannerDbType.Bool, 0 };
             yield return new object[] { SpannerDbType.Date, 0 };
+            yield return new object[] { SpannerDbType.Float32, 0 };
             yield return new object[] { SpannerDbType.Float64, 0 };
             yield return new object[] { SpannerDbType.Int64, 0 };
             yield return new object[] { SpannerDbType.PgOid, 0 };
@@ -156,6 +159,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.String };
             yield return new object[] { SpannerDbType.Bool };
             yield return new object[] { SpannerDbType.Date };
+            yield return new object[] { SpannerDbType.Float32 };
             yield return new object[] { SpannerDbType.Float64 };
             yield return new object[] { SpannerDbType.Int64 };
             yield return new object[] { SpannerDbType.PgOid };
@@ -168,6 +172,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.String) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bool) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Date) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Float32) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Float64) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Int64) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgOid) };
@@ -196,6 +201,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             // Cases where SpannerDbType or DbType is not explicitly provided for SpannerParameter.
             // SpannerDbType will be inferred based on options if applicable.
+            yield return new object[] { new SpannerParameter { Value = 2.718f },
+               GetSpannerConversionOptions(default), SpannerDbType.Float32 };
+            yield return new object[] { new SpannerParameter { Value = 2.718f },
+                GetSpannerConversionOptions(SingleToFloat32), SpannerDbType.Float32 };
+            yield return new object[] { new SpannerParameter { Value = 2.718f },
+                GetSpannerConversionOptions(SingleToFloat64), SpannerDbType.Float64 };
             yield return new object[] { new SpannerParameter { Value = 3.14M },
                GetSpannerConversionOptions(default), SpannerDbType.Float64 };
             yield return new object[] { new SpannerParameter { Value = 3.14M },
@@ -216,6 +227,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             // Cases where SpannerDbType is explicitly provided for SpannerParameter.
             // Options will be ignored.
+            yield return new object[] { new SpannerParameter { Value = 2.718f, SpannerDbType = SpannerDbType.Float64 },
+               GetSpannerConversionOptions(default), SpannerDbType.Float64 };
+            yield return new object[] { new SpannerParameter { Value = 2.718f, SpannerDbType = SpannerDbType.Float64 },
+                GetSpannerConversionOptions(SingleToFloat32), SpannerDbType.Float64 };
+            yield return new object[] { new SpannerParameter { Value = 2.718f, SpannerDbType = SpannerDbType.Float32 },
+                GetSpannerConversionOptions(SingleToFloat64), SpannerDbType.Float32 };
             yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Float64 },
                 GetSpannerConversionOptions(DecimalToNumeric), SpannerDbType.Float64 };
             yield return new object[] { new SpannerParameter { Value = 3.14M, SpannerDbType = SpannerDbType.Float64 },

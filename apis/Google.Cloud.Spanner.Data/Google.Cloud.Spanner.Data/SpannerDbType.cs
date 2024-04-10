@@ -20,7 +20,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Reflection;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
@@ -44,6 +43,11 @@ namespace Google.Cloud.Spanner.Data
         /// 64 bit signed integer.
         /// </summary>
         public static SpannerDbType Int64 { get; } = new SpannerDbType(TypeCode.Int64);
+
+        /// <summary>
+        /// 32 bit floating point number.
+        /// </summary>
+        public static SpannerDbType Float32 { get; } = new SpannerDbType(TypeCode.Float32);
 
         /// <summary>
         /// 64 bit floating point number. This is equivalent to Float8 in the PostgreSQL dialect.
@@ -102,6 +106,7 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Unspecified } , Unspecified },
                 { new V1.Type { Code = TypeCode.Bool }, Bool },
                 { new V1.Type { Code = TypeCode.Int64 }, Int64 },
+                { new V1.Type { Code = TypeCode.Float32 }, Float32 },
                 { new V1.Type { Code = TypeCode.Float64 }, Float64 },
                 { new V1.Type { Code = TypeCode.Timestamp }, Timestamp },
                 { new V1.Type { Code = TypeCode.Date }, Date },
@@ -169,6 +174,8 @@ namespace Google.Cloud.Spanner.Data
                     case TypeCode.Int64:
                         // This handles PG.OID as well.
                         return DbType.Int64;
+                    case TypeCode.Float32:
+                        return DbType.Single;
                     case TypeCode.Float64:
                         return DbType.Double;
                     case TypeCode.Numeric:
@@ -204,6 +211,8 @@ namespace Google.Cloud.Spanner.Data
                     return typeof(bool);
                 case TypeCode.Int64:
                     return typeof(long);
+                case TypeCode.Float32:
+                    return typeof(float);
                 case TypeCode.Float64:
                     return typeof(double);
                 case TypeCode.Timestamp:
@@ -246,6 +255,7 @@ namespace Google.Cloud.Spanner.Data
             DbType.Boolean => Bool,
             DbType.Date => Date,
             DbType.DateTime => Timestamp,
+            DbType.Single => Float32,
             DbType.Double => Float64,
             DbType.Int64 => Int64,
             DbType.VarNumeric => Numeric,
@@ -338,7 +348,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Timestamp;
             }
-            if (type == typeof(float) || type == typeof(double) || type == typeof(decimal))
+            if (type == typeof(float))
+            {
+                return Float32;
+            }
+            if (type == typeof(double) || type == typeof(decimal))
             {
                 return Float64;
             }

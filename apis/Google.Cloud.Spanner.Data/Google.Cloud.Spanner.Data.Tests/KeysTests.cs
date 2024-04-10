@@ -30,6 +30,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "", SpannerDbType.Bool, true },
                     { "", SpannerDbType.Bytes, new byte[] {1, 2, 3} },
                     { "", SpannerDbType.Date, new DateTime(2021, 9, 10, 0, 0, 0, DateTimeKind.Utc) },
+                    { "", SpannerDbType.Float32, 2.718f },
                     { "", SpannerDbType.Float64, 3.14 },
                     { "", SpannerDbType.Int64, 1 },
                     { "", SpannerDbType.Json, "{\"key\": \"value\"}" },
@@ -49,6 +50,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     Value.ForBool(true),
                     Value.ForString(Convert.ToBase64String(new byte[] {1,2,3})),
                     Value.ForString("2021-09-10"),
+                    Value.ForNumber(2.718f),
                     Value.ForNumber(3.14),
                     Value.ForString("1"),
                     Value.ForString("{\"key\": \"value\"}"),
@@ -77,6 +79,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 true,
                 new byte[] { 1, 2, 3 },
                 // DATE cannot be created directly from a Clr type.
+                2.718f,
                 3.14,
                 1L,
                 // JSON cannot be created directly from a Clr type.
@@ -93,6 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {
                     Value.ForBool(true),
                     Value.ForString(Convert.ToBase64String(new byte[] {1,2,3})),
+                    Value.ForNumber(2.718f),
                     Value.ForNumber(3.14),
                     Value.ForString("1"),
                     Value.ForString("10.1"),

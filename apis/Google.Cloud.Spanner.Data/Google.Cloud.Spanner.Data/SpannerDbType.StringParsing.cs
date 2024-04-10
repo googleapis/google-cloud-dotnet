@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Unspecified:
                 case TypeCode.Bool:
                 case TypeCode.Int64:
+                case TypeCode.Float32:
                 case TypeCode.Float64:
                 case TypeCode.Timestamp:
                 case TypeCode.Date:
