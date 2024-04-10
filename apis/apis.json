@@ -5728,7 +5728,8 @@
       "includeCommonResourcesProto": true,
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1beta.yaml",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Shopping.Type",
