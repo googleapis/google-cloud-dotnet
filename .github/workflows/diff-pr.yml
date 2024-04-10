@@ -27,10 +27,10 @@ jobs:
         git checkout -b main ${{ github.event.pull_request.base.sha }}
         git checkout pr-head
 
-    - name: Setup .NET 6.0
+    - name: Setup .NET 8.0
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
 
     - name: Detect PR changes
       env:
@@ -40,11 +40,11 @@ jobs:
         then
           SCRIPT_OPTION=--allow-breaking-changes
         fi
-        
+
         # Run the diff, recording the results
         echo "**Pull request diff results**" >> diff.txt
         set -o pipefail
-        ./detect-pr-changes.sh $SCRIPT_OPTION 2>&1 | tee -a diff.txt        
+        ./detect-pr-changes.sh $SCRIPT_OPTION 2>&1 | tee -a diff.txt
         set +o pipefail
 
     # The purpose of (success() || failure()) in the condition is to

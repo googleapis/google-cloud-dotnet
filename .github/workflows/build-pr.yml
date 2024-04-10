@@ -11,17 +11,17 @@ jobs:
     strategy:
       matrix:
         regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'!Google\\.Cloud'"]
-    
+
     steps:
     - uses: actions/checkout@v4
       with:
         submodules: true
         fetch-depth: 100
-        
-    - name: Setup .NET 6.0
+
+    - name: Setup .NET 8.0
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
 
     # The GitHub checkout action leaves the repo in a slightly awkward
     # state. This tidies it up.
