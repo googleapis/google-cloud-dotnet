@@ -27,38 +27,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "CkRnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS9kb2N1bWVu",
             "dF9wcm9jZXNzaW5nX2NvbmZpZy5wcm90bxIjZ29vZ2xlLmNsb3VkLmRpc2Nv",
             "dmVyeWVuZ2luZS52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iwQgKGERvY3VtZW50",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ixQgKGERvY3VtZW50",
             "UHJvY2Vzc2luZ0NvbmZpZxIMCgRuYW1lGAEgASgJEmsKFmRlZmF1bHRfcGFy",
             "c2luZ19jb25maWcYBCABKAsySy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
             "aW5lLnYxYmV0YS5Eb2N1bWVudFByb2Nlc3NpbmdDb25maWcuUGFyc2luZ0Nv",
             "bmZpZxJ7ChhwYXJzaW5nX2NvbmZpZ19vdmVycmlkZXMYBSADKAsyWS5nb29n",
             "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudFByb2Nl",
-            "c3NpbmdDb25maWcuUGFyc2luZ0NvbmZpZ092ZXJyaWRlc0VudHJ5GpIDCg1Q",
+            "c3NpbmdDb25maWcuUGFyc2luZ0NvbmZpZ092ZXJyaWRlc0VudHJ5GpYDCg1Q",
             "YXJzaW5nQ29uZmlnEoIBChZkaWdpdGFsX3BhcnNpbmdfY29uZmlnGAEgASgL",
             "MmAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuRG9jdW1l",
             "bnRQcm9jZXNzaW5nQ29uZmlnLlBhcnNpbmdDb25maWcuRGlnaXRhbFBhcnNp",
             "bmdDb25maWdIABJ6ChJvY3JfcGFyc2luZ19jb25maWcYAiABKAsyXC5nb29n",
             "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudFByb2Nl",
             "c3NpbmdDb25maWcuUGFyc2luZ0NvbmZpZy5PY3JQYXJzaW5nQ29uZmlnSAAa",
-            "FgoURGlnaXRhbFBhcnNpbmdDb25maWcaTwoQT2NyUGFyc2luZ0NvbmZpZxIi",
-            "ChplbmhhbmNlZF9kb2N1bWVudF9lbGVtZW50cxgBIAMoCRIXCg91c2VfbmF0",
-            "aXZlX3RleHQYAiABKAhCFwoVdHlwZV9kZWRpY2F0ZWRfY29uZmlnGooBChtQ",
-            "YXJzaW5nQ29uZmlnT3ZlcnJpZGVzRW50cnkSCwoDa2V5GAEgASgJEloKBXZh",
-            "bHVlGAIgASgLMksuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJl",
-            "dGEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnLlBhcnNpbmdDb25maWc6AjgB",
-            "OooC6kGGAgo3ZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RvY3Vt",
-            "ZW50UHJvY2Vzc2luZ0NvbmZpZxJYcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L2RvY3Vt",
-            "ZW50UHJvY2Vzc2luZ0NvbmZpZxJxcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRh",
-            "U3RvcmVzL3tkYXRhX3N0b3JlfS9kb2N1bWVudFByb2Nlc3NpbmdDb25maWdC",
-            "pAIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUId",
-            "RG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnUHJvdG9QAVpRY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVu",
-            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIj",
-            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVc",
-            "Q2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6",
-            "OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
+            "FgoURGlnaXRhbFBhcnNpbmdDb25maWcaUwoQT2NyUGFyc2luZ0NvbmZpZxIm",
+            "ChplbmhhbmNlZF9kb2N1bWVudF9lbGVtZW50cxgBIAMoCUICGAESFwoPdXNl",
+            "X25hdGl2ZV90ZXh0GAIgASgIQhcKFXR5cGVfZGVkaWNhdGVkX2NvbmZpZxqK",
+            "AQobUGFyc2luZ0NvbmZpZ092ZXJyaWRlc0VudHJ5EgsKA2tleRgBIAEoCRJa",
+            "CgV2YWx1ZRgCIAEoCzJLLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djFiZXRhLkRvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZy5QYXJzaW5nQ29uZmln",
+            "OgI4ATqKAupBhgIKN2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9E",
+            "b2N1bWVudFByb2Nlc3NpbmdDb25maWcSWHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9k",
+            "b2N1bWVudFByb2Nlc3NpbmdDb25maWcScXByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0v",
+            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vZG9jdW1lbnRQcm9jZXNzaW5nQ29u",
+            "ZmlnQqQCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJl",
+            "dGFCHURvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZ1Byb3RvUAFaUWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zl",
+            "cnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lO",
+            "RaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29v",
+            "Z2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNs",
+            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -875,12 +875,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                 = pb::FieldCodec.ForString(10);
             private readonly pbc::RepeatedField<string> enhancedDocumentElements_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Apply additional enhanced OCR processing to a list of document
-            /// elements.
-            ///
-            /// Supported values:
-            /// * `table`: advanced table parsing model.
+            /// [DEPRECATED] This field is deprecated. To use the additional enhanced
+            /// document elements processing, please switch to `layout_parsing_config`.
             /// </summary>
+            [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> EnhancedDocumentElements {

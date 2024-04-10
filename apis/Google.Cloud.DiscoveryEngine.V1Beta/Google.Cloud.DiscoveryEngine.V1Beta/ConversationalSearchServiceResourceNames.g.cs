@@ -87,4 +87,85 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class AnswerQueryRequest
+    {
+        /// <summary>
+        /// <see cref="ServingConfigName"/>-typed view over the <see cref="ServingConfig"/> resource name property.
+        /// </summary>
+        public ServingConfigName ServingConfigAsServingConfigName
+        {
+            get => string.IsNullOrEmpty(ServingConfig) ? null : ServingConfigName.Parse(ServingConfig, allowUnparsed: true);
+            set => ServingConfig = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
+            set => Session = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAnswerRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::AnswerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::AnswerName AnswerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::AnswerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateSessionRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSessionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::SessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::SessionName SessionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::SessionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSessionRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::SessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::SessionName SessionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::SessionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSessionsRequest
+    {
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataStoreName ParentAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataStoreName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

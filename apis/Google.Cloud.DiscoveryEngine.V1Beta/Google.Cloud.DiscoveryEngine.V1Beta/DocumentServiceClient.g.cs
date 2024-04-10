@@ -966,6 +966,86 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             UpdateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a [Document][google.cloud.discoveryengine.v1beta.Document].
+        /// </summary>
+        /// <param name="document">
+        /// Required. The document to update/create.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
+        /// 
+        /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to update
+        /// does not exist and
+        /// [allow_missing][google.cloud.discoveryengine.v1beta.UpdateDocumentRequest.allow_missing]
+        /// is not set, a `NOT_FOUND` error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided imported 'document' to update. If
+        /// not set, will by default update all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Document UpdateDocument(Document document, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDocument(new UpdateDocumentRequest
+            {
+                Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [Document][google.cloud.discoveryengine.v1beta.Document].
+        /// </summary>
+        /// <param name="document">
+        /// Required. The document to update/create.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
+        /// 
+        /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to update
+        /// does not exist and
+        /// [allow_missing][google.cloud.discoveryengine.v1beta.UpdateDocumentRequest.allow_missing]
+        /// is not set, a `NOT_FOUND` error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided imported 'document' to update. If
+        /// not set, will by default update all fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Document> UpdateDocumentAsync(Document document, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDocumentAsync(new UpdateDocumentRequest
+            {
+                Document = gax::GaxPreconditions.CheckNotNull(document, nameof(document)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a [Document][google.cloud.discoveryengine.v1beta.Document].
+        /// </summary>
+        /// <param name="document">
+        /// Required. The document to update/create.
+        /// 
+        /// If the caller does not have permission to update the
+        /// [Document][google.cloud.discoveryengine.v1beta.Document], regardless of
+        /// whether or not it exists, a `PERMISSION_DENIED` error is returned.
+        /// 
+        /// If the [Document][google.cloud.discoveryengine.v1beta.Document] to update
+        /// does not exist and
+        /// [allow_missing][google.cloud.discoveryengine.v1beta.UpdateDocumentRequest.allow_missing]
+        /// is not set, a `NOT_FOUND` error is returned.
+        /// </param>
+        /// <param name="updateMask">
+        /// Indicates which fields in the provided imported 'document' to update. If
+        /// not set, will by default update all fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Document> UpdateDocumentAsync(Document document, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDocumentAsync(document, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a [Document][google.cloud.discoveryengine.v1beta.Document].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

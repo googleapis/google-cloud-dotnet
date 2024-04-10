@@ -80,6 +80,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesRequest> __Marshaller_google_cloud_discoveryengine_v1beta_ListEnginesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesResponse> __Marshaller_google_cloud_discoveryengine_v1beta_ListEnginesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest> __Marshaller_google_cloud_discoveryengine_v1beta_PauseEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest> __Marshaller_google_cloud_discoveryengine_v1beta_ResumeEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest> __Marshaller_google_cloud_discoveryengine_v1beta_TuneEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.CreateEngineRequest, global::Google.LongRunning.Operation> __Method_CreateEngine = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.CreateEngineRequest, global::Google.LongRunning.Operation>(
@@ -120,6 +126,30 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         "ListEngines",
         __Marshaller_google_cloud_discoveryengine_v1beta_ListEnginesRequest,
         __Marshaller_google_cloud_discoveryengine_v1beta_ListEnginesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> __Method_PauseEngine = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PauseEngine",
+        __Marshaller_google_cloud_discoveryengine_v1beta_PauseEngineRequest,
+        __Marshaller_google_cloud_discoveryengine_v1beta_Engine);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> __Method_ResumeEngine = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResumeEngine",
+        __Marshaller_google_cloud_discoveryengine_v1beta_ResumeEngineRequest,
+        __Marshaller_google_cloud_discoveryengine_v1beta_Engine);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest, global::Google.LongRunning.Operation> __Method_TuneEngine = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TuneEngine",
+        __Marshaller_google_cloud_discoveryengine_v1beta_TuneEngineRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -188,6 +218,48 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesResponse> ListEngines(global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Pauses the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> PauseEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resumes the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> ResumeEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Tunes an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TuneEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -465,6 +537,174 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEngines, null, options, request);
       }
+      /// <summary>
+      /// Pauses the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1Beta.Engine PauseEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1Beta.Engine PauseEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PauseEngine, null, options, request);
+      }
+      /// <summary>
+      /// Pauses the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> PauseEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> PauseEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PauseEngine, null, options, request);
+      }
+      /// <summary>
+      /// Resumes the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1Beta.Engine ResumeEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1Beta.Engine ResumeEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResumeEngine, null, options, request);
+      }
+      /// <summary>
+      /// Resumes the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> ResumeEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes the training of an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1Beta.Engine> ResumeEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResumeEngine, null, options, request);
+      }
+      /// <summary>
+      /// Tunes an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TuneEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TuneEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Tunes an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TuneEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TuneEngine, null, options, request);
+      }
+      /// <summary>
+      /// Tunes an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TuneEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TuneEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Tunes an existing engine. Only applicable if
+      /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+      /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TuneEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TuneEngine, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EngineServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -483,7 +723,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           .AddMethod(__Method_DeleteEngine, serviceImpl.DeleteEngine)
           .AddMethod(__Method_UpdateEngine, serviceImpl.UpdateEngine)
           .AddMethod(__Method_GetEngine, serviceImpl.GetEngine)
-          .AddMethod(__Method_ListEngines, serviceImpl.ListEngines).Build();
+          .AddMethod(__Method_ListEngines, serviceImpl.ListEngines)
+          .AddMethod(__Method_PauseEngine, serviceImpl.PauseEngine)
+          .AddMethod(__Method_ResumeEngine, serviceImpl.ResumeEngine)
+          .AddMethod(__Method_TuneEngine, serviceImpl.TuneEngine).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -498,6 +741,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       serviceBinder.AddMethod(__Method_UpdateEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.UpdateEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.UpdateEngine));
       serviceBinder.AddMethod(__Method_GetEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.GetEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.GetEngine));
       serviceBinder.AddMethod(__Method_ListEngines, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.ListEnginesResponse>(serviceImpl.ListEngines));
+      serviceBinder.AddMethod(__Method_PauseEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.PauseEngine));
+      serviceBinder.AddMethod(__Method_ResumeEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.ResumeEngine));
+      serviceBinder.AddMethod(__Method_TuneEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest, global::Google.LongRunning.Operation>(serviceImpl.TuneEngine));
     }
 
   }

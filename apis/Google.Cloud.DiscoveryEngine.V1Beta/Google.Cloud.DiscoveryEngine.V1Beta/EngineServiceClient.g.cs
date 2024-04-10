@@ -55,6 +55,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             UpdateEngineSettings = existing.UpdateEngineSettings;
             GetEngineSettings = existing.GetEngineSettings;
             ListEnginesSettings = existing.ListEnginesSettings;
+            PauseEngineSettings = existing.PauseEngineSettings;
+            ResumeEngineSettings = existing.ResumeEngineSettings;
+            TuneEngineSettings = existing.TuneEngineSettings;
+            TuneEngineOperationsSettings = existing.TuneEngineOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -156,6 +160,60 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListEnginesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EngineServiceClient.PauseEngine</c> and <c>EngineServiceClient.PauseEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PauseEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EngineServiceClient.ResumeEngine</c> and <c>EngineServiceClient.ResumeEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumeEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EngineServiceClient.TuneEngine</c> and <c>EngineServiceClient.TuneEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TuneEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EngineServiceClient.TuneEngine</c> and
+        /// <c>EngineServiceClient.TuneEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TuneEngineOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1074,6 +1132,437 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine PauseEngine(PauseEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(PauseEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(PauseEngineRequest request, st::CancellationToken cancellationToken) =>
+            PauseEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine PauseEngine(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseEngine(new PauseEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseEngineAsync(new PauseEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(string name, st::CancellationToken cancellationToken) =>
+            PauseEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine PauseEngine(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseEngine(new PauseEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseEngineAsync(new PauseEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to pause.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> PauseEngineAsync(EngineName name, st::CancellationToken cancellationToken) =>
+            PauseEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine ResumeEngine(ResumeEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(ResumeEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(ResumeEngineRequest request, st::CancellationToken cancellationToken) =>
+            ResumeEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine ResumeEngine(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeEngine(new ResumeEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeEngineAsync(new ResumeEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(string name, st::CancellationToken cancellationToken) =>
+            ResumeEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Engine ResumeEngine(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeEngine(new ResumeEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeEngineAsync(new ResumeEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the engine to resume.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Engine> ResumeEngineAsync(EngineName name, st::CancellationToken cancellationToken) =>
+            ResumeEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneEngineResponse, TuneEngineMetadata> TuneEngine(TuneEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(TuneEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(TuneEngineRequest request, st::CancellationToken cancellationToken) =>
+            TuneEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TuneEngine</c>.</summary>
+        public virtual lro::OperationsClient TuneEngineOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>TuneEngine</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TuneEngineResponse, TuneEngineMetadata> PollOnceTuneEngine(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuneEngineResponse, TuneEngineMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TuneEngineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TuneEngine</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> PollOnceTuneEngineAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuneEngineResponse, TuneEngineMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TuneEngineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneEngineResponse, TuneEngineMetadata> TuneEngine(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TuneEngine(new TuneEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TuneEngineAsync(new TuneEngineRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(string name, st::CancellationToken cancellationToken) =>
+            TuneEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneEngineResponse, TuneEngineMetadata> TuneEngine(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            TuneEngine(new TuneEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(EngineName name, gaxgrpc::CallSettings callSettings = null) =>
+            TuneEngineAsync(new TuneEngineRequest
+            {
+                EngineName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the engine to tune.
+        /// Format:
+        /// `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(EngineName name, st::CancellationToken cancellationToken) =>
+            TuneEngineAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EngineService client wrapper implementation, for convenient use.</summary>
@@ -1093,6 +1582,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
 
         private readonly gaxgrpc::ApiCall<ListEnginesRequest, ListEnginesResponse> _callListEngines;
 
+        private readonly gaxgrpc::ApiCall<PauseEngineRequest, Engine> _callPauseEngine;
+
+        private readonly gaxgrpc::ApiCall<ResumeEngineRequest, Engine> _callResumeEngine;
+
+        private readonly gaxgrpc::ApiCall<TuneEngineRequest, lro::Operation> _callTuneEngine;
+
         /// <summary>
         /// Constructs a client wrapper for the EngineService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1110,6 +1605,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             });
             CreateEngineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateEngineOperationsSettings, logger);
             DeleteEngineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteEngineOperationsSettings, logger);
+            TuneEngineOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TuneEngineOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateEngine = clientHelper.BuildApiCall<CreateEngineRequest, lro::Operation>("CreateEngine", grpcClient.CreateEngineAsync, grpcClient.CreateEngine, effectiveSettings.CreateEngineSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEngine);
@@ -1126,6 +1622,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callListEngines = clientHelper.BuildApiCall<ListEnginesRequest, ListEnginesResponse>("ListEngines", grpcClient.ListEnginesAsync, grpcClient.ListEngines, effectiveSettings.ListEnginesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEngines);
             Modify_ListEnginesApiCall(ref _callListEngines);
+            _callPauseEngine = clientHelper.BuildApiCall<PauseEngineRequest, Engine>("PauseEngine", grpcClient.PauseEngineAsync, grpcClient.PauseEngine, effectiveSettings.PauseEngineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPauseEngine);
+            Modify_PauseEngineApiCall(ref _callPauseEngine);
+            _callResumeEngine = clientHelper.BuildApiCall<ResumeEngineRequest, Engine>("ResumeEngine", grpcClient.ResumeEngineAsync, grpcClient.ResumeEngine, effectiveSettings.ResumeEngineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callResumeEngine);
+            Modify_ResumeEngineApiCall(ref _callResumeEngine);
+            _callTuneEngine = clientHelper.BuildApiCall<TuneEngineRequest, lro::Operation>("TuneEngine", grpcClient.TuneEngineAsync, grpcClient.TuneEngine, effectiveSettings.TuneEngineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTuneEngine);
+            Modify_TuneEngineApiCall(ref _callTuneEngine);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1140,6 +1645,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_GetEngineApiCall(ref gaxgrpc::ApiCall<GetEngineRequest, Engine> call);
 
         partial void Modify_ListEnginesApiCall(ref gaxgrpc::ApiCall<ListEnginesRequest, ListEnginesResponse> call);
+
+        partial void Modify_PauseEngineApiCall(ref gaxgrpc::ApiCall<PauseEngineRequest, Engine> call);
+
+        partial void Modify_ResumeEngineApiCall(ref gaxgrpc::ApiCall<ResumeEngineRequest, Engine> call);
+
+        partial void Modify_TuneEngineApiCall(ref gaxgrpc::ApiCall<TuneEngineRequest, lro::Operation> call);
 
         partial void OnConstruction(EngineService.EngineServiceClient grpcClient, EngineServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1158,6 +1669,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_GetEngineRequest(ref GetEngineRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListEnginesRequest(ref ListEnginesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PauseEngineRequest(ref PauseEngineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResumeEngineRequest(ref ResumeEngineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TuneEngineRequest(ref TuneEngineRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEngine</c>.</summary>
         public override lro::OperationsClient CreateEngineOperationsClient { get; }
@@ -1285,6 +1802,93 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_ListEnginesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListEnginesRequest, ListEnginesResponse, Engine>(_callListEngines, request, callSettings);
+        }
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Engine PauseEngine(PauseEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseEngineRequest(ref request, ref callSettings);
+            return _callPauseEngine.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Pauses the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Engine> PauseEngineAsync(PauseEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseEngineRequest(ref request, ref callSettings);
+            return _callPauseEngine.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Engine ResumeEngine(ResumeEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeEngineRequest(ref request, ref callSettings);
+            return _callResumeEngine.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes the training of an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Engine> ResumeEngineAsync(ResumeEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeEngineRequest(ref request, ref callSettings);
+            return _callResumeEngine.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>TuneEngine</c>.</summary>
+        public override lro::OperationsClient TuneEngineOperationsClient { get; }
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TuneEngineResponse, TuneEngineMetadata> TuneEngine(TuneEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TuneEngineRequest(ref request, ref callSettings);
+            return new lro::Operation<TuneEngineResponse, TuneEngineMetadata>(_callTuneEngine.Sync(request, callSettings), TuneEngineOperationsClient);
+        }
+
+        /// <summary>
+        /// Tunes an existing engine. Only applicable if
+        /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
+        /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TuneEngineResponse, TuneEngineMetadata>> TuneEngineAsync(TuneEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TuneEngineRequest(ref request, ref callSettings);
+            return new lro::Operation<TuneEngineResponse, TuneEngineMetadata>(await _callTuneEngine.Async(request, callSettings).ConfigureAwait(false), TuneEngineOperationsClient);
         }
     }
 

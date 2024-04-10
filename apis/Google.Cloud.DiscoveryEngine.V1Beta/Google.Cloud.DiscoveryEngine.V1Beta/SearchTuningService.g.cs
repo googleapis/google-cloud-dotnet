@@ -42,35 +42,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "dgoQR2NzVHJhaW5pbmdJbnB1dBIYChBjb3JwdXNfZGF0YV9wYXRoGAEgASgJ",
             "EhcKD3F1ZXJ5X2RhdGFfcGF0aBgCIAEoCRIXCg90cmFpbl9kYXRhX3BhdGgY",
             "AyABKAkSFgoOdGVzdF9kYXRhX3BhdGgYBCABKAlCEAoOdHJhaW5pbmdfaW5w",
-            "dXQiqQEKGFRyYWluQ3VzdG9tTW9kZWxSZXNwb25zZRIpCg1lcnJvcl9zYW1w",
+            "dXQitgIKGFRyYWluQ3VzdG9tTW9kZWxSZXNwb25zZRIpCg1lcnJvcl9zYW1w",
             "bGVzGAEgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSTAoMZXJyb3JfY29uZmln",
             "GAIgASgLMjYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
-            "SW1wb3J0RXJyb3JDb25maWcSFAoMbW9kZWxfc3RhdHVzGAMgASgJInwKGFRy",
-            "YWluQ3VzdG9tTW9kZWxNZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYAiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMr8DChNTZWFyY2hUdW5p",
-            "bmdTZXJ2aWNlEtMCChBUcmFpbkN1c3RvbU1vZGVsEjwuZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVHJhaW5DdXN0b21Nb2RlbFJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIuEBykF8Cjxnb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5UcmFpbkN1c3RvbU1v",
-            "ZGVsUmVzcG9uc2USPGdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
-            "ZXRhLlRyYWluQ3VzdG9tTW9kZWxNZXRhZGF0YYLT5JMCXCJXL3YxYmV0YS97",
-            "ZGF0YV9zdG9yZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25z",
-            "LyovZGF0YVN0b3Jlcy8qfTp0cmFpbkN1c3RvbU1vZGVsOgEqGlLKQR5kaXNj",
-            "b3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQp8CCidjb20uZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCGFNlYXJjaFR1bmluZ1Nl",
-            "cnZpY2VQcm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVu",
-            "Z2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5n",
-            "aW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292",
-            "ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdp",
-            "bmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpW",
-            "MWJldGFiBnByb3RvMw=="));
+            "SW1wb3J0RXJyb3JDb25maWcSFAoMbW9kZWxfc3RhdHVzGAMgASgJElsKB21l",
+            "dHJpY3MYBCADKAsySi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
+            "YmV0YS5UcmFpbkN1c3RvbU1vZGVsUmVzcG9uc2UuTWV0cmljc0VudHJ5Gi4K",
+            "DE1ldHJpY3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAE6AjgB",
+            "InwKGFRyYWluQ3VzdG9tTW9kZWxNZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMr8DChNTZWFy",
+            "Y2hUdW5pbmdTZXJ2aWNlEtMCChBUcmFpbkN1c3RvbU1vZGVsEjwuZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVHJhaW5DdXN0b21Nb2Rl",
+            "bFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIuEBykF8",
+            "Cjxnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5UcmFpbkN1",
+            "c3RvbU1vZGVsUmVzcG9uc2USPGdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLlRyYWluQ3VzdG9tTW9kZWxNZXRhZGF0YYLT5JMCXCJXL3Yx",
+            "YmV0YS97ZGF0YV9zdG9yZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NvbGxl",
+            "Y3Rpb25zLyovZGF0YVN0b3Jlcy8qfTp0cmFpbkN1c3RvbU1vZGVsOgEqGlLK",
+            "QR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQp8CCidjb20u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCGFNlYXJjaFR1",
+            "bmluZ1NlcnZpY2VQcm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2Nv",
+            "dmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292",
+            "ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQu",
+            "RGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3Zl",
+            "cnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5n",
+            "aW5lOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelRequest), global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelRequest.Parser, new[]{ "GcsTrainingInput", "DataStore", "ModelType", "ErrorConfig" }, new[]{ "TrainingInput" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelRequest.Types.GcsTrainingInput), global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelRequest.Types.GcsTrainingInput.Parser, new[]{ "CorpusDataPath", "QueryDataPath", "TrainDataPath", "TestDataPath" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelResponse.Parser, new[]{ "ErrorSamples", "ErrorConfig", "ModelStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelResponse), global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelResponse.Parser, new[]{ "ErrorSamples", "ErrorConfig", "ModelStatus", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelMetadata), global::Google.Cloud.DiscoveryEngine.V1Beta.TrainCustomModelMetadata.Parser, new[]{ "CreateTime", "UpdateTime" }, null, null, null, null)
           }));
     }
@@ -841,6 +844,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       errorSamples_ = other.errorSamples_.Clone();
       errorConfig_ = other.errorConfig_ != null ? other.errorConfig_.Clone() : null;
       modelStatus_ = other.modelStatus_;
+      metrics_ = other.metrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -887,7 +891,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     ///  * **bad-data**: The training data quality is bad.
     ///  * **no-improvement**: Tuning didn't improve performance. Won't deploy.
-    ///  * **in-progress**: Model training is in progress.
+    ///  * **in-progress**: Model training job creation is in progress.
+    ///  * **training**: Model is actively training.
+    ///  * **evaluating**: The model is evaluating trained metrics.
+    ///  * **indexing**: The model trained metrics are indexing.
     ///  * **ready**: The model is ready for serving.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -897,6 +904,20 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       set {
         modelStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 4;
+    private static readonly pbc::MapField<string, double>.Codec _map_metrics_codec
+        = new pbc::MapField<string, double>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForDouble(17, 0D), 34);
+    private readonly pbc::MapField<string, double> metrics_ = new pbc::MapField<string, double>();
+    /// <summary>
+    /// The metrics of the trained model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, double> Metrics {
+      get { return metrics_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -917,6 +938,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if(!errorSamples_.Equals(other.errorSamples_)) return false;
       if (!object.Equals(ErrorConfig, other.ErrorConfig)) return false;
       if (ModelStatus != other.ModelStatus) return false;
+      if (!Metrics.Equals(other.Metrics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -927,6 +949,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       hash ^= errorSamples_.GetHashCode();
       if (errorConfig_ != null) hash ^= ErrorConfig.GetHashCode();
       if (ModelStatus.Length != 0) hash ^= ModelStatus.GetHashCode();
+      hash ^= Metrics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -954,6 +977,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(ModelStatus);
       }
+      metrics_.WriteTo(output, _map_metrics_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -973,6 +997,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(ModelStatus);
       }
+      metrics_.WriteTo(ref output, _map_metrics_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -990,6 +1015,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (ModelStatus.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelStatus);
       }
+      size += metrics_.CalculateSize(_map_metrics_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1012,6 +1038,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (other.ModelStatus.Length != 0) {
         ModelStatus = other.ModelStatus;
       }
+      metrics_.MergeFrom(other.metrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1042,6 +1069,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             ModelStatus = input.ReadString();
             break;
           }
+          case 34: {
+            metrics_.AddEntriesFrom(input, _map_metrics_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1070,6 +1101,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 26: {
             ModelStatus = input.ReadString();
+            break;
+          }
+          case 34: {
+            metrics_.AddEntriesFrom(ref input, _map_metrics_codec);
             break;
           }
         }
