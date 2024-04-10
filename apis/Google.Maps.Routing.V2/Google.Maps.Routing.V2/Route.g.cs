@@ -235,8 +235,8 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// A collection of legs (path segments between waypoints) that make up the
     /// route. Each leg corresponds to the trip between two non-`via`
-    /// [Waypoints][google.maps.routing.v2.Waypoint]. For example, a route with no
-    /// intermediate waypoints has only one leg. A route that includes one
+    /// [`Waypoints`][google.maps.routing.v2.Waypoint]. For example, a route with
+    /// no intermediate waypoints has only one leg. A route that includes one
     /// non-`via` intermediate waypoint has two legs. A route that includes one
     /// `via` intermediate waypoint has one leg. The order of the legs matches the
     /// order of waypoints from `origin` to `intermediates` to `destination`.
@@ -379,7 +379,7 @@ namespace Google.Maps.Routing.V2 {
     private readonly pbc::RepeatedField<int> optimizedIntermediateWaypointIndex_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// If you set
-    /// [optimize_waypoint_order][google.maps.routing.v2.ComputeRoutesRequest.optimize_waypoint_order]
+    /// [`optimize_waypoint_order`][google.maps.routing.v2.ComputeRoutesRequest.optimize_waypoint_order]
     /// to true, this field contains the optimized ordering of intermediate
     /// waypoints. Otherwise, this field is empty.
     /// For example, if you give an input of Origin: LA; Intermediate waypoints:
@@ -946,7 +946,7 @@ namespace Google.Maps.Routing.V2 {
         /// <summary>
         /// Duration taking traffic conditions into consideration, represented in
         /// text form. Note: If you did not request traffic information, this value
-        /// will be the same value as static_duration.
+        /// will be the same value as `static_duration`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -961,8 +961,8 @@ namespace Google.Maps.Routing.V2 {
         public const int StaticDurationFieldNumber = 3;
         private global::Google.Type.LocalizedText staticDuration_;
         /// <summary>
-        /// Duration without taking traffic conditions into
-        /// consideration, represented in text form.
+        /// Duration without taking traffic conditions into consideration,
+        /// represented in text form.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1293,7 +1293,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Contains information about tolls on the route. This field is only populated
     /// if tolls are expected on the route. If this field is set, but the
-    /// estimatedPrice subfield is not populated, then the route contains tolls,
+    /// `estimatedPrice` subfield is not populated, then the route contains tolls,
     /// but the estimated price is unknown. If this field is not set, then there
     /// are no tolls expected on the route.
     /// </summary>
@@ -3552,7 +3552,7 @@ namespace Google.Maps.Routing.V2 {
   }
 
   /// <summary>
-  /// Contains a segment of a [RouteLeg][google.maps.routing.v2.RouteLeg]. A
+  /// Contains a segment of a [`RouteLeg`][google.maps.routing.v2.RouteLeg]. A
   /// step corresponds to a single navigation instruction. Route legs are made up
   /// of steps.
   /// </summary>
@@ -4934,7 +4934,7 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Details about the transit stops for the `RouteLegStep`
+      /// Details about the transit stops for the `RouteLegStep`.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TransitStopDetails : pb::IMessage<TransitStopDetails>
@@ -5286,7 +5286,7 @@ namespace Google.Maps.Routing.V2 {
       }
 
       /// <summary>
-      /// Localized descriptions of values for RouteTransitDetails.
+      /// Localized descriptions of values for `RouteTransitDetails`.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TransitDetailsLocalizedValues : pb::IMessage<TransitDetailsLocalizedValues>

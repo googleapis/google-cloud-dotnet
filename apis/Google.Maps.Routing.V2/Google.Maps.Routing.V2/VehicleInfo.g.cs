@@ -98,7 +98,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Describes the vehicle's emission type.
     /// Applies only to the `DRIVE`
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

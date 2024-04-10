@@ -46,7 +46,7 @@ namespace Google.Maps.Routing.V2 {
   #region Messages
   /// <summary>
   /// Encapsulates navigation instructions for a
-  /// [RouteLegStep][google.maps.routing.v2.RouteLegStep]
+  /// [`RouteLegStep`][google.maps.routing.v2.RouteLegStep].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NavigationInstruction : pb::IMessage<NavigationInstruction>
@@ -98,8 +98,9 @@ namespace Google.Maps.Routing.V2 {
     public const int ManeuverFieldNumber = 1;
     private global::Google.Maps.Routing.V2.Maneuver maneuver_ = global::Google.Maps.Routing.V2.Maneuver.Unspecified;
     /// <summary>
-    /// Encapsulates the navigation instructions for the current step (e.g., turn
-    /// left, merge, straight, etc.). This field determines which icon to display.
+    /// Encapsulates the navigation instructions for the current step (for example,
+    /// turn left, merge, or straight). This field determines which icon to
+    /// display.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
