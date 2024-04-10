@@ -62,6 +62,29 @@ public class ServiceCollectionExtensionsTest
         Assert.Equal(topicName, client.TopicName);
     }
 
+#if NET8_0_OR_GREATER
+    [Fact]
+    public void AddKeyedPublisherClient_WithAction()
+    {
+        // Arrange.
+        TopicName topicName = TopicName.FromProjectTopic("projectId", "topicId");
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+
+        // Act.
+        serviceCollection.AddKeyedPublisherClient("key", (_, builder) => builder.TopicName = topicName);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<PublisherClient>();
+        var keyedClient = provider.GetKeyedService<PublisherClient>("key");
+
+        // Assert.
+        Assert.Null(client);
+        Assert.NotNull(keyedClient);
+        Assert.Equal(topicName, keyedClient.TopicName);
+    }
+#endif
+
     [Fact]
     public void AddPublisherClient_WithAction_NoTopicName()
     {
@@ -148,6 +171,29 @@ public class ServiceCollectionExtensionsTest
         Assert.NotNull(client);
         Assert.Equal(subscriptionName, client.SubscriptionName);
     }
+
+#if NET8_0_OR_GREATER
+    [Fact]
+    public void AddKeyedSubscriberClient_WithAction()
+    {
+        // Arrange.
+        SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription("projectId", "subscriptionId");
+        IServiceCollection serviceCollection = new ServiceCollection();
+        // As Application Default Credentials are not available for unit tests, we need to pass a fake credential.
+        serviceCollection.AddSingleton(new FakeCredential().ToChannelCredentials());
+
+        // Act.
+        serviceCollection.AddKeyedSubscriberClient("key", (_, builder) => builder.SubscriptionName = subscriptionName);
+        var provider = serviceCollection.BuildServiceProvider();
+        var client = provider.GetService<SubscriberClient>();
+        var keyedClient = provider.GetKeyedService<SubscriberClient>("key");
+
+        // Assert.
+        Assert.Null(client);
+        Assert.NotNull(keyedClient);
+        Assert.Equal(subscriptionName, keyedClient.SubscriptionName);
+    }
+#endif
 
     [Fact]
     public void AddSubscriberClient_WithAction_NoSubscriptionName()

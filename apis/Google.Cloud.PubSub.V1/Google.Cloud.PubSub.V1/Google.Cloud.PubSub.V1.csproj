@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>3.12.0</Version>
-    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <TargetFrameworks>net8.0;netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.</Description>
     <PackageTags>PubSub;Google;Cloud</PackageTags>
@@ -12,6 +12,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" Version="[4.8.0, 5.0.0)" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="[3.2.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" Version="[2.46.6, 3.0.0)" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" Condition="'$(TargetFramework)'=='net8.0'" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="PublisherClient.*.cs">
