@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Protobuf;
+using LibGit2Sharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
@@ -28,16 +29,23 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// <summary>
     /// Tool to add a new library based on the service config (and protos) for an API.
     /// </summary>
-    public class AddCommand : CommandBase
+    public class AddCommand : ICommand
     {
-        public AddCommand()
-            : base("add", "Adds an API to the API catalog", "id")
-        {
-        }
+        private const string NoPullArgument = "--no-pull";
+        public string Description => "Adds an API to the API catalog";
 
-        protected override int ExecuteImpl(string[] args)
+        public string Command => "add";
+
+        public string ExpectedArguments => $"<id> [{NoPullArgument}]";
+
+        public int Execute(string[] args)
         {
+            if (args.Length == 0 || args.Length > 2 || (args.Length == 2 && args[1] != NoPullArgument))
+            {
+                throw new UserErrorException($"{Command} expected arguments: {ExpectedArguments}");
+            }
             string id = args[0];
+            bool pull = args.Length == 1; // We've already validated that if we've got 2 arguments, the second is NoPullArgument...
 
             var catalog = ApiCatalog.Load();
             if (catalog.Apis.Any(api => api.Id == id))
@@ -46,6 +54,25 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             var root = DirectoryLayout.DetermineRootDirectory();
             var googleapis = Path.Combine(root, "googleapis");
+
+            if (pull)
+            {
+                Console.WriteLine($"Pulling googleapis directory");
+                using var repo = new Repository(googleapis);
+                string oldSha = repo.Head.Tip.Sha;
+                
+                // The "merger" signature will never be used, due to requiring fast-forward-only,
+                // but we have to specify something.
+                var merger = new Signature("Ignored", "ignored@google.com", DateTimeOffset.UtcNow);
+                var pullOptions = new PullOptions
+                {
+                    MergeOptions = new MergeOptions { FastForwardStrategy = FastForwardStrategy.FastForwardOnly, FailOnConflict = true }
+                };
+                Commands.Pull(repo, merger, pullOptions);
+                string newSha = repo.Head.Tip.Sha;
+                Console.WriteLine(oldSha == newSha ? "Pull did not make changes" : $"Pull moved from {oldSha} to {newSha}");
+            }
+
             var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(googleapis);
 
             var targetApi = apiIndex.Apis.FirstOrDefault(api => api.DeriveCSharpNamespace() == id);
