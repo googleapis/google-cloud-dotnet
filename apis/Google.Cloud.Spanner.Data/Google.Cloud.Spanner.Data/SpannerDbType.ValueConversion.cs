@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -104,11 +104,6 @@ namespace Google.Cloud.Spanner.Data
                 return Convert.ToByte(ConvertToClrTypeImpl<long>(protobufValue, options));
             }
 
-            if (targetClrType == typeof(float))
-            {
-                return Convert.ToSingle(ConvertToClrTypeImpl<double>(protobufValue, options));
-            }
-
             if (targetClrType == typeof(Guid))
             {
                 return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue, options));
@@ -169,6 +164,8 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Int64:
                         return new Value { StringValue = Convert.ToInt64(value, InvariantCulture)
                             .ToString(InvariantCulture) };
+                case TypeCode.Float32:
+                    return new Value { NumberValue = Convert.ToSingle(value, InvariantCulture) };
                 case TypeCode.Float64:
                     return new Value {NumberValue = Convert.ToDouble(value, InvariantCulture)};
                 case TypeCode.Timestamp:
@@ -388,6 +385,39 @@ namespace Google.Cloud.Spanner.Data
                         return default(decimal);
                     case Value.KindOneofCase.StringValue:
                         return Convert.ToDecimal(wireValue.StringValue, InvariantCulture);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
+            if (targetClrType == typeof(float))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.BoolValue:
+                        return Convert.ToSingle(wireValue.BoolValue);
+                    case Value.KindOneofCase.NullValue:
+                        return default(float);
+                    case Value.KindOneofCase.NumberValue:
+                        return Convert.ToSingle(wireValue.NumberValue);
+                    case Value.KindOneofCase.StringValue:
+                        if (string.Compare(wireValue.StringValue, "NaN", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.NaN;
+                        }
+
+                        if (string.Compare(wireValue.StringValue, "Infinity", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.PositiveInfinity;
+                        }
+
+                        if (string.Compare(wireValue.StringValue, "-Infinity", StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                            return float.NegativeInfinity;
+                        }
+
+                        return Convert.ToSingle(wireValue.StringValue, InvariantCulture);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");

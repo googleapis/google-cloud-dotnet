@@ -21,7 +21,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using System.Threading;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
@@ -51,6 +50,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             { "StringField", SpannerDbType.String, "stringValue" },
             { "Int64Field", SpannerDbType.Int64, 2L },
+            { "Float32Field", SpannerDbType.Float32, float.NaN },
             { "Float64Field", SpannerDbType.Float64, double.NaN },
             { "BoolField", SpannerDbType.Bool, true },
             { "DateField", SpannerDbType.Date, new DateTime(2017, 1, 31) },
@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -83,7 +83,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return 6;
         }
 
-        private static IEnumerable<double> GetFloatsForArray()
+        private static IEnumerable<float> GetFloats32ForArray()
+        {
+            yield return 1.0f;
+            yield return 2.0f;
+            yield return 3.0f;
+        }
+
+        private static IEnumerable<double> GetFloats64ForArray()
         {
             yield return 1.0;
             yield return 2.0;
@@ -162,6 +169,27 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // Format is:  LocalClrInstance,  SpannerType,  SerializedJsonFromProto, [test one or both ways]
             // Testing can be one way if there is loss of information in the conversion.
+
+            // Spanner type = Float32 tests.
+            yield return new object[] { true, SpannerDbType.Float32, "1" };
+            yield return new object[] { false, SpannerDbType.Float32, "0" };
+            yield return new object[] { (byte) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (sbyte) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1.5M, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { 1.5D, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { 1.5F, SpannerDbType.Float32, "1.5" };
+            yield return new object[] { float.NegativeInfinity, SpannerDbType.Float32, Quote("-Infinity") };
+            yield return new object[] { float.PositiveInfinity, SpannerDbType.Float32, Quote("Infinity") };
+            yield return new object[] { float.NaN, SpannerDbType.Float32, Quote("NaN") };
+            yield return new object[] { 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1U, SpannerDbType.Float32, "1" };
+            yield return new object[] { 1L, SpannerDbType.Float32, "1" };
+            yield return new object[] { (ulong) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (short) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { (ushort) 1, SpannerDbType.Float32, "1" };
+            yield return new object[] { "1", SpannerDbType.Float32, "1" };
+            yield return new object[] { "1.5", SpannerDbType.Float32, "1.5" };
+            yield return new object[] { DBNull.Value, SpannerDbType.Float32, "null" };
 
             // Spanner type = Float64 tests.
             yield return new object[] { true, SpannerDbType.Float64, "1" };
@@ -292,7 +320,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "1.5", SpannerDbType.PgNumeric, Quote("1.5") };
             yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
 
-            // Note the difference in C# conversions from special doubles.
+            // Note the difference in C# conversions from special floats and doubles.
+            yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
+            yield return new object[] { float.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
+            yield return new object[] { float.NaN, SpannerDbType.String, Quote("NaN") };
             yield return new object[] { double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
             yield return new object[] { double.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
             yield return new object[] { double.NaN, SpannerDbType.String, Quote("NaN") };
@@ -329,7 +360,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             yield return new object[]
             {
-                new List<double>(GetFloatsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                new List<float>(GetFloats32ForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float32),
+                "[ 1, 2, 3 ]"
+            };
+            yield return new object[]
+            {
+                new List<double>(GetFloats64ForArray()), SpannerDbType.ArrayOf(SpannerDbType.Float64),
                 "[ 1, 2, 3 ]"
             };
             yield return new object[]
@@ -411,6 +447,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             yield return new object[]
             {
+                new float?[] { 5.5f, null, 10.5f }, SpannerDbType.ArrayOf(SpannerDbType.Float32),
+                "[ 5.5, null, 10.5 ]"
+            };
+            yield return new object[]
+            {
                 new double?[] { 5.5, null, 10.5 }, SpannerDbType.ArrayOf(SpannerDbType.Float64),
                 "[ 5.5, null, 10.5 ]"
             };
@@ -451,6 +492,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {
+            // Spanner type = Float32 tests.
+            yield return new object[] { (char) 1, SpannerDbType.Float32 };
+            yield return new object[] { s_testDate, SpannerDbType.Float32 };
+            yield return new object[] { new ToStringClass("1.5"), SpannerDbType.Float32 };
+            yield return new object[] { "", SpannerDbType.Float32 };
+
             // Spanner type = Float64 tests.
             yield return new object[] { (char)1, SpannerDbType.Float64 };
             yield return new object[] { s_testDate, SpannerDbType.Float64 };

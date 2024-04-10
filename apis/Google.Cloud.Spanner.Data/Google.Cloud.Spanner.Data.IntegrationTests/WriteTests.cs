@@ -98,6 +98,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // The emulator doesn't yet support the JSON type.
             if (!_fixture.RunningOnEmulator)
             {
+                parameters.Add("Float32Value", SpannerDbType.Float32, null);
+                parameters.Add("Float32ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float32), null);
                 parameters.Add("JsonValue", SpannerDbType.Json, null);
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null);
             }
@@ -124,6 +126,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32Value")));
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32ArrayValue")));
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
                     Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
                 }
@@ -136,6 +140,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var testDate = new DateTime(2017, 5, 9);
             bool?[] bArray = { true, null, false };
             long?[] lArray = { 0, null, 1 };
+            float?[] fArray = { 0f, null, 1f };
             double?[] dArray = { 0.0, null, 2.0 };
             SpannerNumeric?[] nArray = { SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("2.0") };
             string[] jsonArray = { "{\"f1\":\"v1\"}", "{}", "[]", null };
@@ -159,7 +164,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 { "BoolValue", SpannerDbType.Bool, true },
                 { "Int64Value", SpannerDbType.Int64, 1 },
-                { "Float64Value", SpannerDbType.Float64, 2.0 },
+                { "Float64Value", SpannerDbType.Float64, 3.14 },
                 { "StringValue", SpannerDbType.String, "abc" },
                 { "BytesValue", SpannerDbType.Bytes, new byte[] { 4, 5, 6 } },
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
@@ -179,6 +184,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // The emulator doesn't yet support the JSON type.
             if (!_fixture.RunningOnEmulator)
             {
+                parameters.Add("Float32Value", SpannerDbType.Float32, 2.718f);
+                parameters.Add("Float32ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float32), fArray);
                 parameters.Add("JsonValue", SpannerDbType.Json, "{\"f1\":\"v1\"}");
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), jsonArray);
             }
@@ -188,7 +195,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
                 Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
-                Assert.Equal(2.0, reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")), 1);
+                Assert.Equal(3.14, reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")), 2);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
@@ -209,6 +216,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
+                    Assert.Equal(2.718f, reader.GetFieldValue<float>(reader.GetOrdinal("Float32Value")), 3);
+                    Assert.Equal(fArray, reader.GetFieldValue<float?[]>(reader.GetOrdinal("Float32ArrayValue")));
                     Assert.Equal("{\"f1\":\"v1\"}", reader.GetFieldValue<string>(reader.GetOrdinal("JsonValue")));
                     Assert.Equal(jsonArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
@@ -291,6 +300,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // The emulator doesn't yet support the JSON type.
             if (!_fixture.RunningOnEmulator)
             {
+                parameters.Add("Float32ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float32), new float[0]);
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), new string[0]);
             }
 
@@ -308,27 +318,52 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
+                    Assert.Equal(new float[] { }, reader.GetFieldValue<float[]>(reader.GetOrdinal("Float32ArrayValue")));
                     Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
             }, GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
-        public async Task WriteInfinity()
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public async Task WriteInfinity_Float32()
+        {
+            Assert.Equal(1, await InsertAsync("Float32Value", SpannerDbType.Float32, float.PositiveInfinity));
+            await WithLastRowAsync(reader => Assert.True(float.IsPositiveInfinity(reader.GetFieldValue<float>("Float32Value"))), GetConnection(), GetWriteTestReader);
+        }
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public async Task WriteNanValue_Float32()
+        {
+            Assert.Equal(1, await InsertAsync("Float32Value", SpannerDbType.Float32, float.NaN));
+            await WithLastRowAsync(reader => Assert.True(float.IsNaN(reader.GetFieldValue<float>("Float32Value"))), GetConnection(), GetWriteTestReader);
+        }
+
+        [Fact]
+        [Trait(Constants.SupportedOnEmulator, Constants.No)]
+        public async Task WriteNegativeInfinity_Float32()
+        {
+            Assert.Equal(1, await InsertAsync("Float32Value", SpannerDbType.Float32, float.NegativeInfinity));
+            await WithLastRowAsync(reader => Assert.True(float.IsNegativeInfinity(reader.GetFieldValue<float>("Float32Value"))), GetConnection(), GetWriteTestReader);
+        }
+
+        [Fact]
+        public async Task WriteInfinity_Float64()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.PositiveInfinity));
             await WithLastRowAsync(reader => Assert.True(double.IsPositiveInfinity(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
-        public async Task WriteNanValue()
+        public async Task WriteNanValue_Float64()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NaN));
             await WithLastRowAsync(reader => Assert.True(double.IsNaN(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);
         }
 
         [Fact]
-        public async Task WriteNegativeInfinity()
+        public async Task WriteNegativeInfinity_Float64()
         {
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
             await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))), GetConnection(), GetWriteTestReader);

@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new ArgumentException(
                     $"{nameof(SpannerDbType)} must be set to one of "
-                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
+                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float32)} ,{nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
                     + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.PgJsonb)}, {nameof(SpannerDbType.Numeric)},"
                     + $" {nameof(SpannerDbType.PgNumeric)}, {nameof(SpannerDbType.PgOid)})");
@@ -166,6 +166,11 @@ namespace Google.Cloud.Spanner.Data
             // Only if SpannerDbType of parameter is not explicitly provided by user.
             if (_spannerDbType == null)
             {
+                if (Value is float)
+                {
+                    return options.SingleToConfiguredSpannerType;
+                }
+
                 if (Value is decimal)
                 {
                     return options.DecimalToConfiguredSpannerType;

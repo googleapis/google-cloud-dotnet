@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,6 +38,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  K,
                  BoolValue,
                  Int64Value,
+                 {EmptyOnEmulator("Float32Value,")}
                  Float64Value,
                  StringValue,
                  NumericValue,
@@ -47,6 +48,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  DateValue,
                  BoolArrayValue,
                  Int64ArrayValue,
+                 {EmptyOnEmulator("Float32ArrayValue,")}
                  Float64ArrayValue,
                  NumericArrayValue,
                  StringArrayValue,
@@ -58,6 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @K,
                  @BoolValue,
                  @Int64Value,
+                 {EmptyOnEmulator("@Float32Value,")}
                  @Float64Value,
                  @StringValue,
                  @NumericValue,
@@ -67,6 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @DateValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
+                 {EmptyOnEmulator("@Float32ArrayValue,")}
                  @Float64ArrayValue,
                  @NumericArrayValue,
                  @StringArrayValue,
@@ -83,6 +87,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             K                   STRING(MAX) NOT NULL,
                             BoolValue           BOOL,
                             Int64Value          INT64,
+                            {EmptyOnEmulator("Float32Value        FLOAT32,")}
                             Float64Value        FLOAT64,
                             StringValue         STRING(MAX),
                             NumericValue        NUMERIC,
@@ -92,6 +97,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             DateValue           DATE,
                             BoolArrayValue      ARRAY<BOOL>,
                             Int64ArrayValue     ARRAY<INT64>,
+                            {EmptyOnEmulator("Float32ArrayValue   ARRAY<FLOAT32>,")}
                             Float64ArrayValue   ARRAY<FLOAT64>,
                             NumericArrayValue   ARRAY<NUMERIC>,
                             StringArrayValue    ARRAY<STRING(MAX)>,

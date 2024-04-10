@@ -56,7 +56,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(SchemaTestUnsupportedData))]
         public async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema(string columnName, System.Type type, SpannerDbType spannerDbType)
         {
-            Skip.If(_fixture.RunningOnEmulator && (SpannerDbType.Json.Equals(spannerDbType) || SpannerDbType.ArrayOf(SpannerDbType.Json).Equals(spannerDbType)), "The emulator does not support the JSON type");
+            MaybeSkipIfOnEmulator(spannerDbType);
             string selectQuery = $"SELECT {columnName} FROM {_fixture.TableName}";
             await GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(columnName, type, spannerDbType, _fixture.ConnectionString, selectQuery);
         }
@@ -65,6 +65,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static TheoryData<string, System.Type, SpannerDbType> SchemaTestUnsupportedData { get; } =
             new TheoryData<string, System.Type, SpannerDbType>
             {
+                { "Float32Value", typeof(float), SpannerDbType.Float32 },
+                { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
                 { "JsonValue", typeof(string), SpannerDbType.Json },
                 { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) }
             };
@@ -133,5 +135,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+        private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
+            Skip.If(_fixture.RunningOnEmulator && SchemaTestUnsupportedData.Any(data => spannerDbType.Equals(data[2])),
+                $"The emulator does not support {spannerDbType}.");
     }
 }
