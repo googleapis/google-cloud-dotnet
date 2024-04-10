@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START discoveryengine_v1beta_generated_DocumentService_ImportDocuments_sync]
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDocumentServiceClientSnippets
     {
@@ -41,6 +42,7 @@ namespace GoogleCSharpSnippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
                 AutoGenerateIds = false,
                 IdField = "",
             };

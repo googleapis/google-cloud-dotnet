@@ -833,5 +833,362 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for PauseEngine</summary>
+        public void PauseEngineRequestObject()
+        {
+            // Snippet: PauseEngine(PauseEngineRequest, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            PauseEngineRequest request = new PauseEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Engine response = engineServiceClient.PauseEngine(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseEngineAsync</summary>
+        public async Task PauseEngineRequestObjectAsync()
+        {
+            // Snippet: PauseEngineAsync(PauseEngineRequest, CallSettings)
+            // Additional: PauseEngineAsync(PauseEngineRequest, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PauseEngineRequest request = new PauseEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Engine response = await engineServiceClient.PauseEngineAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseEngine</summary>
+        public void PauseEngine()
+        {
+            // Snippet: PauseEngine(string, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Engine response = engineServiceClient.PauseEngine(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseEngineAsync</summary>
+        public async Task PauseEngineAsync()
+        {
+            // Snippet: PauseEngineAsync(string, CallSettings)
+            // Additional: PauseEngineAsync(string, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Engine response = await engineServiceClient.PauseEngineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseEngine</summary>
+        public void PauseEngineResourceNames()
+        {
+            // Snippet: PauseEngine(EngineName, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Engine response = engineServiceClient.PauseEngine(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseEngineAsync</summary>
+        public async Task PauseEngineResourceNamesAsync()
+        {
+            // Snippet: PauseEngineAsync(EngineName, CallSettings)
+            // Additional: PauseEngineAsync(EngineName, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Engine response = await engineServiceClient.PauseEngineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngine</summary>
+        public void ResumeEngineRequestObject()
+        {
+            // Snippet: ResumeEngine(ResumeEngineRequest, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            ResumeEngineRequest request = new ResumeEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Engine response = engineServiceClient.ResumeEngine(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngineAsync</summary>
+        public async Task ResumeEngineRequestObjectAsync()
+        {
+            // Snippet: ResumeEngineAsync(ResumeEngineRequest, CallSettings)
+            // Additional: ResumeEngineAsync(ResumeEngineRequest, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumeEngineRequest request = new ResumeEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Engine response = await engineServiceClient.ResumeEngineAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngine</summary>
+        public void ResumeEngine()
+        {
+            // Snippet: ResumeEngine(string, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Engine response = engineServiceClient.ResumeEngine(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngineAsync</summary>
+        public async Task ResumeEngineAsync()
+        {
+            // Snippet: ResumeEngineAsync(string, CallSettings)
+            // Additional: ResumeEngineAsync(string, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Engine response = await engineServiceClient.ResumeEngineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngine</summary>
+        public void ResumeEngineResourceNames()
+        {
+            // Snippet: ResumeEngine(EngineName, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Engine response = engineServiceClient.ResumeEngine(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeEngineAsync</summary>
+        public async Task ResumeEngineResourceNamesAsync()
+        {
+            // Snippet: ResumeEngineAsync(EngineName, CallSettings)
+            // Additional: ResumeEngineAsync(EngineName, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Engine response = await engineServiceClient.ResumeEngineAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngine</summary>
+        public void TuneEngineRequestObject()
+        {
+            // Snippet: TuneEngine(TuneEngineRequest, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            TuneEngineRequest request = new TuneEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = engineServiceClient.TuneEngine(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = engineServiceClient.PollOnceTuneEngine(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngineAsync</summary>
+        public async Task TuneEngineRequestObjectAsync()
+        {
+            // Snippet: TuneEngineAsync(TuneEngineRequest, CallSettings)
+            // Additional: TuneEngineAsync(TuneEngineRequest, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TuneEngineRequest request = new TuneEngineRequest
+            {
+                EngineName = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]"),
+            };
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = await engineServiceClient.TuneEngineAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = await engineServiceClient.PollOnceTuneEngineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngine</summary>
+        public void TuneEngine()
+        {
+            // Snippet: TuneEngine(string, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = engineServiceClient.TuneEngine(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = engineServiceClient.PollOnceTuneEngine(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngineAsync</summary>
+        public async Task TuneEngineAsync()
+        {
+            // Snippet: TuneEngineAsync(string, CallSettings)
+            // Additional: TuneEngineAsync(string, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/collections/[COLLECTION]/engines/[ENGINE]";
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = await engineServiceClient.TuneEngineAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = await engineServiceClient.PollOnceTuneEngineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngine</summary>
+        public void TuneEngineResourceNames()
+        {
+            // Snippet: TuneEngine(EngineName, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = engineServiceClient.TuneEngine(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = engineServiceClient.PollOnceTuneEngine(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TuneEngineAsync</summary>
+        public async Task TuneEngineResourceNamesAsync()
+        {
+            // Snippet: TuneEngineAsync(EngineName, CallSettings)
+            // Additional: TuneEngineAsync(EngineName, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EngineName name = EngineName.FromProjectLocationCollectionEngine("[PROJECT]", "[LOCATION]", "[COLLECTION]", "[ENGINE]");
+            // Make the request
+            Operation<TuneEngineResponse, TuneEngineMetadata> response = await engineServiceClient.TuneEngineAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<TuneEngineResponse, TuneEngineMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            TuneEngineResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<TuneEngineResponse, TuneEngineMetadata> retrievedResponse = await engineServiceClient.PollOnceTuneEngineAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                TuneEngineResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

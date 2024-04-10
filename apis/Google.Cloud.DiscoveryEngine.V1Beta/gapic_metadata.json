@@ -37,6 +37,12 @@
         "grpc": {
           "libraryClient": "ConversationalSearchServiceClient",
           "rpcs": {
+            "AnswerQuery": {
+              "methods": [
+                "AnswerQuery",
+                "AnswerQueryAsync"
+              ]
+            },
             "ConverseConversation": {
               "methods": [
                 "ConverseConversation",
@@ -49,10 +55,28 @@
                 "CreateConversationAsync"
               ]
             },
+            "CreateSession": {
+              "methods": [
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
             "DeleteConversation": {
               "methods": [
                 "DeleteConversation",
                 "DeleteConversationAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "GetAnswer": {
+              "methods": [
+                "GetAnswer",
+                "GetAnswerAsync"
               ]
             },
             "GetConversation": {
@@ -61,16 +85,34 @@
                 "GetConversationAsync"
               ]
             },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
             "ListConversations": {
               "methods": [
                 "ListConversations",
                 "ListConversationsAsync"
               ]
             },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
             "UpdateConversation": {
               "methods": [
                 "UpdateConversation",
                 "UpdateConversationAsync"
+              ]
+            },
+            "UpdateSession": {
+              "methods": [
+                "UpdateSession",
+                "UpdateSessionAsync"
               ]
             }
           }
@@ -196,10 +238,58 @@
                 "ListEnginesAsync"
               ]
             },
+            "PauseEngine": {
+              "methods": [
+                "PauseEngine",
+                "PauseEngineAsync"
+              ]
+            },
+            "ResumeEngine": {
+              "methods": [
+                "ResumeEngine",
+                "ResumeEngineAsync"
+              ]
+            },
+            "TuneEngine": {
+              "methods": [
+                "TuneEngine",
+                "TuneEngineAsync"
+              ]
+            },
             "UpdateEngine": {
               "methods": [
                 "UpdateEngine",
                 "UpdateEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GroundedGenerationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GroundedGenerationServiceClient",
+          "rpcs": {
+            "CheckGrounding": {
+              "methods": [
+                "CheckGrounding",
+                "CheckGroundingAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RankService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RankServiceClient",
+          "rpcs": {
+            "Rank": {
+              "methods": [
+                "Rank",
+                "RankAsync"
               ]
             }
           }

@@ -33,29 +33,47 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "DwoHbnVtYmVycxgCIAMoASIvCghVc2VySW5mbxIPCgd1c2VyX2lkGAEgASgJ",
             "EhIKCnVzZXJfYWdlbnQYAiABKAkiJQoPRW1iZWRkaW5nQ29uZmlnEhIKCmZp",
             "ZWxkX3BhdGgYASABKAkiHAoKRG91YmxlTGlzdBIOCgZ2YWx1ZXMYASADKAEq",
-            "TQoQSW5kdXN0cnlWZXJ0aWNhbBIhCh1JTkRVU1RSWV9WRVJUSUNBTF9VTlNQ",
-            "RUNJRklFRBAAEgsKB0dFTkVSSUMQARIJCgVNRURJQRACKoEBCgxTb2x1dGlv",
-            "blR5cGUSHQoZU09MVVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEiAKHFNPTFVU",
-            "SU9OX1RZUEVfUkVDT01NRU5EQVRJT04QARIYChRTT0xVVElPTl9UWVBFX1NF",
-            "QVJDSBACEhYKElNPTFVUSU9OX1RZUEVfQ0hBVBADKl8KClNlYXJjaFRpZXIS",
-            "GwoXU0VBUkNIX1RJRVJfVU5TUEVDSUZJRUQQABIYChRTRUFSQ0hfVElFUl9T",
-            "VEFOREFSRBABEhoKFlNFQVJDSF9USUVSX0VOVEVSUFJJU0UQAipDCgtTZWFy",
-            "Y2hBZGRPbhIdChlTRUFSQ0hfQUREX09OX1VOU1BFQ0lGSUVEEAASFQoRU0VB",
-            "UkNIX0FERF9PTl9MTE0QAULsBAonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
-            "cnllbmdpbmUudjFiZXRhQgtDb21tb25Qcm90b1ABWlFjbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5n",
-            "aW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNH",
-            "b29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxD",
-            "bG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6",
-            "RGlzY292ZXJ5RW5naW5lOjpWMWJldGHqQeYBCiVkaXNjb3ZlcnllbmdpbmUu",
-            "Z29vZ2xlYXBpcy5jb20vQnJhbmNoElFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJh",
-            "bmNoZXMve2JyYW5jaH0SanByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jl",
-            "cy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH3qQW0KKWRpc2NvdmVy",
-            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Db2xsZWN0aW9uEkBwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2Nv",
-            "bGxlY3Rpb259YgZwcm90bzM="));
+            "YgoQSW5kdXN0cnlWZXJ0aWNhbBIhCh1JTkRVU1RSWV9WRVJUSUNBTF9VTlNQ",
+            "RUNJRklFRBAAEgsKB0dFTkVSSUMQARIJCgVNRURJQRACEhMKD0hFQUxUSENB",
+            "UkVfRkhJUhAHKqQBCgxTb2x1dGlvblR5cGUSHQoZU09MVVRJT05fVFlQRV9V",
+            "TlNQRUNJRklFRBAAEiAKHFNPTFVUSU9OX1RZUEVfUkVDT01NRU5EQVRJT04Q",
+            "ARIYChRTT0xVVElPTl9UWVBFX1NFQVJDSBACEhYKElNPTFVUSU9OX1RZUEVf",
+            "Q0hBVBADEiEKHVNPTFVUSU9OX1RZUEVfR0VORVJBVElWRV9DSEFUEAQqXwoK",
+            "U2VhcmNoVGllchIbChdTRUFSQ0hfVElFUl9VTlNQRUNJRklFRBAAEhgKFFNF",
+            "QVJDSF9USUVSX1NUQU5EQVJEEAESGgoWU0VBUkNIX1RJRVJfRU5URVJQUklT",
+            "RRACKkMKC1NlYXJjaEFkZE9uEh0KGVNFQVJDSF9BRERfT05fVU5TUEVDSUZJ",
+            "RUQQABIVChFTRUFSQ0hfQUREX09OX0xMTRABQukKCidjb20uZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCC0NvbW1vblByb3RvUAFaUWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9k",
+            "aXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVS",
+            "WUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRh",
+            "ygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29n",
+            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YepB5gEKJWRpc2Nv",
+            "dmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9CcmFuY2gSUXByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
+            "X3N0b3JlfS9icmFuY2hlcy97YnJhbmNofRJqcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9u",
+            "fS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJhbmNofepB",
+            "bQopZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0NvbGxlY3Rpb24S",
+            "QHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xs",
+            "ZWN0aW9ucy97Y29sbGVjdGlvbn3qQVIKJ2Rpc2NvdmVyeWVuZ2luZS5nb29n",
+            "bGVhcGlzLmNvbS9Mb2NhdGlvbhIncHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb2596kF9Ci5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBp",
+            "cy5jb20vR3JvdW5kaW5nQ29uZmlnEktwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vZ3JvdW5kaW5nQ29uZmlncy97Z3JvdW5kaW5n",
+            "X2NvbmZpZ33qQXcKLGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9S",
+            "YW5raW5nQ29uZmlnEkdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcmFua2luZ0NvbmZpZ3Mve3JhbmtpbmdfY29uZmlnfepBeQoj",
+            "aGVhbHRoY2FyZS5nb29nbGVhcGlzLmNvbS9GaGlyU3RvcmUSUnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhc2V0cy97ZGF0",
+            "YXNldH0vZmhpclN0b3Jlcy97Zmhpcl9zdG9yZX3qQa4CCiRkaXNjb3Zlcnll",
+            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vQ2h1bmsSdXByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3Jl",
+            "fS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVudHMve2RvY3VtZW50fS9jaHVu",
+            "a3Mve2NodW5rfRKOAXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97",
+            "ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0vZG9jdW1lbnRzL3tkb2N1",
+            "bWVudH0vY2h1bmtzL3tjaHVua31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.IndustryVertical), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SolutionType), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchTier), typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchAddOn), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,6 +106,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// The media industry vertical.
     /// </summary>
     [pbr::OriginalName("MEDIA")] Media = 2,
+    /// <summary>
+    /// The healthcare FHIR vertical.
+    /// </summary>
+    [pbr::OriginalName("HEALTHCARE_FHIR")] HealthcareFhir = 7,
   }
 
   /// <summary>
@@ -110,11 +132,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Used for use cases related to the Generative AI agent.
     /// </summary>
     [pbr::OriginalName("SOLUTION_TYPE_CHAT")] Chat = 3,
+    /// <summary>
+    /// Used for use cases related to the Generative Chat agent.
+    /// It's used for Generative chat engine only, the associated data stores
+    /// must enrolled with `SOLUTION_TYPE_CHAT` solution.
+    /// </summary>
+    [pbr::OriginalName("SOLUTION_TYPE_GENERATIVE_CHAT")] GenerativeChat = 4,
   }
 
   /// <summary>
   /// Tiers of search features. Different tiers might have different
-  /// pricing. To learn more, please check the pricing documentation.
+  /// pricing. To learn more, check the pricing documentation.
   /// </summary>
   public enum SearchTier {
     /// <summary>

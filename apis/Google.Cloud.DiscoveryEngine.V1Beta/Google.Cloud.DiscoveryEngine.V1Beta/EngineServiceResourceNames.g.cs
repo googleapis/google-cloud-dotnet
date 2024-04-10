@@ -66,4 +66,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class PauseEngineRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EngineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EngineName EngineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EngineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ResumeEngineRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EngineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EngineName EngineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EngineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TuneEngineRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EngineName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EngineName EngineName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EngineName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TuneEngineMetadata
+    {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Engine"/> resource name property.</summary>
+        public EngineName EngineAsEngineName
+        {
+            get => string.IsNullOrEmpty(Engine) ? null : EngineName.Parse(Engine, allowUnparsed: true);
+            set => Engine = value?.ToString() ?? "";
+        }
+    }
 }

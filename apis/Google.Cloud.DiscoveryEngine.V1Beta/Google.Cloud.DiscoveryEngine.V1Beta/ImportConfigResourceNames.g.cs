@@ -18,6 +18,18 @@
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
 {
+    public partial class FhirStoreSource
+    {
+        /// <summary>
+        /// <see cref="FhirStoreName"/>-typed view over the <see cref="FhirStore"/> resource name property.
+        /// </summary>
+        public FhirStoreName FhirStoreAsFhirStoreName
+        {
+            get => string.IsNullOrEmpty(FhirStore) ? null : FhirStoreName.Parse(FhirStore, allowUnparsed: true);
+            set => FhirStore = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportUserEventsRequest
     {
         /// <summary>

@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START discoveryengine_v1beta_generated_DocumentService_UpdateDocument_async]
     using Google.Cloud.DiscoveryEngine.V1Beta;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDocumentServiceClientSnippets
@@ -39,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = await documentServiceClient.UpdateDocumentAsync(request);
