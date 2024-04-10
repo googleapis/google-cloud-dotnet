@@ -51,6 +51,7 @@ namespace GoogleCSharpSnippets
                 RoutingPreference = RoutingPreference.Unspecified,
                 DepartureTime = new Timestamp(),
                 LanguageCode = "",
+                Units = Units.Unspecified,
                 ExtraComputations =
                 {
                     ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,

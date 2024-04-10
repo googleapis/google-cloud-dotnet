@@ -79,13 +79,14 @@ namespace Google.Maps.Routing.V2 {
     /// </summary>
     [pbr::OriginalName("FALLBACK_ROUTING_MODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Indicates the `TRAFFIC_UNAWARE` [google.maps.routing.v2.RoutingPreference]
-    /// was used to compute the response.
+    /// Indicates the `TRAFFIC_UNAWARE`
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference] was used to
+    /// compute the response.
     /// </summary>
     [pbr::OriginalName("FALLBACK_TRAFFIC_UNAWARE")] FallbackTrafficUnaware = 1,
     /// <summary>
     /// Indicates the `TRAFFIC_AWARE`
-    /// [RoutingPreference][google.maps.routing.v2.RoutingPreference] was used to
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference] was used to
     /// compute the response.
     /// </summary>
     [pbr::OriginalName("FALLBACK_TRAFFIC_AWARE")] FallbackTrafficAware = 2,

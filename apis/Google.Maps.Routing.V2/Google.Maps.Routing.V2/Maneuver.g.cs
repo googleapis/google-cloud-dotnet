@@ -49,7 +49,7 @@ namespace Google.Maps.Routing.V2 {
   #region Enums
   /// <summary>
   /// A set of values that specify the navigation action to take for the current
-  /// step (e.g., turn left, merge, straight, etc.).
+  /// step (for example, turn left, merge, or straight).
   /// </summary>
   public enum Maneuver {
     /// <summary>

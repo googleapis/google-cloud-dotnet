@@ -53,7 +53,7 @@ namespace Google.Maps.Routing.V2 {
   }
   #region Messages
   /// <summary>
-  /// Contains [GeocodedWaypoints][google.maps.routing.v2.GeocodedWaypoint] for
+  /// Contains [`GeocodedWaypoints`][google.maps.routing.v2.GeocodedWaypoint] for
   /// origin, destination and intermediate waypoints. Only populated for address
   /// waypoints.
   /// </summary>
@@ -449,8 +449,8 @@ namespace Google.Maps.Routing.V2 {
     private readonly pbc::RepeatedField<string> type_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// The type(s) of the result, in the form of zero or more type tags.
-    /// Supported types:
-    /// https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types
+    /// Supported types: [Address types and address component
+    /// types](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

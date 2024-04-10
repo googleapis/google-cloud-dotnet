@@ -81,7 +81,7 @@ namespace Google.Maps.Routing.V2 {
     [pbr::OriginalName("POLYLINE_ENCODING_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// Specifies a polyline encoded using the [polyline encoding
-    /// algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm).
+    /// algorithm](/maps/documentation/utilities/polylinealgorithm).
     /// </summary>
     [pbr::OriginalName("ENCODED_POLYLINE")] EncodedPolyline = 1,
     /// <summary>
@@ -184,7 +184,7 @@ namespace Google.Maps.Routing.V2 {
     public const int GeoJsonLinestringFieldNumber = 2;
     /// <summary>
     /// Specifies a polyline using the [GeoJSON LineString
-    /// format](https://tools.ietf.org/html/rfc7946#section-3.1.4)
+    /// format](https://tools.ietf.org/html/rfc7946#section-3.1.4).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -77,7 +77,7 @@ namespace Google.Maps.Routing.V2 {
             "bmcudjIuUm91dGUSOwoNZmFsbGJhY2tfaW5mbxgCIAEoCzIkLmdvb2dsZS5t",
             "YXBzLnJvdXRpbmcudjIuRmFsbGJhY2tJbmZvEkMKEWdlb2NvZGluZ19yZXN1",
             "bHRzGAMgASgLMiguZ29vZ2xlLm1hcHMucm91dGluZy52Mi5HZW9jb2RpbmdS",
-            "ZXN1bHRzIpMGChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0Ej8KB29yaWdp",
+            "ZXN1bHRzIsYGChlDb21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0Ej8KB29yaWdp",
             "bnMYASADKAsyKS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlJvdXRlTWF0cml4",
             "T3JpZ2luQgPgQQISSQoMZGVzdGluYXRpb25zGAIgAygLMi4uZ29vZ2xlLm1h",
             "cHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeERlc3RpbmF0aW9uQgPgQQISQQoL",
@@ -87,58 +87,59 @@ namespace Google.Maps.Routing.V2 {
             "A+BBARI3Cg5kZXBhcnR1cmVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXBCA+BBARI1CgxhcnJpdmFsX3RpbWUYCyABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESGgoNbGFuZ3VhZ2VfY29kZRgG",
-            "IAEoCUID4EEBEhgKC3JlZ2lvbl9jb2RlGAkgASgJQgPgQQESYwoSZXh0cmFf",
-            "Y29tcHV0YXRpb25zGAggAygOMkIuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5D",
-            "b21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0LkV4dHJhQ29tcHV0YXRpb25CA+BB",
-            "ARJACg10cmFmZmljX21vZGVsGAogASgOMiQuZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5UcmFmZmljTW9kZWxCA+BBARJMChN0cmFuc2l0X3ByZWZlcmVuY2Vz",
-            "GAwgASgLMiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5UcmFuc2l0UHJlZmVy",
-            "ZW5jZXNCA+BBASJAChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJBX0NPTVBV",
-            "VEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQASKSAQoRUm91dGVNYXRy",
-            "aXhPcmlnaW4SNwoId2F5cG9pbnQYASABKAsyIC5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyLldheXBvaW50QgPgQQISRAoPcm91dGVfbW9kaWZpZXJzGAIgASgL",
-            "MiYuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1vZGlmaWVyc0ID4EEB",
-            "IlEKFlJvdXRlTWF0cml4RGVzdGluYXRpb24SNwoId2F5cG9pbnQYASABKAsy",
-            "IC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQIijAYKElJv",
-            "dXRlTWF0cml4RWxlbWVudBIZCgxvcmlnaW5faW5kZXgYASABKAVIAIgBARIe",
-            "ChFkZXN0aW5hdGlvbl9pbmRleBgCIAEoBUgBiAEBEiIKBnN0YXR1cxgDIAEo",
-            "CzISLmdvb2dsZS5ycGMuU3RhdHVzEkYKCWNvbmRpdGlvbhgJIAEoDjIzLmdv",
-            "b2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0",
-            "aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgEIAEoBRIrCghkdXJhdGlvbhgFIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9zdGF0aWNfZHVyYXRp",
-            "b24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoPdHJhdmVs",
-            "X2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0",
-            "ZVRyYXZlbEFkdmlzb3J5EjsKDWZhbGxiYWNrX2luZm8YCCABKAsyJC5nb29n",
-            "bGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mbxJUChBsb2NhbGl6ZWRf",
-            "dmFsdWVzGAogASgLMjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1h",
-            "dHJpeEVsZW1lbnQuTG9jYWxpemVkVmFsdWVzGtQBCg9Mb2NhbGl6ZWRWYWx1",
-            "ZXMSLAoIZGlzdGFuY2UYASABKAsyGi5nb29nbGUudHlwZS5Mb2NhbGl6ZWRU",
-            "ZXh0EiwKCGR1cmF0aW9uGAIgASgLMhouZ29vZ2xlLnR5cGUuTG9jYWxpemVk",
-            "VGV4dBIzCg9zdGF0aWNfZHVyYXRpb24YAyABKAsyGi5nb29nbGUudHlwZS5M",
-            "b2NhbGl6ZWRUZXh0EjAKDHRyYW5zaXRfZmFyZRgEIAEoCzIaLmdvb2dsZS50",
-            "eXBlLkxvY2FsaXplZFRleHRCDwoNX29yaWdpbl9pbmRleEIUChJfZGVzdGlu",
-            "YXRpb25faW5kZXgqdAobUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0aW9uEi4K",
-            "KlJPVVRFX01BVFJJWF9FTEVNRU5UX0NPTkRJVElPTl9VTlNQRUNJRklFRBAA",
-            "EhAKDFJPVVRFX0VYSVNUUxABEhMKD1JPVVRFX05PVF9GT1VORBACMuQCCgZS",
-            "b3V0ZXMSlQEKDUNvbXB1dGVSb3V0ZXMSLC5nb29nbGUubWFwcy5yb3V0aW5n",
-            "LnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0Gi0uZ29vZ2xlLm1hcHMucm91dGlu",
-            "Zy52Mi5Db21wdXRlUm91dGVzUmVzcG9uc2UiJ4LT5JMCISIcL2RpcmVjdGlv",
-            "bnMvdjI6Y29tcHV0ZVJvdXRlczoBKhKnAQoSQ29tcHV0ZVJvdXRlTWF0cml4",
-            "EjEuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVNYXRyaXhS",
-            "ZXF1ZXN0GiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1hdHJpeEVs",
-            "ZW1lbnQiMILT5JMCKiIlL2Rpc3RhbmNlTWF0cml4L3YyOmNvbXB1dGVSb3V0",
-            "ZU1hdHJpeDoBKjABGhjKQRVyb3V0ZXMuZ29vZ2xlYXBpcy5jb21CxwEKGmNv",
-            "bS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQhJSb3V0ZXNTZXJ2aWNlUHJvdG9Q",
-            "AVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91",
-            "dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91",
-            "dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1h",
-            "cHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
+            "IAEoCUID4EEBEhgKC3JlZ2lvbl9jb2RlGAkgASgJQgPgQQESMQoFdW5pdHMY",
+            "ByABKA4yHS5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlVuaXRzQgPgQQESYwoS",
+            "ZXh0cmFfY29tcHV0YXRpb25zGAggAygOMkIuZ29vZ2xlLm1hcHMucm91dGlu",
+            "Zy52Mi5Db21wdXRlUm91dGVNYXRyaXhSZXF1ZXN0LkV4dHJhQ29tcHV0YXRp",
+            "b25CA+BBARJACg10cmFmZmljX21vZGVsGAogASgOMiQuZ29vZ2xlLm1hcHMu",
+            "cm91dGluZy52Mi5UcmFmZmljTW9kZWxCA+BBARJMChN0cmFuc2l0X3ByZWZl",
+            "cmVuY2VzGAwgASgLMiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5UcmFuc2l0",
+            "UHJlZmVyZW5jZXNCA+BBASJAChBFeHRyYUNvbXB1dGF0aW9uEiEKHUVYVFJB",
+            "X0NPTVBVVEFUSU9OX1VOU1BFQ0lGSUVEEAASCQoFVE9MTFMQASKSAQoRUm91",
+            "dGVNYXRyaXhPcmlnaW4SNwoId2F5cG9pbnQYASABKAsyIC5nb29nbGUubWFw",
+            "cy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQISRAoPcm91dGVfbW9kaWZpZXJz",
+            "GAIgASgLMiYuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1vZGlmaWVy",
+            "c0ID4EEBIlEKFlJvdXRlTWF0cml4RGVzdGluYXRpb24SNwoId2F5cG9pbnQY",
+            "ASABKAsyIC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLldheXBvaW50QgPgQQIi",
+            "jAYKElJvdXRlTWF0cml4RWxlbWVudBIZCgxvcmlnaW5faW5kZXgYASABKAVI",
+            "AIgBARIeChFkZXN0aW5hdGlvbl9pbmRleBgCIAEoBUgBiAEBEiIKBnN0YXR1",
+            "cxgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkYKCWNvbmRpdGlvbhgJIAEo",
+            "DjIzLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuUm91dGVNYXRyaXhFbGVtZW50",
+            "Q29uZGl0aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgEIAEoBRIrCghkdXJhdGlv",
+            "bhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9zdGF0aWNf",
+            "ZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoP",
+            "dHJhdmVsX2Fkdmlzb3J5GAcgASgLMisuZ29vZ2xlLm1hcHMucm91dGluZy52",
+            "Mi5Sb3V0ZVRyYXZlbEFkdmlzb3J5EjsKDWZhbGxiYWNrX2luZm8YCCABKAsy",
+            "JC5nb29nbGUubWFwcy5yb3V0aW5nLnYyLkZhbGxiYWNrSW5mbxJUChBsb2Nh",
+            "bGl6ZWRfdmFsdWVzGAogASgLMjouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5S",
+            "b3V0ZU1hdHJpeEVsZW1lbnQuTG9jYWxpemVkVmFsdWVzGtQBCg9Mb2NhbGl6",
+            "ZWRWYWx1ZXMSLAoIZGlzdGFuY2UYASABKAsyGi5nb29nbGUudHlwZS5Mb2Nh",
+            "bGl6ZWRUZXh0EiwKCGR1cmF0aW9uGAIgASgLMhouZ29vZ2xlLnR5cGUuTG9j",
+            "YWxpemVkVGV4dBIzCg9zdGF0aWNfZHVyYXRpb24YAyABKAsyGi5nb29nbGUu",
+            "dHlwZS5Mb2NhbGl6ZWRUZXh0EjAKDHRyYW5zaXRfZmFyZRgEIAEoCzIaLmdv",
+            "b2dsZS50eXBlLkxvY2FsaXplZFRleHRCDwoNX29yaWdpbl9pbmRleEIUChJf",
+            "ZGVzdGluYXRpb25faW5kZXgqdAobUm91dGVNYXRyaXhFbGVtZW50Q29uZGl0",
+            "aW9uEi4KKlJPVVRFX01BVFJJWF9FTEVNRU5UX0NPTkRJVElPTl9VTlNQRUNJ",
+            "RklFRBAAEhAKDFJPVVRFX0VYSVNUUxABEhMKD1JPVVRFX05PVF9GT1VORBAC",
+            "MuQCCgZSb3V0ZXMSlQEKDUNvbXB1dGVSb3V0ZXMSLC5nb29nbGUubWFwcy5y",
+            "b3V0aW5nLnYyLkNvbXB1dGVSb3V0ZXNSZXF1ZXN0Gi0uZ29vZ2xlLm1hcHMu",
+            "cm91dGluZy52Mi5Db21wdXRlUm91dGVzUmVzcG9uc2UiJ4LT5JMCISIcL2Rp",
+            "cmVjdGlvbnMvdjI6Y29tcHV0ZVJvdXRlczoBKhKnAQoSQ29tcHV0ZVJvdXRl",
+            "TWF0cml4EjEuZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Db21wdXRlUm91dGVN",
+            "YXRyaXhSZXF1ZXN0GiouZ29vZ2xlLm1hcHMucm91dGluZy52Mi5Sb3V0ZU1h",
+            "dHJpeEVsZW1lbnQiMILT5JMCKiIlL2Rpc3RhbmNlTWF0cml4L3YyOmNvbXB1",
+            "dGVSb3V0ZU1hdHJpeDoBKjABGhjKQRVyb3V0ZXMuZ29vZ2xlYXBpcy5jb21C",
+            "xwEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYyQhJSb3V0ZXNTZXJ2aWNl",
+            "UHJvdG9QAVo6Y2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBp",
+            "djIvcm91dGluZ3BiO3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1h",
+            "cHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29n",
+            "bGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.Routing.V2.FallbackInfoReflection.Descriptor, global::Google.Maps.Routing.V2.GeocodingResultsReflection.Descriptor, global::Google.Maps.Routing.V2.PolylineReflection.Descriptor, global::Google.Maps.Routing.V2.RouteReflection.Descriptor, global::Google.Maps.Routing.V2.RouteModifiersReflection.Descriptor, global::Google.Maps.Routing.V2.RouteTravelModeReflection.Descriptor, global::Google.Maps.Routing.V2.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Routing.V2.TrafficModelReflection.Descriptor, global::Google.Maps.Routing.V2.TransitPreferencesReflection.Descriptor, global::Google.Maps.Routing.V2.UnitsReflection.Descriptor, global::Google.Maps.Routing.V2.WaypointReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LocalizedTextReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.RouteMatrixElementCondition), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest), global::Google.Maps.Routing.V2.ComputeRoutesRequest.Parser, new[]{ "Origin", "Destination", "Intermediates", "TravelMode", "RoutingPreference", "PolylineQuality", "PolylineEncoding", "DepartureTime", "ArrivalTime", "ComputeAlternativeRoutes", "RouteModifiers", "LanguageCode", "RegionCode", "Units", "OptimizeWaypointOrder", "RequestedReferenceRoutes", "ExtraComputations", "TrafficModel", "TransitPreferences" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ReferenceRoute), typeof(global::Google.Maps.Routing.V2.ComputeRoutesRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRoutesResponse), global::Google.Maps.Routing.V2.ComputeRoutesResponse.Parser, new[]{ "Routes", "FallbackInfo", "GeocodingResults" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "ArrivalTime", "LanguageCode", "RegionCode", "ExtraComputations", "TrafficModel", "TransitPreferences" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest), global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Parser, new[]{ "Origins", "Destinations", "TravelMode", "RoutingPreference", "DepartureTime", "ArrivalTime", "LanguageCode", "RegionCode", "Units", "ExtraComputations", "TrafficModel", "TransitPreferences" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.ComputeRouteMatrixRequest.Types.ExtraComputation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixOrigin), global::Google.Maps.Routing.V2.RouteMatrixOrigin.Parser, new[]{ "Waypoint", "RouteModifiers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixDestination), global::Google.Maps.Routing.V2.RouteMatrixDestination.Parser, new[]{ "Waypoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement), global::Google.Maps.Routing.V2.RouteMatrixElement.Parser, new[]{ "OriginIndex", "DestinationIndex", "Status", "Condition", "DistanceMeters", "Duration", "StaticDuration", "TravelAdvisory", "FallbackInfo", "LocalizedValues" }, new[]{ "OriginIndex", "DestinationIndex" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues), global::Google.Maps.Routing.V2.RouteMatrixElement.Types.LocalizedValues.Parser, new[]{ "Distance", "Duration", "StaticDuration", "TransitFare" }, null, null, null, null)})
@@ -354,8 +355,9 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. The departure time. If you don't set this value, then this value
     /// defaults to the time that you made the request.
     /// NOTE: You can only specify a `departure_time` in the past when
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
-    /// `TRANSIT`.
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`. Transit trips are available for up to 7 days in the past or 100
+    /// days in the future.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -373,8 +375,9 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. The arrival time.
     /// NOTE: Can only be set when
     /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
-    /// `TRANSIT`. You can specify either departure_time or arrival_time, but not
-    /// both.
+    /// `TRANSIT`. You can specify either `departure_time` or `arrival_time`, but
+    /// not both. Transit trips are available for up to 7 days in the past or 100
+    /// days in the future.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -423,9 +426,10 @@ namespace Google.Maps.Routing.V2 {
     private string languageCode_ = "";
     /// <summary>
     /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
-    /// information, see
-    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. See
-    /// [Language Support](https://developers.google.com/maps/faq#languagesupport)
+    /// information, see [Unicode Locale
+    /// Identifier](http://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+    /// See [Language
+    /// Support](https://developers.google.com/maps/faq#languagesupport)
     /// for the list of supported languages. When you don't provide this value, the
     /// display language is inferred from the location of the route request.
     /// </summary>
@@ -443,8 +447,8 @@ namespace Google.Maps.Routing.V2 {
     private string regionCode_ = "";
     /// <summary>
     /// Optional. The region code, specified as a ccTLD ("top-level domain")
-    /// two-character value. For more information see
-    /// https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+    /// two-character value. For more information see [Country code top-level
+    /// domains](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -461,9 +465,9 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Optional. Specifies the units of measure for the display fields. These
     /// fields include the `instruction` field in
-    /// [NavigationInstruction][google.maps.routing.v2.NavigationInstruction]. The
-    /// units of measure used for the route, leg, step distance, and duration are
-    /// not affected by this value. If you don't provide this value, then the
+    /// [`NavigationInstruction`][google.maps.routing.v2.NavigationInstruction].
+    /// The units of measure used for the route, leg, step distance, and duration
+    /// are not affected by this value. If you don't provide this value, then the
     /// display units are inferred from the location of the first origin.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -540,13 +544,14 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Optional. Specifies the assumptions to use when calculating time in
     /// traffic. This setting affects the value returned in the duration field in
-    /// the [Route][google.maps.routing.v2.Route] and
-    /// [RouteLeg][google.maps.routing.v2.RouteLeg] which contains the predicted
+    /// the
+    /// [`Route`][google.maps.routing.v2.Route] and
+    /// [`RouteLeg`][google.maps.routing.v2.RouteLeg] which contains the predicted
     /// time in traffic based on historical averages.
     /// `TrafficModel` is only available for requests that have set
-    /// [RoutingPreference][google.maps.routing.v2.RoutingPreference] to
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference] to
     /// `TRAFFIC_AWARE_OPTIMAL` and
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] to `DRIVE`.
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode] to `DRIVE`.
     /// Defaults to `BEST_GUESS` if traffic is requested and `TrafficModel` is not
     /// specified.
     /// </summary>
@@ -565,7 +570,7 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Optional. Specifies preferences that influence the route returned for
     /// `TRANSIT` routes. NOTE: You can only specify a `transit_preferences` when
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode] is set to
     /// `TRANSIT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1209,8 +1214,7 @@ namespace Google.Maps.Routing.V2 {
         /// </summary>
         [pbr::OriginalName("TRAFFIC_ON_POLYLINE")] TrafficOnPolyline = 3,
         /// <summary>
-        /// [Navigation
-        /// Instructions][google.maps.routing.v2.NavigationInstructions.instructions]
+        /// [`NavigationInstructions`](google.maps.routing.v2.NavigationInstructions.instructions)
         /// presented as a formatted HTML text string. This content
         /// is meant to be read as-is. This content is for display only.
         /// Do not programmatically parse it.
@@ -1280,7 +1284,7 @@ namespace Google.Maps.Routing.V2 {
     private readonly pbc::RepeatedField<global::Google.Maps.Routing.V2.Route> routes_ = new pbc::RepeatedField<global::Google.Maps.Routing.V2.Route>();
     /// <summary>
     /// Contains an array of computed routes (up to three) when you specify
-    /// compute_alternatives_routes, and contains just one route when you don't.
+    /// `compute_alternatives_routes`, and contains just one route when you don't.
     /// When this array contains multiple entries, the first one is the most
     /// recommended route. If the array is empty, then it means no route could be
     /// found.
@@ -1559,6 +1563,7 @@ namespace Google.Maps.Routing.V2 {
       arrivalTime_ = other.arrivalTime_ != null ? other.arrivalTime_.Clone() : null;
       languageCode_ = other.languageCode_;
       regionCode_ = other.regionCode_;
+      units_ = other.units_;
       extraComputations_ = other.extraComputations_.Clone();
       trafficModel_ = other.trafficModel_;
       transitPreferences_ = other.transitPreferences_ != null ? other.transitPreferences_.Clone() : null;
@@ -1581,12 +1586,14 @@ namespace Google.Maps.Routing.V2 {
     /// matrix. Several size restrictions apply to the cardinality of origins and
     /// destinations:
     ///
-    /// * The number of elements (origins × destinations) must be no greater than
-    /// 625 in any case.
-    /// * The number of elements (origins × destinations) must be no greater than
-    /// 100 if routing_preference is set to `TRAFFIC_AWARE_OPTIMAL`.
-    /// * The number of waypoints (origins + destinations) specified as `place_id`
-    /// must be no greater than 50.
+    /// * The sum of the number of origins + the number of destinations specified
+    /// as either `place_id` or `address` must be no greater than 50.
+    /// * The product of number of origins × number of destinations must be no
+    /// greater than 625 in any case.
+    /// * The product of the number of origins × number of destinations must be no
+    /// greater than 100 if routing_preference is set to `TRAFFIC_AWARE_OPTIMAL`.
+    /// * The product of the number of origins × number of destinations must be no
+    /// greater than 100 if travel_mode is set to `TRANSIT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1650,7 +1657,7 @@ namespace Google.Maps.Routing.V2 {
     /// Optional. The departure time. If you don't set this value, then this value
     /// defaults to the time that you made the request.
     /// NOTE: You can only specify a `departure_time` in the past when
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode] is set to
     /// `TRANSIT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1668,9 +1675,9 @@ namespace Google.Maps.Routing.V2 {
     /// <summary>
     /// Optional. The arrival time.
     /// NOTE: Can only be set when
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode] is set to
-    /// `TRANSIT`. You can specify either departure_time or arrival_time, but not
-    /// both.
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode] is set to
+    /// `TRANSIT`. You can specify either `departure_time` or `arrival_time`, but
+    /// not both.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1686,9 +1693,10 @@ namespace Google.Maps.Routing.V2 {
     private string languageCode_ = "";
     /// <summary>
     /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
-    /// information, see
-    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. See
-    /// [Language Support](https://developers.google.com/maps/faq#languagesupport)
+    /// information, see [Unicode Locale
+    /// Identifier](http://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+    /// See [Language
+    /// Support](https://developers.google.com/maps/faq#languagesupport)
     /// for the list of supported languages. When you don't provide this value, the
     /// display language is inferred from the location of the first origin.
     /// </summary>
@@ -1706,8 +1714,8 @@ namespace Google.Maps.Routing.V2 {
     private string regionCode_ = "";
     /// <summary>
     /// Optional. The region code, specified as a ccTLD ("top-level domain")
-    /// two-character value. For more information see
-    /// https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+    /// two-character value. For more information see [Country code top-level
+    /// domains](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1715,6 +1723,21 @@ namespace Google.Maps.Routing.V2 {
       get { return regionCode_; }
       set {
         regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "units" field.</summary>
+    public const int UnitsFieldNumber = 7;
+    private global::Google.Maps.Routing.V2.Units units_ = global::Google.Maps.Routing.V2.Units.Unspecified;
+    /// <summary>
+    /// Optional. Specifies the units of measure for the display fields.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.Routing.V2.Units Units {
+      get { return units_; }
+      set {
+        units_ = value;
       }
     }
 
@@ -1799,6 +1822,7 @@ namespace Google.Maps.Routing.V2 {
       if (!object.Equals(ArrivalTime, other.ArrivalTime)) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (RegionCode != other.RegionCode) return false;
+      if (Units != other.Units) return false;
       if(!extraComputations_.Equals(other.extraComputations_)) return false;
       if (TrafficModel != other.TrafficModel) return false;
       if (!object.Equals(TransitPreferences, other.TransitPreferences)) return false;
@@ -1817,6 +1841,7 @@ namespace Google.Maps.Routing.V2 {
       if (arrivalTime_ != null) hash ^= ArrivalTime.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+      if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) hash ^= Units.GetHashCode();
       hash ^= extraComputations_.GetHashCode();
       if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) hash ^= TrafficModel.GetHashCode();
       if (transitPreferences_ != null) hash ^= TransitPreferences.GetHashCode();
@@ -1855,6 +1880,10 @@ namespace Google.Maps.Routing.V2 {
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(LanguageCode);
+      }
+      if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Units);
       }
       extraComputations_.WriteTo(output, _repeated_extraComputations_codec);
       if (RegionCode.Length != 0) {
@@ -1900,6 +1929,10 @@ namespace Google.Maps.Routing.V2 {
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(LanguageCode);
+      }
+      if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Units);
       }
       extraComputations_.WriteTo(ref output, _repeated_extraComputations_codec);
       if (RegionCode.Length != 0) {
@@ -1948,6 +1981,9 @@ namespace Google.Maps.Routing.V2 {
       if (RegionCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
       }
+      if (Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Units);
+      }
       size += extraComputations_.CalculateSize(_repeated_extraComputations_codec);
       if (TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrafficModel);
@@ -1992,6 +2028,9 @@ namespace Google.Maps.Routing.V2 {
       }
       if (other.RegionCode.Length != 0) {
         RegionCode = other.RegionCode;
+      }
+      if (other.Units != global::Google.Maps.Routing.V2.Units.Unspecified) {
+        Units = other.Units;
       }
       extraComputations_.Add(other.extraComputations_);
       if (other.TrafficModel != global::Google.Maps.Routing.V2.TrafficModel.Unspecified) {
@@ -2043,6 +2082,10 @@ namespace Google.Maps.Routing.V2 {
           }
           case 50: {
             LanguageCode = input.ReadString();
+            break;
+          }
+          case 56: {
+            Units = (global::Google.Maps.Routing.V2.Units) input.ReadEnum();
             break;
           }
           case 66:
@@ -2112,6 +2155,10 @@ namespace Google.Maps.Routing.V2 {
           }
           case 50: {
             LanguageCode = input.ReadString();
+            break;
+          }
+          case 56: {
+            Units = (global::Google.Maps.Routing.V2.Units) input.ReadEnum();
             break;
           }
           case 66:

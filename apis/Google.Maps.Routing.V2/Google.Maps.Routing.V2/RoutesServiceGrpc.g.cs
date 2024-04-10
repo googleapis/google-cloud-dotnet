@@ -106,7 +106,7 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using URL parameter
       /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
       /// (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
       /// is a comma separated list of field paths. See detailed documentation about
       /// [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -152,9 +152,9 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using the URL
       /// parameter `$fields` or `fields`, or by using the HTTP/gRPC header
       /// `X-Goog-FieldMask` (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
-      /// is a comma separated list of field paths. See this detailed documentation
-      /// about [how to construct the field
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)).
+      /// The value is a comma separated list of field paths. See this detailed
+      /// documentation about [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
       ///
       /// For example, in this method:
@@ -228,7 +228,7 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using URL parameter
       /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
       /// (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
       /// is a comma separated list of field paths. See detailed documentation about
       /// [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -275,7 +275,7 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using URL parameter
       /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
       /// (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
       /// is a comma separated list of field paths. See detailed documentation about
       /// [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -320,7 +320,7 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using URL parameter
       /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
       /// (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
       /// is a comma separated list of field paths. See detailed documentation about
       /// [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -367,7 +367,7 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using URL parameter
       /// `$fields` or `fields`, or by using an HTTP/gRPC header `X-Goog-FieldMask`
       /// (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)). The value
       /// is a comma separated list of field paths. See detailed documentation about
       /// [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
@@ -412,9 +412,9 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using the URL
       /// parameter `$fields` or `fields`, or by using the HTTP/gRPC header
       /// `X-Goog-FieldMask` (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
-      /// is a comma separated list of field paths. See this detailed documentation
-      /// about [how to construct the field
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)).
+      /// The value is a comma separated list of field paths. See this detailed
+      /// documentation about [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
       ///
       /// For example, in this method:
@@ -459,9 +459,9 @@ namespace Google.Maps.Routing.V2 {
       /// the input. You can provide the response field mask by using the URL
       /// parameter `$fields` or `fields`, or by using the HTTP/gRPC header
       /// `X-Goog-FieldMask` (see the [available URL parameters and
-      /// headers](https://cloud.google.com/apis/docs/system-parameters). The value
-      /// is a comma separated list of field paths. See this detailed documentation
-      /// about [how to construct the field
+      /// headers](https://cloud.google.com/apis/docs/system-parameters)).
+      /// The value is a comma separated list of field paths. See this detailed
+      /// documentation about [how to construct the field
       /// paths](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/field_mask.proto).
       ///
       /// For example, in this method:

@@ -45,7 +45,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// A set of values describing the vehicle's emission type.
   /// Applies only to the `DRIVE`
-  /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+  /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
   /// </summary>
   public enum VehicleEmissionType {
     /// <summary>
