@@ -308,7 +308,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                 if (!_fixture.RunningOnEmulator)
                 {
-                    Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                     Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
             }, GetConnection(), GetWriteTestReader);
