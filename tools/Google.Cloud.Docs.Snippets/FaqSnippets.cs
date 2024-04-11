@@ -26,6 +26,8 @@ namespace Google.Cloud.Tools.Snippets
             // Required using directives:
             // using static Google.Apis.Http.ConfigurableMessageHandler;
             // using Google;
+            // The following namespace is hidden from Intellisense so don't
+            // expect to be prompted for it. Add it explicitly.
             // using Google.Apis.Logging;
             // using Google.Cloud.Translation.V2;
 
