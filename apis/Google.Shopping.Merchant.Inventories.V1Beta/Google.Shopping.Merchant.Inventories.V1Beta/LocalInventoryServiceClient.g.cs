@@ -193,7 +193,7 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LocalInventoryService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(LocalInventoryService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -341,6 +341,68 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
             ListLocalInventoriesAsync(new ListLocalInventoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the `LocalInventory` resources for the given product in your merchant
+        /// account. The response might contain fewer items than specified by
+        /// `pageSize`. If `pageToken` was returned in previous request, it can be used
+        /// to obtain additional results.
+        /// 
+        /// `LocalInventory` resources are listed per product for a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `name` of the parent product to list local inventories for.
+        /// Format:
+        /// `accounts/{account}/products/{product}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LocalInventory"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventories(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLocalInventories(new ListLocalInventoriesRequest
+            {
+                ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists the `LocalInventory` resources for the given product in your merchant
+        /// account. The response might contain fewer items than specified by
+        /// `pageSize`. If `pageToken` was returned in previous request, it can be used
+        /// to obtain additional results.
+        /// 
+        /// `LocalInventory` resources are listed per product for a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The `name` of the parent product to list local inventories for.
+        /// Format:
+        /// `accounts/{account}/products/{product}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LocalInventory"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> ListLocalInventoriesAsync(ProductName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListLocalInventoriesAsync(new ListLocalInventoriesRequest
+            {
+                ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

@@ -32,7 +32,10 @@ namespace GoogleCSharpSnippets
             // Create client
             LocalInventoryServiceClient localInventoryServiceClient = LocalInventoryServiceClient.Create();
             // Initialize request argument(s)
-            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest { Parent = "", };
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
+            {
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+            };
             // Make the request
             PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventories(request);
 
@@ -77,7 +80,10 @@ namespace GoogleCSharpSnippets
             // Create client
             LocalInventoryServiceClient localInventoryServiceClient = await LocalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest { Parent = "", };
+            ListLocalInventoriesRequest request = new ListLocalInventoriesRequest
+            {
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(request);
 
@@ -122,7 +128,7 @@ namespace GoogleCSharpSnippets
             // Create client
             LocalInventoryServiceClient localInventoryServiceClient = LocalInventoryServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
             // Make the request
             PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventories(parent);
 
@@ -167,7 +173,97 @@ namespace GoogleCSharpSnippets
             // Create client
             LocalInventoryServiceClient localInventoryServiceClient = await LocalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
+            // Make the request
+            PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LocalInventory item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLocalInventoriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LocalInventory item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LocalInventory> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LocalInventory item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocalInventories</summary>
+        public void ListLocalInventoriesResourceNames()
+        {
+            // Snippet: ListLocalInventories(ProductName, string, int?, CallSettings)
+            // Create client
+            LocalInventoryServiceClient localInventoryServiceClient = LocalInventoryServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
+            // Make the request
+            PagedEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventories(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LocalInventory item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLocalInventoriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LocalInventory item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LocalInventory> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LocalInventory item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocalInventoriesAsync</summary>
+        public async Task ListLocalInventoriesResourceNamesAsync()
+        {
+            // Snippet: ListLocalInventoriesAsync(ProductName, string, int?, CallSettings)
+            // Create client
+            LocalInventoryServiceClient localInventoryServiceClient = await LocalInventoryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
             // Make the request
             PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(parent);
 
@@ -214,7 +310,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertLocalInventoryRequest request = new InsertLocalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
             };
             // Make the request
@@ -232,7 +328,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertLocalInventoryRequest request = new InsertLocalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
             };
             // Make the request

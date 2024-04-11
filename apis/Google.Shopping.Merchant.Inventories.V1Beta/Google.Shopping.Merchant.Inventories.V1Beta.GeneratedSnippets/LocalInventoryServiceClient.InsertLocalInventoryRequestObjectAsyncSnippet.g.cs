@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertLocalInventoryRequest request = new InsertLocalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 LocalInventory = new LocalInventory(),
             };
             // Make the request

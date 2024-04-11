@@ -37,7 +37,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionalInventoryRequest request = new InsertRegionalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
             };
             // Make the request

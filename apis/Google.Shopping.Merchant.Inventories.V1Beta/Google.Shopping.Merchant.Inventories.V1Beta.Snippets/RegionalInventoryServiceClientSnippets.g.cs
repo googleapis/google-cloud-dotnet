@@ -32,7 +32,10 @@ namespace GoogleCSharpSnippets
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = RegionalInventoryServiceClient.Create();
             // Initialize request argument(s)
-            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest { Parent = "", };
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
+            {
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+            };
             // Make the request
             PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(request);
 
@@ -77,7 +80,10 @@ namespace GoogleCSharpSnippets
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = await RegionalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest { Parent = "", };
+            ListRegionalInventoriesRequest request = new ListRegionalInventoriesRequest
+            {
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(request);
 
@@ -122,7 +128,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = RegionalInventoryServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
             // Make the request
             PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(parent);
 
@@ -167,7 +173,97 @@ namespace GoogleCSharpSnippets
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = await RegionalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
+            // Make the request
+            PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RegionalInventory item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRegionalInventoriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RegionalInventory item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RegionalInventory> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RegionalInventory item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRegionalInventories</summary>
+        public void ListRegionalInventoriesResourceNames()
+        {
+            // Snippet: ListRegionalInventories(ProductName, string, int?, CallSettings)
+            // Create client
+            RegionalInventoryServiceClient regionalInventoryServiceClient = RegionalInventoryServiceClient.Create();
+            // Initialize request argument(s)
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
+            // Make the request
+            PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RegionalInventory item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRegionalInventoriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RegionalInventory item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RegionalInventory> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RegionalInventory item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRegionalInventoriesAsync</summary>
+        public async Task ListRegionalInventoriesResourceNamesAsync()
+        {
+            // Snippet: ListRegionalInventoriesAsync(ProductName, string, int?, CallSettings)
+            // Create client
+            RegionalInventoryServiceClient regionalInventoryServiceClient = await RegionalInventoryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
             // Make the request
             PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(parent);
 
@@ -214,7 +310,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionalInventoryRequest request = new InsertRegionalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
             };
             // Make the request
@@ -232,7 +328,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             InsertRegionalInventoryRequest request = new InsertRegionalInventoryRequest
             {
-                Parent = "",
+                ParentAsProductName = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]"),
                 RegionalInventory = new RegionalInventory(),
             };
             // Make the request
