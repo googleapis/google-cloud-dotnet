@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,17 +68,17 @@ namespace Google.Cloud.Spanner.Data
         internal bool UseDBNull { get; private set; }
 
         /// <summary>
-        /// Gets the configured SpannerDbType for the decimal CLR type.
+        /// The configured SpannerDbType for the decimal CLR type.
         /// </summary>
         internal SpannerDbType DecimalToConfiguredSpannerType { get; private set; }
 
         /// <summary>
-        /// Gets the configured SpannerDbType for the DateTime CLR type.
+        /// The configured SpannerDbType for the DateTime CLR type.
         /// </summary>
         internal SpannerDbType DateTimeToConfiguredSpannerType { get; private set; }
 
         /// <summary>
-        /// Gets the configured CLR type for the Date SpannerDbType.
+        /// The configured CLR type for the Date SpannerDbType.
         /// </summary>
         internal System.Type DateToConfiguredClrType { get; private set; }
 
@@ -130,7 +130,17 @@ namespace Google.Cloud.Spanner.Data
             return clone;
         }
 
-        // TODO: Reuse code in both validation methods and remove code duplication.
+        internal void SetClrToSpannerTypeDefaults()
+        {
+            DecimalToConfiguredSpannerType = SpannerDbType.Float64;
+            DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
+        }
+
+        internal void SetSpannerToClrTypeDefaults()
+        {
+            DateToConfiguredClrType = typeof(DateTime);
+        }
+
         private void ValidateAndParseSpannerToClrTypeMappings(string input, SpannerConversionOptions options)
         {
             // Empty string or null is valid to unset the values.
@@ -144,24 +154,10 @@ namespace Google.Cloud.Spanner.Data
             // Get all type mappings.
             var mappings = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // Validate that mappings are valid.
-            if (!mappings.Any())
-            {
-                throw new ArgumentException($"'{input}' is not a valid value for ${nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings)}");
-            }
+            var mappingType = nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings);
 
-            // Validate that mapping matches one of the pre-defined values.
-            var invalidMappings = mappings.Except(AllowedSpannerToClrTypeMappings, StringComparer.OrdinalIgnoreCase);
-            if (invalidMappings.Any())
-            {
-                throw new ArgumentException($"The following mappings are invalid:'{string.Join(",", invalidMappings)}' for ${nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings)}");
-            }
-
-            // Check multiples for each type.
-            if (mappings.Count(j => j.StartsWith("Date", StringComparison.OrdinalIgnoreCase)) > 1)
-            {
-                throw new ArgumentException($"'{input}' is not a valid value as multiple mappings from Date to CLR type are provided for ${nameof(SpannerConnectionStringBuilder.SpannerToClrTypeDefaultMappings)}");
-            }
+            CheckValidMappings(mappings, AllowedSpannerToClrTypeMappings, mappingType);
+            CheckMultipleMappingsForSameType("Date", mappings, mappingType);
 
             // If we reach here, all is well.
             foreach (var mapping in mappings)
@@ -177,17 +173,6 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal void SetClrToSpannerTypeDefaults()
-        {
-            DecimalToConfiguredSpannerType = SpannerDbType.Float64;
-            DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
-        }
-
-        internal void SetSpannerToClrTypeDefaults()
-        {
-            DateToConfiguredClrType = typeof(DateTime);
-        }
-
         private void ValidateAndParseClrToSpannerTypeMappings(string input, SpannerConversionOptions options)
         {
             // Empty string or null is valid to unset the values.
@@ -201,30 +186,11 @@ namespace Google.Cloud.Spanner.Data
             // Get all type mappings.
             var mappings = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // Validate that mappings are valid.
-            if (!mappings.Any())
-            {
-                throw new ArgumentException($"'{input}' is not a valid value for ${nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings)}");
-            }
+            var mappingType = nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings);
 
-            // Validate that mapping, matches one of the pre-defined values.
-            var invalidMappings = mappings.Except(AllowedClrToSpannerTypeMappings, StringComparer.OrdinalIgnoreCase);
-            if (invalidMappings.Any())
-            {
-                throw new ArgumentException($"The following mappings are invalid:'{string.Join(",", invalidMappings)}' for ${nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings)}");
-            }
-
-            // Check multiples for each type.
-            // Currently, we have Decimal and DateTime to check.
-            if (mappings.Count(j => j.StartsWith("Decimal", StringComparison.OrdinalIgnoreCase)) > 1)
-            {
-                throw new ArgumentException($"'{input}' is not a valid value as multiple mappings from Decimal to SpannerDbType are provided for ${nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings)}");
-            }
-
-            if (mappings.Count(j => j.StartsWith("DateTime", StringComparison.OrdinalIgnoreCase)) > 1)
-            {
-                throw new ArgumentException($"'{input}' is not a valid value as multiple mappings from DateTime to SpannerDbType are provided for ${nameof(SpannerConnectionStringBuilder.ClrToSpannerTypeDefaultMappings)}");
-            }
+            CheckValidMappings(mappings, AllowedClrToSpannerTypeMappings, mappingType);
+            CheckMultipleMappingsForSameType("Decimal", mappings, mappingType);
+            CheckMultipleMappingsForSameType("DateTime", mappings, mappingType);
 
             // If we reach here all is well.
             foreach (var mapping in mappings)
@@ -249,6 +215,32 @@ namespace Google.Cloud.Spanner.Data
                 {
                     options.DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Validates that at least one mapping was specified for <paramref name="mappingType"/> and that all
+        /// specified mappings are valid.
+        /// </summary>
+        private static void CheckValidMappings(string[] mappings, HashSet<string> validMappings, string mappingType)
+        {
+            if (!mappings.Any())
+            {
+                throw new ArgumentException($"No mappings were specified for ${mappingType}.");
+            }
+
+            var invalidMappings = mappings.Except(validMappings, StringComparer.OrdinalIgnoreCase);
+            if (invalidMappings.Any())
+            {
+                throw new ArgumentException($"The following mappings are invalid:'{string.Join(",", invalidMappings)}' for ${mappingType}.");
+            }
+        }
+
+        private static void CheckMultipleMappingsForSameType(string prefix, string[] mappings, string mappingType)
+        {
+            if (mappings.Count(mapping => mapping.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)) > 1)
+            {
+                throw new ArgumentException($"Invalid {mappingType} value. At most, a single mapping for {prefix} may be specified.");
             }
         }
     }
