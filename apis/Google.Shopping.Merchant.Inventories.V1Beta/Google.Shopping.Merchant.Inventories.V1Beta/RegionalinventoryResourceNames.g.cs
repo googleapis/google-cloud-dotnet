@@ -286,6 +286,30 @@ namespace Google.Shopping.Merchant.Inventories.V1Beta
         }
     }
 
+    public partial class ListRegionalInventoriesRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProductName ParentAsProductName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class InsertRegionalInventoryRequest
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProductName ParentAsProductName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ProductName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteRegionalInventoryRequest
     {
         /// <summary>

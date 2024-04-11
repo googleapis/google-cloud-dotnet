@@ -16,16 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened]
+    // [START merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_async_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Shopping.Merchant.Inventories.V1Beta;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedRegionalInventoryServiceClientSnippets
+    public sealed partial class GeneratedLocalInventoryServiceClientSnippets
     {
-        /// <summary>Snippet for ListRegionalInventoriesAsync</summary>
+        /// <summary>Snippet for ListLocalInventoriesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -33,28 +33,28 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListRegionalInventoriesAsync()
+        public async Task ListLocalInventoriesResourceNamesAsync()
         {
             // Create client
-            RegionalInventoryServiceClient regionalInventoryServiceClient = await RegionalInventoryServiceClient.CreateAsync();
+            LocalInventoryServiceClient localInventoryServiceClient = await LocalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
             // Make the request
-            PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(parent);
+            PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((RegionalInventory item) =>
+            await response.ForEachAsync((LocalInventory item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListRegionalInventoriesResponse page) =>
+            await response.AsRawResponses().ForEachAsync((ListLocalInventoriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (RegionalInventory item in page)
+                foreach (LocalInventory item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -63,10 +63,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<RegionalInventory> singlePage = await response.ReadPageAsync(pageSize);
+            Page<LocalInventory> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (RegionalInventory item in singlePage)
+            foreach (LocalInventory item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened]
+    // [END merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_async_flattened_resourceNames]
 }

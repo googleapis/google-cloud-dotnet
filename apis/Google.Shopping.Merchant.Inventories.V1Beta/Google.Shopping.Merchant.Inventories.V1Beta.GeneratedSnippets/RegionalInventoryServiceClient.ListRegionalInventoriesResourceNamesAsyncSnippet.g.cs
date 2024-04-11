@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened]
+    // [START merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened_resourceNames]
     using Google.Api.Gax;
     using Google.Shopping.Merchant.Inventories.V1Beta;
     using System;
@@ -33,12 +33,12 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListRegionalInventoriesAsync()
+        public async Task ListRegionalInventoriesResourceNamesAsync()
         {
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = await RegionalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
+            ProductName parent = ProductName.FromAccountProduct("[ACCOUNT]", "[PRODUCT]");
             // Make the request
             PagedAsyncEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventoriesAsync(parent);
 
@@ -75,5 +75,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened]
+    // [END merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened_resourceNames]
 }

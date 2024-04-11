@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             // Create client
             LocalInventoryServiceClient localInventoryServiceClient = await LocalInventoryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
             // Make the request
             PagedAsyncEnumerable<ListLocalInventoriesResponse, LocalInventory> response = localInventoryServiceClient.ListLocalInventoriesAsync(parent);
 

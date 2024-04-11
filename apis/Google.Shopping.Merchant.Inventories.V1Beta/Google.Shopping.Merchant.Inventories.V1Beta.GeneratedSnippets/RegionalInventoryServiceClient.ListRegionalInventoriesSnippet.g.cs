@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             RegionalInventoryServiceClient regionalInventoryServiceClient = RegionalInventoryServiceClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "accounts/[ACCOUNT]/products/[PRODUCT]";
             // Make the request
             PagedEnumerable<ListRegionalInventoriesResponse, RegionalInventory> response = regionalInventoryServiceClient.ListRegionalInventories(parent);
 
