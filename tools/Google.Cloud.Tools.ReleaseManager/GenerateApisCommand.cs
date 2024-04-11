@@ -165,6 +165,7 @@ internal class GenerateApisCommand : ICommand
     {
         var layout = DirectoryLayout.ForApi(api.Id);
         string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
+        Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
         DeleteGeneratedFiles(Path.Combine(layout.SourceDirectory, $"{api.Id}.Snippets"));
         DeleteGeneratedFiles(Path.Combine(layout.SourceDirectory, $"{api.Id}.GeneratedSnippets"));
@@ -252,6 +253,7 @@ internal class GenerateApisCommand : ICommand
     {
         var layout = DirectoryLayout.ForApi(api.Id);
         string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
+        Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
         var protosDir = Path.Combine(googleApisDirectory, api.ProtoPath);
         RunProtoc(protosDir,
