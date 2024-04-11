@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -47,6 +48,42 @@ namespace Google.Cloud.Tools.Common
                 var error = process.StandardError.ReadToEnd();
                 throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {workingDirectory}. Args: {joinedArguments}. Output: {output}. Error: {error}");
             }
+        }
+
+        /// <summary>
+        /// Starts the given ProcessStartInfo as a new process, redirecting its standard output/error to the console (optionally filtering it),
+        /// and waits for it to end.
+        /// </summary>
+        /// <param name="psi">The ProcessStartInfo to start. This is modified for redirection purposes.</param>
+        /// <param name="descriptionForFailure">The description to use if the process fails.</param>
+        /// <param name="outputPredicate">Predicate to apply to output lines; if specified, only lines matching the predicate are written to the console.</param>
+        /// <exception cref="UserErrorException">The process terminated with a non-zero exit code.</exception>
+        public static void RunAndPropagateOutput(ProcessStartInfo psi, string descriptionForFailure, Func<string, bool> outputPredicate = null)
+        {
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+
+            var proc = Process.Start(psi);
+            proc.OutputDataReceived += HandleData(Console.Out);
+            proc.ErrorDataReceived += HandleData(Console.Error);
+            proc.BeginOutputReadLine();
+            proc.BeginErrorReadLine();
+            proc.WaitForExit();
+            if (proc.ExitCode != 0)
+            {
+                throw new UserErrorException($"{descriptionForFailure} failed with exit code {proc.ExitCode}");
+            }
+
+            DataReceivedEventHandler HandleData(TextWriter writer) =>
+                (object sender, DataReceivedEventArgs e) =>
+                {
+                    if (!string.IsNullOrEmpty(e.Data) && (outputPredicate?.Invoke(e.Data) ?? true))
+                    {
+                        writer.WriteLine(e.Data);
+                    }
+                };
         }
     }
 }
