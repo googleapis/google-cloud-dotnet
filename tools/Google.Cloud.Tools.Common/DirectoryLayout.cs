@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 using System;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -21,6 +22,8 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class DirectoryLayout
     {
+        private static string cachedRoot;
+
         /// <summary>
         /// Root of all source for this API, including production code, tests, snippets etc.
         /// </summary>
@@ -28,7 +31,7 @@ namespace Google.Cloud.Tools.Common
         public string DocsOutputDirectory { get; }
         public string DocfxMetadataDirectory { get; }
         public string SnippetOutputDirectory { get; }
-        public string DocsSourceDirectory { get; } 
+        public string DocsSourceDirectory { get; }
 
         private DirectoryLayout(string source, string docsOutput, string metadata, string snippetOutput, string docsSource)
         {
@@ -69,6 +72,10 @@ namespace Google.Cloud.Tools.Common
         /// <returns></returns>
         public static string DetermineRootDirectory()
         {
+            if (cachedRoot is string)
+            {
+                return cachedRoot;
+            }
             var currentDirectory = Path.GetFullPath(".");
             var directory = new DirectoryInfo(currentDirectory);
             while (directory != null &&
@@ -81,7 +88,8 @@ namespace Google.Cloud.Tools.Common
             {
                 throw new UserErrorException("Unable to determine root directory. Please run within google-cloud-dotnet repository.");
             }
-            return directory.FullName;
+            cachedRoot = directory.FullName;
+            return cachedRoot;
         }
     }
 }
