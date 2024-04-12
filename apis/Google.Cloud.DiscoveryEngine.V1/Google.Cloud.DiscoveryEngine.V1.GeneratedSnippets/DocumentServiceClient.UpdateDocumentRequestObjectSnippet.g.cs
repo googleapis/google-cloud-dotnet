@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START discoveryengine_v1_generated_DocumentService_UpdateDocument_sync]
     using Google.Cloud.DiscoveryEngine.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDocumentServiceClientSnippets
     {
@@ -38,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = documentServiceClient.UpdateDocument(request);

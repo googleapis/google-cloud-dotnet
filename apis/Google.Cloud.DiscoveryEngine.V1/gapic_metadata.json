@@ -206,6 +206,21 @@
         }
       }
     },
+    "RecommendationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RecommendationServiceClient",
+          "rpcs": {
+            "Recommend": {
+              "methods": [
+                "Recommend",
+                "RecommendAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SchemaService": {
       "clients": {
         "grpc": {

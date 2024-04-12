@@ -59,6 +59,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return EngineServiceReflection.Descriptor;
             yield return ImportConfigReflection.Descriptor;
             yield return PurgeConfigReflection.Descriptor;
+            yield return RecommendationServiceReflection.Descriptor;
             yield return SchemaReflection.Descriptor;
             yield return SchemaServiceReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;

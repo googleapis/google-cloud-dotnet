@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -499,6 +500,7 @@ namespace GoogleCSharpSnippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = documentServiceClient.UpdateDocument(request);
@@ -517,9 +519,39 @@ namespace GoogleCSharpSnippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = await documentServiceClient.UpdateDocumentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocument</summary>
+        public void UpdateDocument()
+        {
+            // Snippet: UpdateDocument(Document, FieldMask, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            Document document = new Document();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Document response = documentServiceClient.UpdateDocument(document, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocumentAsync</summary>
+        public async Task UpdateDocumentAsync()
+        {
+            // Snippet: UpdateDocumentAsync(Document, FieldMask, CallSettings)
+            // Additional: UpdateDocumentAsync(Document, FieldMask, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Document document = new Document();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Document response = await documentServiceClient.UpdateDocumentAsync(document, updateMask);
             // End snippet
         }
 
@@ -623,6 +655,7 @@ namespace GoogleCSharpSnippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
                 AutoGenerateIds = false,
                 IdField = "",
             };
@@ -661,6 +694,7 @@ namespace GoogleCSharpSnippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
                 AutoGenerateIds = false,
                 IdField = "",
             };

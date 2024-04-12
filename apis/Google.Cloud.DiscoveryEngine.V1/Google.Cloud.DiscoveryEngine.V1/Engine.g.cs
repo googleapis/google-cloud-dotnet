@@ -890,7 +890,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// The search feature tier of this engine.
         ///
         /// Different tiers might have different
-        /// pricing. To learn more, please check the pricing documentation.
+        /// pricing. To learn more, check the pricing documentation.
         ///
         /// Defaults to
         /// [SearchTier.SEARCH_TIER_STANDARD][google.cloud.discoveryengine.v1.SearchTier.SEARCH_TIER_STANDARD]
@@ -1156,7 +1156,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         /// [EngineService.GetEngine][google.cloud.discoveryengine.v1.EngineService.GetEngine]
         /// or
         /// [EngineService.ListEngines][google.cloud.discoveryengine.v1.EngineService.ListEngines]
-        /// API after engine creation. Please use
+        /// API after engine creation. Use
         /// [ChatEngineMetadata.dialogflow_agent][google.cloud.discoveryengine.v1.Engine.ChatEngineMetadata.dialogflow_agent]
         /// for actual agent association after Engine is created.
         /// </summary>

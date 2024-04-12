@@ -62,6 +62,10 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 ContentSearchSpec = new SearchRequest.Types.ContentSearchSpec(),
                 CanonicalFilter = "",
+                DataStoreSpecs =
+                {
+                    new SearchRequest.Types.DataStoreSpec(),
+                },
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
