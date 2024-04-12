@@ -167,7 +167,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [SecretManagerService.ListSecrets][google.cloud.secretmanager.v1.SecretManagerService.ListSecrets].
+  /// Request message for
+  /// [SecretManagerService.ListSecrets][google.cloud.secretmanager.v1.SecretManagerService.ListSecrets].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretsRequest : pb::IMessage<ListSecretsRequest>
@@ -222,7 +223,8 @@ namespace Google.Cloud.SecretManager.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the project associated with the
-    /// [Secrets][google.cloud.secretmanager.v1.Secret], in the format `projects/*`.
+    /// [Secrets][google.cloud.secretmanager.v1.Secret], in the format
+    /// `projects/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -491,7 +493,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [SecretManagerService.ListSecrets][google.cloud.secretmanager.v1.SecretManagerService.ListSecrets].
+  /// Response message for
+  /// [SecretManagerService.ListSecrets][google.cloud.secretmanager.v1.SecretManagerService.ListSecrets].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretsResponse : pb::IMessage<ListSecretsResponse>
@@ -546,8 +549,8 @@ namespace Google.Cloud.SecretManager.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1.Secret.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Secret> secrets_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Secret>();
     /// <summary>
-    /// The list of [Secrets][google.cloud.secretmanager.v1.Secret] sorted in reverse by create_time (newest
-    /// first).
+    /// The list of [Secrets][google.cloud.secretmanager.v1.Secret] sorted in
+    /// reverse by create_time (newest first).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -560,7 +563,8 @@ namespace Google.Cloud.SecretManager.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results. Pass this value in
-    /// [ListSecretsRequest.page_token][google.cloud.secretmanager.v1.ListSecretsRequest.page_token] to retrieve the next page.
+    /// [ListSecretsRequest.page_token][google.cloud.secretmanager.v1.ListSecretsRequest.page_token]
+    /// to retrieve the next page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -758,7 +762,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.CreateSecret][google.cloud.secretmanager.v1.SecretManagerService.CreateSecret].
+  /// Request message for
+  /// [SecretManagerService.CreateSecret][google.cloud.secretmanager.v1.SecretManagerService.CreateSecret].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSecretRequest : pb::IMessage<CreateSecretRequest>
@@ -846,7 +851,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int SecretFieldNumber = 3;
     private global::Google.Cloud.SecretManager.V1.Secret secret_;
     /// <summary>
-    /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial field values.
+    /// Required. A [Secret][google.cloud.secretmanager.v1.Secret] with initial
+    /// field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1048,7 +1054,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion].
+  /// Request message for
+  /// [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddSecretVersionRequest : pb::IMessage<AddSecretVersionRequest>
@@ -1100,8 +1107,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
-    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format `projects/*/secrets/*`.
+    /// Required. The resource name of the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+    /// `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1116,7 +1125,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int PayloadFieldNumber = 2;
     private global::Google.Cloud.SecretManager.V1.SecretPayload payload_;
     /// <summary>
-    /// Required. The secret payload of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// Required. The secret payload of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1294,7 +1304,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.GetSecret][google.cloud.secretmanager.v1.SecretManagerService.GetSecret].
+  /// Request message for
+  /// [SecretManagerService.GetSecret][google.cloud.secretmanager.v1.SecretManagerService.GetSecret].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSecretRequest : pb::IMessage<GetSecretRequest>
@@ -1345,7 +1356,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [Secret][google.cloud.secretmanager.v1.Secret], in the format `projects/*/secrets/*`.
+    /// Required. The resource name of the
+    /// [Secret][google.cloud.secretmanager.v1.Secret], in the format
+    /// `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1490,7 +1503,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.ListSecretVersions][google.cloud.secretmanager.v1.SecretManagerService.ListSecretVersions].
+  /// Request message for
+  /// [SecretManagerService.ListSecretVersions][google.cloud.secretmanager.v1.SecretManagerService.ListSecretVersions].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretVersionsRequest : pb::IMessage<ListSecretVersionsRequest>
@@ -1544,9 +1558,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [Secret][google.cloud.secretmanager.v1.Secret] associated with the
-    /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] to list, in the format
-    /// `projects/*/secrets/*`.
+    /// Required. The resource name of the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] associated with the
+    /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] to list, in
+    /// the format `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1815,7 +1830,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [SecretManagerService.ListSecretVersions][google.cloud.secretmanager.v1.SecretManagerService.ListSecretVersions].
+  /// Response message for
+  /// [SecretManagerService.ListSecretVersions][google.cloud.secretmanager.v1.SecretManagerService.ListSecretVersions].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSecretVersionsResponse : pb::IMessage<ListSecretVersionsResponse>
@@ -1870,8 +1886,8 @@ namespace Google.Cloud.SecretManager.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1.SecretVersion.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.SecretVersion> versions_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.SecretVersion>();
     /// <summary>
-    /// The list of [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] sorted in reverse by
-    /// create_time (newest first).
+    /// The list of [SecretVersions][google.cloud.secretmanager.v1.SecretVersion]
+    /// sorted in reverse by create_time (newest first).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1884,7 +1900,8 @@ namespace Google.Cloud.SecretManager.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results. Pass this value in
-    /// [ListSecretVersionsRequest.page_token][google.cloud.secretmanager.v1.ListSecretVersionsRequest.page_token] to retrieve the next page.
+    /// [ListSecretVersionsRequest.page_token][google.cloud.secretmanager.v1.ListSecretVersionsRequest.page_token]
+    /// to retrieve the next page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1899,7 +1916,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+    /// The total number of
+    /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2082,7 +2100,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.GetSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.GetSecretVersion].
+  /// Request message for
+  /// [SecretManagerService.GetSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.GetSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSecretVersionRequest : pb::IMessage<GetSecretVersionRequest>
@@ -2133,7 +2152,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+    /// Required. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
     /// `projects/*/secrets/*/versions/*`.
     ///
     /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
@@ -2282,7 +2302,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.UpdateSecret][google.cloud.secretmanager.v1.SecretManagerService.UpdateSecret].
+  /// Request message for
+  /// [SecretManagerService.UpdateSecret][google.cloud.secretmanager.v1.SecretManagerService.UpdateSecret].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSecretRequest : pb::IMessage<UpdateSecretRequest>
@@ -2334,7 +2355,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int SecretFieldNumber = 1;
     private global::Google.Cloud.SecretManager.V1.Secret secret_;
     /// <summary>
-    /// Required. [Secret][google.cloud.secretmanager.v1.Secret] with updated field values.
+    /// Required. [Secret][google.cloud.secretmanager.v1.Secret] with updated field
+    /// values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2536,7 +2558,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion].
+  /// Request message for
+  /// [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessSecretVersionRequest : pb::IMessage<AccessSecretVersionRequest>
@@ -2587,7 +2610,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+    /// Required. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
     /// `projects/*/secrets/*/versions/*`.
     ///
     /// `projects/*/secrets/*/versions/latest` is an alias to the most recently
@@ -2736,7 +2760,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Response message for [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion].
+  /// Response message for
+  /// [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessSecretVersionResponse : pb::IMessage<AccessSecretVersionResponse>
@@ -2788,7 +2813,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+    /// The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
     /// `projects/*/secrets/*/versions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2982,7 +3008,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.DeleteSecret][google.cloud.secretmanager.v1.SecretManagerService.DeleteSecret].
+  /// Request message for
+  /// [SecretManagerService.DeleteSecret][google.cloud.secretmanager.v1.SecretManagerService.DeleteSecret].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSecretRequest : pb::IMessage<DeleteSecretRequest>
@@ -3034,7 +3061,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [Secret][google.cloud.secretmanager.v1.Secret] to delete in the format
+    /// Required. The resource name of the
+    /// [Secret][google.cloud.secretmanager.v1.Secret] to delete in the format
     /// `projects/*/secrets/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3050,9 +3078,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Etag of the [Secret][google.cloud.secretmanager.v1.Secret]. The request succeeds if it matches
-    /// the etag of the currently stored secret object. If the etag is omitted,
-    /// the request succeeds.
+    /// Optional. Etag of the [Secret][google.cloud.secretmanager.v1.Secret]. The
+    /// request succeeds if it matches the etag of the currently stored secret
+    /// object. If the etag is omitted, the request succeeds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3221,7 +3249,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.DisableSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.DisableSecretVersion].
+  /// Request message for
+  /// [SecretManagerService.DisableSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.DisableSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisableSecretVersionRequest : pb::IMessage<DisableSecretVersionRequest>
@@ -3273,8 +3302,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to disable in the format
-    /// `projects/*/secrets/*/versions/*`.
+    /// Required. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to disable in
+    /// the format `projects/*/secrets/*/versions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3289,9 +3319,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Etag of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request succeeds if it matches
-    /// the etag of the currently stored secret version object. If the etag is
-    /// omitted, the request succeeds.
+    /// Optional. Etag of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request
+    /// succeeds if it matches the etag of the currently stored secret version
+    /// object. If the etag is omitted, the request succeeds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3460,7 +3491,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.EnableSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.EnableSecretVersion].
+  /// Request message for
+  /// [SecretManagerService.EnableSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.EnableSecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnableSecretVersionRequest : pb::IMessage<EnableSecretVersionRequest>
@@ -3512,8 +3544,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to enable in the format
-    /// `projects/*/secrets/*/versions/*`.
+    /// Required. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to enable in
+    /// the format `projects/*/secrets/*/versions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3528,9 +3561,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Etag of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request succeeds if it matches
-    /// the etag of the currently stored secret version object. If the etag is
-    /// omitted, the request succeeds.
+    /// Optional. Etag of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request
+    /// succeeds if it matches the etag of the currently stored secret version
+    /// object. If the etag is omitted, the request succeeds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3699,7 +3733,8 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// Request message for [SecretManagerService.DestroySecretVersion][google.cloud.secretmanager.v1.SecretManagerService.DestroySecretVersion].
+  /// Request message for
+  /// [SecretManagerService.DestroySecretVersion][google.cloud.secretmanager.v1.SecretManagerService.DestroySecretVersion].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestroySecretVersionRequest : pb::IMessage<DestroySecretVersionRequest>
@@ -3751,8 +3786,9 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to destroy in the format
-    /// `projects/*/secrets/*/versions/*`.
+    /// Required. The resource name of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] to destroy in
+    /// the format `projects/*/secrets/*/versions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3767,9 +3803,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int EtagFieldNumber = 2;
     private string etag_ = "";
     /// <summary>
-    /// Optional. Etag of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request succeeds if it matches
-    /// the etag of the currently stored secret version object. If the etag is
-    /// omitted, the request succeeds.
+    /// Optional. Etag of the
+    /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. The request
+    /// succeeds if it matches the etag of the currently stored secret version
+    /// object. If the etag is omitted, the request succeeds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
