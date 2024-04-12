@@ -27,32 +27,34 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Ci5nb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2RvY3VtZW50LnBy",
             "b3RvEh9nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIo8FCghEb2N1",
-            "bWVudBIuCgtzdHJ1Y3RfZGF0YRgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJ1Y3RIABITCglqc29uX2RhdGEYBSABKAlIABIRCgRuYW1lGAEgASgJQgPg",
-            "QQUSDwoCaWQYAiABKAlCA+BBBRIRCglzY2hlbWFfaWQYAyABKAkSQgoHY29u",
-            "dGVudBgKIAEoCzIxLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
-            "RG9jdW1lbnQuQ29udGVudBIaChJwYXJlbnRfZG9jdW1lbnRfaWQYByABKAkS",
-            "OQoTZGVyaXZlZF9zdHJ1Y3RfZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1",
-            "Zi5TdHJ1Y3RCA+BBAxpLCgdDb250ZW50EhMKCXJhd19ieXRlcxgCIAEoDEgA",
-            "Eg0KA3VyaRgDIAEoCUgAEhEKCW1pbWVfdHlwZRgBIAEoCUIJCgdjb250ZW50",
-            "OpYC6kGSAgonZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RvY3Vt",
-            "ZW50EmZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0vZG9j",
-            "dW1lbnRzL3tkb2N1bWVudH0Sf3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0",
-            "b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2JyYW5jaH0vZG9jdW1lbnRz",
-            "L3tkb2N1bWVudH1CBgoEZGF0YUKAAgojY29tLmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjFCDURvY3VtZW50UHJvdG9QAVpNY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5l",
-            "cGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29n",
-            "bGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERp",
-            "c2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVu",
-            "Z2luZTo6VjFiBnByb3RvMw=="));
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsQFCghEb2N1bWVudBIuCgtzdHJ1",
+            "Y3RfZGF0YRgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RIABITCglq",
+            "c29uX2RhdGEYBSABKAlIABIRCgRuYW1lGAEgASgJQgPgQQUSDwoCaWQYAiAB",
+            "KAlCA+BBBRIRCglzY2hlbWFfaWQYAyABKAkSQgoHY29udGVudBgKIAEoCzIx",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRG9jdW1lbnQuQ29u",
+            "dGVudBIaChJwYXJlbnRfZG9jdW1lbnRfaWQYByABKAkSOQoTZGVyaXZlZF9z",
+            "dHJ1Y3RfZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BB",
+            "AxIzCgppbmRleF90aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDGksKB0NvbnRlbnQSEwoJcmF3X2J5dGVzGAIgASgMSAASDQoD",
+            "dXJpGAMgASgJSAASEQoJbWltZV90eXBlGAEgASgJQgkKB2NvbnRlbnQ6lgLq",
+            "QZICCidkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnQS",
+            "ZnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRh",
+            "U3RvcmVzL3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVu",
+            "dHMve2RvY3VtZW50fRJ/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVz",
+            "L3tkYXRhX3N0b3JlfS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVudHMve2Rv",
+            "Y3VtZW50fUIGCgRkYXRhQoACCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MUINRG9jdW1lbnRQcm90b1ABWk1jbG91ZC5nb29nbGUuY29t",
+            "L2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtk",
+            "aXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5D",
+            "bG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292",
+            "ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5l",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document), global::Google.Cloud.DiscoveryEngine.V1.Document.Parser, new[]{ "StructData", "JsonData", "Name", "Id", "SchemaId", "Content", "ParentDocumentId", "DerivedStructData" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content), global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content.Parser, new[]{ "RawBytes", "Uri", "MimeType" }, new[]{ "Content" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document), global::Google.Cloud.DiscoveryEngine.V1.Document.Parser, new[]{ "StructData", "JsonData", "Name", "Id", "SchemaId", "Content", "ParentDocumentId", "DerivedStructData", "IndexTime" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content), global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content.Parser, new[]{ "RawBytes", "Uri", "MimeType" }, new[]{ "Content" }, null, null, null)})
           }));
     }
     #endregion
@@ -104,6 +106,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       content_ = other.content_ != null ? other.content_.Clone() : null;
       parentDocumentId_ = other.parentDocumentId_;
       derivedStructData_ = other.derivedStructData_ != null ? other.derivedStructData_.Clone() : null;
+      indexTime_ = other.indexTime_ != null ? other.indexTime_.Clone() : null;
       switch (other.DataCase) {
         case DataOneofCase.StructData:
           StructData = other.StructData.Clone();
@@ -275,6 +278,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "index_time" field.</summary>
+    public const int IndexTimeFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp indexTime_;
+    /// <summary>
+    /// Output only. The last time the document was indexed. If this field is set,
+    /// the document could be returned in search results.
+    ///
+    /// This field is OUTPUT_ONLY. If this field is not populated, it means the
+    /// document has never been indexed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp IndexTime {
+      get { return indexTime_; }
+      set {
+        indexTime_ = value;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
@@ -319,6 +341,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (!object.Equals(Content, other.Content)) return false;
       if (ParentDocumentId != other.ParentDocumentId) return false;
       if (!object.Equals(DerivedStructData, other.DerivedStructData)) return false;
+      if (!object.Equals(IndexTime, other.IndexTime)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -335,6 +358,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (content_ != null) hash ^= Content.GetHashCode();
       if (ParentDocumentId.Length != 0) hash ^= ParentDocumentId.GetHashCode();
       if (derivedStructData_ != null) hash ^= DerivedStructData.GetHashCode();
+      if (indexTime_ != null) hash ^= IndexTime.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -386,6 +410,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Content);
       }
+      if (indexTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(IndexTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -428,6 +456,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(Content);
       }
+      if (indexTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(IndexTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -461,6 +493,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (derivedStructData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DerivedStructData);
+      }
+      if (indexTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -497,6 +532,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           DerivedStructData = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         DerivedStructData.MergeFrom(other.DerivedStructData);
+      }
+      if (other.indexTime_ != null) {
+        if (indexTime_ == null) {
+          IndexTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        IndexTime.MergeFrom(other.IndexTime);
       }
       switch (other.DataCase) {
         case DataOneofCase.StructData:
@@ -568,6 +609,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(Content);
             break;
           }
+          case 106: {
+            if (indexTime_ == null) {
+              IndexTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(IndexTime);
+            break;
+          }
         }
       }
     #endif
@@ -624,6 +672,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               Content = new global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content();
             }
             input.ReadMessage(Content);
+            break;
+          }
+          case 106: {
+            if (indexTime_ == null) {
+              IndexTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(IndexTime);
             break;
           }
         }

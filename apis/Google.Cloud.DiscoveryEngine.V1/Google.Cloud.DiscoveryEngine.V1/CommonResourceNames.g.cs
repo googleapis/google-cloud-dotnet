@@ -1056,4 +1056,273 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </returns>
         public static bool operator !=(ServingConfigName a, ServingConfigName b) => !(a == b);
     }
+
+    /// <summary>Resource name for the <c>FhirStore</c> resource.</summary>
+    public sealed partial class FhirStoreName : gax::IResourceName, sys::IEquatable<FhirStoreName>
+    {
+        /// <summary>The possible contents of <see cref="FhirStoreName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+            /// </summary>
+            ProjectLocationDatasetFhirStore = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDatasetFhirStore = new gax::PathTemplate("projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}");
+
+        /// <summary>Creates a <see cref="FhirStoreName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="FhirStoreName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static FhirStoreName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FhirStoreName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="FhirStoreName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fhirStoreId">The <c>FhirStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FhirStoreName"/> constructed from the provided ids.</returns>
+        public static FhirStoreName FromProjectLocationDatasetFhirStore(string projectId, string locationId, string datasetId, string fhirStoreId) =>
+            new FhirStoreName(ResourceNameType.ProjectLocationDatasetFhirStore, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), datasetId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), fhirStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(fhirStoreId, nameof(fhirStoreId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FhirStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fhirStoreId">The <c>FhirStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FhirStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string datasetId, string fhirStoreId) =>
+            FormatProjectLocationDatasetFhirStore(projectId, locationId, datasetId, fhirStoreId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FhirStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fhirStoreId">The <c>FhirStore</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FhirStoreName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDatasetFhirStore(string projectId, string locationId, string datasetId, string fhirStoreId) =>
+            s_projectLocationDatasetFhirStore.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), gax::GaxPreconditions.CheckNotNullOrEmpty(fhirStoreId, nameof(fhirStoreId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="FhirStoreName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="fhirStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FhirStoreName"/> if successful.</returns>
+        public static FhirStoreName Parse(string fhirStoreName) => Parse(fhirStoreName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FhirStoreName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="fhirStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FhirStoreName"/> if successful.</returns>
+        public static FhirStoreName Parse(string fhirStoreName, bool allowUnparsed) =>
+            TryParse(fhirStoreName, allowUnparsed, out FhirStoreName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FhirStoreName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="fhirStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FhirStoreName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string fhirStoreName, out FhirStoreName result) => TryParse(fhirStoreName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FhirStoreName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="fhirStoreName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FhirStoreName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string fhirStoreName, bool allowUnparsed, out FhirStoreName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(fhirStoreName, nameof(fhirStoreName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDatasetFhirStore.TryParseName(fhirStoreName, out resourceName))
+            {
+                result = FromProjectLocationDatasetFhirStore(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(fhirStoreName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private FhirStoreName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string datasetId = null, string fhirStoreId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DatasetId = datasetId;
+            FhirStoreId = fhirStoreId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="FhirStoreName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetId">The <c>Dataset</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="fhirStoreId">The <c>FhirStore</c> ID. Must not be <c>null</c> or empty.</param>
+        public FhirStoreName(string projectId, string locationId, string datasetId, string fhirStoreId) : this(ResourceNameType.ProjectLocationDatasetFhirStore, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), datasetId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetId, nameof(datasetId)), fhirStoreId: gax::GaxPreconditions.CheckNotNullOrEmpty(fhirStoreId, nameof(fhirStoreId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Dataset</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string DatasetId { get; }
+
+        /// <summary>
+        /// The <c>FhirStore</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string FhirStoreId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDatasetFhirStore: return s_projectLocationDatasetFhirStore.Expand(ProjectId, LocationId, DatasetId, FhirStoreId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as FhirStoreName);
+
+        /// <inheritdoc/>
+        public bool Equals(FhirStoreName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(FhirStoreName a, FhirStoreName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(FhirStoreName a, FhirStoreName b) => !(a == b);
+    }
 }

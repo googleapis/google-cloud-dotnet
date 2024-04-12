@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ConversationalSearchService_ConverseConversation_async]
+    // [START discoveryengine_v1_generated_RecommendationService_Recommend_async]
     using Google.Cloud.DiscoveryEngine.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
-    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
+    public sealed partial class GeneratedRecommendationServiceClientSnippets
     {
-        /// <summary>Snippet for ConverseConversationAsync</summary>
+        /// <summary>Snippet for RecommendAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,26 +31,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ConverseConversationRequestObjectAsync()
+        public async Task RecommendRequestObjectAsync()
         {
             // Create client
-            ConversationalSearchServiceClient conversationalSearchServiceClient = await ConversationalSearchServiceClient.CreateAsync();
+            RecommendationServiceClient recommendationServiceClient = await RecommendationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ConverseConversationRequest request = new ConverseConversationRequest
+            RecommendRequest request = new RecommendRequest
             {
-                ConversationName = ConversationName.FromProjectLocationDataStoreConversation("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[CONVERSATION]"),
-                Query = new TextInput(),
                 ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
-                Conversation = new Conversation(),
-                SafeSearch = false,
-                UserLabels = { { "", "" }, },
-                SummarySpec = new SearchRequest.Types.ContentSearchSpec.Types.SummarySpec(),
+                UserEvent = new UserEvent(),
+                PageSize = 0,
                 Filter = "",
-                BoostSpec = new SearchRequest.Types.BoostSpec(),
+                ValidateOnly = false,
+                Params = { { "", new Value() }, },
+                UserLabels = { { "", "" }, },
             };
             // Make the request
-            ConverseConversationResponse response = await conversationalSearchServiceClient.ConverseConversationAsync(request);
+            RecommendResponse response = await recommendationServiceClient.RecommendAsync(request);
         }
     }
-    // [END discoveryengine_v1_generated_ConversationalSearchService_ConverseConversation_async]
+    // [END discoveryengine_v1_generated_RecommendationService_Recommend_async]
 }

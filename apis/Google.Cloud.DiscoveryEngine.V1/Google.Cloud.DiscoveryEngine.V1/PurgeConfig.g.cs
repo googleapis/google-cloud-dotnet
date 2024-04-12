@@ -33,31 +33,31 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Z29vZ2xlYXBpcy5jb20vQnJhbmNoEhMKBmZpbHRlchgCIAEoCUID4EECEg0K",
             "BWZvcmNlGAMgASgIInEKFlB1cmdlRG9jdW1lbnRzUmVzcG9uc2USEwoLcHVy",
             "Z2VfY291bnQYASABKAMSQgoMcHVyZ2Vfc2FtcGxlGAIgAygJQiz6QSkKJ2Rp",
-            "c2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudCKoAQoWUHVy",
+            "c2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudCK/AQoWUHVy",
             "Z2VEb2N1bWVudHNNZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYAiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDXN1Y2Nlc3NfY291bnQY",
-            "AyABKAMSFQoNZmFpbHVyZV9jb3VudBgEIAEoAyJpCiVQdXJnZVN1Z2dlc3Rp",
-            "b25EZW55TGlzdEVudHJpZXNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIw4EEC",
-            "+kEqCihkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRGF0YVN0b3Jl",
-            "ImgKJlB1cmdlU3VnZ2VzdGlvbkRlbnlMaXN0RW50cmllc1Jlc3BvbnNlEhMK",
-            "C3B1cmdlX2NvdW50GAEgASgDEikKDWVycm9yX3NhbXBsZXMYAiADKAsyEi5n",
-            "b29nbGUucnBjLlN0YXR1cyKKAQomUHVyZ2VTdWdnZXN0aW9uRGVueUxpc3RF",
-            "bnRyaWVzTWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEKDAgojY29tLmdvb2dsZS5jbG91ZC5k",
-            "aXNjb3ZlcnllbmdpbmUudjFCEFB1cmdlQ29uZmlnUHJvdG9QAVpNY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5",
-            "ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWq",
-            "Ah9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENs",
-            "b3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2Nv",
-            "dmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "AyABKAMSFQoNZmFpbHVyZV9jb3VudBgEIAEoAxIVCg1pZ25vcmVkX2NvdW50",
+            "GAUgASgDImkKJVB1cmdlU3VnZ2VzdGlvbkRlbnlMaXN0RW50cmllc1JlcXVl",
+            "c3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoKKGRpc2NvdmVyeWVuZ2luZS5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhU3RvcmUiaAomUHVyZ2VTdWdnZXN0aW9uRGVu",
+            "eUxpc3RFbnRyaWVzUmVzcG9uc2USEwoLcHVyZ2VfY291bnQYASABKAMSKQoN",
+            "ZXJyb3Jfc2FtcGxlcxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzIooBCiZQ",
+            "dXJnZVN1Z2dlc3Rpb25EZW55TGlzdEVudHJpZXNNZXRhZGF0YRIvCgtjcmVh",
+            "dGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
+            "dXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QoMCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIQUHVy",
+            "Z2VDb25maWdQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVy",
+            "eWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
+            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
+            "cnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx",
+            "6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest), global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsRequest.Parser, new[]{ "Parent", "Filter", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsResponse), global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsResponse.Parser, new[]{ "PurgeCount", "PurgeSample" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsMetadata), global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsMetadata), global::Google.Cloud.DiscoveryEngine.V1.PurgeDocumentsMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount", "IgnoredCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest), global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesRequest.Parser, new[]{ "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesResponse), global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesResponse.Parser, new[]{ "PurgeCount", "ErrorSamples" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesMetadata), global::Google.Cloud.DiscoveryEngine.V1.PurgeSuggestionDenyListEntriesMetadata.Parser, new[]{ "CreateTime", "UpdateTime" }, null, null, null, null)
@@ -622,6 +622,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       successCount_ = other.successCount_;
       failureCount_ = other.failureCount_;
+      ignoredCount_ = other.ignoredCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -692,6 +693,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "ignored_count" field.</summary>
+    public const int IgnoredCountFieldNumber = 5;
+    private long ignoredCount_;
+    /// <summary>
+    /// Count of entries that were ignored as entries were not found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IgnoredCount {
+      get { return ignoredCount_; }
+      set {
+        ignoredCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -711,6 +727,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (SuccessCount != other.SuccessCount) return false;
       if (FailureCount != other.FailureCount) return false;
+      if (IgnoredCount != other.IgnoredCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -722,6 +739,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (SuccessCount != 0L) hash ^= SuccessCount.GetHashCode();
       if (FailureCount != 0L) hash ^= FailureCount.GetHashCode();
+      if (IgnoredCount != 0L) hash ^= IgnoredCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -756,6 +774,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
+      if (IgnoredCount != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(IgnoredCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -782,6 +804,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
+      if (IgnoredCount != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(IgnoredCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -803,6 +829,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (FailureCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailureCount);
+      }
+      if (IgnoredCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IgnoredCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -833,6 +862,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.FailureCount != 0L) {
         FailureCount = other.FailureCount;
+      }
+      if (other.IgnoredCount != 0L) {
+        IgnoredCount = other.IgnoredCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -871,6 +903,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             FailureCount = input.ReadInt64();
             break;
           }
+          case 40: {
+            IgnoredCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -906,6 +942,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 32: {
             FailureCount = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            IgnoredCount = input.ReadInt64();
             break;
           }
         }
