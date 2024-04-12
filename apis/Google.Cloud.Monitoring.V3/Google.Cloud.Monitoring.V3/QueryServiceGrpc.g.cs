@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/query_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2023 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
-  /// The QueryService API is used to manage time series data in Stackdriver
+  /// The QueryService API is used to manage time series data in Cloud
   /// Monitoring. Time series data is a collection of data points that describes
   /// the time-varying values of a metric.
   /// </summary>
@@ -89,7 +89,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public abstract partial class QueryServiceBase
     {
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series using Monitoring Query Language.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -130,7 +130,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series using Monitoring Query Language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -143,7 +143,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return QueryTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series using Monitoring Query Language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -154,7 +154,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_QueryTimeSeries, null, options, request);
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series using Monitoring Query Language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -167,7 +167,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return QueryTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series using Monitoring Query Language.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -168,8 +168,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 7;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-    /// whose groups are to be listed. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+    /// groups are to be listed. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1078,8 +1079,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-    /// which to create the group. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+    /// to create the group. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1096,8 +1098,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int GroupFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
-    /// Required. A group definition. It is an error to define the `name` field because
-    /// the system assigns the name.
+    /// Required. A group definition. It is an error to define the `name` field
+    /// because the system assigns the name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1366,8 +1368,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int GroupFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
-    /// Required. The new definition of the group.  All fields of the existing group,
-    /// excepting `name`, are replaced with the corresponding fields of this group.
+    /// Required. The new definition of the group.  All fields of the existing
+    /// group, excepting `name`, are replaced with the corresponding fields of this
+    /// group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

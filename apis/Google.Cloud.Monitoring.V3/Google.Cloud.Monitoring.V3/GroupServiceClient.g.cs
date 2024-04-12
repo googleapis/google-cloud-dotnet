@@ -338,8 +338,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -365,8 +366,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -392,8 +394,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -419,8 +422,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -446,8 +450,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -473,8 +478,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -500,8 +506,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -527,8 +534,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -554,8 +562,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -581,8 +590,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -797,14 +807,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -819,14 +830,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -841,14 +853,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -859,14 +872,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -881,14 +895,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -903,14 +918,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -921,14 +937,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -943,14 +960,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -965,14 +983,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -983,14 +1002,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1005,14 +1025,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1027,14 +1048,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1045,14 +1067,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1067,14 +1090,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1089,14 +1113,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1138,8 +1163,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1154,8 +1180,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1170,8 +1197,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

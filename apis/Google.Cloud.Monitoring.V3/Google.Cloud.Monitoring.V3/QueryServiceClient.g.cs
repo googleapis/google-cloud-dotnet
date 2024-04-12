@@ -121,7 +121,7 @@ namespace Google.Cloud.Monitoring.V3
 
     /// <summary>QueryService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The QueryService API is used to manage time series data in Stackdriver
+    /// The QueryService API is used to manage time series data in Cloud
     /// Monitoring. Time series data is a collection of data points that describes
     /// the time-varying values of a metric.
     /// </remarks>
@@ -210,7 +210,7 @@ namespace Google.Cloud.Monitoring.V3
         public virtual QueryService.QueryServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series using Monitoring Query Language.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -219,7 +219,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series using Monitoring Query Language.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -230,7 +230,7 @@ namespace Google.Cloud.Monitoring.V3
 
     /// <summary>QueryService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The QueryService API is used to manage time series data in Stackdriver
+    /// The QueryService API is used to manage time series data in Cloud
     /// Monitoring. Time series data is a collection of data points that describes
     /// the time-varying values of a metric.
     /// </remarks>
@@ -271,7 +271,7 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_QueryTimeSeriesRequest(ref QueryTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series using Monitoring Query Language.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -283,7 +283,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series using Monitoring Query Language.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
