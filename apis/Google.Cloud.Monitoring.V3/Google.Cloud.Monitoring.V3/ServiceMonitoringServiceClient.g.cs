@@ -289,9 +289,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>ServiceMonitoringService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
-    /// managing and querying aspects of a workspace's services. These include the
-    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
-    /// of categorized Health Metrics.
+    /// managing and querying aspects of a Metrics Scope's services. These include
+    /// the `Service`'s monitored resources, its Service-Level Objectives, and a
+    /// taxonomy of categorized Health Metrics.
     /// </remarks>
     public abstract partial class ServiceMonitoringServiceClient
     {
@@ -411,8 +411,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -432,8 +433,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -453,8 +455,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -470,8 +473,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -491,8 +495,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -512,8 +517,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -529,8 +535,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -550,8 +557,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -571,8 +579,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -588,8 +597,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -609,8 +619,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -630,8 +641,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -647,8 +659,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -668,8 +681,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -689,8 +703,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Create a `Service`.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-        /// the parent workspace. The format is:
+        /// Required. Resource
+        /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+        /// parent Metrics Scope. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -865,7 +880,7 @@ namespace Google.Cloud.Monitoring.V3
             GetServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -874,7 +889,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -883,12 +898,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -912,12 +927,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -941,12 +956,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -970,12 +985,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -999,12 +1014,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1028,12 +1043,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1057,12 +1072,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1086,12 +1101,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1115,12 +1130,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1144,12 +1159,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the parent containing the listed services, either a
-        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-        /// Monitoring Workspace. The formats are:
+        /// Required. Resource name of the parent containing the listed services,
+        /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -1647,7 +1662,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1663,7 +1679,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1679,7 +1696,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1692,7 +1710,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1708,7 +1727,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1724,7 +1744,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1737,7 +1758,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1753,7 +1775,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1769,7 +1792,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Get a `ServiceLevelObjective` by name.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -1801,7 +1825,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1829,7 +1853,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1857,7 +1881,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1885,7 +1909,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1913,7 +1937,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -1941,7 +1965,7 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the parent containing the listed SLOs, either a
-        /// project or a Monitoring Workspace. The formats are:
+        /// project or a Monitoring Metrics Scope. The formats are:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
         /// workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -2064,7 +2088,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2080,7 +2105,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2096,7 +2122,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2109,7 +2136,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2125,7 +2153,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2141,7 +2170,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2154,7 +2184,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2170,7 +2201,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2186,7 +2218,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Delete the given `ServiceLevelObjective`.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+        /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
         /// </param>
@@ -2199,9 +2232,9 @@ namespace Google.Cloud.Monitoring.V3
     /// <summary>ServiceMonitoringService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
-    /// managing and querying aspects of a workspace's services. These include the
-    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
-    /// of categorized Health Metrics.
+    /// managing and querying aspects of a Metrics Scope's services. These include
+    /// the `Service`'s monitored resources, its Service-Level Objectives, and a
+    /// taxonomy of categorized Health Metrics.
     /// </remarks>
     public sealed partial class ServiceMonitoringServiceClientImpl : ServiceMonitoringServiceClient
     {
@@ -2372,7 +2405,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2384,7 +2417,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// List `Service`s for this workspace.
+        /// List `Service`s for this Metrics Scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

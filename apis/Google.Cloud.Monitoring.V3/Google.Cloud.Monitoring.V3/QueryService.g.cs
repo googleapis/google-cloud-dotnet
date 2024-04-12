@@ -26,8 +26,8 @@ namespace Google.Cloud.Monitoring.V3 {
           string.Concat(
             "Cihnb29nbGUvbW9uaXRvcmluZy92My9xdWVyeV9zZXJ2aWNlLnByb3RvEhRn",
             "b29nbGUubW9uaXRvcmluZy52MxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90bxopZ29vZ2xlL21vbml0b3JpbmcvdjMvbWV0cmljX3NlcnZpY2UucHJv",
-            "dG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvMt4CCgxRdWVyeVNlcnZpY2US",
+            "cm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aKWdvb2dsZS9tb25pdG9y",
+            "aW5nL3YzL21ldHJpY19zZXJ2aWNlLnByb3RvMt4CCgxRdWVyeVNlcnZpY2US",
             "oQEKD1F1ZXJ5VGltZVNlcmllcxIsLmdvb2dsZS5tb25pdG9yaW5nLnYzLlF1",
             "ZXJ5VGltZVNlcmllc1JlcXVlc3QaLS5nb29nbGUubW9uaXRvcmluZy52My5R",
             "dWVyeVRpbWVTZXJpZXNSZXNwb25zZSIxgtPkkwIrIiYvdjMve25hbWU9cHJv",
@@ -42,7 +42,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "ZFxNb25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6",
             "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion

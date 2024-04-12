@@ -976,8 +976,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// A content string and a MIME type that describes the content string's
-      /// format.
+      /// Documentation that is included in the notifications and incidents
+      /// pertaining to this policy.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Documentation : pb::IMessage<Documentation>
@@ -2430,7 +2430,8 @@ namespace Google.Cloud.Monitoring.V3 {
             private global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData evaluationMissingData_ = global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData.Unspecified;
             /// <summary>
             /// A condition control that determines how metric-threshold conditions
-            /// are evaluated when data stops arriving.
+            /// are evaluated when data stops arriving. To use this control, the value
+            /// of the `duration` field must be greater than or equal to 60 seconds.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

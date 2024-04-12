@@ -238,8 +238,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -993,8 +994,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1033,7 +1035,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// A positive number that is the maximum number of results to return.
+    /// A positive number that is the maximum number of results to return. The
+    /// default and maximum value is 10,000. If a page_size &lt;= 0 or > 10,000 is
+    /// submitted, will instead return a maximum of 10,000 results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1546,7 +1550,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is:
+    /// Required. The metric descriptor on which to execute the request. The format
+    /// is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
     ///
@@ -1748,8 +1753,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     /// 4
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -1766,8 +1772,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricDescriptorFieldNumber = 2;
     private global::Google.Api.MetricDescriptor metricDescriptor_;
     /// <summary>
-    /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-    /// descriptor.
+    /// Required. The new [custom
+    /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1996,7 +2002,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The metric descriptor on which to execute the request. The format is:
+    /// Required. The metric descriptor on which to execute the request. The format
+    /// is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
     ///
@@ -2205,7 +2212,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 10;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
     /// organization or folder on which to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
@@ -2225,10 +2233,11 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-    /// that specifies which time series should be returned.  The filter must
-    /// specify a single metric type, and can additionally specify metric labels
-    /// and other information. For example:
+    /// Required. A [monitoring
+    /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+    /// which time series should be returned.  The filter must specify a single
+    /// metric type, and can additionally specify metric labels and other
+    /// information. For example:
     ///
     ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
     ///         metric.labels.instance_name = "my-instance-name"
@@ -2246,9 +2255,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int IntervalFieldNumber = 4;
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
-    /// Required. The time interval for which results should be returned. Only time series
-    /// that contain data points in the specified interval are included
-    /// in the response.
+    /// Required. The time interval for which results should be returned. Only time
+    /// series that contain data points in the specified interval are included in
+    /// the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2717,7 +2726,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Controls which fields are returned by `ListTimeSeries`.
+      /// Controls which fields are returned by `ListTimeSeries*`.
       /// </summary>
       public enum TimeSeriesView {
         /// <summary>
@@ -3092,8 +3101,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -4102,8 +4112,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-    /// which to execute the request. The format is:
+    /// Required. The
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+    /// to execute the request. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>

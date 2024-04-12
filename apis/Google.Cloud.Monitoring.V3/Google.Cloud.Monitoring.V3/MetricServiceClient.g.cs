@@ -360,7 +360,7 @@ namespace Google.Cloud.Monitoring.V3
         public virtual MetricService.MetricServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -369,7 +369,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -380,11 +380,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -407,11 +408,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -436,11 +438,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -463,11 +466,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -492,11 +496,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -519,11 +524,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -548,11 +554,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -575,11 +582,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -604,11 +612,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -631,11 +640,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -660,7 +670,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -669,7 +679,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -678,7 +688,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -687,7 +697,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -706,7 +716,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -725,7 +735,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -741,7 +751,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -760,7 +770,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -779,7 +789,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -795,7 +805,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -814,7 +824,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -833,7 +843,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="name">
         /// Required. The monitored resource descriptor to get.  The format is:
@@ -849,7 +859,7 @@ namespace Google.Cloud.Monitoring.V3
             GetMonitoredResourceDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -858,7 +868,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -867,11 +877,12 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -894,11 +905,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -921,11 +933,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -948,11 +961,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -975,11 +989,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1002,11 +1017,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1029,11 +1045,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1056,11 +1073,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1083,11 +1101,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1110,11 +1129,12 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1137,7 +1157,7 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1146,7 +1166,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1155,7 +1175,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1164,10 +1184,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1183,10 +1204,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1202,10 +1224,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1218,10 +1241,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1237,10 +1261,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1256,10 +1281,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1272,10 +1298,11 @@ namespace Google.Cloud.Monitoring.V3
             GetMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1291,10 +1318,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1310,10 +1338,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1327,10 +1356,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1340,10 +1370,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1353,10 +1384,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1366,20 +1398,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1392,20 +1426,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1418,20 +1454,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1440,20 +1478,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1466,20 +1506,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1492,20 +1534,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1514,20 +1558,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1540,20 +1586,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1566,20 +1614,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1588,20 +1638,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1614,20 +1666,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1640,20 +1694,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1662,20 +1718,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1688,20 +1746,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1714,20 +1774,22 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
-        /// Required. The new [custom metric](https://cloud.google.com/monitoring/custom-metrics)
-        /// descriptor.
+        /// Required. The new [custom
+        /// metric](https://cloud.google.com/monitoring/custom-metrics) descriptor.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1773,7 +1835,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1794,7 +1857,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1815,7 +1879,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1833,7 +1898,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1854,7 +1920,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1875,7 +1942,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1893,7 +1961,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1914,7 +1983,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1935,7 +2005,8 @@ namespace Google.Cloud.Monitoring.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. The metric descriptor on which to execute the request. The format is:
+        /// Required. The metric descriptor on which to execute the request. The format
+        /// is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
         /// 
@@ -1948,7 +2019,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1957,7 +2028,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1966,10 +2037,11 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -1977,18 +2049,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2015,10 +2088,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2026,18 +2100,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2064,10 +2139,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2075,18 +2151,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2113,10 +2190,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2124,18 +2202,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2162,10 +2241,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2173,18 +2253,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2211,10 +2292,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2222,18 +2304,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2260,10 +2343,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2271,18 +2355,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2309,10 +2394,11 @@ namespace Google.Cloud.Monitoring.V3
             }, callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name),
         /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
@@ -2320,18 +2406,19 @@ namespace Google.Cloud.Monitoring.V3
         /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
-        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
-        /// that specifies which time series should be returned.  The filter must
-        /// specify a single metric type, and can additionally specify metric labels
-        /// and other information. For example:
+        /// Required. A [monitoring
+        /// filter](https://cloud.google.com/monitoring/api/v3/filters) that specifies
+        /// which time series should be returned.  The filter must specify a single
+        /// metric type, and can additionally specify metric labels and other
+        /// information. For example:
         /// 
         /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
         /// metric.labels.instance_name = "my-instance-name"
         /// </param>
         /// <param name="interval">
-        /// Required. The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
+        /// Required. The time interval for which results should be returned. Only time
+        /// series that contain data points in the specified interval are included in
+        /// the response.
         /// </param>
         /// <param name="view">
         /// Required. Specifies which information is returned about the time series.
@@ -2362,6 +2449,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2374,6 +2464,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2386,6 +2479,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2398,10 +2494,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2431,10 +2531,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2464,10 +2568,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2490,10 +2598,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2523,10 +2635,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2556,10 +2672,14 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2640,8 +2760,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2678,8 +2799,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2716,8 +2838,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2747,8 +2870,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2785,8 +2909,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2823,8 +2948,9 @@ namespace Google.Cloud.Monitoring.V3
         /// instead.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
-        /// which to execute the request. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) on which
+        /// to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2955,7 +3081,7 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2967,7 +3093,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
+        /// Lists monitored resource descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2981,7 +3107,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2993,7 +3119,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Workspace.
+        /// Gets a single monitored resource descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3005,7 +3131,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3017,7 +3143,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Workspace.
+        /// Lists metric descriptors that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3029,7 +3155,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3041,7 +3167,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Workspace.
+        /// Gets a single metric descriptor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3054,10 +3180,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3070,10 +3197,11 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
-        /// The creation is executed asynchronously and callers may check the returned
-        /// operation to track its progress.
+        /// The creation is executed asynchronously.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
+        /// The metric descriptor is updated if it already exists,
+        /// except that metric labels are never removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3113,7 +3241,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3125,7 +3253,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// Lists time series that match a filter.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3141,6 +3269,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3156,6 +3287,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The response is empty if all time series in the request were written.
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
+        /// This method does not support
+        /// [resource locations constraint of an organization
+        /// policy](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
