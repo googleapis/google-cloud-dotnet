@@ -79,7 +79,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 return new TargetedSessionPool(parent, SessionPoolSegmentKey.Create(s_databaseName), acquireSessionsImmediately);
             }
 
-            [Fact(Timeout = TestTimeoutMilliseconds)]
+            [Fact]
             public void Construction_NoAcquireSessionsImmediately()
             {
                 var pool = CreatePool(false);
