@@ -128,10 +128,13 @@ namespace Google.Apps.Card.V1 {
             "LmFwcHMuY2FyZC52MS5JY29uEiEKBWNvbG9yGAMgASgLMhIuZ29vZ2xlLnR5",
             "cGUuQ29sb3ISLgoIb25fY2xpY2sYBCABKAsyHC5nb29nbGUuYXBwcy5jYXJk",
             "LnYxLk9uQ2xpY2sSEAoIZGlzYWJsZWQYBSABKAgSEAoIYWx0X3RleHQYBiAB",
-            "KAkihgEKBEljb24SFAoKa25vd25faWNvbhgBIAEoCUgAEhIKCGljb25fdXJs",
-            "GAIgASgJSAASEAoIYWx0X3RleHQYAyABKAkSOQoKaW1hZ2VfdHlwZRgEIAEo",
-            "DjIlLmdvb2dsZS5hcHBzLmNhcmQudjEuV2lkZ2V0LkltYWdlVHlwZUIHCgVp",
-            "Y29ucyLaAQoOSW1hZ2VDcm9wU3R5bGUSPwoEdHlwZRgBIAEoDjIxLmdvb2ds",
+            "KAkiwgEKBEljb24SFAoKa25vd25faWNvbhgBIAEoCUgAEhIKCGljb25fdXJs",
+            "GAIgASgJSAASOgoNbWF0ZXJpYWxfaWNvbhgFIAEoCzIhLmdvb2dsZS5hcHBz",
+            "LmNhcmQudjEuTWF0ZXJpYWxJY29uSAASEAoIYWx0X3RleHQYAyABKAkSOQoK",
+            "aW1hZ2VfdHlwZRgEIAEoDjIlLmdvb2dsZS5hcHBzLmNhcmQudjEuV2lkZ2V0",
+            "LkltYWdlVHlwZUIHCgVpY29ucyJJCgxNYXRlcmlhbEljb24SDAoEbmFtZRgB",
+            "IAEoCRIMCgRmaWxsGAIgASgIEg4KBndlaWdodBgDIAEoBRINCgVncmFkZRgE",
+            "IAEoBSLaAQoOSW1hZ2VDcm9wU3R5bGUSPwoEdHlwZRgBIAEoDjIxLmdvb2ds",
             "ZS5hcHBzLmNhcmQudjEuSW1hZ2VDcm9wU3R5bGUuSW1hZ2VDcm9wVHlwZRIU",
             "Cgxhc3BlY3RfcmF0aW8YAiABKAEicQoNSW1hZ2VDcm9wVHlwZRIfChtJTUFH",
             "RV9DUk9QX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZTUVVBUkUQARIKCgZDSVJD",
@@ -219,7 +222,8 @@ namespace Google.Apps.Card.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource), global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource.Parser, new[]{ "CommonDataSource" }, new[]{ "DataSource" }, new[]{ typeof(global::Google.Apps.Card.V1.SelectionInput.Types.PlatformDataSource.Types.CommonDataSource) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.DateTimePicker), global::Google.Apps.Card.V1.DateTimePicker.Parser, new[]{ "Name", "Label", "Type", "ValueMsEpoch", "TimezoneOffsetDate", "OnChangeAction" }, null, new[]{ typeof(global::Google.Apps.Card.V1.DateTimePicker.Types.DateTimePickerType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Button), global::Google.Apps.Card.V1.Button.Parser, new[]{ "Text", "Icon", "Color", "OnClick", "Disabled", "AltText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Icon), global::Google.Apps.Card.V1.Icon.Parser, new[]{ "KnownIcon", "IconUrl", "AltText", "ImageType" }, new[]{ "Icons" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.Icon), global::Google.Apps.Card.V1.Icon.Parser, new[]{ "KnownIcon", "IconUrl", "MaterialIcon", "AltText", "ImageType" }, new[]{ "Icons" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.MaterialIcon), global::Google.Apps.Card.V1.MaterialIcon.Parser, new[]{ "Name", "Fill", "Weight", "Grade" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ImageCropStyle), global::Google.Apps.Card.V1.ImageCropStyle.Parser, new[]{ "Type", "AspectRatio" }, null, new[]{ typeof(global::Google.Apps.Card.V1.ImageCropStyle.Types.ImageCropType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.BorderStyle), global::Google.Apps.Card.V1.BorderStyle.Parser, new[]{ "Type", "StrokeColor", "CornerRadius" }, null, new[]{ typeof(global::Google.Apps.Card.V1.BorderStyle.Types.BorderType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Card.V1.ImageComponent), global::Google.Apps.Card.V1.ImageComponent.Parser, new[]{ "ImageUri", "AltText", "CropStyle", "BorderStyle" }, null, null, null, null),
@@ -247,15 +251,15 @@ namespace Google.Apps.Card.V1 {
   /// To learn how
   /// to build cards, see the following documentation:
   ///
-  /// * For Google Chat apps, see [Design dynamic, interactive, and consistent UIs
-  /// with cards](https://developers.google.com/chat/ui).
+  /// * For Google Chat apps, see [Design the components of a card or
+  ///   dialog](https://developers.google.com/workspace/chat/design-components-card-dialog).
   /// * For Google Workspace Add-ons, see [Card-based
   /// interfaces](https://developers.google.com/apps-script/add-ons/concepts/cards).
   ///
   /// **Example: Card message for a Google Chat app**
   ///
   /// ![Example contact
-  /// card](https://developers.google.com/chat/images/card_api_reference.png)
+  /// card](https://developers.google.com/workspace/chat/images/card_api_reference.png)
   ///
   /// To create the sample card message in Google Chat, use the following JSON:
   ///
@@ -266,77 +270,77 @@ namespace Google.Apps.Card.V1 {
   ///       "cardId": "unique-card-id",
   ///       "card": {
   ///         "header": {
-  ///           "title": "Sasha",
-  ///           "subtitle": "Software Engineer",
-  ///           "imageUrl":
-  ///           "https://developers.google.com/chat/images/quickstart-app-avatar.png",
-  ///           "imageType": "CIRCLE",
-  ///           "imageAltText": "Avatar for Sasha",
-  ///         },
-  ///         "sections": [
-  ///           {
-  ///             "header": "Contact Info",
-  ///             "collapsible": true,
-  ///             "uncollapsibleWidgetsCount": 1,
-  ///             "widgets": [
-  ///               {
-  ///                 "decoratedText": {
-  ///                   "startIcon": {
-  ///                     "knownIcon": "EMAIL",
-  ///                   },
-  ///                   "text": "sasha@example.com",
-  ///                 }
-  ///               },
-  ///               {
-  ///                 "decoratedText": {
-  ///                   "startIcon": {
-  ///                     "knownIcon": "PERSON",
-  ///                   },
-  ///                   "text": "&lt;font color=\"#80e27e\">Online&lt;/font>",
-  ///                 },
-  ///               },
-  ///               {
-  ///                 "decoratedText": {
-  ///                   "startIcon": {
-  ///                     "knownIcon": "PHONE",
-  ///                   },
-  ///                   "text": "+1 (555) 555-1234",
-  ///                 }
-  ///               },
-  ///               {
-  ///                 "buttonList": {
-  ///                   "buttons": [
-  ///                     {
-  ///                       "text": "Share",
-  ///                       "onClick": {
+  ///            "title": "Sasha",
+  ///            "subtitle": "Software Engineer",
+  ///            "imageUrl":
+  ///            "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png",
+  ///            "imageType": "CIRCLE",
+  ///            "imageAltText": "Avatar for Sasha"
+  ///          },
+  ///          "sections": [
+  ///            {
+  ///              "header": "Contact Info",
+  ///              "collapsible": true,
+  ///              "uncollapsibleWidgetsCount": 1,
+  ///              "widgets": [
+  ///                {
+  ///                  "decoratedText": {
+  ///                    "startIcon": {
+  ///                      "knownIcon": "EMAIL"
+  ///                    },
+  ///                    "text": "sasha@example.com"
+  ///                  }
+  ///                },
+  ///                {
+  ///                  "decoratedText": {
+  ///                    "startIcon": {
+  ///                      "knownIcon": "PERSON"
+  ///                    },
+  ///                    "text": "&lt;font color=\"#80e27e\">Online&lt;/font>"
+  ///                  }
+  ///                },
+  ///                {
+  ///                  "decoratedText": {
+  ///                    "startIcon": {
+  ///                      "knownIcon": "PHONE"
+  ///                    },
+  ///                    "text": "+1 (555) 555-1234"
+  ///                  }
+  ///                },
+  ///                {
+  ///                  "buttonList": {
+  ///                    "buttons": [
+  ///                      {
+  ///                        "text": "Share",
+  ///                        "onClick": {
   ///                         "openLink": {
-  ///                           "url": "https://example.com/share",
-  ///                         }
-  ///                       }
-  ///                     },
-  ///                     {
-  ///                       "text": "Edit",
-  ///                       "onClick": {
-  ///                         "action": {
-  ///                           "function": "goToView",
-  ///                           "parameters": [
-  ///                             {
-  ///                               "key": "viewType",
-  ///                               "value": "EDIT",
-  ///                             }
-  ///                           ],
-  ///                         }
-  ///                       }
-  ///                     },
-  ///                   ],
-  ///                 }
-  ///               },
-  ///             ],
-  ///           },
-  ///         ],
-  ///       },
+  ///                            "url": "https://example.com/share"
+  ///                          }
+  ///                        }
+  ///                      },
+  ///                      {
+  ///                        "text": "Edit",
+  ///                        "onClick": {
+  ///                          "action": {
+  ///                            "function": "goToView",
+  ///                            "parameters": [
+  ///                              {
+  ///                                "key": "viewType",
+  ///                                "value": "EDIT"
+  ///                              }
+  ///                            ]
+  ///                          }
+  ///                        }
+  ///                      }
+  ///                    ]
+  ///                  }
+  ///                }
+  ///              ]
+  ///            }
+  ///          ]
+  ///        }
   ///     }
-  ///   ],
+  ///   ]
   /// }
   /// ```
   /// </summary>
@@ -416,8 +420,8 @@ namespace Google.Apps.Card.V1 {
     /// <summary>
     /// Contains a collection of widgets. Each section has its own, optional
     /// header. Sections are visually separated by a line divider. For an example
-    /// in Google Chat apps, see [Card
-    /// section](https://developers.google.com/chat/ui/widgets/card-section).
+    /// in Google Chat apps, see [Define a section of a
+    /// card](https://developers.google.com/workspace/chat/design-components-card-dialog#define_a_section_of_a_card).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -515,9 +519,9 @@ namespace Google.Apps.Card.V1 {
     /// Setting `fixedFooter` without specifying a `primaryButton` or a
     /// `secondaryButton` causes an error. For Chat apps, you can use fixed footers
     /// in
-    /// [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not
+    /// [dialogs](https://developers.google.com/workspace/chat/dialogs), but not
     /// [card
-    /// messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
+    /// messages](https://developers.google.com/workspace/chat/create-messages#create).
     ///
     /// [Google Workspace Add-ons and Chat
     /// apps](https://developers.google.com/workspace/extend):
@@ -930,8 +934,8 @@ namespace Google.Apps.Card.V1 {
       }
 
       /// <summary>
-      /// Represents a card header. For an example in Google Chat apps, see [Card
-      /// header](https://developers.google.com/chat/ui/widgets/card-header).
+      /// Represents a card header. For an example in Google Chat apps, see [Add a
+      /// header](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_header).
       ///
       /// [Google Workspace Add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
@@ -1359,7 +1363,7 @@ namespace Google.Apps.Card.V1 {
         /// Supports simple HTML formatted text. For more information
         /// about formatting text, see
         /// [Formatting text in Google Chat
-        /// apps](https://developers.google.com/chat/format-messages#card-formatting)
+        /// apps](https://developers.google.com/workspace/chat/format-messages#card-formatting)
         /// and
         /// [Formatting
         /// text in Google Workspace
@@ -1885,11 +1889,11 @@ namespace Google.Apps.Card.V1 {
       /// `secondaryButton` causes an error.
       ///
       /// For Chat apps, you can use fixed footers in
-      /// [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not
+      /// [dialogs](https://developers.google.com/workspace/chat/dialogs), but not
       /// [card
-      /// messages](https://developers.google.com/chat/api/guides/v1/messages/create#create).
-      /// For an example in Google Chat apps, see [Card
-      /// footer](https://developers.google.com/chat/ui/widgets/card-fixed-footer).
+      /// messages](https://developers.google.com/workspace/chat/create-messages#create).
+      /// For an example in Google Chat apps, see [Add a persistent
+      /// footer](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_persistent_footer).
       ///
       /// [Google Workspace Add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
@@ -2243,7 +2247,7 @@ namespace Google.Apps.Card.V1 {
     /// Displays a text paragraph. Supports simple HTML formatted text. For more
     /// information about formatting text, see
     /// [Formatting text in Google Chat
-    /// apps](https://developers.google.com/chat/format-messages#card-formatting)
+    /// apps](https://developers.google.com/workspace/chat/format-messages#card-formatting)
     /// and
     /// [Formatting
     /// text in Google Workspace
@@ -2275,7 +2279,7 @@ namespace Google.Apps.Card.V1 {
     /// ```
     /// "image": {
     ///   "imageUrl":
-    ///   "https://developers.google.com/chat/images/quickstart-app-avatar.png",
+    ///   "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png",
     ///   "altText": "Chat app avatar"
     /// }
     /// ```
@@ -3202,7 +3206,7 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// Specifies whether widgets align to the left, right, or center of a column.
       ///
-      /// [Google Chat apps](https://developers.google.com/chat):
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
       /// </summary>
       public enum HorizontalAlignment {
         /// <summary>
@@ -3234,12 +3238,12 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// A paragraph of text that supports formatting. For an example in
-  /// Google Chat apps, see [Text
-  /// paragraph](https://developers.google.com/chat/ui/widgets/text-paragraph).
+  /// Google Chat apps, see [Add a paragraph of formatted
+  /// text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_a_paragraph_of_formatted_text).
   /// For more information
   /// about formatting text, see
   /// [Formatting text in Google Chat
-  /// apps](https://developers.google.com/chat/format-messages#card-formatting)
+  /// apps](https://developers.google.com/workspace/chat/format-messages#card-formatting)
   /// and
   /// [Formatting
   /// text in Google Workspace
@@ -3443,7 +3447,8 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// An image that is specified by a URL and can have an `onClick` action. For an
-  /// example, see [Image](https://developers.google.com/chat/ui/widgets/image).
+  /// example, see [Add an
+  /// image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
   ///
   /// [Google Workspace Add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
@@ -3504,7 +3509,7 @@ namespace Google.Apps.Card.V1 {
     /// For example:
     ///
     /// ```
-    /// https://developers.google.com/chat/images/quickstart-app-avatar.png
+    /// https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png
     /// ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3739,7 +3744,8 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// Displays a divider between widgets as a horizontal line. For an example in
   /// Google Chat apps, see
-  /// [Divider](https://developers.google.com/chat/ui/widgets/divider).
+  /// [Add a horizontal divider between
+  /// widgets](https://developers.google.com/workspace/chat/format-structure-card-dialog#add_a_horizontal_divider_between_widgets).
   ///
   /// [Google Workspace Add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
@@ -3907,8 +3913,8 @@ namespace Google.Apps.Card.V1 {
   /// A widget that displays text with optional decorations such as a label above
   /// or below the text, an icon in front of the text, a selection widget, or a
   /// button after the text. For an example in
-  /// Google Chat apps, see [Decorated
-  /// text](https://developers.google.com/chat/ui/widgets/decorated-text).
+  /// Google Chat apps, see [Display text with decorative
+  /// text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#display_text_with_decorative_elements).
   ///
   /// [Google Workspace Add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
@@ -4031,7 +4037,7 @@ namespace Google.Apps.Card.V1 {
     /// Supports simple formatting. For more information
     /// about formatting text, see
     /// [Formatting text in Google Chat
-    /// apps](https://developers.google.com/chat/format-messages#card-formatting)
+    /// apps](https://developers.google.com/workspace/chat/format-messages#card-formatting)
     /// and
     /// [Formatting
     /// text in Google Workspace
@@ -4131,9 +4137,9 @@ namespace Google.Apps.Card.V1 {
     /// An icon displayed after the text.
     ///
     /// Supports
-    /// [built-in](https://developers.google.com/chat/format-messages#builtinicons)
+    /// [built-in](https://developers.google.com/workspace/chat/format-messages#builtinicons)
     /// and
-    /// [custom](https://developers.google.com/chat/format-messages#customicons)
+    /// [custom](https://developers.google.com/workspace/chat/format-messages#customicons)
     /// icons.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4655,7 +4661,7 @@ namespace Google.Apps.Card.V1 {
         /// The name by which the switch widget is identified in a form input event.
         ///
         /// For details about working with form inputs, see [Receive form
-        /// data](https://developers.google.com/chat/ui/read-form-data).
+        /// data](https://developers.google.com/workspace/chat/read-form-data).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4673,7 +4679,7 @@ namespace Google.Apps.Card.V1 {
         /// The value entered by a user, returned as part of a form input event.
         ///
         /// For details about working with form inputs, see [Receive form
-        /// data](https://developers.google.com/chat/ui/read-form-data).
+        /// data](https://developers.google.com/workspace/chat/read-form-data).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5007,12 +5013,13 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// A field in which users can enter text. Supports suggestions and on-change
-  /// actions. For an example in Google Chat apps, see [Text
-  /// input](https://developers.google.com/chat/ui/widgets/text-input).
+  /// actions. For an example in Google Chat apps, see [Add a field in which a user
+  /// can enter
+  /// text](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_field_in_which_a_user_can_enter_text).
   ///
   /// Chat apps receive and can process the value of entered text during form input
   /// events. For details about working with form inputs, see [Receive form
-  /// data](https://developers.google.com/chat/ui/read-form-data).
+  /// data](https://developers.google.com/workspace/chat/read-form-data).
   ///
   /// When you need to collect undefined or abstract data from users,
   /// use a text input. To collect defined or enumerated data from users, use the
@@ -5081,7 +5088,7 @@ namespace Google.Apps.Card.V1 {
     /// The name by which the text input is identified in a form input event.
     ///
     /// For details about working with form inputs, see [Receive form
-    /// data](https://developers.google.com/chat/ui/read-form-data).
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5138,7 +5145,7 @@ namespace Google.Apps.Card.V1 {
     /// The value entered by a user, returned as part of a form input event.
     ///
     /// For details about working with form inputs, see [Receive form
-    /// data](https://developers.google.com/chat/ui/read-form-data).
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5173,7 +5180,7 @@ namespace Google.Apps.Card.V1 {
     /// user adding to the field or deleting text.
     ///
     /// Examples of actions to take include running a custom function or opening
-    /// a [dialog](https://developers.google.com/chat/how-tos/dialogs)
+    /// a [dialog](https://developers.google.com/workspace/chat/dialogs)
     /// in Google Chat.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5250,7 +5257,7 @@ namespace Google.Apps.Card.V1 {
     /// Use this text to prompt users to enter a value. For example, `Enter a
     /// number from 0 to 100`.
     ///
-    /// [Google Chat apps](https://developers.google.com/chat):
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6099,7 +6106,8 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// A list of buttons layed out horizontally. For an example in
   /// Google Chat apps, see
-  /// [Button list](https://developers.google.com/chat/ui/widgets/button-list).
+  /// [Add a
+  /// button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
   ///
   /// [Google Workspace Add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
@@ -6290,12 +6298,12 @@ namespace Google.Apps.Card.V1 {
   /// A widget that creates one or more UI items that users can select.
   /// For example, a dropdown menu or checkboxes. You can use this widget to
   /// collect data that can be predicted or enumerated. For an example in Google
-  /// Chat apps, see [Selection
-  /// input](https://developers.google.com/chat/ui/widgets/selection-input).
+  /// Chat apps, see [Add selectable UI
+  /// elements](/workspace/chat/design-interactive-card-dialog#add_selectable_ui_elements).
   ///
   /// Chat apps can process the value of items that users select or input. For
   /// details about working with form inputs, see [Receive form
-  /// data](https://developers.google.com/chat/ui/read-form-data).
+  /// data](https://developers.google.com/workspace/chat/read-form-data).
   ///
   /// To collect undefined or abstract data from users, use
   /// the [TextInput][google.apps.card.v1.TextInput] widget.
@@ -6370,7 +6378,7 @@ namespace Google.Apps.Card.V1 {
     /// The name that identifies the selection input in a form input event.
     ///
     /// For details about working with form inputs, see [Receive form
-    /// data](https://developers.google.com/chat/ui/read-form-data).
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6442,7 +6450,7 @@ namespace Google.Apps.Card.V1 {
     /// specified, you must specify a separate button that submits the form.
     ///
     /// For details about working with form inputs, see [Receive form
-    /// data](https://developers.google.com/chat/ui/read-form-data).
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6474,7 +6482,7 @@ namespace Google.Apps.Card.V1 {
     private int multiSelectMinQueryLength_;
     /// <summary>
     /// For multiselect menus, the number of text characters that a user inputs
-    /// before the Chat app queries autocomplete and displays suggested items
+    /// before the app queries autocomplete and displays suggested items
     /// in the menu.
     ///
     /// If unspecified, defaults to 0 characters for static data sources and 3
@@ -6942,14 +6950,14 @@ namespace Google.Apps.Card.V1 {
         ///  * External data: Items are populated from an external data
         ///    source outside of Google Workspace.
         ///
-        /// For examples of how to implement multiselect menus, see the
-        /// [`SelectionInput` widget
-        /// page](https://developers.google.com/chat/ui/widgets/selection-input#multiselect-menu).
+        /// For examples of how to implement multiselect menus, see
+        /// [Add a multiselect
+        /// menu](https://developers.google.com/workspace/chat/design-interactive-card-dialog#multiselect-menu).
         ///
         /// [Google Workspace Add-ons and Chat
         /// apps](https://developers.google.com/workspace/extend):
-        /// multiselect for Google Workspace Add-ons are in
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
+        /// Multiselect for Google Workspace Add-ons are in
+        /// Developer Preview.
         /// </summary>
         [pbr::OriginalName("MULTI_SELECT")] MultiSelect = 4,
       }
@@ -7033,7 +7041,7 @@ namespace Google.Apps.Card.V1 {
         /// input value.
         ///
         /// For details about working with form inputs, see [Receive form
-        /// data](https://developers.google.com/chat/ui/read-form-data).
+        /// data](https://developers.google.com/workspace/chat/read-form-data).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7068,7 +7076,7 @@ namespace Google.Apps.Card.V1 {
         /// For multiselect menus, the URL for the icon displayed next to
         /// the item's `text` field. Supports PNG and JPEG files. Must be an `HTTPS`
         /// URL. For example,
-        /// `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
+        /// `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7330,7 +7338,7 @@ namespace Google.Apps.Card.V1 {
       /// multiselect menu, a data source from Google Workspace. Used to populate
       /// items in a multiselect menu.
       ///
-      /// [Google Chat apps](https://developers.google.com/chat):
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PlatformDataSource : pb::IMessage<PlatformDataSource>
@@ -7578,9 +7586,9 @@ namespace Google.Apps.Card.V1 {
           /// <summary>
           /// A data source shared by all [Google Workspace
           /// applications]
-          /// (https://developers.google.com/chat/api/reference/rest/v1/HostApp).
+          /// (https://developers.google.com/workspace/chat/api/reference/rest/v1/HostApp).
           ///
-          /// [Google Chat apps](https://developers.google.com/chat):
+          /// [Google Chat apps](https://developers.google.com/workspace/chat):
           /// </summary>
           public enum CommonDataSource {
             /// <summary>
@@ -7606,8 +7614,8 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// Lets users input a date, a time, or both a date and a time. For an example in
-  /// Google Chat apps, see [Date time
-  /// picker](https://developers.google.com/chat/ui/widgets/date-time-picker).
+  /// Google Chat apps, see [Let a user pick a date and
+  /// time](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let_a_user_pick_a_date_and_time).
   ///
   /// Users can input text or use the picker to select dates and times. If users
   /// input an invalid date or time, the picker shows an error that prompts users
@@ -7673,7 +7681,7 @@ namespace Google.Apps.Card.V1 {
     /// The name by which the `DateTimePicker` is identified in a form input event.
     ///
     /// For details about working with form inputs, see [Receive form
-    /// data](https://developers.google.com/chat/ui/read-form-data).
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8069,7 +8077,8 @@ namespace Google.Apps.Card.V1 {
   /// <summary>
   /// A text, icon, or text and icon button that users can click. For an example in
   /// Google Chat apps, see
-  /// [Button list](https://developers.google.com/chat/ui/widgets/button-list).
+  /// [Add a
+  /// button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
   ///
   /// To make an image a clickable button, specify an
   /// [`Image`][google.apps.card.v1.Image] (not an
@@ -8247,7 +8256,7 @@ namespace Google.Apps.Card.V1 {
     /// Set descriptive text that lets users know what the button does. For
     /// example, if a button opens a hyperlink, you might write: "Opens a new
     /// browser tab and navigates to the Google Chat developer documentation at
-    /// https://developers.google.com/chat".
+    /// https://developers.google.com/workspace/chat".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8540,12 +8549,13 @@ namespace Google.Apps.Card.V1 {
 
   /// <summary>
   /// An icon displayed in a widget on a card. For an example in Google Chat apps,
-  /// see [Icon](https://developers.google.com/chat/ui/widgets/icon).
+  /// see [Add an
+  /// icon](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_icon).
   ///
   /// Supports
-  /// [built-in](https://developers.google.com/chat/format-messages#builtinicons)
+  /// [built-in](https://developers.google.com/workspace/chat/format-messages#builtinicons)
   /// and
-  /// [custom](https://developers.google.com/chat/format-messages#customicons)
+  /// [custom](https://developers.google.com/workspace/chat/format-messages#customicons)
   /// icons.
   ///
   /// [Google Workspace Add-ons and Chat
@@ -8595,6 +8605,9 @@ namespace Google.Apps.Card.V1 {
         case IconsOneofCase.IconUrl:
           IconUrl = other.IconUrl;
           break;
+        case IconsOneofCase.MaterialIcon:
+          MaterialIcon = other.MaterialIcon.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -8615,7 +8628,7 @@ namespace Google.Apps.Card.V1 {
     /// For a bus, specify `BUS`.
     ///
     /// For a full list of supported icons, see [built-in
-    /// icons](https://developers.google.com/chat/format-messages#builtinicons).
+    /// icons](https://developers.google.com/workspace/chat/format-messages#builtinicons).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8650,7 +8663,7 @@ namespace Google.Apps.Card.V1 {
     ///
     /// ```
     /// "iconUrl":
-    /// "https://developers.google.com/chat/images/quickstart-app-avatar.png"
+    /// "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png"
     /// ```
     ///
     /// Supported file types include `.png` and `.jpg`.
@@ -8679,6 +8692,33 @@ namespace Google.Apps.Card.V1 {
       }
     }
 
+    /// <summary>Field number for the "material_icon" field.</summary>
+    public const int MaterialIconFieldNumber = 5;
+    /// <summary>
+    /// Display one of the [Google Material
+    /// Icons](https://fonts.google.com/icons).
+    ///
+    /// For example, to display a [checkbox
+    /// icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048),
+    /// use
+    /// ```
+    /// "material_icon": {
+    ///   "name": "check_box"
+    /// }
+    /// ```
+    ///
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Card.V1.MaterialIcon MaterialIcon {
+      get { return iconsCase_ == IconsOneofCase.MaterialIcon ? (global::Google.Apps.Card.V1.MaterialIcon) icons_ : null; }
+      set {
+        icons_ = value;
+        iconsCase_ = value == null ? IconsOneofCase.None : IconsOneofCase.MaterialIcon;
+      }
+    }
+
     /// <summary>Field number for the "alt_text" field.</summary>
     public const int AltTextFieldNumber = 3;
     private string altText_ = "";
@@ -8688,7 +8728,7 @@ namespace Google.Apps.Card.V1 {
     /// you should set a helpful description for what the icon displays, and if
     /// applicable, what it does. For example, `A user's account portrait`, or
     /// `Opens a new browser tab and navigates to the Google Chat developer
-    /// documentation at https://developers.google.com/chat`.
+    /// documentation at https://developers.google.com/workspace/chat`.
     ///
     /// If the icon is set in a [`Button`][google.apps.card.v1.Button], the
     /// `altText` appears as helper text when the user hovers over the button.
@@ -8726,6 +8766,7 @@ namespace Google.Apps.Card.V1 {
       None = 0,
       KnownIcon = 1,
       IconUrl = 2,
+      MaterialIcon = 5,
     }
     private IconsOneofCase iconsCase_ = IconsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8758,6 +8799,7 @@ namespace Google.Apps.Card.V1 {
       }
       if (KnownIcon != other.KnownIcon) return false;
       if (IconUrl != other.IconUrl) return false;
+      if (!object.Equals(MaterialIcon, other.MaterialIcon)) return false;
       if (AltText != other.AltText) return false;
       if (ImageType != other.ImageType) return false;
       if (IconsCase != other.IconsCase) return false;
@@ -8770,6 +8812,7 @@ namespace Google.Apps.Card.V1 {
       int hash = 1;
       if (HasKnownIcon) hash ^= KnownIcon.GetHashCode();
       if (HasIconUrl) hash ^= IconUrl.GetHashCode();
+      if (iconsCase_ == IconsOneofCase.MaterialIcon) hash ^= MaterialIcon.GetHashCode();
       if (AltText.Length != 0) hash ^= AltText.GetHashCode();
       if (ImageType != global::Google.Apps.Card.V1.Widget.Types.ImageType.Square) hash ^= ImageType.GetHashCode();
       hash ^= (int) iconsCase_;
@@ -8807,6 +8850,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) ImageType);
       }
+      if (iconsCase_ == IconsOneofCase.MaterialIcon) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MaterialIcon);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8833,6 +8880,10 @@ namespace Google.Apps.Card.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) ImageType);
       }
+      if (iconsCase_ == IconsOneofCase.MaterialIcon) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MaterialIcon);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8848,6 +8899,9 @@ namespace Google.Apps.Card.V1 {
       }
       if (HasIconUrl) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IconUrl);
+      }
+      if (iconsCase_ == IconsOneofCase.MaterialIcon) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaterialIcon);
       }
       if (AltText.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AltText);
@@ -8879,6 +8933,12 @@ namespace Google.Apps.Card.V1 {
           break;
         case IconsOneofCase.IconUrl:
           IconUrl = other.IconUrl;
+          break;
+        case IconsOneofCase.MaterialIcon:
+          if (MaterialIcon == null) {
+            MaterialIcon = new global::Google.Apps.Card.V1.MaterialIcon();
+          }
+          MaterialIcon.MergeFrom(other.MaterialIcon);
           break;
       }
 
@@ -8913,6 +8973,15 @@ namespace Google.Apps.Card.V1 {
             ImageType = (global::Google.Apps.Card.V1.Widget.Types.ImageType) input.ReadEnum();
             break;
           }
+          case 42: {
+            global::Google.Apps.Card.V1.MaterialIcon subBuilder = new global::Google.Apps.Card.V1.MaterialIcon();
+            if (iconsCase_ == IconsOneofCase.MaterialIcon) {
+              subBuilder.MergeFrom(MaterialIcon);
+            }
+            input.ReadMessage(subBuilder);
+            MaterialIcon = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -8942,6 +9011,367 @@ namespace Google.Apps.Card.V1 {
           }
           case 32: {
             ImageType = (global::Google.Apps.Card.V1.Widget.Types.ImageType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            global::Google.Apps.Card.V1.MaterialIcon subBuilder = new global::Google.Apps.Card.V1.MaterialIcon();
+            if (iconsCase_ == IconsOneofCase.MaterialIcon) {
+              subBuilder.MergeFrom(MaterialIcon);
+            }
+            input.ReadMessage(subBuilder);
+            MaterialIcon = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A [Google Material Icon](https://fonts.google.com/icons), which includes over
+  /// 2500+ options.
+  ///
+  /// For example, to display a [checkbox
+  /// icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048)
+  /// with customized weight and grade, write the following:
+  ///
+  /// ```
+  /// {
+  ///   "name": "check_box",
+  ///   "fill": true,
+  ///   "weight": 300,
+  ///   "grade": -25
+  /// }
+  /// ```
+  ///
+  /// [Google Chat apps](https://developers.google.com/workspace/chat):
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MaterialIcon : pb::IMessage<MaterialIcon>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaterialIcon> _parser = new pb::MessageParser<MaterialIcon>(() => new MaterialIcon());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaterialIcon> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaterialIcon() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaterialIcon(MaterialIcon other) : this() {
+      name_ = other.name_;
+      fill_ = other.fill_;
+      weight_ = other.weight_;
+      grade_ = other.grade_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaterialIcon Clone() {
+      return new MaterialIcon(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The icon name defined in the [Google Material
+    /// Icon](https://fonts.google.com/icons), for example, `check_box`. Any
+    /// invalid names are abandoned and replaced with empty string and
+    /// results in the icon failing to render.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "fill" field.</summary>
+    public const int FillFieldNumber = 2;
+    private bool fill_;
+    /// <summary>
+    /// Whether the icon renders as filled. Default value is false.
+    ///
+    /// To preview different icon settings, go to
+    /// [Google Font Icons](https://fonts.google.com/icons) and adjust the
+    /// settings under **Customize**.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Fill {
+      get { return fill_; }
+      set {
+        fill_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weight" field.</summary>
+    public const int WeightFieldNumber = 3;
+    private int weight_;
+    /// <summary>
+    /// The stroke weight of the icon. Choose from {100, 200, 300, 400,
+    /// 500, 600, 700}. If absent, default value is 400. If any other value is
+    /// specified, the default value is used.
+    ///
+    /// To preview different icon settings, go to
+    /// [Google Font Icons](https://fonts.google.com/icons) and adjust the
+    /// settings under **Customize**.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Weight {
+      get { return weight_; }
+      set {
+        weight_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "grade" field.</summary>
+    public const int GradeFieldNumber = 4;
+    private int grade_;
+    /// <summary>
+    /// Weight and grade affect a symbol’s thickness. Adjustments to grade are more
+    /// granular than adjustments to weight and have a small impact on the size of
+    /// the symbol. Choose from {-25, 0, 200}. If absent, default value is 0. If
+    /// any other value is specified, the default value is used.
+    ///
+    /// To preview different icon settings, go to
+    /// [Google Font Icons](https://fonts.google.com/icons) and adjust the
+    /// settings under **Customize**.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Grade {
+      get { return grade_; }
+      set {
+        grade_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaterialIcon);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaterialIcon other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Fill != other.Fill) return false;
+      if (Weight != other.Weight) return false;
+      if (Grade != other.Grade) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Fill != false) hash ^= Fill.GetHashCode();
+      if (Weight != 0) hash ^= Weight.GetHashCode();
+      if (Grade != 0) hash ^= Grade.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Fill != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Fill);
+      }
+      if (Weight != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Weight);
+      }
+      if (Grade != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Grade);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Fill != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Fill);
+      }
+      if (Weight != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Weight);
+      }
+      if (Grade != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Grade);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Fill != false) {
+        size += 1 + 1;
+      }
+      if (Weight != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Weight);
+      }
+      if (Grade != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Grade);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaterialIcon other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Fill != false) {
+        Fill = other.Fill;
+      }
+      if (other.Weight != 0) {
+        Weight = other.Weight;
+      }
+      if (other.Grade != 0) {
+        Grade = other.Grade;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Fill = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Weight = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Grade = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Fill = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Weight = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Grade = input.ReadInt32();
             break;
           }
         }
@@ -8981,7 +9411,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9268,7 +9698,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9585,7 +10015,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9905,7 +10335,8 @@ namespace Google.Apps.Card.V1 {
   /// Displays a grid with a collection of items. Items can only include text or
   /// images. For responsive columns, or to include more than text or images, use
   /// [`Columns`][google.apps.card.v1.Columns]. For an example in Google Chat apps,
-  /// see [Grid](https://developers.google.com/chat/ui/widgets/grid).
+  /// see [Display a Grid with a collection of
+  /// items](https://developers.google.com/workspace/chat/format-structure-card-dialog#display_a_grid_with_a_collection_of_items).
   ///
   /// A grid supports any number of columns and items. The number of rows is
   /// determined by items divided by columns. A grid with
@@ -9964,7 +10395,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10724,7 +11155,8 @@ namespace Google.Apps.Card.V1 {
   /// The `Columns` widget displays up to 2 columns in a card or dialog. You can
   /// add widgets to each column; the widgets appear in the order that they are
   /// specified. For an example in Google Chat apps, see
-  /// [Columns](https://developers.google.com/chat/ui/widgets/columns).
+  /// [Display cards and dialogs in
+  /// columns](https://developers.google.com/workspace/chat/format-structure-card-dialog#display_cards_and_dialogs_in_columns).
   ///
   /// The height of each column is determined by the taller column. For example, if
   /// the first column is taller than the second column, both columns have the
@@ -10749,7 +11181,7 @@ namespace Google.Apps.Card.V1 {
   /// [Google Workspace Add-ons and Chat
   /// apps](https://developers.google.com/workspace/extend):
   /// Columns for Google Workspace Add-ons are in
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
+  /// Developer Preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Columns : pb::IMessage<Columns>
@@ -10766,7 +11198,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10939,7 +11371,10 @@ namespace Google.Apps.Card.V1 {
       /// <summary>
       /// A column.
       ///
-      /// [Google Chat apps](https://developers.google.com/chat):
+      /// [Google Workspace Add-ons and Chat
+      /// apps](https://developers.google.com/workspace/extend):
+      /// Columns for Google Workspace Add-ons are in
+      /// Developer Preview.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Column : pb::IMessage<Column>
@@ -10994,8 +11429,6 @@ namespace Google.Apps.Card.V1 {
         private global::Google.Apps.Card.V1.Columns.Types.Column.Types.HorizontalSizeStyle horizontalSizeStyle_ = global::Google.Apps.Card.V1.Columns.Types.Column.Types.HorizontalSizeStyle.Unspecified;
         /// <summary>
         /// Specifies how a column fills the width of the card.
-        ///
-        /// [Google Chat apps](https://developers.google.com/chat):
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11028,8 +11461,6 @@ namespace Google.Apps.Card.V1 {
         /// <summary>
         /// Specifies whether widgets align to the top, bottom, or center of a
         /// column.
-        ///
-        /// [Google Chat apps](https://developers.google.com/chat):
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11258,7 +11689,10 @@ namespace Google.Apps.Card.V1 {
           /// column depends on both the `HorizontalSizeStyle` and the width of the
           /// widgets within the column.
           ///
-          /// [Google Chat apps](https://developers.google.com/chat):
+          /// [Google Workspace Add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend):
+          /// Columns for Google Workspace Add-ons are in
+          /// Developer Preview.
           /// </summary>
           public enum HorizontalSizeStyle {
             /// <summary>
@@ -11282,7 +11716,10 @@ namespace Google.Apps.Card.V1 {
           /// Specifies whether widgets align to the top, bottom, or center of a
           /// column.
           ///
-          /// [Google Chat apps](https://developers.google.com/chat):
+          /// [Google Workspace Add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend):
+          /// Columns for Google Workspace Add-ons are in
+          /// Developer Preview.
           /// </summary>
           public enum VerticalAlignment {
             /// <summary>
@@ -11306,7 +11743,10 @@ namespace Google.Apps.Card.V1 {
           /// <summary>
           /// The supported widgets that you can include in a column.
           ///
-          /// [Google Chat apps](https://developers.google.com/chat):
+          /// [Google Workspace Add-ons and Chat
+          /// apps](https://developers.google.com/workspace/extend):
+          /// Columns for Google Workspace Add-ons are in
+          /// Developer Preview.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Widgets : pb::IMessage<Widgets>
@@ -11912,7 +12352,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12331,7 +12771,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12677,7 +13117,7 @@ namespace Google.Apps.Card.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Apps.Card.V1.CardReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12718,8 +13158,8 @@ namespace Google.Apps.Card.V1 {
     /// A custom function to invoke when the containing element is
     /// clicked or othrwise activated.
     ///
-    /// For example usage, see [Create interactive
-    /// cards](https://developers.google.com/chat/how-tos/cards-onclick).
+    /// For example usage, see [Read form
+    /// data](https://developers.google.com/workspace/chat/read-form-data).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12771,11 +13211,11 @@ namespace Google.Apps.Card.V1 {
     /// user make changes while the action is being processed, set
     /// [`LoadIndicator`](https://developers.google.com/workspace/add-ons/reference/rpc/google.apps.card.v1#loadindicator)
     /// to `NONE`. For [card
-    /// messages](https://developers.google.com/chat/api/guides/v1/messages/create#create)
+    /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create)
     /// in Chat apps, you must also set the action's
-    /// [`ResponseType`](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#responsetype)
+    /// [`ResponseType`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#responsetype)
     /// to `UPDATE_MESSAGE` and use the same
-    /// [`card_id`](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId)
+    /// [`card_id`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages#CardWithId)
     /// from the card that contained the action.
     ///
     /// If `false`, the form values are cleared when the action is triggered.
@@ -12798,7 +13238,7 @@ namespace Google.Apps.Card.V1 {
     private global::Google.Apps.Card.V1.Action.Types.Interaction interaction_ = global::Google.Apps.Card.V1.Action.Types.Interaction.Unspecified;
     /// <summary>
     /// Optional. Required when opening a
-    /// [dialog](https://developers.google.com/chat/how-tos/dialogs).
+    /// [dialog](https://developers.google.com/workspace/chat/dialogs).
     ///
     /// What to do in response to an interaction with a user, such as a user
     /// clicking a button in a card message.
@@ -12808,11 +13248,11 @@ namespace Google.Apps.Card.V1 {
     ///
     /// By specifying an `interaction`, the app can respond in special interactive
     /// ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can
-    /// open a [dialog](https://developers.google.com/chat/how-tos/dialogs). When
+    /// open a [dialog](https://developers.google.com/workspace/chat/dialogs). When
     /// specified, a loading indicator isn't shown. If specified for
     /// an add-on, the entire card is stripped and nothing is shown in the client.
     ///
-    /// [Google Chat apps](https://developers.google.com/chat):
+    /// [Google Chat apps](https://developers.google.com/workspace/chat):
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13065,7 +13505,7 @@ namespace Google.Apps.Card.V1 {
 
       /// <summary>
       /// Optional. Required when opening a
-      /// [dialog](https://developers.google.com/chat/how-tos/dialogs).
+      /// [dialog](https://developers.google.com/workspace/chat/dialogs).
       ///
       /// What to do in response to an interaction with a user, such as a user
       /// clicking a button in a card message.
@@ -13075,12 +13515,12 @@ namespace Google.Apps.Card.V1 {
       ///
       /// By specifying an `interaction`, the app can respond in special interactive
       /// ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can
-      /// open a [dialog](https://developers.google.com/chat/how-tos/dialogs).
+      /// open a [dialog](https://developers.google.com/workspace/chat/dialogs).
       ///
       /// When specified, a loading indicator isn't shown. If specified for
       /// an add-on, the entire card is stripped and nothing is shown in the client.
       ///
-      /// [Google Chat apps](https://developers.google.com/chat):
+      /// [Google Chat apps](https://developers.google.com/workspace/chat):
       /// </summary>
       public enum Interaction {
         /// <summary>
@@ -13088,7 +13528,7 @@ namespace Google.Apps.Card.V1 {
         /// </summary>
         [pbr::OriginalName("INTERACTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Opens a [dialog](https://developers.google.com/chat/how-tos/dialogs), a
+        /// Opens a [dialog](https://developers.google.com/workspace/chat/dialogs), a
         /// windowed, card-based interface that Chat apps use to interact with users.
         ///
         /// Only supported by Chat apps in response to button-clicks on card
@@ -13096,7 +13536,7 @@ namespace Google.Apps.Card.V1 {
         /// an add-on, the entire card is stripped and nothing is shown in the
         /// client.
         ///
-        /// [Google Chat apps](https://developers.google.com/chat):
+        /// [Google Chat apps](https://developers.google.com/workspace/chat):
         /// </summary>
         [pbr::OriginalName("OPEN_DIALOG")] OpenDialog = 1,
       }
@@ -13108,7 +13548,7 @@ namespace Google.Apps.Card.V1 {
       /// snooze type and snooze time in the list of string parameters.
       ///
       /// To learn more, see
-      /// [`CommonEventObject`](https://developers.google.com/chat/api/reference/rest/v1/Event#commoneventobject).
+      /// [`CommonEventObject`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#commoneventobject).
       ///
       /// [Google Workspace Add-ons and Chat
       /// apps](https://developers.google.com/workspace/extend):
