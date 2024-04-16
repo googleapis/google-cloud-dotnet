@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.notifications.v1beta",
+  "libraryPackage": "Google.Shopping.Merchant.Notifications.V1Beta",
+  "services": {
+    "NotificationsApiService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NotificationsApiServiceClient",
+          "rpcs": {
+            "CreateNotificationSubscription": {
+              "methods": [
+                "CreateNotificationSubscription",
+                "CreateNotificationSubscriptionAsync"
+              ]
+            },
+            "DeleteNotificationSubscription": {
+              "methods": [
+                "DeleteNotificationSubscription",
+                "DeleteNotificationSubscriptionAsync"
+              ]
+            },
+            "GetNotificationSubscription": {
+              "methods": [
+                "GetNotificationSubscription",
+                "GetNotificationSubscriptionAsync"
+              ]
+            },
+            "ListNotificationSubscriptions": {
+              "methods": [
+                "ListNotificationSubscriptions",
+                "ListNotificationSubscriptionsAsync"
+              ]
+            },
+            "UpdateNotificationSubscription": {
+              "methods": [
+                "UpdateNotificationSubscription",
+                "UpdateNotificationSubscriptionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
