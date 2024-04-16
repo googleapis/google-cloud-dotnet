@@ -25,103 +25,130 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvbW9uaXRvcmluZy92My9zZXJ2aWNlLnByb3RvEhRnb29nbGUu",
-            "bW9uaXRvcmluZy52MxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29v",
-            "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGiFnb29nbGUvdHlwZS9jYWxl",
-            "bmRhcl9wZXJpb2QucHJvdG8iyQkKB1NlcnZpY2USDAoEbmFtZRgBIAEoCRIU",
-            "CgxkaXNwbGF5X25hbWUYAiABKAkSNgoGY3VzdG9tGAYgASgLMiQuZ29vZ2xl",
-            "Lm1vbml0b3JpbmcudjMuU2VydmljZS5DdXN0b21IABI9CgphcHBfZW5naW5l",
-            "GAcgASgLMicuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5BcHBFbmdp",
-            "bmVIABJHCg9jbG91ZF9lbmRwb2ludHMYCCABKAsyLC5nb29nbGUubW9uaXRv",
-            "cmluZy52My5TZXJ2aWNlLkNsb3VkRW5kcG9pbnRzSAASQwoNY2x1c3Rlcl9p",
-            "c3RpbxgJIAEoCzIqLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZpY2UuQ2x1",
-            "c3RlcklzdGlvSAASPQoKbWVzaF9pc3RpbxgKIAEoCzInLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlNlcnZpY2UuTWVzaElzdGlvSAASVgoXaXN0aW9fY2Fub25p",
-            "Y2FsX3NlcnZpY2UYCyABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2",
-            "aWNlLklzdGlvQ2Fub25pY2FsU2VydmljZUgAEjoKCXRlbGVtZXRyeRgNIAEo",
-            "CzInLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZpY2UuVGVsZW1ldHJ5EkIK",
-            "C3VzZXJfbGFiZWxzGA4gAygLMi0uZ29vZ2xlLm1vbml0b3JpbmcudjMuU2Vy",
-            "dmljZS5Vc2VyTGFiZWxzRW50cnkaCAoGQ3VzdG9tGh4KCUFwcEVuZ2luZRIR",
-            "Cgltb2R1bGVfaWQYASABKAkaIQoOQ2xvdWRFbmRwb2ludHMSDwoHc2Vydmlj",
-            "ZRgBIAEoCRpnCgxDbHVzdGVySXN0aW8SEAoIbG9jYXRpb24YASABKAkSFAoM",
-            "Y2x1c3Rlcl9uYW1lGAIgASgJEhkKEXNlcnZpY2VfbmFtZXNwYWNlGAMgASgJ",
-            "EhQKDHNlcnZpY2VfbmFtZRgEIAEoCRpOCglNZXNoSXN0aW8SEAoIbWVzaF91",
-            "aWQYASABKAkSGQoRc2VydmljZV9uYW1lc3BhY2UYAyABKAkSFAoMc2Vydmlj",
-            "ZV9uYW1lGAQgASgJGmkKFUlzdGlvQ2Fub25pY2FsU2VydmljZRIQCghtZXNo",
-            "X3VpZBgBIAEoCRIjChtjYW5vbmljYWxfc2VydmljZV9uYW1lc3BhY2UYAyAB",
-            "KAkSGQoRY2Fub25pY2FsX3NlcnZpY2UYBCABKAkaIgoJVGVsZW1ldHJ5EhUK",
-            "DXJlc291cmNlX25hbWUYASABKAkaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6pwHqQaMBCiFtb25pdG9yaW5n",
-            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USJXByb2plY3RzL3twcm9qZWN0fS9z",
-            "ZXJ2aWNlcy97c2VydmljZX0SL29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlv",
-            "bn0vc2VydmljZXMve3NlcnZpY2V9EiNmb2xkZXJzL3tmb2xkZXJ9L3NlcnZp",
-            "Y2VzL3tzZXJ2aWNlfRIBKkIMCgppZGVudGlmaWVyIpYGChVTZXJ2aWNlTGV2",
-            "ZWxPYmplY3RpdmUSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYCyAB",
-            "KAkSTAoXc2VydmljZV9sZXZlbF9pbmRpY2F0b3IYAyABKAsyKy5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5TZXJ2aWNlTGV2ZWxJbmRpY2F0b3ISDAoEZ29hbBgE",
-            "IAEoARIzCg5yb2xsaW5nX3BlcmlvZBgFIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbkgAEjYKD2NhbGVuZGFyX3BlcmlvZBgGIAEoDjIbLmdvb2ds",
-            "ZS50eXBlLkNhbGVuZGFyUGVyaW9kSAASUAoLdXNlcl9sYWJlbHMYDCADKAsy",
-            "Oy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlTGV2ZWxPYmplY3RpdmUu",
-            "VXNlckxhYmVsc0VudHJ5GjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIjQKBFZpZXcSFAoQVklFV19VTlNQRUNJ",
-            "RklFRBAAEggKBEZVTEwQAhIMCghFWFBMSUNJVBABOsoC6kHGAgovbW9uaXRv",
-            "cmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmplY3RpdmUSVnBy",
-            "b2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlcy97c2VydmljZX0vc2VydmljZUxl",
-            "dmVsT2JqZWN0aXZlcy97c2VydmljZV9sZXZlbF9vYmplY3RpdmV9EmBvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfS9z",
-            "ZXJ2aWNlTGV2ZWxPYmplY3RpdmVzL3tzZXJ2aWNlX2xldmVsX29iamVjdGl2",
-            "ZX0SVGZvbGRlcnMve2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9L3NlcnZp",
-            "Y2VMZXZlbE9iamVjdGl2ZXMve3NlcnZpY2VfbGV2ZWxfb2JqZWN0aXZlfRIB",
-            "KiABQggKBnBlcmlvZCLUAQoVU2VydmljZUxldmVsSW5kaWNhdG9yEjMKCWJh",
-            "c2ljX3NsaRgEIAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJhc2ljU2xp",
-            "SAASPgoNcmVxdWVzdF9iYXNlZBgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5n",
-            "LnYzLlJlcXVlc3RCYXNlZFNsaUgAEj4KDXdpbmRvd3NfYmFzZWQYAiABKAsy",
-            "JS5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGlIAEIGCgR0",
-            "eXBlIrYCCghCYXNpY1NsaRIOCgZtZXRob2QYByADKAkSEAoIbG9jYXRpb24Y",
-            "CCADKAkSDwoHdmVyc2lvbhgJIAMoCRJLCgxhdmFpbGFiaWxpdHkYAiABKAsy",
-            "My5nb29nbGUubW9uaXRvcmluZy52My5CYXNpY1NsaS5BdmFpbGFiaWxpdHlD",
-            "cml0ZXJpYUgAEkEKB2xhdGVuY3kYAyABKAsyLi5nb29nbGUubW9uaXRvcmlu",
-            "Zy52My5CYXNpY1NsaS5MYXRlbmN5Q3JpdGVyaWFIABoWChRBdmFpbGFiaWxp",
-            "dHlDcml0ZXJpYRo/Cg9MYXRlbmN5Q3JpdGVyaWESLAoJdGhyZXNob2xkGAMg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQg4KDHNsaV9jcml0ZXJp",
-            "YSIhCgVSYW5nZRILCgNtaW4YASABKAESCwoDbWF4GAIgASgBIqEBCg9SZXF1",
-            "ZXN0QmFzZWRTbGkSQQoQZ29vZF90b3RhbF9yYXRpbxgBIAEoCzIlLmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNSYXRpb0gAEkEKEGRpc3RyaWJ1",
-            "dGlvbl9jdXQYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5EaXN0cmli",
-            "dXRpb25DdXRIAEIICgZtZXRob2QiaAoPVGltZVNlcmllc1JhdGlvEhsKE2dv",
-            "b2Rfc2VydmljZV9maWx0ZXIYBCABKAkSGgoSYmFkX3NlcnZpY2VfZmlsdGVy",
-            "GAUgASgJEhwKFHRvdGFsX3NlcnZpY2VfZmlsdGVyGAYgASgJIloKD0Rpc3Ry",
-            "aWJ1dGlvbkN1dBIbChNkaXN0cmlidXRpb25fZmlsdGVyGAQgASgJEioKBXJh",
-            "bmdlGAUgASgLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUmFuZ2UigwUKD1dp",
-            "bmRvd3NCYXNlZFNsaRIgChZnb29kX2JhZF9tZXRyaWNfZmlsdGVyGAUgASgJ",
-            "SAASYAoaZ29vZF90b3RhbF9yYXRpb190aHJlc2hvbGQYAiABKAsyOi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuUGVyZm9ybWFuY2VU",
-            "aHJlc2hvbGRIABJRChRtZXRyaWNfbWVhbl9pbl9yYW5nZRgGIAEoCzIxLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLldpbmRvd3NCYXNlZFNsaS5NZXRyaWNSYW5n",
-            "ZUgAElAKE21ldHJpY19zdW1faW5fcmFuZ2UYByABKAsyMS5nb29nbGUubW9u",
-            "aXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuTWV0cmljUmFuZ2VIABIwCg13",
-            "aW5kb3dfcGVyaW9kGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "GrABChRQZXJmb3JtYW5jZVRocmVzaG9sZBI8CgtwZXJmb3JtYW5jZRgBIAEo",
-            "CzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNsaUgAEj8K",
-            "FWJhc2ljX3NsaV9wZXJmb3JtYW5jZRgDIAEoCzIeLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkJhc2ljU2xpSAASEQoJdGhyZXNob2xkGAIgASgBQgYKBHR5cGUa",
-            "TgoLTWV0cmljUmFuZ2USEwoLdGltZV9zZXJpZXMYASABKAkSKgoFcmFuZ2UY",
-            "BCABKAsyGy5nb29nbGUubW9uaXRvcmluZy52My5SYW5nZUISChB3aW5kb3df",
-            "Y3JpdGVyaW9uQtEBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCFlNlcnZp",
-            "Y2VNb25pdG9yaW5nUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9tb25p",
-            "dG9yaW5nL2FwaXYzL3YyL21vbml0b3JpbmdwYjttb25pdG9yaW5ncGKqAhpH",
-            "b29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25p",
-            "dG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnBy",
-            "b3RvMw=="));
+            "bW9uaXRvcmluZy52MxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGiFnb29nbGUvdHlwZS9jYWxlbmRhcl9wZXJpb2Qu",
+            "cHJvdG8ilBEKB1NlcnZpY2USEQoEbmFtZRgBIAEoCUID4EEIEhQKDGRpc3Bs",
+            "YXlfbmFtZRgCIAEoCRI2CgZjdXN0b20YBiABKAsyJC5nb29nbGUubW9uaXRv",
+            "cmluZy52My5TZXJ2aWNlLkN1c3RvbUgAEj0KCmFwcF9lbmdpbmUYByABKAsy",
+            "Jy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlLkFwcEVuZ2luZUgAEkcK",
+            "D2Nsb3VkX2VuZHBvaW50cxgIIAEoCzIsLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "LlNlcnZpY2UuQ2xvdWRFbmRwb2ludHNIABJDCg1jbHVzdGVyX2lzdGlvGAkg",
+            "ASgLMiouZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5DbHVzdGVySXN0",
+            "aW9IABI9CgptZXNoX2lzdGlvGAogASgLMicuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuU2VydmljZS5NZXNoSXN0aW9IABJWChdpc3Rpb19jYW5vbmljYWxfc2Vy",
+            "dmljZRgLIAEoCzIzLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZpY2UuSXN0",
+            "aW9DYW5vbmljYWxTZXJ2aWNlSAASOwoJY2xvdWRfcnVuGAwgASgLMiYuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5DbG91ZFJ1bkgAEkMKDWdrZV9u",
+            "YW1lc3BhY2UYDyABKAsyKi5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNl",
+            "LkdrZU5hbWVzcGFjZUgAEkEKDGdrZV93b3JrbG9hZBgQIAEoCzIpLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLlNlcnZpY2UuR2tlV29ya2xvYWRIABI/Cgtna2Vf",
+            "c2VydmljZRgRIAEoCzIoLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZpY2Uu",
+            "R2tlU2VydmljZUgAEkEKDWJhc2ljX3NlcnZpY2UYEyABKAsyKi5nb29nbGUu",
+            "bW9uaXRvcmluZy52My5TZXJ2aWNlLkJhc2ljU2VydmljZRI6Cgl0ZWxlbWV0",
+            "cnkYDSABKAsyJy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlLlRlbGVt",
+            "ZXRyeRJCCgt1c2VyX2xhYmVscxgOIAMoCzItLmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLlNlcnZpY2UuVXNlckxhYmVsc0VudHJ5GggKBkN1c3RvbRoeCglBcHBF",
+            "bmdpbmUSEQoJbW9kdWxlX2lkGAEgASgJGiEKDkNsb3VkRW5kcG9pbnRzEg8K",
+            "B3NlcnZpY2UYASABKAkaZwoMQ2x1c3RlcklzdGlvEhAKCGxvY2F0aW9uGAEg",
+            "ASgJEhQKDGNsdXN0ZXJfbmFtZRgCIAEoCRIZChFzZXJ2aWNlX25hbWVzcGFj",
+            "ZRgDIAEoCRIUCgxzZXJ2aWNlX25hbWUYBCABKAkaTgoJTWVzaElzdGlvEhAK",
+            "CG1lc2hfdWlkGAEgASgJEhkKEXNlcnZpY2VfbmFtZXNwYWNlGAMgASgJEhQK",
+            "DHNlcnZpY2VfbmFtZRgEIAEoCRppChVJc3Rpb0Nhbm9uaWNhbFNlcnZpY2US",
+            "EAoIbWVzaF91aWQYASABKAkSIwobY2Fub25pY2FsX3NlcnZpY2VfbmFtZXNw",
+            "YWNlGAMgASgJEhkKEWNhbm9uaWNhbF9zZXJ2aWNlGAQgASgJGjIKCENsb3Vk",
+            "UnVuEhQKDHNlcnZpY2VfbmFtZRgBIAEoCRIQCghsb2NhdGlvbhgCIAEoCRpn",
+            "CgxHa2VOYW1lc3BhY2USFwoKcHJvamVjdF9pZBgBIAEoCUID4EEDEhAKCGxv",
+            "Y2F0aW9uGAIgASgJEhQKDGNsdXN0ZXJfbmFtZRgDIAEoCRIWCg5uYW1lc3Bh",
+            "Y2VfbmFtZRgEIAEoCRqsAQoLR2tlV29ya2xvYWQSFwoKcHJvamVjdF9pZBgB",
+            "IAEoCUID4EEDEhAKCGxvY2F0aW9uGAIgASgJEhQKDGNsdXN0ZXJfbmFtZRgD",
+            "IAEoCRIWCg5uYW1lc3BhY2VfbmFtZRgEIAEoCRIhChl0b3BfbGV2ZWxfY29u",
+            "dHJvbGxlcl90eXBlGAUgASgJEiEKGXRvcF9sZXZlbF9jb250cm9sbGVyX25h",
+            "bWUYBiABKAkaewoKR2tlU2VydmljZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPg",
+            "QQMSEAoIbG9jYXRpb24YAiABKAkSFAoMY2x1c3Rlcl9uYW1lGAMgASgJEhYK",
+            "Dm5hbWVzcGFjZV9uYW1lGAQgASgJEhQKDHNlcnZpY2VfbmFtZRgFIAEoCRqx",
+            "AQoMQmFzaWNTZXJ2aWNlEhQKDHNlcnZpY2VfdHlwZRgBIAEoCRJVCg5zZXJ2",
+            "aWNlX2xhYmVscxgCIAMoCzI9Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZp",
+            "Y2UuQmFzaWNTZXJ2aWNlLlNlcnZpY2VMYWJlbHNFbnRyeRo0ChJTZXJ2aWNl",
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoi",
+            "CglUZWxlbWV0cnkSFQoNcmVzb3VyY2VfbmFtZRgBIAEoCRoxCg9Vc2VyTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqnAepB",
+            "owEKIW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vU2VydmljZRIlcHJvamVj",
+            "dHMve3Byb2plY3R9L3NlcnZpY2VzL3tzZXJ2aWNlfRIvb3JnYW5pemF0aW9u",
+            "cy97b3JnYW5pemF0aW9ufS9zZXJ2aWNlcy97c2VydmljZX0SI2ZvbGRlcnMv",
+            "e2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9EgEqQgwKCmlkZW50aWZpZXIi",
+            "mwYKFVNlcnZpY2VMZXZlbE9iamVjdGl2ZRIRCgRuYW1lGAEgASgJQgPgQQgS",
+            "FAoMZGlzcGxheV9uYW1lGAsgASgJEkwKF3NlcnZpY2VfbGV2ZWxfaW5kaWNh",
+            "dG9yGAMgASgLMisuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZUxldmVs",
+            "SW5kaWNhdG9yEgwKBGdvYWwYBCABKAESMwoOcm9sbGluZ19wZXJpb2QYBSAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABI2Cg9jYWxlbmRhcl9w",
+            "ZXJpb2QYBiABKA4yGy5nb29nbGUudHlwZS5DYWxlbmRhclBlcmlvZEgAElAK",
+            "C3VzZXJfbGFiZWxzGAwgAygLMjsuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2Vy",
+            "dmljZUxldmVsT2JqZWN0aXZlLlVzZXJMYWJlbHNFbnRyeRoxCg9Vc2VyTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI0CgRW",
+            "aWV3EhQKEFZJRVdfVU5TUEVDSUZJRUQQABIICgRGVUxMEAISDAoIRVhQTElD",
+            "SVQQATrKAupBxgIKL21vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vU2Vydmlj",
+            "ZUxldmVsT2JqZWN0aXZlElZwcm9qZWN0cy97cHJvamVjdH0vc2VydmljZXMv",
+            "e3NlcnZpY2V9L3NlcnZpY2VMZXZlbE9iamVjdGl2ZXMve3NlcnZpY2VfbGV2",
+            "ZWxfb2JqZWN0aXZlfRJgb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9z",
+            "ZXJ2aWNlcy97c2VydmljZX0vc2VydmljZUxldmVsT2JqZWN0aXZlcy97c2Vy",
+            "dmljZV9sZXZlbF9vYmplY3RpdmV9ElRmb2xkZXJzL3tmb2xkZXJ9L3NlcnZp",
+            "Y2VzL3tzZXJ2aWNlfS9zZXJ2aWNlTGV2ZWxPYmplY3RpdmVzL3tzZXJ2aWNl",
+            "X2xldmVsX29iamVjdGl2ZX0SASogAUIICgZwZXJpb2Qi1AEKFVNlcnZpY2VM",
+            "ZXZlbEluZGljYXRvchIzCgliYXNpY19zbGkYBCABKAsyHi5nb29nbGUubW9u",
+            "aXRvcmluZy52My5CYXNpY1NsaUgAEj4KDXJlcXVlc3RfYmFzZWQYASABKAsy",
+            "JS5nb29nbGUubW9uaXRvcmluZy52My5SZXF1ZXN0QmFzZWRTbGlIABI+Cg13",
+            "aW5kb3dzX2Jhc2VkGAIgASgLMiUuZ29vZ2xlLm1vbml0b3JpbmcudjMuV2lu",
+            "ZG93c0Jhc2VkU2xpSABCBgoEdHlwZSK2AgoIQmFzaWNTbGkSDgoGbWV0aG9k",
+            "GAcgAygJEhAKCGxvY2F0aW9uGAggAygJEg8KB3ZlcnNpb24YCSADKAkSSwoM",
+            "YXZhaWxhYmlsaXR5GAIgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQmFz",
+            "aWNTbGkuQXZhaWxhYmlsaXR5Q3JpdGVyaWFIABJBCgdsYXRlbmN5GAMgASgL",
+            "Mi4uZ29vZ2xlLm1vbml0b3JpbmcudjMuQmFzaWNTbGkuTGF0ZW5jeUNyaXRl",
+            "cmlhSAAaFgoUQXZhaWxhYmlsaXR5Q3JpdGVyaWEaPwoPTGF0ZW5jeUNyaXRl",
+            "cmlhEiwKCXRocmVzaG9sZBgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbkIOCgxzbGlfY3JpdGVyaWEiIQoFUmFuZ2USCwoDbWluGAEgASgBEgsK",
+            "A21heBgCIAEoASKhAQoPUmVxdWVzdEJhc2VkU2xpEkEKEGdvb2RfdG90YWxf",
+            "cmF0aW8YASABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5UaW1lU2VyaWVz",
+            "UmF0aW9IABJBChBkaXN0cmlidXRpb25fY3V0GAMgASgLMiUuZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuRGlzdHJpYnV0aW9uQ3V0SABCCAoGbWV0aG9kImgKD1Rp",
+            "bWVTZXJpZXNSYXRpbxIbChNnb29kX3NlcnZpY2VfZmlsdGVyGAQgASgJEhoK",
+            "EmJhZF9zZXJ2aWNlX2ZpbHRlchgFIAEoCRIcChR0b3RhbF9zZXJ2aWNlX2Zp",
+            "bHRlchgGIAEoCSJaCg9EaXN0cmlidXRpb25DdXQSGwoTZGlzdHJpYnV0aW9u",
+            "X2ZpbHRlchgEIAEoCRIqCgVyYW5nZRgFIAEoCzIbLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLlJhbmdlIoMFCg9XaW5kb3dzQmFzZWRTbGkSIAoWZ29vZF9iYWRf",
+            "bWV0cmljX2ZpbHRlchgFIAEoCUgAEmAKGmdvb2RfdG90YWxfcmF0aW9fdGhy",
+            "ZXNob2xkGAIgASgLMjouZ29vZ2xlLm1vbml0b3JpbmcudjMuV2luZG93c0Jh",
+            "c2VkU2xpLlBlcmZvcm1hbmNlVGhyZXNob2xkSAASUQoUbWV0cmljX21lYW5f",
+            "aW5fcmFuZ2UYBiABKAsyMS5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dz",
+            "QmFzZWRTbGkuTWV0cmljUmFuZ2VIABJQChNtZXRyaWNfc3VtX2luX3Jhbmdl",
+            "GAcgASgLMjEuZ29vZ2xlLm1vbml0b3JpbmcudjMuV2luZG93c0Jhc2VkU2xp",
+            "Lk1ldHJpY1JhbmdlSAASMAoNd2luZG93X3BlcmlvZBgEIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbhqwAQoUUGVyZm9ybWFuY2VUaHJlc2hvbGQS",
+            "PAoLcGVyZm9ybWFuY2UYASABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5S",
+            "ZXF1ZXN0QmFzZWRTbGlIABI/ChViYXNpY19zbGlfcGVyZm9ybWFuY2UYAyAB",
+            "KAsyHi5nb29nbGUubW9uaXRvcmluZy52My5CYXNpY1NsaUgAEhEKCXRocmVz",
+            "aG9sZBgCIAEoAUIGCgR0eXBlGk4KC01ldHJpY1JhbmdlEhMKC3RpbWVfc2Vy",
+            "aWVzGAEgASgJEioKBXJhbmdlGAQgASgLMhsuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuUmFuZ2VCEgoQd2luZG93X2NyaXRlcmlvbkLRAQoYY29tLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzQhZTZXJ2aWNlTW9uaXRvcmluZ1Byb3RvUAFaQWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5n",
+            "cGI7bW9uaXRvcmluZ3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPK",
+            "AhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6",
+            "Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.CalendarPeriodReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Type.CalendarPeriodReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "IstioCanonicalService", "Telemetry", "UserLabels" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "IstioCanonicalService", "CloudRun", "GkeNamespace", "GkeWorkload", "GkeService", "BasicService", "Telemetry", "UserLabels" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine), global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine.Parser, new[]{ "ModuleId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints), global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints.Parser, new[]{ "Service" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio), global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio.Parser, new[]{ "Location", "ClusterName", "ServiceNamespace", "ServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio), global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio.Parser, new[]{ "MeshUid", "ServiceNamespace", "ServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService), global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService.Parser, new[]{ "MeshUid", "CanonicalServiceNamespace", "CanonicalService" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun), global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun.Parser, new[]{ "ServiceName", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace), global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace.Parser, new[]{ "ProjectId", "Location", "ClusterName", "NamespaceName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload), global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload.Parser, new[]{ "ProjectId", "Location", "ClusterName", "NamespaceName", "TopLevelControllerType", "TopLevelControllerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.GkeService), global::Google.Cloud.Monitoring.V3.Service.Types.GkeService.Parser, new[]{ "ProjectId", "Location", "ClusterName", "NamespaceName", "ServiceName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.BasicService), global::Google.Cloud.Monitoring.V3.Service.Types.BasicService.Parser, new[]{ "ServiceType", "ServiceLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry), global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry.Parser, new[]{ "ResourceName" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective), global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Parser, new[]{ "Name", "DisplayName", "ServiceLevelIndicator", "Goal", "RollingPeriod", "CalendarPeriod", "UserLabels" }, new[]{ "Period" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -184,6 +211,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public Service(Service other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
+      basicService_ = other.basicService_ != null ? other.basicService_.Clone() : null;
       telemetry_ = other.telemetry_ != null ? other.telemetry_.Clone() : null;
       userLabels_ = other.userLabels_.Clone();
       switch (other.IdentifierCase) {
@@ -205,6 +233,18 @@ namespace Google.Cloud.Monitoring.V3 {
         case IdentifierOneofCase.IstioCanonicalService:
           IstioCanonicalService = other.IstioCanonicalService.Clone();
           break;
+        case IdentifierOneofCase.CloudRun:
+          CloudRun = other.CloudRun.Clone();
+          break;
+        case IdentifierOneofCase.GkeNamespace:
+          GkeNamespace = other.GkeNamespace.Clone();
+          break;
+        case IdentifierOneofCase.GkeWorkload:
+          GkeWorkload = other.GkeWorkload.Clone();
+          break;
+        case IdentifierOneofCase.GkeService:
+          GkeService = other.GkeService.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -220,7 +260,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name for this Service. The format is:
+    /// Identifier. Resource name for this Service. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
     /// </summary>
@@ -340,6 +380,84 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "cloud_run" field.</summary>
+    public const int CloudRunFieldNumber = 12;
+    /// <summary>
+    /// Type used for Cloud Run services.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun CloudRun {
+      get { return identifierCase_ == IdentifierOneofCase.CloudRun ? (global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun) identifier_ : null; }
+      set {
+        identifier_ = value;
+        identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.CloudRun;
+      }
+    }
+
+    /// <summary>Field number for the "gke_namespace" field.</summary>
+    public const int GkeNamespaceFieldNumber = 15;
+    /// <summary>
+    /// Type used for GKE Namespaces.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace GkeNamespace {
+      get { return identifierCase_ == IdentifierOneofCase.GkeNamespace ? (global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace) identifier_ : null; }
+      set {
+        identifier_ = value;
+        identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.GkeNamespace;
+      }
+    }
+
+    /// <summary>Field number for the "gke_workload" field.</summary>
+    public const int GkeWorkloadFieldNumber = 16;
+    /// <summary>
+    /// Type used for GKE Workloads.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload GkeWorkload {
+      get { return identifierCase_ == IdentifierOneofCase.GkeWorkload ? (global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload) identifier_ : null; }
+      set {
+        identifier_ = value;
+        identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.GkeWorkload;
+      }
+    }
+
+    /// <summary>Field number for the "gke_service" field.</summary>
+    public const int GkeServiceFieldNumber = 17;
+    /// <summary>
+    /// Type used for GKE Services (the Kubernetes concept of a service).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.GkeService GkeService {
+      get { return identifierCase_ == IdentifierOneofCase.GkeService ? (global::Google.Cloud.Monitoring.V3.Service.Types.GkeService) identifier_ : null; }
+      set {
+        identifier_ = value;
+        identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.GkeService;
+      }
+    }
+
+    /// <summary>Field number for the "basic_service" field.</summary>
+    public const int BasicServiceFieldNumber = 19;
+    private global::Google.Cloud.Monitoring.V3.Service.Types.BasicService basicService_;
+    /// <summary>
+    /// Message that contains the service type and service labels of this service
+    /// if it is a basic service.
+    /// Documentation and examples
+    /// [here](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.BasicService BasicService {
+      get { return basicService_; }
+      set {
+        basicService_ = value;
+      }
+    }
+
     /// <summary>Field number for the "telemetry" field.</summary>
     public const int TelemetryFieldNumber = 13;
     private global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry telemetry_;
@@ -384,6 +502,10 @@ namespace Google.Cloud.Monitoring.V3 {
       ClusterIstio = 9,
       MeshIstio = 10,
       IstioCanonicalService = 11,
+      CloudRun = 12,
+      GkeNamespace = 15,
+      GkeWorkload = 16,
+      GkeService = 17,
     }
     private IdentifierOneofCase identifierCase_ = IdentifierOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -422,6 +544,11 @@ namespace Google.Cloud.Monitoring.V3 {
       if (!object.Equals(ClusterIstio, other.ClusterIstio)) return false;
       if (!object.Equals(MeshIstio, other.MeshIstio)) return false;
       if (!object.Equals(IstioCanonicalService, other.IstioCanonicalService)) return false;
+      if (!object.Equals(CloudRun, other.CloudRun)) return false;
+      if (!object.Equals(GkeNamespace, other.GkeNamespace)) return false;
+      if (!object.Equals(GkeWorkload, other.GkeWorkload)) return false;
+      if (!object.Equals(GkeService, other.GkeService)) return false;
+      if (!object.Equals(BasicService, other.BasicService)) return false;
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
       if (!UserLabels.Equals(other.UserLabels)) return false;
       if (IdentifierCase != other.IdentifierCase) return false;
@@ -440,6 +567,11 @@ namespace Google.Cloud.Monitoring.V3 {
       if (identifierCase_ == IdentifierOneofCase.ClusterIstio) hash ^= ClusterIstio.GetHashCode();
       if (identifierCase_ == IdentifierOneofCase.MeshIstio) hash ^= MeshIstio.GetHashCode();
       if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) hash ^= IstioCanonicalService.GetHashCode();
+      if (identifierCase_ == IdentifierOneofCase.CloudRun) hash ^= CloudRun.GetHashCode();
+      if (identifierCase_ == IdentifierOneofCase.GkeNamespace) hash ^= GkeNamespace.GetHashCode();
+      if (identifierCase_ == IdentifierOneofCase.GkeWorkload) hash ^= GkeWorkload.GetHashCode();
+      if (identifierCase_ == IdentifierOneofCase.GkeService) hash ^= GkeService.GetHashCode();
+      if (basicService_ != null) hash ^= BasicService.GetHashCode();
       if (telemetry_ != null) hash ^= Telemetry.GetHashCode();
       hash ^= UserLabels.GetHashCode();
       hash ^= (int) identifierCase_;
@@ -493,11 +625,31 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(90);
         output.WriteMessage(IstioCanonicalService);
       }
+      if (identifierCase_ == IdentifierOneofCase.CloudRun) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CloudRun);
+      }
       if (telemetry_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
       }
       userLabels_.WriteTo(output, _map_userLabels_codec);
+      if (identifierCase_ == IdentifierOneofCase.GkeNamespace) {
+        output.WriteRawTag(122);
+        output.WriteMessage(GkeNamespace);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeWorkload) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(GkeWorkload);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeService) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(GkeService);
+      }
+      if (basicService_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BasicService);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -540,11 +692,31 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(90);
         output.WriteMessage(IstioCanonicalService);
       }
+      if (identifierCase_ == IdentifierOneofCase.CloudRun) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CloudRun);
+      }
       if (telemetry_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
       }
       userLabels_.WriteTo(ref output, _map_userLabels_codec);
+      if (identifierCase_ == IdentifierOneofCase.GkeNamespace) {
+        output.WriteRawTag(122);
+        output.WriteMessage(GkeNamespace);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeWorkload) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(GkeWorkload);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeService) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(GkeService);
+      }
+      if (basicService_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(BasicService);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -579,6 +751,21 @@ namespace Google.Cloud.Monitoring.V3 {
       if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IstioCanonicalService);
       }
+      if (identifierCase_ == IdentifierOneofCase.CloudRun) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudRun);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeNamespace) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GkeNamespace);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeWorkload) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GkeWorkload);
+      }
+      if (identifierCase_ == IdentifierOneofCase.GkeService) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GkeService);
+      }
+      if (basicService_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BasicService);
+      }
       if (telemetry_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
       }
@@ -600,6 +787,12 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.basicService_ != null) {
+        if (basicService_ == null) {
+          BasicService = new global::Google.Cloud.Monitoring.V3.Service.Types.BasicService();
+        }
+        BasicService.MergeFrom(other.BasicService);
       }
       if (other.telemetry_ != null) {
         if (telemetry_ == null) {
@@ -644,6 +837,30 @@ namespace Google.Cloud.Monitoring.V3 {
             IstioCanonicalService = new global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService();
           }
           IstioCanonicalService.MergeFrom(other.IstioCanonicalService);
+          break;
+        case IdentifierOneofCase.CloudRun:
+          if (CloudRun == null) {
+            CloudRun = new global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun();
+          }
+          CloudRun.MergeFrom(other.CloudRun);
+          break;
+        case IdentifierOneofCase.GkeNamespace:
+          if (GkeNamespace == null) {
+            GkeNamespace = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace();
+          }
+          GkeNamespace.MergeFrom(other.GkeNamespace);
+          break;
+        case IdentifierOneofCase.GkeWorkload:
+          if (GkeWorkload == null) {
+            GkeWorkload = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload();
+          }
+          GkeWorkload.MergeFrom(other.GkeWorkload);
+          break;
+        case IdentifierOneofCase.GkeService:
+          if (GkeService == null) {
+            GkeService = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeService();
+          }
+          GkeService.MergeFrom(other.GkeService);
           break;
       }
 
@@ -724,6 +941,15 @@ namespace Google.Cloud.Monitoring.V3 {
             IstioCanonicalService = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun();
+            if (identifierCase_ == IdentifierOneofCase.CloudRun) {
+              subBuilder.MergeFrom(CloudRun);
+            }
+            input.ReadMessage(subBuilder);
+            CloudRun = subBuilder;
+            break;
+          }
           case 106: {
             if (telemetry_ == null) {
               Telemetry = new global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry();
@@ -733,6 +959,40 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 114: {
             userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace();
+            if (identifierCase_ == IdentifierOneofCase.GkeNamespace) {
+              subBuilder.MergeFrom(GkeNamespace);
+            }
+            input.ReadMessage(subBuilder);
+            GkeNamespace = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload();
+            if (identifierCase_ == IdentifierOneofCase.GkeWorkload) {
+              subBuilder.MergeFrom(GkeWorkload);
+            }
+            input.ReadMessage(subBuilder);
+            GkeWorkload = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeService subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeService();
+            if (identifierCase_ == IdentifierOneofCase.GkeService) {
+              subBuilder.MergeFrom(GkeService);
+            }
+            input.ReadMessage(subBuilder);
+            GkeService = subBuilder;
+            break;
+          }
+          case 154: {
+            if (basicService_ == null) {
+              BasicService = new global::Google.Cloud.Monitoring.V3.Service.Types.BasicService();
+            }
+            input.ReadMessage(BasicService);
             break;
           }
         }
@@ -812,6 +1072,15 @@ namespace Google.Cloud.Monitoring.V3 {
             IstioCanonicalService = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.CloudRun();
+            if (identifierCase_ == IdentifierOneofCase.CloudRun) {
+              subBuilder.MergeFrom(CloudRun);
+            }
+            input.ReadMessage(subBuilder);
+            CloudRun = subBuilder;
+            break;
+          }
           case 106: {
             if (telemetry_ == null) {
               Telemetry = new global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry();
@@ -821,6 +1090,40 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 114: {
             userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeNamespace();
+            if (identifierCase_ == IdentifierOneofCase.GkeNamespace) {
+              subBuilder.MergeFrom(GkeNamespace);
+            }
+            input.ReadMessage(subBuilder);
+            GkeNamespace = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeWorkload();
+            if (identifierCase_ == IdentifierOneofCase.GkeWorkload) {
+              subBuilder.MergeFrom(GkeWorkload);
+            }
+            input.ReadMessage(subBuilder);
+            GkeWorkload = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.GkeService subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.GkeService();
+            if (identifierCase_ == IdentifierOneofCase.GkeService) {
+              subBuilder.MergeFrom(GkeService);
+            }
+            input.ReadMessage(subBuilder);
+            GkeService = subBuilder;
+            break;
+          }
+          case 154: {
+            if (basicService_ == null) {
+              BasicService = new global::Google.Cloud.Monitoring.V3.Service.Types.BasicService();
+            }
+            input.ReadMessage(BasicService);
             break;
           }
         }
@@ -834,8 +1137,9 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Custom view of service telemetry. Currently a place-holder pending final
-      /// design.
+      /// Use a custom service to designate a service that you want to monitor
+      /// when none of the other service types (like App Engine, Cloud Run, or
+      /// a GKE type) matches your intended service.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Custom : pb::IMessage<Custom>
@@ -1043,8 +1347,8 @@ namespace Google.Cloud.Monitoring.V3 {
         private string moduleId_ = "";
         /// <summary>
         /// The ID of the App Engine module underlying this service. Corresponds to
-        /// the `module_id` resource label in the `gae_app` monitored resource:
-        /// https://cloud.google.com/monitoring/api/resources#tag_gae_app
+        /// the `module_id` resource label in the [`gae_app` monitored
+        /// resource](https://cloud.google.com/monitoring/api/resources#tag_gae_app).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1241,8 +1545,8 @@ namespace Google.Cloud.Monitoring.V3 {
         private string service_ = "";
         /// <summary>
         /// The name of the Cloud Endpoints service underlying this service.
-        /// Corresponds to the `service` resource label in the `api` monitored
-        /// resource: https://cloud.google.com/monitoring/api/resources#tag_api
+        /// Corresponds to the `service` resource label in the [`api` monitored
+        /// resource](https://cloud.google.com/monitoring/api/resources#tag_api).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2276,6 +2580,1562 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
+      /// Cloud Run service. Learn more at https://cloud.google.com/run.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CloudRun : pb::IMessage<CloudRun>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CloudRun> _parser = new pb::MessageParser<CloudRun>(() => new CloudRun());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CloudRun> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRun() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRun(CloudRun other) : this() {
+          serviceName_ = other.serviceName_;
+          location_ = other.location_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudRun Clone() {
+          return new CloudRun(this);
+        }
+
+        /// <summary>Field number for the "service_name" field.</summary>
+        public const int ServiceNameFieldNumber = 1;
+        private string serviceName_ = "";
+        /// <summary>
+        /// The name of the Cloud Run service. Corresponds to the `service_name`
+        /// resource label in the [`cloud_run_revision` monitored
+        /// resource](https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceName {
+          get { return serviceName_; }
+          set {
+            serviceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 2;
+        private string location_ = "";
+        /// <summary>
+        /// The location the service is run. Corresponds to the `location`
+        /// resource label in the [`cloud_run_revision` monitored
+        /// resource](https://cloud.google.com/monitoring/api/resources#tag_cloud_run_revision).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CloudRun);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CloudRun other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ServiceName != other.ServiceName) return false;
+          if (Location != other.Location) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ServiceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceName);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServiceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceName);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ServiceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceName);
+          }
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CloudRun other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ServiceName.Length != 0) {
+            ServiceName = other.ServiceName;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ServiceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ServiceName = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// GKE Namespace. The field names correspond to the resource metadata labels
+      /// on monitored resources that fall under a namespace (for example,
+      /// `k8s_container` or `k8s_pod`).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GkeNamespace : pb::IMessage<GkeNamespace>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeNamespace> _parser = new pb::MessageParser<GkeNamespace>(() => new GkeNamespace());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeNamespace> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNamespace() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNamespace(GkeNamespace other) : this() {
+          projectId_ = other.projectId_;
+          location_ = other.location_;
+          clusterName_ = other.clusterName_;
+          namespaceName_ = other.namespaceName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeNamespace Clone() {
+          return new GkeNamespace(this);
+        }
+
+        /// <summary>Field number for the "project_id" field.</summary>
+        public const int ProjectIdFieldNumber = 1;
+        private string projectId_ = "";
+        /// <summary>
+        /// Output only. The project this resource lives in. For legacy services
+        /// migrated from the `Custom` type, this may be a distinct project from the
+        /// one parenting the service itself.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProjectId {
+          get { return projectId_; }
+          set {
+            projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 2;
+        private string location_ = "";
+        /// <summary>
+        /// The location of the parent cluster. This may be a zone or region.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "cluster_name" field.</summary>
+        public const int ClusterNameFieldNumber = 3;
+        private string clusterName_ = "";
+        /// <summary>
+        /// The name of the parent cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ClusterName {
+          get { return clusterName_; }
+          set {
+            clusterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "namespace_name" field.</summary>
+        public const int NamespaceNameFieldNumber = 4;
+        private string namespaceName_ = "";
+        /// <summary>
+        /// The name of this namespace.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NamespaceName {
+          get { return namespaceName_; }
+          set {
+            namespaceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeNamespace);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeNamespace other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProjectId != other.ProjectId) return false;
+          if (Location != other.Location) return false;
+          if (ClusterName != other.ClusterName) return false;
+          if (NamespaceName != other.NamespaceName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
+          if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
+          if (NamespaceName.Length != 0) hash ^= NamespaceName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProjectId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+          }
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+          }
+          if (ClusterName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NamespaceName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeNamespace other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProjectId.Length != 0) {
+            ProjectId = other.ProjectId;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
+          }
+          if (other.ClusterName.Length != 0) {
+            ClusterName = other.ClusterName;
+          }
+          if (other.NamespaceName.Length != 0) {
+            NamespaceName = other.NamespaceName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A GKE Workload (Deployment, StatefulSet, etc). The field names correspond
+      /// to the metadata labels on monitored resources that fall under a workload
+      /// (for example, `k8s_container` or `k8s_pod`).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GkeWorkload : pb::IMessage<GkeWorkload>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeWorkload> _parser = new pb::MessageParser<GkeWorkload>(() => new GkeWorkload());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeWorkload> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeWorkload() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeWorkload(GkeWorkload other) : this() {
+          projectId_ = other.projectId_;
+          location_ = other.location_;
+          clusterName_ = other.clusterName_;
+          namespaceName_ = other.namespaceName_;
+          topLevelControllerType_ = other.topLevelControllerType_;
+          topLevelControllerName_ = other.topLevelControllerName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeWorkload Clone() {
+          return new GkeWorkload(this);
+        }
+
+        /// <summary>Field number for the "project_id" field.</summary>
+        public const int ProjectIdFieldNumber = 1;
+        private string projectId_ = "";
+        /// <summary>
+        /// Output only. The project this resource lives in. For legacy services
+        /// migrated from the `Custom` type, this may be a distinct project from the
+        /// one parenting the service itself.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProjectId {
+          get { return projectId_; }
+          set {
+            projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 2;
+        private string location_ = "";
+        /// <summary>
+        /// The location of the parent cluster. This may be a zone or region.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "cluster_name" field.</summary>
+        public const int ClusterNameFieldNumber = 3;
+        private string clusterName_ = "";
+        /// <summary>
+        /// The name of the parent cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ClusterName {
+          get { return clusterName_; }
+          set {
+            clusterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "namespace_name" field.</summary>
+        public const int NamespaceNameFieldNumber = 4;
+        private string namespaceName_ = "";
+        /// <summary>
+        /// The name of the parent namespace.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NamespaceName {
+          get { return namespaceName_; }
+          set {
+            namespaceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "top_level_controller_type" field.</summary>
+        public const int TopLevelControllerTypeFieldNumber = 5;
+        private string topLevelControllerType_ = "";
+        /// <summary>
+        /// The type of this workload (for example, "Deployment" or "DaemonSet")
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TopLevelControllerType {
+          get { return topLevelControllerType_; }
+          set {
+            topLevelControllerType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "top_level_controller_name" field.</summary>
+        public const int TopLevelControllerNameFieldNumber = 6;
+        private string topLevelControllerName_ = "";
+        /// <summary>
+        /// The name of this workload.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TopLevelControllerName {
+          get { return topLevelControllerName_; }
+          set {
+            topLevelControllerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeWorkload);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeWorkload other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProjectId != other.ProjectId) return false;
+          if (Location != other.Location) return false;
+          if (ClusterName != other.ClusterName) return false;
+          if (NamespaceName != other.NamespaceName) return false;
+          if (TopLevelControllerType != other.TopLevelControllerType) return false;
+          if (TopLevelControllerName != other.TopLevelControllerName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
+          if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
+          if (NamespaceName.Length != 0) hash ^= NamespaceName.GetHashCode();
+          if (TopLevelControllerType.Length != 0) hash ^= TopLevelControllerType.GetHashCode();
+          if (TopLevelControllerName.Length != 0) hash ^= TopLevelControllerName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (TopLevelControllerType.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(TopLevelControllerType);
+          }
+          if (TopLevelControllerName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(TopLevelControllerName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (TopLevelControllerType.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(TopLevelControllerType);
+          }
+          if (TopLevelControllerName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(TopLevelControllerName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProjectId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+          }
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+          }
+          if (ClusterName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NamespaceName);
+          }
+          if (TopLevelControllerType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TopLevelControllerType);
+          }
+          if (TopLevelControllerName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TopLevelControllerName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeWorkload other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProjectId.Length != 0) {
+            ProjectId = other.ProjectId;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
+          }
+          if (other.ClusterName.Length != 0) {
+            ClusterName = other.ClusterName;
+          }
+          if (other.NamespaceName.Length != 0) {
+            NamespaceName = other.NamespaceName;
+          }
+          if (other.TopLevelControllerType.Length != 0) {
+            TopLevelControllerType = other.TopLevelControllerType;
+          }
+          if (other.TopLevelControllerName.Length != 0) {
+            TopLevelControllerName = other.TopLevelControllerName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+              case 42: {
+                TopLevelControllerType = input.ReadString();
+                break;
+              }
+              case 50: {
+                TopLevelControllerName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+              case 42: {
+                TopLevelControllerType = input.ReadString();
+                break;
+              }
+              case 50: {
+                TopLevelControllerName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// GKE Service. The "service" here represents a
+      /// [Kubernetes service
+      /// object](https://kubernetes.io/docs/concepts/services-networking/service).
+      /// The field names correspond to the resource labels on [`k8s_service`
+      /// monitored
+      /// resources](https://cloud.google.com/monitoring/api/resources#tag_k8s_service).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class GkeService : pb::IMessage<GkeService>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GkeService> _parser = new pb::MessageParser<GkeService>(() => new GkeService());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<GkeService> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[9]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeService() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeService(GkeService other) : this() {
+          projectId_ = other.projectId_;
+          location_ = other.location_;
+          clusterName_ = other.clusterName_;
+          namespaceName_ = other.namespaceName_;
+          serviceName_ = other.serviceName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public GkeService Clone() {
+          return new GkeService(this);
+        }
+
+        /// <summary>Field number for the "project_id" field.</summary>
+        public const int ProjectIdFieldNumber = 1;
+        private string projectId_ = "";
+        /// <summary>
+        /// Output only. The project this resource lives in. For legacy services
+        /// migrated from the `Custom` type, this may be a distinct project from the
+        /// one parenting the service itself.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProjectId {
+          get { return projectId_; }
+          set {
+            projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 2;
+        private string location_ = "";
+        /// <summary>
+        /// The location of the parent cluster. This may be a zone or region.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "cluster_name" field.</summary>
+        public const int ClusterNameFieldNumber = 3;
+        private string clusterName_ = "";
+        /// <summary>
+        /// The name of the parent cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ClusterName {
+          get { return clusterName_; }
+          set {
+            clusterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "namespace_name" field.</summary>
+        public const int NamespaceNameFieldNumber = 4;
+        private string namespaceName_ = "";
+        /// <summary>
+        /// The name of the parent namespace.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NamespaceName {
+          get { return namespaceName_; }
+          set {
+            namespaceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "service_name" field.</summary>
+        public const int ServiceNameFieldNumber = 5;
+        private string serviceName_ = "";
+        /// <summary>
+        /// The name of this service.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceName {
+          get { return serviceName_; }
+          set {
+            serviceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as GkeService);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(GkeService other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProjectId != other.ProjectId) return false;
+          if (Location != other.Location) return false;
+          if (ClusterName != other.ClusterName) return false;
+          if (NamespaceName != other.NamespaceName) return false;
+          if (ServiceName != other.ServiceName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
+          if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
+          if (NamespaceName.Length != 0) hash ^= NamespaceName.GetHashCode();
+          if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (ServiceName.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ServiceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProjectId);
+          }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
+          if (ClusterName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(NamespaceName);
+          }
+          if (ServiceName.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ServiceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProjectId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+          }
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+          }
+          if (ClusterName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
+          }
+          if (NamespaceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NamespaceName);
+          }
+          if (ServiceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(GkeService other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProjectId.Length != 0) {
+            ProjectId = other.ProjectId;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
+          }
+          if (other.ClusterName.Length != 0) {
+            ClusterName = other.ClusterName;
+          }
+          if (other.NamespaceName.Length != 0) {
+            NamespaceName = other.NamespaceName;
+          }
+          if (other.ServiceName.Length != 0) {
+            ServiceName = other.ServiceName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+              case 42: {
+                ServiceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ProjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+              case 26: {
+                ClusterName = input.ReadString();
+                break;
+              }
+              case 34: {
+                NamespaceName = input.ReadString();
+                break;
+              }
+              case 42: {
+                ServiceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A well-known service type, defined by its service type and service labels.
+      /// Documentation and examples
+      /// [here](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class BasicService : pb::IMessage<BasicService>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BasicService> _parser = new pb::MessageParser<BasicService>(() => new BasicService());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BasicService> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BasicService() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BasicService(BasicService other) : this() {
+          serviceType_ = other.serviceType_;
+          serviceLabels_ = other.serviceLabels_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BasicService Clone() {
+          return new BasicService(this);
+        }
+
+        /// <summary>Field number for the "service_type" field.</summary>
+        public const int ServiceTypeFieldNumber = 1;
+        private string serviceType_ = "";
+        /// <summary>
+        /// The type of service that this basic service defines, e.g.
+        /// APP_ENGINE service type.
+        /// Documentation and valid values
+        /// [here](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceType {
+          get { return serviceType_; }
+          set {
+            serviceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "service_labels" field.</summary>
+        public const int ServiceLabelsFieldNumber = 2;
+        private static readonly pbc::MapField<string, string>.Codec _map_serviceLabels_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+        private readonly pbc::MapField<string, string> serviceLabels_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Labels that specify the resource that emits the monitoring data which
+        /// is used for SLO reporting of this `Service`.
+        /// Documentation and valid values for given service types
+        /// [here](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> ServiceLabels {
+          get { return serviceLabels_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BasicService);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BasicService other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ServiceType != other.ServiceType) return false;
+          if (!ServiceLabels.Equals(other.ServiceLabels)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ServiceType.Length != 0) hash ^= ServiceType.GetHashCode();
+          hash ^= ServiceLabels.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ServiceType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceType);
+          }
+          serviceLabels_.WriteTo(output, _map_serviceLabels_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServiceType.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceType);
+          }
+          serviceLabels_.WriteTo(ref output, _map_serviceLabels_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ServiceType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceType);
+          }
+          size += serviceLabels_.CalculateSize(_map_serviceLabels_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BasicService other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ServiceType.Length != 0) {
+            ServiceType = other.ServiceType;
+          }
+          serviceLabels_.MergeFrom(other.serviceLabels_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ServiceType = input.ReadString();
+                break;
+              }
+              case 18: {
+                serviceLabels_.AddEntriesFrom(input, _map_serviceLabels_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ServiceType = input.ReadString();
+                break;
+              }
+              case 18: {
+                serviceLabels_.AddEntriesFrom(ref input, _map_serviceLabels_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Configuration for how to query telemetry on a Service.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2293,7 +4153,7 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2547,7 +4407,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name for this `ServiceLevelObjective`. The format is:
+    /// Identifier. Resource name for this `ServiceLevelObjective`. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
     /// </summary>
