@@ -2202,9 +2202,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     private bool computeStyleInfo_;
     /// <summary>
     /// Turn on font identification model and return font style information.
-    /// Deprecated, use
-    /// [PremiumFeatures.compute_style_info][google.cloud.documentai.v1.OcrConfig.PremiumFeatures.compute_style_info]
-    /// instead.
+    /// Deprecated, use [PremiumFeatures.compute_style_info][google.cloud.documentai.v1.OcrConfig.PremiumFeatures.compute_style_info] instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
