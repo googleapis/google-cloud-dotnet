@@ -359,6 +359,248 @@ namespace Google.Cloud.Monitoring.V3
         public static bool operator !=(UptimeCheckConfigName a, UptimeCheckConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Function</c> resource.</summary>
+    public sealed partial class FunctionName : gax::IResourceName, sys::IEquatable<FunctionName>
+    {
+        /// <summary>The possible contents of <see cref="FunctionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/functions/{function}</c>.
+            /// </summary>
+            ProjectLocationFunction = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationFunction = new gax::PathTemplate("projects/{project}/locations/{location}/functions/{function}");
+
+        /// <summary>Creates a <see cref="FunctionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="FunctionName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// .
+        /// </returns>
+        public static FunctionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FunctionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="FunctionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="functionId">The <c>Function</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FunctionName"/> constructed from the provided ids.</returns>
+        public static FunctionName FromProjectLocationFunction(string projectId, string locationId, string functionId) =>
+            new FunctionName(ResourceNameType.ProjectLocationFunction, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), functionId: gax::GaxPreconditions.CheckNotNullOrEmpty(functionId, nameof(functionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FunctionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="functionId">The <c>Function</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FunctionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string functionId) =>
+            FormatProjectLocationFunction(projectId, locationId, functionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FunctionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="functionId">The <c>Function</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FunctionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>.
+        /// </returns>
+        public static string FormatProjectLocationFunction(string projectId, string locationId, string functionId) =>
+            s_projectLocationFunction.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(functionId, nameof(functionId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="FunctionName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/functions/{function}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="functionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FunctionName"/> if successful.</returns>
+        public static FunctionName Parse(string functionName) => Parse(functionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="FunctionName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/functions/{function}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="functionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FunctionName"/> if successful.</returns>
+        public static FunctionName Parse(string functionName, bool allowUnparsed) =>
+            TryParse(functionName, allowUnparsed, out FunctionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FunctionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/functions/{function}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="functionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FunctionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string functionName, out FunctionName result) => TryParse(functionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FunctionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/functions/{function}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="functionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FunctionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string functionName, bool allowUnparsed, out FunctionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(functionName, nameof(functionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationFunction.TryParseName(functionName, out resourceName))
+            {
+                result = FromProjectLocationFunction(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(functionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private FunctionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string functionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FunctionId = functionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="FunctionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/functions/{function}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="functionId">The <c>Function</c> ID. Must not be <c>null</c> or empty.</param>
+        public FunctionName(string projectId, string locationId, string functionId) : this(ResourceNameType.ProjectLocationFunction, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), functionId: gax::GaxPreconditions.CheckNotNullOrEmpty(functionId, nameof(functionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Function</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string FunctionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationFunction: return s_projectLocationFunction.Expand(ProjectId, LocationId, FunctionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as FunctionName);
+
+        /// <inheritdoc/>
+        public bool Equals(FunctionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(FunctionName a, FunctionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(FunctionName a, FunctionName b) => !(a == b);
+    }
+
     public partial class UptimeCheckConfig
     {
         /// <summary>

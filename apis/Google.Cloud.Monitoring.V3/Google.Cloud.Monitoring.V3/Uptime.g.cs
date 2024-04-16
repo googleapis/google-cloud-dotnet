@@ -33,104 +33,125 @@ namespace Google.Cloud.Monitoring.V3 {
             "ZRgEIAEoCRIXCg9wZWVyX3Byb2plY3RfaWQYBiABKAkSOgoFc3RhdGUYByAB",
             "KA4yKy5nb29nbGUubW9uaXRvcmluZy52My5JbnRlcm5hbENoZWNrZXIuU3Rh",
             "dGUiMwoFU3RhdGUSDwoLVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgsK",
-            "B1JVTk5JTkcQAjoCGAEighsKEVVwdGltZUNoZWNrQ29uZmlnEgwKBG5hbWUY",
-            "ASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEjsKEm1vbml0b3JlZF9yZXNv",
-            "dXJjZRgDIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2VIABJP",
-            "Cg5yZXNvdXJjZV9ncm91cBgEIAEoCzI1Lmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LlVwdGltZUNoZWNrQ29uZmlnLlJlc291cmNlR3JvdXBIABJHCgpodHRwX2No",
-            "ZWNrGAUgASgLMjEuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tD",
-            "b25maWcuSHR0cENoZWNrSAESRQoJdGNwX2NoZWNrGAYgASgLMjAuZ29vZ2xl",
-            "Lm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuVGNwQ2hlY2tIARIp",
-            "CgZwZXJpb2QYByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SKgoH",
-            "dGltZW91dBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJQChBj",
-            "b250ZW50X21hdGNoZXJzGAkgAygLMjYuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "VXB0aW1lQ2hlY2tDb25maWcuQ29udGVudE1hdGNoZXISSQoMY2hlY2tlcl90",
-            "eXBlGBEgASgOMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tD",
-            "b25maWcuQ2hlY2tlclR5cGUSQQoQc2VsZWN0ZWRfcmVnaW9ucxgKIAMoDjIn",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrUmVnaW9uEhcKC2lz",
-            "X2ludGVybmFsGA8gASgIQgIYARJEChFpbnRlcm5hbF9jaGVja2VycxgOIAMo",
-            "CzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLkludGVybmFsQ2hlY2tlckICGAES",
-            "TAoLdXNlcl9sYWJlbHMYFCADKAsyNy5nb29nbGUubW9uaXRvcmluZy52My5V",
-            "cHRpbWVDaGVja0NvbmZpZy5Vc2VyTGFiZWxzRW50cnkaYQoNUmVzb3VyY2VH",
-            "cm91cBIQCghncm91cF9pZBgBIAEoCRI+Cg1yZXNvdXJjZV90eXBlGAIgASgO",
-            "MicuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXBSZXNvdXJjZVR5cGUaIQoK",
-            "UGluZ0NvbmZpZxITCgtwaW5nc19jb3VudBgBIAEoBRruCQoJSHR0cENoZWNr",
-            "ElcKDnJlcXVlc3RfbWV0aG9kGAggASgOMj8uZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuVXB0aW1lQ2hlY2tDb25maWcuSHR0cENoZWNrLlJlcXVlc3RNZXRob2QS",
-            "DwoHdXNlX3NzbBgBIAEoCBIMCgRwYXRoGAIgASgJEgwKBHBvcnQYAyABKAUS",
-            "WAoJYXV0aF9pbmZvGAQgASgLMkUuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0",
-            "aW1lQ2hlY2tDb25maWcuSHR0cENoZWNrLkJhc2ljQXV0aGVudGljYXRpb24S",
-            "FAoMbWFza19oZWFkZXJzGAUgASgIEk8KB2hlYWRlcnMYBiADKAsyPi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5IdHRwQ2hlY2su",
-            "SGVhZGVyc0VudHJ5ElMKDGNvbnRlbnRfdHlwZRgJIAEoDjI9Lmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVjay5Db250",
-            "ZW50VHlwZRIbChNjdXN0b21fY29udGVudF90eXBlGA0gASgJEhQKDHZhbGlk",
-            "YXRlX3NzbBgHIAEoCBIMCgRib2R5GAogASgMEmwKHmFjY2VwdGVkX3Jlc3Bv",
-            "bnNlX3N0YXR1c19jb2RlcxgLIAMoCzJELmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVjay5SZXNwb25zZVN0YXR1c0Nv",
-            "ZGUSRwoLcGluZ19jb25maWcYDCABKAsyMi5nb29nbGUubW9uaXRvcmluZy52",
-            "My5VcHRpbWVDaGVja0NvbmZpZy5QaW5nQ29uZmlnGjkKE0Jhc2ljQXV0aGVu",
-            "dGljYXRpb24SEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAka",
-            "3AIKElJlc3BvbnNlU3RhdHVzQ29kZRIWCgxzdGF0dXNfdmFsdWUYASABKAVI",
-            "ABJoCgxzdGF0dXNfY2xhc3MYAiABKA4yUC5nb29nbGUubW9uaXRvcmluZy52",
-            "My5VcHRpbWVDaGVja0NvbmZpZy5IdHRwQ2hlY2suUmVzcG9uc2VTdGF0dXND",
-            "b2RlLlN0YXR1c0NsYXNzSAAitAEKC1N0YXR1c0NsYXNzEhwKGFNUQVRVU19D",
-            "TEFTU19VTlNQRUNJRklFRBAAEhQKEFNUQVRVU19DTEFTU18xWFgQZBIVChBT",
-            "VEFUVVNfQ0xBU1NfMlhYEMgBEhUKEFNUQVRVU19DTEFTU18zWFgQrAISFQoQ",
-            "U1RBVFVTX0NMQVNTXzRYWBCQAxIVChBTVEFUVVNfQ0xBU1NfNVhYEPQDEhUK",
-            "EFNUQVRVU19DTEFTU19BTlkQ6AdCDQoLc3RhdHVzX2NvZGUaLgoMSGVhZGVy",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiOgoNUmVx",
-            "dWVzdE1ldGhvZBIWChJNRVRIT0RfVU5TUEVDSUZJRUQQABIHCgNHRVQQARII",
-            "CgRQT1NUEAIiRwoLQ29udGVudFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAA",
-            "Eg8KC1VSTF9FTkNPREVEEAESEQoNVVNFUl9QUk9WSURFRBACGmEKCFRjcENo",
-            "ZWNrEgwKBHBvcnQYASABKAUSRwoLcGluZ19jb25maWcYAiABKAsyMi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5QaW5nQ29uZmln",
-            "GsoFCg5Db250ZW50TWF0Y2hlchIPCgdjb250ZW50GAEgASgJElwKB21hdGNo",
-            "ZXIYAiABKA4ySy5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0Nv",
-            "bmZpZy5Db250ZW50TWF0Y2hlci5Db250ZW50TWF0Y2hlck9wdGlvbhJjChFq",
-            "c29uX3BhdGhfbWF0Y2hlchgDIAEoCzJGLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LlVwdGltZUNoZWNrQ29uZmlnLkNvbnRlbnRNYXRjaGVyLkpzb25QYXRoTWF0",
-            "Y2hlckgAGv0BCg9Kc29uUGF0aE1hdGNoZXISEQoJanNvbl9wYXRoGAEgASgJ",
-            "EnIKDGpzb25fbWF0Y2hlchgCIAEoDjJcLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LlVwdGltZUNoZWNrQ29uZmlnLkNvbnRlbnRNYXRjaGVyLkpzb25QYXRoTWF0",
-            "Y2hlci5Kc29uUGF0aE1hdGNoZXJPcHRpb24iYwoVSnNvblBhdGhNYXRjaGVy",
-            "T3B0aW9uEigKJEpTT05fUEFUSF9NQVRDSEVSX09QVElPTl9VTlNQRUNJRklF",
-            "RBAAEg8KC0VYQUNUX01BVENIEAESDwoLUkVHRVhfTUFUQ0gQAiLIAQoUQ29u",
-            "dGVudE1hdGNoZXJPcHRpb24SJgoiQ09OVEVOVF9NQVRDSEVSX09QVElPTl9V",
-            "TlNQRUNJRklFRBAAEhMKD0NPTlRBSU5TX1NUUklORxABEhcKE05PVF9DT05U",
-            "QUlOU19TVFJJTkcQAhIRCg1NQVRDSEVTX1JFR0VYEAMSFQoRTk9UX01BVENI",
-            "RVNfUkVHRVgQBBIVChFNQVRDSEVTX0pTT05fUEFUSBAFEhkKFU5PVF9NQVRD",
-            "SEVTX0pTT05fUEFUSBAGQhkKF2FkZGl0aW9uYWxfbWF0Y2hlcl9pbmZvGjEK",
-            "D1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIlUKC0NoZWNrZXJUeXBlEhwKGENIRUNLRVJfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEhYKElNUQVRJQ19JUF9DSEVDS0VSUxABEhAKDFZQQ19DSEVDS0VSUxAD",
-            "OvMB6kHvAQorbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9VcHRpbWVDaGVj",
-            "a0NvbmZpZxI7cHJvamVjdHMve3Byb2plY3R9L3VwdGltZUNoZWNrQ29uZmln",
-            "cy97dXB0aW1lX2NoZWNrX2NvbmZpZ30SRW9yZ2FuaXphdGlvbnMve29yZ2Fu",
-            "aXphdGlvbn0vdXB0aW1lQ2hlY2tDb25maWdzL3t1cHRpbWVfY2hlY2tfY29u",
-            "ZmlnfRI5Zm9sZGVycy97Zm9sZGVyfS91cHRpbWVDaGVja0NvbmZpZ3Mve3Vw",
-            "dGltZV9jaGVja19jb25maWd9EgEqQgoKCHJlc291cmNlQhQKEmNoZWNrX3Jl",
-            "cXVlc3RfdHlwZSJuCg1VcHRpbWVDaGVja0lwEjcKBnJlZ2lvbhgBIAEoDjIn",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrUmVnaW9uEhAKCGxv",
-            "Y2F0aW9uGAIgASgJEhIKCmlwX2FkZHJlc3MYAyABKAkqlQEKEVVwdGltZUNo",
-            "ZWNrUmVnaW9uEhYKElJFR0lPTl9VTlNQRUNJRklFRBAAEgcKA1VTQRABEgoK",
-            "BkVVUk9QRRACEhEKDVNPVVRIX0FNRVJJQ0EQAxIQCgxBU0lBX1BBQ0lGSUMQ",
-            "BBIOCgpVU0FfT1JFR09OEAUSDAoIVVNBX0lPV0EQBhIQCgxVU0FfVklSR0lO",
-            "SUEQBypbChFHcm91cFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDAoISU5TVEFOQ0UQARIZChVBV1NfRUxCX0xPQURfQkFM",
-            "QU5DRVIQAkLGAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtVcHRpbWVQ",
-            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMv",
-            "djIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5N",
-            "b25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1H",
-            "b29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
+            "B1JVTk5JTkcQAjoCGAEimwIKFlN5bnRoZXRpY01vbml0b3JUYXJnZXQSXwoR",
+            "Y2xvdWRfZnVuY3Rpb25fdjIYASABKAsyQi5nb29nbGUubW9uaXRvcmluZy52",
+            "My5TeW50aGV0aWNNb25pdG9yVGFyZ2V0LkNsb3VkRnVuY3Rpb25WMlRhcmdl",
+            "dEgAGpUBChVDbG91ZEZ1bmN0aW9uVjJUYXJnZXQSPAoEbmFtZRgBIAEoCUIu",
+            "4EEC+kEoCiZjbG91ZGZ1bmN0aW9ucy5nb29nbGVhcGlzLmNvbS9GdW5jdGlv",
+            "bhI+ChJjbG91ZF9ydW5fcmV2aXNpb24YAiABKAsyHS5nb29nbGUuYXBpLk1v",
+            "bml0b3JlZFJlc291cmNlQgPgQQNCCAoGdGFyZ2V0ItYeChFVcHRpbWVDaGVj",
+            "a0NvbmZpZxIRCgRuYW1lGAEgASgJQgPgQQgSFAoMZGlzcGxheV9uYW1lGAIg",
+            "ASgJEjsKEm1vbml0b3JlZF9yZXNvdXJjZRgDIAEoCzIdLmdvb2dsZS5hcGku",
+            "TW9uaXRvcmVkUmVzb3VyY2VIABJPCg5yZXNvdXJjZV9ncm91cBgEIAEoCzI1",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLlJlc291",
+            "cmNlR3JvdXBIABJJChFzeW50aGV0aWNfbW9uaXRvchgVIAEoCzIsLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLlN5bnRoZXRpY01vbml0b3JUYXJnZXRIABJHCgpo",
+            "dHRwX2NoZWNrGAUgASgLMjEuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1l",
+            "Q2hlY2tDb25maWcuSHR0cENoZWNrSAESRQoJdGNwX2NoZWNrGAYgASgLMjAu",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuVGNwQ2hl",
+            "Y2tIARIpCgZwZXJpb2QYByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b24SKgoHdGltZW91dBgIIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bhJQChBjb250ZW50X21hdGNoZXJzGAkgAygLMjYuZ29vZ2xlLm1vbml0b3Jp",
+            "bmcudjMuVXB0aW1lQ2hlY2tDb25maWcuQ29udGVudE1hdGNoZXISSQoMY2hl",
+            "Y2tlcl90eXBlGBEgASgOMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1l",
+            "Q2hlY2tDb25maWcuQ2hlY2tlclR5cGUSQQoQc2VsZWN0ZWRfcmVnaW9ucxgK",
+            "IAMoDjInLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrUmVnaW9u",
+            "EhcKC2lzX2ludGVybmFsGA8gASgIQgIYARJEChFpbnRlcm5hbF9jaGVja2Vy",
+            "cxgOIAMoCzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLkludGVybmFsQ2hlY2tl",
+            "ckICGAESTAoLdXNlcl9sYWJlbHMYFCADKAsyNy5nb29nbGUubW9uaXRvcmlu",
+            "Zy52My5VcHRpbWVDaGVja0NvbmZpZy5Vc2VyTGFiZWxzRW50cnkaYQoNUmVz",
+            "b3VyY2VHcm91cBIQCghncm91cF9pZBgBIAEoCRI+Cg1yZXNvdXJjZV90eXBl",
+            "GAIgASgOMicuZ29vZ2xlLm1vbml0b3JpbmcudjMuR3JvdXBSZXNvdXJjZVR5",
+            "cGUaIQoKUGluZ0NvbmZpZxITCgtwaW5nc19jb3VudBgBIAEoBRryDAoJSHR0",
+            "cENoZWNrElcKDnJlcXVlc3RfbWV0aG9kGAggASgOMj8uZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuSHR0cENoZWNrLlJlcXVlc3RN",
+            "ZXRob2QSDwoHdXNlX3NzbBgBIAEoCBIMCgRwYXRoGAIgASgJEgwKBHBvcnQY",
+            "AyABKAUSWAoJYXV0aF9pbmZvGAQgASgLMkUuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuVXB0aW1lQ2hlY2tDb25maWcuSHR0cENoZWNrLkJhc2ljQXV0aGVudGlj",
+            "YXRpb24SFAoMbWFza19oZWFkZXJzGAUgASgIEk8KB2hlYWRlcnMYBiADKAsy",
+            "Pi5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5IdHRw",
+            "Q2hlY2suSGVhZGVyc0VudHJ5ElMKDGNvbnRlbnRfdHlwZRgJIAEoDjI9Lmdv",
+            "b2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVj",
+            "ay5Db250ZW50VHlwZRIbChNjdXN0b21fY29udGVudF90eXBlGA0gASgJEhQK",
+            "DHZhbGlkYXRlX3NzbBgHIAEoCBIMCgRib2R5GAogASgMEmwKHmFjY2VwdGVk",
+            "X3Jlc3BvbnNlX3N0YXR1c19jb2RlcxgLIAMoCzJELmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVjay5SZXNwb25zZVN0",
+            "YXR1c0NvZGUSRwoLcGluZ19jb25maWcYDCABKAsyMi5nb29nbGUubW9uaXRv",
+            "cmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5QaW5nQ29uZmlnEnQKHHNlcnZp",
+            "Y2VfYWdlbnRfYXV0aGVudGljYXRpb24YDiABKAsyTC5nb29nbGUubW9uaXRv",
+            "cmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5IdHRwQ2hlY2suU2VydmljZUFn",
+            "ZW50QXV0aGVudGljYXRpb25IABo5ChNCYXNpY0F1dGhlbnRpY2F0aW9uEhAK",
+            "CHVzZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJGtwCChJSZXNwb25z",
+            "ZVN0YXR1c0NvZGUSFgoMc3RhdHVzX3ZhbHVlGAEgASgFSAASaAoMc3RhdHVz",
+            "X2NsYXNzGAIgASgOMlAuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hl",
+            "Y2tDb25maWcuSHR0cENoZWNrLlJlc3BvbnNlU3RhdHVzQ29kZS5TdGF0dXND",
+            "bGFzc0gAIrQBCgtTdGF0dXNDbGFzcxIcChhTVEFUVVNfQ0xBU1NfVU5TUEVD",
+            "SUZJRUQQABIUChBTVEFUVVNfQ0xBU1NfMVhYEGQSFQoQU1RBVFVTX0NMQVNT",
+            "XzJYWBDIARIVChBTVEFUVVNfQ0xBU1NfM1hYEKwCEhUKEFNUQVRVU19DTEFT",
+            "U180WFgQkAMSFQoQU1RBVFVTX0NMQVNTXzVYWBD0AxIVChBTVEFUVVNfQ0xB",
+            "U1NfQU5ZEOgHQg0KC3N0YXR1c19jb2RlGvwBChpTZXJ2aWNlQWdlbnRBdXRo",
+            "ZW50aWNhdGlvbhJ5CgR0eXBlGAEgASgOMmsuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuVXB0aW1lQ2hlY2tDb25maWcuSHR0cENoZWNrLlNlcnZpY2VBZ2VudEF1",
+            "dGhlbnRpY2F0aW9uLlNlcnZpY2VBZ2VudEF1dGhlbnRpY2F0aW9uVHlwZSJj",
+            "Ch5TZXJ2aWNlQWdlbnRBdXRoZW50aWNhdGlvblR5cGUSMQotU0VSVklDRV9B",
+            "R0VOVF9BVVRIRU5USUNBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKT0lE",
+            "Q19UT0tFThABGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBIjoKDVJlcXVlc3RNZXRob2QSFgoSTUVUSE9EX1VOU1BF",
+            "Q0lGSUVEEAASBwoDR0VUEAESCAoEUE9TVBACIkcKC0NvbnRlbnRUeXBlEhQK",
+            "EFRZUEVfVU5TUEVDSUZJRUQQABIPCgtVUkxfRU5DT0RFRBABEhEKDVVTRVJf",
+            "UFJPVklERUQQAkINCgthdXRoX21ldGhvZBphCghUY3BDaGVjaxIMCgRwb3J0",
+            "GAEgASgFEkcKC3BpbmdfY29uZmlnGAIgASgLMjIuZ29vZ2xlLm1vbml0b3Jp",
+            "bmcudjMuVXB0aW1lQ2hlY2tDb25maWcuUGluZ0NvbmZpZxrKBQoOQ29udGVu",
+            "dE1hdGNoZXISDwoHY29udGVudBgBIAEoCRJcCgdtYXRjaGVyGAIgASgOMksu",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuQ29udGVu",
+            "dE1hdGNoZXIuQ29udGVudE1hdGNoZXJPcHRpb24SYwoRanNvbl9wYXRoX21h",
+            "dGNoZXIYAyABKAsyRi5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVj",
+            "a0NvbmZpZy5Db250ZW50TWF0Y2hlci5Kc29uUGF0aE1hdGNoZXJIABr9AQoP",
+            "SnNvblBhdGhNYXRjaGVyEhEKCWpzb25fcGF0aBgBIAEoCRJyCgxqc29uX21h",
+            "dGNoZXIYAiABKA4yXC5nb29nbGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVj",
+            "a0NvbmZpZy5Db250ZW50TWF0Y2hlci5Kc29uUGF0aE1hdGNoZXIuSnNvblBh",
+            "dGhNYXRjaGVyT3B0aW9uImMKFUpzb25QYXRoTWF0Y2hlck9wdGlvbhIoCiRK",
+            "U09OX1BBVEhfTUFUQ0hFUl9PUFRJT05fVU5TUEVDSUZJRUQQABIPCgtFWEFD",
+            "VF9NQVRDSBABEg8KC1JFR0VYX01BVENIEAIiyAEKFENvbnRlbnRNYXRjaGVy",
+            "T3B0aW9uEiYKIkNPTlRFTlRfTUFUQ0hFUl9PUFRJT05fVU5TUEVDSUZJRUQQ",
+            "ABITCg9DT05UQUlOU19TVFJJTkcQARIXChNOT1RfQ09OVEFJTlNfU1RSSU5H",
+            "EAISEQoNTUFUQ0hFU19SRUdFWBADEhUKEU5PVF9NQVRDSEVTX1JFR0VYEAQS",
+            "FQoRTUFUQ0hFU19KU09OX1BBVEgQBRIZChVOT1RfTUFUQ0hFU19KU09OX1BB",
+            "VEgQBkIZChdhZGRpdGlvbmFsX21hdGNoZXJfaW5mbxoxCg9Vc2VyTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJVCgtDaGVj",
+            "a2VyVHlwZRIcChhDSEVDS0VSX1RZUEVfVU5TUEVDSUZJRUQQABIWChJTVEFU",
+            "SUNfSVBfQ0hFQ0tFUlMQARIQCgxWUENfQ0hFQ0tFUlMQAzrzAepB7wEKK21v",
+            "bml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vVXB0aW1lQ2hlY2tDb25maWcSO3By",
+            "b2plY3RzL3twcm9qZWN0fS91cHRpbWVDaGVja0NvbmZpZ3Mve3VwdGltZV9j",
+            "aGVja19jb25maWd9EkVvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3Vw",
+            "dGltZUNoZWNrQ29uZmlncy97dXB0aW1lX2NoZWNrX2NvbmZpZ30SOWZvbGRl",
+            "cnMve2ZvbGRlcn0vdXB0aW1lQ2hlY2tDb25maWdzL3t1cHRpbWVfY2hlY2tf",
+            "Y29uZmlnfRIBKkIKCghyZXNvdXJjZUIUChJjaGVja19yZXF1ZXN0X3R5cGUi",
+            "bgoNVXB0aW1lQ2hlY2tJcBI3CgZyZWdpb24YASABKA4yJy5nb29nbGUubW9u",
+            "aXRvcmluZy52My5VcHRpbWVDaGVja1JlZ2lvbhIQCghsb2NhdGlvbhgCIAEo",
+            "CRISCgppcF9hZGRyZXNzGAMgASgJKpUBChFVcHRpbWVDaGVja1JlZ2lvbhIW",
+            "ChJSRUdJT05fVU5TUEVDSUZJRUQQABIHCgNVU0EQARIKCgZFVVJPUEUQAhIR",
+            "Cg1TT1VUSF9BTUVSSUNBEAMSEAoMQVNJQV9QQUNJRklDEAQSDgoKVVNBX09S",
+            "RUdPThAFEgwKCFVTQV9JT1dBEAYSEAoMVVNBX1ZJUkdJTklBEAcqWwoRR3Jv",
+            "dXBSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EgwKCElOU1RBTkNFEAESGQoVQVdTX0VMQl9MT0FEX0JBTEFOQ0VSEAJCrwIK",
+            "GGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ILVXB0aW1lUHJvdG9QAVpBY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9tb25pdG9yaW5nL2FwaXYzL3YyL21vbml0b3Jp",
+            "bmdwYjttb25pdG9yaW5ncGKqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5W",
+            "M8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91",
+            "ZDo6TW9uaXRvcmluZzo6VjPqQWYKJmNsb3VkZnVuY3Rpb25zLmdvb2dsZWFw",
+            "aXMuY29tL0Z1bmN0aW9uEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vZnVuY3Rpb25zL3tmdW5jdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckRegion), typeof(global::Google.Cloud.Monitoring.V3.GroupResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.InternalChecker), global::Google.Cloud.Monitoring.V3.InternalChecker.Parser, new[]{ "Name", "DisplayName", "Network", "GcpZone", "PeerProjectId", "State" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser, new[]{ "Name", "DisplayName", "MonitoredResource", "ResourceGroup", "HttpCheck", "TcpCheck", "Period", "Timeout", "ContentMatchers", "CheckerType", "SelectedRegions", "IsInternal", "InternalCheckers", "UserLabels" }, new[]{ "Resource", "CheckRequestType" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.CheckerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup.Parser, new[]{ "GroupId", "ResourceType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget), global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Parser, new[]{ "CloudFunctionV2" }, new[]{ "Target" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target), global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target.Parser, new[]{ "Name", "CloudRunRevision" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser, new[]{ "Name", "DisplayName", "MonitoredResource", "ResourceGroup", "SyntheticMonitor", "HttpCheck", "TcpCheck", "Period", "Timeout", "ContentMatchers", "CheckerType", "SelectedRegions", "IsInternal", "InternalCheckers", "UserLabels" }, new[]{ "Resource", "CheckRequestType" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.CheckerType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup.Parser, new[]{ "GroupId", "ResourceType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.PingConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.PingConfig.Parser, new[]{ "PingsCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "RequestMethod", "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ContentType", "CustomContentType", "ValidateSsl", "Body", "AcceptedResponseStatusCodes", "PingConfig" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod), typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "RequestMethod", "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ContentType", "CustomContentType", "ValidateSsl", "Body", "AcceptedResponseStatusCodes", "PingConfig", "ServiceAgentAuthentication" }, new[]{ "AuthMethod" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod), typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Parser, new[]{ "StatusValue", "StatusClass" }, new[]{ "StatusCode" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ResponseStatusCode.Types.StatusClass) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType) }, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck.Parser, new[]{ "Port", "PingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Parser, new[]{ "Content", "Matcher", "JsonPathMatcher" }, new[]{ "AdditionalMatcherInfo" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.JsonPathMatcher), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.JsonPathMatcher.Parser, new[]{ "JsonPath", "JsonMatcher" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.JsonPathMatcher.Types.JsonPathMatcherOption) }, null, null)}),
@@ -657,6 +678,503 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
+  /// Describes a Synthetic Monitor to be invoked by Uptime.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SyntheticMonitorTarget : pb::IMessage<SyntheticMonitorTarget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SyntheticMonitorTarget> _parser = new pb::MessageParser<SyntheticMonitorTarget>(() => new SyntheticMonitorTarget());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SyntheticMonitorTarget> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyntheticMonitorTarget() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyntheticMonitorTarget(SyntheticMonitorTarget other) : this() {
+      switch (other.TargetCase) {
+        case TargetOneofCase.CloudFunctionV2:
+          CloudFunctionV2 = other.CloudFunctionV2.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SyntheticMonitorTarget Clone() {
+      return new SyntheticMonitorTarget(this);
+    }
+
+    /// <summary>Field number for the "cloud_function_v2" field.</summary>
+    public const int CloudFunctionV2FieldNumber = 1;
+    /// <summary>
+    /// Target a Synthetic Monitor GCFv2 instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target CloudFunctionV2 {
+      get { return targetCase_ == TargetOneofCase.CloudFunctionV2 ? (global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target) target_ : null; }
+      set {
+        target_ = value;
+        targetCase_ = value == null ? TargetOneofCase.None : TargetOneofCase.CloudFunctionV2;
+      }
+    }
+
+    private object target_;
+    /// <summary>Enum of possible cases for the "target" oneof.</summary>
+    public enum TargetOneofCase {
+      None = 0,
+      CloudFunctionV2 = 1,
+    }
+    private TargetOneofCase targetCase_ = TargetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TargetOneofCase TargetCase {
+      get { return targetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTarget() {
+      targetCase_ = TargetOneofCase.None;
+      target_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SyntheticMonitorTarget);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SyntheticMonitorTarget other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CloudFunctionV2, other.CloudFunctionV2)) return false;
+      if (TargetCase != other.TargetCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (targetCase_ == TargetOneofCase.CloudFunctionV2) hash ^= CloudFunctionV2.GetHashCode();
+      hash ^= (int) targetCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (targetCase_ == TargetOneofCase.CloudFunctionV2) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CloudFunctionV2);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (targetCase_ == TargetOneofCase.CloudFunctionV2) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CloudFunctionV2);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (targetCase_ == TargetOneofCase.CloudFunctionV2) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudFunctionV2);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SyntheticMonitorTarget other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TargetCase) {
+        case TargetOneofCase.CloudFunctionV2:
+          if (CloudFunctionV2 == null) {
+            CloudFunctionV2 = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target();
+          }
+          CloudFunctionV2.MergeFrom(other.CloudFunctionV2);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target subBuilder = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target();
+            if (targetCase_ == TargetOneofCase.CloudFunctionV2) {
+              subBuilder.MergeFrom(CloudFunctionV2);
+            }
+            input.ReadMessage(subBuilder);
+            CloudFunctionV2 = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target subBuilder = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Types.CloudFunctionV2Target();
+            if (targetCase_ == TargetOneofCase.CloudFunctionV2) {
+              subBuilder.MergeFrom(CloudFunctionV2);
+            }
+            input.ReadMessage(subBuilder);
+            CloudFunctionV2 = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SyntheticMonitorTarget message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A Synthetic Monitor deployed to a Cloud Functions V2 instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class CloudFunctionV2Target : pb::IMessage<CloudFunctionV2Target>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<CloudFunctionV2Target> _parser = new pb::MessageParser<CloudFunctionV2Target>(() => new CloudFunctionV2Target());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<CloudFunctionV2Target> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionV2Target() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionV2Target(CloudFunctionV2Target other) : this() {
+          name_ = other.name_;
+          cloudRunRevision_ = other.cloudRunRevision_ != null ? other.cloudRunRevision_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CloudFunctionV2Target Clone() {
+          return new CloudFunctionV2Target(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. Fully qualified GCFv2 resource name
+        /// i.e. `projects/{project}/locations/{location}/functions/{function}`
+        /// Required.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "cloud_run_revision" field.</summary>
+        public const int CloudRunRevisionFieldNumber = 2;
+        private global::Google.Api.MonitoredResource cloudRunRevision_;
+        /// <summary>
+        /// Output only. The `cloud_run_revision` Monitored Resource associated with
+        /// the GCFv2. The Synthetic Monitor execution results (metrics, logs, and
+        /// spans) are reported against this Monitored Resource. This field is output
+        /// only.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Api.MonitoredResource CloudRunRevision {
+          get { return cloudRunRevision_; }
+          set {
+            cloudRunRevision_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as CloudFunctionV2Target);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(CloudFunctionV2Target other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (!object.Equals(CloudRunRevision, other.CloudRunRevision)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (cloudRunRevision_ != null) hash ^= CloudRunRevision.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (cloudRunRevision_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(CloudRunRevision);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (cloudRunRevision_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(CloudRunRevision);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (cloudRunRevision_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudRunRevision);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(CloudFunctionV2Target other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.cloudRunRevision_ != null) {
+            if (cloudRunRevision_ == null) {
+              CloudRunRevision = new global::Google.Api.MonitoredResource();
+            }
+            CloudRunRevision.MergeFrom(other.CloudRunRevision);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (cloudRunRevision_ == null) {
+                  CloudRunRevision = new global::Google.Api.MonitoredResource();
+                }
+                input.ReadMessage(CloudRunRevision);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (cloudRunRevision_ == null) {
+                  CloudRunRevision = new global::Google.Api.MonitoredResource();
+                }
+                input.ReadMessage(CloudRunRevision);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// This message configures which resources and services to monitor for
   /// availability.
   /// </summary>
@@ -675,7 +1193,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -712,6 +1230,9 @@ namespace Google.Cloud.Monitoring.V3 {
         case ResourceOneofCase.ResourceGroup:
           ResourceGroup = other.ResourceGroup.Clone();
           break;
+        case ResourceOneofCase.SyntheticMonitor:
+          SyntheticMonitor = other.SyntheticMonitor.Clone();
+          break;
       }
 
       switch (other.CheckRequestTypeCase) {
@@ -736,7 +1257,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// A unique resource name for this Uptime check configuration. The format is:
+    /// Identifier. A unique resource name for this Uptime check configuration. The
+    /// format is:
     ///
     ///      projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
     ///
@@ -811,6 +1333,21 @@ namespace Google.Cloud.Monitoring.V3 {
       set {
         resource_ = value;
         resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.ResourceGroup;
+      }
+    }
+
+    /// <summary>Field number for the "synthetic_monitor" field.</summary>
+    public const int SyntheticMonitorFieldNumber = 21;
+    /// <summary>
+    /// Specifies a Synthetic Monitor to invoke.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget SyntheticMonitor {
+      get { return resourceCase_ == ResourceOneofCase.SyntheticMonitor ? (global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget) resource_ : null; }
+      set {
+        resource_ = value;
+        resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.SyntheticMonitor;
       }
     }
 
@@ -992,6 +1529,7 @@ namespace Google.Cloud.Monitoring.V3 {
       None = 0,
       MonitoredResource = 3,
       ResourceGroup = 4,
+      SyntheticMonitor = 21,
     }
     private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1047,6 +1585,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(MonitoredResource, other.MonitoredResource)) return false;
       if (!object.Equals(ResourceGroup, other.ResourceGroup)) return false;
+      if (!object.Equals(SyntheticMonitor, other.SyntheticMonitor)) return false;
       if (!object.Equals(HttpCheck, other.HttpCheck)) return false;
       if (!object.Equals(TcpCheck, other.TcpCheck)) return false;
       if (!object.Equals(Period, other.Period)) return false;
@@ -1070,6 +1609,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (resourceCase_ == ResourceOneofCase.MonitoredResource) hash ^= MonitoredResource.GetHashCode();
       if (resourceCase_ == ResourceOneofCase.ResourceGroup) hash ^= ResourceGroup.GetHashCode();
+      if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) hash ^= SyntheticMonitor.GetHashCode();
       if (checkRequestTypeCase_ == CheckRequestTypeOneofCase.HttpCheck) hash ^= HttpCheck.GetHashCode();
       if (checkRequestTypeCase_ == CheckRequestTypeOneofCase.TcpCheck) hash ^= TcpCheck.GetHashCode();
       if (period_ != null) hash ^= Period.GetHashCode();
@@ -1144,6 +1684,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteEnum((int) CheckerType);
       }
       userLabels_.WriteTo(output, _map_userLabels_codec);
+      if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(SyntheticMonitor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1198,6 +1742,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteEnum((int) CheckerType);
       }
       userLabels_.WriteTo(ref output, _map_userLabels_codec);
+      if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(SyntheticMonitor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1219,6 +1767,9 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (resourceCase_ == ResourceOneofCase.ResourceGroup) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceGroup);
+      }
+      if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SyntheticMonitor);
       }
       if (checkRequestTypeCase_ == CheckRequestTypeOneofCase.HttpCheck) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpCheck);
@@ -1294,6 +1845,12 @@ namespace Google.Cloud.Monitoring.V3 {
             ResourceGroup = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup();
           }
           ResourceGroup.MergeFrom(other.ResourceGroup);
+          break;
+        case ResourceOneofCase.SyntheticMonitor:
+          if (SyntheticMonitor == null) {
+            SyntheticMonitor = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget();
+          }
+          SyntheticMonitor.MergeFrom(other.SyntheticMonitor);
           break;
       }
 
@@ -1410,6 +1967,15 @@ namespace Google.Cloud.Monitoring.V3 {
             userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
             break;
           }
+          case 170: {
+            global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget subBuilder = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget();
+            if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) {
+              subBuilder.MergeFrom(SyntheticMonitor);
+            }
+            input.ReadMessage(subBuilder);
+            SyntheticMonitor = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1506,6 +2072,15 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 162: {
             userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget subBuilder = new global::Google.Cloud.Monitoring.V3.SyntheticMonitorTarget();
+            if (resourceCase_ == ResourceOneofCase.SyntheticMonitor) {
+              subBuilder.MergeFrom(SyntheticMonitor);
+            }
+            input.ReadMessage(subBuilder);
+            SyntheticMonitor = subBuilder;
             break;
           }
         }
@@ -2029,6 +2604,12 @@ namespace Google.Cloud.Monitoring.V3 {
           body_ = other.body_;
           acceptedResponseStatusCodes_ = other.acceptedResponseStatusCodes_.Clone();
           pingConfig_ = other.pingConfig_ != null ? other.pingConfig_.Clone() : null;
+          switch (other.AuthMethodCase) {
+            case AuthMethodOneofCase.ServiceAgentAuthentication:
+              ServiceAgentAuthentication = other.ServiceAgentAuthentication.Clone();
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2112,6 +2693,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// <summary>
         /// The authentication information. Optional when creating an HTTP check;
         /// defaults to empty.
+        /// Do not set both `auth_method` and `auth_info`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2277,6 +2859,43 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "service_agent_authentication" field.</summary>
+        public const int ServiceAgentAuthenticationFieldNumber = 14;
+        /// <summary>
+        /// If specified, Uptime will generate and attach an OIDC JWT token for the
+        /// Monitoring service agent service account as an `Authorization` header
+        /// in the HTTP request when probing.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication ServiceAgentAuthentication {
+          get { return authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication ? (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication) authMethod_ : null; }
+          set {
+            authMethod_ = value;
+            authMethodCase_ = value == null ? AuthMethodOneofCase.None : AuthMethodOneofCase.ServiceAgentAuthentication;
+          }
+        }
+
+        private object authMethod_;
+        /// <summary>Enum of possible cases for the "auth_method" oneof.</summary>
+        public enum AuthMethodOneofCase {
+          None = 0,
+          ServiceAgentAuthentication = 14,
+        }
+        private AuthMethodOneofCase authMethodCase_ = AuthMethodOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AuthMethodOneofCase AuthMethodCase {
+          get { return authMethodCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAuthMethod() {
+          authMethodCase_ = AuthMethodOneofCase.None;
+          authMethod_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2305,6 +2924,8 @@ namespace Google.Cloud.Monitoring.V3 {
           if (Body != other.Body) return false;
           if(!acceptedResponseStatusCodes_.Equals(other.acceptedResponseStatusCodes_)) return false;
           if (!object.Equals(PingConfig, other.PingConfig)) return false;
+          if (!object.Equals(ServiceAgentAuthentication, other.ServiceAgentAuthentication)) return false;
+          if (AuthMethodCase != other.AuthMethodCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2325,6 +2946,8 @@ namespace Google.Cloud.Monitoring.V3 {
           if (Body.Length != 0) hash ^= Body.GetHashCode();
           hash ^= acceptedResponseStatusCodes_.GetHashCode();
           if (pingConfig_ != null) hash ^= PingConfig.GetHashCode();
+          if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) hash ^= ServiceAgentAuthentication.GetHashCode();
+          hash ^= (int) authMethodCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2389,6 +3012,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(106);
             output.WriteString(CustomContentType);
           }
+          if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) {
+            output.WriteRawTag(114);
+            output.WriteMessage(ServiceAgentAuthentication);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2445,6 +3072,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(106);
             output.WriteString(CustomContentType);
           }
+          if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) {
+            output.WriteRawTag(114);
+            output.WriteMessage(ServiceAgentAuthentication);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2489,6 +3120,9 @@ namespace Google.Cloud.Monitoring.V3 {
           size += acceptedResponseStatusCodes_.CalculateSize(_repeated_acceptedResponseStatusCodes_codec);
           if (pingConfig_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(PingConfig);
+          }
+          if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceAgentAuthentication);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2543,6 +3177,15 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             PingConfig.MergeFrom(other.PingConfig);
           }
+          switch (other.AuthMethodCase) {
+            case AuthMethodOneofCase.ServiceAgentAuthentication:
+              if (ServiceAgentAuthentication == null) {
+                ServiceAgentAuthentication = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication();
+              }
+              ServiceAgentAuthentication.MergeFrom(other.ServiceAgentAuthentication);
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -2616,6 +3259,15 @@ namespace Google.Cloud.Monitoring.V3 {
                 CustomContentType = input.ReadString();
                 break;
               }
+              case 114: {
+                global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication subBuilder = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication();
+                if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) {
+                  subBuilder.MergeFrom(ServiceAgentAuthentication);
+                }
+                input.ReadMessage(subBuilder);
+                ServiceAgentAuthentication = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -2687,6 +3339,15 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               case 106: {
                 CustomContentType = input.ReadString();
+                break;
+              }
+              case 114: {
+                global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication subBuilder = new global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication();
+                if (authMethodCase_ == AuthMethodOneofCase.ServiceAgentAuthentication) {
+                  subBuilder.MergeFrom(ServiceAgentAuthentication);
+                }
+                input.ReadMessage(subBuilder);
+                ServiceAgentAuthentication = subBuilder;
                 break;
               }
             }
@@ -3312,6 +3973,228 @@ namespace Google.Cloud.Monitoring.V3 {
                 /// The class of all status codes.
                 /// </summary>
                 [pbr::OriginalName("STATUS_CLASS_ANY")] Any = 1000,
+              }
+
+            }
+            #endregion
+
+          }
+
+          /// <summary>
+          /// Contains information needed for generating an
+          /// [OpenID Connect
+          /// token](https://developers.google.com/identity/protocols/OpenIDConnect).
+          /// The OIDC token will be generated for the Monitoring service agent service
+          /// account.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class ServiceAgentAuthentication : pb::IMessage<ServiceAgentAuthentication>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ServiceAgentAuthentication> _parser = new pb::MessageParser<ServiceAgentAuthentication>(() => new ServiceAgentAuthentication());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ServiceAgentAuthentication> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ServiceAgentAuthentication() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ServiceAgentAuthentication(ServiceAgentAuthentication other) : this() {
+              type_ = other.type_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ServiceAgentAuthentication Clone() {
+              return new ServiceAgentAuthentication(this);
+            }
+
+            /// <summary>Field number for the "type" field.</summary>
+            public const int TypeFieldNumber = 1;
+            private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType type_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified;
+            /// <summary>
+            /// Type of authentication.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType Type {
+              get { return type_; }
+              set {
+                type_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ServiceAgentAuthentication);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ServiceAgentAuthentication other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Type != other.Type) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Type != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified) hash ^= Type.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Type != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Type);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Type != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified) {
+                output.WriteRawTag(8);
+                output.WriteEnum((int) Type);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Type != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ServiceAgentAuthentication other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Type != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType.Unspecified) {
+                Type = other.Type;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    Type = (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Type = (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ServiceAgentAuthentication.Types.ServiceAgentAuthenticationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the ServiceAgentAuthentication message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Type of authentication.
+              /// </summary>
+              public enum ServiceAgentAuthenticationType {
+                /// <summary>
+                /// Default value, will result in OIDC Authentication.
+                /// </summary>
+                [pbr::OriginalName("SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// OIDC Authentication
+                /// </summary>
+                [pbr::OriginalName("OIDC_TOKEN")] OidcToken = 1,
               }
 
             }
@@ -4247,7 +5130,7 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Monitoring.V3.UptimeReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
