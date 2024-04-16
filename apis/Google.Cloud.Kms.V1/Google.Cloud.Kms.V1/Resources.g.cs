@@ -3354,12 +3354,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int PemFieldNumber = 1;
     private string pem_ = "";
     /// <summary>
-    /// A public key encoded in PEM format, populated only when
-    /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
-    /// returns one key. For more information, see the [RFC
-    /// 7468](https://tools.ietf.org/html/rfc7468) sections for [General
-    /// Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
-    /// Encoding of Subject Public Key Info]
+    /// The public key, encoded in PEM format. For more information, see the
+    /// [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for
+    /// [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and
+    /// [Textual Encoding of Subject Public Key Info]
     /// (https://tools.ietf.org/html/rfc7468#section-13).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3393,10 +3391,8 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_pemCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(26);
     private long? pemCrc32C_;
     /// <summary>
-    /// Integrity verification field: A CRC32C checksum of the returned
-    /// [PublicKey.pem][google.cloud.kms.v1.PublicKey.pem]. It is only populated
-    /// when [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey]
-    /// returns one key. An integrity check of
+    /// Integrity verification field. A CRC32C checksum of the returned
+    /// [PublicKey.pem][google.cloud.kms.v1.PublicKey.pem]. An integrity check of
     /// [PublicKey.pem][google.cloud.kms.v1.PublicKey.pem] can be performed by
     /// computing the CRC32C checksum of
     /// [PublicKey.pem][google.cloud.kms.v1.PublicKey.pem] and comparing your
