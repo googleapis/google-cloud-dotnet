@@ -467,9 +467,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.Entity>();
     /// <summary>
-    /// A list of entities detected on
-    /// [Document.text][google.cloud.documentai.v1.Document.text]. For document
-    /// shards, entities in this list may cross shard boundaries.
+    /// A list of entities detected on [Document.text][google.cloud.documentai.v1.Document.text]. For document shards,
+    /// entities in this list may cross shard boundaries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -483,8 +482,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.DocumentAI.V1.Document.Types.EntityRelation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.EntityRelation> entityRelations_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.EntityRelation>();
     /// <summary>
-    /// Placeholder.  Relationship among
-    /// [Document.entities][google.cloud.documentai.v1.Document.entities].
+    /// Placeholder.  Relationship among [Document.entities][google.cloud.documentai.v1.Document.entities].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -498,10 +496,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         = pb::FieldCodec.ForMessage(114, global::Google.Cloud.DocumentAI.V1.Document.Types.TextChange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.TextChange> textChanges_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.TextChange>();
     /// <summary>
-    /// Placeholder.  A list of text corrections made to
-    /// [Document.text][google.cloud.documentai.v1.Document.text].  This is usually
-    /// used for annotating corrections to OCR mistakes.  Text changes for a given
-    /// revision may not overlap with each other.
+    /// Placeholder.  A list of text corrections made to [Document.text][google.cloud.documentai.v1.Document.text].  This
+    /// is usually used for annotating corrections to OCR mistakes.  Text changes
+    /// for a given revision may not overlap with each other.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1024,8 +1021,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int TextOffsetFieldNumber = 3;
         private long textOffset_;
         /// <summary>
-        /// The index of the first character in
-        /// [Document.text][google.cloud.documentai.v1.Document.text] in the overall
+        /// The index of the first character in [Document.text][google.cloud.documentai.v1.Document.text] in the overall
         /// document global text.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1278,8 +1274,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int TextAnchorFieldNumber = 1;
         private global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor textAnchor_;
         /// <summary>
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1.Document.text].
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2051,11 +2046,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int PageNumberFieldNumber = 1;
         private int pageNumber_;
         /// <summary>
-        /// 1-based index for current
-        /// [Page][google.cloud.documentai.v1.Document.Page] in a parent
-        /// [Document][google.cloud.documentai.v1.Document]. Useful when a page is
-        /// taken out of a [Document][google.cloud.documentai.v1.Document] for
-        /// individual processing.
+        /// 1-based index for current [Page][google.cloud.documentai.v1.Document.Page] in a parent [Document][google.cloud.documentai.v1.Document].
+        /// Useful when a page is taken out of a [Document][google.cloud.documentai.v1.Document] for individual
+        /// processing.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3728,8 +3721,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int TextAnchorFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor textAnchor_;
             /// <summary>
-            /// Text anchor indexing into the
-            /// [Document.text][google.cloud.documentai.v1.Document.text].
+            /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3744,11 +3736,9 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int ConfidenceFieldNumber = 2;
             private float confidence_;
             /// <summary>
-            /// Confidence of the current
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] within
-            /// context of the object this layout is for. e.g. confidence can be for a
-            /// single token, a table, a visual element, etc. depending on context.
-            /// Range `[0, 1]`.
+            /// Confidence of the current [Layout][google.cloud.documentai.v1.Document.Page.Layout] within context of the object this
+            /// layout is for. e.g. confidence can be for a single token, a table,
+            /// a visual element, etc. depending on context. Range `[0, 1]`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3763,8 +3753,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int BoundingPolyFieldNumber = 3;
             private global::Google.Cloud.DocumentAI.V1.BoundingPoly boundingPoly_;
             /// <summary>
-            /// The bounding polygon for the
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout].
+            /// The bounding polygon for the [Layout][google.cloud.documentai.v1.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3779,8 +3768,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int OrientationFieldNumber = 4;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout.Types.Orientation orientation_ = global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified;
             /// <summary>
-            /// Detected orientation for the
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout].
+            /// Detected orientation for the [Layout][google.cloud.documentai.v1.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4106,8 +4094,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Block][google.cloud.documentai.v1.Document.Page.Block].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Block][google.cloud.documentai.v1.Document.Page.Block].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4391,8 +4378,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Paragraph][google.cloud.documentai.v1.Document.Page.Paragraph].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Paragraph][google.cloud.documentai.v1.Document.Page.Paragraph].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4677,8 +4663,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Line][google.cloud.documentai.v1.Document.Page.Line].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Line][google.cloud.documentai.v1.Document.Page.Line].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4964,8 +4949,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Token][google.cloud.documentai.v1.Document.Page.Token].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Token][google.cloud.documentai.v1.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4980,8 +4964,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int DetectedBreakFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Token.Types.DetectedBreak detectedBreak_;
             /// <summary>
-            /// Detected break at the end of a
-            /// [Token][google.cloud.documentai.v1.Document.Page.Token].
+            /// Detected break at the end of a [Token][google.cloud.documentai.v1.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5296,8 +5279,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Detected break at the end of a
-              /// [Token][google.cloud.documentai.v1.Document.Page.Token].
+              /// Detected break at the end of a [Token][google.cloud.documentai.v1.Document.Page.Token].
               /// </summary>
               [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak>
@@ -5603,9 +5585,8 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int PixelFontSizeFieldNumber = 2;
                 private double pixelFontSize_;
                 /// <summary>
-                /// Font size in pixels, equal to _unrounded
-                /// [font_size][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_size]_
-                /// * _resolution_ ÷ `72.0`.
+                /// Font size in pixels, equal to _unrounded [font_size][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_size]_ *
+                /// _resolution_ ÷ `72.0`.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5650,9 +5631,8 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int BoldFieldNumber = 5;
                 private bool bold_;
                 /// <summary>
-                /// Whether the text is bold (equivalent to
-                /// [font_weight][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_weight]
-                /// is at least `700`).
+                /// Whether the text is bold (equivalent to [font_weight][google.cloud.documentai.v1.Document.Page.Token.StyleInfo.font_weight] is at least
+                /// `700`).
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6359,8 +6339,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Symbol][google.cloud.documentai.v1.Document.Page.Symbol].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Symbol][google.cloud.documentai.v1.Document.Page.Symbol].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6596,8 +6575,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [VisualElement][google.cloud.documentai.v1.Document.Page.VisualElement].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [VisualElement][google.cloud.documentai.v1.Document.Page.VisualElement].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6612,8 +6590,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int TypeFieldNumber = 2;
             private string type_ = "";
             /// <summary>
-            /// Type of the
-            /// [VisualElement][google.cloud.documentai.v1.Document.Page.VisualElement].
+            /// Type of the [VisualElement][google.cloud.documentai.v1.Document.Page.VisualElement].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6874,8 +6851,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [Table][google.cloud.documentai.v1.Document.Page.Table].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [Table][google.cloud.documentai.v1.Document.Page.Table].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7404,8 +7380,7 @@ namespace Google.Cloud.DocumentAI.V1 {
                 public const int LayoutFieldNumber = 1;
                 private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
                 /// <summary>
-                /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-                /// [TableCell][google.cloud.documentai.v1.Document.Page.Table.TableCell].
+                /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [TableCell][google.cloud.documentai.v1.Document.Page.Table.TableCell].
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7728,9 +7703,8 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int FieldNameFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout fieldName_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for the
-            /// [FormField][google.cloud.documentai.v1.Document.Page.FormField] name.
-            /// e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1.Document.Page.FormField] name. e.g. `Address`, `Email`,
+            /// `Grand total`, `Phone number`, etc.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7745,8 +7719,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int FieldValueFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout fieldValue_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for the
-            /// [FormField][google.cloud.documentai.v1.Document.Page.FormField] value.
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1.Document.Page.FormField] value.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8215,8 +8188,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutFieldNumber = 1;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.Page.Types.Layout layout_;
             /// <summary>
-            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for
-            /// [DetectedBarcode][google.cloud.documentai.v1.Document.Page.DetectedBarcode].
+            /// [Layout][google.cloud.documentai.v1.Document.Page.Layout] for [DetectedBarcode][google.cloud.documentai.v1.Document.Page.DetectedBarcode].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8231,8 +8203,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int BarcodeFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1.Barcode barcode_;
             /// <summary>
-            /// Detailed barcode information of the
-            /// [DetectedBarcode][google.cloud.documentai.v1.Document.Page.DetectedBarcode].
+            /// Detailed barcode information of the [DetectedBarcode][google.cloud.documentai.v1.Document.Page.DetectedBarcode].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9205,8 +9176,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         private global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Optional. Provenance of the entity.
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1.Document.text].
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9281,8 +9251,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int PageAnchorFieldNumber = 6;
         private global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor pageAnchor_;
         /// <summary>
-        /// Optional. Represents the provenance of this entity wrt. the location on
-        /// the page where it was found.
+        /// Optional. Represents the provenance of this entity wrt. the location on the
+        /// page where it was found.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9313,8 +9283,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int NormalizedValueFieldNumber = 9;
         private global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Types.NormalizedValue normalizedValue_;
         /// <summary>
-        /// Optional. Normalized entity value. Absent if the extracted value could
-        /// not be converted or the type (e.g. address) is not supported for certain
+        /// Optional. Normalized entity value. Absent if the extracted value could not be
+        /// converted or the type (e.g. address) is not supported for certain
         /// parsers. This field is also only populated for certain supported document
         /// types.
         /// </summary>
@@ -9333,8 +9303,8 @@ namespace Google.Cloud.DocumentAI.V1 {
             = pb::FieldCodec.ForMessage(82, global::Google.Cloud.DocumentAI.V1.Document.Types.Entity.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.Entity> properties_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.Entity>();
         /// <summary>
-        /// Optional. Entities can be nested to form a hierarchical data structure
-        /// representing the content in the document.
+        /// Optional. Entities can be nested to form a hierarchical data structure representing
+        /// the content in the document.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9361,8 +9331,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         public const int RedactedFieldNumber = 12;
         private bool redacted_;
         /// <summary>
-        /// Optional. Whether the entity will be redacted for de-identification
-        /// purposes.
+        /// Optional. Whether the entity will be redacted for de-identification purposes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10414,8 +10383,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Relationship between
-      /// [Entities][google.cloud.documentai.v1.Document.Entity].
+      /// Relationship between [Entities][google.cloud.documentai.v1.Document.Entity].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityRelation : pb::IMessage<EntityRelation>
@@ -10691,8 +10659,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Text reference indexing into the
-      /// [Document.text][google.cloud.documentai.v1.Document.text].
+      /// Text reference indexing into the [Document.text][google.cloud.documentai.v1.Document.text].
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TextAnchor : pb::IMessage<TextAnchor>
@@ -10746,8 +10713,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Types.TextSegment.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Types.TextSegment> textSegments_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor.Types.TextSegment>();
         /// <summary>
-        /// The text segments from the
-        /// [Document.text][google.cloud.documentai.v1.Document.text].
+        /// The text segments from the [Document.text][google.cloud.documentai.v1.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10923,11 +10889,9 @@ namespace Google.Cloud.DocumentAI.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// A text segment in the
-          /// [Document.text][google.cloud.documentai.v1.Document.text]. The indices
-          /// may be out of bounds which indicate that the text extends into another
-          /// document shard for large sharded documents. See
-          /// [ShardInfo.text_offset][google.cloud.documentai.v1.Document.ShardInfo.text_offset]
+          /// A text segment in the [Document.text][google.cloud.documentai.v1.Document.text]. The indices may be out of bounds
+          /// which indicate that the text extends into another document shard for
+          /// large sharded documents. See [ShardInfo.text_offset][google.cloud.documentai.v1.Document.ShardInfo.text_offset]
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TextSegment : pb::IMessage<TextSegment>
@@ -10979,9 +10943,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int StartIndexFieldNumber = 1;
             private long startIndex_;
             /// <summary>
-            /// [TextSegment][google.cloud.documentai.v1.Document.TextAnchor.TextSegment]
-            /// start UTF-8 char index in the
-            /// [Document.text][google.cloud.documentai.v1.Document.text].
+            /// [TextSegment][google.cloud.documentai.v1.Document.TextAnchor.TextSegment] start UTF-8 char index in the [Document.text][google.cloud.documentai.v1.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10996,8 +10958,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int EndIndexFieldNumber = 2;
             private long endIndex_;
             /// <summary>
-            /// [TextSegment][google.cloud.documentai.v1.Document.TextAnchor.TextSegment]
-            /// half open end UTF-8 char index in the
+            /// [TextSegment][google.cloud.documentai.v1.Document.TextAnchor.TextSegment] half open end UTF-8 char index in the
             /// [Document.text][google.cloud.documentai.v1.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11172,10 +11133,9 @@ namespace Google.Cloud.DocumentAI.V1 {
       }
 
       /// <summary>
-      /// Referencing the visual context of the entity in the
-      /// [Document.pages][google.cloud.documentai.v1.Document.pages]. Page anchors
-      /// can be cross-page, consist of multiple bounding polygons and optionally
-      /// reference specific layout element types.
+      /// Referencing the visual context of the entity in the [Document.pages][google.cloud.documentai.v1.Document.pages].
+      /// Page anchors can be cross-page, consist of multiple bounding polygons and
+      /// optionally reference specific layout element types.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PageAnchor : pb::IMessage<PageAnchor>
@@ -11418,9 +11378,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int PageFieldNumber = 1;
             private long page_;
             /// <summary>
-            /// Required. Index into the
-            /// [Document.pages][google.cloud.documentai.v1.Document.pages] element,
-            /// for example using
+            /// Required. Index into the [Document.pages][google.cloud.documentai.v1.Document.pages] element, for example using
             /// `[Document.pages][page_refs.page]` to locate the related page element.
             /// This field is skipped when its value is the default `0`. See
             /// https://developers.google.com/protocol-buffers/docs/proto3#json.
@@ -11438,8 +11396,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutTypeFieldNumber = 2;
             private global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType layoutType_ = global::Google.Cloud.DocumentAI.V1.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified;
             /// <summary>
-            /// Optional. The type of the layout element that is being referenced if
-            /// any.
+            /// Optional. The type of the layout element that is being referenced if any.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11454,9 +11411,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int LayoutIdFieldNumber = 3;
             private string layoutId_ = "";
             /// <summary>
-            /// Optional. Deprecated.  Use
-            /// [PageRef.bounding_poly][google.cloud.documentai.v1.Document.PageAnchor.PageRef.bounding_poly]
-            /// instead.
+            /// Optional. Deprecated.  Use [PageRef.bounding_poly][google.cloud.documentai.v1.Document.PageAnchor.PageRef.bounding_poly] instead.
             /// </summary>
             [global::System.ObsoleteAttribute]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11472,9 +11427,9 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int BoundingPolyFieldNumber = 4;
             private global::Google.Cloud.DocumentAI.V1.BoundingPoly boundingPoly_;
             /// <summary>
-            /// Optional. Identifies the bounding polygon of a layout element on the
-            /// page. If `layout_type` is set, the bounding polygon must be exactly the
-            /// same to the layout element it's referring to.
+            /// Optional. Identifies the bounding polygon of a layout element on the page.
+            /// If `layout_type` is set, the bounding polygon must be exactly the same
+            /// to the layout element it's referring to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11489,8 +11444,7 @@ namespace Google.Cloud.DocumentAI.V1 {
             public const int ConfidenceFieldNumber = 5;
             private float confidence_;
             /// <summary>
-            /// Optional. Confidence of detected page element, if applicable. Range
-            /// `[0, 1]`.
+            /// Optional. Confidence of detected page element, if applicable. Range `[0, 1]`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11751,44 +11705,31 @@ namespace Google.Cloud.DocumentAI.V1 {
                 /// </summary>
                 [pbr::OriginalName("LAYOUT_TYPE_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
-                /// References a
-                /// [Page.blocks][google.cloud.documentai.v1.Document.Page.blocks]
-                /// element.
+                /// References a [Page.blocks][google.cloud.documentai.v1.Document.Page.blocks] element.
                 /// </summary>
                 [pbr::OriginalName("BLOCK")] Block = 1,
                 /// <summary>
-                /// References a
-                /// [Page.paragraphs][google.cloud.documentai.v1.Document.Page.paragraphs]
-                /// element.
+                /// References a [Page.paragraphs][google.cloud.documentai.v1.Document.Page.paragraphs] element.
                 /// </summary>
                 [pbr::OriginalName("PARAGRAPH")] Paragraph = 2,
                 /// <summary>
-                /// References a
-                /// [Page.lines][google.cloud.documentai.v1.Document.Page.lines] element.
+                /// References a [Page.lines][google.cloud.documentai.v1.Document.Page.lines] element.
                 /// </summary>
                 [pbr::OriginalName("LINE")] Line = 3,
                 /// <summary>
-                /// References a
-                /// [Page.tokens][google.cloud.documentai.v1.Document.Page.tokens]
-                /// element.
+                /// References a [Page.tokens][google.cloud.documentai.v1.Document.Page.tokens] element.
                 /// </summary>
                 [pbr::OriginalName("TOKEN")] Token = 4,
                 /// <summary>
-                /// References a
-                /// [Page.visual_elements][google.cloud.documentai.v1.Document.Page.visual_elements]
-                /// element.
+                /// References a [Page.visual_elements][google.cloud.documentai.v1.Document.Page.visual_elements] element.
                 /// </summary>
                 [pbr::OriginalName("VISUAL_ELEMENT")] VisualElement = 5,
                 /// <summary>
-                /// Refrrences a
-                /// [Page.tables][google.cloud.documentai.v1.Document.Page.tables]
-                /// element.
+                /// Refrrences a [Page.tables][google.cloud.documentai.v1.Document.Page.tables] element.
                 /// </summary>
                 [pbr::OriginalName("TABLE")] Table = 6,
                 /// <summary>
-                /// References a
-                /// [Page.form_fields][google.cloud.documentai.v1.Document.Page.form_fields]
-                /// element.
+                /// References a [Page.form_fields][google.cloud.documentai.v1.Document.Page.form_fields] element.
                 /// </summary>
                 [pbr::OriginalName("FORM_FIELD")] FormField = 7,
               }
@@ -13250,9 +13191,8 @@ namespace Google.Cloud.DocumentAI.V1 {
         private global::Google.Cloud.DocumentAI.V1.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Provenance of the correction.
-        /// Text anchor indexing into the
-        /// [Document.text][google.cloud.documentai.v1.Document.text].  There can
-        /// only be a single `TextAnchor.text_segments` element.  If the start and
+        /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1.Document.text].  There can only be a
+        /// single `TextAnchor.text_segments` element.  If the start and
         /// end index of the text segment are the same, the text change is inserted
         /// before that index.
         /// </summary>
