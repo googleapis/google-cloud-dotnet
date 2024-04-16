@@ -12029,7 +12029,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
   }
 
   /// <summary>
-  /// Response to request to list firewall policies belonging to a key.
+  /// Response to request to list firewall policies belonging to a project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFirewallPoliciesResponse : pb::IMessage<ListFirewallPoliciesResponse>
