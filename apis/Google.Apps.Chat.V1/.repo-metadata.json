@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Apps.Chat.V1",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Apps.Chat.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "chat"
+}
