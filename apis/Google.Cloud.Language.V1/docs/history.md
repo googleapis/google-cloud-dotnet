@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.6.0, released 2024-04-18
+
+No API surface changes; just promotion to GA.
+
 ## Version 3.6.0-alpha01, released 2024-03-20
 
 Experimental release targeting netstandard2.0 instead of netstandard2.1.
