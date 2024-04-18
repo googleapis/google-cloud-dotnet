@@ -251,11 +251,6 @@ namespace Google.Cloud.Spanner.Data
                         }
                         if (value is float || value is double || value is decimal)
                         {
-                            // TODO: Check with Jon if LossOfPrecisionHandling needs to be changed.
-                            // We throw if there's a loss of precision. We could use
-                            // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
-                            // use half-away-from-zero rounding but the SpannerNumeric implementation
-                            // truncates instead.
                             return Value.ForString(SpannerNumeric.FromDecimal(
                                 Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Truncate).ToString());
                         }

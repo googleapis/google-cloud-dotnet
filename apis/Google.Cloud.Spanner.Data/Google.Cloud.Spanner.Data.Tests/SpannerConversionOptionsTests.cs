@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             Assert.True(options.UseDBNull);
             Assert.Equal(SpannerDbType.Float32, options.SingleToConfiguredSpannerType);
-            Assert.Equal(SpannerDbType.Float64, options.DecimalToConfiguredSpannerType);
+            Assert.Equal(SpannerDbType.Numeric, options.DecimalToConfiguredSpannerType);
             Assert.Equal(SpannerDbType.Timestamp, options.DateTimeToConfiguredSpannerType);
             Assert.Equal(typeof(DateTime), options.DateToConfiguredClrType);
         }
