@@ -64,6 +64,7 @@ namespace Google.Apps.Chat.V1
             CompleteImportSpaceSettings = existing.CompleteImportSpaceSettings;
             FindDirectMessageSettings = existing.FindDirectMessageSettings;
             CreateMembershipSettings = existing.CreateMembershipSettings;
+            UpdateMembershipSettings = existing.UpdateMembershipSettings;
             DeleteMembershipSettings = existing.DeleteMembershipSettings;
             CreateReactionSettings = existing.CreateReactionSettings;
             ListReactionsSettings = existing.ListReactionsSettings;
@@ -396,6 +397,24 @@ namespace Google.Apps.Chat.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateMembershipSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.UpdateMembership</c> and <c>ChatServiceClient.UpdateMembershipAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMembershipSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4161,6 +4180,107 @@ namespace Google.Apps.Chat.V1
             CreateMembershipAsync(parent, membership, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Membership UpdateMembership(UpdateMembershipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> UpdateMembershipAsync(UpdateMembershipRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> UpdateMembershipAsync(UpdateMembershipRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMembershipAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="membership">
+        /// Required. The membership to update. Only fields specified by `update_mask`
+        /// are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Separate multiple values with commas
+        /// or use `*` to update all field paths.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `role`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Membership UpdateMembership(Membership membership, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembership(new UpdateMembershipRequest
+            {
+                Membership = gax::GaxPreconditions.CheckNotNull(membership, nameof(membership)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="membership">
+        /// Required. The membership to update. Only fields specified by `update_mask`
+        /// are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Separate multiple values with commas
+        /// or use `*` to update all field paths.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `role`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> UpdateMembershipAsync(Membership membership, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembershipAsync(new UpdateMembershipRequest
+            {
+                Membership = gax::GaxPreconditions.CheckNotNull(membership, nameof(membership)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="membership">
+        /// Required. The membership to update. Only fields specified by `update_mask`
+        /// are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Separate multiple values with commas
+        /// or use `*` to update all field paths.
+        /// 
+        /// Currently supported field paths:
+        /// 
+        /// - `role`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Membership> UpdateMembershipAsync(Membership membership, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMembershipAsync(membership, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a membership. For an example, see
         /// [Remove a user or a Google Chat app from a
         /// space](https://developers.google.com/workspace/chat/delete-members).
@@ -4924,6 +5044,8 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<CreateMembershipRequest, Membership> _callCreateMembership;
 
+        private readonly gaxgrpc::ApiCall<UpdateMembershipRequest, Membership> _callUpdateMembership;
+
         private readonly gaxgrpc::ApiCall<DeleteMembershipRequest, Membership> _callDeleteMembership;
 
         private readonly gaxgrpc::ApiCall<CreateReactionRequest, Reaction> _callCreateReaction;
@@ -5001,6 +5123,9 @@ namespace Google.Apps.Chat.V1
             _callCreateMembership = clientHelper.BuildApiCall<CreateMembershipRequest, Membership>("CreateMembership", grpcClient.CreateMembershipAsync, grpcClient.CreateMembership, effectiveSettings.CreateMembershipSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateMembership);
             Modify_CreateMembershipApiCall(ref _callCreateMembership);
+            _callUpdateMembership = clientHelper.BuildApiCall<UpdateMembershipRequest, Membership>("UpdateMembership", grpcClient.UpdateMembershipAsync, grpcClient.UpdateMembership, effectiveSettings.UpdateMembershipSettings).WithGoogleRequestParam("membership.name", request => request.Membership?.Name);
+            Modify_ApiCall(ref _callUpdateMembership);
+            Modify_UpdateMembershipApiCall(ref _callUpdateMembership);
             _callDeleteMembership = clientHelper.BuildApiCall<DeleteMembershipRequest, Membership>("DeleteMembership", grpcClient.DeleteMembershipAsync, grpcClient.DeleteMembership, effectiveSettings.DeleteMembershipSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteMembership);
             Modify_DeleteMembershipApiCall(ref _callDeleteMembership);
@@ -5054,6 +5179,8 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_CreateMembershipApiCall(ref gaxgrpc::ApiCall<CreateMembershipRequest, Membership> call);
 
+        partial void Modify_UpdateMembershipApiCall(ref gaxgrpc::ApiCall<UpdateMembershipRequest, Membership> call);
+
         partial void Modify_DeleteMembershipApiCall(ref gaxgrpc::ApiCall<DeleteMembershipRequest, Membership> call);
 
         partial void Modify_CreateReactionApiCall(ref gaxgrpc::ApiCall<CreateReactionRequest, Reaction> call);
@@ -5102,6 +5229,8 @@ namespace Google.Apps.Chat.V1
         partial void Modify_FindDirectMessageRequest(ref FindDirectMessageRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateMembershipRequest(ref CreateMembershipRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMembershipRequest(ref UpdateMembershipRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteMembershipRequest(ref DeleteMembershipRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6003,6 +6132,32 @@ namespace Google.Apps.Chat.V1
         {
             Modify_CreateMembershipRequest(ref request, ref callSettings);
             return _callCreateMembership.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Membership UpdateMembership(UpdateMembershipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMembershipRequest(ref request, ref callSettings);
+            return _callUpdateMembership.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a membership. Requires [user
+        /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Membership> UpdateMembershipAsync(UpdateMembershipRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMembershipRequest(ref request, ref callSettings);
+            return _callUpdateMembership.Async(request, callSettings);
         }
 
         /// <summary>

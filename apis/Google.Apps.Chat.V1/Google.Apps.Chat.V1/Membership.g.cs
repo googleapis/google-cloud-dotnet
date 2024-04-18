@@ -27,45 +27,49 @@ namespace Google.Apps.Chat.V1 {
             "Ch9nb29nbGUvY2hhdC92MS9tZW1iZXJzaGlwLnByb3RvEg5nb29nbGUuY2hh",
             "dC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
             "L2FwaS9yZXNvdXJjZS5wcm90bxoaZ29vZ2xlL2NoYXQvdjEvZ3JvdXAucHJv",
-            "dG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8ikAUKCk1lbWJlcnNoaXASMQoEbmFtZRgBIAEo",
-            "CUIj+kEgCh5jaGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASPgoFc3Rh",
-            "dGUYAiABKA4yKi5nb29nbGUuY2hhdC52MS5NZW1iZXJzaGlwLk1lbWJlcnNo",
-            "aXBTdGF0ZUID4EEDEjwKBHJvbGUYByABKA4yKS5nb29nbGUuY2hhdC52MS5N",
-            "ZW1iZXJzaGlwLk1lbWJlcnNoaXBSb2xlQgPgQQESJgoGbWVtYmVyGAMgASgL",
-            "MhQuZ29vZ2xlLmNoYXQudjEuVXNlckgAEi0KDGdyb3VwX21lbWJlchgFIAEo",
-            "CzIVLmdvb2dsZS5jaGF0LnYxLkdyb3VwSAASNwoLY3JlYXRlX3RpbWUYBCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgbgQQXgQQESNwoLZGVs",
-            "ZXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgbg",
-            "QQXgQQEiXgoPTWVtYmVyc2hpcFN0YXRlEiAKHE1FTUJFUlNISVBfU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIKCgZKT0lORUQQARILCgdJTlZJVEVEEAISEAoMTk9U",
-            "X0FfTUVNQkVSEAMiVAoOTWVtYmVyc2hpcFJvbGUSHwobTUVNQkVSU0hJUF9S",
-            "T0xFX1VOU1BFQ0lGSUVEEAASDwoLUk9MRV9NRU1CRVIQARIQCgxST0xFX01B",
-            "TkFHRVIQAjpE6kFBCh5jaGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXAS",
-            "H3NwYWNlcy97c3BhY2V9L21lbWJlcnMve21lbWJlcn1CDAoKbWVtYmVyVHlw",
-            "ZSKGAQoXQ3JlYXRlTWVtYmVyc2hpcFJlcXVlc3QSNgoGcGFyZW50GAEgASgJ",
-            "QibgQQL6QSASHmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIzCgpt",
-            "ZW1iZXJzaGlwGAIgASgLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcEID",
-            "4EECIssBChZMaXN0TWVtYmVyc2hpcHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEo",
-            "CUIm4EEC+kEgEh5jaGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASFgoJ",
-            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
-            "EhMKBmZpbHRlchgFIAEoCUID4EEBEhgKC3Nob3dfZ3JvdXBzGAYgASgIQgPg",
-            "QQESGQoMc2hvd19pbnZpdGVkGAcgASgIQgPgQQEiaAoXTGlzdE1lbWJlcnNo",
-            "aXBzUmVzcG9uc2USNAoLbWVtYmVyc2hpcHMYASADKAsyGi5nb29nbGUuY2hh",
-            "dC52MS5NZW1iZXJzaGlwQgPgQQYSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "IkwKFEdldE1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpB",
-            "IAoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwIk8KF0RlbGV0ZU1l",
-            "bWJlcnNoaXBSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2hhdC5n",
-            "b29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwQpoBChJjb20uZ29vZ2xlLmNoYXQu",
-            "djFCD01lbWJlcnNoaXBQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2No",
-            "YXQvYXBpdjEvY2hhdHBiO2NoYXRwYqoCE0dvb2dsZS5BcHBzLkNoYXQuVjHK",
-            "AhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpW",
-            "MWIGcHJvdG8z"));
+            "dG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8aIGdvb2dsZS9wcm90b2J1",
+            "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvIpAFCgpNZW1iZXJzaGlwEjEKBG5hbWUYASABKAlCI/pBIAoeY2hh",
+            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEj4KBXN0YXRlGAIgASgOMiou",
+            "Z29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcC5NZW1iZXJzaGlwU3RhdGVCA+BB",
+            "AxI8CgRyb2xlGAcgASgOMikuZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcC5N",
+            "ZW1iZXJzaGlwUm9sZUID4EEBEiYKBm1lbWJlchgDIAEoCzIULmdvb2dsZS5j",
+            "aGF0LnYxLlVzZXJIABItCgxncm91cF9tZW1iZXIYBSABKAsyFS5nb29nbGUu",
+            "Y2hhdC52MS5Hcm91cEgAEjcKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEIG4EEF4EEBEjcKC2RlbGV0ZV90aW1lGAgg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIG4EEF4EEBIl4KD01l",
+            "bWJlcnNoaXBTdGF0ZRIgChxNRU1CRVJTSElQX1NUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASCgoGSk9JTkVEEAESCwoHSU5WSVRFRBACEhAKDE5PVF9BX01FTUJFUhAD",
+            "IlQKDk1lbWJlcnNoaXBSb2xlEh8KG01FTUJFUlNISVBfUk9MRV9VTlNQRUNJ",
+            "RklFRBAAEg8KC1JPTEVfTUVNQkVSEAESEAoMUk9MRV9NQU5BR0VSEAI6ROpB",
+            "QQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFjZXMve3Nw",
+            "YWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUihgEKF0NyZWF0",
+            "ZU1lbWJlcnNoaXBSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgEh5j",
+            "aGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASMwoKbWVtYmVyc2hpcBgC",
+            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAiKEAQoXVXBk",
+            "YXRlTWVtYmVyc2hpcFJlcXVlc3QSMwoKbWVtYmVyc2hpcBgBIAEoCzIaLmdv",
+            "b2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhI0Cgt1cGRhdGVfbWFzaxgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLLAQoWTGlz",
+            "dE1lbWJlcnNoaXBzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIe",
+            "Y2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEhYKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
+            "BSABKAlCA+BBARIYCgtzaG93X2dyb3VwcxgGIAEoCEID4EEBEhkKDHNob3df",
+            "aW52aXRlZBgHIAEoCEID4EEBImgKF0xpc3RNZW1iZXJzaGlwc1Jlc3BvbnNl",
+            "EjQKC21lbWJlcnNoaXBzGAEgAygLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVy",
+            "c2hpcEID4EEGEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJMChRHZXRNZW1i",
+            "ZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29v",
+            "Z2xlYXBpcy5jb20vTWVtYmVyc2hpcCJPChdEZWxldGVNZW1iZXJzaGlwUmVx",
+            "dWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5j",
+            "b20vTWVtYmVyc2hpcEKaAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9NZW1iZXJz",
+            "aGlwUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2No",
+            "YXRwYjtjaGF0cGKqAhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFw",
+            "cHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Membership), global::Google.Apps.Chat.V1.Membership.Parser, new[]{ "Name", "State", "Role", "Member", "GroupMember", "CreateTime", "DeleteTime" }, new[]{ "MemberType" }, new[]{ typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipState), typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipRole) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMembershipRequest), global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser, new[]{ "Parent", "Membership" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UpdateMembershipRequest), global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser, new[]{ "Membership", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsRequest), global::Google.Apps.Chat.V1.ListMembershipsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "ShowGroups", "ShowInvited" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsResponse), global::Google.Apps.Chat.V1.ListMembershipsResponse.Parser, new[]{ "Memberships", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.GetMembershipRequest), global::Google.Apps.Chat.V1.GetMembershipRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -177,7 +181,6 @@ namespace Google.Apps.Chat.V1 {
     /// Optional. User's role within a Chat space, which determines their permitted
     /// actions in the space.
     ///
-    /// [Developer Preview](https://developers.google.com/workspace/preview):
     /// This field can only be used as input in `UpdateMembership`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -930,6 +933,266 @@ namespace Google.Apps.Chat.V1 {
   }
 
   /// <summary>
+  /// Request message for updating a membership.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateMembershipRequest : pb::IMessage<UpdateMembershipRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateMembershipRequest> _parser = new pb::MessageParser<UpdateMembershipRequest>(() => new UpdateMembershipRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateMembershipRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateMembershipRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateMembershipRequest(UpdateMembershipRequest other) : this() {
+      membership_ = other.membership_ != null ? other.membership_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateMembershipRequest Clone() {
+      return new UpdateMembershipRequest(this);
+    }
+
+    /// <summary>Field number for the "membership" field.</summary>
+    public const int MembershipFieldNumber = 1;
+    private global::Google.Apps.Chat.V1.Membership membership_;
+    /// <summary>
+    /// Required. The membership to update. Only fields specified by `update_mask`
+    /// are updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.Membership Membership {
+      get { return membership_; }
+      set {
+        membership_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. The field paths to update. Separate multiple values with commas
+    /// or use `*` to update all field paths.
+    ///
+    /// Currently supported field paths:
+    ///
+    /// - `role`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateMembershipRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateMembershipRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Membership, other.Membership)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (membership_ != null) hash ^= Membership.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (membership_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Membership);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (membership_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Membership);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (membership_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Membership);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateMembershipRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.membership_ != null) {
+        if (membership_ == null) {
+          Membership = new global::Google.Apps.Chat.V1.Membership();
+        }
+        Membership.MergeFrom(other.Membership);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (membership_ == null) {
+              Membership = new global::Google.Apps.Chat.V1.Membership();
+            }
+            input.ReadMessage(Membership);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (membership_ == null) {
+              Membership = new global::Google.Apps.Chat.V1.Membership();
+            }
+            input.ReadMessage(Membership);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for listing memberships.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -947,7 +1210,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1401,7 +1664,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1627,7 +1890,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1834,7 +2097,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Apps.Chat.V1.MembershipReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
