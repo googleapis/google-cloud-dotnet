@@ -288,6 +288,45 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         internal void UnregisterBucket(string bucket) => _bucketsToDelete.Remove(bucket);
 
+        internal Task EventuallyAsync(TimeSpan delayUntilGuaranteedConsistency, Action action) =>
+            EventuallyAsync(delayUntilGuaranteedConsistency, () =>
+            {
+                action();
+                return Task.CompletedTask;
+            });
+
+        internal async Task EventuallyAsync(TimeSpan delayUntilGuaranteedConsistency, Func<Task> action)
+        {
+            // We don't want to continue retrying past this point in time
+            // as that's meant to be the time for the change to be eventually consistent.
+            DateTimeOffset shouldSucceedAfter = DateTimeOffset.UtcNow + delayUntilGuaranteedConsistency;
+
+            // Initial backoff is 10% of the guaranteed success delay.
+            // Max backoff is 60% of the guaranteed success delay.
+            int backoffMs = (int) delayUntilGuaranteedConsistency.TotalMilliseconds / 10;
+            int maxBackoffMs = 6 * backoffMs;
+
+            bool retry;
+            do
+            {
+                // We continue to retry until we are certain we have retried at least once past the
+                // guaranteed success delay.
+                retry = DateTimeOffset.UtcNow <= shouldSucceedAfter;
+                try
+                {
+                    await action();
+                    // The operation was successful we don't need to retry further.
+                    retry = false;
+                }
+                catch (Exception) when (retry)
+                {
+                    await Task.Delay(backoffMs);
+                    backoffMs = Math.Max(2 * backoffMs, maxBackoffMs);
+                }
+
+            } while (retry);
+        }
+
         internal async Task FinishDelayTest(string testName)
         {
             DelayTestInfo currentTestInfo;
