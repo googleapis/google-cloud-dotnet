@@ -4167,6 +4167,206 @@
       ]
     },
     {
+      "regionTag": "chat_v1_generated_ChatService_UpdateMembership_sync",
+      "title": "UpdateMembershipRequestObject",
+      "description": "Snippet for UpdateMembership",
+      "file": "ChatServiceClient.UpdateMembershipRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembership",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Membership",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.chat.v1.ChatService.UpdateMembership",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateMembership_async",
+      "title": "UpdateMembershipRequestObjectAsync",
+      "description": "Snippet for UpdateMembershipAsync",
+      "file": "ChatServiceClient.UpdateMembershipRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembershipAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateMembershipRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Membership>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.chat.v1.ChatService.UpdateMembership",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateMembership_sync_flattened",
+      "title": "UpdateMembership",
+      "description": "Snippet for UpdateMembership",
+      "file": "ChatServiceClient.UpdateMembershipSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembership",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateMembership",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Membership",
+            "name": "membership"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Membership",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.chat.v1.ChatService.UpdateMembership",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateMembership_async_flattened",
+      "title": "UpdateMembershipAsync",
+      "description": "Snippet for UpdateMembershipAsync",
+      "file": "ChatServiceClient.UpdateMembershipAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMembershipAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateMembershipAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Membership",
+            "name": "membership"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Membership>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMembership",
+          "fullName": "google.chat.v1.ChatService.UpdateMembership",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chat_v1_generated_ChatService_DeleteMembership_sync",
       "title": "DeleteMembershipRequestObject",
       "description": "Snippet for DeleteMembership",

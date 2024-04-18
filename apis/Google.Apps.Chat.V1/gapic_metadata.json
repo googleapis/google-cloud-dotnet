@@ -124,6 +124,12 @@
                 "SetUpSpaceAsync"
               ]
             },
+            "UpdateMembership": {
+              "methods": [
+                "UpdateMembership",
+                "UpdateMembershipAsync"
+              ]
+            },
             "UpdateMessage": {
               "methods": [
                 "UpdateMessage",

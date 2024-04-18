@@ -1810,6 +1810,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateMembership</summary>
+        public void UpdateMembershipRequestObject()
+        {
+            // Snippet: UpdateMembership(UpdateMembershipRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateMembershipRequest request = new UpdateMembershipRequest
+            {
+                Membership = new Membership(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Membership response = chatServiceClient.UpdateMembership(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembershipAsync</summary>
+        public async Task UpdateMembershipRequestObjectAsync()
+        {
+            // Snippet: UpdateMembershipAsync(UpdateMembershipRequest, CallSettings)
+            // Additional: UpdateMembershipAsync(UpdateMembershipRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMembershipRequest request = new UpdateMembershipRequest
+            {
+                Membership = new Membership(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Membership response = await chatServiceClient.UpdateMembershipAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembership</summary>
+        public void UpdateMembership()
+        {
+            // Snippet: UpdateMembership(Membership, FieldMask, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            Membership membership = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Membership response = chatServiceClient.UpdateMembership(membership, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembershipAsync</summary>
+        public async Task UpdateMembershipAsync()
+        {
+            // Snippet: UpdateMembershipAsync(Membership, FieldMask, CallSettings)
+            // Additional: UpdateMembershipAsync(Membership, FieldMask, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Membership membership = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Membership response = await chatServiceClient.UpdateMembershipAsync(membership, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteMembership</summary>
         public void DeleteMembershipRequestObject()
         {

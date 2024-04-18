@@ -121,6 +121,8 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.CreateMembershipRequest> __Marshaller_google_chat_v1_CreateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.UpdateMembershipRequest> __Marshaller_google_chat_v1_UpdateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.DeleteMembershipRequest> __Marshaller_google_chat_v1_DeleteMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.DeleteMembershipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.CreateReactionRequest> __Marshaller_google_chat_v1_CreateReactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.CreateReactionRequest.Parser));
@@ -275,6 +277,14 @@ namespace Google.Apps.Chat.V1 {
         __ServiceName,
         "CreateMembership",
         __Marshaller_google_chat_v1_CreateMembershipRequest,
+        __Marshaller_google_chat_v1_Membership);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.UpdateMembershipRequest, global::Google.Apps.Chat.V1.Membership> __Method_UpdateMembership = new grpc::Method<global::Google.Apps.Chat.V1.UpdateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMembership",
+        __Marshaller_google_chat_v1_UpdateMembershipRequest,
         __Marshaller_google_chat_v1_Membership);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -762,6 +772,19 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Membership> CreateMembership(global::Google.Apps.Chat.V1.CreateMembershipRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a membership. Requires [user
+      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Membership> UpdateMembership(global::Google.Apps.Chat.V1.UpdateMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2651,6 +2674,58 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMembership, null, options, request);
       }
       /// <summary>
+      /// Updates a membership. Requires [user
+      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Membership UpdateMembership(global::Google.Apps.Chat.V1.UpdateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a membership. Requires [user
+      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Membership UpdateMembership(global::Google.Apps.Chat.V1.UpdateMembershipRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMembership, null, options, request);
+      }
+      /// <summary>
+      /// Updates a membership. Requires [user
+      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Membership> UpdateMembershipAsync(global::Google.Apps.Chat.V1.UpdateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a membership. Requires [user
+      /// authentication](https://developers.google.com/chat/api/guides/auth/users).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Membership> UpdateMembershipAsync(global::Google.Apps.Chat.V1.UpdateMembershipRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMembership, null, options, request);
+      }
+      /// <summary>
       /// Deletes a membership. For an example, see
       /// [Remove a user or a Google Chat app from a
       /// space](https://developers.google.com/workspace/chat/delete-members).
@@ -2950,6 +3025,7 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_CompleteImportSpace, serviceImpl.CompleteImportSpace)
           .AddMethod(__Method_FindDirectMessage, serviceImpl.FindDirectMessage)
           .AddMethod(__Method_CreateMembership, serviceImpl.CreateMembership)
+          .AddMethod(__Method_UpdateMembership, serviceImpl.UpdateMembership)
           .AddMethod(__Method_DeleteMembership, serviceImpl.DeleteMembership)
           .AddMethod(__Method_CreateReaction, serviceImpl.CreateReaction)
           .AddMethod(__Method_ListReactions, serviceImpl.ListReactions)
@@ -2981,6 +3057,7 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_CompleteImportSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CompleteImportSpaceRequest, global::Google.Apps.Chat.V1.CompleteImportSpaceResponse>(serviceImpl.CompleteImportSpace));
       serviceBinder.AddMethod(__Method_FindDirectMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.FindDirectMessageRequest, global::Google.Apps.Chat.V1.Space>(serviceImpl.FindDirectMessage));
       serviceBinder.AddMethod(__Method_CreateMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.CreateMembership));
+      serviceBinder.AddMethod(__Method_UpdateMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.UpdateMembership));
       serviceBinder.AddMethod(__Method_DeleteMembership, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteMembershipRequest, global::Google.Apps.Chat.V1.Membership>(serviceImpl.DeleteMembership));
       serviceBinder.AddMethod(__Method_CreateReaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateReactionRequest, global::Google.Apps.Chat.V1.Reaction>(serviceImpl.CreateReaction));
       serviceBinder.AddMethod(__Method_ListReactions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListReactionsRequest, global::Google.Apps.Chat.V1.ListReactionsResponse>(serviceImpl.ListReactions));
