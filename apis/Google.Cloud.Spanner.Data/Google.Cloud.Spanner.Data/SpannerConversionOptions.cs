@@ -139,7 +139,7 @@ namespace Google.Cloud.Spanner.Data
         internal void SetClrToSpannerTypeDefaults()
         {
             SingleToConfiguredSpannerType = SpannerDbType.Float32;
-            DecimalToConfiguredSpannerType = SpannerDbType.Float64;
+            DecimalToConfiguredSpannerType = SpannerDbType.Numeric;
             DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
         }
 

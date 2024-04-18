@@ -1368,7 +1368,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // Format : ClrToSpannerTypeDefaultMappings value, Parameter value, expected SpannerDbType.
             // Decimal mappings.
-            yield return new object[] { default, 3.14m, SpannerDbType.Float64 };
+            yield return new object[] { default, 3.14m, SpannerDbType.Numeric };
             yield return new object[] { DecimalToFloat64, 3.14m, SpannerDbType.Float64 };
             yield return new object[] { DecimalToNumeric, 3.14m, SpannerDbType.Numeric };
             yield return new object[] { DecimalToPgNumeric, 3.14m, SpannerDbType.PgNumeric };

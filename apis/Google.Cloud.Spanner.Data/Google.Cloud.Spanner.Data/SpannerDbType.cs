@@ -352,7 +352,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Float32;
             }
-            if (type == typeof(double) || type == typeof(decimal))
+            if (type == typeof(double))
             {
                 return Float64;
             }
@@ -361,7 +361,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return Int64;
             }
-            if (type == typeof(SpannerNumeric))
+            if (type == typeof(SpannerNumeric) || type == typeof(decimal))
             {
                 return Numeric;
             }

@@ -132,17 +132,17 @@ namespace Google.Cloud.Spanner.Data.Tests
             var key = new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k1", Value = 3.14m },
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
 
-            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } },
+            Assert.Equal(new ListValue { Values = { Value.ForString("3.14"), Value.ForString("2022-06-08T00:00:00Z") } },
                 key.ToProtobuf(builder.ConversionOptions));
 
             // Specify the type mappings.
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal(new ListValue { Values = { Value.ForString("3.14"), Value.ForString("2022-06-08") } },
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08") } },
                 key.ToProtobuf(builder.ConversionOptions));
 
             // Revert the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal(new ListValue { Values = { Value.ForNumber(3.14), Value.ForString("2022-06-08T00:00:00Z") } },
+            Assert.Equal(new ListValue { Values = { Value.ForString("3.14"), Value.ForString("2022-06-08T00:00:00Z") } },
                 key.ToProtobuf(builder.ConversionOptions));
         }
 
@@ -152,15 +152,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var builder = new SpannerConnectionStringBuilder();
             var key = new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k1", Value = 3.14m },
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
-            Assert.Equal("[ 3.14, \"2022-06-08T00:00:00Z\" ]", key.ToString(builder));
+            Assert.Equal("[ \"3.14\", \"2022-06-08T00:00:00Z\" ]", key.ToString(builder));
 
             // Specify the type mappings.
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal("[ \"3.14\", \"2022-06-08\" ]", key.ToString(builder));
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            Assert.Equal("[ 3.14, \"2022-06-08\" ]", key.ToString(builder));
 
             // Revert the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal("[ 3.14, \"2022-06-08T00:00:00Z\" ]", key.ToString(builder));
+            Assert.Equal("[ \"3.14\", \"2022-06-08T00:00:00Z\" ]", key.ToString(builder));
         }
     }
 
@@ -264,8 +264,8 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             Assert.Equal(new V1.KeyRange
             {
-                StartClosed = new ListValue { Values = { new[] { new Value { NumberValue = 3.14 } } } },
-                EndOpen = new ListValue { Values = { new[] { new Value { NumberValue = 1.71 } } } },
+                StartClosed = new ListValue { Values = { new[] { new Value { StringValue = "3.14" } } } },
+                EndOpen = new ListValue { Values = { new[] { new Value { StringValue = "1.71" } } } },
             }, range1.ToProtobuf(builder.ConversionOptions));
 
             Assert.Equal(new V1.KeyRange
@@ -275,11 +275,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             }, range2.ToProtobuf(builder.ConversionOptions));
 
             // Specifying the type mappings.
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
             Assert.Equal(new V1.KeyRange
             {
-                StartClosed = new ListValue { Values = { new[] { new Value { StringValue = "3.14" } } } },
-                EndOpen = new ListValue { Values = { new[] { new Value { StringValue = "1.71" } } } },
+                StartClosed = new ListValue { Values = { new[] { new Value { NumberValue = 3.14 } } } },
+                EndOpen = new ListValue { Values = { new[] { new Value { NumberValue = 1.71 } } } },
             }, range1.ToProtobuf(builder.ConversionOptions));
 
             Assert.Equal(new V1.KeyRange
@@ -292,8 +292,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             builder.ClrToSpannerTypeDefaultMappings = "";
             Assert.Equal(new V1.KeyRange
             {
-                StartClosed = new ListValue { Values = { new[] { new Value { NumberValue = 3.14 } } } },
-                EndOpen = new ListValue { Values = { new[] { new Value { NumberValue = 1.71 } } } },
+                StartClosed = new ListValue { Values = { new[] { new Value { StringValue = "3.14" } } } },
+                EndOpen = new ListValue { Values = { new[] { new Value { StringValue = "1.71" } } } },
             }, range1.ToProtobuf(builder.ConversionOptions));
 
             Assert.Equal(new V1.KeyRange
@@ -312,17 +312,17 @@ namespace Google.Cloud.Spanner.Data.Tests
             var range2 = KeyRange.ClosedClosed(new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k3", Value = new DateTime(2022, 06, 08) } }),
               new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k4", Value = new DateTime(2024, 06, 08) } }));
 
-            Assert.Equal("[[ 3.14 ], [ 1.71 ])", range1.ToString(builder));
+            Assert.Equal("[[ \"3.14\" ], [ \"1.71\" ])", range1.ToString(builder));
             Assert.Equal("[[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]", range2.ToString(builder));
 
-            // Specify the type mappings.(Numeric for decimal, Date for DateTime)
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal("[[ \"3.14\" ], [ \"1.71\" ])", range1.ToString(builder));
+            // Specify the type mappings. (double for decimal, Date for DateTime)
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            Assert.Equal("[[ 3.14 ], [ 1.71 ])", range1.ToString(builder));
             Assert.Equal("[[ \"2022-06-08\" ], [ \"2024-06-08\" ]]", range2.ToString(builder));
 
-            // Revert to default. (double for decimal, Timestamp for DateTime)
+            // Revert to default. (Numeric for decimal, Timestamp for DateTime)
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal("[[ 3.14 ], [ 1.71 ])", range1.ToString(builder));
+            Assert.Equal("[[ \"3.14\" ], [ \"1.71\" ])", range1.ToString(builder));
             Assert.Equal("[[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]", range2.ToString(builder));
         }
     }
@@ -358,19 +358,19 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
 
             var protobufValues = keySet.ToProtobuf(builder.ConversionOptions);
-            Assert.Equal(3.14d, protobufValues.Keys[0].Values[0].NumberValue); // default to double.
+            Assert.Equal("3.14", protobufValues.Keys[0].Values[0].StringValue); // default to Numeric.
             Assert.Equal("2022-06-08T00:00:00Z", protobufValues.Keys[0].Values[1].StringValue); // default to Timestamp.
 
             // Specifying the type mappings.
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
             protobufValues = keySet.ToProtobuf(builder.ConversionOptions);
-            Assert.Equal("3.14", protobufValues.Keys[0].Values[0].StringValue); // Numeric string.
+            Assert.Equal(3.14d, protobufValues.Keys[0].Values[0].NumberValue); // double value.
             Assert.Equal("2022-06-08", protobufValues.Keys[0].Values[1].StringValue); // Date string.
 
             // Revert the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "";
             protobufValues = keySet.ToProtobuf(builder.ConversionOptions);
-            Assert.Equal(3.14d, protobufValues.Keys[0].Values[0].NumberValue); // default to double.
+            Assert.Equal("3.14", protobufValues.Keys[0].Values[0].StringValue); // default to Numeric.
             Assert.Equal("2022-06-08T00:00:00Z", protobufValues.Keys[0].Values[1].StringValue); // default to Timestamp.
         }
 
@@ -394,17 +394,17 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } });
 
             Assert.Collection(keySet.Keys,
-                key1 => Assert.Equal("[ 3.14, \"2022-06-08T00:00:00Z\" ]", key1.ToString(builder)));
+                key1 => Assert.Equal("[ \"3.14\", \"2022-06-08T00:00:00Z\" ]", key1.ToString(builder)));
 
             // Specify the type mappings.
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
             Assert.Collection(keySet.Keys,
-               key1 => Assert.Equal("[ \"3.14\", \"2022-06-08\" ]", key1.ToString(builder)));
+               key1 => Assert.Equal("[ 3.14, \"2022-06-08\" ]", key1.ToString(builder)));
 
             // Revert the type mappings.
             builder.ClrToSpannerTypeDefaultMappings = "";
             Assert.Collection(keySet.Keys,
-               key1 => Assert.Equal("[ 3.14, \"2022-06-08T00:00:00Z\" ]", key1.ToString(builder)));
+               key1 => Assert.Equal("[ \"3.14\", \"2022-06-08T00:00:00Z\" ]", key1.ToString(builder)));
         }
 
         [Fact]
@@ -427,15 +427,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             var keys = KeySet.FromKeys(new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k1", Value = 3.14m } }),
                 new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k2", Value = new DateTime(2022, 06, 08) } }));
 
-            Assert.Equal("KeySet {Keys = [[ 3.14 ], [ \"2022-06-08T00:00:00Z\" ]]}", keys.ToString(builder));
+            Assert.Equal("KeySet {Keys = [[ \"3.14\" ], [ \"2022-06-08T00:00:00Z\" ]]}", keys.ToString(builder));
 
-            // Specify the type mappings.(Numeric for decimal, Date for DateTime)
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal("KeySet {Keys = [[ \"3.14\" ], [ \"2022-06-08\" ]]}", keys.ToString(builder));
+            // Specify the type mappings. (double for decimal, Date for DateTime)
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            Assert.Equal("KeySet {Keys = [[ 3.14 ], [ \"2022-06-08\" ]]}", keys.ToString(builder));
 
-            // Revert to default. (double for decimal, Timestamp for DateTime)
+            // Revert to default. (Numeric for decimal, Timestamp for DateTime)
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal("KeySet {Keys = [[ 3.14 ], [ \"2022-06-08T00:00:00Z\" ]]}", keys.ToString(builder));
+            Assert.Equal("KeySet {Keys = [[ \"3.14\" ], [ \"2022-06-08T00:00:00Z\" ]]}", keys.ToString(builder));
         }
 
         [Fact]
@@ -456,15 +456,15 @@ namespace Google.Cloud.Spanner.Data.Tests
                  KeyRange.ClosedClosed(new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k3", Value = new DateTime(2022, 06, 08) } }),
                  new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k4", Value = new DateTime(2024, 06, 08) } })));
 
-            Assert.Equal("KeySet {Ranges = [[[ 3.14 ], [ 1.71 ]), [[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]]}", ranges.ToString(builder));
+            Assert.Equal("KeySet {Ranges = [[[ \"3.14\" ], [ \"1.71\" ]), [[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]]}", ranges.ToString(builder));
 
-            // Specify the type mappings.(Numeric for decimal, Date for DateTime)
-            builder.ClrToSpannerTypeDefaultMappings = "DecimalToNumeric,DateTimeToDate";
-            Assert.Equal("KeySet {Ranges = [[[ \"3.14\" ], [ \"1.71\" ]), [[ \"2022-06-08\" ], [ \"2024-06-08\" ]]]}", ranges.ToString(builder));
+            // Specify the type mappings. (double for decimal, Date for DateTime)
+            builder.ClrToSpannerTypeDefaultMappings = "DecimalToFloat64,DateTimeToDate";
+            Assert.Equal("KeySet {Ranges = [[[ 3.14 ], [ 1.71 ]), [[ \"2022-06-08\" ], [ \"2024-06-08\" ]]]}", ranges.ToString(builder));
 
-            // Revert to default. (double for decimal, Timestamp for DateTime)
+            // Revert to default. (Numeric for decimal, Timestamp for DateTime)
             builder.ClrToSpannerTypeDefaultMappings = "";
-            Assert.Equal("KeySet {Ranges = [[[ 3.14 ], [ 1.71 ]), [[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]]}", ranges.ToString(builder));
+            Assert.Equal("KeySet {Ranges = [[[ \"3.14\" ], [ \"1.71\" ]), [[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]]}", ranges.ToString(builder));
         }
     }
 }

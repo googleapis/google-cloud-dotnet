@@ -70,7 +70,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { 2.718f, SpannerDbType.Float32, DbType.Single, typeof(float) };
 
             yield return new object[] { 3.14d, SpannerDbType.Float64, DbType.Double, typeof(double) };
-            yield return new object[] { 3.14m, SpannerDbType.Float64, DbType.Double, typeof(double) };
+
+            yield return new object[] { 3.14m, SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
 
             yield return new object[] { (short)1, SpannerDbType.Int64, DbType.Int64, typeof(long) };
             yield return new object[] { (ushort)1, SpannerDbType.Int64, DbType.Int64, typeof(long) };
@@ -208,7 +209,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { new SpannerParameter { Value = 2.718f },
                 GetSpannerConversionOptions(SingleToFloat64), SpannerDbType.Float64 };
             yield return new object[] { new SpannerParameter { Value = 3.14M },
-               GetSpannerConversionOptions(default), SpannerDbType.Float64 };
+               GetSpannerConversionOptions(default), SpannerDbType.Numeric };
             yield return new object[] { new SpannerParameter { Value = 3.14M },
                 GetSpannerConversionOptions(DecimalToFloat64), SpannerDbType.Float64 };
             yield return new object[] { new SpannerParameter { Value = 3.14M },
