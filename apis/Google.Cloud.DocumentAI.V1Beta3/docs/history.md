@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta18, released 2024-04-19
+
+### New features
+
+- Support a new Layout Processor in Document AI ([commit 8912d83](https://github.com/googleapis/google-cloud-dotnet/commit/8912d830ea5827eac95969da3db8642505fd6253))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 8912d83](https://github.com/googleapis/google-cloud-dotnet/commit/8912d830ea5827eac95969da3db8642505fd6253))
+
 ## Version 2.0.0-beta17, released 2024-03-26
 
 ### New features
