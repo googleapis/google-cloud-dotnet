@@ -1,5 +1,18 @@
 # Version history
 
+## Version 5.0.0-beta03, released 2024-04-19
+
+### New features
+
+- Add support for FLOAT32 ([commit 83700dd](https://github.com/googleapis/google-cloud-dotnet/commit/83700dd7c2b05bb3b598ecb7fe43de255cd5fdc8))
+
+### Breaking changes
+
+- The default mapping for values of CLR type decimal was FLOAT64 and it is now Numeric. ([commit 9824a9c](https://github.com/googleapis/google-cloud-dotnet/commit/9824a9c3580e79e95a7bed5af12bcdb15ffbe4cc))
+- The default mapping for values of CLR type float was FLOAT64 and it is now FLOAT32. ([commit 83700dd](https://github.com/googleapis/google-cloud-dotnet/commit/83700dd7c2b05bb3b598ecb7fe43de255cd5fdc8))
+- Support for specifying a maximum commit delay was added in v5.0.0-beta02. Unfortunately properties and methods for this feature were erroneously named using "commit delay" instead of "max commit delay". All such names are being corrected in this commit. ([commit 03e66d7](https://github.com/googleapis/google-cloud-dotnet/commit/03e66d73b165fe10f945924f5e70498d378042d2))
+- Remove Obsolete code that had been introduced before v5.0.0-beta01. ([commit fdc4bff](https://github.com/googleapis/google-cloud-dotnet/commit/fdc4bff6a932d39e8d6c51f9efad040e427face8))
+
 ## Version 5.0.0-beta02, released 2024-04-04
 
 ### New features
