@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.20.0, released 2024-04-19
+
+### New features
+
+- Add cloud_armor field to finding's list of attributes ([commit c21e410](https://github.com/googleapis/google-cloud-dotnet/commit/c21e4103c713f0d46c9d730b979f240f7eb4cfaf))
+
 ## Version 3.19.0, released 2024-03-28
 
 ### New features
