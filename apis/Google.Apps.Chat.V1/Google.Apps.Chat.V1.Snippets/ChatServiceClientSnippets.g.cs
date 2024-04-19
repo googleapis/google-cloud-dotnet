@@ -2418,5 +2418,243 @@ namespace GoogleCSharpSnippets
             await chatServiceClient.DeleteReactionAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for GetSpaceReadState</summary>
+        public void GetSpaceReadStateRequestObject()
+        {
+            // Snippet: GetSpaceReadState(GetSpaceReadStateRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetSpaceReadStateRequest request = new GetSpaceReadStateRequest
+            {
+                SpaceReadStateName = SpaceReadStateName.FromUserSpace("[USER]", "[SPACE]"),
+            };
+            // Make the request
+            SpaceReadState response = chatServiceClient.GetSpaceReadState(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceReadStateAsync</summary>
+        public async Task GetSpaceReadStateRequestObjectAsync()
+        {
+            // Snippet: GetSpaceReadStateAsync(GetSpaceReadStateRequest, CallSettings)
+            // Additional: GetSpaceReadStateAsync(GetSpaceReadStateRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSpaceReadStateRequest request = new GetSpaceReadStateRequest
+            {
+                SpaceReadStateName = SpaceReadStateName.FromUserSpace("[USER]", "[SPACE]"),
+            };
+            // Make the request
+            SpaceReadState response = await chatServiceClient.GetSpaceReadStateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceReadState</summary>
+        public void GetSpaceReadState()
+        {
+            // Snippet: GetSpaceReadState(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/spaceReadState";
+            // Make the request
+            SpaceReadState response = chatServiceClient.GetSpaceReadState(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceReadStateAsync</summary>
+        public async Task GetSpaceReadStateAsync()
+        {
+            // Snippet: GetSpaceReadStateAsync(string, CallSettings)
+            // Additional: GetSpaceReadStateAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/spaceReadState";
+            // Make the request
+            SpaceReadState response = await chatServiceClient.GetSpaceReadStateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceReadState</summary>
+        public void GetSpaceReadStateResourceNames()
+        {
+            // Snippet: GetSpaceReadState(SpaceReadStateName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceReadStateName name = SpaceReadStateName.FromUserSpace("[USER]", "[SPACE]");
+            // Make the request
+            SpaceReadState response = chatServiceClient.GetSpaceReadState(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceReadStateAsync</summary>
+        public async Task GetSpaceReadStateResourceNamesAsync()
+        {
+            // Snippet: GetSpaceReadStateAsync(SpaceReadStateName, CallSettings)
+            // Additional: GetSpaceReadStateAsync(SpaceReadStateName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceReadStateName name = SpaceReadStateName.FromUserSpace("[USER]", "[SPACE]");
+            // Make the request
+            SpaceReadState response = await chatServiceClient.GetSpaceReadStateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceReadState</summary>
+        public void UpdateSpaceReadStateRequestObject()
+        {
+            // Snippet: UpdateSpaceReadState(UpdateSpaceReadStateRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSpaceReadStateRequest request = new UpdateSpaceReadStateRequest
+            {
+                SpaceReadState = new SpaceReadState(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SpaceReadState response = chatServiceClient.UpdateSpaceReadState(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceReadStateAsync</summary>
+        public async Task UpdateSpaceReadStateRequestObjectAsync()
+        {
+            // Snippet: UpdateSpaceReadStateAsync(UpdateSpaceReadStateRequest, CallSettings)
+            // Additional: UpdateSpaceReadStateAsync(UpdateSpaceReadStateRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSpaceReadStateRequest request = new UpdateSpaceReadStateRequest
+            {
+                SpaceReadState = new SpaceReadState(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SpaceReadState response = await chatServiceClient.UpdateSpaceReadStateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceReadState</summary>
+        public void UpdateSpaceReadState()
+        {
+            // Snippet: UpdateSpaceReadState(SpaceReadState, FieldMask, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceReadState spaceReadState = new SpaceReadState();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SpaceReadState response = chatServiceClient.UpdateSpaceReadState(spaceReadState, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceReadStateAsync</summary>
+        public async Task UpdateSpaceReadStateAsync()
+        {
+            // Snippet: UpdateSpaceReadStateAsync(SpaceReadState, FieldMask, CallSettings)
+            // Additional: UpdateSpaceReadStateAsync(SpaceReadState, FieldMask, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceReadState spaceReadState = new SpaceReadState();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SpaceReadState response = await chatServiceClient.UpdateSpaceReadStateAsync(spaceReadState, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadState</summary>
+        public void GetThreadReadStateRequestObject()
+        {
+            // Snippet: GetThreadReadState(GetThreadReadStateRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetThreadReadStateRequest request = new GetThreadReadStateRequest
+            {
+                ThreadReadStateName = ThreadReadStateName.FromUserSpaceThread("[USER]", "[SPACE]", "[THREAD]"),
+            };
+            // Make the request
+            ThreadReadState response = chatServiceClient.GetThreadReadState(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadStateAsync</summary>
+        public async Task GetThreadReadStateRequestObjectAsync()
+        {
+            // Snippet: GetThreadReadStateAsync(GetThreadReadStateRequest, CallSettings)
+            // Additional: GetThreadReadStateAsync(GetThreadReadStateRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetThreadReadStateRequest request = new GetThreadReadStateRequest
+            {
+                ThreadReadStateName = ThreadReadStateName.FromUserSpaceThread("[USER]", "[SPACE]", "[THREAD]"),
+            };
+            // Make the request
+            ThreadReadState response = await chatServiceClient.GetThreadReadStateAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadState</summary>
+        public void GetThreadReadState()
+        {
+            // Snippet: GetThreadReadState(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/threads/[THREAD]/threadReadState";
+            // Make the request
+            ThreadReadState response = chatServiceClient.GetThreadReadState(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadStateAsync</summary>
+        public async Task GetThreadReadStateAsync()
+        {
+            // Snippet: GetThreadReadStateAsync(string, CallSettings)
+            // Additional: GetThreadReadStateAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/threads/[THREAD]/threadReadState";
+            // Make the request
+            ThreadReadState response = await chatServiceClient.GetThreadReadStateAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadState</summary>
+        public void GetThreadReadStateResourceNames()
+        {
+            // Snippet: GetThreadReadState(ThreadReadStateName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            ThreadReadStateName name = ThreadReadStateName.FromUserSpaceThread("[USER]", "[SPACE]", "[THREAD]");
+            // Make the request
+            ThreadReadState response = chatServiceClient.GetThreadReadState(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetThreadReadStateAsync</summary>
+        public async Task GetThreadReadStateResourceNamesAsync()
+        {
+            // Snippet: GetThreadReadStateAsync(ThreadReadStateName, CallSettings)
+            // Additional: GetThreadReadStateAsync(ThreadReadStateName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ThreadReadStateName name = ThreadReadStateName.FromUserSpaceThread("[USER]", "[SPACE]", "[THREAD]");
+            // Make the request
+            ThreadReadState response = await chatServiceClient.GetThreadReadStateAsync(name);
+            // End snippet
+        }
     }
 }

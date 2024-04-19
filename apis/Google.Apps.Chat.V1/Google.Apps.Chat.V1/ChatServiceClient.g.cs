@@ -69,6 +69,9 @@ namespace Google.Apps.Chat.V1
             CreateReactionSettings = existing.CreateReactionSettings;
             ListReactionsSettings = existing.ListReactionsSettings;
             DeleteReactionSettings = existing.DeleteReactionSettings;
+            GetSpaceReadStateSettings = existing.GetSpaceReadStateSettings;
+            UpdateSpaceReadStateSettings = existing.UpdateSpaceReadStateSettings;
+            GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
             OnCopy(existing);
         }
 
@@ -488,6 +491,60 @@ namespace Google.Apps.Chat.V1
         /// </remarks>
         public gaxgrpc::CallSettings DeleteReactionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetSpaceReadState</c> and <c>ChatServiceClient.GetSpaceReadStateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSpaceReadStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.UpdateSpaceReadState</c> and <c>ChatServiceClient.UpdateSpaceReadStateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSpaceReadStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetThreadReadState</c> and <c>ChatServiceClient.GetThreadReadStateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetThreadReadStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ChatServiceSettings"/> object.</returns>
         public ChatServiceSettings Clone() => new ChatServiceSettings(this);
@@ -576,6 +633,8 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.spaces</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.create</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.readstate</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.readstate.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
@@ -595,6 +654,8 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.spaces",
             "https://www.googleapis.com/auth/chat.spaces.create",
             "https://www.googleapis.com/auth/chat.spaces.readonly",
+            "https://www.googleapis.com/auth/chat.users.readstate",
+            "https://www.googleapis.com/auth/chat.users.readstate.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -4999,6 +5060,641 @@ namespace Google.Apps.Chat.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteReactionAsync(ReactionName name, st::CancellationToken cancellationToken) =>
             DeleteReactionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceReadState GetSpaceReadState(GetSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(GetSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(GetSpaceReadStateRequest request, st::CancellationToken cancellationToken) =>
+            GetSpaceReadStateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceReadState GetSpaceReadState(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceReadState(new GetSpaceReadStateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceReadStateAsync(new GetSpaceReadStateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSpaceReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceReadState GetSpaceReadState(SpaceReadStateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceReadState(new GetSpaceReadStateRequest
+            {
+                SpaceReadStateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(SpaceReadStateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceReadStateAsync(new GetSpaceReadStateRequest
+            {
+                SpaceReadStateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> GetSpaceReadStateAsync(SpaceReadStateName name, st::CancellationToken cancellationToken) =>
+            GetSpaceReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceReadState UpdateSpaceReadState(UpdateSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> UpdateSpaceReadStateAsync(UpdateSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> UpdateSpaceReadStateAsync(UpdateSpaceReadStateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSpaceReadStateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceReadState">
+        /// Required. The space read state and fields to update.
+        /// 
+        /// Only supports updating read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Currently supported field paths:
+        /// 
+        /// - `last_read_time`
+        /// 
+        /// When the `last_read_time` is before the latest message create time, the
+        /// space appears as unread in the UI.
+        /// 
+        /// To mark the space as read, set `last_read_time` to any value later (larger)
+        /// than the latest message create time. The `last_read_time` is coerced to
+        /// match the latest message create time. Note that the space read state only
+        /// affects the read state of messages that are visible in the space's
+        /// top-level conversation. Replies in threads are unaffected by this
+        /// timestamp, and instead rely on the thread read state.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceReadState UpdateSpaceReadState(SpaceReadState spaceReadState, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSpaceReadState(new UpdateSpaceReadStateRequest
+            {
+                SpaceReadState = gax::GaxPreconditions.CheckNotNull(spaceReadState, nameof(spaceReadState)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceReadState">
+        /// Required. The space read state and fields to update.
+        /// 
+        /// Only supports updating read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Currently supported field paths:
+        /// 
+        /// - `last_read_time`
+        /// 
+        /// When the `last_read_time` is before the latest message create time, the
+        /// space appears as unread in the UI.
+        /// 
+        /// To mark the space as read, set `last_read_time` to any value later (larger)
+        /// than the latest message create time. The `last_read_time` is coerced to
+        /// match the latest message create time. Note that the space read state only
+        /// affects the read state of messages that are visible in the space's
+        /// top-level conversation. Replies in threads are unaffected by this
+        /// timestamp, and instead rely on the thread read state.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> UpdateSpaceReadStateAsync(SpaceReadState spaceReadState, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSpaceReadStateAsync(new UpdateSpaceReadStateRequest
+            {
+                SpaceReadState = gax::GaxPreconditions.CheckNotNull(spaceReadState, nameof(spaceReadState)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceReadState">
+        /// Required. The space read state and fields to update.
+        /// 
+        /// Only supports updating read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example, `users/me/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/spaceReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/spaceReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/spaceReadState
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The field paths to update. Currently supported field paths:
+        /// 
+        /// - `last_read_time`
+        /// 
+        /// When the `last_read_time` is before the latest message create time, the
+        /// space appears as unread in the UI.
+        /// 
+        /// To mark the space as read, set `last_read_time` to any value later (larger)
+        /// than the latest message create time. The `last_read_time` is coerced to
+        /// match the latest message create time. Note that the space read state only
+        /// affects the read state of messages that are visible in the space's
+        /// top-level conversation. Replies in threads are unaffected by this
+        /// timestamp, and instead rely on the thread read state.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceReadState> UpdateSpaceReadStateAsync(SpaceReadState spaceReadState, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSpaceReadStateAsync(spaceReadState, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ThreadReadState GetThreadReadState(GetThreadReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(GetThreadReadStateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(GetThreadReadStateRequest request, st::CancellationToken cancellationToken) =>
+            GetThreadReadStateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ThreadReadState GetThreadReadState(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetThreadReadState(new GetThreadReadStateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetThreadReadStateAsync(new GetThreadReadStateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(string name, st::CancellationToken cancellationToken) =>
+            GetThreadReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ThreadReadState GetThreadReadState(ThreadReadStateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetThreadReadState(new GetThreadReadStateRequest
+            {
+                ThreadReadStateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(ThreadReadStateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetThreadReadStateAsync(new GetThreadReadStateRequest
+            {
+                ThreadReadStateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the thread read state to retrieve.
+        /// 
+        /// Only supports getting read state for the calling user.
+        /// 
+        /// To refer to the calling user, set one of the following:
+        /// 
+        /// - The `me` alias. For example,
+        /// `users/me/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their Workspace email address. For example,
+        /// `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// - Their user id. For example,
+        /// `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+        /// 
+        /// Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ThreadReadState> GetThreadReadStateAsync(ThreadReadStateName name, st::CancellationToken cancellationToken) =>
+            GetThreadReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ChatService client wrapper implementation, for convenient use.</summary>
@@ -5053,6 +5749,12 @@ namespace Google.Apps.Chat.V1
         private readonly gaxgrpc::ApiCall<ListReactionsRequest, ListReactionsResponse> _callListReactions;
 
         private readonly gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> _callDeleteReaction;
+
+        private readonly gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> _callGetSpaceReadState;
+
+        private readonly gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> _callUpdateSpaceReadState;
+
+        private readonly gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> _callGetThreadReadState;
 
         /// <summary>
         /// Constructs a client wrapper for the ChatService service, with the specified gRPC client and settings.
@@ -5138,6 +5840,15 @@ namespace Google.Apps.Chat.V1
             _callDeleteReaction = clientHelper.BuildApiCall<DeleteReactionRequest, wkt::Empty>("DeleteReaction", grpcClient.DeleteReactionAsync, grpcClient.DeleteReaction, effectiveSettings.DeleteReactionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteReaction);
             Modify_DeleteReactionApiCall(ref _callDeleteReaction);
+            _callGetSpaceReadState = clientHelper.BuildApiCall<GetSpaceReadStateRequest, SpaceReadState>("GetSpaceReadState", grpcClient.GetSpaceReadStateAsync, grpcClient.GetSpaceReadState, effectiveSettings.GetSpaceReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSpaceReadState);
+            Modify_GetSpaceReadStateApiCall(ref _callGetSpaceReadState);
+            _callUpdateSpaceReadState = clientHelper.BuildApiCall<UpdateSpaceReadStateRequest, SpaceReadState>("UpdateSpaceReadState", grpcClient.UpdateSpaceReadStateAsync, grpcClient.UpdateSpaceReadState, effectiveSettings.UpdateSpaceReadStateSettings).WithGoogleRequestParam("space_read_state.name", request => request.SpaceReadState?.Name);
+            Modify_ApiCall(ref _callUpdateSpaceReadState);
+            Modify_UpdateSpaceReadStateApiCall(ref _callUpdateSpaceReadState);
+            _callGetThreadReadState = clientHelper.BuildApiCall<GetThreadReadStateRequest, ThreadReadState>("GetThreadReadState", grpcClient.GetThreadReadStateAsync, grpcClient.GetThreadReadState, effectiveSettings.GetThreadReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetThreadReadState);
+            Modify_GetThreadReadStateApiCall(ref _callGetThreadReadState);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5189,6 +5900,12 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_DeleteReactionApiCall(ref gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> call);
 
+        partial void Modify_GetSpaceReadStateApiCall(ref gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> call);
+
+        partial void Modify_UpdateSpaceReadStateApiCall(ref gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> call);
+
+        partial void Modify_GetThreadReadStateApiCall(ref gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> call);
+
         partial void OnConstruction(ChatService.ChatServiceClient grpcClient, ChatServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ChatService client</summary>
@@ -5239,6 +5956,12 @@ namespace Google.Apps.Chat.V1
         partial void Modify_ListReactionsRequest(ref ListReactionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteReactionRequest(ref DeleteReactionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSpaceReadStateRequest(ref GetSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSpaceReadStateRequest(ref UpdateSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetThreadReadStateRequest(ref GetThreadReadStateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a message in a Google Chat space. For an example, see [Send a
@@ -6292,6 +7015,102 @@ namespace Google.Apps.Chat.V1
         {
             Modify_DeleteReactionRequest(ref request, ref callSettings);
             return _callDeleteReaction.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SpaceReadState GetSpaceReadState(GetSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceReadStateRequest(ref request, ref callSettings);
+            return _callGetSpaceReadState.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a user's read state within a space, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SpaceReadState> GetSpaceReadStateAsync(GetSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceReadStateRequest(ref request, ref callSettings);
+            return _callGetSpaceReadState.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SpaceReadState UpdateSpaceReadState(UpdateSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSpaceReadStateRequest(ref request, ref callSettings);
+            return _callUpdateSpaceReadState.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a user's read state within a space, used to identify read and
+        /// unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SpaceReadState> UpdateSpaceReadStateAsync(UpdateSpaceReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSpaceReadStateRequest(ref request, ref callSettings);
+            return _callUpdateSpaceReadState.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ThreadReadState GetThreadReadState(GetThreadReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetThreadReadStateRequest(ref request, ref callSettings);
+            return _callGetThreadReadState.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a user's read state within a thread, used to identify
+        /// read and unread messages.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ThreadReadState> GetThreadReadStateAsync(GetThreadReadStateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetThreadReadStateRequest(ref request, ref callSettings);
+            return _callGetThreadReadState.Async(request, callSettings);
         }
     }
 

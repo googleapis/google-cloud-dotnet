@@ -134,6 +134,16 @@ namespace Google.Apps.Chat.V1 {
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListReactionsResponse> __Marshaller_google_chat_v1_ListReactionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListReactionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.DeleteReactionRequest> __Marshaller_google_chat_v1_DeleteReactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.DeleteReactionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest> __Marshaller_google_chat_v1_GetSpaceReadStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceReadStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SpaceReadState> __Marshaller_google_chat_v1_SpaceReadState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SpaceReadState.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest> __Marshaller_google_chat_v1_UpdateSpaceReadStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetThreadReadStateRequest> __Marshaller_google_chat_v1_GetThreadReadStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetThreadReadStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ThreadReadState> __Marshaller_google_chat_v1_ThreadReadState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ThreadReadState.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message> __Method_CreateMessage = new grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message>(
@@ -318,6 +328,30 @@ namespace Google.Apps.Chat.V1 {
         "DeleteReaction",
         __Marshaller_google_chat_v1_DeleteReactionRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState> __Method_GetSpaceReadState = new grpc::Method<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSpaceReadState",
+        __Marshaller_google_chat_v1_GetSpaceReadStateRequest,
+        __Marshaller_google_chat_v1_SpaceReadState);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState> __Method_UpdateSpaceReadState = new grpc::Method<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSpaceReadState",
+        __Marshaller_google_chat_v1_UpdateSpaceReadStateRequest,
+        __Marshaller_google_chat_v1_SpaceReadState);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState> __Method_GetThreadReadState = new grpc::Method<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetThreadReadState",
+        __Marshaller_google_chat_v1_GetThreadReadStateRequest,
+        __Marshaller_google_chat_v1_ThreadReadState);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -852,6 +886,54 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReaction(global::Google.Apps.Chat.V1.DeleteReactionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns details about a user's read state within a space, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SpaceReadState> GetSpaceReadState(global::Google.Apps.Chat.V1.GetSpaceReadStateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a user's read state within a space, used to identify read and
+      /// unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SpaceReadState> UpdateSpaceReadState(global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns details about a user's read state within a thread, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ThreadReadState> GetThreadReadState(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2993,6 +3075,198 @@ namespace Google.Apps.Chat.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteReaction, null, options, request);
       }
+      /// <summary>
+      /// Returns details about a user's read state within a space, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceReadState GetSpaceReadState(global::Google.Apps.Chat.V1.GetSpaceReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceReadState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a space, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceReadState GetSpaceReadState(global::Google.Apps.Chat.V1.GetSpaceReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSpaceReadState, null, options, request);
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a space, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceReadState> GetSpaceReadStateAsync(global::Google.Apps.Chat.V1.GetSpaceReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceReadStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a space, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceReadState> GetSpaceReadStateAsync(global::Google.Apps.Chat.V1.GetSpaceReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSpaceReadState, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user's read state within a space, used to identify read and
+      /// unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceReadState UpdateSpaceReadState(global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSpaceReadState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user's read state within a space, used to identify read and
+      /// unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceReadState UpdateSpaceReadState(global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSpaceReadState, null, options, request);
+      }
+      /// <summary>
+      /// Updates a user's read state within a space, used to identify read and
+      /// unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceReadState> UpdateSpaceReadStateAsync(global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSpaceReadStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a user's read state within a space, used to identify read and
+      /// unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceReadState> UpdateSpaceReadStateAsync(global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSpaceReadState, null, options, request);
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a thread, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ThreadReadState GetThreadReadState(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetThreadReadState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a thread, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.ThreadReadState GetThreadReadState(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetThreadReadState, null, options, request);
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a thread, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ThreadReadState> GetThreadReadStateAsync(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetThreadReadStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details about a user's read state within a thread, used to identify
+      /// read and unread messages.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.ThreadReadState> GetThreadReadStateAsync(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetThreadReadState, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ChatServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -3029,7 +3303,10 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_DeleteMembership, serviceImpl.DeleteMembership)
           .AddMethod(__Method_CreateReaction, serviceImpl.CreateReaction)
           .AddMethod(__Method_ListReactions, serviceImpl.ListReactions)
-          .AddMethod(__Method_DeleteReaction, serviceImpl.DeleteReaction).Build();
+          .AddMethod(__Method_DeleteReaction, serviceImpl.DeleteReaction)
+          .AddMethod(__Method_GetSpaceReadState, serviceImpl.GetSpaceReadState)
+          .AddMethod(__Method_UpdateSpaceReadState, serviceImpl.UpdateSpaceReadState)
+          .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3062,6 +3339,9 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_CreateReaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.CreateReactionRequest, global::Google.Apps.Chat.V1.Reaction>(serviceImpl.CreateReaction));
       serviceBinder.AddMethod(__Method_ListReactions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListReactionsRequest, global::Google.Apps.Chat.V1.ListReactionsResponse>(serviceImpl.ListReactions));
       serviceBinder.AddMethod(__Method_DeleteReaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.DeleteReactionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReaction));
+      serviceBinder.AddMethod(__Method_GetSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.GetSpaceReadState));
+      serviceBinder.AddMethod(__Method_UpdateSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.UpdateSpaceReadState));
+      serviceBinder.AddMethod(__Method_GetThreadReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(serviceImpl.GetThreadReadState));
     }
 
   }

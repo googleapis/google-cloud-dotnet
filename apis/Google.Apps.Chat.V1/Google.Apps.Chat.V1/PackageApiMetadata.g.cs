@@ -44,7 +44,9 @@ namespace Google.Apps.Chat.V1
             yield return ReactionReflection.Descriptor;
             yield return SlashCommandReflection.Descriptor;
             yield return SpaceReflection.Descriptor;
+            yield return SpaceReadStateReflection.Descriptor;
             yield return SpaceSetupReflection.Descriptor;
+            yield return ThreadReadStateReflection.Descriptor;
             yield return UserReflection.Descriptor;
             yield return WidgetsReflection.Descriptor;
         }
