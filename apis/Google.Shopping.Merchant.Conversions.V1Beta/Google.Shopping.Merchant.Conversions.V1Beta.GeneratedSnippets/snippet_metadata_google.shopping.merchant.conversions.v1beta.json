@@ -1,0 +1,1504 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Conversions.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.conversions.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_sync",
+      "title": "CreateConversionSourceRequestObject",
+      "description": "Snippet for CreateConversionSource",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.CreateConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_async",
+      "title": "CreateConversionSourceRequestObjectAsync",
+      "description": "Snippet for CreateConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.CreateConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_sync_flattened",
+      "title": "CreateConversionSource",
+      "description": "Snippet for CreateConversionSource",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_async_flattened",
+      "title": "CreateConversionSourceAsync",
+      "description": "Snippet for CreateConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_sync_flattened_resourceNames",
+      "title": "CreateConversionSourceResourceNames",
+      "description": "Snippet for CreateConversionSource",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_CreateConversionSource_async_flattened_resourceNames",
+      "title": "CreateConversionSourceResourceNamesAsync",
+      "description": "Snippet for CreateConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.CreateConversionSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.CreateConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.CreateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UpdateConversionSource_sync",
+      "title": "UpdateConversionSourceRequestObject",
+      "description": "Snippet for UpdateConversionSource",
+      "file": "ConversionSourcesServiceClient.UpdateConversionSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UpdateConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.UpdateConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UpdateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UpdateConversionSource_async",
+      "title": "UpdateConversionSourceRequestObjectAsync",
+      "description": "Snippet for UpdateConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.UpdateConversionSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UpdateConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.UpdateConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UpdateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UpdateConversionSource_sync_flattened",
+      "title": "UpdateConversionSource",
+      "description": "Snippet for UpdateConversionSource",
+      "file": "ConversionSourcesServiceClient.UpdateConversionSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UpdateConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UpdateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UpdateConversionSource_async_flattened",
+      "title": "UpdateConversionSourceAsync",
+      "description": "Snippet for UpdateConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.UpdateConversionSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UpdateConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+            "name": "conversionSource"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UpdateConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_sync",
+      "title": "DeleteConversionSourceRequestObject",
+      "description": "Snippet for DeleteConversionSource",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.DeleteConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_async",
+      "title": "DeleteConversionSourceRequestObjectAsync",
+      "description": "Snippet for DeleteConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.DeleteConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_sync_flattened",
+      "title": "DeleteConversionSource",
+      "description": "Snippet for DeleteConversionSource",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_async_flattened",
+      "title": "DeleteConversionSourceAsync",
+      "description": "Snippet for DeleteConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_sync_flattened_resourceNames",
+      "title": "DeleteConversionSourceResourceNames",
+      "description": "Snippet for DeleteConversionSource",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_DeleteConversionSource_async_flattened_resourceNames",
+      "title": "DeleteConversionSourceResourceNamesAsync",
+      "description": "Snippet for DeleteConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.DeleteConversionSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.DeleteConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.DeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UndeleteConversionSource_sync",
+      "title": "UndeleteConversionSourceRequestObject",
+      "description": "Snippet for UndeleteConversionSource",
+      "file": "ConversionSourcesServiceClient.UndeleteConversionSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UndeleteConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.UndeleteConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UndeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UndeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_UndeleteConversionSource_async",
+      "title": "UndeleteConversionSourceRequestObjectAsync",
+      "description": "Snippet for UndeleteConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.UndeleteConversionSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.UndeleteConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.UndeleteConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "UndeleteConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.UndeleteConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_sync",
+      "title": "GetConversionSourceRequestObject",
+      "description": "Snippet for GetConversionSource",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.GetConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_async",
+      "title": "GetConversionSourceRequestObjectAsync",
+      "description": "Snippet for GetConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.GetConversionSourceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_sync_flattened",
+      "title": "GetConversionSource",
+      "description": "Snippet for GetConversionSource",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSource",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_async_flattened",
+      "title": "GetConversionSourceAsync",
+      "description": "Snippet for GetConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_sync_flattened_resourceNames",
+      "title": "GetConversionSourceResourceNames",
+      "description": "Snippet for GetConversionSource",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSource",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSource",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_GetConversionSource_async_flattened_resourceNames",
+      "title": "GetConversionSourceResourceNamesAsync",
+      "description": "Snippet for GetConversionSourceAsync",
+      "file": "ConversionSourcesServiceClient.GetConversionSourceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConversionSourceAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.GetConversionSourceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "GetConversionSource",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.GetConversionSource",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_sync",
+      "title": "ListConversionSourcesRequestObject",
+      "description": "Snippet for ListConversionSources",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSources",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSources",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_async",
+      "title": "ListConversionSourcesRequestObjectAsync",
+      "description": "Snippet for ListConversionSourcesAsync",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSourcesAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_sync_flattened",
+      "title": "ListConversionSources",
+      "description": "Snippet for ListConversionSources",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSources",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSources",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_async_flattened",
+      "title": "ListConversionSourcesAsync",
+      "description": "Snippet for ListConversionSourcesAsync",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSourcesAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_sync_flattened_resourceNames",
+      "title": "ListConversionSourcesResourceNames",
+      "description": "Snippet for ListConversionSources",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSources",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSources",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ConversionSourcesService_ListConversionSources_async_flattened_resourceNames",
+      "title": "ListConversionSourcesResourceNamesAsync",
+      "description": "Snippet for ListConversionSourcesAsync",
+      "file": "ConversionSourcesServiceClient.ListConversionSourcesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConversionSourcesAsync",
+        "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient.ListConversionSourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Conversions.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Conversions.V1Beta.ListConversionSourcesResponse, Google.Shopping.Merchant.Conversions.V1Beta.ConversionSource>",
+        "client": {
+          "shortName": "ConversionSourcesServiceClient",
+          "fullName": "Google.Shopping.Merchant.Conversions.V1Beta.ConversionSourcesServiceClient"
+        },
+        "method": {
+          "shortName": "ListConversionSources",
+          "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService.ListConversionSources",
+          "service": {
+            "shortName": "ConversionSourcesService",
+            "fullName": "google.shopping.merchant.conversions.v1beta.ConversionSourcesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
