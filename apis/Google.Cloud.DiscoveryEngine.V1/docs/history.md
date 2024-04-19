@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-04-19
+
+### New features
+
+- Promote recommendation service to v1 ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+- Promote blending search to v1 ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+- Promote healthcare search to v1 ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+- Promote online chunking search to v1 ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+- Support import data from Cloud Spanner, BigTable, SQL and Firestore ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+- Support boost/bury on multi-turn search ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 1c69086](https://github.com/googleapis/google-cloud-dotnet/commit/1c69086ce35ba32d5e2b242f05cda05df5c19ded))
+
 ## Version 1.0.0-beta04, released 2024-03-26
 
 ### New features
