@@ -19,6 +19,7 @@ using Google.Cloud.ClientTesting;
 using Grpc.Core.Interceptors;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -97,14 +98,24 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var name = IdGenerator.FromGuid();
             var contentType = "application/octet-stream";
             var source = GenerateData(UploadObjectOptions.MinimumChunkSize * chunks);
-            int progressCount = 0;
-            var progress = new Progress<IUploadProgress>(p => progressCount++);
+            IList<IUploadProgress> progresses = new List<IUploadProgress>();
+            var progress = new Progress<IUploadProgress>(p => progresses.Add(p));
             var result = await _fixture.Client.UploadObjectAsync(_fixture.MultiVersionBucket, name, contentType, source,
                 new UploadObjectOptions { ChunkSize = UploadObjectOptions.MinimumChunkSize },
                 CancellationToken.None, progress);
-            Assert.Equal(chunks + 1, progressCount); // Should start with a 0 progress
+
+            Assert.Collection(progresses,
+                first => CheckProgress(first, UploadStatus.Starting),
+                second => CheckProgress(second, UploadStatus.Uploading),
+                third => CheckProgress(third, UploadStatus.Completed));
             Assert.Equal(name, result.Name); // Assume the rest of the properties are okay...
             ValidateData(_fixture.MultiVersionBucket, name, source);
+
+            void CheckProgress(IUploadProgress progress, UploadStatus expectedStatus)
+            {
+                progress.ThrowOnFailure();
+                Assert.Equal(expectedStatus, progress.Status);
+            }
         }
 
         [Fact]
