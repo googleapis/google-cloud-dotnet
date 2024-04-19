@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.15.0, released 2024-04-19
+
+### New features
+
+- A new message `FoundationModelTuningOptions` is added ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+- A new field `foundation_model_tuning_options` is added to message `.google.cloud.documentai.v1.TrainProcessorVersionRequest` ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+
+### Documentation improvements
+
+- Updated comments ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+
 ## Version 3.14.0, released 2024-03-26
 
 ### New features
