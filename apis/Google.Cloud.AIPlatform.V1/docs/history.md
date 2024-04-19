@@ -1,5 +1,55 @@
 # Version history
 
+## Version 2.27.0, released 2024-04-19
+
+### New features
+
+- GenAiTuningService aiplatform v1 initial release ([commit 9c1510e](https://github.com/googleapis/google-cloud-dotnet/commit/9c1510eb266a9c55c8b555c2408f8112883aa078))
+- A new field `presence_penalty` is added to message `.google.cloud.aiplatform.v1.GenerationConfig` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `frequency_penalty` is added to message `.google.cloud.aiplatform.v1.GenerationConfig` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `response_mime_type` is added to message `.google.cloud.aiplatform.v1.GenerationConfig` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new enum `HarmBlockMethod` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `method` is added to message `.google.cloud.aiplatform.v1.SafetySetting` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `persistent_resource_id` is added to message `.google.cloud.aiplatform.v1.CustomJobSpec` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `disable_explanations` is added to message `.google.cloud.aiplatform.v1.DeployedModel` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `title` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `default` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `min_items` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `max_items` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `min_properties` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `max_properties` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `minimum` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `maximum` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `min_length` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `max_length` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `pattern` is added to message `.google.cloud.aiplatform.v1.Schema` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `PersistentResource` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new resource_definition `aiplatform.googleapis.com/PersistentResource` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ResourcePool` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ResourceRuntimeSpec` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `RaySpec` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ResourceRuntime` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ServiceAccountSpec` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new service `PersistentResourceService` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `CreatePersistentResourceRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `CreatePersistentResourceOperationMetadata` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `UpdatePersistentResourceOperationMetadata` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `RebootPersistentResourceOperationMetadata` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `GetPersistentResourceRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ListPersistentResourcesRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `ListPersistentResourcesResponse` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `DeletePersistentResourceRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `UpdatePersistentResourceRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new message `RebootPersistentResourceRequest` is added ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new field `system_instruction` is added to message `.google.cloud.aiplatform.v1.GenerateContentRequest` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new value `BLOCKLIST` is added to enum `BlockedReason` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- A new value `PROHIBITED_CONTENT` is added to enum `BlockedReason` ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+- Add NotebookRuntime resource and APIs to public v1 client library ([commit 4c42095](https://github.com/googleapis/google-cloud-dotnet/commit/4c4209583e0c903f524cc9ceebbd20136be2335f))
+
+### Documentation improvements
+
+- Documentation updates ([commit 8629568](https://github.com/googleapis/google-cloud-dotnet/commit/8629568d46593d443aa4df6fe00cad2bad9cb0ab))
+
 ## Version 2.26.0, released 2024-03-26
 
 ### New features
