@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2024-04-19
+
+### New features
+
+- Add `rollout_info` field to `QuotaDetails` message ([commit 5148c08](https://github.com/googleapis/google-cloud-dotnet/commit/5148c089b407d0ac8e7e2bc2e0b4e73a7630ced8))
+
+### Documentation improvements
+
+- Update contact_email doc to not check permission of the email account ([commit 2f19379](https://github.com/googleapis/google-cloud-dotnet/commit/2f193795dd1daaba3ad6dd1f0f6b0c20c6597e6a))
+- Update comment of `contact_email` to make it optional as opposed to required ([commit 61c3ef8](https://github.com/googleapis/google-cloud-dotnet/commit/61c3ef87fcac02762a218f56ab2a176f64be7d29))
+- Update sample URL in field for `service_request_quota_uri` ([commit 61c3ef8](https://github.com/googleapis/google-cloud-dotnet/commit/61c3ef87fcac02762a218f56ab2a176f64be7d29))
+
 ## Version 1.0.0-beta03, released 2024-03-26
 
 ### New features
