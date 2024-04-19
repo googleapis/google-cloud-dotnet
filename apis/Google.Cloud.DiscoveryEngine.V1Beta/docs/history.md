@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2024-04-19
+
+### New features
+
+- Support import data from Cloud Spanner, BigTable, SQL and Firestore ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+- Add answer generation APIs ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+- Add standalone grounding API ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+- Add standalone ranking API ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+- Support advanced search boosting ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+- Add advanced engine model APIs ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 2a2996a](https://github.com/googleapis/google-cloud-dotnet/commit/2a2996aa8b5ecf693b6a4fea2c85d7620d2c62f5))
+
 ## Version 1.0.0-beta11, released 2024-03-26
 
 ### New features
