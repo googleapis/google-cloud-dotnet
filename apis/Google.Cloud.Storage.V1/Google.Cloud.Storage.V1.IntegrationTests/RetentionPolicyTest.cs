@@ -16,7 +16,7 @@ using Google.Apis.Storage.v1.Data;
 using System;
 using System.IO;
 using System.Text;
-using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
@@ -25,6 +25,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [Collection(nameof(StorageFixture))]
     public class RetentionPolicyTest
     {
+        // The minimum guaranteed retention period is one day. We use a day and a half to avoid flakes.
+        // Some buckets won't be deleted right after test execution, but that's fine, they'll be delete later.
+        private static readonly long s_guaranteedRetentionPeriodSeconds = (long) TimeSpan.FromDays(1.5).TotalSeconds;
+        // Although bucket metadata changes are themselves strongly consistent, their effects may take up to
+        // 30 seconds to be effective.
+        // https://cloud.google.com/storage/docs/consistency#strongly_consistent_operations
+        private static readonly TimeSpan s_metadataChangesEffectiveDelay = TimeSpan.FromSeconds(30);
+
         private readonly StorageFixture _fixture;
 
         public RetentionPolicyTest(StorageFixture fixture) => _fixture = fixture;
@@ -48,7 +56,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // Fetch the bucket again to check it was set.
             bucket = client.GetBucket(bucketName);
             Assert.Equal(5L, bucket.RetentionPolicy.RetentionPeriod);
-            Assert.NotNull(bucket.RetentionPolicy.EffectiveTimeDateTimeOffset);
+                Assert.NotNull(bucket.RetentionPolicy.EffectiveTimeDateTimeOffset);
 
             // Create an object, which should have a retention expiration.
             string objectName = "object.txt";
@@ -140,7 +148,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// It should fail when event-based hold is true and for a short period after setting it to false per the retention policy period.
         /// </summary>
         [Fact]
-        public void EventBasedHold()
+        public async Task EventBasedHold()
         {
             var client = _fixture.Client;
             var bucketName = _fixture.GenerateBucketName();
@@ -154,22 +162,23 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             client.UpdateObject(obj);
             Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
 
-            // Set the retention policy for the bucket to 10s.
-            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 10L };
+            // Set the retention policy for the bucket.
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = s_guaranteedRetentionPeriodSeconds };
             client.UpdateBucket(bucket);
 
             // Clear the event-based hold.
             obj.EventBasedHold = false;
             client.UpdateObject(obj);
 
-            // After 5 seconds, we should still not be able to delete the object: it is protected
-            // by the retention policy.
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            // Wait until the bucket changes have taken effect.
+            await Task.Delay(s_metadataChangesEffectiveDelay.Add(TimeSpan.FromSeconds(3)));
             Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
 
-            // After another 10 seconds, we should be able to delete the object.
-            Thread.Sleep(TimeSpan.FromSeconds(10));
-            client.DeleteObject(bucketName, objectName);
+            // Remove the retention policy for the bucket
+            bucket.RetentionPolicy = null;
+            client.UpdateBucket(bucket);
+            // And now we should be able to delete the object.
+            await _fixture.EventuallyAsync(s_metadataChangesEffectiveDelay, () => client.DeleteObject(bucketName, objectName));
         }
 
         /// <summary>
@@ -177,7 +186,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// When a new object is inserted and the default event-based hold is set to true, the object event-based hold metadata should be true.
         /// </summary>
         [Fact]
-        public void DefaultEventBasedHold()
+        public async Task DefaultEventBasedHold()
         {
             var client = _fixture.Client;
             var bucketName = _fixture.GenerateBucketName();
@@ -189,13 +198,17 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             string objectName = "default-event-based-hold.txt";
             CreateObject(bucketName, objectName);
 
-            var obj = client.GetObject(bucketName, objectName);
-            Assert.True(obj.EventBasedHold);
+            await _fixture.EventuallyAsync(s_metadataChangesEffectiveDelay , () =>
+            {
+                var obj = client.GetObject(bucketName, objectName);
+                Assert.True(obj.EventBasedHold);
+            });
 
             // Remove the event-based hold for the object and bucket so we'll be able to delete
             // the objects and bucket later.
             bucket.DefaultEventBasedHold = false;
             client.UpdateBucket(bucket);
+            var obj = client.GetObject(bucketName, objectName);
             obj.EventBasedHold = false;
             client.UpdateObject(obj);
         }
