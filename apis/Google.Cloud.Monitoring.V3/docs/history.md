@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.8.0, released 2024-04-19
+
+### New features
+
+- Added CloudRun, GkeNamespace, GkeWorkload, GkeService, and BasicService service types ([commit a63edc5](https://github.com/googleapis/google-cloud-dotnet/commit/a63edc53397e62b24240e474f2ee883aa1309d89))
+- Added Synthetic Monitor targets to Uptime data model ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+- Added ServiceAgentAuthentication auth method for Uptime ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+
+### Documentation improvements
+
+- Updated comments accordingly ([commit a63edc5](https://github.com/googleapis/google-cloud-dotnet/commit/a63edc53397e62b24240e474f2ee883aa1309d89))
+- Updated comments accordingly ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+- Various updates ([commit dfa71a3](https://github.com/googleapis/google-cloud-dotnet/commit/dfa71a3129299e055d65da1badea1028f4144506))
+
 ## Version 3.7.0, released 2024-03-26
 
 ### New features
