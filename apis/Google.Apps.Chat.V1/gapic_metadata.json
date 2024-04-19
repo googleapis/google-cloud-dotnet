@@ -94,6 +94,18 @@
                 "GetSpaceAsync"
               ]
             },
+            "GetSpaceReadState": {
+              "methods": [
+                "GetSpaceReadState",
+                "GetSpaceReadStateAsync"
+              ]
+            },
+            "GetThreadReadState": {
+              "methods": [
+                "GetThreadReadState",
+                "GetThreadReadStateAsync"
+              ]
+            },
             "ListMemberships": {
               "methods": [
                 "ListMemberships",
@@ -140,6 +152,12 @@
               "methods": [
                 "UpdateSpace",
                 "UpdateSpaceAsync"
+              ]
+            },
+            "UpdateSpaceReadState": {
+              "methods": [
+                "UpdateSpaceReadState",
+                "UpdateSpaceReadStateAsync"
               ]
             },
             "UploadAttachment": {

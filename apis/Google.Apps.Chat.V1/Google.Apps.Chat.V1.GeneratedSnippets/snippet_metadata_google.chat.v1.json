@@ -5558,6 +5558,780 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_sync",
+      "title": "GetSpaceReadStateRequestObject",
+      "description": "Snippet for GetSpaceReadState",
+      "file": "ChatServiceClient.GetSpaceReadStateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_async",
+      "title": "GetSpaceReadStateRequestObjectAsync",
+      "description": "Snippet for GetSpaceReadStateAsync",
+      "file": "ChatServiceClient.GetSpaceReadStateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_sync_flattened",
+      "title": "GetSpaceReadState",
+      "description": "Snippet for GetSpaceReadState",
+      "file": "ChatServiceClient.GetSpaceReadStateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadState",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_async_flattened",
+      "title": "GetSpaceReadStateAsync",
+      "description": "Snippet for GetSpaceReadStateAsync",
+      "file": "ChatServiceClient.GetSpaceReadStateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_sync_flattened_resourceNames",
+      "title": "GetSpaceReadStateResourceNames",
+      "description": "Snippet for GetSpaceReadState",
+      "file": "ChatServiceClient.GetSpaceReadStateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceReadStateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceReadState_async_flattened_resourceNames",
+      "title": "GetSpaceReadStateResourceNamesAsync",
+      "description": "Snippet for GetSpaceReadStateAsync",
+      "file": "ChatServiceClient.GetSpaceReadStateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceReadStateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.GetSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceReadState_sync",
+      "title": "UpdateSpaceReadStateRequestObject",
+      "description": "Snippet for UpdateSpaceReadState",
+      "file": "ChatServiceClient.UpdateSpaceReadStateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSpaceReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceReadState_async",
+      "title": "UpdateSpaceReadStateRequestObjectAsync",
+      "description": "Snippet for UpdateSpaceReadStateAsync",
+      "file": "ChatServiceClient.UpdateSpaceReadStateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSpaceReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceReadState_sync_flattened",
+      "title": "UpdateSpaceReadState",
+      "description": "Snippet for UpdateSpaceReadState",
+      "file": "ChatServiceClient.UpdateSpaceReadStateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceReadState",
+            "name": "spaceReadState"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceReadState_async_flattened",
+      "title": "UpdateSpaceReadStateAsync",
+      "description": "Snippet for UpdateSpaceReadStateAsync",
+      "file": "ChatServiceClient.UpdateSpaceReadStateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceReadState",
+            "name": "spaceReadState"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceReadState",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_sync",
+      "title": "GetThreadReadStateRequestObject",
+      "description": "Snippet for GetThreadReadState",
+      "file": "ChatServiceClient.GetThreadReadStateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetThreadReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.ThreadReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_async",
+      "title": "GetThreadReadStateRequestObjectAsync",
+      "description": "Snippet for GetThreadReadStateAsync",
+      "file": "ChatServiceClient.GetThreadReadStateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetThreadReadStateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.ThreadReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_sync_flattened",
+      "title": "GetThreadReadState",
+      "description": "Snippet for GetThreadReadState",
+      "file": "ChatServiceClient.GetThreadReadStateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadState",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.ThreadReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_async_flattened",
+      "title": "GetThreadReadStateAsync",
+      "description": "Snippet for GetThreadReadStateAsync",
+      "file": "ChatServiceClient.GetThreadReadStateAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.ThreadReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_sync_flattened_resourceNames",
+      "title": "GetThreadReadStateResourceNames",
+      "description": "Snippet for GetThreadReadState",
+      "file": "ChatServiceClient.GetThreadReadStateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadState",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadState",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ThreadReadStateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.ThreadReadState",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetThreadReadState_async_flattened_resourceNames",
+      "title": "GetThreadReadStateResourceNamesAsync",
+      "description": "Snippet for GetThreadReadStateAsync",
+      "file": "ChatServiceClient.GetThreadReadStateResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetThreadReadStateAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetThreadReadStateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.ThreadReadStateName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.ThreadReadState>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetThreadReadState",
+          "fullName": "google.chat.v1.ChatService.GetThreadReadState",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
