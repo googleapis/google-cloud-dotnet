@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.11.0, released 2024-04-19
+
+### New features
+
+- Add tag key id support ([commit 74afcba](https://github.com/googleapis/google-cloud-dotnet/commit/74afcba52ed630e837ce66ebf6d7e9afef48d6cf))
+
+### Documentation improvements
+
+- Add tagKeyIds example for ResourceSearchResult.tags ([commit 74afcba](https://github.com/googleapis/google-cloud-dotnet/commit/74afcba52ed630e837ce66ebf6d7e9afef48d6cf))
+
 ## Version 3.10.0, released 2024-03-28
 
 ### New features
