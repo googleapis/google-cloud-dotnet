@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2024-04-19
+
+### New features
+
+- Adds support for new toll passes ([commit 7a7acef](https://github.com/googleapis/google-cloud-dotnet/commit/7a7acef8882ee0c598289e68288fd32348ddc8bd))
+- Adds support for specifying units in the ComputeRouteMatrix request ([commit 7a7acef](https://github.com/googleapis/google-cloud-dotnet/commit/7a7acef8882ee0c598289e68288fd32348ddc8bd))
+
+### Documentation improvements
+
+- Various formatting and grammar fixes for proto documentation ([commit 7a7acef](https://github.com/googleapis/google-cloud-dotnet/commit/7a7acef8882ee0c598289e68288fd32348ddc8bd))
+
 ## Version 1.0.0-beta12, released 2024-03-27
 
 ### New features
