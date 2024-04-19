@@ -402,7 +402,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// A folder.
+  /// A folder resource. This resource can only exist in a hierarchical namespace
+  /// enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Folder : pb::IMessage<Folder>
@@ -791,7 +793,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// Request message for GetFolder.
+  /// Request message for GetFolder. This operation is only applicable to a
+  /// hierarchical namespace enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFolderRequest : pb::IMessage<GetFolderRequest>
@@ -1143,7 +1147,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// Request message for CreateFolder.
+  /// Request message for CreateFolder. This operation is only applicable to a
+  /// hierarchical namespace enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFolderRequest : pb::IMessage<CreateFolderRequest>
@@ -1198,7 +1204,8 @@ namespace Google.Cloud.Storage.Control.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the bucket in which the folder will reside.
+    /// Required. Name of the bucket in which the folder will reside. The bucket
+    /// must be a hierarchical namespace enabled bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1267,8 +1274,7 @@ namespace Google.Cloud.Storage.Control.V2 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique identifier for this request. UUID is the recommended
-    /// format, but other formats are still accepted. This request is only
-    /// idempotent if a `request_id` is provided.
+    /// format, but other formats are still accepted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1518,7 +1524,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// Request message for DeleteFolder.
+  /// Request message for DeleteFolder. This operation is only applicable to a
+  /// hierarchical namespace enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFolderRequest : pb::IMessage<DeleteFolderRequest>
@@ -1653,8 +1661,7 @@ namespace Google.Cloud.Storage.Control.V2 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique identifier for this request. UUID is the recommended
-    /// format, but other formats are still accepted. This request is only
-    /// idempotent if a `request_id` is provided.
+    /// format, but other formats are still accepted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1871,7 +1878,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// Request message for ListFolders.
+  /// Request message for ListFolders. This operation is only applicable to a
+  /// hierarchical namespace enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFoldersRequest : pb::IMessage<ListFoldersRequest>
@@ -1929,7 +1938,8 @@ namespace Google.Cloud.Storage.Control.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Name of the bucket in which to look for folders.
+    /// Required. Name of the bucket in which to look for folders. The bucket must
+    /// be a hierarchical namespace enabled bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2585,7 +2595,9 @@ namespace Google.Cloud.Storage.Control.V2 {
   }
 
   /// <summary>
-  /// Request message for RenameFolder.
+  /// Request message for RenameFolder. This operation is only applicable to a
+  /// hierarchical namespace enabled bucket.
+  /// Hierarchical namespace buckets are in allowlist preview.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RenameFolderRequest : pb::IMessage<RenameFolderRequest>
