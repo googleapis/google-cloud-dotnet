@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-alpha26, released 2024-04-19
+
+### Bug fixes
+
+- **BREAKING CHANGE** Added optional flag of an existing field `limit`, `consumed`, `carryover` in ResourceAllowance ([commit c3a0f2a](https://github.com/googleapis/google-cloud-dotnet/commit/c3a0f2a7fcb458a0a4187348206f309e69d3ee43))
+
+### New features
+
+- Remove GOOGLE_INTERNAL restriction of update job api ([commit c3a0f2a](https://github.com/googleapis/google-cloud-dotnet/commit/c3a0f2a7fcb458a0a4187348206f309e69d3ee43))
+- Add a service_account field to taskGroup for service account support ([commit c3a0f2a](https://github.com/googleapis/google-cloud-dotnet/commit/c3a0f2a7fcb458a0a4187348206f309e69d3ee43))
+
+### Documentation improvements
+
+- State one Resource Allowance per region per project limitation on v1alpha ([commit 807a215](https://github.com/googleapis/google-cloud-dotnet/commit/807a215c2437421cef679d6a226f6798dec2e7b6))
+- A comment for field `max_run_duration` in message `.google.cloud.batch.v1alpha.TaskSpec` and `.google.cloud.batch.v1.TaskSpec` is changed ([commit 807a215](https://github.com/googleapis/google-cloud-dotnet/commit/807a215c2437421cef679d6a226f6798dec2e7b6))
+- Add non-negative restriction comment for usage_resource_allowance.spec.limit.limit exposed on v1alpha ([commit 807a215](https://github.com/googleapis/google-cloud-dotnet/commit/807a215c2437421cef679d6a226f6798dec2e7b6))
+
 ## Version 1.0.0-alpha25, released 2024-03-28
 
 ### New features
