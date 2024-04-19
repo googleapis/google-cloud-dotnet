@@ -293,10 +293,18 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         private static TException AssertThrowsMaybeAsync<TException>(bool runAsync, Action sync, Func<Task> async)
-            where TException : Exception =>
-            runAsync
+            where TException : Exception
+        {
+            TException exception = runAsync
                 ? Task.Run(() => Assert.ThrowsAsync<TException>(async).Result).Result
                 : Assert.Throws<TException>(sync);
+
+            // Sleep, as everything in this test modifies buckets, and we can't do that very frequently.
+            // Even though the attempted modification failed, it reached the server, and it counts towards quota.
+            StorageFixture.SleepAfterBucketCreateDelete();
+
+            return exception;
+        }
 
         private class PatchFoilingInterceptor : IHttpExecuteInterceptor
         {
