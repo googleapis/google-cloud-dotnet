@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.6.0, released 2024-04-19
+
+### New features
+
+- Add GetSettings and UpdateSettings methods at the Project-level to advisorynotifications.googleapis.com ([commit cd4bef0](https://github.com/googleapis/google-cloud-dotnet/commit/cd4bef0c7b9994dd3e3b0291e9ed566f4d9019c5))
+
+### Documentation improvements
+
+- Adding docs for new project level settings methods ([commit cd4bef0](https://github.com/googleapis/google-cloud-dotnet/commit/cd4bef0c7b9994dd3e3b0291e9ed566f4d9019c5))
+
 ## Version 1.5.0, released 2024-03-26
 
 ### New features
