@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2024-04-19
+
+### New features
+
+- Fix inventories sub-API publication by adding correct child_type in the API proto ([commit 012c5af](https://github.com/googleapis/google-cloud-dotnet/commit/012c5af36d1c7b91b0450989019937d4979c0c85))
+
+### Documentation improvements
+
+- A comment for field `store_code` in message `.google.shopping.merchant.inventories.v1beta.LocalInventory` is changed ([commit 012c5af](https://github.com/googleapis/google-cloud-dotnet/commit/012c5af36d1c7b91b0450989019937d4979c0c85))
+- A comment for field `region` in message `.google.shopping.merchant.inventories.v1beta.RegionalInventory` is changed ([commit 012c5af](https://github.com/googleapis/google-cloud-dotnet/commit/012c5af36d1c7b91b0450989019937d4979c0c85))
+
 ## Version 1.0.0-beta04, released 2024-03-27
 
 ### New features

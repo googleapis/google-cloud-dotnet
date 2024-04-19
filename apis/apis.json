@@ -5691,7 +5691,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.Inventories.V1Beta",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "Merchant Inventories",
       "productUrl": "https://developers.google.com/merchant/api",
@@ -5701,7 +5701,7 @@
         "inventory"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta04"
+        "Google.Shopping.Type": "1.0.0-beta05"
       },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/inventories/v1beta",
