@@ -45,13 +45,13 @@ namespace Google.Cloud.Deploy.V1
                 },
                 {
                     "google.iam.v1.IAMPolicy.GetIamPolicy",
-                    // { "get": "/v1/{resource=projects/*/locations/*/deliveryPipelines/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/targets/*}:getIamPolicy" } ] }
-                    proto::ByteString.FromBase64("EkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGVsaXZlcnlQaXBlbGluZXMvKn06Z2V0SWFtUG9saWN5Wj4SPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXJnZXRzLyp9OmdldElhbVBvbGljeQ==")
+                    // { "get": "/v1/{resource=projects/*/locations/*/deliveryPipelines/*}:getIamPolicy", "additionalBindings": [ { "get": "/v1/{resource=projects/*/locations/*/targets/*}:getIamPolicy" }, { "get": "/v1/{resource=projects/*/locations/*/customTargetTypes/*}:getIamPolicy" } ] }
+                    proto::ByteString.FromBase64("EkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGVsaXZlcnlQaXBlbGluZXMvKn06Z2V0SWFtUG9saWN5Wj4SPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXJnZXRzLyp9OmdldElhbVBvbGljeVpIEkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY3VzdG9tVGFyZ2V0VHlwZXMvKn06Z2V0SWFtUG9saWN5")
                 },
                 {
                     "google.iam.v1.IAMPolicy.SetIamPolicy",
-                    // { "post": "/v1/{resource=projects/*/locations/*/deliveryPipelines/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/targets/*}:setIamPolicy", "body": "*" } ] }
-                    proto::ByteString.FromBase64("IkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGVsaXZlcnlQaXBlbGluZXMvKn06c2V0SWFtUG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXJnZXRzLyp9OnNldElhbVBvbGljeToBKg==")
+                    // { "post": "/v1/{resource=projects/*/locations/*/deliveryPipelines/*}:setIamPolicy", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/targets/*}:setIamPolicy", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/customTargetTypes/*}:setIamPolicy", "body": "*" } ] }
+                    proto::ByteString.FromBase64("IkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZGVsaXZlcnlQaXBlbGluZXMvKn06c2V0SWFtUG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXJnZXRzLyp9OnNldElhbVBvbGljeToBKlpLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY3VzdG9tVGFyZ2V0VHlwZXMvKn06c2V0SWFtUG9saWN5OgEq")
                 },
                 {
                     "google.iam.v1.IAMPolicy.TestIamPermissions",
