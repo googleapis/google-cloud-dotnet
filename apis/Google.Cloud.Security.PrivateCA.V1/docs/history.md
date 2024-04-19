@@ -1,5 +1,22 @@
 # Version history
 
+## Version 3.7.0, released 2024-04-19
+
+### New features
+
+- Add encoding format to `.google.cloud.security.privateca.v1.CaPool` Resource ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+
+### Documentation improvements
+
+- A comment for field `maximum_lifetime` in message `.google.cloud.security.privateca.v1.CaPool` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `maximum_lifetime` in message `.google.cloud.security.privateca.v1.CertificateTemplate` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `subject_key_id` in message `.google.cloud.security.privateca.v1.CertificateConfig` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for method `FetchCaCerts` in service `CertificateAuthorityService` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DisableCertificateAuthorityRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DeleteCertificateAuthorityRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DeleteCaPoolRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ca_certs` in message `.google.cloud.security.privateca.v1.FetchCaCertsResponse` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+
 ## Version 3.6.0, released 2024-03-26
 
 ### New features
