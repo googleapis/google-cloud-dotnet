@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.14.0, released 2024-04-19
+
+### New features
+
+- Publish Automated Backups protos ([commit 1dff99b](https://github.com/googleapis/google-cloud-dotnet/commit/1dff99b7f0d0f1c14cf2a8e384525dd57436c2fe))
+
 ## Version 3.13.0, released 2024-03-27
 
 ### New features
