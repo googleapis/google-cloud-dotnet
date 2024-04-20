@@ -2533,8 +2533,8 @@ namespace Google.Maps.Places.V1 {
         public const int MinimumChargingRateKwFieldNumber = 1;
         private double minimumChargingRateKw_;
         /// <summary>
-        /// Optional. Filtering places by minimum charging rate. Any places with
-        /// charging a rate less than the minimum charging rate are filtered out.
+        /// Optional. Minimum required charging rate in kilowatts. A place with a
+        /// charging rate less than the specified rate is filtered out.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2552,7 +2552,7 @@ namespace Google.Maps.Places.V1 {
         private readonly pbc::RepeatedField<global::Google.Maps.Places.V1.EVConnectorType> connectorTypes_ = new pbc::RepeatedField<global::Google.Maps.Places.V1.EVConnectorType>();
         /// <summary>
         /// Optional. The list of preferred EV connector types. A place that does not
-        /// support any of the listed connector types are filter out.
+        /// support any of the listed connector types is filtered out.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
