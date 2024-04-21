@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_sync_flattened_resourceNames]
+    // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_sync_flattened_resourceNames1]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
 
@@ -30,7 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateSecretResourceNames()
+        public void CreateSecretResourceNames1()
         {
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
@@ -42,5 +42,5 @@ namespace GoogleCSharpSnippets
             Secret response = secretManagerServiceClient.CreateSecret(parent, secretId, secret);
         }
     }
-    // [END secretmanager_v1_generated_SecretManagerService_CreateSecret_sync_flattened_resourceNames]
+    // [END secretmanager_v1_generated_SecretManagerService_CreateSecret_sync_flattened_resourceNames1]
 }

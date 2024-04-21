@@ -4074,7 +4074,8 @@
       "type": "grpc",
       "description": "Recommended Google client library to access the Secret Manager API (v1).",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.2.0",
+        "Google.Cloud.Location": "2.2.0"
       },
       "tags": [
         "secret",

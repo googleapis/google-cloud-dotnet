@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_async_flattened_resourceNames]
+    // [START secretmanager_v1_generated_SecretManagerService_CreateSecret_async_flattened_resourceNames1]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
     using System.Threading.Tasks;
@@ -31,7 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateSecretResourceNamesAsync()
+        public async Task CreateSecretResourceNames1Async()
         {
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
@@ -43,5 +43,5 @@ namespace GoogleCSharpSnippets
             Secret response = await secretManagerServiceClient.CreateSecretAsync(parent, secretId, secret);
         }
     }
-    // [END secretmanager_v1_generated_SecretManagerService_CreateSecret_async_flattened_resourceNames]
+    // [END secretmanager_v1_generated_SecretManagerService_CreateSecret_async_flattened_resourceNames1]
 }
