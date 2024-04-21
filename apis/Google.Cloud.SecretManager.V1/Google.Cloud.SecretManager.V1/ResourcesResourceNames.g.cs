@@ -32,9 +32,16 @@ namespace Google.Cloud.SecretManager.V1
 
             /// <summary>A resource name with pattern <c>projects/{project}/secrets/{secret}</c>.</summary>
             ProjectSecret = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/secrets/{secret}</c>.
+            /// </summary>
+            ProjectLocationSecret = 2,
         }
 
         private static gax::PathTemplate s_projectSecret = new gax::PathTemplate("projects/{project}/secrets/{secret}");
+
+        private static gax::PathTemplate s_projectLocationSecret = new gax::PathTemplate("projects/{project}/locations/{location}/secrets/{secret}");
 
         /// <summary>Creates a <see cref="SecretName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -52,6 +59,17 @@ namespace Google.Cloud.SecretManager.V1
         /// <returns>A new instance of <see cref="SecretName"/> constructed from the provided ids.</returns>
         public static SecretName FromProjectSecret(string projectId, string secretId) =>
             new SecretName(ResourceNameType.ProjectSecret, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecretName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecretName"/> constructed from the provided ids.</returns>
+        public static SecretName FromProjectLocationSecret(string projectId, string locationId, string secretId) =>
+            new SecretName(ResourceNameType.ProjectLocationSecret, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SecretName"/> with pattern
@@ -78,11 +96,26 @@ namespace Google.Cloud.SecretManager.V1
         public static string FormatProjectSecret(string projectId, string secretId) =>
             s_projectSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}</c>.
+        /// </returns>
+        public static string FormatProjectLocationSecret(string projectId, string locationId, string secretId) =>
+            s_projectLocationSecret.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="SecretName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/secrets/{secret}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -97,6 +130,7 @@ namespace Google.Cloud.SecretManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/secrets/{secret}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -117,6 +151,7 @@ namespace Google.Cloud.SecretManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/secrets/{secret}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="secretName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -134,6 +169,7 @@ namespace Google.Cloud.SecretManager.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/secrets/{secret}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/secrets/{secret}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -156,6 +192,11 @@ namespace Google.Cloud.SecretManager.V1
                 result = FromProjectSecret(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_projectLocationSecret.TryParseName(secretName, out resourceName))
+            {
+                result = FromProjectLocationSecret(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(secretName, out gax::UnparsedResourceName unparsedResourceName))
@@ -168,10 +209,11 @@ namespace Google.Cloud.SecretManager.V1
             return false;
         }
 
-        private SecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string secretId = null)
+        private SecretName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string secretId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
             ProjectId = projectId;
             SecretId = secretId;
         }
@@ -196,12 +238,17 @@ namespace Google.Cloud.SecretManager.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Secret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Secret</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string SecretId { get; }
 
@@ -216,6 +263,7 @@ namespace Google.Cloud.SecretManager.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectSecret: return s_projectSecret.Expand(ProjectId, SecretId);
+                case ResourceNameType.ProjectLocationSecret: return s_projectLocationSecret.Expand(ProjectId, LocationId, SecretId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -261,9 +309,17 @@ namespace Google.Cloud.SecretManager.V1
             /// A resource name with pattern <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
             /// </summary>
             ProjectSecretSecretVersion = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>.
+            /// </summary>
+            ProjectLocationSecretSecretVersion = 2,
         }
 
         private static gax::PathTemplate s_projectSecretSecretVersion = new gax::PathTemplate("projects/{project}/secrets/{secret}/versions/{secret_version}");
+
+        private static gax::PathTemplate s_projectLocationSecretSecretVersion = new gax::PathTemplate("projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}");
 
         /// <summary>Creates a <see cref="SecretVersionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -284,6 +340,18 @@ namespace Google.Cloud.SecretManager.V1
         /// <returns>A new instance of <see cref="SecretVersionName"/> constructed from the provided ids.</returns>
         public static SecretVersionName FromProjectSecretSecretVersion(string projectId, string secretId, string secretVersionId) =>
             new SecretVersionName(ResourceNameType.ProjectSecretSecretVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), secretVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
+
+        /// <summary>
+        /// Creates a <see cref="SecretVersionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SecretVersionName"/> constructed from the provided ids.</returns>
+        public static SecretVersionName FromProjectLocationSecretSecretVersion(string projectId, string locationId, string secretId, string secretVersionId) =>
+            new SecretVersionName(ResourceNameType.ProjectLocationSecretSecretVersion, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), secretId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), secretVersionId: gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SecretVersionName"/> with pattern
@@ -314,6 +382,21 @@ namespace Google.Cloud.SecretManager.V1
             s_projectSecretSecretVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretId">The <c>Secret</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="secretVersionId">The <c>SecretVersion</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SecretVersionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>.
+        /// </returns>
+        public static string FormatProjectLocationSecretSecretVersion(string projectId, string locationId, string secretId, string secretVersionId) =>
+            s_projectLocationSecretSecretVersion.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)), gax::GaxPreconditions.CheckNotNullOrEmpty(secretVersionId, nameof(secretVersionId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="SecretVersionName"/> instance.
         /// </summary>
         /// <remarks>
@@ -321,6 +404,11 @@ namespace Google.Cloud.SecretManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -337,6 +425,11 @@ namespace Google.Cloud.SecretManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -360,6 +453,11 @@ namespace Google.Cloud.SecretManager.V1
         /// <item>
         /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="secretVersionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -379,6 +477,11 @@ namespace Google.Cloud.SecretManager.V1
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/secrets/{secret}/versions/{secret_version}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -402,6 +505,11 @@ namespace Google.Cloud.SecretManager.V1
                 result = FromProjectSecretSecretVersion(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationSecretSecretVersion.TryParseName(secretVersionName, out resourceName))
+            {
+                result = FromProjectLocationSecretSecretVersion(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(secretVersionName, out gax::UnparsedResourceName unparsedResourceName))
@@ -414,10 +522,11 @@ namespace Google.Cloud.SecretManager.V1
             return false;
         }
 
-        private SecretVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string secretId = null, string secretVersionId = null)
+        private SecretVersionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string secretId = null, string secretVersionId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
             ProjectId = projectId;
             SecretId = secretId;
             SecretVersionId = secretVersionId;
@@ -444,18 +553,23 @@ namespace Google.Cloud.SecretManager.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Secret</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Secret</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string SecretId { get; }
 
         /// <summary>
-        /// The <c>SecretVersion</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>SecretVersion</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string SecretVersionId { get; }
 
@@ -470,6 +584,7 @@ namespace Google.Cloud.SecretManager.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectSecretSecretVersion: return s_projectSecretSecretVersion.Expand(ProjectId, SecretId, SecretVersionId);
+                case ResourceNameType.ProjectLocationSecretSecretVersion: return s_projectLocationSecretSecretVersion.Expand(ProjectId, LocationId, SecretId, SecretVersionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

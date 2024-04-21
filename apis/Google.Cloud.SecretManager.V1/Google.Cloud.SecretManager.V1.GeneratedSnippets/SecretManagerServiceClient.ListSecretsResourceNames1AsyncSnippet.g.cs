@@ -16,15 +16,17 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START secretmanager_v1_generated_SecretManagerService_ListSecrets_sync_flattened_resourceNames]
+    // [START secretmanager_v1_generated_SecretManagerService_ListSecrets_async_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.SecretManager.V1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedSecretManagerServiceClientSnippets
     {
-        /// <summary>Snippet for ListSecrets</summary>
+        /// <summary>Snippet for ListSecretsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +34,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListSecretsResourceNames()
+        public async Task ListSecretsResourceNames1Async()
         {
             // Create client
-            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             // Make the request
-            PagedEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecrets(parent);
+            PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Secret item in response)
+            await response.ForEachAsync((Secret item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSecretsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((ListSecretsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -58,11 +60,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Secret> singlePage = response.ReadPage(pageSize);
+            Page<Secret> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (Secret item in singlePage)
@@ -74,5 +76,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END secretmanager_v1_generated_SecretManagerService_ListSecrets_sync_flattened_resourceNames]
+    // [END secretmanager_v1_generated_SecretManagerService_ListSecrets_async_flattened_resourceNames1]
 }

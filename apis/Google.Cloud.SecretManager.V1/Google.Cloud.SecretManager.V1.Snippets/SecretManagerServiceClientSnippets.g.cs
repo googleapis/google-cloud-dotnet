@@ -217,7 +217,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListSecrets</summary>
-        public void ListSecretsResourceNames()
+        public void ListSecretsResourceNames1()
         {
             // Snippet: ListSecrets(ProjectName, string, int?, CallSettings)
             // Create client
@@ -262,13 +262,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListSecretsAsync</summary>
-        public async Task ListSecretsResourceNamesAsync()
+        public async Task ListSecretsResourceNames1Async()
         {
             // Snippet: ListSecretsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Secret item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSecretsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Secret item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Secret> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Secret item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecrets</summary>
+        public void ListSecretsResourceNames2()
+        {
+            // Snippet: ListSecrets(LocationName, string, int?, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecrets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Secret item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSecretsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Secret item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Secret> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Secret item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSecretsAsync</summary>
+        public async Task ListSecretsResourceNames2Async()
+        {
+            // Snippet: ListSecretsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListSecretsResponse, Secret> response = secretManagerServiceClient.ListSecretsAsync(parent);
 
@@ -375,7 +465,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSecret</summary>
-        public void CreateSecretResourceNames()
+        public void CreateSecretResourceNames1()
         {
             // Snippet: CreateSecret(ProjectName, string, Secret, CallSettings)
             // Create client
@@ -390,7 +480,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateSecretAsync</summary>
-        public async Task CreateSecretResourceNamesAsync()
+        public async Task CreateSecretResourceNames1Async()
         {
             // Snippet: CreateSecretAsync(ProjectName, string, Secret, CallSettings)
             // Additional: CreateSecretAsync(ProjectName, string, Secret, CancellationToken)
@@ -398,6 +488,37 @@ namespace GoogleCSharpSnippets
             SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            string secretId = "";
+            Secret secret = new Secret();
+            // Make the request
+            Secret response = await secretManagerServiceClient.CreateSecretAsync(parent, secretId, secret);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecret</summary>
+        public void CreateSecretResourceNames2()
+        {
+            // Snippet: CreateSecret(LocationName, string, Secret, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string secretId = "";
+            Secret secret = new Secret();
+            // Make the request
+            Secret response = secretManagerServiceClient.CreateSecret(parent, secretId, secret);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSecretAsync</summary>
+        public async Task CreateSecretResourceNames2Async()
+        {
+            // Snippet: CreateSecretAsync(LocationName, string, Secret, CallSettings)
+            // Additional: CreateSecretAsync(LocationName, string, Secret, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string secretId = "";
             Secret secret = new Secret();
             // Make the request
