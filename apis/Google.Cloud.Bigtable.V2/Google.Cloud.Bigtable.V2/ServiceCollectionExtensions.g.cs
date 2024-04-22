@@ -43,5 +43,23 @@ namespace Microsoft.Extensions.DependencyInjection
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcbv::BigtableServiceApiClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddBigtableServiceApiClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::BigtableServiceApiClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::BigtableServiceApiClientBuilder builder = new gcbv::BigtableServiceApiClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
     }
 }

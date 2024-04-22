@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::FlexTemplatesServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFlexTemplatesServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::FlexTemplatesServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::FlexTemplatesServiceClientBuilder builder = new gcdv::FlexTemplatesServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::JobsV1Beta3Client"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +75,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::JobsV1Beta3ClientBuilder builder = new gcdv::JobsV1Beta3ClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::JobsV1Beta3Client"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddJobsV1Beta3Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::JobsV1Beta3ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::JobsV1Beta3ClientBuilder builder = new gcdv::JobsV1Beta3ClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -78,6 +112,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::MessagesV1Beta3Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMessagesV1Beta3Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::MessagesV1Beta3ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::MessagesV1Beta3ClientBuilder builder = new gcdv::MessagesV1Beta3ClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::MetricsV1Beta3Client"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -91,6 +143,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::MetricsV1Beta3ClientBuilder builder = new gcdv::MetricsV1Beta3ClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::MetricsV1Beta3Client"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMetricsV1Beta3Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::MetricsV1Beta3ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::MetricsV1Beta3ClientBuilder builder = new gcdv::MetricsV1Beta3ClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -113,6 +181,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::SnapshotsV1Beta3Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSnapshotsV1Beta3Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::SnapshotsV1Beta3ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SnapshotsV1Beta3ClientBuilder builder = new gcdv::SnapshotsV1Beta3ClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::TemplatesServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -127,6 +213,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::TemplatesServiceClientBuilder builder = new gcdv::TemplatesServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::TemplatesServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTemplatesServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::TemplatesServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::TemplatesServiceClientBuilder builder = new gcdv::TemplatesServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

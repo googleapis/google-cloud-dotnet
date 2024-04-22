@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcsv::QuotaControllerClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddQuotaControllerClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::QuotaControllerClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::QuotaControllerClientBuilder builder = new gcsv::QuotaControllerClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcsv::ServiceControllerClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -59,6 +77,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcsv::ServiceControllerClientBuilder builder = new gcsv::ServiceControllerClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcsv::ServiceControllerClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddServiceControllerClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::ServiceControllerClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::ServiceControllerClientBuilder builder = new gcsv::ServiceControllerClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

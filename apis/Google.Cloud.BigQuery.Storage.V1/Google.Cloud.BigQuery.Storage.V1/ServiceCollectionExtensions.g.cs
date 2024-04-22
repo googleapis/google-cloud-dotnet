@@ -42,6 +42,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcbsv::BigQueryReadClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddBigQueryReadClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbsv::BigQueryReadClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbsv::BigQueryReadClientBuilder builder = new gcbsv::BigQueryReadClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcbsv::BigQueryWriteClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -55,6 +71,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcbsv::BigQueryWriteClientBuilder builder = new gcbsv::BigQueryWriteClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcbsv::BigQueryWriteClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddBigQueryWriteClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbsv::BigQueryWriteClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbsv::BigQueryWriteClientBuilder builder = new gcbsv::BigQueryWriteClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

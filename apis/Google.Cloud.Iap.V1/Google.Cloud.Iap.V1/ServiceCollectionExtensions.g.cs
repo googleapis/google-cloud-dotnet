@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gciv::IdentityAwareProxyAdminServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddIdentityAwareProxyAdminServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gciv::IdentityAwareProxyAdminServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gciv::IdentityAwareProxyAdminServiceClientBuilder builder = new gciv::IdentityAwareProxyAdminServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gciv::IdentityAwareProxyOAuthServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -59,6 +77,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gciv::IdentityAwareProxyOAuthServiceClientBuilder builder = new gciv::IdentityAwareProxyOAuthServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gciv::IdentityAwareProxyOAuthServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddIdentityAwareProxyOAuthServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gciv::IdentityAwareProxyOAuthServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gciv::IdentityAwareProxyOAuthServiceClientBuilder builder = new gciv::IdentityAwareProxyOAuthServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

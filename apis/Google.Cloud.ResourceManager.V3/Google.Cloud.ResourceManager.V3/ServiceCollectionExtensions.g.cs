@@ -44,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::FoldersClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFoldersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::FoldersClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::FoldersClientBuilder builder = new gcrv::FoldersClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcrv::OrganizationsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +73,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcrv::OrganizationsClientBuilder builder = new gcrv::OrganizationsClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcrv::OrganizationsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddOrganizationsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::OrganizationsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::OrganizationsClientBuilder builder = new gcrv::OrganizationsClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -76,6 +108,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::ProjectsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProjectsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::ProjectsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::ProjectsClientBuilder builder = new gcrv::ProjectsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcrv::TagBindingsClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -89,6 +137,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcrv::TagBindingsClientBuilder builder = new gcrv::TagBindingsClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcrv::TagBindingsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTagBindingsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::TagBindingsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::TagBindingsClientBuilder builder = new gcrv::TagBindingsClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -108,6 +172,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::TagHoldsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTagHoldsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::TagHoldsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::TagHoldsClientBuilder builder = new gcrv::TagHoldsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcrv::TagKeysClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -124,6 +204,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::TagKeysClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTagKeysClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::TagKeysClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::TagKeysClientBuilder builder = new gcrv::TagKeysClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcrv::TagValuesClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -137,6 +233,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcrv::TagValuesClientBuilder builder = new gcrv::TagValuesClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcrv::TagValuesClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTagValuesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::TagValuesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::TagValuesClientBuilder builder = new gcrv::TagValuesClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

@@ -43,5 +43,21 @@ namespace Microsoft.Extensions.DependencyInjection
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
+
+        /// <summary>Adds a singleton <see cref="gcsv::CloudSchedulerClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCloudSchedulerClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::CloudSchedulerClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::CloudSchedulerClientBuilder builder = new gcsv::CloudSchedulerClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
     }
 }

@@ -44,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcoasv::EnvironmentsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddEnvironmentsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcoasv::EnvironmentsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcoasv::EnvironmentsClientBuilder builder = new gcoasv::EnvironmentsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcoasv::ImageVersionsClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -59,6 +75,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcoasv::ImageVersionsClientBuilder builder = new gcoasv::ImageVersionsClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcoasv::ImageVersionsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddImageVersionsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcoasv::ImageVersionsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcoasv::ImageVersionsClientBuilder builder = new gcoasv::ImageVersionsClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

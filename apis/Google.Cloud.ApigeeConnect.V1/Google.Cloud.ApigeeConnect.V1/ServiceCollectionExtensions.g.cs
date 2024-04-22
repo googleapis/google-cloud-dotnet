@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcav::ConnectionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddConnectionServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::ConnectionServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::ConnectionServiceClientBuilder builder = new gcav::ConnectionServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcav::TetherClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +75,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcav::TetherClientBuilder builder = new gcav::TetherClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcav::TetherClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTetherClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcav::TetherClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcav::TetherClientBuilder builder = new gcav::TetherClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

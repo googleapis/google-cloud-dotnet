@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gscv::AccountLabelsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAccountLabelsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gscv::AccountLabelsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gscv::AccountLabelsServiceClientBuilder builder = new gscv::AccountLabelsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gscv::AccountsServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -59,6 +77,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gscv::AccountsServiceClientBuilder builder = new gscv::AccountsServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gscv::AccountsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAccountsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gscv::AccountsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gscv::AccountsServiceClientBuilder builder = new gscv::AccountsServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -81,6 +117,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gscv::CssProductInputsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCssProductInputsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gscv::CssProductInputsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gscv::CssProductInputsServiceClientBuilder builder = new gscv::CssProductInputsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gscv::CssProductsServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -95,6 +149,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gscv::CssProductsServiceClientBuilder builder = new gscv::CssProductsServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gscv::CssProductsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCssProductsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gscv::CssProductsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gscv::CssProductsServiceClientBuilder builder = new gscv::CssProductsServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

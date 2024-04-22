@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcsv::CaseAttachmentServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCaseAttachmentServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::CaseAttachmentServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::CaseAttachmentServiceClientBuilder builder = new gcsv::CaseAttachmentServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcsv::CaseServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -60,6 +78,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcsv::CaseServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCaseServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::CaseServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::CaseServiceClientBuilder builder = new gcsv::CaseServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcsv::CommentServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -73,6 +107,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcsv::CommentServiceClientBuilder builder = new gcsv::CommentServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcsv::CommentServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCommentServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::CommentServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::CommentServiceClientBuilder builder = new gcsv::CommentServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

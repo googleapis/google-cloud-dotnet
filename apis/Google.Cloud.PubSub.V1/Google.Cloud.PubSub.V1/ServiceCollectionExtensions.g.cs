@@ -46,6 +46,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcpv::PublisherServiceApiClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPublisherServiceApiClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcpv::PublisherServiceApiClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::PublisherServiceApiClientBuilder builder = new gcpv::PublisherServiceApiClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcpv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -59,6 +77,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcpv::SchemaServiceClientBuilder builder = new gcpv::SchemaServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcpv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSchemaServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcpv::SchemaServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::SchemaServiceClientBuilder builder = new gcpv::SchemaServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -77,6 +111,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcpv::SubscriberServiceApiClientBuilder builder = new gcpv::SubscriberServiceApiClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcpv::SubscriberServiceApiClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSubscriberServiceApiClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcpv::SubscriberServiceApiClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::SubscriberServiceApiClientBuilder builder = new gcpv::SubscriberServiceApiClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

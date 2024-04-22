@@ -42,6 +42,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gmfv::TripServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTripServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gmfv::TripServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gmfv::TripServiceClientBuilder builder = new gmfv::TripServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gmfv::VehicleServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -55,6 +71,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gmfv::VehicleServiceClientBuilder builder = new gmfv::VehicleServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gmfv::VehicleServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddVehicleServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gmfv::VehicleServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gmfv::VehicleServiceClientBuilder builder = new gmfv::VehicleServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

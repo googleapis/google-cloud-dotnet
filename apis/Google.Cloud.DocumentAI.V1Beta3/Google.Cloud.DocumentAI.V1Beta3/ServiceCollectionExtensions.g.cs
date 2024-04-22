@@ -48,6 +48,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::DocumentProcessorServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDocumentProcessorServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::DocumentProcessorServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DocumentProcessorServiceClientBuilder builder = new gcdv::DocumentProcessorServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::DocumentServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -62,6 +80,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::DocumentServiceClientBuilder builder = new gcdv::DocumentServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::DocumentServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDocumentServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::DocumentServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DocumentServiceClientBuilder builder = new gcdv::DocumentServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

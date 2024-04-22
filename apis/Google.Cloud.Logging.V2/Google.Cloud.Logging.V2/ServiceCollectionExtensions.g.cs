@@ -47,6 +47,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gclv::ConfigServiceV2Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddConfigServiceV2Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gclv::ConfigServiceV2ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gclv::ConfigServiceV2ClientBuilder builder = new gclv::ConfigServiceV2ClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gclv::LoggingServiceV2Client"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -65,6 +83,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gclv::LoggingServiceV2Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLoggingServiceV2Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gclv::LoggingServiceV2ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gclv::LoggingServiceV2ClientBuilder builder = new gclv::LoggingServiceV2ClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gclv::MetricsServiceV2Client"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -79,6 +115,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gclv::MetricsServiceV2ClientBuilder builder = new gclv::MetricsServiceV2ClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gclv::MetricsServiceV2Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMetricsServiceV2Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gclv::MetricsServiceV2ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gclv::MetricsServiceV2ClientBuilder builder = new gclv::MetricsServiceV2ClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

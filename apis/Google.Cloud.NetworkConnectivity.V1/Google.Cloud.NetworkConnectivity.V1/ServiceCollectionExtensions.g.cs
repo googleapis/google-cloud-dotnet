@@ -46,6 +46,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcnv::HubServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddHubServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcnv::HubServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcnv::HubServiceClientBuilder builder = new gcnv::HubServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcnv::PolicyBasedRoutingServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -61,6 +77,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcnv::PolicyBasedRoutingServiceClientBuilder builder = new gcnv::PolicyBasedRoutingServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcnv::PolicyBasedRoutingServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPolicyBasedRoutingServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcnv::PolicyBasedRoutingServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcnv::PolicyBasedRoutingServiceClientBuilder builder = new gcnv::PolicyBasedRoutingServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

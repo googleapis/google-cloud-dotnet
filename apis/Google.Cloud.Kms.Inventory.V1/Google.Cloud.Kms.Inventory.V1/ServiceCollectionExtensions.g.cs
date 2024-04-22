@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gckiv::KeyDashboardServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddKeyDashboardServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gckiv::KeyDashboardServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gckiv::KeyDashboardServiceClientBuilder builder = new gckiv::KeyDashboardServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gckiv::KeyTrackingServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -59,6 +77,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gckiv::KeyTrackingServiceClientBuilder builder = new gckiv::KeyTrackingServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gckiv::KeyTrackingServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddKeyTrackingServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gckiv::KeyTrackingServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gckiv::KeyTrackingServiceClientBuilder builder = new gckiv::KeyTrackingServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

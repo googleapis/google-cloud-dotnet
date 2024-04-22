@@ -48,6 +48,25 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::CloudChannelReportsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        [sys::ObsoleteAttribute]
+        public static IServiceCollection AddCloudChannelReportsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::CloudChannelReportsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::CloudChannelReportsServiceClientBuilder builder = new gccv::CloudChannelReportsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::CloudChannelServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -62,6 +81,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gccv::CloudChannelServiceClientBuilder builder = new gccv::CloudChannelServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::CloudChannelServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCloudChannelServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::CloudChannelServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::CloudChannelServiceClientBuilder builder = new gccv::CloudChannelServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

@@ -46,6 +46,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcgv::AttachedClustersClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAttachedClustersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::AttachedClustersClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcgv::AttachedClustersClientBuilder builder = new gcgv::AttachedClustersClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcgv::AwsClustersClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -62,6 +80,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcgv::AwsClustersClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAwsClustersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::AwsClustersClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcgv::AwsClustersClientBuilder builder = new gcgv::AwsClustersClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcgv::AzureClustersClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -75,6 +109,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcgv::AzureClustersClientBuilder builder = new gcgv::AzureClustersClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcgv::AzureClustersClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAzureClustersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::AzureClustersClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcgv::AzureClustersClientBuilder builder = new gcgv::AzureClustersClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }
