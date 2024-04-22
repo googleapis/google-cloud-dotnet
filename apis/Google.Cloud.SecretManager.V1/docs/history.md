@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.4.0, released 2024-04-22
+
+### New features
+
+- Add Secret Version Delayed Destroy changes for client libraries ([commit 88109d4](https://github.com/googleapis/google-cloud-dotnet/commit/88109d4ef7e80a8b3aca73c85594b069b555583e))
+
+### Documentation improvements
+
+- Users can now enable secret version delayed destruction ([commit 88109d4](https://github.com/googleapis/google-cloud-dotnet/commit/88109d4ef7e80a8b3aca73c85594b069b555583e))
+
 ## Version 2.3.0, released 2024-03-26
 
 ### New features
