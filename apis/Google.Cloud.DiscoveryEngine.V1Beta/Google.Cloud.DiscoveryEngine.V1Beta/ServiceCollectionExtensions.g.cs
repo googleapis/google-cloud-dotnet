@@ -48,6 +48,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::CompletionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCompletionServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::CompletionServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::CompletionServiceClientBuilder builder = new gcdv::CompletionServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::ConversationalSearchServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -62,6 +80,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::ConversationalSearchServiceClientBuilder builder = new gcdv::ConversationalSearchServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::ConversationalSearchServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddConversationalSearchServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::ConversationalSearchServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::ConversationalSearchServiceClientBuilder builder = new gcdv::ConversationalSearchServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -84,6 +120,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::DataStoreServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDataStoreServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::DataStoreServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DataStoreServiceClientBuilder builder = new gcdv::DataStoreServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::DocumentServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -101,6 +155,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::DocumentServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDocumentServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::DocumentServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::DocumentServiceClientBuilder builder = new gcdv::DocumentServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::EngineServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -114,6 +186,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::EngineServiceClientBuilder builder = new gcdv::EngineServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::EngineServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddEngineServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::EngineServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::EngineServiceClientBuilder builder = new gcdv::EngineServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -135,6 +223,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::GroundedGenerationServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGroundedGenerationServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::GroundedGenerationServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::GroundedGenerationServiceClientBuilder builder = new gcdv::GroundedGenerationServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::RankServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -148,6 +254,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::RankServiceClientBuilder builder = new gcdv::RankServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::RankServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRankServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::RankServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::RankServiceClientBuilder builder = new gcdv::RankServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -169,6 +291,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::RecommendationServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRecommendationServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::RecommendationServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::RecommendationServiceClientBuilder builder = new gcdv::RecommendationServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -185,6 +325,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcdv::SchemaServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSchemaServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::SchemaServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SchemaServiceClientBuilder builder = new gcdv::SchemaServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcdv::SearchServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -198,6 +354,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::SearchServiceClientBuilder builder = new gcdv::SearchServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::SearchServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSearchServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::SearchServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SearchServiceClientBuilder builder = new gcdv::SearchServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -220,6 +392,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::SearchTuningServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSearchTuningServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::SearchTuningServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SearchTuningServiceClientBuilder builder = new gcdv::SearchTuningServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::ServingConfigServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -234,6 +424,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::ServingConfigServiceClientBuilder builder = new gcdv::ServingConfigServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::ServingConfigServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddServingConfigServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::ServingConfigServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::ServingConfigServiceClientBuilder builder = new gcdv::ServingConfigServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -256,6 +464,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcdv::SiteSearchEngineServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSiteSearchEngineServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::SiteSearchEngineServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::SiteSearchEngineServiceClientBuilder builder = new gcdv::SiteSearchEngineServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcdv::UserEventServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -270,6 +496,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcdv::UserEventServiceClientBuilder builder = new gcdv::UserEventServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcdv::UserEventServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserEventServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::UserEventServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::UserEventServiceClientBuilder builder = new gcdv::UserEventServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

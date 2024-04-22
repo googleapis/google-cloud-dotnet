@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcbv::BinauthzManagementServiceV1Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddBinauthzManagementServiceV1Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::BinauthzManagementServiceV1ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::BinauthzManagementServiceV1ClientBuilder builder = new gcbv::BinauthzManagementServiceV1ClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcbv::SystemPolicyV1Client"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +75,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcbv::SystemPolicyV1ClientBuilder builder = new gcbv::SystemPolicyV1ClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcbv::SystemPolicyV1Client"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSystemPolicyV1Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::SystemPolicyV1ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::SystemPolicyV1ClientBuilder builder = new gcbv::SystemPolicyV1ClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -75,6 +109,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcbv::ValidationHelperV1ClientBuilder builder = new gcbv::ValidationHelperV1ClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcbv::ValidationHelperV1Client"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddValidationHelperV1Client(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::ValidationHelperV1ClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::ValidationHelperV1ClientBuilder builder = new gcbv::ValidationHelperV1ClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

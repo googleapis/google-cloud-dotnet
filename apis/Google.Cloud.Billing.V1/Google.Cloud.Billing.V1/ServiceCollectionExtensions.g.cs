@@ -42,6 +42,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcbv::CloudBillingClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCloudBillingClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::CloudBillingClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::CloudBillingClientBuilder builder = new gcbv::CloudBillingClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcbv::CloudCatalogClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -55,6 +71,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcbv::CloudCatalogClientBuilder builder = new gcbv::CloudCatalogClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcbv::CloudCatalogClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCloudCatalogClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcbv::CloudCatalogClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcbv::CloudCatalogClientBuilder builder = new gcbv::CloudCatalogClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

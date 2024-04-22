@@ -44,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gctv::CompanyServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCompanyServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gctv::CompanyServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::CompanyServiceClientBuilder builder = new gctv::CompanyServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gctv::CompletionClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +73,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gctv::CompletionClientBuilder builder = new gctv::CompletionClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gctv::CompletionClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCompletionClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gctv::CompletionClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::CompletionClientBuilder builder = new gctv::CompletionClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -76,6 +108,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gctv::EventServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddEventServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gctv::EventServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::EventServiceClientBuilder builder = new gctv::EventServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gctv::JobServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -92,6 +140,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gctv::JobServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddJobServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gctv::JobServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::JobServiceClientBuilder builder = new gctv::JobServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gctv::TenantServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -105,6 +169,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gctv::TenantServiceClientBuilder builder = new gctv::TenantServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gctv::TenantServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTenantServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gctv::TenantServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gctv::TenantServiceClientBuilder builder = new gctv::TenantServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

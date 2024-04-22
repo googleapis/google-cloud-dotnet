@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcev::ErrorGroupServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddErrorGroupServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcev::ErrorGroupServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcev::ErrorGroupServiceClientBuilder builder = new gcev::ErrorGroupServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcev::ErrorStatsServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -63,6 +81,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcev::ErrorStatsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddErrorStatsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcev::ErrorStatsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcev::ErrorStatsServiceClientBuilder builder = new gcev::ErrorStatsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcev::ReportErrorsServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -77,6 +113,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcev::ReportErrorsServiceClientBuilder builder = new gcev::ReportErrorsServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcev::ReportErrorsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddReportErrorsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcev::ReportErrorsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcev::ReportErrorsServiceClientBuilder builder = new gcev::ReportErrorsServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

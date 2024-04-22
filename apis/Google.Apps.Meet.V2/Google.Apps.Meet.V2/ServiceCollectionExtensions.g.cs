@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gamv::ConferenceRecordsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddConferenceRecordsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gamv::ConferenceRecordsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gamv::ConferenceRecordsServiceClientBuilder builder = new gamv::ConferenceRecordsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gamv::SpacesServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -57,6 +75,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gamv::SpacesServiceClientBuilder builder = new gamv::SpacesServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gamv::SpacesServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSpacesServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gamv::SpacesServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gamv::SpacesServiceClientBuilder builder = new gamv::SpacesServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

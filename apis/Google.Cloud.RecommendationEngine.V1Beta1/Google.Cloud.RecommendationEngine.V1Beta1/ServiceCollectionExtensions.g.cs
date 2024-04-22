@@ -44,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcrv::CatalogServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddCatalogServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::CatalogServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::CatalogServiceClientBuilder builder = new gcrv::CatalogServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcrv::PredictionApiKeyRegistryClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -59,6 +75,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcrv::PredictionApiKeyRegistryClientBuilder builder = new gcrv::PredictionApiKeyRegistryClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcrv::PredictionApiKeyRegistryClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPredictionApiKeyRegistryClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::PredictionApiKeyRegistryClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::PredictionApiKeyRegistryClientBuilder builder = new gcrv::PredictionApiKeyRegistryClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -81,6 +115,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gcrv::PredictionServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPredictionServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::PredictionServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::PredictionServiceClientBuilder builder = new gcrv::PredictionServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gcrv::UserEventServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -95,6 +147,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcrv::UserEventServiceClientBuilder builder = new gcrv::UserEventServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcrv::UserEventServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUserEventServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcrv::UserEventServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcrv::UserEventServiceClientBuilder builder = new gcrv::UserEventServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

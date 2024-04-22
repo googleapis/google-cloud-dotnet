@@ -42,6 +42,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcpv::ExportServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddExportServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcpv::ExportServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::ExportServiceClientBuilder builder = new gcpv::ExportServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcpv::ProfilerServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -57,6 +73,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcpv::ProfilerServiceClientBuilder builder = new gcpv::ProfilerServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcpv::ProfilerServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddProfilerServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcpv::ProfilerServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcpv::ProfilerServiceClientBuilder builder = new gcpv::ProfilerServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

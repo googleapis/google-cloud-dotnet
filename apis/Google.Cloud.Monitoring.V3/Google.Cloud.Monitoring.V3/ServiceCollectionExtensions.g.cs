@@ -44,6 +44,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcmv::AlertPolicyServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAlertPolicyServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::AlertPolicyServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::AlertPolicyServiceClientBuilder builder = new gcmv::AlertPolicyServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcmv::GroupServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -60,6 +78,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcmv::GroupServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGroupServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::GroupServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::GroupServiceClientBuilder builder = new gcmv::GroupServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcmv::MetricServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -73,6 +107,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcmv::MetricServiceClientBuilder builder = new gcmv::MetricServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcmv::MetricServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddMetricServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::MetricServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::MetricServiceClientBuilder builder = new gcmv::MetricServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -94,6 +144,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcmv::NotificationChannelServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNotificationChannelServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::NotificationChannelServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::NotificationChannelServiceClientBuilder builder = new gcmv::NotificationChannelServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcmv::QueryServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -107,6 +175,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcmv::QueryServiceClientBuilder builder = new gcmv::QueryServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcmv::QueryServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddQueryServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::QueryServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::QueryServiceClientBuilder builder = new gcmv::QueryServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -128,6 +212,24 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gcmv::ServiceMonitoringServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddServiceMonitoringServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::ServiceMonitoringServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::ServiceMonitoringServiceClientBuilder builder = new gcmv::ServiceMonitoringServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gcmv::SnoozeServiceClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -141,6 +243,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcmv::SnoozeServiceClientBuilder builder = new gcmv::SnoozeServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcmv::SnoozeServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddSnoozeServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::SnoozeServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::SnoozeServiceClientBuilder builder = new gcmv::SnoozeServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
 
@@ -159,6 +277,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcmv::UptimeCheckServiceClientBuilder builder = new gcmv::UptimeCheckServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcmv::UptimeCheckServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddUptimeCheckServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcmv::UptimeCheckServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcmv::UptimeCheckServiceClientBuilder builder = new gcmv::UptimeCheckServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

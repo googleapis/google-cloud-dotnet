@@ -45,6 +45,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gsmlv::LfpInventoryServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLfpInventoryServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmlv::LfpInventoryServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmlv::LfpInventoryServiceClientBuilder builder = new gsmlv::LfpInventoryServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gsmlv::LfpSaleServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -63,6 +81,24 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gsmlv::LfpSaleServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLfpSaleServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmlv::LfpSaleServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmlv::LfpSaleServiceClientBuilder builder = new gsmlv::LfpSaleServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gsmlv::LfpStoreServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -77,6 +113,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gsmlv::LfpStoreServiceClientBuilder builder = new gsmlv::LfpStoreServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmlv::LfpStoreServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLfpStoreServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmlv::LfpStoreServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmlv::LfpStoreServiceClientBuilder builder = new gsmlv::LfpStoreServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }
