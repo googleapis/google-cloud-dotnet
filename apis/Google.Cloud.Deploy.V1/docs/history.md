@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.15.0, released 2024-04-22
+
+### New features
+
+- Add Skaffold remote config support for GCB repos ([commit 153861e](https://github.com/googleapis/google-cloud-dotnet/commit/153861ed8a5c405967a43dd1e0c91aaa2a658780))
+
+### Documentation improvements
+
+- Clarified related comments ([commit 153861e](https://github.com/googleapis/google-cloud-dotnet/commit/153861ed8a5c405967a43dd1e0c91aaa2a658780))
+
 ## Version 2.14.0, released 2024-03-26
 
 ### New features
