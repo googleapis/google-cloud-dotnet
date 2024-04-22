@@ -142,7 +142,8 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Returning 'identical' as the change level; please check carefully before release.");
                 return Level.Identical;
             }
-            string[] candidateTfms = { "netstandard2.1", "netstandard2.0" };
+            // Google.Cloud.Diagnostics.AspNetCore3 targets .NET Core 3.1
+            string[] candidateTfms = { "netstandard2.1", "netstandard2.0", "netcoreapp3.1" };
             var sourceAssembly = candidateTfms
                 .Select(tfm => Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", tfm, $"{api.Id}.dll"))
                 .FirstOrDefault(File.Exists);
@@ -150,7 +151,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"Unable to find the built assembly for {api.Id}. Some possible causes:");
                 Console.WriteLine("- Package has not been built (in Release configuration).");
-                Console.WriteLine("- Package does not target netstandard2.0 or netstandard2.1.");
+                Console.WriteLine($"- Package does not target one of {string.Join(',', candidateTfms)}.");
                 Console.WriteLine($"Returning 'major' as the change level to strongly encourage diagnosis.");
                 return Level.Major;
             }
