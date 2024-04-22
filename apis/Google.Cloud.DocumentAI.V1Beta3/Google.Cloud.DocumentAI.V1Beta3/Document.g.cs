@@ -32,8 +32,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhdn",
             "b29nbGUvdHlwZS9jb2xvci5wcm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90",
             "bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJvdG8aF2dvb2dsZS90eXBlL21v",
-            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byLR",
-            "WAoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
+            "bmV5LnByb3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byKn",
+            "XAoIRG9jdW1lbnQSEgoDdXJpGAEgASgJQgPgQQFIABIWCgdjb250ZW50GAIg",
             "ASgMQgPgQQFIABIRCgltaW1lX3R5cGUYAyABKAkSEQoEdGV4dBgEIAEoCUID",
             "4EEBEkgKC3RleHRfc3R5bGVzGAUgAygLMi8uZ29vZ2xlLmNsb3VkLmRvY3Vt",
             "ZW50YWkudjFiZXRhMy5Eb2N1bWVudC5TdHlsZUICGAESPQoFcGFnZXMYBiAD",
@@ -277,26 +277,37 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             "ZW50TGF5b3V0QmxvY2suTGF5b3V0TGlzdEVudHJ5EgwKBHR5cGUYAiABKAka",
             "bwoPTGF5b3V0TGlzdEVudHJ5ElwKBmJsb2NrcxgBIAMoCzJMLmdvb2dsZS5j",
             "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnQuRG9jdW1lbnRMYXlv",
-            "dXQuRG9jdW1lbnRMYXlvdXRCbG9ja0IHCgVibG9jaxrCAgoPQ2h1bmtlZERv",
+            "dXQuRG9jdW1lbnRMYXlvdXRCbG9ja0IHCgVibG9jaxqYBgoPQ2h1bmtlZERv",
             "Y3VtZW50Ek8KBmNodW5rcxgBIAMoCzI/Lmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTMuRG9jdW1lbnQuQ2h1bmtlZERvY3VtZW50LkNodW5rGt0B",
+            "dGFpLnYxYmV0YTMuRG9jdW1lbnQuQ2h1bmtlZERvY3VtZW50LkNodW5rGrMF",
             "CgVDaHVuaxIQCghjaHVua19pZBgBIAEoCRIYChBzb3VyY2VfYmxvY2tfaWRz",
             "GAIgAygJEg8KB2NvbnRlbnQYAyABKAkSYAoJcGFnZV9zcGFuGAQgASgLMk0u",
             "Z29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5DaHVu",
-            "a2VkRG9jdW1lbnQuQ2h1bmsuQ2h1bmtQYWdlU3Bhbho1Cg1DaHVua1BhZ2VT",
-            "cGFuEhIKCnBhZ2Vfc3RhcnQYASABKAUSEAoIcGFnZV9lbmQYAiABKAVCCAoG",
-            "c291cmNlIpsCCgtSZXZpc2lvblJlZhJSCg1yZXZpc2lvbl9jYXNlGAEgASgO",
-            "MjkuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMy5SZXZpc2lvblJl",
-            "Zi5SZXZpc2lvbkNhc2VIABIVCgtyZXZpc2lvbl9pZBgCIAEoCUgAEiIKGGxh",
-            "dGVzdF9wcm9jZXNzb3JfdmVyc2lvbhgDIAEoCUgAInMKDFJldmlzaW9uQ2Fz",
-            "ZRIdChlSRVZJU0lPTl9DQVNFX1VOU1BFQ0lGSUVEEAASFwoTTEFURVNUX0hV",
-            "TUFOX1JFVklFVxABEhQKEExBVEVTVF9USU1FU1RBTVAQAhIVChFCQVNFX09D",
-            "Ul9SRVZJU0lPThADQggKBnNvdXJjZULkAQojY29tLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTNCDURvY3VtZW50UHJvdG9QAVpDY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBi",
-            "O2RvY3VtZW50YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0",
-            "YTPKAh9Hb29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xl",
-            "OjpDbG91ZDo6RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
+            "a2VkRG9jdW1lbnQuQ2h1bmsuQ2h1bmtQYWdlU3BhbhJlCgxwYWdlX2hlYWRl",
+            "cnMYBSADKAsyTy5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
+            "Y3VtZW50LkNodW5rZWREb2N1bWVudC5DaHVuay5DaHVua1BhZ2VIZWFkZXIS",
+            "ZQoMcGFnZV9mb290ZXJzGAYgAygLMk8uZ29vZ2xlLmNsb3VkLmRvY3VtZW50",
+            "YWkudjFiZXRhMy5Eb2N1bWVudC5DaHVua2VkRG9jdW1lbnQuQ2h1bmsuQ2h1",
+            "bmtQYWdlRm9vdGVyGjUKDUNodW5rUGFnZVNwYW4SEgoKcGFnZV9zdGFydBgB",
+            "IAEoBRIQCghwYWdlX2VuZBgCIAEoBRqBAQoPQ2h1bmtQYWdlSGVhZGVyEgwK",
+            "BHRleHQYASABKAkSYAoJcGFnZV9zcGFuGAIgASgLMk0uZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5DaHVua2VkRG9jdW1lbnQu",
+            "Q2h1bmsuQ2h1bmtQYWdlU3BhbhqBAQoPQ2h1bmtQYWdlRm9vdGVyEgwKBHRl",
+            "eHQYASABKAkSYAoJcGFnZV9zcGFuGAIgASgLMk0uZ29vZ2xlLmNsb3VkLmRv",
+            "Y3VtZW50YWkudjFiZXRhMy5Eb2N1bWVudC5DaHVua2VkRG9jdW1lbnQuQ2h1",
+            "bmsuQ2h1bmtQYWdlU3BhbkIICgZzb3VyY2UimwIKC1JldmlzaW9uUmVmElIK",
+            "DXJldmlzaW9uX2Nhc2UYASABKA4yOS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLlJldmlzaW9uUmVmLlJldmlzaW9uQ2FzZUgAEhUKC3Jldmlz",
+            "aW9uX2lkGAIgASgJSAASIgoYbGF0ZXN0X3Byb2Nlc3Nvcl92ZXJzaW9uGAMg",
+            "ASgJSAAicwoMUmV2aXNpb25DYXNlEh0KGVJFVklTSU9OX0NBU0VfVU5TUEVD",
+            "SUZJRUQQABIXChNMQVRFU1RfSFVNQU5fUkVWSUVXEAESFAoQTEFURVNUX1RJ",
+            "TUVTVEFNUBACEhUKEUJBU0VfT0NSX1JFVklTSU9OEANCCAoGc291cmNlQuQB",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0INRG9jdW1l",
+            "bnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkvYXBp",
+            "djFiZXRhMy9kb2N1bWVudGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29vZ2xlLkNs",
+            "b3VkLkRvY3VtZW50QUkuVjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVu",
+            "dEFJXFYxYmV0YTPqAiJHb29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJl",
+            "dGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.BarcodeReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta3.GeometryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -333,7 +344,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutTableCell), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutTableCell.Parser, new[]{ "Blocks", "RowSpan", "ColSpan" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutListBlock), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutListBlock.Parser, new[]{ "ListEntries", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutListEntry), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.DocumentLayout.Types.DocumentLayoutBlock.Types.LayoutListEntry.Parser, new[]{ "Blocks" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Parser, new[]{ "Chunks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Parser, new[]{ "ChunkId", "SourceBlockIds", "Content", "PageSpan" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan.Parser, new[]{ "PageStart", "PageEnd" }, null, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Parser, new[]{ "Chunks" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Parser, new[]{ "ChunkId", "SourceBlockIds", "Content", "PageSpan", "PageHeaders", "PageFooters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan.Parser, new[]{ "PageStart", "PageEnd" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader.Parser, new[]{ "Text", "PageSpan" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter), global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter.Parser, new[]{ "Text", "PageSpan" }, null, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef), global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Parser, new[]{ "RevisionCase", "RevisionId", "LatestProcessorVersion" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.RevisionRef.Types.RevisionCase) }, null, null)
           }));
     }
@@ -5871,7 +5884,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int StrikeoutFieldNumber = 8;
                 private bool strikeout_;
                 /// <summary>
-                /// Whether the text is strikethrough.
+                /// Whether the text is strikethrough. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5886,7 +5899,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int SubscriptFieldNumber = 9;
                 private bool subscript_;
                 /// <summary>
-                /// Whether the text is a subscript.
+                /// Whether the text is a subscript. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5901,7 +5914,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int SuperscriptFieldNumber = 10;
                 private bool superscript_;
                 /// <summary>
-                /// Whether the text is a superscript.
+                /// Whether the text is a superscript. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5916,7 +5929,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 public const int SmallcapsFieldNumber = 11;
                 private bool smallcaps_;
                 /// <summary>
-                /// Whether the text is in small caps.
+                /// Whether the text is in small caps. This feature is not supported yet.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16145,6 +16158,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               sourceBlockIds_ = other.sourceBlockIds_.Clone();
               content_ = other.content_;
               pageSpan_ = other.pageSpan_ != null ? other.pageSpan_.Clone() : null;
+              pageHeaders_ = other.pageHeaders_.Clone();
+              pageFooters_ = other.pageFooters_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -16175,6 +16190,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 = pb::FieldCodec.ForString(18);
             private readonly pbc::RepeatedField<string> sourceBlockIds_ = new pbc::RepeatedField<string>();
             /// <summary>
+            /// DO NOT USE.
             /// List of all parsed documents layout source blocks used to generate the
             /// chunk.
             /// </summary>
@@ -16214,6 +16230,34 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "page_headers" field.</summary>
+            public const int PageHeadersFieldNumber = 5;
+            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader> _repeated_pageHeaders_codec
+                = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader> pageHeaders_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader>();
+            /// <summary>
+            /// Page headers associated with the chunk.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageHeader> PageHeaders {
+              get { return pageHeaders_; }
+            }
+
+            /// <summary>Field number for the "page_footers" field.</summary>
+            public const int PageFootersFieldNumber = 6;
+            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter> _repeated_pageFooters_codec
+                = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter> pageFooters_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter>();
+            /// <summary>
+            /// Page footers associated with the chunk.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageFooter> PageFooters {
+              get { return pageFooters_; }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -16233,6 +16277,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if(!sourceBlockIds_.Equals(other.sourceBlockIds_)) return false;
               if (Content != other.Content) return false;
               if (!object.Equals(PageSpan, other.PageSpan)) return false;
+              if(!pageHeaders_.Equals(other.pageHeaders_)) return false;
+              if(!pageFooters_.Equals(other.pageFooters_)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -16244,6 +16290,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               hash ^= sourceBlockIds_.GetHashCode();
               if (Content.Length != 0) hash ^= Content.GetHashCode();
               if (pageSpan_ != null) hash ^= PageSpan.GetHashCode();
+              hash ^= pageHeaders_.GetHashCode();
+              hash ^= pageFooters_.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -16275,6 +16323,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(34);
                 output.WriteMessage(PageSpan);
               }
+              pageHeaders_.WriteTo(output, _repeated_pageHeaders_codec);
+              pageFooters_.WriteTo(output, _repeated_pageFooters_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -16298,6 +16348,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(34);
                 output.WriteMessage(PageSpan);
               }
+              pageHeaders_.WriteTo(ref output, _repeated_pageHeaders_codec);
+              pageFooters_.WriteTo(ref output, _repeated_pageFooters_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -16318,6 +16370,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (pageSpan_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(PageSpan);
               }
+              size += pageHeaders_.CalculateSize(_repeated_pageHeaders_codec);
+              size += pageFooters_.CalculateSize(_repeated_pageFooters_codec);
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -16343,6 +16397,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 }
                 PageSpan.MergeFrom(other.PageSpan);
               }
+              pageHeaders_.Add(other.pageHeaders_);
+              pageFooters_.Add(other.pageFooters_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -16377,6 +16433,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     input.ReadMessage(PageSpan);
                     break;
                   }
+                  case 42: {
+                    pageHeaders_.AddEntriesFrom(input, _repeated_pageHeaders_codec);
+                    break;
+                  }
+                  case 50: {
+                    pageFooters_.AddEntriesFrom(input, _repeated_pageFooters_codec);
+                    break;
+                  }
                 }
               }
             #endif
@@ -16409,6 +16473,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                       PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
                     }
                     input.ReadMessage(PageSpan);
+                    break;
+                  }
+                  case 42: {
+                    pageHeaders_.AddEntriesFrom(ref input, _repeated_pageHeaders_codec);
+                    break;
+                  }
+                  case 50: {
+                    pageFooters_.AddEntriesFrom(ref input, _repeated_pageFooters_codec);
                     break;
                   }
                 }
@@ -16648,6 +16720,496 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                       }
                       case 16: {
                         PageEnd = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Represents the page header associated with the chunk.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ChunkPageHeader : pb::IMessage<ChunkPageHeader>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ChunkPageHeader> _parser = new pb::MessageParser<ChunkPageHeader>(() => new ChunkPageHeader());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ChunkPageHeader> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageHeader() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageHeader(ChunkPageHeader other) : this() {
+                  text_ = other.text_;
+                  pageSpan_ = other.pageSpan_ != null ? other.pageSpan_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageHeader Clone() {
+                  return new ChunkPageHeader(this);
+                }
+
+                /// <summary>Field number for the "text" field.</summary>
+                public const int TextFieldNumber = 1;
+                private string text_ = "";
+                /// <summary>
+                /// Header in text format.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Text {
+                  get { return text_; }
+                  set {
+                    text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "page_span" field.</summary>
+                public const int PageSpanFieldNumber = 2;
+                private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan pageSpan_;
+                /// <summary>
+                /// Page span of the header.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan PageSpan {
+                  get { return pageSpan_; }
+                  set {
+                    pageSpan_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ChunkPageHeader);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ChunkPageHeader other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Text != other.Text) return false;
+                  if (!object.Equals(PageSpan, other.PageSpan)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Text.Length != 0) hash ^= Text.GetHashCode();
+                  if (pageSpan_ != null) hash ^= PageSpan.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Text.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Text.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Text.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ChunkPageHeader other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Text.Length != 0) {
+                    Text = other.Text;
+                  }
+                  if (other.pageSpan_ != null) {
+                    if (pageSpan_ == null) {
+                      PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                    }
+                    PageSpan.MergeFrom(other.PageSpan);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Text = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        if (pageSpan_ == null) {
+                          PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                        }
+                        input.ReadMessage(PageSpan);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Text = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        if (pageSpan_ == null) {
+                          PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                        }
+                        input.ReadMessage(PageSpan);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Represents the page footer associated with the chunk.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class ChunkPageFooter : pb::IMessage<ChunkPageFooter>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<ChunkPageFooter> _parser = new pb::MessageParser<ChunkPageFooter>(() => new ChunkPageFooter());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<ChunkPageFooter> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Descriptor.NestedTypes[2]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageFooter() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageFooter(ChunkPageFooter other) : this() {
+                  text_ = other.text_;
+                  pageSpan_ = other.pageSpan_ != null ? other.pageSpan_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public ChunkPageFooter Clone() {
+                  return new ChunkPageFooter(this);
+                }
+
+                /// <summary>Field number for the "text" field.</summary>
+                public const int TextFieldNumber = 1;
+                private string text_ = "";
+                /// <summary>
+                /// Footer in text format.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Text {
+                  get { return text_; }
+                  set {
+                    text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "page_span" field.</summary>
+                public const int PageSpanFieldNumber = 2;
+                private global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan pageSpan_;
+                /// <summary>
+                /// Page span of the footer.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan PageSpan {
+                  get { return pageSpan_; }
+                  set {
+                    pageSpan_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as ChunkPageFooter);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(ChunkPageFooter other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Text != other.Text) return false;
+                  if (!object.Equals(PageSpan, other.PageSpan)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Text.Length != 0) hash ^= Text.GetHashCode();
+                  if (pageSpan_ != null) hash ^= PageSpan.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Text.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Text.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Text.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+                  }
+                  if (pageSpan_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(PageSpan);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(ChunkPageFooter other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Text.Length != 0) {
+                    Text = other.Text;
+                  }
+                  if (other.pageSpan_ != null) {
+                    if (pageSpan_ == null) {
+                      PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                    }
+                    PageSpan.MergeFrom(other.PageSpan);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Text = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        if (pageSpan_ == null) {
+                          PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                        }
+                        input.ReadMessage(PageSpan);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Text = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        if (pageSpan_ == null) {
+                          PageSpan = new global::Google.Cloud.DocumentAI.V1Beta3.Document.Types.ChunkedDocument.Types.Chunk.Types.ChunkPageSpan();
+                        }
+                        input.ReadMessage(PageSpan);
                         break;
                       }
                     }
