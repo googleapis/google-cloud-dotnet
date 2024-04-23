@@ -6,11 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3.</Description>
     <PackageTags>Error;Reporting;Stackdriver;ExceptionLogger;Trace;Diagnostics;Google;Cloud</PackageTags>
-    <!--
-    - The (indirect) System.Management and System.CodeDom dependencies complain
-    - on older frameworks, but we use them carefully.
-    -->
-    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" PrivateAssets="All" />
@@ -19,4 +14,11 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+  <PropertyGroup>
+    <!--
+    - The (indirect) System.Management and System.CodeDom dependencies complain
+    - on older frameworks, but we use them carefully.
+    -->
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+  </PropertyGroup>
 </Project>
