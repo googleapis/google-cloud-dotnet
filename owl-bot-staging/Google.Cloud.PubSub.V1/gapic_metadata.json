@@ -1,0 +1,246 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.pubsub.v1",
+  "libraryPackage": "Google.Cloud.PubSub.V1",
+  "services": {
+    "Publisher": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PublisherServiceApiClient",
+          "rpcs": {
+            "CreateTopic": {
+              "methods": [
+                "CreateTopic",
+                "CreateTopicAsync"
+              ]
+            },
+            "DeleteTopic": {
+              "methods": [
+                "DeleteTopic",
+                "DeleteTopicAsync"
+              ]
+            },
+            "DetachSubscription": {
+              "methods": [
+                "DetachSubscription",
+                "DetachSubscriptionAsync"
+              ]
+            },
+            "GetTopic": {
+              "methods": [
+                "GetTopic",
+                "GetTopicAsync"
+              ]
+            },
+            "ListTopicSnapshots": {
+              "methods": [
+                "ListTopicSnapshots",
+                "ListTopicSnapshotsAsync"
+              ]
+            },
+            "ListTopicSubscriptions": {
+              "methods": [
+                "ListTopicSubscriptions",
+                "ListTopicSubscriptionsAsync"
+              ]
+            },
+            "ListTopics": {
+              "methods": [
+                "ListTopics",
+                "ListTopicsAsync"
+              ]
+            },
+            "Publish": {
+              "methods": [
+                "Publish",
+                "PublishAsync"
+              ]
+            },
+            "UpdateTopic": {
+              "methods": [
+                "UpdateTopic",
+                "UpdateTopicAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SchemaService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SchemaServiceClient",
+          "rpcs": {
+            "CommitSchema": {
+              "methods": [
+                "CommitSchema",
+                "CommitSchemaAsync"
+              ]
+            },
+            "CreateSchema": {
+              "methods": [
+                "CreateSchema",
+                "CreateSchemaAsync"
+              ]
+            },
+            "DeleteSchema": {
+              "methods": [
+                "DeleteSchema",
+                "DeleteSchemaAsync"
+              ]
+            },
+            "DeleteSchemaRevision": {
+              "methods": [
+                "DeleteSchemaRevision",
+                "DeleteSchemaRevisionAsync"
+              ]
+            },
+            "GetSchema": {
+              "methods": [
+                "GetSchema",
+                "GetSchemaAsync"
+              ]
+            },
+            "ListSchemaRevisions": {
+              "methods": [
+                "ListSchemaRevisions",
+                "ListSchemaRevisionsAsync"
+              ]
+            },
+            "ListSchemas": {
+              "methods": [
+                "ListSchemas",
+                "ListSchemasAsync"
+              ]
+            },
+            "RollbackSchema": {
+              "methods": [
+                "RollbackSchema",
+                "RollbackSchemaAsync"
+              ]
+            },
+            "ValidateMessage": {
+              "methods": [
+                "ValidateMessage",
+                "ValidateMessageAsync"
+              ]
+            },
+            "ValidateSchema": {
+              "methods": [
+                "ValidateSchema",
+                "ValidateSchemaAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Subscriber": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SubscriberServiceApiClient",
+          "rpcs": {
+            "Acknowledge": {
+              "methods": [
+                "Acknowledge",
+                "AcknowledgeAsync"
+              ]
+            },
+            "CreateSnapshot": {
+              "methods": [
+                "CreateSnapshot",
+                "CreateSnapshotAsync"
+              ]
+            },
+            "CreateSubscription": {
+              "methods": [
+                "CreateSubscription",
+                "CreateSubscriptionAsync"
+              ]
+            },
+            "DeleteSnapshot": {
+              "methods": [
+                "DeleteSnapshot",
+                "DeleteSnapshotAsync"
+              ]
+            },
+            "DeleteSubscription": {
+              "methods": [
+                "DeleteSubscription",
+                "DeleteSubscriptionAsync"
+              ]
+            },
+            "GetSnapshot": {
+              "methods": [
+                "GetSnapshot",
+                "GetSnapshotAsync"
+              ]
+            },
+            "GetSubscription": {
+              "methods": [
+                "GetSubscription",
+                "GetSubscriptionAsync"
+              ]
+            },
+            "ListSnapshots": {
+              "methods": [
+                "ListSnapshots",
+                "ListSnapshotsAsync"
+              ]
+            },
+            "ListSubscriptions": {
+              "methods": [
+                "ListSubscriptions",
+                "ListSubscriptionsAsync"
+              ]
+            },
+            "ModifyAckDeadline": {
+              "methods": [
+                "ModifyAckDeadline",
+                "ModifyAckDeadlineAsync"
+              ]
+            },
+            "ModifyPushConfig": {
+              "methods": [
+                "ModifyPushConfig",
+                "ModifyPushConfigAsync"
+              ]
+            },
+            "Pull": {
+              "methods": [
+                "Pull",
+                "PullAsync"
+              ]
+            },
+            "Seek": {
+              "methods": [
+                "Seek",
+                "SeekAsync"
+              ]
+            },
+            "StreamingPull": {
+              "methods": [
+                "StreamingPull",
+                "StreamingPullAsync"
+              ]
+            },
+            "UpdateSnapshot": {
+              "methods": [
+                "UpdateSnapshot",
+                "UpdateSnapshotAsync"
+              ]
+            },
+            "UpdateSubscription": {
+              "methods": [
+                "UpdateSubscription",
+                "UpdateSubscriptionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

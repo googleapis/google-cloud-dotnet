@@ -1,0 +1,132 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.recaptchaenterprise.v1",
+  "libraryPackage": "Google.Cloud.RecaptchaEnterprise.V1",
+  "services": {
+    "RecaptchaEnterpriseService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RecaptchaEnterpriseServiceClient",
+          "rpcs": {
+            "AnnotateAssessment": {
+              "methods": [
+                "AnnotateAssessment",
+                "AnnotateAssessmentAsync"
+              ]
+            },
+            "CreateAssessment": {
+              "methods": [
+                "CreateAssessment",
+                "CreateAssessmentAsync"
+              ]
+            },
+            "CreateFirewallPolicy": {
+              "methods": [
+                "CreateFirewallPolicy",
+                "CreateFirewallPolicyAsync"
+              ]
+            },
+            "CreateKey": {
+              "methods": [
+                "CreateKey",
+                "CreateKeyAsync"
+              ]
+            },
+            "DeleteFirewallPolicy": {
+              "methods": [
+                "DeleteFirewallPolicy",
+                "DeleteFirewallPolicyAsync"
+              ]
+            },
+            "DeleteKey": {
+              "methods": [
+                "DeleteKey",
+                "DeleteKeyAsync"
+              ]
+            },
+            "GetFirewallPolicy": {
+              "methods": [
+                "GetFirewallPolicy",
+                "GetFirewallPolicyAsync"
+              ]
+            },
+            "GetKey": {
+              "methods": [
+                "GetKey",
+                "GetKeyAsync"
+              ]
+            },
+            "GetMetrics": {
+              "methods": [
+                "GetMetrics",
+                "GetMetricsAsync"
+              ]
+            },
+            "ListFirewallPolicies": {
+              "methods": [
+                "ListFirewallPolicies",
+                "ListFirewallPoliciesAsync"
+              ]
+            },
+            "ListKeys": {
+              "methods": [
+                "ListKeys",
+                "ListKeysAsync"
+              ]
+            },
+            "ListRelatedAccountGroupMemberships": {
+              "methods": [
+                "ListRelatedAccountGroupMemberships",
+                "ListRelatedAccountGroupMembershipsAsync"
+              ]
+            },
+            "ListRelatedAccountGroups": {
+              "methods": [
+                "ListRelatedAccountGroups",
+                "ListRelatedAccountGroupsAsync"
+              ]
+            },
+            "MigrateKey": {
+              "methods": [
+                "MigrateKey",
+                "MigrateKeyAsync"
+              ]
+            },
+            "ReorderFirewallPolicies": {
+              "methods": [
+                "ReorderFirewallPolicies",
+                "ReorderFirewallPoliciesAsync"
+              ]
+            },
+            "RetrieveLegacySecretKey": {
+              "methods": [
+                "RetrieveLegacySecretKey",
+                "RetrieveLegacySecretKeyAsync"
+              ]
+            },
+            "SearchRelatedAccountGroupMemberships": {
+              "methods": [
+                "SearchRelatedAccountGroupMemberships",
+                "SearchRelatedAccountGroupMembershipsAsync"
+              ]
+            },
+            "UpdateFirewallPolicy": {
+              "methods": [
+                "UpdateFirewallPolicy",
+                "UpdateFirewallPolicyAsync"
+              ]
+            },
+            "UpdateKey": {
+              "methods": [
+                "UpdateKey",
+                "UpdateKeyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
