@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.networksecurity.v1beta1",
+  "libraryPackage": "Google.Cloud.NetworkSecurity.V1Beta1",
+  "services": {
+    "NetworkSecurity": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetworkSecurityClient",
+          "rpcs": {
+            "CreateAuthorizationPolicy": {
+              "methods": [
+                "CreateAuthorizationPolicy",
+                "CreateAuthorizationPolicyAsync"
+              ]
+            },
+            "CreateClientTlsPolicy": {
+              "methods": [
+                "CreateClientTlsPolicy",
+                "CreateClientTlsPolicyAsync"
+              ]
+            },
+            "CreateServerTlsPolicy": {
+              "methods": [
+                "CreateServerTlsPolicy",
+                "CreateServerTlsPolicyAsync"
+              ]
+            },
+            "DeleteAuthorizationPolicy": {
+              "methods": [
+                "DeleteAuthorizationPolicy",
+                "DeleteAuthorizationPolicyAsync"
+              ]
+            },
+            "DeleteClientTlsPolicy": {
+              "methods": [
+                "DeleteClientTlsPolicy",
+                "DeleteClientTlsPolicyAsync"
+              ]
+            },
+            "DeleteServerTlsPolicy": {
+              "methods": [
+                "DeleteServerTlsPolicy",
+                "DeleteServerTlsPolicyAsync"
+              ]
+            },
+            "GetAuthorizationPolicy": {
+              "methods": [
+                "GetAuthorizationPolicy",
+                "GetAuthorizationPolicyAsync"
+              ]
+            },
+            "GetClientTlsPolicy": {
+              "methods": [
+                "GetClientTlsPolicy",
+                "GetClientTlsPolicyAsync"
+              ]
+            },
+            "GetServerTlsPolicy": {
+              "methods": [
+                "GetServerTlsPolicy",
+                "GetServerTlsPolicyAsync"
+              ]
+            },
+            "ListAuthorizationPolicies": {
+              "methods": [
+                "ListAuthorizationPolicies",
+                "ListAuthorizationPoliciesAsync"
+              ]
+            },
+            "ListClientTlsPolicies": {
+              "methods": [
+                "ListClientTlsPolicies",
+                "ListClientTlsPoliciesAsync"
+              ]
+            },
+            "ListServerTlsPolicies": {
+              "methods": [
+                "ListServerTlsPolicies",
+                "ListServerTlsPoliciesAsync"
+              ]
+            },
+            "UpdateAuthorizationPolicy": {
+              "methods": [
+                "UpdateAuthorizationPolicy",
+                "UpdateAuthorizationPolicyAsync"
+              ]
+            },
+            "UpdateClientTlsPolicy": {
+              "methods": [
+                "UpdateClientTlsPolicy",
+                "UpdateClientTlsPolicyAsync"
+              ]
+            },
+            "UpdateServerTlsPolicy": {
+              "methods": [
+                "UpdateServerTlsPolicy",
+                "UpdateServerTlsPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
