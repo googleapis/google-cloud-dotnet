@@ -1940,8 +1940,7 @@
         "Diagnostics"
       ],
       "dependencies": {
-        "Google.Cloud.Diagnostics.Common": "project",
-        "Grpc.Core": "default"
+        "Google.Cloud.Diagnostics.Common": "project"
       },
       "testDependencies": {
         "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
@@ -1951,6 +1950,7 @@
     {
       "id": "Google.Cloud.Diagnostics.Common",
       "version": "5.2.0",
+      "targetFrameworks": "netstandard2.0",
       "type": "other",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
