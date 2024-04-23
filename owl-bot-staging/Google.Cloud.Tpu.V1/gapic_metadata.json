@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.tpu.v1",
+  "libraryPackage": "Google.Cloud.Tpu.V1",
+  "services": {
+    "Tpu": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TpuClient",
+          "rpcs": {
+            "CreateNode": {
+              "methods": [
+                "CreateNode",
+                "CreateNodeAsync"
+              ]
+            },
+            "DeleteNode": {
+              "methods": [
+                "DeleteNode",
+                "DeleteNodeAsync"
+              ]
+            },
+            "GetAcceleratorType": {
+              "methods": [
+                "GetAcceleratorType",
+                "GetAcceleratorTypeAsync"
+              ]
+            },
+            "GetNode": {
+              "methods": [
+                "GetNode",
+                "GetNodeAsync"
+              ]
+            },
+            "GetTensorFlowVersion": {
+              "methods": [
+                "GetTensorFlowVersion",
+                "GetTensorFlowVersionAsync"
+              ]
+            },
+            "ListAcceleratorTypes": {
+              "methods": [
+                "ListAcceleratorTypes",
+                "ListAcceleratorTypesAsync"
+              ]
+            },
+            "ListNodes": {
+              "methods": [
+                "ListNodes",
+                "ListNodesAsync"
+              ]
+            },
+            "ListTensorFlowVersions": {
+              "methods": [
+                "ListTensorFlowVersions",
+                "ListTensorFlowVersionsAsync"
+              ]
+            },
+            "ReimageNode": {
+              "methods": [
+                "ReimageNode",
+                "ReimageNodeAsync"
+              ]
+            },
+            "StartNode": {
+              "methods": [
+                "StartNode",
+                "StartNodeAsync"
+              ]
+            },
+            "StopNode": {
+              "methods": [
+                "StopNode",
+                "StopNodeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
