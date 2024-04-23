@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.maps.mapsplatformdatasets.v1alpha",
+  "libraryPackage": "Google.Maps.MapsPlatformDatasets.V1Alpha",
+  "services": {
+    "MapsPlatformDatasetsV1Alpha": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MapsPlatformDatasetsV1AlphaClient",
+          "rpcs": {
+            "CreateDataset": {
+              "methods": [
+                "CreateDataset",
+                "CreateDatasetAsync"
+              ]
+            },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteDatasetVersion": {
+              "methods": [
+                "DeleteDatasetVersion",
+                "DeleteDatasetVersionAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "ListDatasetVersions": {
+              "methods": [
+                "ListDatasetVersions",
+                "ListDatasetVersionsAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "UpdateDatasetMetadata": {
+              "methods": [
+                "UpdateDatasetMetadata",
+                "UpdateDatasetMetadataAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

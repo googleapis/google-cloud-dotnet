@@ -1,0 +1,1414 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Inventories.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.inventories.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_sync",
+      "title": "ListLocalInventoriesRequestObject",
+      "description": "Snippet for ListLocalInventories",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_async",
+      "title": "ListLocalInventoriesRequestObjectAsync",
+      "description": "Snippet for ListLocalInventoriesAsync",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_sync_flattened",
+      "title": "ListLocalInventories",
+      "description": "Snippet for ListLocalInventories",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_async_flattened",
+      "title": "ListLocalInventoriesAsync",
+      "description": "Snippet for ListLocalInventoriesAsync",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_sync_flattened_resourceNames",
+      "title": "ListLocalInventoriesResourceNames",
+      "description": "Snippet for ListLocalInventories",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventories",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_ListLocalInventories_async_flattened_resourceNames",
+      "title": "ListLocalInventoriesResourceNamesAsync",
+      "description": "Snippet for ListLocalInventoriesAsync",
+      "file": "LocalInventoryServiceClient.ListLocalInventoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLocalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.ListLocalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListLocalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListLocalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.ListLocalInventories",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_InsertLocalInventory_sync",
+      "title": "InsertLocalInventoryRequestObject",
+      "description": "Snippet for InsertLocalInventory",
+      "file": "LocalInventoryServiceClient.InsertLocalInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLocalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.InsertLocalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.InsertLocalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.InsertLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_InsertLocalInventory_async",
+      "title": "InsertLocalInventoryRequestObjectAsync",
+      "description": "Snippet for InsertLocalInventoryAsync",
+      "file": "LocalInventoryServiceClient.InsertLocalInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertLocalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.InsertLocalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.InsertLocalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Inventories.V1Beta.LocalInventory>",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.InsertLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_sync",
+      "title": "DeleteLocalInventoryRequestObject",
+      "description": "Snippet for DeleteLocalInventory",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.DeleteLocalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_async",
+      "title": "DeleteLocalInventoryRequestObjectAsync",
+      "description": "Snippet for DeleteLocalInventoryAsync",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.DeleteLocalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_sync_flattened",
+      "title": "DeleteLocalInventory",
+      "description": "Snippet for DeleteLocalInventory",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_async_flattened",
+      "title": "DeleteLocalInventoryAsync",
+      "description": "Snippet for DeleteLocalInventoryAsync",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_sync_flattened_resourceNames",
+      "title": "DeleteLocalInventoryResourceNames",
+      "description": "Snippet for DeleteLocalInventory",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LocalInventoryService_DeleteLocalInventory_async_flattened_resourceNames",
+      "title": "DeleteLocalInventoryResourceNamesAsync",
+      "description": "Snippet for DeleteLocalInventoryAsync",
+      "file": "LocalInventoryServiceClient.DeleteLocalInventoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLocalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient.DeleteLocalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "LocalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.LocalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteLocalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService.DeleteLocalInventory",
+          "service": {
+            "shortName": "LocalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.LocalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_sync",
+      "title": "ListRegionalInventoriesRequestObject",
+      "description": "Snippet for ListRegionalInventories",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventories",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async",
+      "title": "ListRegionalInventoriesRequestObjectAsync",
+      "description": "Snippet for ListRegionalInventoriesAsync",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_sync_flattened",
+      "title": "ListRegionalInventories",
+      "description": "Snippet for ListRegionalInventories",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened",
+      "title": "ListRegionalInventoriesAsync",
+      "description": "Snippet for ListRegionalInventoriesAsync",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_sync_flattened_resourceNames",
+      "title": "ListRegionalInventoriesResourceNames",
+      "description": "Snippet for ListRegionalInventories",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventories",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventories",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_ListRegionalInventories_async_flattened_resourceNames",
+      "title": "ListRegionalInventoriesResourceNamesAsync",
+      "description": "Snippet for ListRegionalInventoriesAsync",
+      "file": "RegionalInventoryServiceClient.ListRegionalInventoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRegionalInventoriesAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.ListRegionalInventoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.ProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Inventories.V1Beta.ListRegionalInventoriesResponse, Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "ListRegionalInventories",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.ListRegionalInventories",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_InsertRegionalInventory_sync",
+      "title": "InsertRegionalInventoryRequestObject",
+      "description": "Snippet for InsertRegionalInventory",
+      "file": "RegionalInventoryServiceClient.InsertRegionalInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertRegionalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.InsertRegionalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.InsertRegionalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.InsertRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_InsertRegionalInventory_async",
+      "title": "InsertRegionalInventoryRequestObjectAsync",
+      "description": "Snippet for InsertRegionalInventoryAsync",
+      "file": "RegionalInventoryServiceClient.InsertRegionalInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertRegionalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.InsertRegionalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.InsertRegionalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventory>",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "InsertRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.InsertRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_sync",
+      "title": "DeleteRegionalInventoryRequestObject",
+      "description": "Snippet for DeleteRegionalInventory",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.DeleteRegionalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_async",
+      "title": "DeleteRegionalInventoryRequestObjectAsync",
+      "description": "Snippet for DeleteRegionalInventoryAsync",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.DeleteRegionalInventoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_sync_flattened",
+      "title": "DeleteRegionalInventory",
+      "description": "Snippet for DeleteRegionalInventory",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_async_flattened",
+      "title": "DeleteRegionalInventoryAsync",
+      "description": "Snippet for DeleteRegionalInventoryAsync",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_sync_flattened_resourceNames",
+      "title": "DeleteRegionalInventoryResourceNames",
+      "description": "Snippet for DeleteRegionalInventory",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventory",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventory",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_RegionalInventoryService_DeleteRegionalInventory_async_flattened_resourceNames",
+      "title": "DeleteRegionalInventoryResourceNamesAsync",
+      "description": "Snippet for DeleteRegionalInventoryAsync",
+      "file": "RegionalInventoryServiceClient.DeleteRegionalInventoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRegionalInventoryAsync",
+        "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient.DeleteRegionalInventoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "RegionalInventoryServiceClient",
+          "fullName": "Google.Shopping.Merchant.Inventories.V1Beta.RegionalInventoryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteRegionalInventory",
+          "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService.DeleteRegionalInventory",
+          "service": {
+            "shortName": "RegionalInventoryService",
+            "fullName": "google.shopping.merchant.inventories.v1beta.RegionalInventoryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
