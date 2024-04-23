@@ -2064,7 +2064,8 @@
       "shortName": "discoveryengine",
       "serviceConfigFile": "discoveryengine_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1Beta",
@@ -5729,7 +5730,8 @@
       "shortName": "merchantapi",
       "serviceConfigFile": "merchantapi_v1beta.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Shopping.Merchant.Lfp.V1Beta",
