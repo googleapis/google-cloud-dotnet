@@ -142,8 +142,6 @@ namespace Google.Cloud.Spanner.V1
         private int _disposed;
         private int _committedOrRolledBack;
 
-        // TODO(atarafamas): When looking at detached transactions see if we can receive here the whole Transaction instead of
-        // its bits separately.
         private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp, DateTime evictionTime, long refreshTicks)
         {
             _pool = pool;

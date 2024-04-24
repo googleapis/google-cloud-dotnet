@@ -233,7 +233,6 @@ namespace Google.Cloud.Spanner.V1
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), singleUseTransaction: false, readTimestamp);
 
-            // TODO: Maybe just consider the breaking change and directly receive TransactionOptions.
             TransactionOptions BuildTransactionOptions() => transactionMode switch
             {
                 ModeOneofCase.None => new TransactionOptions (),
