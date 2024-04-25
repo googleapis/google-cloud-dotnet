@@ -135,7 +135,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         // Start all subscribers
         var subscriberTasks = _clients.Select(client =>
         {
-            var singleChannel = new SingleChannel(this, client, handler, flow, _useLegacyFlowControl, registerTask);
+            var singleChannel = new SingleChannel(this, client, handler, flow, _useLegacyFlowControl, registerTask, _clock);
             return _taskHelper.Run(() => singleChannel.StartAsync());
         }).ToArray();
         // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
