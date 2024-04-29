@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.13.0, released 2024-04-29
+
+### New features
+
+- Add Fraud Prevention settings field ([commit f66d168](https://github.com/googleapis/google-cloud-dotnet/commit/f66d168e4d553f2011b268484003cf54185beea0))
+
+### Documentation improvements
+
+- Fixed the description of ListFirewallPoliciesResponse ([commit 5098a28](https://github.com/googleapis/google-cloud-dotnet/commit/5098a28811d97d88a95b15de76c3a3b124b316e7))
+
 ## Version 2.12.0, released 2024-03-26
 
 ### New features
