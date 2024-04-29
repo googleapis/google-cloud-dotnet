@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.5.0, released 2024-04-29
+
+### New features
+
+- Infrastructure manager supports 1.2.3, 1.3.10, 1.4.7, 1.5.7 versions of Terraform when creating a preview of a deployment ([commit 6bc09e9](https://github.com/googleapis/google-cloud-dotnet/commit/6bc09e9f58284ac8a8c7ed69970e1f86de16b447))
+- Annotations are now supported to help client tools identify deployments during automation ([commit 6bc09e9](https://github.com/googleapis/google-cloud-dotnet/commit/6bc09e9f58284ac8a8c7ed69970e1f86de16b447))
+
 ## Version 1.4.0, released 2024-03-26
 
 ### New features
