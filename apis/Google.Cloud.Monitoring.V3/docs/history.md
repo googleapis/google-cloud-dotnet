@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.9.0, released 2024-04-29
+
+### Bug fixes
+
+- Defined class prefix of GMON for Objective C ([commit 679648b](https://github.com/googleapis/google-cloud-dotnet/commit/679648b57fc738b7b554c55abf6b2ab8b2424253))
+
 ## Version 3.8.0, released 2024-04-19
 
 ### New features
