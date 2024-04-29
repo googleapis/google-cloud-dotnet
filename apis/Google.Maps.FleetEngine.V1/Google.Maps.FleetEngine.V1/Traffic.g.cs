@@ -33,11 +33,11 @@ namespace Google.Maps.FleetEngine.V1 {
             "U0xPVxACEg8KC1RSQUZGSUNfSkFNEAMiiAEKGUNvbnN1bWFibGVUcmFmZmlj",
             "UG9seWxpbmUSSQoWc3BlZWRfcmVhZGluZ19pbnRlcnZhbBgBIAMoCzIpLm1h",
             "cHMuZmxlZXRlbmdpbmUudjEuU3BlZWRSZWFkaW5nSW50ZXJ2YWwSIAoYZW5j",
-            "b2RlZF9wYXRoX3RvX3dheXBvaW50GAIgASgJQpcBChpnb29nbGUubWFwcy5m",
+            "b2RlZF9wYXRoX3RvX3dheXBvaW50GAIgASgJQrcBChpnb29nbGUubWFwcy5m",
             "bGVldGVuZ2luZS52MUIMVHJhZmZpY1Byb3RvUAFaRmNsb3VkLmdvb2dsZS5j",
             "b20vZ28vbWFwcy9mbGVldGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2Zs",
             "ZWV0ZW5naW5lcGKiAgNDRkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5W",
-            "MWIGcHJvdG8z"));
+            "MeoCHUdvb2dsZTo6TWFwczo6RmxlZXRFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
