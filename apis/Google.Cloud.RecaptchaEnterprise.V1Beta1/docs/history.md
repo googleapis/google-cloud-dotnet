@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2024-04-29
+
+### New features
+
+- Add Fraud Prevention settings field ([commit d54c222](https://github.com/googleapis/google-cloud-dotnet/commit/d54c22206f0160a5cb1eb98d43b0d2c9740a741b))
+
 ## Version 2.0.0-beta06, released 2024-03-26
 
 ### New features
