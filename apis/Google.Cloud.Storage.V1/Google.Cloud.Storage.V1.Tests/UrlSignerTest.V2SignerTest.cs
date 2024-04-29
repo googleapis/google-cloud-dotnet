@@ -174,7 +174,7 @@ namespace Google.Cloud.Storage.V1.Tests
             }
 
             [Fact]
-            public async void Unsupported_SignPostPolicy()
+            public async Task Unsupported_SignPostPolicy()
             {
                 var signer = UrlSigner.FromCredential(CreateFakeServiceAccountCredential());
                 var options = Options
