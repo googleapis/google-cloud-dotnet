@@ -25,7 +25,11 @@ namespace Google.Shopping.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvc2hvcHBpbmcvdHlwZS90eXBlcy5wcm90bxIUZ29vZ2xlLnNo",
-            "b3BwaW5nLnR5cGUiYwoFUHJpY2USGgoNYW1vdW50X21pY3JvcxgBIAEoA0gA",
+            "b3BwaW5nLnR5cGUisQEKBldlaWdodBIaCg1hbW91bnRfbWljcm9zGAEgASgD",
+            "SACIAQESNQoEdW5pdBgCIAEoDjInLmdvb2dsZS5zaG9wcGluZy50eXBlLldl",
+            "aWdodC5XZWlnaHRVbml0IkIKCldlaWdodFVuaXQSGwoXV0VJR0hUX1VOSVRf",
+            "VU5TUEVDSUZJRUQQABIJCgVQT1VORBABEgwKCEtJTE9HUkFNEAJCEAoOX2Ft",
+            "b3VudF9taWNyb3MiYwoFUHJpY2USGgoNYW1vdW50X21pY3JvcxgBIAEoA0gA",
             "iAEBEhoKDWN1cnJlbmN5X2NvZGUYAiABKAlIAYgBAUIQCg5fYW1vdW50X21p",
             "Y3Jvc0IQCg5fY3VycmVuY3lfY29kZSKIAQoPQ3VzdG9tQXR0cmlidXRlEhEK",
             "BG5hbWUYASABKAlIAIgBARISCgV2YWx1ZRgCIAEoCUgBiAEBEjsKDGdyb3Vw",
@@ -52,6 +56,7 @@ namespace Google.Shopping.Type {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Weight), global::Google.Shopping.Type.Weight.Parser, new[]{ "AmountMicros", "Unit" }, new[]{ "AmountMicros" }, new[]{ typeof(global::Google.Shopping.Type.Weight.Types.WeightUnit) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Price), global::Google.Shopping.Type.Price.Parser, new[]{ "AmountMicros", "CurrencyCode" }, new[]{ "AmountMicros", "CurrencyCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.CustomAttribute), global::Google.Shopping.Type.CustomAttribute.Parser, new[]{ "Name", "Value", "GroupValues" }, new[]{ "Name", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Type.Destination), global::Google.Shopping.Type.Destination.Parser, null, null, new[]{ typeof(global::Google.Shopping.Type.Destination.Types.DestinationEnum) }, null, null),
@@ -63,6 +68,290 @@ namespace Google.Shopping.Type {
 
   }
   #region Messages
+  /// <summary>
+  /// The weight represented as the value in string and the unit.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Weight : pb::IMessage<Weight>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Weight> _parser = new pb::MessageParser<Weight>(() => new Weight());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Weight> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Weight() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Weight(Weight other) : this() {
+      _hasBits0 = other._hasBits0;
+      amountMicros_ = other.amountMicros_;
+      unit_ = other.unit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Weight Clone() {
+      return new Weight(this);
+    }
+
+    /// <summary>Field number for the "amount_micros" field.</summary>
+    public const int AmountMicrosFieldNumber = 1;
+    private readonly static long AmountMicrosDefaultValue = 0L;
+
+    private long amountMicros_;
+    /// <summary>
+    /// Required. The weight represented as a number in micros (1 million micros is
+    /// an equivalent to one's currency standard unit, for example, 1 kg = 1000000
+    /// micros).
+    /// This field can also be set as infinity by setting to -1.
+    /// This field only support -1 and positive value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AmountMicros {
+      get { if ((_hasBits0 & 1) != 0) { return amountMicros_; } else { return AmountMicrosDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        amountMicros_ = value;
+      }
+    }
+    /// <summary>Gets whether the "amount_micros" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAmountMicros {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "amount_micros" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAmountMicros() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 2;
+    private global::Google.Shopping.Type.Weight.Types.WeightUnit unit_ = global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified;
+    /// <summary>
+    /// Required. The weight unit.
+    /// Acceptable values are: kg and lb
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Weight.Types.WeightUnit Unit {
+      get { return unit_; }
+      set {
+        unit_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Weight);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Weight other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AmountMicros != other.AmountMicros) return false;
+      if (Unit != other.Unit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAmountMicros) hash ^= AmountMicros.GetHashCode();
+      if (Unit != global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified) hash ^= Unit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAmountMicros) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AmountMicros);
+      }
+      if (Unit != global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Unit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAmountMicros) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AmountMicros);
+      }
+      if (Unit != global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Unit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAmountMicros) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AmountMicros);
+      }
+      if (Unit != global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Weight other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAmountMicros) {
+        AmountMicros = other.AmountMicros;
+      }
+      if (other.Unit != global::Google.Shopping.Type.Weight.Types.WeightUnit.Unspecified) {
+        Unit = other.Unit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AmountMicros = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            Unit = (global::Google.Shopping.Type.Weight.Types.WeightUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AmountMicros = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            Unit = (global::Google.Shopping.Type.Weight.Types.WeightUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Weight message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The weight unit.
+      /// </summary>
+      public enum WeightUnit {
+        /// <summary>
+        /// unit unspecified
+        /// </summary>
+        [pbr::OriginalName("WEIGHT_UNIT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// lb unit.
+        /// </summary>
+        [pbr::OriginalName("POUND")] Pound = 1,
+        /// <summary>
+        /// kg unit.
+        /// </summary>
+        [pbr::OriginalName("KILOGRAM")] Kilogram = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
   /// <summary>
   /// The price represented as a number and currency.
   /// </summary>
@@ -82,7 +371,7 @@ namespace Google.Shopping.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +412,6 @@ namespace Google.Shopping.Type {
     /// The price represented as a number in micros (1 million micros is an
     /// equivalent to one's currency standard unit, for example, 1 USD = 1000000
     /// micros).
-    /// This field can also be set as infinity by setting to -1.
-    /// This field only support -1 and positive value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -354,7 +641,7 @@ namespace Google.Shopping.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -652,7 +939,7 @@ namespace Google.Shopping.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -858,7 +1145,7 @@ namespace Google.Shopping.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1100,7 +1387,7 @@ namespace Google.Shopping.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Shopping.Type.TypesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
