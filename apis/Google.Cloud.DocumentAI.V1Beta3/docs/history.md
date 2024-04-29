@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta19, released 2024-04-29
+
+### New features
+
+- Support Chunk header and footer in Doc AI external proto ([commit 4e73a14](https://github.com/googleapis/google-cloud-dotnet/commit/4e73a14b5df69e8d8f16e552dc677febbeb7f7b1))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 4e73a14](https://github.com/googleapis/google-cloud-dotnet/commit/4e73a14b5df69e8d8f16e552dc677febbeb7f7b1))
+
 ## Version 2.0.0-beta18, released 2024-04-19
 
 ### New features
