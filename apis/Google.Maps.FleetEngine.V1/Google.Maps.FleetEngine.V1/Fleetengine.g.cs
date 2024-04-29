@@ -100,10 +100,11 @@ namespace Google.Maps.FleetEngine.V1 {
             "RRADEiIKHlJPQURfU05BUFBFRF9MT0NBVElPTl9QUk9WSURFUhAEEh4KGkNV",
             "U1RPTUVSX1NVUFBMSUVEX0xPQ0FUSU9OEAUSGQoVRkxFRVRfRU5HSU5FX0xP",
             "Q0FUSU9OEAYSGwoXRlVTRURfTE9DQVRJT05fUFJPVklERVIQZBISCg1DT1JF",
-            "X0xPQ0FUSU9OEMgBQpYBChpnb29nbGUubWFwcy5mbGVldGVuZ2luZS52MUIL",
+            "X0xPQ0FUSU9OEMgBQrYBChpnb29nbGUubWFwcy5mbGVldGVuZ2luZS52MUIL",
             "RmxlZXRFbmdpbmVQAVpGY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0",
             "ZW5naW5lL2FwaXYxL2ZsZWV0ZW5naW5lcGI7ZmxlZXRlbmdpbmVwYqICA0NG",
-            "RaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYxYgZwcm90bzM="));
+            "RaoCGkdvb2dsZS5NYXBzLkZsZWV0RW5naW5lLlYx6gIdR29vZ2xlOjpNYXBz",
+            "OjpGbGVldEVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.FleetEngine.V1.TrafficReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.TripType), typeof(global::Google.Maps.FleetEngine.V1.WaypointType), typeof(global::Google.Maps.FleetEngine.V1.PolylineFormatType), typeof(global::Google.Maps.FleetEngine.V1.NavigationStatus), typeof(global::Google.Maps.FleetEngine.V1.LocationSensor), }, null, new pbr::GeneratedClrTypeInfo[] {
