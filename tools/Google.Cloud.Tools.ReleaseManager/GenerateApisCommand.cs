@@ -13,13 +13,11 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Octokit;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Xml.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
@@ -82,7 +80,10 @@ internal class GenerateApisCommand : ICommand
             }
         }
 
-        Directory.Delete(TempDir, true);
+        if (Directory.Exists(TempDir))
+        {
+            Directory.Delete(TempDir, true);
+        }
         Directory.CreateDirectory(TempDir);
 
         foreach (var api in apis)
@@ -340,16 +341,4 @@ internal class GenerateApisCommand : ICommand
     private static string GetBashExecutable() =>
         BashLocations.FirstOrDefault(File.Exists) ??
         throw new UserErrorException("Bash does not exist in any default location");
-
-    /// <summary>
-    /// Equivalent to File.Delete, but with no expectation that a file exists or even that the directory
-    /// containing it exists.
-    /// </summary>
-    private static void MaybeDelete(string file)
-    {
-        if (File.Exists(file))
-        {
-            File.Delete(file);
-        }
-    }
 }
