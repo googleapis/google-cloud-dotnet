@@ -1118,6 +1118,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeN2D"/>.</summary>
                 public const string GeneralPurposeN2D = "GENERAL_PURPOSE_N2D";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeN4"/>.</summary>
+                public const string GeneralPurposeN4 = "GENERAL_PURPOSE_N4";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GeneralPurposeT2D"/>.</summary>
                 public const string GeneralPurposeT2D = "GENERAL_PURPOSE_T2D";
 
@@ -1276,6 +1279,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Status.Restoring"/>.</summary>
                 public const string Restoring = "RESTORING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Disk.Types.Status.Unavailable"/>.</summary>
+                public const string Unavailable = "UNAVAILABLE";
             }
         }
 
@@ -2077,6 +2083,35 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest"/> message.</summary>
+        public static class InstanceGroupManagerResizeRequest
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State"/> enum.</summary>
+            public static class State
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.UndefinedState"/>.</summary>
+                public const string UndefinedState = "UNDEFINED_STATE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Accepted"/>.</summary>
+                public const string Accepted = "ACCEPTED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Cancelled"/>.</summary>
+                public const string Cancelled = "CANCELLED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Creating"/>.</summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Failed"/>.</summary>
+                public const string Failed = "FAILED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Unspecified"/>.</summary>
+                public const string Unspecified = "STATE_UNSPECIFIED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Succeeded"/>.</summary>
+                public const string Succeeded = "SUCCEEDED";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerUpdatePolicy"/> message.</summary>
         public static class InstanceGroupManagerUpdatePolicy
         {
@@ -2346,6 +2381,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Ready"/>.</summary>
                 public const string Ready = "READY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstantSnapshot.Types.Status.Unavailable"/>.</summary>
+                public const string Unavailable = "UNAVAILABLE";
             }
         }
 
@@ -4224,6 +4262,15 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.GpusAllRegions"/>.</summary>
                 public const string GpusAllRegions = "GPUS_ALL_REGIONS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.HdbTotalGb"/>.</summary>
+                public const string HdbTotalGb = "HDB_TOTAL_GB";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.HdbTotalIops"/>.</summary>
+                public const string HdbTotalIops = "HDB_TOTAL_IOPS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.HdbTotalThroughput"/>.</summary>
+                public const string HdbTotalThroughput = "HDB_TOTAL_THROUGHPUT";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.HealthChecks"/>.</summary>
                 public const string HealthChecks = "HEALTH_CHECKS";
 
@@ -4443,6 +4490,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalInternalManagedBackendServices"/>.</summary>
                 public const string RegionalInternalManagedBackendServices = "REGIONAL_INTERNAL_MANAGED_BACKEND_SERVICES";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.RegionalInternalTrafficDirectorBackendServices"/>.</summary>
+                public const string RegionalInternalTrafficDirectorBackendServices = "REGIONAL_INTERNAL_TRAFFIC_DIRECTOR_BACKEND_SERVICES";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.Reservations"/>.</summary>
                 public const string Reservations = "RESERVATIONS";
 
@@ -4561,6 +4611,101 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaExceededInfo.Types.RolloutStatus.Unspecified"/>.</summary>
                 public const string Unspecified = "ROLLOUT_STATUS_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning"/> message.</summary>
+        public static class QuotaStatusWarning
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code"/> enum.</summary>
+            public static class Code
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.UndefinedCode"/>.</summary>
+                public const string UndefinedCode = "UNDEFINED_CODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.CleanupFailed"/>.</summary>
+                public const string CleanupFailed = "CLEANUP_FAILED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.DeprecatedResourceUsed"/>.</summary>
+                public const string DeprecatedResourceUsed = "DEPRECATED_RESOURCE_USED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.DeprecatedTypeUsed"/>.</summary>
+                public const string DeprecatedTypeUsed = "DEPRECATED_TYPE_USED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.DiskSizeLargerThanImageSize"/>.</summary>
+                public const string DiskSizeLargerThanImageSize = "DISK_SIZE_LARGER_THAN_IMAGE_SIZE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.ExperimentalTypeUsed"/>.</summary>
+                public const string ExperimentalTypeUsed = "EXPERIMENTAL_TYPE_USED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.ExternalApiWarning"/>.</summary>
+                public const string ExternalApiWarning = "EXTERNAL_API_WARNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.FieldValueOverriden"/>.</summary>
+                public const string FieldValueOverriden = "FIELD_VALUE_OVERRIDEN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.InjectedKernelsDeprecated"/>.</summary>
+                public const string InjectedKernelsDeprecated = "INJECTED_KERNELS_DEPRECATED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.InvalidHealthCheckForDynamicWieghtedLb"/>.</summary>
+                public const string InvalidHealthCheckForDynamicWieghtedLb = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.LargeDeploymentWarning"/>.</summary>
+                public const string LargeDeploymentWarning = "LARGE_DEPLOYMENT_WARNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.ListOverheadQuotaExceed"/>.</summary>
+                public const string ListOverheadQuotaExceed = "LIST_OVERHEAD_QUOTA_EXCEED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.MissingTypeDependency"/>.</summary>
+                public const string MissingTypeDependency = "MISSING_TYPE_DEPENDENCY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopAddressNotAssigned"/>.</summary>
+                public const string NextHopAddressNotAssigned = "NEXT_HOP_ADDRESS_NOT_ASSIGNED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopCannotIpForward"/>.</summary>
+                public const string NextHopCannotIpForward = "NEXT_HOP_CANNOT_IP_FORWARD";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopInstanceHasNoIpv6Interface"/>.</summary>
+                public const string NextHopInstanceHasNoIpv6Interface = "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopInstanceNotFound"/>.</summary>
+                public const string NextHopInstanceNotFound = "NEXT_HOP_INSTANCE_NOT_FOUND";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopInstanceNotOnNetwork"/>.</summary>
+                public const string NextHopInstanceNotOnNetwork = "NEXT_HOP_INSTANCE_NOT_ON_NETWORK";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NextHopNotRunning"/>.</summary>
+                public const string NextHopNotRunning = "NEXT_HOP_NOT_RUNNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NotCriticalError"/>.</summary>
+                public const string NotCriticalError = "NOT_CRITICAL_ERROR";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.NoResultsOnPage"/>.</summary>
+                public const string NoResultsOnPage = "NO_RESULTS_ON_PAGE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.PartialSuccess"/>.</summary>
+                public const string PartialSuccess = "PARTIAL_SUCCESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.RequiredTosAgreement"/>.</summary>
+                public const string RequiredTosAgreement = "REQUIRED_TOS_AGREEMENT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.ResourceInUseByOtherResourceWarning"/>.</summary>
+                public const string ResourceInUseByOtherResourceWarning = "RESOURCE_IN_USE_BY_OTHER_RESOURCE_WARNING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.ResourceNotDeleted"/>.</summary>
+                public const string ResourceNotDeleted = "RESOURCE_NOT_DELETED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.SchemaValidationIgnored"/>.</summary>
+                public const string SchemaValidationIgnored = "SCHEMA_VALIDATION_IGNORED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.SingleInstancePropertyTemplate"/>.</summary>
+                public const string SingleInstancePropertyTemplate = "SINGLE_INSTANCE_PROPERTY_TEMPLATE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.UndeclaredProperties"/>.</summary>
+                public const string UndeclaredProperties = "UNDECLARED_PROPERTIES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.Unreachable"/>.</summary>
+                public const string Unreachable = "UNREACHABLE";
             }
         }
 
@@ -6002,6 +6147,72 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StatefulPolicyPreservedStateNetworkIp.Types.AutoDelete.OnPermanentInstanceDeletion"/>.</summary>
                 public const string OnPermanentInstanceDeletion = "ON_PERMANENT_INSTANCE_DELETION";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.StoragePool"/> message.</summary>
+        public static class StoragePool
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.CapacityProvisioningType"/> enum.</summary>
+            public static class CapacityProvisioningType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.CapacityProvisioningType.UndefinedCapacityProvisioningType"/>.</summary>
+                public const string UndefinedCapacityProvisioningType = "UNDEFINED_CAPACITY_PROVISIONING_TYPE";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.PerformanceProvisioningType"/> enum.</summary>
+            public static class PerformanceProvisioningType
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.PerformanceProvisioningType.UndefinedPerformanceProvisioningType"/>.</summary>
+                public const string UndefinedPerformanceProvisioningType = "UNDEFINED_PERFORMANCE_PROVISIONING_TYPE";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State"/> enum.</summary>
+            public static class State
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State.UndefinedState"/>.</summary>
+                public const string UndefinedState = "UNDEFINED_STATE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State.Creating"/>.</summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State.Deleting"/>.</summary>
+                public const string Deleting = "DELETING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State.Failed"/>.</summary>
+                public const string Failed = "FAILED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePool.Types.State.Ready"/>.</summary>
+                public const string Ready = "READY";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk"/> message.</summary>
+        public static class StoragePoolDisk
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status"/> enum.</summary>
+            public static class Status
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.UndefinedStatus"/>.</summary>
+                public const string UndefinedStatus = "UNDEFINED_STATUS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Creating"/>.</summary>
+                public const string Creating = "CREATING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Deleting"/>.</summary>
+                public const string Deleting = "DELETING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Failed"/>.</summary>
+                public const string Failed = "FAILED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Ready"/>.</summary>
+                public const string Ready = "READY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Restoring"/>.</summary>
+                public const string Restoring = "RESTORING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.StoragePoolDisk.Types.Status.Unavailable"/>.</summary>
+                public const string Unavailable = "UNAVAILABLE";
             }
         }
 
