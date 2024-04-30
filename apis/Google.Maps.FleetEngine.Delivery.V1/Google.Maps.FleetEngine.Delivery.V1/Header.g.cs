@@ -39,10 +39,11 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "GAoUU0RLX1RZUEVfVU5TUEVDSUZJRUQQABIMCghDT05TVU1FUhABEgoKBkRS",
             "SVZFUhACEg4KCkpBVkFTQ1JJUFQQAyJDCghQbGF0Zm9ybRIYChRQTEFURk9S",
             "TV9VTlNQRUNJRklFRBAAEgsKB0FORFJPSUQQARIHCgNJT1MQAhIHCgNXRUIQ",
-            "A0KoAQojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCB0hl",
+            "A0LSAQojZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjFCB0hl",
             "YWRlcnNQAVpJY2xvdWQuZ29vZ2xlLmNvbS9nby9tYXBzL2ZsZWV0ZW5naW5l",
             "L2RlbGl2ZXJ5L2FwaXYxL2RlbGl2ZXJ5cGI7ZGVsaXZlcnlwYqICBENGRUSq",
-            "AiNHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMWIGcHJvdG8z"));
+            "AiNHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5EZWxpdmVyeS5WMeoCJ0dvb2ds",
+            "ZTo6TWFwczo6RmxlZXRFbmdpbmU6OkRlbGl2ZXJ5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
