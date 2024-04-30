@@ -61,6 +61,8 @@ namespace Google.Cloud.Compute.V1
             ListNodesSettings = existing.ListNodesSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
+            PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetNodeTemplateSettings = existing.SetNodeTemplateSettings;
             SetNodeTemplateOperationsSettings = existing.SetNodeTemplateOperationsSettings.Clone();
@@ -314,6 +316,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NodeGroupsClient.PerformMaintenance</c> and <c>NodeGroupsClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PerformMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NodeGroupsClient.PerformMaintenance</c> and
+        /// <c>NodeGroupsClient.PerformMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PerformMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1561,6 +1593,132 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, zone, nodeGroup, nodeGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceNodeGroupRequest request, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public virtual lro::OperationsClient PerformMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PerformMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePerformMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PerformMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePerformMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PerformMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the node group scoping this request.
+        /// </param>
+        /// <param name="nodeGroupsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PerformMaintenance(string project, string zone, string nodeGroup, NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenance(new PerformMaintenanceNodeGroupRequest
+            {
+                NodeGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(nodeGroup, nameof(nodeGroup)),
+                NodeGroupsPerformMaintenanceRequestResource = gax::GaxPreconditions.CheckNotNull(nodeGroupsPerformMaintenanceRequestResource, nameof(nodeGroupsPerformMaintenanceRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the node group scoping this request.
+        /// </param>
+        /// <param name="nodeGroupsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string nodeGroup, NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            PerformMaintenanceAsync(new PerformMaintenanceNodeGroupRequest
+            {
+                NodeGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(nodeGroup, nameof(nodeGroup)),
+                NodeGroupsPerformMaintenanceRequestResource = gax::GaxPreconditions.CheckNotNull(nodeGroupsPerformMaintenanceRequestResource, nameof(nodeGroupsPerformMaintenanceRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="nodeGroup">
+        /// Name of the node group scoping this request.
+        /// </param>
+        /// <param name="nodeGroupsPerformMaintenanceRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string nodeGroup, NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource, st::CancellationToken cancellationToken) =>
+            PerformMaintenanceAsync(project, zone, nodeGroup, nodeGroupsPerformMaintenanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2036,6 +2194,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchNodeGroupRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<PerformMaintenanceNodeGroupRequest, Operation> _callPerformMaintenance;
+
         private readonly gaxgrpc::ApiCall<SetIamPolicyNodeGroupRequest, Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<SetNodeTemplateNodeGroupRequest, Operation> _callSetNodeTemplate;
@@ -2064,6 +2224,7 @@ namespace Google.Cloud.Compute.V1
             DeleteNodesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteNodesOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             SetNodeTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetNodeTemplateOperationsSettings, logger);
             SimulateMaintenanceEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SimulateMaintenanceEventOperationsSettings, logger);
             _callAddNodes = clientHelper.BuildApiCall<AddNodesNodeGroupRequest, Operation>("AddNodes", grpcClient.AddNodesAsync, grpcClient.AddNodes, effectiveSettings.AddNodesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
@@ -2096,6 +2257,9 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchNodeGroupRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPerformMaintenance = clientHelper.BuildApiCall<PerformMaintenanceNodeGroupRequest, Operation>("PerformMaintenance", grpcClient.PerformMaintenanceAsync, grpcClient.PerformMaintenance, effectiveSettings.PerformMaintenanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("node_group", request => request.NodeGroup);
+            Modify_ApiCall(ref _callPerformMaintenance);
+            Modify_PerformMaintenanceApiCall(ref _callPerformMaintenance);
             _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyNodeGroupRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
@@ -2133,6 +2297,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchNodeGroupRequest, Operation> call);
 
+        partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceNodeGroupRequest, Operation> call);
+
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyNodeGroupRequest, Policy> call);
 
         partial void Modify_SetNodeTemplateApiCall(ref gaxgrpc::ApiCall<SetNodeTemplateNodeGroupRequest, Operation> call);
@@ -2165,6 +2331,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListNodesNodeGroupsRequest(ref ListNodesNodeGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchNodeGroupRequest(ref PatchNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PerformMaintenanceNodeGroupRequest(ref PerformMaintenanceNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetIamPolicyNodeGroupRequest(ref SetIamPolicyNodeGroupRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2459,6 +2627,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PerformMaintenance</c>.</summary>
+        public override lro::OperationsClient PerformMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PerformMaintenance(PerformMaintenanceNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceNodeGroupRequest(ref request, ref callSettings);
+            Operation response = _callPerformMaintenance.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Perform maintenance on a subset of nodes in the node group.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(PerformMaintenanceNodeGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PerformMaintenanceNodeGroupRequest(ref request, ref callSettings);
+            Operation response = await _callPerformMaintenance.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
         }
 
         /// <summary>

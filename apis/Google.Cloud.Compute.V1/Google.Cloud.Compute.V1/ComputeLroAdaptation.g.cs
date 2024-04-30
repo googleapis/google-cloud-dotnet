@@ -1398,6 +1398,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PerformMaintenanceNodeGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class SetNodeTemplateNodeGroupRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)

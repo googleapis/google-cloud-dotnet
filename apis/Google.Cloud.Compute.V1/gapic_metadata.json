@@ -2500,6 +2500,12 @@
                 "PatchAsync"
               ]
             },
+            "PerformMaintenance": {
+              "methods": [
+                "PerformMaintenance",
+                "PerformMaintenanceAsync"
+              ]
+            },
             "SetIamPolicy": {
               "methods": [
                 "SetIamPolicy",

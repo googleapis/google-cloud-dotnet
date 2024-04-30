@@ -3542,6 +3542,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NodeGroup"/> message.</summary>
         public static class NodeGroup
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NodeGroup.Types.MaintenanceInterval"/> enum.</summary>
+            public static class MaintenanceInterval
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NodeGroup.Types.MaintenanceInterval.UndefinedMaintenanceInterval"/>.</summary>
+                public const string UndefinedMaintenanceInterval = "UNDEFINED_MAINTENANCE_INTERVAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NodeGroup.Types.MaintenanceInterval.AsNeeded"/>.</summary>
+                public const string AsNeeded = "AS_NEEDED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NodeGroup.Types.MaintenanceInterval.Recurrent"/>.</summary>
+                public const string Recurrent = "RECURRENT";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NodeGroup.Types.MaintenancePolicy"/> enum.</summary>
             public static class MaintenancePolicy
             {
@@ -4057,6 +4070,19 @@ namespace Google.Cloud.Compute.V1
                 public const string V2 = "V2";
             }
 
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefix.Types.Mode"/> enum.</summary>
+            public static class Mode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefix.Types.Mode.UndefinedMode"/>.</summary>
+                public const string UndefinedMode = "UNDEFINED_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefix.Types.Mode.Delegation"/>.</summary>
+                public const string Delegation = "DELEGATION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefix.Types.Mode.ExternalIpv6ForwardingRuleCreation"/>.</summary>
+                public const string ExternalIpv6ForwardingRuleCreation = "EXTERNAL_IPV6_FORWARDING_RULE_CREATION";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefix.Types.Status"/> enum.</summary>
             public static class Status
             {
@@ -4086,6 +4112,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix"/> message.</summary>
         public static class PublicDelegatedPrefixPublicDelegatedSubPrefix
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix.Types.Mode"/> enum.</summary>
+            public static class Mode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix.Types.Mode.UndefinedMode"/>.</summary>
+                public const string UndefinedMode = "UNDEFINED_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix.Types.Mode.Delegation"/>.</summary>
+                public const string Delegation = "DELEGATION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix.Types.Mode.ExternalIpv6ForwardingRuleCreation"/>.</summary>
+                public const string ExternalIpv6ForwardingRuleCreation = "EXTERNAL_IPV6_FORWARDING_RULE_CREATION";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.PublicDelegatedPrefixPublicDelegatedSubPrefix.Types.Status"/> enum.</summary>
             public static class Status
             {
@@ -4534,6 +4573,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.SslCertificates"/>.</summary>
                 public const string SslCertificates = "SSL_CERTIFICATES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.SslPolicies"/>.</summary>
+                public const string SslPolicies = "SSL_POLICIES";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Quota.Types.Metric.StaticAddresses"/>.</summary>
                 public const string StaticAddresses = "STATIC_ADDRESSES";
@@ -5139,6 +5181,19 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.RouterInterface"/> message.</summary>
         public static class RouterInterface
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterInterface.Types.IpVersion"/> enum.</summary>
+            public static class IpVersion
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterInterface.Types.IpVersion.UndefinedIpVersion"/>.</summary>
+                public const string UndefinedIpVersion = "UNDEFINED_IP_VERSION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterInterface.Types.IpVersion.Ipv4"/>.</summary>
+                public const string Ipv4 = "IPV4";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterInterface.Types.IpVersion.Ipv6"/>.</summary>
+                public const string Ipv6 = "IPV6";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.RouterInterface.Types.ManagementType"/> enum.</summary>
             public static class ManagementType
             {
@@ -5298,6 +5353,12 @@ namespace Google.Cloud.Compute.V1
             {
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.UndefinedStatusReason"/>.</summary>
                 public const string UndefinedStatusReason = "UNDEFINED_STATUS_REASON";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.Ipv4PeerOnIpv6OnlyConnection"/>.</summary>
+                public const string Ipv4PeerOnIpv6OnlyConnection = "IPV4_PEER_ON_IPV6_ONLY_CONNECTION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.Ipv6PeerOnIpv4OnlyConnection"/>.</summary>
+                public const string Ipv6PeerOnIpv4OnlyConnection = "IPV6_PEER_ON_IPV4_ONLY_CONNECTION";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.RouterStatusBgpPeerStatus.Types.StatusReason.Md5AuthInternalProblem"/>.</summary>
                 public const string Md5AuthInternalProblem = "MD5_AUTH_INTERNAL_PROBLEM";
