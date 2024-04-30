@@ -760,6 +760,15 @@ namespace Google.Cloud.Parallelstore.V1Beta
             get => string.IsNullOrEmpty(ReservedIpRange) ? null : AddressName.Parse(ReservedIpRange, allowUnparsed: true);
             set => ReservedIpRange = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="AddressName"/>-typed view over the <see cref="EffectiveReservedIpRange"/> resource name property.
+        /// </summary>
+        public AddressName EffectiveReservedIpRangeAsAddressName
+        {
+            get => string.IsNullOrEmpty(EffectiveReservedIpRange) ? null : AddressName.Parse(EffectiveReservedIpRange, allowUnparsed: true);
+            set => EffectiveReservedIpRange = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListInstancesRequest
@@ -799,6 +808,30 @@ namespace Google.Cloud.Parallelstore.V1Beta
     }
 
     public partial class DeleteInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ImportDataRequest
+    {
+        /// <summary>
+        /// <see cref="gcpv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcpv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcpv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExportDataRequest
     {
         /// <summary>
         /// <see cref="gcpv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
