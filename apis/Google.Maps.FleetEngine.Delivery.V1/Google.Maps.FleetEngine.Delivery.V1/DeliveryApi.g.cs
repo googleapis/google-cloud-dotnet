@@ -156,12 +156,13 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "bGl2ZXJ5VmVoaWNsZXOK0+STAiUSIwoGcGFyZW50Ehl7cHJvdmlkZXJfaWQ9",
             "cHJvdmlkZXJzLyp9Gk7KQRpmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbdJB",
             "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1C6gEKI2dvb2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQgtE",
+            "cm1ClAIKI2dvb2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQgtE",
             "ZWxpdmVyeUFwaVABWkljbG91ZC5nb29nbGUuY29tL2dvL21hcHMvZmxlZXRl",
             "bmdpbmUvZGVsaXZlcnkvYXBpdjEvZGVsaXZlcnlwYjtkZWxpdmVyeXBiogIE",
-            "Q0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0RW5naW5lLkRlbGl2ZXJ5LlYx6kE7",
-            "CiNmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9Qcm92aWRlchIUcHJvdmlk",
-            "ZXJzL3twcm92aWRlcn1iBnByb3RvMw=="));
+            "Q0ZFRKoCI0dvb2dsZS5NYXBzLkZsZWV0RW5naW5lLkRlbGl2ZXJ5LlYx6gIn",
+            "R29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6RGVsaXZlcnk6OlYx6kE7CiNm",
+            "bGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9Qcm92aWRlchIUcHJvdmlkZXJz",
+            "L3twcm92aWRlcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehiclesReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.HeaderReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TaskTrackingInfoReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.TasksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
