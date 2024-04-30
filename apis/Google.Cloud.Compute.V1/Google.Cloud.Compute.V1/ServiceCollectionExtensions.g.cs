@@ -716,6 +716,44 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::InstanceGroupManagerResizeRequestsClient"/> to <paramref name="services"/>
+        /// .
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstanceGroupManagerResizeRequestsClient(this IServiceCollection services, sys::Action<gccv::InstanceGroupManagerResizeRequestsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstanceGroupManagerResizeRequestsClientBuilder builder = new gccv::InstanceGroupManagerResizeRequestsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::InstanceGroupManagerResizeRequestsClient"/> to <paramref name="services"/>
+        /// .
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstanceGroupManagerResizeRequestsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::InstanceGroupManagerResizeRequestsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstanceGroupManagerResizeRequestsClientBuilder builder = new gccv::InstanceGroupManagerResizeRequestsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::InstanceGroupManagersClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -779,6 +817,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::InstanceGroupsClientBuilder builder = new gccv::InstanceGroupsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::InstanceSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstanceSettingsServiceClient(this IServiceCollection services, sys::Action<gccv::InstanceSettingsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstanceSettingsServiceClientBuilder builder = new gccv::InstanceSettingsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::InstanceSettingsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstanceSettingsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::InstanceSettingsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstanceSettingsServiceClientBuilder builder = new gccv::InstanceSettingsServiceClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
@@ -2787,6 +2861,74 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::SslPoliciesClientBuilder builder = new gccv::SslPoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::StoragePoolTypesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddStoragePoolTypesClient(this IServiceCollection services, sys::Action<gccv::StoragePoolTypesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::StoragePoolTypesClientBuilder builder = new gccv::StoragePoolTypesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::StoragePoolTypesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddStoragePoolTypesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::StoragePoolTypesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::StoragePoolTypesClientBuilder builder = new gccv::StoragePoolTypesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::StoragePoolsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddStoragePoolsClient(this IServiceCollection services, sys::Action<gccv::StoragePoolsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::StoragePoolsClientBuilder builder = new gccv::StoragePoolsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::StoragePoolsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddStoragePoolsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::StoragePoolsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::StoragePoolsClientBuilder builder = new gccv::StoragePoolsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
