@@ -22,10 +22,22 @@
                 "DeleteInstanceAsync"
               ]
             },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
+              ]
+            },
             "GetInstance": {
               "methods": [
                 "GetInstance",
                 "GetInstanceAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
               ]
             },
             "ListInstances": {

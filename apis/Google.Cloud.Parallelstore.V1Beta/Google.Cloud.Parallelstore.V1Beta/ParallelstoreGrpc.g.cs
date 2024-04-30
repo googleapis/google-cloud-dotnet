@@ -93,6 +93,10 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Parallelstore.V1Beta.UpdateInstanceRequest> __Marshaller_google_cloud_parallelstore_v1beta_UpdateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Parallelstore.V1Beta.UpdateInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest> __Marshaller_google_cloud_parallelstore_v1beta_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest> __Marshaller_google_cloud_parallelstore_v1beta_ImportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest> __Marshaller_google_cloud_parallelstore_v1beta_ExportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ListInstancesRequest, global::Google.Cloud.Parallelstore.V1Beta.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ListInstancesRequest, global::Google.Cloud.Parallelstore.V1Beta.ListInstancesResponse>(
@@ -132,6 +136,22 @@ namespace Google.Cloud.Parallelstore.V1Beta {
         __ServiceName,
         "DeleteInstance",
         __Marshaller_google_cloud_parallelstore_v1beta_DeleteInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest, global::Google.LongRunning.Operation> __Method_ImportData = new grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportData",
+        __Marshaller_google_cloud_parallelstore_v1beta_ImportDataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest, global::Google.LongRunning.Operation> __Method_ExportData = new grpc::Method<global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportData",
+        __Marshaller_google_cloud_parallelstore_v1beta_ExportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -200,6 +220,30 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInstance(global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportData(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportData(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -473,6 +517,102 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
+      /// <summary>
+      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportData, null, options, request);
+      }
+      /// <summary>
+      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ImportData copies data from Cloud Storage to Parallelstore.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportData, null, options, request);
+      }
+      /// <summary>
+      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportData, null, options, request);
+      }
+      /// <summary>
+      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ExportData copies data from Parallelstore to Cloud Storage
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportData, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ParallelstoreClient NewInstance(ClientBaseConfiguration configuration)
@@ -491,7 +631,9 @@ namespace Google.Cloud.Parallelstore.V1Beta {
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
-          .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance).Build();
+          .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
+          .AddMethod(__Method_ImportData, serviceImpl.ImportData)
+          .AddMethod(__Method_ExportData, serviceImpl.ExportData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -506,6 +648,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Parallelstore.V1Beta.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Parallelstore.V1Beta.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Parallelstore.V1Beta.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
+      serviceBinder.AddMethod(__Method_ImportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Parallelstore.V1Beta.ImportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportData));
+      serviceBinder.AddMethod(__Method_ExportData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Parallelstore.V1Beta.ExportDataRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportData));
     }
 
   }

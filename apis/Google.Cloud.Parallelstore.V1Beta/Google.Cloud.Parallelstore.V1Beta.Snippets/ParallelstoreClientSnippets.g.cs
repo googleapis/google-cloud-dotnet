@@ -906,5 +906,147 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ImportData</summary>
+        public void ImportDataRequestObject()
+        {
+            // Snippet: ImportData(ImportDataRequest, CallSettings)
+            // Create client
+            ParallelstoreClient parallelstoreClient = ParallelstoreClient.Create();
+            // Initialize request argument(s)
+            ImportDataRequest request = new ImportDataRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SourceGcsUri = "",
+                DestinationPath = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ImportDataResponse, ImportDataMetadata> response = parallelstoreClient.ImportData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDataResponse, ImportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDataResponse, ImportDataMetadata> retrievedResponse = parallelstoreClient.PollOnceImportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDataAsync</summary>
+        public async Task ImportDataRequestObjectAsync()
+        {
+            // Snippet: ImportDataAsync(ImportDataRequest, CallSettings)
+            // Additional: ImportDataAsync(ImportDataRequest, CancellationToken)
+            // Create client
+            ParallelstoreClient parallelstoreClient = await ParallelstoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportDataRequest request = new ImportDataRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SourceGcsUri = "",
+                DestinationPath = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ImportDataResponse, ImportDataMetadata> response = await parallelstoreClient.ImportDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDataResponse, ImportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDataResponse, ImportDataMetadata> retrievedResponse = await parallelstoreClient.PollOnceImportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportData</summary>
+        public void ExportDataRequestObject()
+        {
+            // Snippet: ExportData(ExportDataRequest, CallSettings)
+            // Create client
+            ParallelstoreClient parallelstoreClient = ParallelstoreClient.Create();
+            // Initialize request argument(s)
+            ExportDataRequest request = new ExportDataRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SourcePath = "",
+                DestinationGcsUri = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExportDataResponse, ExportDataMetadata> response = parallelstoreClient.ExportData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDataResponse, ExportDataMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDataResponse, ExportDataMetadata> retrievedResponse = parallelstoreClient.PollOnceExportData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDataAsync</summary>
+        public async Task ExportDataRequestObjectAsync()
+        {
+            // Snippet: ExportDataAsync(ExportDataRequest, CallSettings)
+            // Additional: ExportDataAsync(ExportDataRequest, CancellationToken)
+            // Create client
+            ParallelstoreClient parallelstoreClient = await ParallelstoreClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportDataRequest request = new ExportDataRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SourcePath = "",
+                DestinationGcsUri = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ExportDataResponse, ExportDataMetadata> response = await parallelstoreClient.ExportDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportDataResponse, ExportDataMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportDataResponse, ExportDataMetadata> retrievedResponse = await parallelstoreClient.PollOnceExportDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

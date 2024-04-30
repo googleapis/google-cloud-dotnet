@@ -1421,6 +1421,200 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "parallelstore_v1beta_generated_Parallelstore_ImportData_sync",
+      "title": "ImportDataRequestObject",
+      "description": "Snippet for ImportData",
+      "file": "ParallelstoreClient.ImportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportData",
+        "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient.ImportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Parallelstore.V1Beta.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Parallelstore.V1Beta.ImportDataResponse, Google.Cloud.Parallelstore.V1Beta.ImportDataMetadata>",
+        "client": {
+          "shortName": "ParallelstoreClient",
+          "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.parallelstore.v1beta.Parallelstore.ImportData",
+          "service": {
+            "shortName": "Parallelstore",
+            "fullName": "google.cloud.parallelstore.v1beta.Parallelstore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parallelstore_v1beta_generated_Parallelstore_ImportData_async",
+      "title": "ImportDataRequestObjectAsync",
+      "description": "Snippet for ImportDataAsync",
+      "file": "ParallelstoreClient.ImportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportDataAsync",
+        "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient.ImportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Parallelstore.V1Beta.ImportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Parallelstore.V1Beta.ImportDataResponse, Google.Cloud.Parallelstore.V1Beta.ImportDataMetadata>>",
+        "client": {
+          "shortName": "ParallelstoreClient",
+          "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient"
+        },
+        "method": {
+          "shortName": "ImportData",
+          "fullName": "google.cloud.parallelstore.v1beta.Parallelstore.ImportData",
+          "service": {
+            "shortName": "Parallelstore",
+            "fullName": "google.cloud.parallelstore.v1beta.Parallelstore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parallelstore_v1beta_generated_Parallelstore_ExportData_sync",
+      "title": "ExportDataRequestObject",
+      "description": "Snippet for ExportData",
+      "file": "ParallelstoreClient.ExportDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportData",
+        "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient.ExportData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Parallelstore.V1Beta.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Parallelstore.V1Beta.ExportDataResponse, Google.Cloud.Parallelstore.V1Beta.ExportDataMetadata>",
+        "client": {
+          "shortName": "ParallelstoreClient",
+          "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.parallelstore.v1beta.Parallelstore.ExportData",
+          "service": {
+            "shortName": "Parallelstore",
+            "fullName": "google.cloud.parallelstore.v1beta.Parallelstore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "parallelstore_v1beta_generated_Parallelstore_ExportData_async",
+      "title": "ExportDataRequestObjectAsync",
+      "description": "Snippet for ExportDataAsync",
+      "file": "ParallelstoreClient.ExportDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportDataAsync",
+        "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient.ExportDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Parallelstore.V1Beta.ExportDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Parallelstore.V1Beta.ExportDataResponse, Google.Cloud.Parallelstore.V1Beta.ExportDataMetadata>>",
+        "client": {
+          "shortName": "ParallelstoreClient",
+          "fullName": "Google.Cloud.Parallelstore.V1Beta.ParallelstoreClient"
+        },
+        "method": {
+          "shortName": "ExportData",
+          "fullName": "google.cloud.parallelstore.v1beta.Parallelstore.ExportData",
+          "service": {
+            "shortName": "Parallelstore",
+            "fullName": "google.cloud.parallelstore.v1beta.Parallelstore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
