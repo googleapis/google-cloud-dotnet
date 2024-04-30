@@ -9,8 +9,6 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # using the code generator from googleapis/gapic-generator-csharp.
 # It will fetch both repositories if necessary.
 
-OUTDIR=tmp
-
 if [[ "$GOOGLEAPIS_DIR" != "" ]]
 then
   declare -r GOOGLEAPIS="$GOOGLEAPIS_DIR"
