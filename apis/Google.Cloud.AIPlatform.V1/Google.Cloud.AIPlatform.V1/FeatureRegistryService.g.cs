@@ -198,7 +198,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the Location to create FeatureGroups.
     /// Format:
-    /// `projects/{project}/locations/{location}'`
+    /// `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

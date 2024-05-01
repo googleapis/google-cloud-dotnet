@@ -187,7 +187,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>Field number for the "base_model" field.</summary>
     public const int BaseModelFieldNumber = 4;
     /// <summary>
-    /// Model name for tuning, e.g., "gemini-1.0-pro-002".
+    /// The base model that is being tuned, e.g., "gemini-1.0-pro-002".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -249,8 +249,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string tunedModelDisplayName_ = "";
     /// <summary>
     /// Optional. The display name of the
-    /// [TunedModel][google.cloud.aiplatform.v1.Model]. The name can be up to
-    /// 128 characters long and can consist of any UTF-8 characters.
+    /// [TunedModel][google.cloud.aiplatform.v1.Model]. The name can be up to 128
+    /// characters long and can consist of any UTF-8 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2806,7 +2806,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EpochCountFieldNumber = 1;
     private long epochCount_;
     /// <summary>
-    /// Optional. Number of training epoches for this tuning job.
+    /// Optional. Number of complete passes the model makes over the entire
+    /// training dataset during training.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2821,7 +2822,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int LearningRateMultiplierFieldNumber = 2;
     private double learningRateMultiplier_;
     /// <summary>
-    /// Optional. Learning rate multiplier for tuning.
+    /// Optional. Multiplier for adjusting the default learning rate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3117,7 +3118,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string trainingDatasetUri_ = "";
     /// <summary>
     /// Required. Cloud Storage path to file containing training dataset for
-    /// tuning.
+    /// tuning. The dataset must be formatted as a JSONL file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3133,7 +3134,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string validationDatasetUri_ = "";
     /// <summary>
     /// Optional. Cloud Storage path to file containing validation dataset for
-    /// tuning.
+    /// tuning. The dataset must be formatted as a JSONL file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
