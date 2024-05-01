@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
+using System.Text.RegularExpressions;
 using Xunit;
 
 namespace Google.Cloud.Tools.SbomGenerator.Tests;
@@ -21,25 +22,25 @@ public class GoldenTest
     private const string GoldenTestDataPath = "GoldenTestData";
 
     [Fact]
-    public void OsLogin()
+    public void OsLogin() => ExecuteTest("Google.Cloud.OsLogin.V1Beta.3.0.0-beta05");
+
+    [Fact]
+    public void FunctionsFrameworkTemplates() => ExecuteTest("Google.Cloud.Functions.Templates.2.2.0");
+
+    private static void ExecuteTest(string package)
     {
-        string packageFilePath = Path.Combine(GoldenTestDataPath, "Google.Cloud.OsLogin.V1Beta.3.0.0-beta05.nupkg");
-        string expectedSbomFilePath = Path.Combine(GoldenTestDataPath, "Expected-Google.Cloud.OsLogin.V1Beta.3.0.0-beta05.nupkg-sbom.spdx.json");
-        string actualSbomFilePath = Path.Combine(GoldenTestDataPath, "Google.Cloud.OsLogin.V1Beta.3.0.0-beta05.nupkg-sbom.spdx.json");
+        string packageFilePath = Path.Combine(GoldenTestDataPath, $"{package}.nupkg");
+        string expectedSbomFilePath = Path.Combine(GoldenTestDataPath, $"Expected-{package}.nupkg-sbom.spdx.json");
+        string actualSbomFilePath = Path.Combine(GoldenTestDataPath, $"{package}.nupkg-sbom.spdx.json");
         try
         {
             Program.Main(new[] { packageFilePath });
             Assert.True(File.Exists(actualSbomFilePath));
 
-            // Replace line endings in case we have run tests in environments different to those in which we generated
-            // the golden test data.
-            string expected = File.ReadAllText(expectedSbomFilePath).ReplaceLineEndings();
-            string actual = File.ReadAllText(actualSbomFilePath).ReplaceLineEndings();
+            string expected = Normalize(File.ReadAllText(expectedSbomFilePath));
+            string actual = Normalize(File.ReadAllText(actualSbomFilePath));
 
-            // Ugly hack to skip the created date comparison.
-            // This is a sanity check test on a tool so this is OK.
-            Assert.Equal(expected[..303], actual[..303]);
-            Assert.Equal(expected[323..], actual[323..]);
+            Assert.Equal(expected, actual);
         }
         finally
         {
@@ -48,5 +49,14 @@ public class GoldenTest
                 File.Delete(actualSbomFilePath);
             }
         }
+
+        // Massage the data in three ways:
+        // - Normalize line endings
+        // - Remove the content of the "created" JSON property as it depends on the system time.
+        // - Trim the end, so that trailing whitespace is irrelevant
+        string Normalize(string text) =>
+            new Regex("\"created\": \"[^\"]*\"").Replace(text, "\"created\": \"REDACTED\"")
+                .ReplaceLineEndings()
+                .Trim();
     }
 }

@@ -16,6 +16,7 @@ using System.IO.Compression;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text.Json;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Google.Cloud.Tools.SbomGenerator;
@@ -64,12 +65,7 @@ public class Program
     /// </summary>
     /// <param name="nupkgPath">Path to a .nupkg file.</param>
     /// <returns>Filled out SPDX SBOM.</returns>
-    /// <exception cref="MultipleNuspecError">
-    ///     When the .nupkg contains multiple .nuspec files.
-    /// </exception>
-    /// <exception cref="MissingNuspecError">
-    ///     When the .nupkg contains no .nuspec files.
-    /// </exception>
+    /// <exception cref="InvalidOperationException">The .nupkg doesn't contain exactly one .nuspec file.</exception>
     private static Spdx GenerateSpdx(string nupkgPath)
     {
         // Get a hash and a uuid for the Nuget package.
@@ -125,10 +121,10 @@ public class Program
     /// <returns>metadata</returns>
     private static NuspecPackage GetNuspecMetadata(string nupkgPath)
     {
-        XmlSerializer xmlSerializer = new XmlSerializer(typeof(NuspecPackage));
         using var zipFile = ZipFile.OpenRead(nupkgPath);
         using var nuspecStream = zipFile.Entries.Single(entry => Path.GetExtension(entry.Name).ToLower() == ".nuspec").Open();
-        return xmlSerializer.Deserialize(nuspecStream) as NuspecPackage;
+        var doc = XDocument.Load(nuspecStream);
+        return NuspecPackage.FromDocument(doc);
     }
 
     private static (string hash, string uuid) GetSha256AndGuid(string nupkgPath)
