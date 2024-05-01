@@ -12,37 +12,53 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace Google.Cloud.Tools.SbomGenerator;
 
 /// <summary>
 /// Metadata collected from a nupkg's XML nuspec.
 /// </summary>
-[XmlRoot("package", Namespace = "http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd")]
 public class NuspecPackage
 {
-    [XmlElement("metadata")]
     public NuspecMetadata Metadata { get; set; }
 
     public class NuspecMetadata
     {
-        [XmlElement("id")]
+        internal static NuspecMetadata FromElement(XElement element)
+        {
+            var ns = element.Name.Namespace;
+            return new NuspecMetadata
+            {
+                Id = (string) element.Element(ns + "id"),
+                Version = (string) element.Element(ns + "version"),
+                Description = (string) element.Element(ns + "description"),
+                ProjectUrl = (string) element.Element(ns + "projectUrl"),
+                License = (string) element.Element(ns + "license")
+            };
+        }
+
         public string Id { get; set; }
-
-        [XmlElement("version")]
         public string Version { get; set; }
-
-        [XmlIgnore]
         public string NameWithVersion => $"{Id}@{Version}";
-
-        [XmlElement("description")]
         public string Description { get; set; }
-
-        [XmlElement("projectUrl")]
         public string ProjectUrl { get; set; }
-
-        [XmlElement("license")]
         public string License { get; set; }
+    }
+
+    public static NuspecPackage FromDocument(XDocument doc)
+    {
+        var root = doc.Root;
+        if (root.Name.LocalName != "package")
+        {
+            throw new ArgumentException("Document root must be a package element");
+        }
+        var ns = root.Name.Namespace;
+        var metadataElement = root.Element(ns + "metadata");
+        if (metadataElement is null)
+        {
+            throw new ArgumentException("No metadata element");
+        }
+        return new NuspecPackage { Metadata = NuspecMetadata.FromElement(metadataElement) };
     }
 }

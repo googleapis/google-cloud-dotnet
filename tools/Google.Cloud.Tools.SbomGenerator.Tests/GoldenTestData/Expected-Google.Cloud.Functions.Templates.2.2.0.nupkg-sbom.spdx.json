@@ -1,0 +1,46 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-Document",
+  "name": "Google.Cloud.Functions.Templates@2.2.0",
+  "documentNamespace": "https://spdx.google/f2394a62-5ae9-5b22-a4f9-0c5b02bdf2ff",
+  "creators": [
+    "Organization: Google LLC"
+  ],
+  "created": "2024-05-01T11:59:14Z",
+  "packages": [
+    {
+      "name": "Google.Cloud.Functions.Templates",
+      "packageFileName": "Google.Cloud.Functions.Templates.2.2.0.nupkg",
+      "SPDXID": "SPDXRef-Package-Google.Cloud.Functions.Templates.2.2.0.nupkg-f2394a62-5ae9-5b22-a4f9-0c5b02bdf2ff",
+      "versionInfo": "2.2.0",
+      "description": "Templates for Google Cloud Functions Framework",
+      "supplier": "Organization: Google LLC",
+      "originator": "Organization: Google LLC",
+      "downloadLocation": "https://github.com/GoogleCloudPlatform/functions-framework-dotnet.git",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "F2394A625AE90B22A4F90C5B02BDF2FFE78EBA0E15C1D2EDE44CE004CF6C51A0"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceType": "purl",
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:nuget/Google.Cloud.Functions.Templates@2.2.0"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}
