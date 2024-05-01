@@ -532,7 +532,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.
@@ -562,7 +562,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.
@@ -592,7 +592,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.
@@ -617,7 +617,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.
@@ -647,7 +647,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.
@@ -677,7 +677,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// <param name="parent">
         /// Required. The resource name of the Location to create FeatureGroups.
         /// Format:
-        /// `projects/{project}/locations/{location}'`
+        /// `projects/{project}/locations/{location}`
         /// </param>
         /// <param name="featureGroup">
         /// Required. The FeatureGroup to create.

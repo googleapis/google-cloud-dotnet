@@ -29,7 +29,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291",
             "cmNlcy5wcm90bxomZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbW9kZWwu",
-            "cHJvdG8i3SAKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
+            "cHJvdG8iliEKDlB1Ymxpc2hlck1vZGVsEhEKBG5hbWUYASABKAlCA+BBAxIa",
             "Cgp2ZXJzaW9uX2lkGAIgASgJQgbgQQXgQQMSYAoUb3Blbl9zb3VyY2VfY2F0",
             "ZWdvcnkYByABKA4yPS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QdWJs",
             "aXNoZXJNb2RlbC5PcGVuU291cmNlQ2F0ZWdvcnlCA+BBAhJXChFzdXBwb3J0",
@@ -45,7 +45,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cmVuY2USDQoDdXJpGAEgASgJSAASFwoNcmVzb3VyY2VfbmFtZRgCIAEoCUgA",
             "EhYKCHVzZV9jYXNlGAMgASgJQgIYAUgAEhkKC2Rlc2NyaXB0aW9uGAQgASgJ",
             "QgIYAUgAQgsKCXJlZmVyZW5jZRo5Cg1Eb2N1bWVudGF0aW9uEhIKBXRpdGxl",
-            "GAEgASgJQgPgQQISFAoHY29udGVudBgCIAEoCUID4EECGugWCgxDYWxsVG9B",
+            "GAEgASgJQgPgQQISFAoHY29udGVudBgCIAEoCUID4EECGqEXCgxDYWxsVG9B",
             "Y3Rpb24SXwoNdmlld19yZXN0X2FwaRgBIAEoCzJDLmdvb2dsZS5jbG91ZC5h",
             "aXBsYXRmb3JtLnYxLlB1Ymxpc2hlck1vZGVsLkNhbGxUb0FjdGlvbi5WaWV3",
             "UmVzdEFwaUID4EEBEm4KDW9wZW5fbm90ZWJvb2sYAiABKAsyUi5nb29nbGUu",
@@ -97,7 +97,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXJlbmNlc0ID4EECGpEBChdPcGVuRmluZVR1bmluZ1BpcGVsaW5lcxJ2ChVm",
             "aW5lX3R1bmluZ19waXBlbGluZXMYASADKAsyUi5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MS5QdWJsaXNoZXJNb2RlbC5DYWxsVG9BY3Rpb24uUmVnaW9u",
-            "YWxSZXNvdXJjZVJlZmVyZW5jZXNCA+BBAhruAwoGRGVwbG95Ek0KE2RlZGlj",
+            "YWxSZXNvdXJjZVJlZmVyZW5jZXNCA+BBAhqnBAoGRGVwbG95Ek0KE2RlZGlj",
             "YXRlZF9yZXNvdXJjZXMYBSABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MS5EZWRpY2F0ZWRSZXNvdXJjZXNIABJNChNhdXRvbWF0aWNfcmVzb3Vy",
             "Y2VzGAYgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQXV0b21h",
@@ -106,28 +106,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "X3JlZmVyZW5jZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LkxhcmdlTW9kZWxSZWZlcmVuY2VCA+BBARJLCg5jb250YWluZXJfc3BlYxgD",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsQ29udGFp",
-            "bmVyU3BlY0ID4EEBEhkKDGFydGlmYWN0X3VyaRgEIAEoCUID4EEBEhIKBXRp",
-            "dGxlGAggASgJQgPgQQISIAoTcHVibGljX2FydGlmYWN0X3VyaRgJIAEoCUID",
-            "4EEBQhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzGioKCURlcGxveUdrZRIdChBn",
-            "a2VfeWFtbF9jb25maWdzGAEgAygJQgPgQQFCEQoPX29wZW5fbm90ZWJvb2tz",
-            "Qh0KG19vcGVuX2ZpbmVfdHVuaW5nX3BpcGVsaW5lcyLbAQoST3BlblNvdXJj",
-            "ZUNhdGVnb3J5EiQKIE9QRU5fU09VUkNFX0NBVEVHT1JZX1VOU1BFQ0lGSUVE",
-            "EAASDwoLUFJPUFJJRVRBUlkQARIrCidHT09HTEVfT1dORURfT1NTX1dJVEhf",
-            "R09PR0xFX0NIRUNLUE9JTlQQAhIwCixUSElSRF9QQVJUWV9PV05FRF9PU1Nf",
-            "V0lUSF9HT09HTEVfQ0hFQ0tQT0lOVBADEhQKEEdPT0dMRV9PV05FRF9PU1MQ",
-            "BBIZChVUSElSRF9QQVJUWV9PV05FRF9PU1MQBSJuCgtMYXVuY2hTdGFnZRIc",
-            "ChhMQVVOQ0hfU1RBR0VfVU5TUEVDSUZJRUQQABIQCgxFWFBFUklNRU5UQUwQ",
-            "ARITCg9QUklWQVRFX1BSRVZJRVcQAhISCg5QVUJMSUNfUFJFVklFVxADEgYK",
-            "AkdBEAQiYwoMVmVyc2lvblN0YXRlEh0KGVZFUlNJT05fU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABIYChRWRVJTSU9OX1NUQVRFX1NUQUJMRRABEhoKFlZFUlNJT05f",
-            "U1RBVEVfVU5TVEFCTEUQAjpU6kFRCihhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
-            "Y29tL1B1Ymxpc2hlck1vZGVsEiVwdWJsaXNoZXJzL3twdWJsaXNoZXJ9L21v",
-            "ZGVscy97bW9kZWx9QtEBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFCE1B1Ymxpc2hlck1vZGVsUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "bmVyU3BlY0ID4EEBEhkKDGFydGlmYWN0X3VyaRgEIAEoCUID4EEBEiIKEGRl",
+            "cGxveV90YXNrX25hbWUYCiABKAlCA+BBAUgBiAEBEhIKBXRpdGxlGAggASgJ",
+            "QgPgQQISIAoTcHVibGljX2FydGlmYWN0X3VyaRgJIAEoCUID4EEBQhYKFHBy",
+            "ZWRpY3Rpb25fcmVzb3VyY2VzQhMKEV9kZXBsb3lfdGFza19uYW1lGioKCURl",
+            "cGxveUdrZRIdChBna2VfeWFtbF9jb25maWdzGAEgAygJQgPgQQFCEQoPX29w",
+            "ZW5fbm90ZWJvb2tzQh0KG19vcGVuX2ZpbmVfdHVuaW5nX3BpcGVsaW5lcyLb",
+            "AQoST3BlblNvdXJjZUNhdGVnb3J5EiQKIE9QRU5fU09VUkNFX0NBVEVHT1JZ",
+            "X1VOU1BFQ0lGSUVEEAASDwoLUFJPUFJJRVRBUlkQARIrCidHT09HTEVfT1dO",
+            "RURfT1NTX1dJVEhfR09PR0xFX0NIRUNLUE9JTlQQAhIwCixUSElSRF9QQVJU",
+            "WV9PV05FRF9PU1NfV0lUSF9HT09HTEVfQ0hFQ0tQT0lOVBADEhQKEEdPT0dM",
+            "RV9PV05FRF9PU1MQBBIZChVUSElSRF9QQVJUWV9PV05FRF9PU1MQBSJuCgtM",
+            "YXVuY2hTdGFnZRIcChhMQVVOQ0hfU1RBR0VfVU5TUEVDSUZJRUQQABIQCgxF",
+            "WFBFUklNRU5UQUwQARITCg9QUklWQVRFX1BSRVZJRVcQAhISCg5QVUJMSUNf",
+            "UFJFVklFVxADEgYKAkdBEAQiYwoMVmVyc2lvblN0YXRlEh0KGVZFUlNJT05f",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIYChRWRVJTSU9OX1NUQVRFX1NUQUJMRRAB",
+            "EhoKFlZFUlNJT05fU1RBVEVfVU5TVEFCTEUQAjpU6kFRCihhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29tL1B1Ymxpc2hlck1vZGVsEiVwdWJsaXNoZXJzL3tw",
+            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9QtEBCh5jb20uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFCE1B1Ymxpc2hlck1vZGVsUHJvdG9QAVo+Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
+            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
+            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
+            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -137,7 +138,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.ViewRestApi.Parser, new[]{ "Documentations", "Title" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenNotebooks), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenNotebooks.Parser, new[]{ "Notebooks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenFineTuningPipelines), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.OpenFineTuningPipelines.Parser, new[]{ "FineTuningPipelines" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "ModelDisplayName", "LargeModelReference", "ContainerSpec", "ArtifactUri", "Title", "PublicArtifactUri" }, new[]{ "PredictionResources" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.Deploy.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "ModelDisplayName", "LargeModelReference", "ContainerSpec", "ArtifactUri", "DeployTaskName", "Title", "PublicArtifactUri" }, new[]{ "PredictionResources", "DeployTaskName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.DeployGke), global::Google.Cloud.AIPlatform.V1.PublisherModel.Types.CallToAction.Types.DeployGke.Parser, new[]{ "GkeYamlConfigs" }, null, null, null, null)})})
           }));
     }
@@ -3238,6 +3239,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               largeModelReference_ = other.largeModelReference_ != null ? other.largeModelReference_.Clone() : null;
               containerSpec_ = other.containerSpec_ != null ? other.containerSpec_.Clone() : null;
               artifactUri_ = other.artifactUri_;
+              deployTaskName_ = other.deployTaskName_;
               title_ = other.title_;
               publicArtifactUri_ = other.publicArtifactUri_;
               switch (other.PredictionResourcesCase) {
@@ -3387,6 +3389,36 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
             }
 
+            /// <summary>Field number for the "deploy_task_name" field.</summary>
+            public const int DeployTaskNameFieldNumber = 10;
+            private readonly static string DeployTaskNameDefaultValue = "";
+
+            private string deployTaskName_;
+            /// <summary>
+            /// Optional. The name of the deploy task (e.g., "text to image
+            /// generation").
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string DeployTaskName {
+              get { return deployTaskName_ ?? DeployTaskNameDefaultValue; }
+              set {
+                deployTaskName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+            /// <summary>Gets whether the "deploy_task_name" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasDeployTaskName {
+              get { return deployTaskName_ != null; }
+            }
+            /// <summary>Clears the value of the "deploy_task_name" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearDeployTaskName() {
+              deployTaskName_ = null;
+            }
+
             /// <summary>Field number for the "title" field.</summary>
             public const int TitleFieldNumber = 8;
             private string title_ = "";
@@ -3462,6 +3494,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               if (!object.Equals(LargeModelReference, other.LargeModelReference)) return false;
               if (!object.Equals(ContainerSpec, other.ContainerSpec)) return false;
               if (ArtifactUri != other.ArtifactUri) return false;
+              if (DeployTaskName != other.DeployTaskName) return false;
               if (Title != other.Title) return false;
               if (PublicArtifactUri != other.PublicArtifactUri) return false;
               if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
@@ -3479,6 +3512,7 @@ namespace Google.Cloud.AIPlatform.V1 {
               if (largeModelReference_ != null) hash ^= LargeModelReference.GetHashCode();
               if (containerSpec_ != null) hash ^= ContainerSpec.GetHashCode();
               if (ArtifactUri.Length != 0) hash ^= ArtifactUri.GetHashCode();
+              if (HasDeployTaskName) hash ^= DeployTaskName.GetHashCode();
               if (Title.Length != 0) hash ^= Title.GetHashCode();
               if (PublicArtifactUri.Length != 0) hash ^= PublicArtifactUri.GetHashCode();
               hash ^= (int) predictionResourcesCase_;
@@ -3536,6 +3570,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(74);
                 output.WriteString(PublicArtifactUri);
               }
+              if (HasDeployTaskName) {
+                output.WriteRawTag(82);
+                output.WriteString(DeployTaskName);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -3582,6 +3620,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                 output.WriteRawTag(74);
                 output.WriteString(PublicArtifactUri);
               }
+              if (HasDeployTaskName) {
+                output.WriteRawTag(82);
+                output.WriteString(DeployTaskName);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -3612,6 +3654,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (ArtifactUri.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ArtifactUri);
+              }
+              if (HasDeployTaskName) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DeployTaskName);
               }
               if (Title.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
@@ -3648,6 +3693,9 @@ namespace Google.Cloud.AIPlatform.V1 {
               }
               if (other.ArtifactUri.Length != 0) {
                 ArtifactUri = other.ArtifactUri;
+              }
+              if (other.HasDeployTaskName) {
+                DeployTaskName = other.DeployTaskName;
               }
               if (other.Title.Length != 0) {
                 Title = other.Title;
@@ -3740,6 +3788,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                     PublicArtifactUri = input.ReadString();
                     break;
                   }
+                  case 82: {
+                    DeployTaskName = input.ReadString();
+                    break;
+                  }
                 }
               }
             #endif
@@ -3805,6 +3857,10 @@ namespace Google.Cloud.AIPlatform.V1 {
                   }
                   case 74: {
                     PublicArtifactUri = input.ReadString();
+                    break;
+                  }
+                  case 82: {
+                    DeployTaskName = input.ReadString();
                     break;
                   }
                 }

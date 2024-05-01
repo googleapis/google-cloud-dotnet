@@ -25,19 +25,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hY2NlbGVyYXRvcl90eXBl",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqbAgoPQWNjZWxl",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MSqvAgoPQWNjZWxl",
             "cmF0b3JUeXBlEiAKHEFDQ0VMRVJBVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIU",
             "ChBOVklESUFfVEVTTEFfSzgwEAESFQoRTlZJRElBX1RFU0xBX1AxMDAQAhIV",
             "ChFOVklESUFfVEVTTEFfVjEwMBADEhMKD05WSURJQV9URVNMQV9QNBAEEhMK",
             "D05WSURJQV9URVNMQV9UNBAFEhUKEU5WSURJQV9URVNMQV9BMTAwEAgSFAoQ",
             "TlZJRElBX0ExMDBfODBHQhAJEg0KCU5WSURJQV9MNBALEhQKEE5WSURJQV9I",
             "MTAwXzgwR0IQDRIKCgZUUFVfVjIQBhIKCgZUUFVfVjMQBxIOCgpUUFVfVjRf",
-            "UE9EEApC0gEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIUQWNj",
-            "ZWxlcmF0b3JUeXBlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
-            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
-            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "UE9EEAoSEgoOVFBVX1Y1X0xJVEVQT0QQDELSAQoeY29tLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxQhRBY2NlbGVyYXRvclR5cGVQcm90b1ABWj5jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
+            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
+            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
+            "SVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.AcceleratorType), }, null, null));
@@ -102,6 +102,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// TPU v4.
     /// </summary>
     [pbr::OriginalName("TPU_V4_POD")] TpuV4Pod = 10,
+    /// <summary>
+    /// TPU v5.
+    /// </summary>
+    [pbr::OriginalName("TPU_V5_LITEPOD")] TpuV5Litepod = 12,
   }
 
   #endregion
