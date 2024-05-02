@@ -93,7 +93,7 @@ then
        exit 1
     esac
 
-    dotnet generate-sbom $pkg
+    # dotnet generate-sbom $pkg
     dotnet nuget push -s https://api.nuget.org/v3/index.json -k $pkg_nuget_api_key $pkg
   done
   cd ../..
