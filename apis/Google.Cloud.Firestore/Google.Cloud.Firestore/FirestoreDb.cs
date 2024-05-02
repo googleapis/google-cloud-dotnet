@@ -431,6 +431,11 @@ namespace Google.Cloud.Firestore
             {
                 switch (e.Status.StatusCode)
                 {
+                    case StatusCode.Unknown:
+                    case StatusCode.Internal:
+                    case StatusCode.Unavailable:
+                    case StatusCode.Unauthenticated:
+                    case StatusCode.ResourceExhausted:
                     case StatusCode.Aborted:
                         // Definitely rollback, retry if we have any attempts left.
                         rollback = true;
@@ -440,6 +445,10 @@ namespace Google.Cloud.Firestore
                         // No retry, but we do want to roll back.
                         rollback = true;
                         return false;
+                    // If the transaction has expired, don't roll back, but do retry.
+                    case StatusCode.InvalidArgument when e.Message?.IndexOf("transaction has expired", StringComparison.Ordinal) >= 0:
+                        rollback = false;
+                        return true;
                     default:
                         return false;
                 }
