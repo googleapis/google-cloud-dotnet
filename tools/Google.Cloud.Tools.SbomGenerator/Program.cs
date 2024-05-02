@@ -17,7 +17,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Xml.Linq;
-using System.Xml.Serialization;
 
 namespace Google.Cloud.Tools.SbomGenerator;
 
