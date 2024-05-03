@@ -506,13 +506,13 @@ namespace Google.Cloud.Storage.Control.V2
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>
+            /// A resource name with pattern <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>
             /// .
             /// </summary>
             ProjectBucketManagedFolder = 1,
         }
 
-        private static gax::PathTemplate s_projectBucketManagedFolder = new gax::PathTemplate("projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}");
+        private static gax::PathTemplate s_projectBucketManagedFolder = new gax::PathTemplate("projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}");
 
         /// <summary>Creates a <see cref="ManagedFolderName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -525,7 +525,7 @@ namespace Google.Cloud.Storage.Control.V2
 
         /// <summary>
         /// Creates a <see cref="ManagedFolderName"/> with the pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>.
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
@@ -536,28 +536,28 @@ namespace Google.Cloud.Storage.Control.V2
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ManagedFolderName"/> with pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>.
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="managedFolderId">The <c>ManagedFolder</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ManagedFolderName"/> with pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>.
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>.
         /// </returns>
         public static string Format(string projectId, string bucketId, string managedFolderId) =>
             FormatProjectBucketManagedFolder(projectId, bucketId, managedFolderId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ManagedFolderName"/> with pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>.
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="managedFolderId">The <c>ManagedFolder</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ManagedFolderName"/> with pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>.
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>.
         /// </returns>
         public static string FormatProjectBucketManagedFolder(string projectId, string bucketId, string managedFolderId) =>
             s_projectBucketManagedFolder.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(managedFolderId, nameof(managedFolderId)));
@@ -569,7 +569,7 @@ namespace Google.Cloud.Storage.Control.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c></description>
+        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -585,7 +585,7 @@ namespace Google.Cloud.Storage.Control.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c></description>
+        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -607,7 +607,7 @@ namespace Google.Cloud.Storage.Control.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c></description>
+        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c></description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -627,7 +627,7 @@ namespace Google.Cloud.Storage.Control.V2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c></description>
+        /// <description><c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c></description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -674,7 +674,7 @@ namespace Google.Cloud.Storage.Control.V2
 
         /// <summary>
         /// Constructs a new instance of a <see cref="ManagedFolderName"/> class from the component parts of pattern
-        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managedFolder=**}</c>
+        /// <c>projects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>

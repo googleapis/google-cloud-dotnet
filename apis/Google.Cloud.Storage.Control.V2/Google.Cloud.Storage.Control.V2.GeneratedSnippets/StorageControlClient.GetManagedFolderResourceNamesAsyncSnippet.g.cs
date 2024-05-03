@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
         }

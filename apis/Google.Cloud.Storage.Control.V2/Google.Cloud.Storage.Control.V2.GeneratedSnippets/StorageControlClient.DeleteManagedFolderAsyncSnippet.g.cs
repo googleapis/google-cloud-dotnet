@@ -35,7 +35,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(name);
         }

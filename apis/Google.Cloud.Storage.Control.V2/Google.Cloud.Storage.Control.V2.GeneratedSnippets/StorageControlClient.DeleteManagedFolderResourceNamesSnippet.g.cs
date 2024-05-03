@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             storageControlClient.DeleteManagedFolder(name);
         }
