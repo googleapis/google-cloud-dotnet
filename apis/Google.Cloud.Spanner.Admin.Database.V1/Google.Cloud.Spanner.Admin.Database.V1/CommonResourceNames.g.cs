@@ -599,6 +599,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
             set => KmsKeyName = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CryptoKeyName> KmsKeyNamesAsCryptoKeyNames
+        {
+            get => new gax::ResourceNameList<CryptoKeyName>(KmsKeyNames, s => string.IsNullOrEmpty(s) ? null : CryptoKeyName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class EncryptionInfo

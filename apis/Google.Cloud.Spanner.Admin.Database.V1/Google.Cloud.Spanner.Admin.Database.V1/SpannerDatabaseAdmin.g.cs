@@ -112,154 +112,155 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "QiL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwSAASYQoRZW5j",
             "cnlwdGlvbl9jb25maWcYBCABKAsyQS5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
             "YXRhYmFzZS52MS5SZXN0b3JlRGF0YWJhc2VFbmNyeXB0aW9uQ29uZmlnQgPg",
-            "QQFCCAoGc291cmNlIvMCCh9SZXN0b3JlRGF0YWJhc2VFbmNyeXB0aW9uQ29u",
+            "QQFCCAoGc291cmNlIrUDCh9SZXN0b3JlRGF0YWJhc2VFbmNyeXB0aW9uQ29u",
             "ZmlnEm4KD2VuY3J5cHRpb25fdHlwZRgBIAEoDjJQLmdvb2dsZS5zcGFubmVy",
             "LmFkbWluLmRhdGFiYXNlLnYxLlJlc3RvcmVEYXRhYmFzZUVuY3J5cHRpb25D",
             "b25maWcuRW5jcnlwdGlvblR5cGVCA+BBAhI/CgxrbXNfa2V5X25hbWUYAiAB",
             "KAlCKeBBAfpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "Ip4BCg5FbmNyeXB0aW9uVHlwZRIfChtFTkNSWVBUSU9OX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIrCidVU0VfQ09ORklHX0RFRkFVTFRfT1JfQkFDS1VQX0VOQ1JZ",
-            "UFRJT04QARIdChlHT09HTEVfREVGQVVMVF9FTkNSWVBUSU9OEAISHwobQ1VT",
-            "VE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9OEAMijQMKF1Jlc3RvcmVEYXRhYmFz",
-            "ZU1ldGFkYXRhEjIKBG5hbWUYASABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVh",
-            "cGlzLmNvbS9EYXRhYmFzZRJICgtzb3VyY2VfdHlwZRgCIAEoDjIzLmdvb2ds",
-            "ZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJlc3RvcmVTb3VyY2VUeXBl",
-            "EkMKC2JhY2t1cF9pbmZvGAMgASgLMiwuZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "ZGF0YWJhc2UudjEuQmFja3VwSW5mb0gAEkUKCHByb2dyZXNzGAQgASgLMjMu",
-            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuT3BlcmF0aW9uUHJv",
-            "Z3Jlc3MSLwoLY2FuY2VsX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEigKIG9wdGltaXplX2RhdGFiYXNlX29wZXJhdGlvbl9uYW1l",
-            "GAYgASgJQg0KC3NvdXJjZV9pbmZvIp0BCiBPcHRpbWl6ZVJlc3RvcmVkRGF0",
-            "YWJhc2VNZXRhZGF0YRIyCgRuYW1lGAEgASgJQiT6QSEKH3NwYW5uZXIuZ29v",
-            "Z2xlYXBpcy5jb20vRGF0YWJhc2USRQoIcHJvZ3Jlc3MYAiABKAsyMy5nb29n",
-            "bGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5PcGVyYXRpb25Qcm9ncmVz",
-            "cyKeAQoMRGF0YWJhc2VSb2xlEhEKBG5hbWUYASABKAlCA+BBAjp76kF4CiNz",
-            "cGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlUm9sZRJRcHJvamVjdHMv",
-            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2RhdGFiYXNlcy97ZGF0",
-            "YWJhc2V9L2RhdGFiYXNlUm9sZXMve3JvbGV9InoKGExpc3REYXRhYmFzZVJv",
-            "bGVzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5n",
-            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZRIRCglwYWdlX3NpemUYAiABKAUSEgoK",
-            "cGFnZV90b2tlbhgDIAEoCSJ8ChlMaXN0RGF0YWJhc2VSb2xlc1Jlc3BvbnNl",
-            "EkYKDmRhdGFiYXNlX3JvbGVzGAEgAygLMi4uZ29vZ2xlLnNwYW5uZXIuYWRt",
-            "aW4uZGF0YWJhc2UudjEuRGF0YWJhc2VSb2xlEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSo1ChFSZXN0b3JlU291cmNlVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
-            "SUVEEAASCgoGQkFDS1VQEAEy7iUKDURhdGFiYXNlQWRtaW4SwAEKDUxpc3RE",
-            "YXRhYmFzZXMSNi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5M",
-            "aXN0RGF0YWJhc2VzUmVxdWVzdBo3Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
-            "dGFiYXNlLnYxLkxpc3REYXRhYmFzZXNSZXNwb25zZSI+2kEGcGFyZW50gtPk",
-            "kwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9kYXRh",
-            "YmFzZXMSpAIKDkNyZWF0ZURhdGFiYXNlEjcuZ29vZ2xlLnNwYW5uZXIuYWRt",
-            "aW4uZGF0YWJhc2UudjEuQ3JlYXRlRGF0YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiK5AcpBZAopZ29vZ2xlLnNwYW5uZXIu",
-            "YWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2USN2dvb2dsZS5zcGFubmVyLmFk",
-            "bWluLmRhdGFiYXNlLnYxLkNyZWF0ZURhdGFiYXNlTWV0YWRhdGHaQRdwYXJl",
-            "bnQsY3JlYXRlX3N0YXRlbWVudILT5JMCMiItL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKn0vZGF0YWJhc2VzOgEqEq0BCgtHZXREYXRhYmFz",
-            "ZRI0Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkdldERhdGFi",
-            "YXNlUmVxdWVzdBoqLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYx",
-            "LkRhdGFiYXNlIjzaQQRuYW1lgtPkkwIvEi0vdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0S7wEKDlVwZGF0ZURhdGFiYXNl",
-            "EjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuVXBkYXRlRGF0",
-            "YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKE",
-            "AcpBIgoIRGF0YWJhc2USFlVwZGF0ZURhdGFiYXNlTWV0YWRhdGHaQRRkYXRh",
-            "YmFzZSx1cGRhdGVfbWFza4LT5JMCQjI2L3YxL3tkYXRhYmFzZS5uYW1lPXBy",
-            "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9OghkYXRhYmFzZRKd",
-            "AgoRVXBkYXRlRGF0YWJhc2VEZGwSOi5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
-            "YXRhYmFzZS52MS5VcGRhdGVEYXRhYmFzZURkbFJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqwBykFTChVnb29nbGUucHJvdG9idWYu",
-            "RW1wdHkSOmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlVwZGF0",
-            "ZURhdGFiYXNlRGRsTWV0YWRhdGHaQRNkYXRhYmFzZSxzdGF0ZW1lbnRzgtPk",
-            "kwI6MjUvdjEve2RhdGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0",
-            "YWJhc2VzLyp9L2RkbDoBKhKjAQoMRHJvcERhdGFiYXNlEjUuZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRHJvcERhdGFiYXNlUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJE2kEIZGF0YWJhc2WC0+STAjMqMS92",
+            "EkAKDWttc19rZXlfbmFtZXMYAyADKAlCKeBBAfpBIwohY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5Ip4BCg5FbmNyeXB0aW9uVHlwZRIfChtF",
+            "TkNSWVBUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIrCidVU0VfQ09ORklHX0RF",
+            "RkFVTFRfT1JfQkFDS1VQX0VOQ1JZUFRJT04QARIdChlHT09HTEVfREVGQVVM",
+            "VF9FTkNSWVBUSU9OEAISHwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9O",
+            "EAMijQMKF1Jlc3RvcmVEYXRhYmFzZU1ldGFkYXRhEjIKBG5hbWUYASABKAlC",
+            "JPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRJICgtzb3Vy",
+            "Y2VfdHlwZRgCIAEoDjIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNl",
+            "LnYxLlJlc3RvcmVTb3VyY2VUeXBlEkMKC2JhY2t1cF9pbmZvGAMgASgLMiwu",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFja3VwSW5mb0gA",
+            "EkUKCHByb2dyZXNzGAQgASgLMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0",
+            "YWJhc2UudjEuT3BlcmF0aW9uUHJvZ3Jlc3MSLwoLY2FuY2VsX3RpbWUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEigKIG9wdGltaXplX2Rh",
+            "dGFiYXNlX29wZXJhdGlvbl9uYW1lGAYgASgJQg0KC3NvdXJjZV9pbmZvIp0B",
+            "CiBPcHRpbWl6ZVJlc3RvcmVkRGF0YWJhc2VNZXRhZGF0YRIyCgRuYW1lGAEg",
+            "ASgJQiT6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USRQoI",
+            "cHJvZ3Jlc3MYAiABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFz",
+            "ZS52MS5PcGVyYXRpb25Qcm9ncmVzcyKeAQoMRGF0YWJhc2VSb2xlEhEKBG5h",
+            "bWUYASABKAlCA+BBAjp76kF4CiNzcGFubmVyLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFiYXNlUm9sZRJRcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5z",
+            "dGFuY2V9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L2RhdGFiYXNlUm9sZXMve3Jv",
+            "bGV9InoKGExpc3REYXRhYmFzZVJvbGVzUmVxdWVzdBI3CgZwYXJlbnQYASAB",
+            "KAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRIR",
+            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ8ChlMaXN0",
+            "RGF0YWJhc2VSb2xlc1Jlc3BvbnNlEkYKDmRhdGFiYXNlX3JvbGVzGAEgAygL",
+            "Mi4uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2VS",
+            "b2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSo1ChFSZXN0b3JlU291cmNl",
+            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGQkFDS1VQEAEy7iUKDURh",
+            "dGFiYXNlQWRtaW4SwAEKDUxpc3REYXRhYmFzZXMSNi5nb29nbGUuc3Bhbm5l",
+            "ci5hZG1pbi5kYXRhYmFzZS52MS5MaXN0RGF0YWJhc2VzUmVxdWVzdBo3Lmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZXNS",
+            "ZXNwb25zZSI+2kEGcGFyZW50gtPkkwIvEi0vdjEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qfS9kYXRhYmFzZXMSpAIKDkNyZWF0ZURhdGFiYXNl",
+            "EjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQ3JlYXRlRGF0",
+            "YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK5",
+            "AcpBZAopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJh",
+            "c2USN2dvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkNyZWF0ZURh",
+            "dGFiYXNlTWV0YWRhdGHaQRdwYXJlbnQsY3JlYXRlX3N0YXRlbWVudILT5JMC",
+            "MiItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0vZGF0YWJh",
+            "c2VzOgEqEq0BCgtHZXREYXRhYmFzZRI0Lmdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "LmRhdGFiYXNlLnYxLkdldERhdGFiYXNlUmVxdWVzdBoqLmdvb2dsZS5zcGFu",
+            "bmVyLmFkbWluLmRhdGFiYXNlLnYxLkRhdGFiYXNlIjzaQQRuYW1lgtPkkwIv",
+            "Ei0vdjEve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMv",
+            "Kn0S7wEKDlVwZGF0ZURhdGFiYXNlEjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "ZGF0YWJhc2UudjEuVXBkYXRlRGF0YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKEAcpBIgoIRGF0YWJhc2USFlVwZGF0ZURh",
+            "dGFiYXNlTWV0YWRhdGHaQRRkYXRhYmFzZSx1cGRhdGVfbWFza4LT5JMCQjI2",
+            "L3YxL3tkYXRhYmFzZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0",
+            "YWJhc2VzLyp9OghkYXRhYmFzZRKdAgoRVXBkYXRlRGF0YWJhc2VEZGwSOi5n",
+            "b29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5VcGRhdGVEYXRhYmFz",
+            "ZURkbFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqwB",
+            "ykFTChVnb29nbGUucHJvdG9idWYuRW1wdHkSOmdvb2dsZS5zcGFubmVyLmFk",
+            "bWluLmRhdGFiYXNlLnYxLlVwZGF0ZURhdGFiYXNlRGRsTWV0YWRhdGHaQRNk",
+            "YXRhYmFzZSxzdGF0ZW1lbnRzgtPkkwI6MjUvdjEve2RhdGFiYXNlPXByb2pl",
+            "Y3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L2RkbDoBKhKjAQoMRHJv",
+            "cERhdGFiYXNlEjUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEu",
+            "RHJvcERhdGFiYXNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJE",
+            "2kEIZGF0YWJhc2WC0+STAjMqMS92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9p",
+            "bnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0SzQEKDkdldERhdGFiYXNlRGRsEjcu",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VE",
+            "ZGxSZXF1ZXN0GjguZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEu",
+            "R2V0RGF0YWJhc2VEZGxSZXNwb25zZSJI2kEIZGF0YWJhc2WC0+STAjcSNS92",
             "MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMv",
-            "Kn0SzQEKDkdldERhdGFiYXNlRGRsEjcuZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "ZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VEZGxSZXF1ZXN0GjguZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuR2V0RGF0YWJhc2VEZGxSZXNwb25z",
-            "ZSJI2kEIZGF0YWJhc2WC0+STAjcSNS92MS97ZGF0YWJhc2U9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0vZGRsEusBCgxTZXRJYW1Qb2xp",
-            "Y3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
-            "bGUuaWFtLnYxLlBvbGljeSKfAdpBD3Jlc291cmNlLHBvbGljeYLT5JMChgEi",
-            "Pi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFz",
-            "ZXMvKn06c2V0SWFtUG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9OnNldElhbVBvbGljeToBKhLk",
-            "AQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lS",
-            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kimAHaQQhyZXNvdXJjZYLT",
-            "5JMChgEiPi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9k",
-            "YXRhYmFzZXMvKn06Z2V0SWFtUG9saWN5OgEqWkEiPC92MS97cmVzb3VyY2U9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9OmdldElhbVBvbGlj",
-            "eToBKhL3AgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5U",
-            "ZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0",
-            "SWFtUGVybWlzc2lvbnNSZXNwb25zZSKLAtpBFHJlc291cmNlLHBlcm1pc3Np",
-            "b25zgtPkkwLtASJEL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qL2RhdGFiYXNlcy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpaRyJCL3Yx",
-            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2JhY2t1cHMvKn06",
-            "dGVzdElhbVBlcm1pc3Npb25zOgEqWlkiVC92MS97cmVzb3VyY2U9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9kYXRhYmFzZVJvbGVzLyp9",
-            "OnRlc3RJYW1QZXJtaXNzaW9uczoBKhKfAgoMQ3JlYXRlQmFja3VwEjUuZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQ3JlYXRlQmFja3VwUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuAHKQWAKJ2dv",
-            "b2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkJhY2t1cBI1Z29vZ2xl",
-            "LnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQ3JlYXRlQmFja3VwTWV0YWRh",
-            "dGHaQRdwYXJlbnQsYmFja3VwLGJhY2t1cF9pZILT5JMCNSIrL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0vYmFja3VwczoGYmFja3VwEqwC",
-            "CgpDb3B5QmFja3VwEjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
-            "djEuQ29weUJhY2t1cFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIskBykFeCidnb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
-            "MS5CYWNrdXASM2dvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkNv",
-            "cHlCYWNrdXBNZXRhZGF0YdpBKnBhcmVudCxiYWNrdXBfaWQsc291cmNlX2Jh",
-            "Y2t1cCxleHBpcmVfdGltZYLT5JMCNSIwL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKn0vYmFja3Vwczpjb3B5OgEqEqUBCglHZXRCYWNrdXAS",
-            "Mi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5HZXRCYWNrdXBS",
-            "ZXF1ZXN0GiguZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFj",
-            "a3VwIjraQQRuYW1lgtPkkwItEisvdjEve25hbWU9cHJvamVjdHMvKi9pbnN0",
-            "YW5jZXMvKi9iYWNrdXBzLyp9EsgBCgxVcGRhdGVCYWNrdXASNS5nb29nbGUu",
-            "c3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5VcGRhdGVCYWNrdXBSZXF1ZXN0",
-            "GiguZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFja3VwIlfa",
-            "QRJiYWNrdXAsdXBkYXRlX21hc2uC0+STAjwyMi92MS97YmFja3VwLm5hbWU9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9OgZiYWNrdXASmQEK",
-            "DERlbGV0ZUJhY2t1cBI1Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNl",
-            "LnYxLkRlbGV0ZUJhY2t1cFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiOtpBBG5hbWWC0+STAi0qKy92MS97bmFtZT1wcm9qZWN0cy8qL2luc3Rh",
-            "bmNlcy8qL2JhY2t1cHMvKn0SuAEKC0xpc3RCYWNrdXBzEjQuZ29vZ2xlLnNw",
-            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdEJhY2t1cHNSZXF1ZXN0GjUu",
-            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdEJhY2t1cHNS",
-            "ZXNwb25zZSI82kEGcGFyZW50gtPkkwItEisvdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qfS9iYWNrdXBzErECCg9SZXN0b3JlRGF0YWJhc2US",
-            "OC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5SZXN0b3JlRGF0",
-            "YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLE",
-            "AcpBZQopZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJh",
-            "c2USOGdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJlc3RvcmVE",
-            "YXRhYmFzZU1ldGFkYXRh2kEZcGFyZW50LGRhdGFiYXNlX2lkLGJhY2t1cILT",
-            "5JMCOiI1L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0vZGF0",
-            "YWJhc2VzOnJlc3RvcmU6ASoS5AEKFkxpc3REYXRhYmFzZU9wZXJhdGlvbnMS",
-            "Py5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5MaXN0RGF0YWJh",
-            "c2VPcGVyYXRpb25zUmVxdWVzdBpALmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
-            "dGFiYXNlLnYxLkxpc3REYXRhYmFzZU9wZXJhdGlvbnNSZXNwb25zZSJH2kEG",
-            "cGFyZW50gtPkkwI4EjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qfS9kYXRhYmFzZU9wZXJhdGlvbnMS3AEKFExpc3RCYWNrdXBPcGVyYXRp",
-            "b25zEj0uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdEJh",
-            "Y2t1cE9wZXJhdGlvbnNSZXF1ZXN0Gj4uZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "ZGF0YWJhc2UudjEuTGlzdEJhY2t1cE9wZXJhdGlvbnNSZXNwb25zZSJF2kEG",
-            "cGFyZW50gtPkkwI2EjQvdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qfS9iYWNrdXBPcGVyYXRpb25zEtwBChFMaXN0RGF0YWJhc2VSb2xlcxI6",
-            "Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFz",
-            "ZVJvbGVzUmVxdWVzdBo7Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNl",
-            "LnYxLkxpc3REYXRhYmFzZVJvbGVzUmVzcG9uc2UiTtpBBnBhcmVudILT5JMC",
-            "PxI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFz",
-            "ZXMvKn0vZGF0YWJhc2VSb2xlcxp4ykEWc3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcGFubmVy",
-            "LmFkbWluQtgCCiRjb20uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
-            "djFCGVNwYW5uZXJEYXRhYmFzZUFkbWluUHJvdG9QAVpGY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9zcGFubmVyL2FkbWluL2RhdGFiYXNlL2FwaXYxL2RhdGFiYXNl",
-            "cGI7ZGF0YWJhc2VwYqoCJkdvb2dsZS5DbG91ZC5TcGFubmVyLkFkbWluLkRh",
-            "dGFiYXNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJcQWRtaW5cRGF0YWJh",
-            "c2VcVjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpBZG1pbjo6RGF0YWJh",
-            "c2U6OlYx6kFKCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEidw",
-            "cm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX1iBnByb3Rv",
-            "Mw=="));
+            "Kn0vZGRsEusBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElh",
+            "bVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKfAdpBD3Jl",
+            "c291cmNlLHBvbGljeYLT5JMChgEiPi92MS97cmVzb3VyY2U9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn06c2V0SWFtUG9saWN5OgEqWkEi",
+            "PC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBz",
+            "Lyp9OnNldElhbVBvbGljeToBKhLkAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xl",
+            "LmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Q",
+            "b2xpY3kimAHaQQhyZXNvdXJjZYLT5JMChgEiPi92MS97cmVzb3VyY2U9cHJv",
+            "amVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn06Z2V0SWFtUG9saWN5",
+            "OgEqWkEiPC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9i",
+            "YWNrdXBzLyp9OmdldElhbVBvbGljeToBKhL3AgoSVGVzdElhbVBlcm1pc3Np",
+            "b25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0",
+            "GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSKL",
+            "AtpBFHJlc291cmNlLHBlcm1pc3Npb25zgtPkkwLtASJEL3YxL3tyZXNvdXJj",
+            "ZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qfTp0ZXN0SWFt",
+            "UGVybWlzc2lvbnM6ASpaRyJCL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2lu",
+            "c3RhbmNlcy8qL2JhY2t1cHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlki",
+            "VC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFz",
+            "ZXMvKi9kYXRhYmFzZVJvbGVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhKf",
+            "AgoMQ3JlYXRlQmFja3VwEjUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJh",
+            "c2UudjEuQ3JlYXRlQmFja3VwUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
+            "Zy5PcGVyYXRpb24iuAHKQWAKJ2dvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFi",
+            "YXNlLnYxLkJhY2t1cBI1Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
+            "djEuQ3JlYXRlQmFja3VwTWV0YWRhdGHaQRdwYXJlbnQsYmFja3VwLGJhY2t1",
+            "cF9pZILT5JMCNSIrL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMv",
+            "Kn0vYmFja3VwczoGYmFja3VwEqwCCgpDb3B5QmFja3VwEjMuZ29vZ2xlLnNw",
+            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQ29weUJhY2t1cFJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIskBykFeCidnb29nbGUuc3Bh",
+            "bm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXASM2dvb2dsZS5zcGFubmVy",
+            "LmFkbWluLmRhdGFiYXNlLnYxLkNvcHlCYWNrdXBNZXRhZGF0YdpBKnBhcmVu",
+            "dCxiYWNrdXBfaWQsc291cmNlX2JhY2t1cCxleHBpcmVfdGltZYLT5JMCNSIw",
+            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0vYmFja3Vwczpj",
+            "b3B5OgEqEqUBCglHZXRCYWNrdXASMi5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
+            "YXRhYmFzZS52MS5HZXRCYWNrdXBSZXF1ZXN0GiguZ29vZ2xlLnNwYW5uZXIu",
+            "YWRtaW4uZGF0YWJhc2UudjEuQmFja3VwIjraQQRuYW1lgtPkkwItEisvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9iYWNrdXBzLyp9EsgBCgxV",
+            "cGRhdGVCYWNrdXASNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
+            "MS5VcGRhdGVCYWNrdXBSZXF1ZXN0GiguZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
+            "ZGF0YWJhc2UudjEuQmFja3VwIlfaQRJiYWNrdXAsdXBkYXRlX21hc2uC0+ST",
+            "AjwyMi92MS97YmFja3VwLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9i",
+            "YWNrdXBzLyp9OgZiYWNrdXASmQEKDERlbGV0ZUJhY2t1cBI1Lmdvb2dsZS5z",
+            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkRlbGV0ZUJhY2t1cFJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiOtpBBG5hbWWC0+STAi0qKy92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2JhY2t1cHMvKn0SuAEKC0xp",
+            "c3RCYWNrdXBzEjQuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEu",
+            "TGlzdEJhY2t1cHNSZXF1ZXN0GjUuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0",
+            "YWJhc2UudjEuTGlzdEJhY2t1cHNSZXNwb25zZSI82kEGcGFyZW50gtPkkwIt",
+            "EisvdjEve3BhcmVudD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9iYWNrdXBz",
+            "ErECCg9SZXN0b3JlRGF0YWJhc2USOC5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
+            "YXRhYmFzZS52MS5SZXN0b3JlRGF0YWJhc2VSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiLEAcpBZQopZ29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uZGF0YWJhc2UudjEuRGF0YWJhc2USOGdvb2dsZS5zcGFubmVyLmFkbWlu",
+            "LmRhdGFiYXNlLnYxLlJlc3RvcmVEYXRhYmFzZU1ldGFkYXRh2kEZcGFyZW50",
+            "LGRhdGFiYXNlX2lkLGJhY2t1cILT5JMCOiI1L3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKn0vZGF0YWJhc2VzOnJlc3RvcmU6ASoS5AEKFkxp",
+            "c3REYXRhYmFzZU9wZXJhdGlvbnMSPy5nb29nbGUuc3Bhbm5lci5hZG1pbi5k",
+            "YXRhYmFzZS52MS5MaXN0RGF0YWJhc2VPcGVyYXRpb25zUmVxdWVzdBpALmdv",
+            "b2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZU9w",
+            "ZXJhdGlvbnNSZXNwb25zZSJH2kEGcGFyZW50gtPkkwI4EjYvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9kYXRhYmFzZU9wZXJhdGlvbnMS",
+            "3AEKFExpc3RCYWNrdXBPcGVyYXRpb25zEj0uZ29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uZGF0YWJhc2UudjEuTGlzdEJhY2t1cE9wZXJhdGlvbnNSZXF1ZXN0Gj4u",
+            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuTGlzdEJhY2t1cE9w",
+            "ZXJhdGlvbnNSZXNwb25zZSJF2kEGcGFyZW50gtPkkwI2EjQvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfS9iYWNrdXBPcGVyYXRpb25zEtwB",
+            "ChFMaXN0RGF0YWJhc2VSb2xlcxI6Lmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
+            "dGFiYXNlLnYxLkxpc3REYXRhYmFzZVJvbGVzUmVxdWVzdBo7Lmdvb2dsZS5z",
+            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkxpc3REYXRhYmFzZVJvbGVzUmVz",
+            "cG9uc2UiTtpBBnBhcmVudILT5JMCPxI9L3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKn0vZGF0YWJhc2VSb2xlcxp4ykEW",
+            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9zcGFubmVyLmFkbWluQtgCCiRjb20uZ29vZ2xlLnNw",
+            "YW5uZXIuYWRtaW4uZGF0YWJhc2UudjFCGVNwYW5uZXJEYXRhYmFzZUFkbWlu",
+            "UHJvdG9QAVpGY2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FkbWluL2Rh",
+            "dGFiYXNlL2FwaXYxL2RhdGFiYXNlcGI7ZGF0YWJhc2VwYqoCJkdvb2dsZS5D",
+            "bG91ZC5TcGFubmVyLkFkbWluLkRhdGFiYXNlLlYxygImR29vZ2xlXENsb3Vk",
+            "XFNwYW5uZXJcQWRtaW5cRGF0YWJhc2VcVjHqAitHb29nbGU6OkNsb3VkOjpT",
+            "cGFubmVyOjpBZG1pbjo6RGF0YWJhc2U6OlYx6kFKCh9zcGFubmVyLmdvb2ds",
+            "ZWFwaXMuY29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -281,7 +282,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseRequest.Parser, new[]{ "Parent", "DatabaseId", "Backup", "EncryptionConfig" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig.Parser, new[]{ "EncryptionType", "KmsKeyName" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig.Types.EncryptionType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig.Parser, new[]{ "EncryptionType", "KmsKeyName", "KmsKeyNames" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig.Types.EncryptionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseMetadata.Parser, new[]{ "Name", "SourceType", "BackupInfo", "Progress", "CancelTime", "OptimizeDatabaseOperationName" }, new[]{ "SourceInfo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.OptimizeRestoredDatabaseMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.OptimizeRestoredDatabaseMetadata.Parser, new[]{ "Name", "Progress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole), global::Google.Cloud.Spanner.Admin.Database.V1.DatabaseRole.Parser, new[]{ "Name" }, null, null, null, null),
@@ -740,7 +741,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// <summary>
     /// Output only. For databases that are using customer managed encryption, this
     /// field contains the encryption information for the database, such as
-    /// encryption state and the Cloud KMS key versions that are in use.
+    /// all Cloud KMS key versions that are in use. The `encryption_status' field
+    /// inside of each `EncryptionInfo` is not populated.
     ///
     /// For databases that are using Google default or other types of encryption,
     /// this field is empty.
@@ -761,8 +763,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// Output only. The period in which Cloud Spanner retains all versions of data
     /// for the database. This is the same as the value of version_retention_period
     /// database option set using
-    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl]. Defaults to 1 hour,
-    /// if not set.
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl].
+    /// Defaults to 1 hour, if not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -832,7 +834,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private bool enableDropProtection_;
     /// <summary>
     /// Whether drop protection is enabled for this database. Defaults to false,
-    /// if not set.
+    /// if not set. For more details, please see how to [prevent accidental
+    /// database
+    /// deletion](https://cloud.google.com/spanner/docs/prevent-database-deletion).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1321,7 +1325,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
+  /// The request for
+  /// [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatabasesRequest : pb::IMessage<ListDatabasesRequest>
@@ -1407,8 +1412,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// If non-empty, `page_token` should contain a
-    /// [next_page_token][google.spanner.admin.database.v1.ListDatabasesResponse.next_page_token] from a
-    /// previous [ListDatabasesResponse][google.spanner.admin.database.v1.ListDatabasesResponse].
+    /// [next_page_token][google.spanner.admin.database.v1.ListDatabasesResponse.next_page_token]
+    /// from a previous
+    /// [ListDatabasesResponse][google.spanner.admin.database.v1.ListDatabasesResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1601,7 +1607,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The response for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
+  /// The response for
+  /// [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatabasesResponse : pb::IMessage<ListDatabasesResponse>
@@ -1668,8 +1675,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// `next_page_token` can be sent in a subsequent
-    /// [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases] call to fetch more
-    /// of the matching databases.
+    /// [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases]
+    /// call to fetch more of the matching databases.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1828,7 +1835,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
+  /// The request for
+  /// [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDatabaseRequest : pb::IMessage<CreateDatabaseRequest>
@@ -1936,8 +1944,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int EncryptionConfigFieldNumber = 4;
     private global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig encryptionConfig_;
     /// <summary>
-    /// Optional. The encryption configuration for the database. If this field is not
-    /// specified, Cloud Spanner will encrypt/decrypt all data at rest using
+    /// Optional. The encryption configuration for the database. If this field is
+    /// not specified, Cloud Spanner will encrypt/decrypt all data at rest using
     /// Google default encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2443,7 +2451,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [GetDatabase][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabase].
+  /// The request for
+  /// [GetDatabase][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabase].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatabaseRequest : pb::IMessage<GetDatabaseRequest>
@@ -3220,8 +3229,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// Each batch of statements is assigned a name which can be used with
   /// the [Operations][google.longrunning.Operations] API to monitor
   /// progress. See the
-  /// [operation_id][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.operation_id] field for more
-  /// details.
+  /// [operation_id][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.operation_id]
+  /// field for more details.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDatabaseDdlRequest : pb::IMessage<UpdateDatabaseDdlRequest>
@@ -3311,18 +3320,20 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     ///
     /// Specifying an explicit operation ID simplifies determining
     /// whether the statements were executed in the event that the
-    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] call is replayed,
-    /// or the return value is otherwise lost: the [database][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.database] and
-    /// `operation_id` fields can be combined to form the
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl]
+    /// call is replayed, or the return value is otherwise lost: the
+    /// [database][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.database]
+    /// and `operation_id` fields can be combined to form the
     /// [name][google.longrunning.Operation.name] of the resulting
-    /// [longrunning.Operation][google.longrunning.Operation]: `&lt;database>/operations/&lt;operation_id>`.
+    /// [longrunning.Operation][google.longrunning.Operation]:
+    /// `&lt;database>/operations/&lt;operation_id>`.
     ///
     /// `operation_id` should be unique within the database, and must be
     /// a valid identifier: `[a-z][a-z0-9_]*`. Note that
     /// automatically-generated operation IDs always begin with an
     /// underscore. If the named operation already exists,
-    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] returns
-    /// `ALREADY_EXISTS`.
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl]
+    /// returns `ALREADY_EXISTS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4196,7 +4207,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [DropDatabase][google.spanner.admin.database.v1.DatabaseAdmin.DropDatabase].
+  /// The request for
+  /// [DropDatabase][google.spanner.admin.database.v1.DatabaseAdmin.DropDatabase].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DropDatabaseRequest : pb::IMessage<DropDatabaseRequest>
@@ -4392,7 +4404,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
+  /// The request for
+  /// [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatabaseDdlRequest : pb::IMessage<GetDatabaseDdlRequest>
@@ -4590,7 +4603,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The response for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
+  /// The response for
+  /// [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDatabaseDdlResponse : pb::IMessage<GetDatabaseDdlResponse>
@@ -4905,7 +4919,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     ///   * `name` - The name of the long-running operation
     ///   * `done` - False if the operation is in progress, else true.
     ///   * `metadata.@type` - the type of metadata. For example, the type string
-    ///      for [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata] is
+    ///      for
+    ///      [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata]
+    ///      is
     ///      `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`.
     ///   * `metadata.&lt;field_name>` - any field in metadata.value.
     ///      `metadata.@type` must be specified first, if filtering on metadata
@@ -4927,7 +4943,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     ///     `(metadata.name:restored_howl) AND` \
     ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` \
     ///     `(error:*)` - Return operations where:
-    ///     * The operation's metadata type is [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
+    ///     * The operation's metadata type is
+    ///     [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
     ///     * The database is restored from a backup.
     ///     * The backup name contains "backup_howl".
     ///     * The restored database's name contains "restored_howl".
@@ -4965,8 +4982,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// <summary>
     /// If non-empty, `page_token` should contain a
     /// [next_page_token][google.spanner.admin.database.v1.ListDatabaseOperationsResponse.next_page_token]
-    /// from a previous [ListDatabaseOperationsResponse][google.spanner.admin.database.v1.ListDatabaseOperationsResponse] to the
-    /// same `parent` and with the same `filter`.
+    /// from a previous
+    /// [ListDatabaseOperationsResponse][google.spanner.admin.database.v1.ListDatabaseOperationsResponse]
+    /// to the same `parent` and with the same `filter`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5542,12 +5560,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int EncryptionConfigFieldNumber = 4;
     private global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig encryptionConfig_;
     /// <summary>
-    /// Optional. An encryption configuration describing the encryption type and key
-    /// resources in Cloud KMS used to encrypt/decrypt the database to restore to.
-    /// If this field is not specified, the restored database will use
-    /// the same encryption configuration as the backup by default, namely
-    /// [encryption_type][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig.encryption_type] =
-    /// `USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION`.
+    /// Optional. An encryption configuration describing the encryption type and
+    /// key resources in Cloud KMS used to encrypt/decrypt the database to restore
+    /// to. If this field is not specified, the restored database will use the same
+    /// encryption configuration as the backup by default, namely
+    /// [encryption_type][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig.encryption_type]
+    /// = `USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5837,6 +5855,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public RestoreDatabaseEncryptionConfig(RestoreDatabaseEncryptionConfig other) : this() {
       encryptionType_ = other.encryptionType_;
       kmsKeyName_ = other.kmsKeyName_;
+      kmsKeyNames_ = other.kmsKeyNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5865,10 +5884,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int KmsKeyNameFieldNumber = 2;
     private string kmsKeyName_ = "";
     /// <summary>
-    /// Optional. The Cloud KMS key that will be used to encrypt/decrypt the restored
-    /// database. This field should be set only when
-    /// [encryption_type][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig.encryption_type] is
-    /// `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
+    /// Optional. The Cloud KMS key that will be used to encrypt/decrypt the
+    /// restored database. This field should be set only when
+    /// [encryption_type][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig.encryption_type]
+    /// is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
     /// `projects/&lt;project>/locations/&lt;location>/keyRings/&lt;key_ring>/cryptoKeys/&lt;kms_key_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5878,6 +5897,34 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       set {
         kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "kms_key_names" field.</summary>
+    public const int KmsKeyNamesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_kmsKeyNames_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> kmsKeyNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Specifies the KMS configuration for the one or more keys used to
+    /// encrypt the database. Values are of the form
+    /// `projects/&lt;project>/locations/&lt;location>/keyRings/&lt;key_ring>/cryptoKeys/&lt;kms_key_name>`.
+    ///
+    /// The keys referenced by kms_key_names must fully cover all
+    /// regions of the database instance configuration. Some examples:
+    /// * For single region database instance configs, specify a single regional
+    /// location KMS key.
+    /// * For multi-regional database instance configs of type GOOGLE_MANAGED,
+    /// either specify a multi-regional location KMS key or multiple regional
+    /// location KMS keys that cover all regions in the instance config.
+    /// * For a database instance config of type USER_MANAGED, please specify only
+    /// regional location KMS keys to cover each region in the instance config.
+    /// Multi-regional location KMS keys are not supported for USER_MANAGED
+    /// instance configs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> KmsKeyNames {
+      get { return kmsKeyNames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5897,6 +5944,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (EncryptionType != other.EncryptionType) return false;
       if (KmsKeyName != other.KmsKeyName) return false;
+      if(!kmsKeyNames_.Equals(other.kmsKeyNames_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5906,6 +5954,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       int hash = 1;
       if (EncryptionType != global::Google.Cloud.Spanner.Admin.Database.V1.RestoreDatabaseEncryptionConfig.Types.EncryptionType.Unspecified) hash ^= EncryptionType.GetHashCode();
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      hash ^= kmsKeyNames_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5932,6 +5981,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(KmsKeyName);
       }
+      kmsKeyNames_.WriteTo(output, _repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5950,6 +6000,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(KmsKeyName);
       }
+      kmsKeyNames_.WriteTo(ref output, _repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5966,6 +6017,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (KmsKeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
       }
+      size += kmsKeyNames_.CalculateSize(_repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5984,6 +6036,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
+      kmsKeyNames_.Add(other.kmsKeyNames_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6005,6 +6058,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           }
           case 18: {
             KmsKeyName = input.ReadString();
+            break;
+          }
+          case 26: {
+            kmsKeyNames_.AddEntriesFrom(input, _repeated_kmsKeyNames_codec);
             break;
           }
         }
@@ -6030,6 +6087,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             KmsKeyName = input.ReadString();
             break;
           }
+          case 26: {
+            kmsKeyNames_.AddEntriesFrom(ref input, _repeated_kmsKeyNames_codec);
+            break;
+          }
         }
       }
     }
@@ -6050,7 +6111,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         [pbr::OriginalName("ENCRYPTION_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// This is the default option when
-        /// [encryption_config][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig] is not specified.
+        /// [encryption_config][google.spanner.admin.database.v1.RestoreDatabaseEncryptionConfig]
+        /// is not specified.
         /// </summary>
         [pbr::OriginalName("USE_CONFIG_DEFAULT_OR_BACKUP_ENCRYPTION")] UseConfigDefaultOrBackupEncryption = 1,
         /// <summary>
@@ -6204,7 +6266,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// operation completed despite cancellation. On successful cancellation,
     /// the operation is not deleted; instead, it becomes an operation with
     /// an [Operation.error][google.longrunning.Operation.error] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to `Code.CANCELLED`.
+    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+    /// `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6226,10 +6289,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation>`
     /// where the &lt;database> is the name of database being created and restored to.
     /// The metadata type of the  long-running operation is
-    /// [OptimizeRestoredDatabaseMetadata][google.spanner.admin.database.v1.OptimizeRestoredDatabaseMetadata]. This long-running operation will be
-    /// automatically created by the system after the RestoreDatabase long-running
-    /// operation completes successfully. This operation will not be created if the
-    /// restore was not successful.
+    /// [OptimizeRestoredDatabaseMetadata][google.spanner.admin.database.v1.OptimizeRestoredDatabaseMetadata].
+    /// This long-running operation will be automatically created by the system
+    /// after the RestoreDatabase long-running operation completes successfully.
+    /// This operation will not be created if the restore was not successful.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6850,10 +6913,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the database role. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/databaseRoles/
-    /// {role}`, where `&lt;role>` is as specified in the `CREATE ROLE`
-    /// DDL statement. This name can be passed to Get/Set IAMPolicy methods to
-    /// identify the database role.
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/databaseRoles/&lt;role>`
+    /// where `&lt;role>` is as specified in the `CREATE ROLE` DDL statement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6998,7 +7059,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The request for [ListDatabaseRoles][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles].
+  /// The request for
+  /// [ListDatabaseRoles][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatabaseRolesRequest : pb::IMessage<ListDatabaseRolesRequest>
@@ -7053,7 +7115,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// <summary>
     /// Required. The database whose roles should be listed.
     /// Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/databaseRoles`.
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7085,8 +7147,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// If non-empty, `page_token` should contain a
-    /// [next_page_token][google.spanner.admin.database.v1.ListDatabaseRolesResponse.next_page_token] from a
-    /// previous [ListDatabaseRolesResponse][google.spanner.admin.database.v1.ListDatabaseRolesResponse].
+    /// [next_page_token][google.spanner.admin.database.v1.ListDatabaseRolesResponse.next_page_token]
+    /// from a previous
+    /// [ListDatabaseRolesResponse][google.spanner.admin.database.v1.ListDatabaseRolesResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7279,7 +7342,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  /// The response for [ListDatabaseRoles][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles].
+  /// The response for
+  /// [ListDatabaseRoles][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabaseRoles].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDatabaseRolesResponse : pb::IMessage<ListDatabaseRolesResponse>

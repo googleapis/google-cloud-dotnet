@@ -31,36 +31,37 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "bGUvcnBjL3N0YXR1cy5wcm90byKLAQoRT3BlcmF0aW9uUHJvZ3Jlc3MSGAoQ",
             "cHJvZ3Jlc3NfcGVyY2VudBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUAoQRW5jcnlwdGlvbkNvbmZp",
-            "ZxI8CgxrbXNfa2V5X25hbWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xl",
-            "YXBpcy5jb20vQ3J5cHRvS2V5IsICCg5FbmNyeXB0aW9uSW5mbxJTCg9lbmNy",
-            "eXB0aW9uX3R5cGUYAyABKA4yNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRh",
-            "YmFzZS52MS5FbmNyeXB0aW9uSW5mby5UeXBlQgPgQQMSMgoRZW5jcnlwdGlv",
-            "bl9zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkkKD2tt",
-            "c19rZXlfdmVyc2lvbhgCIAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtD",
-            "VVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04QAipcCg9EYXRhYmFzZURpYWxl",
-            "Y3QSIAocREFUQUJBU0VfRElBTEVDVF9VTlNQRUNJRklFRBAAEhcKE0dPT0dM",
-            "RV9TVEFOREFSRF9TUUwQARIOCgpQT1NUR1JFU1FMEAJCogQKJGNvbS5nb29n",
-            "bGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MUILQ29tbW9uUHJvdG9QAVpG",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FkbWluL2RhdGFiYXNlL2Fw",
-            "aXYxL2RhdGFiYXNlcGI7ZGF0YWJhc2VwYqoCJkdvb2dsZS5DbG91ZC5TcGFu",
-            "bmVyLkFkbWluLkRhdGFiYXNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJc",
-            "QWRtaW5cRGF0YWJhc2VcVjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpB",
-            "ZG1pbjo6RGF0YWJhc2U6OlYx6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNv",
-            "bS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
-            "b19rZXl96kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "VmVyc2lvbhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tl",
-            "eX0vY3J5cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lvbn1iBnBy",
-            "b3RvMw=="));
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAijwEKEEVuY3J5cHRpb25Db25m",
+            "aWcSPAoMa21zX2tleV9uYW1lGAIgASgJQib6QSMKIWNsb3Vka21zLmdvb2ds",
+            "ZWFwaXMuY29tL0NyeXB0b0tleRI9Cg1rbXNfa2V5X25hbWVzGAMgAygJQib6",
+            "QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleSLCAgoORW5j",
+            "cnlwdGlvbkluZm8SUwoPZW5jcnlwdGlvbl90eXBlGAMgASgOMjUuZ29vZ2xl",
+            "LnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRW5jcnlwdGlvbkluZm8uVHlw",
+            "ZUID4EEDEjIKEWVuY3J5cHRpb25fc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJw",
+            "Yy5TdGF0dXNCA+BBAxJJCg9rbXNfa2V5X3ZlcnNpb24YAiABKAlCMOBBA/pB",
+            "KgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbiJc",
+            "CgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIdChlHT09HTEVfREVGQVVM",
+            "VF9FTkNSWVBUSU9OEAESHwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9O",
+            "EAIqXAoPRGF0YWJhc2VEaWFsZWN0EiAKHERBVEFCQVNFX0RJQUxFQ1RfVU5T",
+            "UEVDSUZJRUQQABIXChNHT09HTEVfU1RBTkRBUkRfU1FMEAESDgoKUE9TVEdS",
+            "RVNRTBACQqIECiRjb20uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
+            "djFCC0NvbW1vblByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5l",
+            "ci9hZG1pbi9kYXRhYmFzZS9hcGl2MS9kYXRhYmFzZXBiO2RhdGFiYXNlcGKq",
+            "AiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5EYXRhYmFzZS5WMcoCJkdv",
+            "b2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXERhdGFiYXNlXFYx6gIrR29vZ2xl",
+            "OjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46OkRhdGFiYXNlOjpWMepBeAohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
+            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBpgEKKGNsb3Vka21zLmdvb2ds",
+            "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2Ny",
+            "eXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlw",
+            "dG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.DatabaseDialect), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig.Parser, new[]{ "KmsKeyName", "KmsKeyNames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo.Parser, new[]{ "EncryptionType", "EncryptionStatus", "KmsKeyVersion" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo.Types.Type) }, null, null)
           }));
     }
@@ -78,7 +79,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// </summary>
     [pbr::OriginalName("DATABASE_DIALECT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Google standard SQL.
+    /// GoogleSQL supported SQL.
     /// </summary>
     [pbr::OriginalName("GOOGLE_STANDARD_SQL")] GoogleStandardSql = 1,
     /// <summary>
@@ -426,6 +427,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EncryptionConfig(EncryptionConfig other) : this() {
       kmsKeyName_ = other.kmsKeyName_;
+      kmsKeyNames_ = other.kmsKeyNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -452,6 +454,34 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
     }
 
+    /// <summary>Field number for the "kms_key_names" field.</summary>
+    public const int KmsKeyNamesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_kmsKeyNames_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> kmsKeyNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Specifies the KMS configuration for the one or more keys used to encrypt
+    /// the database. Values are of the form
+    /// `projects/&lt;project>/locations/&lt;location>/keyRings/&lt;key_ring>/cryptoKeys/&lt;kms_key_name>`.
+    ///
+    /// The keys referenced by kms_key_names must fully cover all
+    /// regions of the database instance configuration. Some examples:
+    /// * For single region database instance configs, specify a single regional
+    /// location KMS key.
+    /// * For multi-regional database instance configs of type GOOGLE_MANAGED,
+    /// either specify a multi-regional location KMS key or multiple regional
+    /// location KMS keys that cover all regions in the instance config.
+    /// * For a database instance config of type USER_MANAGED, please specify only
+    /// regional location KMS keys to cover each region in the instance config.
+    /// Multi-regional location KMS keys are not supported for USER_MANAGED
+    /// instance configs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> KmsKeyNames {
+      get { return kmsKeyNames_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -468,6 +498,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return true;
       }
       if (KmsKeyName != other.KmsKeyName) return false;
+      if(!kmsKeyNames_.Equals(other.kmsKeyNames_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -476,6 +507,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      hash ^= kmsKeyNames_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -498,6 +530,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(KmsKeyName);
       }
+      kmsKeyNames_.WriteTo(output, _repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -512,6 +545,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(18);
         output.WriteString(KmsKeyName);
       }
+      kmsKeyNames_.WriteTo(ref output, _repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -525,6 +559,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (KmsKeyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
       }
+      size += kmsKeyNames_.CalculateSize(_repeated_kmsKeyNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -540,6 +575,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (other.KmsKeyName.Length != 0) {
         KmsKeyName = other.KmsKeyName;
       }
+      kmsKeyNames_.Add(other.kmsKeyNames_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -559,6 +595,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             KmsKeyName = input.ReadString();
             break;
           }
+          case 26: {
+            kmsKeyNames_.AddEntriesFrom(input, _repeated_kmsKeyNames_codec);
+            break;
+          }
         }
       }
     #endif
@@ -576,6 +616,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             break;
           case 18: {
             KmsKeyName = input.ReadString();
+            break;
+          }
+          case 26: {
+            kmsKeyNames_.AddEntriesFrom(ref input, _repeated_kmsKeyNames_codec);
             break;
           }
         }
@@ -654,9 +698,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int EncryptionStatusFieldNumber = 4;
     private global::Google.Rpc.Status encryptionStatus_;
     /// <summary>
-    /// Output only. If present, the status of a recent encrypt/decrypt call on underlying data
-    /// for this database or backup. Regardless of status, data is always encrypted
-    /// at rest.
+    /// Output only. If present, the status of a recent encrypt/decrypt call on
+    /// underlying data for this database or backup. Regardless of status, data is
+    /// always encrypted at rest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -671,8 +715,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int KmsKeyVersionFieldNumber = 2;
     private string kmsKeyVersion_ = "";
     /// <summary>
-    /// Output only. A Cloud KMS key version that is being used to protect the database or
-    /// backup.
+    /// Output only. A Cloud KMS key version that is being used to protect the
+    /// database or backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
