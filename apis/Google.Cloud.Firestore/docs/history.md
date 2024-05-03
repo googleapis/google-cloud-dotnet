@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.7.0, released 2024-05-03
+
+### Bug fixes
+
+- Retry more exceptions during transactions ([commit 027dd8b](https://github.com/googleapis/google-cloud-dotnet/commit/027dd8bc1fc2f638aa7305f996dc4a49ecc1ee41))
+
 ## Version 3.6.0, released 2024-03-27
 
 ### New features

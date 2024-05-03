@@ -43,4 +43,5 @@
   "5008946": "feat: Enable REST transport in selected APIs. Set GrpcAdapter=RestGrpcAdapter.Default in the client builder to use this transport",
   "aa471c9": "skip", // Enable requesting numeric enums
   "3927b62": "skip", // Regenerate all APIs with new generator; no user-significant API changes
+  "022fab2": "feat: Add IServiceCollection extension methods for client registration where an IServiceProvider is required."
 }
