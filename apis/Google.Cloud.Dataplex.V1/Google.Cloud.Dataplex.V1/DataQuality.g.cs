@@ -71,59 +71,62 @@ namespace Google.Cloud.Dataplex.V1 {
             "dWx0LkJpZ1F1ZXJ5RXhwb3J0UmVzdWx0LlN0YXRlQgPgQQMSFAoHbWVzc2Fn",
             "ZRgCIAEoCUID4EEDIkYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
             "DQoJU1VDQ0VFREVEEAESCgoGRkFJTEVEEAISCwoHU0tJUFBFRBADQggKBl9z",
-            "Y29yZSLTAQoVRGF0YVF1YWxpdHlSdWxlUmVzdWx0EjcKBHJ1bGUYASABKAsy",
+            "Y29yZSL1AQoVRGF0YVF1YWxpdHlSdWxlUmVzdWx0EjcKBHJ1bGUYASABKAsy",
             "KS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlEg4K",
             "BnBhc3NlZBgHIAEoCBIXCg9ldmFsdWF0ZWRfY291bnQYCSABKAMSFAoMcGFz",
             "c2VkX2NvdW50GAggASgDEhIKCm51bGxfY291bnQYBSABKAMSEgoKcGFzc19y",
-            "YXRpbxgGIAEoARIaChJmYWlsaW5nX3Jvd3NfcXVlcnkYCiABKAkilwEKGkRh",
-            "dGFRdWFsaXR5RGltZW5zaW9uUmVzdWx0EkYKCWRpbWVuc2lvbhgBIAEoCzIu",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eURpbWVuc2lv",
-            "bkID4EEDEg4KBnBhc3NlZBgDIAEoCBIXCgVzY29yZRgEIAEoAkID4EEDSACI",
-            "AQFCCAoGX3Njb3JlIiQKFERhdGFRdWFsaXR5RGltZW5zaW9uEgwKBG5hbWUY",
-            "ASABKAki9gwKD0RhdGFRdWFsaXR5UnVsZRJXChFyYW5nZV9leHBlY3RhdGlv",
-            "bhgBIAEoCzI6Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0",
-            "eVJ1bGUuUmFuZ2VFeHBlY3RhdGlvbkgAElwKFG5vbl9udWxsX2V4cGVjdGF0",
-            "aW9uGAIgASgLMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFs",
-            "aXR5UnVsZS5Ob25OdWxsRXhwZWN0YXRpb25IABJTCg9zZXRfZXhwZWN0YXRp",
-            "b24YAyABKAsyOC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxp",
-            "dHlSdWxlLlNldEV4cGVjdGF0aW9uSAASVwoRcmVnZXhfZXhwZWN0YXRpb24Y",
-            "BCABKAsyOi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlS",
-            "dWxlLlJlZ2V4RXhwZWN0YXRpb25IABJhChZ1bmlxdWVuZXNzX2V4cGVjdGF0",
-            "aW9uGGQgASgLMj8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFs",
-            "aXR5UnVsZS5VbmlxdWVuZXNzRXhwZWN0YXRpb25IABJqChtzdGF0aXN0aWNf",
-            "cmFuZ2VfZXhwZWN0YXRpb24YZSABKAsyQy5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVF1YWxpdHlSdWxlLlN0YXRpc3RpY1JhbmdlRXhwZWN0YXRp",
-            "b25IABJnChlyb3dfY29uZGl0aW9uX2V4cGVjdGF0aW9uGMgBIAEoCzJBLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuUm93Q29u",
-            "ZGl0aW9uRXhwZWN0YXRpb25IABJrCht0YWJsZV9jb25kaXRpb25fZXhwZWN0",
-            "YXRpb24YyQEgASgLMkMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFR",
-            "dWFsaXR5UnVsZS5UYWJsZUNvbmRpdGlvbkV4cGVjdGF0aW9uSAASFAoGY29s",
-            "dW1uGPQDIAEoCUID4EEBEhkKC2lnbm9yZV9udWxsGPUDIAEoCEID4EEBEhcK",
-            "CWRpbWVuc2lvbhj2AyABKAlCA+BBAhIXCgl0aHJlc2hvbGQY9wMgASgBQgPg",
-            "QQESEgoEbmFtZRj4AyABKAlCA+BBARIZCgtkZXNjcmlwdGlvbhj5AyABKAlC",
-            "A+BBARqEAQoQUmFuZ2VFeHBlY3RhdGlvbhIWCgltaW5fdmFsdWUYASABKAlC",
-            "A+BBARIWCgltYXhfdmFsdWUYAiABKAlCA+BBARIfChJzdHJpY3RfbWluX2Vu",
-            "YWJsZWQYAyABKAhCA+BBARIfChJzdHJpY3RfbWF4X2VuYWJsZWQYBCABKAhC",
-            "A+BBARoUChJOb25OdWxsRXhwZWN0YXRpb24aJQoOU2V0RXhwZWN0YXRpb24S",
-            "EwoGdmFsdWVzGAEgAygJQgPgQQEaJgoQUmVnZXhFeHBlY3RhdGlvbhISCgVy",
-            "ZWdleBgBIAEoCUID4EEBGhcKFVVuaXF1ZW5lc3NFeHBlY3RhdGlvbhrCAgoZ",
-            "U3RhdGlzdGljUmFuZ2VFeHBlY3RhdGlvbhJrCglzdGF0aXN0aWMYASABKA4y",
-            "Uy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlN0",
-            "YXRpc3RpY1JhbmdlRXhwZWN0YXRpb24uQ29sdW1uU3RhdGlzdGljQgPgQQES",
-            "FgoJbWluX3ZhbHVlGAIgASgJQgPgQQESFgoJbWF4X3ZhbHVlGAMgASgJQgPg",
-            "QQESHwoSc3RyaWN0X21pbl9lbmFibGVkGAQgASgIQgPgQQESHwoSc3RyaWN0",
-            "X21heF9lbmFibGVkGAUgASgIQgPgQQEiRgoPQ29sdW1uU3RhdGlzdGljEhcK",
-            "E1NUQVRJU1RJQ19VTkRFRklORUQQABIICgRNRUFOEAESBwoDTUlOEAISBwoD",
-            "TUFYEAMaNgoXUm93Q29uZGl0aW9uRXhwZWN0YXRpb24SGwoOc3FsX2V4cHJl",
-            "c3Npb24YASABKAlCA+BBARo4ChlUYWJsZUNvbmRpdGlvbkV4cGVjdGF0aW9u",
-            "EhsKDnNxbF9leHByZXNzaW9uGAEgASgJQgPgQQFCCwoJcnVsZV90eXBlIlEK",
-            "F0RhdGFRdWFsaXR5Q29sdW1uUmVzdWx0EhMKBmNvbHVtbhgBIAEoCUID4EED",
-            "EhcKBXNjb3JlGAIgASgCQgPgQQNIAIgBAUIICgZfc2NvcmVCxAEKHGNvbS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjFCEERhdGFRdWFsaXR5UHJvdG9QAVo4",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9hcGl2MS9kYXRhcGxleHBi",
-            "O2RhdGFwbGV4cGLqQVUKHWJpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL1RhYmxl",
-            "EjRwcm9qZWN0cy97cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR9L3RhYmxl",
-            "cy97dGFibGV9YgZwcm90bzM="));
+            "YXRpbxgGIAEoARIaChJmYWlsaW5nX3Jvd3NfcXVlcnkYCiABKAkSIAoTYXNz",
+            "ZXJ0aW9uX3Jvd19jb3VudBgLIAEoA0ID4EEDIpcBChpEYXRhUXVhbGl0eURp",
+            "bWVuc2lvblJlc3VsdBJGCglkaW1lbnNpb24YASABKAsyLi5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlEaW1lbnNpb25CA+BBAxIOCgZw",
+            "YXNzZWQYAyABKAgSFwoFc2NvcmUYBCABKAJCA+BBA0gAiAEBQggKBl9zY29y",
+            "ZSIkChREYXRhUXVhbGl0eURpbWVuc2lvbhIMCgRuYW1lGAEgASgJIvQNCg9E",
+            "YXRhUXVhbGl0eVJ1bGUSVwoRcmFuZ2VfZXhwZWN0YXRpb24YASABKAsyOi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlJhbmdl",
+            "RXhwZWN0YXRpb25IABJcChRub25fbnVsbF9leHBlY3RhdGlvbhgCIAEoCzI8",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuTm9u",
+            "TnVsbEV4cGVjdGF0aW9uSAASUwoPc2V0X2V4cGVjdGF0aW9uGAMgASgLMjgu",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVsZS5TZXRF",
+            "eHBlY3RhdGlvbkgAElcKEXJlZ2V4X2V4cGVjdGF0aW9uGAQgASgLMjouZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVsZS5SZWdleEV4",
+            "cGVjdGF0aW9uSAASYQoWdW5pcXVlbmVzc19leHBlY3RhdGlvbhhkIAEoCzI/",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuVW5p",
+            "cXVlbmVzc0V4cGVjdGF0aW9uSAASagobc3RhdGlzdGljX3JhbmdlX2V4cGVj",
+            "dGF0aW9uGGUgASgLMkMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFR",
+            "dWFsaXR5UnVsZS5TdGF0aXN0aWNSYW5nZUV4cGVjdGF0aW9uSAASZwoZcm93",
+            "X2NvbmRpdGlvbl9leHBlY3RhdGlvbhjIASABKAsyQS5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlSdWxlLlJvd0NvbmRpdGlvbkV4cGVj",
+            "dGF0aW9uSAASawobdGFibGVfY29uZGl0aW9uX2V4cGVjdGF0aW9uGMkBIAEo",
+            "CzJDLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUu",
+            "VGFibGVDb25kaXRpb25FeHBlY3RhdGlvbkgAElAKDXNxbF9hc3NlcnRpb24Y",
+            "ygEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5",
+            "UnVsZS5TcWxBc3NlcnRpb25IABIUCgZjb2x1bW4Y9AMgASgJQgPgQQESGQoL",
+            "aWdub3JlX251bGwY9QMgASgIQgPgQQESFwoJZGltZW5zaW9uGPYDIAEoCUID",
+            "4EECEhcKCXRocmVzaG9sZBj3AyABKAFCA+BBARISCgRuYW1lGPgDIAEoCUID",
+            "4EEBEhkKC2Rlc2NyaXB0aW9uGPkDIAEoCUID4EEBGoQBChBSYW5nZUV4cGVj",
+            "dGF0aW9uEhYKCW1pbl92YWx1ZRgBIAEoCUID4EEBEhYKCW1heF92YWx1ZRgC",
+            "IAEoCUID4EEBEh8KEnN0cmljdF9taW5fZW5hYmxlZBgDIAEoCEID4EEBEh8K",
+            "EnN0cmljdF9tYXhfZW5hYmxlZBgEIAEoCEID4EEBGhQKEk5vbk51bGxFeHBl",
+            "Y3RhdGlvbholCg5TZXRFeHBlY3RhdGlvbhITCgZ2YWx1ZXMYASADKAlCA+BB",
+            "ARomChBSZWdleEV4cGVjdGF0aW9uEhIKBXJlZ2V4GAEgASgJQgPgQQEaFwoV",
+            "VW5pcXVlbmVzc0V4cGVjdGF0aW9uGsICChlTdGF0aXN0aWNSYW5nZUV4cGVj",
+            "dGF0aW9uEmsKCXN0YXRpc3RpYxgBIAEoDjJTLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5EYXRhUXVhbGl0eVJ1bGUuU3RhdGlzdGljUmFuZ2VFeHBlY3Rh",
+            "dGlvbi5Db2x1bW5TdGF0aXN0aWNCA+BBARIWCgltaW5fdmFsdWUYAiABKAlC",
+            "A+BBARIWCgltYXhfdmFsdWUYAyABKAlCA+BBARIfChJzdHJpY3RfbWluX2Vu",
+            "YWJsZWQYBCABKAhCA+BBARIfChJzdHJpY3RfbWF4X2VuYWJsZWQYBSABKAhC",
+            "A+BBASJGCg9Db2x1bW5TdGF0aXN0aWMSFwoTU1RBVElTVElDX1VOREVGSU5F",
+            "RBAAEggKBE1FQU4QARIHCgNNSU4QAhIHCgNNQVgQAxo2ChdSb3dDb25kaXRp",
+            "b25FeHBlY3RhdGlvbhIbCg5zcWxfZXhwcmVzc2lvbhgBIAEoCUID4EEBGjgK",
+            "GVRhYmxlQ29uZGl0aW9uRXhwZWN0YXRpb24SGwoOc3FsX2V4cHJlc3Npb24Y",
+            "ASABKAlCA+BBARoqCgxTcWxBc3NlcnRpb24SGgoNc3FsX3N0YXRlbWVudBgB",
+            "IAEoCUID4EEBQgsKCXJ1bGVfdHlwZSJRChdEYXRhUXVhbGl0eUNvbHVtblJl",
+            "c3VsdBITCgZjb2x1bW4YASABKAlCA+BBAxIXCgVzY29yZRgCIAEoAkID4EED",
+            "SACIAQFCCAoGX3Njb3JlQsQBChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxQhBEYXRhUXVhbGl0eVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBi6kFVCh1iaWdx",
+            "dWVyeS5nb29nbGVhcGlzLmNvbS9UYWJsZRI0cHJvamVjdHMve3Byb2plY3R9",
+            "L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -134,17 +137,18 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualitySpec.Types.PostScanActions.Types.JobEndTrigger), global::Google.Cloud.Dataplex.V1.DataQualitySpec.Types.PostScanActions.Types.JobEndTrigger.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualitySpec.Types.PostScanActions.Types.NotificationReport), global::Google.Cloud.Dataplex.V1.DataQualitySpec.Types.PostScanActions.Types.NotificationReport.Parser, new[]{ "Recipients", "ScoreThresholdTrigger", "JobFailureTrigger", "JobEndTrigger" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityResult), global::Google.Cloud.Dataplex.V1.DataQualityResult.Parser, new[]{ "Passed", "Score", "Dimensions", "Columns", "Rules", "RowCount", "ScannedData", "PostScanActionsResult" }, new[]{ "Score" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityResult.Types.PostScanActionsResult), global::Google.Cloud.Dataplex.V1.DataQualityResult.Types.PostScanActionsResult.Parser, new[]{ "BigqueryExportResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityResult.Types.PostScanActionsResult.Types.BigQueryExportResult), global::Google.Cloud.Dataplex.V1.DataQualityResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Parser, new[]{ "State", "Message" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataQualityResult.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityRuleResult.Parser, new[]{ "Rule", "Passed", "EvaluatedCount", "PassedCount", "NullCount", "PassRatio", "FailingRowsQuery" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityRuleResult.Parser, new[]{ "Rule", "Passed", "EvaluatedCount", "PassedCount", "NullCount", "PassRatio", "FailingRowsQuery", "AssertionRowCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult), global::Google.Cloud.Dataplex.V1.DataQualityDimensionResult.Parser, new[]{ "Dimension", "Passed", "Score" }, new[]{ "Score" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityDimension), global::Google.Cloud.Dataplex.V1.DataQualityDimension.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule), global::Google.Cloud.Dataplex.V1.DataQualityRule.Parser, new[]{ "RangeExpectation", "NonNullExpectation", "SetExpectation", "RegexExpectation", "UniquenessExpectation", "StatisticRangeExpectation", "RowConditionExpectation", "TableConditionExpectation", "Column", "IgnoreNull", "Dimension", "Threshold", "Name", "Description" }, new[]{ "RuleType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation.Parser, new[]{ "MinValue", "MaxValue", "StrictMinEnabled", "StrictMaxEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule), global::Google.Cloud.Dataplex.V1.DataQualityRule.Parser, new[]{ "RangeExpectation", "NonNullExpectation", "SetExpectation", "RegexExpectation", "UniquenessExpectation", "StatisticRangeExpectation", "RowConditionExpectation", "TableConditionExpectation", "SqlAssertion", "Column", "IgnoreNull", "Dimension", "Threshold", "Name", "Description" }, new[]{ "RuleType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RangeExpectation.Parser, new[]{ "MinValue", "MaxValue", "StrictMinEnabled", "StrictMaxEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.NonNullExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.NonNullExpectation.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SetExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SetExpectation.Parser, new[]{ "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RegexExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RegexExpectation.Parser, new[]{ "Regex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.UniquenessExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.UniquenessExpectation.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation.Parser, new[]{ "Statistic", "MinValue", "MaxValue", "StrictMinEnabled", "StrictMaxEnabled" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.StatisticRangeExpectation.Types.ColumnStatistic) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RowConditionExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.RowConditionExpectation.Parser, new[]{ "SqlExpression" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.TableConditionExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.TableConditionExpectation.Parser, new[]{ "SqlExpression" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.TableConditionExpectation), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.TableConditionExpectation.Parser, new[]{ "SqlExpression" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion), global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion.Parser, new[]{ "SqlStatement" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityColumnResult), global::Google.Cloud.Dataplex.V1.DataQualityColumnResult.Parser, new[]{ "Column", "Score" }, new[]{ "Score" }, null, null, null)
           }));
     }
@@ -3015,6 +3019,7 @@ namespace Google.Cloud.Dataplex.V1 {
       nullCount_ = other.nullCount_;
       passRatio_ = other.passRatio_;
       failingRowsQuery_ = other.failingRowsQuery_;
+      assertionRowCount_ = other.assertionRowCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3144,6 +3149,24 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "assertion_row_count" field.</summary>
+    public const int AssertionRowCountFieldNumber = 11;
+    private long assertionRowCount_;
+    /// <summary>
+    /// Output only. The number of rows returned by the sql statement in the
+    /// SqlAssertion rule.
+    ///
+    /// This field is only valid for SqlAssertion rules.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AssertionRowCount {
+      get { return assertionRowCount_; }
+      set {
+        assertionRowCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3166,6 +3189,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (NullCount != other.NullCount) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PassRatio, other.PassRatio)) return false;
       if (FailingRowsQuery != other.FailingRowsQuery) return false;
+      if (AssertionRowCount != other.AssertionRowCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3180,6 +3204,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (NullCount != 0L) hash ^= NullCount.GetHashCode();
       if (PassRatio != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PassRatio);
       if (FailingRowsQuery.Length != 0) hash ^= FailingRowsQuery.GetHashCode();
+      if (AssertionRowCount != 0L) hash ^= AssertionRowCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3226,6 +3251,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(82);
         output.WriteString(FailingRowsQuery);
       }
+      if (AssertionRowCount != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(AssertionRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3264,6 +3293,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(82);
         output.WriteString(FailingRowsQuery);
       }
+      if (AssertionRowCount != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(AssertionRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3294,6 +3327,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (FailingRowsQuery.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FailingRowsQuery);
+      }
+      if (AssertionRowCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AssertionRowCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3330,6 +3366,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.FailingRowsQuery.Length != 0) {
         FailingRowsQuery = other.FailingRowsQuery;
+      }
+      if (other.AssertionRowCount != 0L) {
+        AssertionRowCount = other.AssertionRowCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3377,6 +3416,10 @@ namespace Google.Cloud.Dataplex.V1 {
             FailingRowsQuery = input.ReadString();
             break;
           }
+          case 88: {
+            AssertionRowCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -3421,6 +3464,10 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           case 82: {
             FailingRowsQuery = input.ReadString();
+            break;
+          }
+          case 88: {
+            AssertionRowCount = input.ReadInt64();
             break;
           }
         }
@@ -4005,6 +4052,9 @@ namespace Google.Cloud.Dataplex.V1 {
         case RuleTypeOneofCase.TableConditionExpectation:
           TableConditionExpectation = other.TableConditionExpectation.Clone();
           break;
+        case RuleTypeOneofCase.SqlAssertion:
+          SqlAssertion = other.SqlAssertion.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4142,6 +4192,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "sql_assertion" field.</summary>
+    public const int SqlAssertionFieldNumber = 202;
+    /// <summary>
+    /// Aggregate rule which evaluates the number of rows returned for the
+    /// provided statement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion SqlAssertion {
+      get { return ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion ? (global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion) ruleType_ : null; }
+      set {
+        ruleType_ = value;
+        ruleTypeCase_ = value == null ? RuleTypeOneofCase.None : RuleTypeOneofCase.SqlAssertion;
+      }
+    }
+
     /// <summary>Field number for the "column" field.</summary>
     public const int ColumnFieldNumber = 500;
     private string column_ = "";
@@ -4268,6 +4334,7 @@ namespace Google.Cloud.Dataplex.V1 {
       StatisticRangeExpectation = 101,
       RowConditionExpectation = 200,
       TableConditionExpectation = 201,
+      SqlAssertion = 202,
     }
     private RuleTypeOneofCase ruleTypeCase_ = RuleTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4306,6 +4373,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!object.Equals(StatisticRangeExpectation, other.StatisticRangeExpectation)) return false;
       if (!object.Equals(RowConditionExpectation, other.RowConditionExpectation)) return false;
       if (!object.Equals(TableConditionExpectation, other.TableConditionExpectation)) return false;
+      if (!object.Equals(SqlAssertion, other.SqlAssertion)) return false;
       if (Column != other.Column) return false;
       if (IgnoreNull != other.IgnoreNull) return false;
       if (Dimension != other.Dimension) return false;
@@ -4328,6 +4396,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (ruleTypeCase_ == RuleTypeOneofCase.StatisticRangeExpectation) hash ^= StatisticRangeExpectation.GetHashCode();
       if (ruleTypeCase_ == RuleTypeOneofCase.RowConditionExpectation) hash ^= RowConditionExpectation.GetHashCode();
       if (ruleTypeCase_ == RuleTypeOneofCase.TableConditionExpectation) hash ^= TableConditionExpectation.GetHashCode();
+      if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) hash ^= SqlAssertion.GetHashCode();
       if (Column.Length != 0) hash ^= Column.GetHashCode();
       if (IgnoreNull != false) hash ^= IgnoreNull.GetHashCode();
       if (Dimension.Length != 0) hash ^= Dimension.GetHashCode();
@@ -4384,6 +4453,10 @@ namespace Google.Cloud.Dataplex.V1 {
       if (ruleTypeCase_ == RuleTypeOneofCase.TableConditionExpectation) {
         output.WriteRawTag(202, 12);
         output.WriteMessage(TableConditionExpectation);
+      }
+      if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) {
+        output.WriteRawTag(210, 12);
+        output.WriteMessage(SqlAssertion);
       }
       if (Column.Length != 0) {
         output.WriteRawTag(162, 31);
@@ -4451,6 +4524,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(202, 12);
         output.WriteMessage(TableConditionExpectation);
       }
+      if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) {
+        output.WriteRawTag(210, 12);
+        output.WriteMessage(SqlAssertion);
+      }
       if (Column.Length != 0) {
         output.WriteRawTag(162, 31);
         output.WriteString(Column);
@@ -4508,6 +4585,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (ruleTypeCase_ == RuleTypeOneofCase.TableConditionExpectation) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TableConditionExpectation);
+      }
+      if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SqlAssertion);
       }
       if (Column.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Column);
@@ -4606,6 +4686,12 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           TableConditionExpectation.MergeFrom(other.TableConditionExpectation);
           break;
+        case RuleTypeOneofCase.SqlAssertion:
+          if (SqlAssertion == null) {
+            SqlAssertion = new global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion();
+          }
+          SqlAssertion.MergeFrom(other.SqlAssertion);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4693,6 +4779,15 @@ namespace Google.Cloud.Dataplex.V1 {
             }
             input.ReadMessage(subBuilder);
             TableConditionExpectation = subBuilder;
+            break;
+          }
+          case 1618: {
+            global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion subBuilder = new global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion();
+            if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) {
+              subBuilder.MergeFrom(SqlAssertion);
+            }
+            input.ReadMessage(subBuilder);
+            SqlAssertion = subBuilder;
             break;
           }
           case 4002: {
@@ -4804,6 +4899,15 @@ namespace Google.Cloud.Dataplex.V1 {
             }
             input.ReadMessage(subBuilder);
             TableConditionExpectation = subBuilder;
+            break;
+          }
+          case 1618: {
+            global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion subBuilder = new global::Google.Cloud.Dataplex.V1.DataQualityRule.Types.SqlAssertion();
+            if (ruleTypeCase_ == RuleTypeOneofCase.SqlAssertion) {
+              subBuilder.MergeFrom(SqlAssertion);
+            }
+            input.ReadMessage(subBuilder);
+            SqlAssertion = subBuilder;
             break;
           }
           case 4002: {
@@ -6651,6 +6755,212 @@ namespace Google.Cloud.Dataplex.V1 {
                 break;
               case 10: {
                 SqlExpression = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Queries for rows returned by the provided SQL statement. If any rows are
+      /// are returned, this rule fails.
+      ///
+      /// The SQL statement needs to use BigQuery standard SQL syntax, and must not
+      /// contain any semicolons.
+      ///
+      /// ${data()} can be used to reference the rows being evaluated, i.e. the table
+      /// after all additional filters (row filters, incremental data filters,
+      /// sampling) are applied.
+      ///
+      /// Example: SELECT * FROM ${data()} WHERE price &lt; 0
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SqlAssertion : pb::IMessage<SqlAssertion>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SqlAssertion> _parser = new pb::MessageParser<SqlAssertion>(() => new SqlAssertion());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SqlAssertion> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataQualityRule.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SqlAssertion() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SqlAssertion(SqlAssertion other) : this() {
+          sqlStatement_ = other.sqlStatement_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SqlAssertion Clone() {
+          return new SqlAssertion(this);
+        }
+
+        /// <summary>Field number for the "sql_statement" field.</summary>
+        public const int SqlStatementFieldNumber = 1;
+        private string sqlStatement_ = "";
+        /// <summary>
+        /// Optional. The SQL statement.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SqlStatement {
+          get { return sqlStatement_; }
+          set {
+            sqlStatement_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SqlAssertion);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SqlAssertion other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SqlStatement != other.SqlStatement) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SqlStatement.Length != 0) hash ^= SqlStatement.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SqlStatement.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SqlStatement);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SqlStatement.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SqlStatement);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SqlStatement.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SqlStatement);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SqlAssertion other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SqlStatement.Length != 0) {
+            SqlStatement = other.SqlStatement;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SqlStatement = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SqlStatement = input.ReadString();
                 break;
               }
             }
