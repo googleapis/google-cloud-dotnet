@@ -161,7 +161,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "FwoTVFJJR0dFUl9VTlNQRUNJRklFRBAAEg0KCU9OX0RFTUFORBABEgwKCFND",
             "SEVEVUxFEAIiOQoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIICgRG",
             "VUxMEAESDwoLSU5DUkVNRU5UQUwQAkIICgZyZXN1bHRCEAoOYXBwbGllZENv",
-            "bmZpZ3Mi6QYKGURhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQSDgoGam9iX2lk",
+            "bmZpZ3MimQcKGURhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQSDgoGam9iX2lk",
             "GAEgASgJEhMKC2RhdGFfc291cmNlGAIgASgJEg4KBmNvbHVtbhgDIAEoCRIR",
             "CglydWxlX25hbWUYBCABKAkSTwoJcnVsZV90eXBlGAUgASgOMjwuZ29vZ2xl",
             "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5U2NhblJ1bGVSZXN1bHQu",
@@ -171,19 +171,20 @@ namespace Google.Cloud.Dataplex.V1 {
             "bGRfcGVyY2VudBgIIAEoARJKCgZyZXN1bHQYCSABKA4yOi5nb29nbGUuY2xv",
             "dWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTY2FuUnVsZVJlc3VsdC5SZXN1",
             "bHQSGwoTZXZhbHVhdGVkX3Jvd19jb3VudBgKIAEoAxIYChBwYXNzZWRfcm93",
-            "X2NvdW50GAsgASgDEhYKDm51bGxfcm93X2NvdW50GAwgASgDIv8BCghSdWxl",
-            "VHlwZRIZChVSVUxFX1RZUEVfVU5TUEVDSUZJRUQQABIYChROT05fTlVMTF9F",
-            "WFBFQ1RBVElPThABEhUKEVJBTkdFX0VYUEVDVEFUSU9OEAISFQoRUkVHRVhf",
-            "RVhQRUNUQVRJT04QAxIdChlST1dfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAQS",
-            "EwoPU0VUX0VYUEVDVEFUSU9OEAUSHwobU1RBVElTVElDX1JBTkdFX0VYUEVD",
-            "VEFUSU9OEAYSHwobVEFCTEVfQ09ORElUSU9OX0VYUEVDVEFUSU9OEAcSGgoW",
-            "VU5JUVVFTkVTU19FWFBFQ1RBVElPThAIIk0KDkV2YWx1YXRpb25UeXBlEh8K",
-            "G0VWQUxVQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BFUl9ST1cQARIN",
-            "CglBR0dSRUdBVEUQAiI4CgZSZXN1bHQSFgoSUkVTVUxUX1VOU1BFQ0lGSUVE",
-            "EAASCgoGUEFTU0VEEAESCgoGRkFJTEVEEAJCZQocY29tLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcGxleC52MUIJTG9nc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90",
-            "bzM="));
+            "X2NvdW50GAsgASgDEhYKDm51bGxfcm93X2NvdW50GAwgASgDEhsKE2Fzc2Vy",
+            "dGlvbl9yb3dfY291bnQYDSABKAMikgIKCFJ1bGVUeXBlEhkKFVJVTEVfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEhgKFE5PTl9OVUxMX0VYUEVDVEFUSU9OEAESFQoR",
+            "UkFOR0VfRVhQRUNUQVRJT04QAhIVChFSRUdFWF9FWFBFQ1RBVElPThADEh0K",
+            "GVJPV19DT05ESVRJT05fRVhQRUNUQVRJT04QBBITCg9TRVRfRVhQRUNUQVRJ",
+            "T04QBRIfChtTVEFUSVNUSUNfUkFOR0VfRVhQRUNUQVRJT04QBhIfChtUQUJM",
+            "RV9DT05ESVRJT05fRVhQRUNUQVRJT04QBxIaChZVTklRVUVORVNTX0VYUEVD",
+            "VEFUSU9OEAgSEQoNU1FMX0FTU0VSVElPThAJIk0KDkV2YWx1YXRpb25UeXBl",
+            "Eh8KG0VWQUxVQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB1BFUl9ST1cQ",
+            "ARINCglBR0dSRUdBVEUQAiI4CgZSZXN1bHQSFgoSUkVTVUxUX1VOU1BFQ0lG",
+            "SUVEEAASCgoGUEFTU0VEEAESCgoGRkFJTEVEEAJCZQocY29tLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MUIJTG9nc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -199,7 +200,7 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileAppliedConfigs), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataProfileAppliedConfigs.Parser, new[]{ "SamplingPercent", "RowFilterApplied", "ColumnFilterApplied" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityAppliedConfigs), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityAppliedConfigs.Parser, new[]{ "SamplingPercent", "RowFilterApplied" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Parser, new[]{ "BigqueryExportResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult.Parser, new[]{ "State", "Message" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Parser, new[]{ "JobId", "DataSource", "Column", "RuleName", "RuleType", "EvalutionType", "RuleDimension", "ThresholdPercent", "Result", "EvaluatedRowCount", "PassedRowCount", "NullRowCount" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.RuleType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.EvaluationType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.Result) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Parser, new[]{ "JobId", "DataSource", "Column", "RuleName", "RuleType", "EvalutionType", "RuleDimension", "ThresholdPercent", "Result", "EvaluatedRowCount", "PassedRowCount", "NullRowCount", "AssertionRowCount" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.RuleType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.EvaluationType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.Result) }, null, null)
           }));
     }
     #endregion
@@ -6805,6 +6806,7 @@ namespace Google.Cloud.Dataplex.V1 {
       evaluatedRowCount_ = other.evaluatedRowCount_;
       passedRowCount_ = other.passedRowCount_;
       nullRowCount_ = other.nullRowCount_;
+      assertionRowCount_ = other.assertionRowCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6996,6 +6998,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "assertion_row_count" field.</summary>
+    public const int AssertionRowCountFieldNumber = 13;
+    private long assertionRowCount_;
+    /// <summary>
+    /// The number of rows returned by the sql statement in the SqlAssertion rule.
+    /// This field is only valid for SqlAssertion rules.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AssertionRowCount {
+      get { return assertionRowCount_; }
+      set {
+        assertionRowCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7023,6 +7041,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (EvaluatedRowCount != other.EvaluatedRowCount) return false;
       if (PassedRowCount != other.PassedRowCount) return false;
       if (NullRowCount != other.NullRowCount) return false;
+      if (AssertionRowCount != other.AssertionRowCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7042,6 +7061,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (EvaluatedRowCount != 0L) hash ^= EvaluatedRowCount.GetHashCode();
       if (PassedRowCount != 0L) hash ^= PassedRowCount.GetHashCode();
       if (NullRowCount != 0L) hash ^= NullRowCount.GetHashCode();
+      if (AssertionRowCount != 0L) hash ^= AssertionRowCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7108,6 +7128,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(96);
         output.WriteInt64(NullRowCount);
       }
+      if (AssertionRowCount != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AssertionRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7166,6 +7190,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(96);
         output.WriteInt64(NullRowCount);
       }
+      if (AssertionRowCount != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AssertionRowCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7211,6 +7239,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (NullRowCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(NullRowCount);
+      }
+      if (AssertionRowCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AssertionRowCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7259,6 +7290,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.NullRowCount != 0L) {
         NullRowCount = other.NullRowCount;
+      }
+      if (other.AssertionRowCount != 0L) {
+        AssertionRowCount = other.AssertionRowCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7321,6 +7355,10 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           case 96: {
             NullRowCount = input.ReadInt64();
+            break;
+          }
+          case 104: {
+            AssertionRowCount = input.ReadInt64();
             break;
           }
         }
@@ -7386,6 +7424,10 @@ namespace Google.Cloud.Dataplex.V1 {
             NullRowCount = input.ReadInt64();
             break;
           }
+          case 104: {
+            AssertionRowCount = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -7444,6 +7486,11 @@ namespace Google.Cloud.Dataplex.V1 {
         /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#uniquenessexpectation.
         /// </summary>
         [pbr::OriginalName("UNIQUENESS_EXPECTATION")] UniquenessExpectation = 8,
+        /// <summary>
+        /// Please see
+        /// https://cloud.google.com/dataplex/docs/reference/rest/v1/DataQualityRule#sqlAssertion.
+        /// </summary>
+        [pbr::OriginalName("SQL_ASSERTION")] SqlAssertion = 9,
       }
 
       /// <summary>
