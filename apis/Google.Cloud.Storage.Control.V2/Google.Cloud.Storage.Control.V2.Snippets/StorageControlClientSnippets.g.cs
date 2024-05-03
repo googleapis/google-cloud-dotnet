@@ -988,7 +988,7 @@ namespace GoogleCSharpSnippets
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
                 AllowNonEmpty = false,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             storageControlClient.DeleteManagedFolder(request);
@@ -1008,7 +1008,7 @@ namespace GoogleCSharpSnippets
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
                 AllowNonEmpty = false,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(request);
@@ -1022,7 +1022,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             storageControlClient.DeleteManagedFolder(name);
             // End snippet
@@ -1036,7 +1036,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(name);
             // End snippet
@@ -1049,7 +1049,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             storageControlClient.DeleteManagedFolder(name);
             // End snippet
@@ -1063,7 +1063,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(name);
             // End snippet
@@ -1080,7 +1080,7 @@ namespace GoogleCSharpSnippets
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             ManagedFolder response = storageControlClient.GetManagedFolder(request);
@@ -1099,7 +1099,7 @@ namespace GoogleCSharpSnippets
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             ManagedFolder response = await storageControlClient.GetManagedFolderAsync(request);
@@ -1113,7 +1113,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             ManagedFolder response = storageControlClient.GetManagedFolder(name);
             // End snippet
@@ -1127,7 +1127,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
             // End snippet
@@ -1140,7 +1140,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             ManagedFolder response = storageControlClient.GetManagedFolder(name);
             // End snippet
@@ -1154,7 +1154,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]");
+            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
             // End snippet

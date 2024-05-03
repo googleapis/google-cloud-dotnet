@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
                 AllowNonEmpty = false,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGEDFOLDER]"),
+                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             storageControlClient.DeleteManagedFolder(request);

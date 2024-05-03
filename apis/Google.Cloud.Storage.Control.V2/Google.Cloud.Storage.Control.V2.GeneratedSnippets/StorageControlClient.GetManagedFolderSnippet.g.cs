@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             StorageControlClient storageControlClient = StorageControlClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGEDFOLDER]";
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
             ManagedFolder response = storageControlClient.GetManagedFolder(name);
         }
