@@ -22,6 +22,12 @@
                 "CancelDlpJobAsync"
               ]
             },
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
             "CreateDeidentifyTemplate": {
               "methods": [
                 "CreateDeidentifyTemplate",
@@ -64,6 +70,12 @@
                 "DeidentifyContentAsync"
               ]
             },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
             "DeleteDeidentifyTemplate": {
               "methods": [
                 "DeleteDeidentifyTemplate",
@@ -100,6 +112,12 @@
                 "DeleteStoredInfoTypeAsync"
               ]
             },
+            "DeleteTableDataProfile": {
+              "methods": [
+                "DeleteTableDataProfile",
+                "DeleteTableDataProfileAsync"
+              ]
+            },
             "FinishDlpJob": {
               "methods": [
                 "FinishDlpJob",
@@ -110,6 +128,12 @@
               "methods": [
                 "GetColumnDataProfile",
                 "GetColumnDataProfileAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
               ]
             },
             "GetDeidentifyTemplate": {
@@ -184,6 +208,12 @@
                 "ListColumnDataProfilesAsync"
               ]
             },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
             "ListDeidentifyTemplates": {
               "methods": [
                 "ListDeidentifyTemplates",
@@ -248,6 +278,18 @@
               "methods": [
                 "ReidentifyContent",
                 "ReidentifyContentAsync"
+              ]
+            },
+            "SearchConnections": {
+              "methods": [
+                "SearchConnections",
+                "SearchConnectionsAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
               ]
             },
             "UpdateDeidentifyTemplate": {

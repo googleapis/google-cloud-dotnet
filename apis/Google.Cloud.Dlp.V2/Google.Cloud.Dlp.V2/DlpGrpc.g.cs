@@ -3,7 +3,7 @@
 //     source: google/privacy/dlp/v2/dlp.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -208,9 +208,29 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ColumnDataProfile> __Marshaller_google_privacy_dlp_v2_ColumnDataProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ColumnDataProfile.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest> __Marshaller_google_privacy_dlp_v2_DeleteTableDataProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest> __Marshaller_google_privacy_dlp_v2_FinishDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.FinishDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateConnectionRequest> __Marshaller_google_privacy_dlp_v2_CreateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.Connection> __Marshaller_google_privacy_dlp_v2_Connection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.Connection.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetConnectionRequest> __Marshaller_google_privacy_dlp_v2_GetConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListConnectionsRequest> __Marshaller_google_privacy_dlp_v2_ListConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListConnectionsResponse> __Marshaller_google_privacy_dlp_v2_ListConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.SearchConnectionsRequest> __Marshaller_google_privacy_dlp_v2_SearchConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.SearchConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.SearchConnectionsResponse> __Marshaller_google_privacy_dlp_v2_SearchConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.SearchConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteConnectionRequest> __Marshaller_google_privacy_dlp_v2_DeleteConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateConnectionRequest> __Marshaller_google_privacy_dlp_v2_UpdateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateConnectionRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse> __Method_InspectContent = new grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(
@@ -557,6 +577,14 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ColumnDataProfile);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTableDataProfile = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTableDataProfile",
+        __Marshaller_google_privacy_dlp_v2_DeleteTableDataProfileRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -571,6 +599,54 @@ namespace Google.Cloud.Dlp.V2 {
         "FinishDlpJob",
         __Marshaller_google_privacy_dlp_v2_FinishDlpJobRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection> __Method_CreateConnection = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateConnection",
+        __Marshaller_google_privacy_dlp_v2_CreateConnectionRequest,
+        __Marshaller_google_privacy_dlp_v2_Connection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetConnectionRequest, global::Google.Cloud.Dlp.V2.Connection> __Method_GetConnection = new grpc::Method<global::Google.Cloud.Dlp.V2.GetConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetConnection",
+        __Marshaller_google_privacy_dlp_v2_GetConnectionRequest,
+        __Marshaller_google_privacy_dlp_v2_Connection);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListConnectionsRequest, global::Google.Cloud.Dlp.V2.ListConnectionsResponse> __Method_ListConnections = new grpc::Method<global::Google.Cloud.Dlp.V2.ListConnectionsRequest, global::Google.Cloud.Dlp.V2.ListConnectionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListConnections",
+        __Marshaller_google_privacy_dlp_v2_ListConnectionsRequest,
+        __Marshaller_google_privacy_dlp_v2_ListConnectionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.SearchConnectionsRequest, global::Google.Cloud.Dlp.V2.SearchConnectionsResponse> __Method_SearchConnections = new grpc::Method<global::Google.Cloud.Dlp.V2.SearchConnectionsRequest, global::Google.Cloud.Dlp.V2.SearchConnectionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchConnections",
+        __Marshaller_google_privacy_dlp_v2_SearchConnectionsRequest,
+        __Marshaller_google_privacy_dlp_v2_SearchConnectionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteConnectionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteConnection = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteConnectionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteConnection",
+        __Marshaller_google_privacy_dlp_v2_DeleteConnectionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection> __Method_UpdateConnection = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConnection",
+        __Marshaller_google_privacy_dlp_v2_UpdateConnectionRequest,
+        __Marshaller_google_privacy_dlp_v2_Connection);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1159,7 +1235,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists project data profiles for an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1171,7 +1247,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists table data profiles for an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1183,7 +1259,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists column data profiles for an organization.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1231,6 +1307,19 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
+      /// Delete a TableDataProfile. Will not prevent the profile from being
+      /// regenerated if the table is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTableDataProfile(global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Inspect hybrid content and store findings to a job.
       /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
@@ -1253,6 +1342,78 @@ namespace Google.Cloud.Dlp.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a Connection to an external data source.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.Connection> CreateConnection(global::Google.Cloud.Dlp.V2.CreateConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a Connection by name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.Connection> GetConnection(global::Google.Cloud.Dlp.V2.GetConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListConnectionsResponse> ListConnections(global::Google.Cloud.Dlp.V2.ListConnectionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches for Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.SearchConnectionsResponse> SearchConnections(global::Google.Cloud.Dlp.V2.SearchConnectionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete a Connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnection(global::Google.Cloud.Dlp.V2.DeleteConnectionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update a Connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.Connection> UpdateConnection(global::Google.Cloud.Dlp.V2.UpdateConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3591,7 +3752,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists project data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3604,7 +3765,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListProjectDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists project data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3615,7 +3776,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListProjectDataProfiles, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists project data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3628,7 +3789,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListProjectDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists project data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3639,7 +3800,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListProjectDataProfiles, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists table data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3652,7 +3813,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListTableDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists table data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3663,7 +3824,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTableDataProfiles, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists table data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3676,7 +3837,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListTableDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists table data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3687,7 +3848,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTableDataProfiles, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists column data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3700,7 +3861,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListColumnDataProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists column data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3711,7 +3872,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListColumnDataProfiles, null, options, request);
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists column data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3724,7 +3885,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListColumnDataProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists data profiles for an organization.
+      /// Lists column data profiles for an organization.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3879,6 +4040,58 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetColumnDataProfile, null, options, request);
       }
       /// <summary>
+      /// Delete a TableDataProfile. Will not prevent the profile from being
+      /// regenerated if the table is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTableDataProfile(global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTableDataProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a TableDataProfile. Will not prevent the profile from being
+      /// regenerated if the table is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTableDataProfile(global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTableDataProfile, null, options, request);
+      }
+      /// <summary>
+      /// Delete a TableDataProfile. Will not prevent the profile from being
+      /// regenerated if the table is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTableDataProfileAsync(global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTableDataProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a TableDataProfile. Will not prevent the profile from being
+      /// regenerated if the table is still included in a discovery configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTableDataProfileAsync(global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTableDataProfile, null, options, request);
+      }
+      /// <summary>
       /// Inspect hybrid content and store findings to a job.
       /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
@@ -3986,6 +4199,294 @@ namespace Google.Cloud.Dlp.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FinishDlpJob, null, options, request);
       }
+      /// <summary>
+      /// Create a Connection to an external data source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection CreateConnection(global::Google.Cloud.Dlp.V2.CreateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a Connection to an external data source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection CreateConnection(global::Google.Cloud.Dlp.V2.CreateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Create a Connection to an external data source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> CreateConnectionAsync(global::Google.Cloud.Dlp.V2.CreateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a Connection to an external data source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> CreateConnectionAsync(global::Google.Cloud.Dlp.V2.CreateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Get a Connection by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection GetConnection(global::Google.Cloud.Dlp.V2.GetConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a Connection by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection GetConnection(global::Google.Cloud.Dlp.V2.GetConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetConnection, null, options, request);
+      }
+      /// <summary>
+      /// Get a Connection by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> GetConnectionAsync(global::Google.Cloud.Dlp.V2.GetConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a Connection by name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> GetConnectionAsync(global::Google.Cloud.Dlp.V2.GetConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetConnection, null, options, request);
+      }
+      /// <summary>
+      /// Lists Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListConnectionsResponse ListConnections(global::Google.Cloud.Dlp.V2.ListConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.ListConnectionsResponse ListConnections(global::Google.Cloud.Dlp.V2.ListConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListConnections, null, options, request);
+      }
+      /// <summary>
+      /// Lists Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListConnectionsResponse> ListConnectionsAsync(global::Google.Cloud.Dlp.V2.ListConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListConnectionsResponse> ListConnectionsAsync(global::Google.Cloud.Dlp.V2.ListConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListConnections, null, options, request);
+      }
+      /// <summary>
+      /// Searches for Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.SearchConnectionsResponse SearchConnections(global::Google.Cloud.Dlp.V2.SearchConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches for Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.SearchConnectionsResponse SearchConnections(global::Google.Cloud.Dlp.V2.SearchConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchConnections, null, options, request);
+      }
+      /// <summary>
+      /// Searches for Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.SearchConnectionsResponse> SearchConnectionsAsync(global::Google.Cloud.Dlp.V2.SearchConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches for Connections in a parent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.SearchConnectionsResponse> SearchConnectionsAsync(global::Google.Cloud.Dlp.V2.SearchConnectionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchConnections, null, options, request);
+      }
+      /// <summary>
+      /// Delete a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConnection(global::Google.Cloud.Dlp.V2.DeleteConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConnection(global::Google.Cloud.Dlp.V2.DeleteConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteConnection, null, options, request);
+      }
+      /// <summary>
+      /// Delete a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnectionAsync(global::Google.Cloud.Dlp.V2.DeleteConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConnectionAsync(global::Google.Cloud.Dlp.V2.DeleteConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteConnection, null, options, request);
+      }
+      /// <summary>
+      /// Update a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection UpdateConnection(global::Google.Cloud.Dlp.V2.UpdateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dlp.V2.Connection UpdateConnection(global::Google.Cloud.Dlp.V2.UpdateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConnection, null, options, request);
+      }
+      /// <summary>
+      /// Update a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> UpdateConnectionAsync(global::Google.Cloud.Dlp.V2.UpdateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update a Connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.Connection> UpdateConnectionAsync(global::Google.Cloud.Dlp.V2.UpdateConnectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConnection, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DlpServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -4043,8 +4544,15 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_GetProjectDataProfile, serviceImpl.GetProjectDataProfile)
           .AddMethod(__Method_GetTableDataProfile, serviceImpl.GetTableDataProfile)
           .AddMethod(__Method_GetColumnDataProfile, serviceImpl.GetColumnDataProfile)
+          .AddMethod(__Method_DeleteTableDataProfile, serviceImpl.DeleteTableDataProfile)
           .AddMethod(__Method_HybridInspectDlpJob, serviceImpl.HybridInspectDlpJob)
-          .AddMethod(__Method_FinishDlpJob, serviceImpl.FinishDlpJob).Build();
+          .AddMethod(__Method_FinishDlpJob, serviceImpl.FinishDlpJob)
+          .AddMethod(__Method_CreateConnection, serviceImpl.CreateConnection)
+          .AddMethod(__Method_GetConnection, serviceImpl.GetConnection)
+          .AddMethod(__Method_ListConnections, serviceImpl.ListConnections)
+          .AddMethod(__Method_SearchConnections, serviceImpl.SearchConnections)
+          .AddMethod(__Method_DeleteConnection, serviceImpl.DeleteConnection)
+          .AddMethod(__Method_UpdateConnection, serviceImpl.UpdateConnection).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4097,8 +4605,15 @@ namespace Google.Cloud.Dlp.V2 {
       serviceBinder.AddMethod(__Method_GetProjectDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetProjectDataProfileRequest, global::Google.Cloud.Dlp.V2.ProjectDataProfile>(serviceImpl.GetProjectDataProfile));
       serviceBinder.AddMethod(__Method_GetTableDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetTableDataProfileRequest, global::Google.Cloud.Dlp.V2.TableDataProfile>(serviceImpl.GetTableDataProfile));
       serviceBinder.AddMethod(__Method_GetColumnDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetColumnDataProfileRequest, global::Google.Cloud.Dlp.V2.ColumnDataProfile>(serviceImpl.GetColumnDataProfile));
+      serviceBinder.AddMethod(__Method_DeleteTableDataProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTableDataProfile));
       serviceBinder.AddMethod(__Method_HybridInspectDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(serviceImpl.HybridInspectDlpJob));
       serviceBinder.AddMethod(__Method_FinishDlpJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.FinishDlpJob));
+      serviceBinder.AddMethod(__Method_CreateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.CreateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(serviceImpl.CreateConnection));
+      serviceBinder.AddMethod(__Method_GetConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.GetConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(serviceImpl.GetConnection));
+      serviceBinder.AddMethod(__Method_ListConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.ListConnectionsRequest, global::Google.Cloud.Dlp.V2.ListConnectionsResponse>(serviceImpl.ListConnections));
+      serviceBinder.AddMethod(__Method_SearchConnections, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.SearchConnectionsRequest, global::Google.Cloud.Dlp.V2.SearchConnectionsResponse>(serviceImpl.SearchConnections));
+      serviceBinder.AddMethod(__Method_DeleteConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.DeleteConnectionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConnection));
+      serviceBinder.AddMethod(__Method_UpdateConnection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.UpdateConnectionRequest, global::Google.Cloud.Dlp.V2.Connection>(serviceImpl.UpdateConnection));
     }
 
   }
