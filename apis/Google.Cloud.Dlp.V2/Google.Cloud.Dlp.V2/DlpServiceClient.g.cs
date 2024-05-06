@@ -91,8 +91,15 @@ namespace Google.Cloud.Dlp.V2
             GetProjectDataProfileSettings = existing.GetProjectDataProfileSettings;
             GetTableDataProfileSettings = existing.GetTableDataProfileSettings;
             GetColumnDataProfileSettings = existing.GetColumnDataProfileSettings;
+            DeleteTableDataProfileSettings = existing.DeleteTableDataProfileSettings;
             HybridInspectDlpJobSettings = existing.HybridInspectDlpJobSettings;
             FinishDlpJobSettings = existing.FinishDlpJobSettings;
+            CreateConnectionSettings = existing.CreateConnectionSettings;
+            GetConnectionSettings = existing.GetConnectionSettings;
+            ListConnectionsSettings = existing.ListConnectionsSettings;
+            SearchConnectionsSettings = existing.SearchConnectionsSettings;
+            DeleteConnectionSettings = existing.DeleteConnectionSettings;
+            UpdateConnectionSettings = existing.UpdateConnectionSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -878,6 +885,18 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteTableDataProfile</c> and <c>DlpServiceClient.DeleteTableDataProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTableDataProfileSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DlpServiceClient.HybridInspectDlpJob</c> and <c>DlpServiceClient.HybridInspectDlpJobAsync</c>.
         /// </summary>
         /// <remarks>
@@ -899,6 +918,78 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FinishDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.CreateConnection</c> and <c>DlpServiceClient.CreateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetConnection</c> and <c>DlpServiceClient.GetConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListConnections</c> and <c>DlpServiceClient.ListConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListConnectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.SearchConnections</c> and <c>DlpServiceClient.SearchConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchConnectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteConnection</c> and <c>DlpServiceClient.DeleteConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.UpdateConnection</c> and <c>DlpServiceClient.UpdateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -9512,7 +9603,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteStoredInfoTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9521,7 +9612,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9530,7 +9621,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9554,7 +9645,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9578,7 +9669,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9602,7 +9693,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9626,7 +9717,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9650,7 +9741,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. organizations/{org_id}/locations/{loc_id}
@@ -9674,7 +9765,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9683,7 +9774,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9692,7 +9783,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9718,7 +9809,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9744,7 +9835,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9770,7 +9861,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9796,7 +9887,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9822,7 +9913,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9848,7 +9939,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9857,7 +9948,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9866,7 +9957,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9892,7 +9983,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9918,7 +10009,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9944,7 +10035,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9970,7 +10061,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -9996,7 +10087,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="parent">
         /// Required. Resource name of the organization or project, for
@@ -10355,6 +10446,120 @@ namespace Google.Cloud.Dlp.V2
             GetColumnDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTableDataProfile(DeleteTableDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(DeleteTableDataProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(DeleteTableDataProfileRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTableDataProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTableDataProfile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTableDataProfile(new DeleteTableDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTableDataProfileAsync(new DeleteTableDataProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTableDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTableDataProfile(TableDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTableDataProfile(new DeleteTableDataProfileRequest
+            {
+                TableDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(TableDataProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTableDataProfileAsync(new DeleteTableDataProfileRequest
+            {
+                TableDataProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the table data profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTableDataProfileAsync(TableDataProfileName name, st::CancellationToken cancellationToken) =>
+            DeleteTableDataProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Inspect hybrid content and store findings to a job.
         /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
@@ -10512,6 +10717,708 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task FinishDlpJobAsync(FinishDlpJobRequest request, st::CancellationToken cancellationToken) =>
             FinishDlpJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection CreateConnection(CreateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(CreateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(CreateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection CreateConnection(string parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnection(new CreateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(string parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnectionAsync(new CreateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(string parent, Connection connection, st::CancellationToken cancellationToken) =>
+            CreateConnectionAsync(parent, connection, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection CreateConnection(gagr::LocationName parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnection(new CreateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(gagr::LocationName parent, Connection connection, gaxgrpc::CallSettings callSettings = null) =>
+            CreateConnectionAsync(new CreateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Connection = gax::GaxPreconditions.CheckNotNull(connection, nameof(connection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name in the format:
+        /// `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="connection">
+        /// Required. The connection resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> CreateConnectionAsync(gagr::LocationName parent, Connection connection, st::CancellationToken cancellationToken) =>
+            CreateConnectionAsync(parent, connection, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection GetConnection(GetConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(GetConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(GetConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection GetConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnection(new GetConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionAsync(new GetConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection GetConnection(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnection(new GetConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConnectionAsync(new GetConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> GetConnectionAsync(ConnectionName name, st::CancellationToken cancellationToken) =>
+            GetConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(ListConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(ListConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, for example:
+        /// `projects/project-id/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnections(new ListConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, for example:
+        /// `projects/project-id/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnectionsAsync(new ListConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, for example:
+        /// `projects/project-id/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnections(new ListConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, for example:
+        /// `projects/project-id/locations/global`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnectionsAsync(new ListConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(SearchConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(SearchConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, typically an organization, without location.
+        /// For example: `organizations/12345678`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchConnections(new SearchConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, typically an organization, without location.
+        /// For example: `organizations/12345678`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchConnectionsAsync(new SearchConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, typically an organization, without location.
+        /// For example: `organizations/12345678`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchConnections(new SearchConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent name, typically an organization, without location.
+        /// For example: `organizations/12345678`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchConnectionsAsync(new SearchConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteConnection(DeleteConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(DeleteConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(DeleteConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnection(new DeleteConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnectionAsync(new DeleteConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteConnection(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnection(new DeleteConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteConnectionAsync(new DeleteConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the Connection to be deleted, in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteConnectionAsync(ConnectionName name, st::CancellationToken cancellationToken) =>
+            DeleteConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection UpdateConnection(UpdateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(UpdateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(UpdateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection UpdateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConnection(new UpdateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConnectionAsync(new UpdateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            UpdateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Connection UpdateConnection(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConnection(new UpdateConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(ConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConnectionAsync(new UpdateConnectionRequest
+            {
+                ConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name in the format:
+        /// `projects/{project}/locations/{location}/connections/{connection}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Connection> UpdateConnectionAsync(ConnectionName name, st::CancellationToken cancellationToken) =>
+            UpdateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DlpService client wrapper implementation, for convenient use.</summary>
@@ -10614,9 +11521,23 @@ namespace Google.Cloud.Dlp.V2
 
         private readonly gaxgrpc::ApiCall<GetColumnDataProfileRequest, ColumnDataProfile> _callGetColumnDataProfile;
 
+        private readonly gaxgrpc::ApiCall<DeleteTableDataProfileRequest, wkt::Empty> _callDeleteTableDataProfile;
+
         private readonly gaxgrpc::ApiCall<HybridInspectDlpJobRequest, HybridInspectResponse> _callHybridInspectDlpJob;
 
         private readonly gaxgrpc::ApiCall<FinishDlpJobRequest, wkt::Empty> _callFinishDlpJob;
+
+        private readonly gaxgrpc::ApiCall<CreateConnectionRequest, Connection> _callCreateConnection;
+
+        private readonly gaxgrpc::ApiCall<GetConnectionRequest, Connection> _callGetConnection;
+
+        private readonly gaxgrpc::ApiCall<ListConnectionsRequest, ListConnectionsResponse> _callListConnections;
+
+        private readonly gaxgrpc::ApiCall<SearchConnectionsRequest, SearchConnectionsResponse> _callSearchConnections;
+
+        private readonly gaxgrpc::ApiCall<DeleteConnectionRequest, wkt::Empty> _callDeleteConnection;
+
+        private readonly gaxgrpc::ApiCall<UpdateConnectionRequest, Connection> _callUpdateConnection;
 
         /// <summary>
         /// Constructs a client wrapper for the DlpService service, with the specified gRPC client and settings.
@@ -10763,12 +11684,33 @@ namespace Google.Cloud.Dlp.V2
             _callGetColumnDataProfile = clientHelper.BuildApiCall<GetColumnDataProfileRequest, ColumnDataProfile>("GetColumnDataProfile", grpcClient.GetColumnDataProfileAsync, grpcClient.GetColumnDataProfile, effectiveSettings.GetColumnDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetColumnDataProfile);
             Modify_GetColumnDataProfileApiCall(ref _callGetColumnDataProfile);
+            _callDeleteTableDataProfile = clientHelper.BuildApiCall<DeleteTableDataProfileRequest, wkt::Empty>("DeleteTableDataProfile", grpcClient.DeleteTableDataProfileAsync, grpcClient.DeleteTableDataProfile, effectiveSettings.DeleteTableDataProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTableDataProfile);
+            Modify_DeleteTableDataProfileApiCall(ref _callDeleteTableDataProfile);
             _callHybridInspectDlpJob = clientHelper.BuildApiCall<HybridInspectDlpJobRequest, HybridInspectResponse>("HybridInspectDlpJob", grpcClient.HybridInspectDlpJobAsync, grpcClient.HybridInspectDlpJob, effectiveSettings.HybridInspectDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callHybridInspectDlpJob);
             Modify_HybridInspectDlpJobApiCall(ref _callHybridInspectDlpJob);
             _callFinishDlpJob = clientHelper.BuildApiCall<FinishDlpJobRequest, wkt::Empty>("FinishDlpJob", grpcClient.FinishDlpJobAsync, grpcClient.FinishDlpJob, effectiveSettings.FinishDlpJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFinishDlpJob);
             Modify_FinishDlpJobApiCall(ref _callFinishDlpJob);
+            _callCreateConnection = clientHelper.BuildApiCall<CreateConnectionRequest, Connection>("CreateConnection", grpcClient.CreateConnectionAsync, grpcClient.CreateConnection, effectiveSettings.CreateConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateConnection);
+            Modify_CreateConnectionApiCall(ref _callCreateConnection);
+            _callGetConnection = clientHelper.BuildApiCall<GetConnectionRequest, Connection>("GetConnection", grpcClient.GetConnectionAsync, grpcClient.GetConnection, effectiveSettings.GetConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetConnection);
+            Modify_GetConnectionApiCall(ref _callGetConnection);
+            _callListConnections = clientHelper.BuildApiCall<ListConnectionsRequest, ListConnectionsResponse>("ListConnections", grpcClient.ListConnectionsAsync, grpcClient.ListConnections, effectiveSettings.ListConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListConnections);
+            Modify_ListConnectionsApiCall(ref _callListConnections);
+            _callSearchConnections = clientHelper.BuildApiCall<SearchConnectionsRequest, SearchConnectionsResponse>("SearchConnections", grpcClient.SearchConnectionsAsync, grpcClient.SearchConnections, effectiveSettings.SearchConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchConnections);
+            Modify_SearchConnectionsApiCall(ref _callSearchConnections);
+            _callDeleteConnection = clientHelper.BuildApiCall<DeleteConnectionRequest, wkt::Empty>("DeleteConnection", grpcClient.DeleteConnectionAsync, grpcClient.DeleteConnection, effectiveSettings.DeleteConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteConnection);
+            Modify_DeleteConnectionApiCall(ref _callDeleteConnection);
+            _callUpdateConnection = clientHelper.BuildApiCall<UpdateConnectionRequest, Connection>("UpdateConnection", grpcClient.UpdateConnectionAsync, grpcClient.UpdateConnection, effectiveSettings.UpdateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateConnection);
+            Modify_UpdateConnectionApiCall(ref _callUpdateConnection);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -10860,9 +11802,23 @@ namespace Google.Cloud.Dlp.V2
 
         partial void Modify_GetColumnDataProfileApiCall(ref gaxgrpc::ApiCall<GetColumnDataProfileRequest, ColumnDataProfile> call);
 
+        partial void Modify_DeleteTableDataProfileApiCall(ref gaxgrpc::ApiCall<DeleteTableDataProfileRequest, wkt::Empty> call);
+
         partial void Modify_HybridInspectDlpJobApiCall(ref gaxgrpc::ApiCall<HybridInspectDlpJobRequest, HybridInspectResponse> call);
 
         partial void Modify_FinishDlpJobApiCall(ref gaxgrpc::ApiCall<FinishDlpJobRequest, wkt::Empty> call);
+
+        partial void Modify_CreateConnectionApiCall(ref gaxgrpc::ApiCall<CreateConnectionRequest, Connection> call);
+
+        partial void Modify_GetConnectionApiCall(ref gaxgrpc::ApiCall<GetConnectionRequest, Connection> call);
+
+        partial void Modify_ListConnectionsApiCall(ref gaxgrpc::ApiCall<ListConnectionsRequest, ListConnectionsResponse> call);
+
+        partial void Modify_SearchConnectionsApiCall(ref gaxgrpc::ApiCall<SearchConnectionsRequest, SearchConnectionsResponse> call);
+
+        partial void Modify_DeleteConnectionApiCall(ref gaxgrpc::ApiCall<DeleteConnectionRequest, wkt::Empty> call);
+
+        partial void Modify_UpdateConnectionApiCall(ref gaxgrpc::ApiCall<UpdateConnectionRequest, Connection> call);
 
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -10958,9 +11914,23 @@ namespace Google.Cloud.Dlp.V2
 
         partial void Modify_GetColumnDataProfileRequest(ref GetColumnDataProfileRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteTableDataProfileRequest(ref DeleteTableDataProfileRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_HybridInspectDlpJobRequest(ref HybridInspectDlpJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FinishDlpJobRequest(ref FinishDlpJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateConnectionRequest(ref CreateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetConnectionRequest(ref GetConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListConnectionsRequest(ref ListConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchConnectionsRequest(ref SearchConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteConnectionRequest(ref DeleteConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateConnectionRequest(ref UpdateConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -12115,7 +13085,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12127,7 +13097,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists project data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12139,7 +13109,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12151,7 +13121,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists table data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12163,7 +13133,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12175,7 +13145,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Lists data profiles for an organization.
+        /// Lists column data profiles for an organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -12259,6 +13229,32 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTableDataProfile(DeleteTableDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTableDataProfileRequest(ref request, ref callSettings);
+            _callDeleteTableDataProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a TableDataProfile. Will not prevent the profile from being
+        /// regenerated if the table is still included in a discovery configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTableDataProfileAsync(DeleteTableDataProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTableDataProfileRequest(ref request, ref callSettings);
+            return _callDeleteTableDataProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Inspect hybrid content and store findings to a job.
         /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
@@ -12311,6 +13307,150 @@ namespace Google.Cloud.Dlp.V2
             Modify_FinishDlpJobRequest(ref request, ref callSettings);
             return _callFinishDlpJob.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Connection CreateConnection(CreateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateConnectionRequest(ref request, ref callSettings);
+            return _callCreateConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a Connection to an external data source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Connection> CreateConnectionAsync(CreateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateConnectionRequest(ref request, ref callSettings);
+            return _callCreateConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Connection GetConnection(GetConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConnectionRequest(ref request, ref callSettings);
+            return _callGetConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a Connection by name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Connection> GetConnectionAsync(GetConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConnectionRequest(ref request, ref callSettings);
+            return _callGetConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(ListConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListConnectionsRequest, ListConnectionsResponse, Connection>(_callListConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(ListConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListConnectionsRequest, ListConnectionsResponse, Connection>(_callListConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchConnectionsResponse, Connection> SearchConnections(SearchConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchConnectionsRequest, SearchConnectionsResponse, Connection>(_callSearchConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches for Connections in a parent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchConnectionsResponse, Connection> SearchConnectionsAsync(SearchConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchConnectionsRequest, SearchConnectionsResponse, Connection>(_callSearchConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteConnection(DeleteConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteConnectionRequest(ref request, ref callSettings);
+            _callDeleteConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteConnectionAsync(DeleteConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteConnectionRequest(ref request, ref callSettings);
+            return _callDeleteConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Connection UpdateConnection(UpdateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConnectionRequest(ref request, ref callSettings);
+            return _callUpdateConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update a Connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Connection> UpdateConnectionAsync(UpdateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConnectionRequest(ref request, ref callSettings);
+            return _callUpdateConnection.Async(request, callSettings);
+        }
     }
 
     public partial class ListInspectTemplatesRequest : gaxgrpc::IPageRequest
@@ -12346,6 +13486,14 @@ namespace Google.Cloud.Dlp.V2
     }
 
     public partial class ListColumnDataProfilesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchConnectionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -12417,6 +13565,22 @@ namespace Google.Cloud.Dlp.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ColumnDataProfile> GetEnumerator() => ColumnDataProfiles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListConnectionsResponse : gaxgrpc::IPageResponse<Connection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Connection> GetEnumerator() => Connections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchConnectionsResponse : gaxgrpc::IPageResponse<Connection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Connection> GetEnumerator() => Connections.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

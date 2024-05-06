@@ -14638,6 +14638,290 @@
       ]
     },
     {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_sync",
+      "title": "DeleteTableDataProfileRequestObject",
+      "description": "Snippet for DeleteTableDataProfile",
+      "file": "DlpServiceClient.DeleteTableDataProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_async",
+      "title": "DeleteTableDataProfileRequestObjectAsync",
+      "description": "Snippet for DeleteTableDataProfileAsync",
+      "file": "DlpServiceClient.DeleteTableDataProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteTableDataProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_sync_flattened",
+      "title": "DeleteTableDataProfile",
+      "description": "Snippet for DeleteTableDataProfile",
+      "file": "DlpServiceClient.DeleteTableDataProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_async_flattened",
+      "title": "DeleteTableDataProfileAsync",
+      "description": "Snippet for DeleteTableDataProfileAsync",
+      "file": "DlpServiceClient.DeleteTableDataProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_sync_flattened_resourceNames",
+      "title": "DeleteTableDataProfileResourceNames",
+      "description": "Snippet for DeleteTableDataProfile",
+      "file": "DlpServiceClient.DeleteTableDataProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfile",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.TableDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteTableDataProfile_async_flattened_resourceNames",
+      "title": "DeleteTableDataProfileResourceNamesAsync",
+      "description": "Snippet for DeleteTableDataProfileAsync",
+      "file": "DlpServiceClient.DeleteTableDataProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTableDataProfileAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteTableDataProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.TableDataProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTableDataProfile",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteTableDataProfile",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dlp_v2_generated_DlpService_HybridInspectDlpJob_sync",
       "title": "HybridInspectDlpJobRequestObject",
       "description": "Snippet for HybridInspectDlpJob",
@@ -15016,6 +15300,1805 @@
         {
           "start": 35,
           "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_sync",
+      "title": "CreateConnectionRequestObject",
+      "description": "Snippet for CreateConnection",
+      "file": "DlpServiceClient.CreateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_async",
+      "title": "CreateConnectionRequestObjectAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DlpServiceClient.CreateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_sync_flattened",
+      "title": "CreateConnection",
+      "description": "Snippet for CreateConnection",
+      "file": "DlpServiceClient.CreateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_async_flattened",
+      "title": "CreateConnectionAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DlpServiceClient.CreateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_sync_flattened_resourceNames",
+      "title": "CreateConnectionResourceNames",
+      "description": "Snippet for CreateConnection",
+      "file": "DlpServiceClient.CreateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_CreateConnection_async_flattened_resourceNames",
+      "title": "CreateConnectionResourceNamesAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DlpServiceClient.CreateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dlp.V2.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.CreateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_sync",
+      "title": "GetConnectionRequestObject",
+      "description": "Snippet for GetConnection",
+      "file": "DlpServiceClient.GetConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_async",
+      "title": "GetConnectionRequestObjectAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DlpServiceClient.GetConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_sync_flattened",
+      "title": "GetConnection",
+      "description": "Snippet for GetConnection",
+      "file": "DlpServiceClient.GetConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_async_flattened",
+      "title": "GetConnectionAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DlpServiceClient.GetConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_sync_flattened_resourceNames",
+      "title": "GetConnectionResourceNames",
+      "description": "Snippet for GetConnection",
+      "file": "DlpServiceClient.GetConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_GetConnection_async_flattened_resourceNames",
+      "title": "GetConnectionResourceNamesAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DlpServiceClient.GetConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.GetConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "DlpServiceClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DlpServiceClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "DlpServiceClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DlpServiceClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "DlpServiceClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DlpServiceClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.ListConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.ListConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_sync",
+      "title": "SearchConnectionsRequestObject",
+      "description": "Snippet for SearchConnections",
+      "file": "DlpServiceClient.SearchConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.SearchConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_async",
+      "title": "SearchConnectionsRequestObjectAsync",
+      "description": "Snippet for SearchConnectionsAsync",
+      "file": "DlpServiceClient.SearchConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.SearchConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_sync_flattened",
+      "title": "SearchConnections",
+      "description": "Snippet for SearchConnections",
+      "file": "DlpServiceClient.SearchConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_async_flattened",
+      "title": "SearchConnectionsAsync",
+      "description": "Snippet for SearchConnectionsAsync",
+      "file": "DlpServiceClient.SearchConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_sync_flattened_resourceNames",
+      "title": "SearchConnectionsResourceNames",
+      "description": "Snippet for SearchConnections",
+      "file": "DlpServiceClient.SearchConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnections",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_SearchConnections_async_flattened_resourceNames",
+      "title": "SearchConnectionsResourceNamesAsync",
+      "description": "Snippet for SearchConnectionsAsync",
+      "file": "DlpServiceClient.SearchConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchConnectionsAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.SearchConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dlp.V2.SearchConnectionsResponse, Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "SearchConnections",
+          "fullName": "google.privacy.dlp.v2.DlpService.SearchConnections",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_sync",
+      "title": "DeleteConnectionRequestObject",
+      "description": "Snippet for DeleteConnection",
+      "file": "DlpServiceClient.DeleteConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_async",
+      "title": "DeleteConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DlpServiceClient.DeleteConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_sync_flattened",
+      "title": "DeleteConnection",
+      "description": "Snippet for DeleteConnection",
+      "file": "DlpServiceClient.DeleteConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_async_flattened",
+      "title": "DeleteConnectionAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DlpServiceClient.DeleteConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_sync_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNames",
+      "description": "Snippet for DeleteConnection",
+      "file": "DlpServiceClient.DeleteConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_DeleteConnection_async_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DlpServiceClient.DeleteConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.DeleteConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_sync",
+      "title": "UpdateConnectionRequestObject",
+      "description": "Snippet for UpdateConnection",
+      "file": "DlpServiceClient.UpdateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_async",
+      "title": "UpdateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "DlpServiceClient.UpdateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_sync_flattened",
+      "title": "UpdateConnection",
+      "description": "Snippet for UpdateConnection",
+      "file": "DlpServiceClient.UpdateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_async_flattened",
+      "title": "UpdateConnectionAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "DlpServiceClient.UpdateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_sync_flattened_resourceNames",
+      "title": "UpdateConnectionResourceNames",
+      "description": "Snippet for UpdateConnection",
+      "file": "DlpServiceClient.UpdateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dlp.V2.Connection",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dlp_v2_generated_DlpService_UpdateConnection_async_flattened_resourceNames",
+      "title": "UpdateConnectionResourceNamesAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "DlpServiceClient.UpdateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dlp.V2.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dlp.V2.Connection>",
+        "client": {
+          "shortName": "DlpServiceClient",
+          "fullName": "Google.Cloud.Dlp.V2.DlpServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.privacy.dlp.v2.DlpService.UpdateConnection",
+          "service": {
+            "shortName": "DlpService",
+            "fullName": "google.privacy.dlp.v2.DlpService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
