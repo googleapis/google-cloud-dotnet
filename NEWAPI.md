@@ -10,13 +10,7 @@ Prerequisites:
 - `git`
 - `bash` (on Windows, the version that comes with Git for Windows)
 - `wget`
-- Python 3 on the path as `python`
-- .NET Core SDK, suitable for the version specified in `global.json`
-
-*Almost* all of the generation process works fine on Linux and
-should work on OSX too (untested). Bigtable has a post-generation
-step that currently requires Windows, but that's skipped on
-non-Windows platforms so should only affect Bigtable developers.
+- .NET SDK, suitable for the version specified in `global.json`
 
 Relevant repositories:
 
