@@ -5647,6 +5647,28 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Maps.RouteOptimization.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Route Optimization",
+      "productUrl": "https://developers.google.com/maps/documentation/route-optimization",
+      "description": "Recommended Google client library to access the Google Maps Route Optimization API, which assigns tasks and routes to a vehicle fleet, optimizing against the objectives and constraints that you supply for your transportation goals.",
+      "tags": [
+        "routing",
+        "optimization"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/maps/routeoptimization/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "routeoptimization",
+      "serviceConfigFile": "routeoptimization_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.Routing.V2",
       "version": "1.0.0-beta13",
       "type": "grpc",
