@@ -39,8 +39,8 @@ namespace GoogleCSharpSnippets
             ExportDataRequest request = new ExportDataRequest
             {
                 InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
-                SourcePath = "",
-                DestinationGcsUri = "",
+                SourceParallelstore = new SourceParallelstore(),
+                DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
             };
             // Make the request
