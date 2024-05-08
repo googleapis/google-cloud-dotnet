@@ -1,5 +1,26 @@
 # Version history
 
+## Version 3.0.0, released 2024-05-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing field `entry` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `display_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `entry_type` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `modify_time` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `fully_qualified_name` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `description` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- **BREAKING CHANGE** An existing field `relative_resource` is removed from message `.google.cloud.dataplex.v1.SearchEntriesResult` ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- A comment for field `aspects` in message `.google.cloud.dataplex.v1.Entry` is changed ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+- A comment for field `filter` in message `.google.cloud.dataplex.v1.ListEntriesRequest` is changed ([commit 7b1c647](https://github.com/googleapis/google-cloud-dotnet/commit/7b1c6470d13702eb16fd436ac74855b7718d908e))
+
 ## Version 2.15.0, released 2024-03-26
 
 ### New features
