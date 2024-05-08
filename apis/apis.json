@@ -1860,7 +1860,7 @@
     },
     {
       "id": "Google.Cloud.Deploy.V1",
-      "version": "2.15.0",
+      "version": "2.16.0",
       "type": "grpc",
       "productName": "Google Cloud Deploy",
       "productUrl": "https://cloud.google.com/deploy/",
