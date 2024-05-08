@@ -5541,7 +5541,7 @@
     },
     {
       "id": "Google.Maps.FleetEngine.Delivery.V1",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "type": "grpc",
       "productName": "Last Mile Fleet Solution Delivery",
       "productUrl": "https://developers.google.com/maps/documentation/transportation-logistics/mobility",
