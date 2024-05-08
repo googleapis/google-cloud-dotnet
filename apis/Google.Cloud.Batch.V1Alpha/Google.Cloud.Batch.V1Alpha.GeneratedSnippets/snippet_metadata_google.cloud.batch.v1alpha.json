@@ -809,6 +809,206 @@
       ]
     },
     {
+      "regionTag": "batch_v1alpha_generated_BatchService_UpdateJob_sync",
+      "title": "UpdateJobRequestObject",
+      "description": "Snippet for UpdateJob",
+      "file": "BatchServiceClient.UpdateJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJob",
+        "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient.UpdateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1Alpha.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1Alpha.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.batch.v1alpha.BatchService.UpdateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1alpha.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1alpha_generated_BatchService_UpdateJob_async",
+      "title": "UpdateJobRequestObjectAsync",
+      "description": "Snippet for UpdateJobAsync",
+      "file": "BatchServiceClient.UpdateJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJobAsync",
+        "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient.UpdateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1Alpha.UpdateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1Alpha.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.batch.v1alpha.BatchService.UpdateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1alpha.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1alpha_generated_BatchService_UpdateJob_sync_flattened",
+      "title": "UpdateJob",
+      "description": "Snippet for UpdateJob",
+      "file": "BatchServiceClient.UpdateJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJob",
+        "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient.UpdateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1Alpha.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1Alpha.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.batch.v1alpha.BatchService.UpdateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1alpha.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1alpha_generated_BatchService_UpdateJob_async_flattened",
+      "title": "UpdateJobAsync",
+      "description": "Snippet for UpdateJobAsync",
+      "file": "BatchServiceClient.UpdateJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateJobAsync",
+        "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient.UpdateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1Alpha.Job",
+            "name": "job"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1Alpha.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1Alpha.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateJob",
+          "fullName": "google.cloud.batch.v1alpha.BatchService.UpdateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1alpha.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "batch_v1alpha_generated_BatchService_ListJobs_sync",
       "title": "ListJobsRequestObject",
       "description": "Snippet for ListJobs",

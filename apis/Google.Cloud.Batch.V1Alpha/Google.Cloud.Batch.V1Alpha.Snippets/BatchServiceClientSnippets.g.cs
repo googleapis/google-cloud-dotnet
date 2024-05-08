@@ -346,6 +346,72 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateJob</summary>
+        public void UpdateJobRequestObject()
+        {
+            // Snippet: UpdateJob(UpdateJobRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::UpdateJobRequest request = new gcbv::UpdateJobRequest
+            {
+                Job = new gcbv::Job(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::Job response = batchServiceClient.UpdateJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateJobAsync</summary>
+        public async Task UpdateJobRequestObjectAsync()
+        {
+            // Snippet: UpdateJobAsync(UpdateJobRequest, CallSettings)
+            // Additional: UpdateJobAsync(UpdateJobRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::UpdateJobRequest request = new gcbv::UpdateJobRequest
+            {
+                Job = new gcbv::Job(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            gcbv::Job response = await batchServiceClient.UpdateJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateJob</summary>
+        public void UpdateJob()
+        {
+            // Snippet: UpdateJob(Job, FieldMask, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::Job job = new gcbv::Job();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcbv::Job response = batchServiceClient.UpdateJob(job, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateJobAsync</summary>
+        public async Task UpdateJobAsync()
+        {
+            // Snippet: UpdateJobAsync(Job, FieldMask, CallSettings)
+            // Additional: UpdateJobAsync(Job, FieldMask, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::Job job = new gcbv::Job();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            gcbv::Job response = await batchServiceClient.UpdateJobAsync(job, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobsRequestObject()
         {

@@ -70,6 +70,12 @@
                 "ListTasksAsync"
               ]
             },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
+            },
             "UpdateResourceAllowance": {
               "methods": [
                 "UpdateResourceAllowance",
