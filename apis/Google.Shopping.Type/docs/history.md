@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-05-08
+
+### New features
+
+- Add `Weight` to common types for Shopping APIs to be used for accounts bundle ([commit f73940b](https://github.com/googleapis/google-cloud-dotnet/commit/f73940b4eaa5619c460c77d24a018634039b95f0))
+
+### Documentation improvements
+
+- A comment for field `amount_micros` in message `.google.shopping.type.Price` is changed ([commit f73940b](https://github.com/googleapis/google-cloud-dotnet/commit/f73940b4eaa5619c460c77d24a018634039b95f0))
+
 ## Version 1.0.0-beta05, released 2024-03-28
 
 ### New features
