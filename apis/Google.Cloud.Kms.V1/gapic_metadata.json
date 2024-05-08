@@ -5,6 +5,60 @@
   "protoPackage": "google.cloud.kms.v1",
   "libraryPackage": "Google.Cloud.Kms.V1",
   "services": {
+    "Autokey": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutokeyClient",
+          "rpcs": {
+            "CreateKeyHandle": {
+              "methods": [
+                "CreateKeyHandle",
+                "CreateKeyHandleAsync"
+              ]
+            },
+            "GetKeyHandle": {
+              "methods": [
+                "GetKeyHandle",
+                "GetKeyHandleAsync"
+              ]
+            },
+            "ListKeyHandles": {
+              "methods": [
+                "ListKeyHandles",
+                "ListKeyHandlesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AutokeyAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutokeyAdminClient",
+          "rpcs": {
+            "GetAutokeyConfig": {
+              "methods": [
+                "GetAutokeyConfig",
+                "GetAutokeyConfigAsync"
+              ]
+            },
+            "ShowEffectiveAutokeyConfig": {
+              "methods": [
+                "ShowEffectiveAutokeyConfig",
+                "ShowEffectiveAutokeyConfigAsync"
+              ]
+            },
+            "UpdateAutokeyConfig": {
+              "methods": [
+                "UpdateAutokeyConfig",
+                "UpdateAutokeyConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "EkmService": {
       "clients": {
         "grpc": {

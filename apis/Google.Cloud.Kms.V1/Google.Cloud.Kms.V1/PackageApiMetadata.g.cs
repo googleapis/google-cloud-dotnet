@@ -18,6 +18,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
@@ -57,6 +58,11 @@ namespace Google.Cloud.Kms.V1
                     // { "post": "/v1/{resource=projects/*/locations/*/keyRings/*}:testIamPermissions", "body": "*", "additionalBindings": [ { "post": "/v1/{resource=projects/*/locations/*/keyRings/*/cryptoKeys/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/keyRings/*/importJobs/*}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/ekmConfig}:testIamPermissions", "body": "*" }, { "post": "/v1/{resource=projects/*/locations/*/ekmConnections/*}:testIamPermissions", "body": "*" } ] }
                     proto::ByteString.FromBase64("IkMvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlUiUC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlUiUC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2ltcG9ydEpvYnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqWkciQi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9la21Db25maWd9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpOIkkvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZWttQ29ubmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq")
                 },
+                {
+                    "google.longrunning.Operations.GetOperation",
+                    // { "get": "/v1/{name=projects/*/locations/*/operations/*}" }
+                    proto::ByteString.FromBase64("Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9vcGVyYXRpb25zLyp9")
+                },
             });
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
@@ -64,10 +70,13 @@ namespace Google.Cloud.Kms.V1
             yield return gciv::IamPolicyReflection.Descriptor;
             yield return gciv::OptionsReflection.Descriptor;
             yield return gciv::PolicyReflection.Descriptor;
+            yield return AutokeyReflection.Descriptor;
+            yield return AutokeyAdminReflection.Descriptor;
             yield return EkmServiceReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
+            yield return lro::OperationsReflection.Descriptor;
         }
     }
 }
