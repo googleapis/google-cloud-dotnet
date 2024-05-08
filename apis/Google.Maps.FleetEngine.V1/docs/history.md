@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0, released 2024-05-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing method `UpdateVehicleLocation` is removed from service `VehicleService` ([commit 496dd3b](https://github.com/googleapis/google-cloud-dotnet/commit/496dd3bcf1b991365da65af8d198622df23a4d46))
+- **BREAKING CHANGE** An existing method `SearchFuzzedVehicles` is removed from service `VehicleService` ([commit 496dd3b](https://github.com/googleapis/google-cloud-dotnet/commit/496dd3bcf1b991365da65af8d198622df23a4d46))
+- **BREAKING CHANGE** An existing message `UpdateVehicleLocationRequest` is removed ([commit 496dd3b](https://github.com/googleapis/google-cloud-dotnet/commit/496dd3bcf1b991365da65af8d198622df23a4d46))
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
 ## Version 1.3.0, released 2024-03-27
 
 ### New features
