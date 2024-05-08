@@ -1,5 +1,28 @@
 # Version history
 
+## Version 2.28.0, released 2024-05-08
+
+### New features
+
+- A new value `TPU_V5_LITEPOD` is added to enum `AcceleratorType` ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A new field `search_entry_point` is added to message `.google.cloud.aiplatform.v1.GroundingMetadata` ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A new message `SearchEntryPoint` is added ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A new field `private_service_connect_config` is added to message `.google.cloud.aiplatform.v1.Endpoint` ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A new value `INVALID_TOKEN_VALUE` is added to enum `RecordErrorType` ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A new field `deploy_task_name` is added to message `.google.cloud.aiplatform.v1.PublisherModel` ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- A comment for field `parent` in message `.google.cloud.aiplatform.v1.CreateFeatureGroupRequest` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `name` in message `.google.cloud.aiplatform.v1.NotebookRuntimeTemplate` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `base_model` in message `.google.cloud.aiplatform.v1.TuningJob` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `tuned_model_display_name` in message `.google.cloud.aiplatform.v1.TuningJob` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `epoch_count` in message `.google.cloud.aiplatform.v1.SupervisedHyperParameters` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `learning_rate_multiplier` in message `.google.cloud.aiplatform.v1.SupervisedHyperParameters` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `training_dataset_uri` in message `.google.cloud.aiplatform.v1.SupervisedTuningSpec` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+- A comment for field `validation_dataset_uri` in message `.google.cloud.aiplatform.v1.SupervisedTuningSpec` is changed ([commit 988b653](https://github.com/googleapis/google-cloud-dotnet/commit/988b65358899ac8a04d9104642c363ec3ae57f95))
+
 ## Version 2.27.0, released 2024-04-19
 
 ### New features
