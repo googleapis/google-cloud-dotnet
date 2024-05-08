@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthFailureModes", "AuthFailureModes.csproj", "{B86F8B68-4FE5-4C54-ACA1-8F46EFCE650C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B86F8B68-4FE5-4C54-ACA1-8F46EFCE650C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86F8B68-4FE5-4C54-ACA1-8F46EFCE650C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86F8B68-4FE5-4C54-ACA1-8F46EFCE650C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86F8B68-4FE5-4C54-ACA1-8F46EFCE650C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {438FF094-160E-4EBF-905A-D0C1F3791609}
+	EndGlobalSection
+EndGlobal
