@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.10.0, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Update description on allowed_locations in LocationPolicy field ([commit 28e0693](https://github.com/googleapis/google-cloud-dotnet/commit/28e0693f41c54d846e9bdfbfef31e22f8e48c106))
+- Update comments on ServiceAccount email and scopes fields ([commit 64a9268](https://github.com/googleapis/google-cloud-dotnet/commit/64a92680f33d60e7d497c40090ffdf22cf72b3d3))
+- State one Resource Allowance per region per project limitation on v1alpha ([commit 159689e](https://github.com/googleapis/google-cloud-dotnet/commit/159689eb0492be155a1a8400470c3e52d3cbb208))
+- A comment for field `max_run_duration` in message `.google.cloud.batch.v1alpha.TaskSpec` and `.google.cloud.batch.v1.TaskSpec` is changed ([commit 159689e](https://github.com/googleapis/google-cloud-dotnet/commit/159689eb0492be155a1a8400470c3e52d3cbb208))
+- Add non-negative restriction comment for usage_resource_allowance.spec.limit.limit exposed on v1alpha ([commit 159689e](https://github.com/googleapis/google-cloud-dotnet/commit/159689eb0492be155a1a8400470c3e52d3cbb208))
+
 ## Version 2.9.0, released 2024-03-26
 
 ### New features
