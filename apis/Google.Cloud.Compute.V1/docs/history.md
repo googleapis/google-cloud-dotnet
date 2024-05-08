@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.16.0, released 2024-05-08
+
+### New features
+
+- Update Compute Engine API to revision 20240430 ([issue 900](https://github.com/googleapis/google-cloud-dotnet/issues/900)) ([commit 95da052](https://github.com/googleapis/google-cloud-dotnet/commit/95da0521b6ee7c97fa560544647c3a29e7751c6e))
+- Update Compute Engine API to revision 20240421 ([issue 899](https://github.com/googleapis/google-cloud-dotnet/issues/899)) ([commit cc0431c](https://github.com/googleapis/google-cloud-dotnet/commit/cc0431c34f4a8affb8138beb711cd8c9bb5c8da4))
+- Update Compute Engine API to revision 20240407 ([issue 890](https://github.com/googleapis/google-cloud-dotnet/issues/890)) ([commit ee6c6f0](https://github.com/googleapis/google-cloud-dotnet/commit/ee6c6f02ddf65283b0919bc01cb65d7e6f2c87b0))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
 ## Version 2.15.0, released 2024-03-26
 
 ### New features
