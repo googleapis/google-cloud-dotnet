@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Update comment of Places API ([commit fa8728e](https://github.com/googleapis/google-cloud-dotnet/commit/fa8728eca2503faf73551671004c01f87cd3f2cc))
+- Slightly improved documentation for EVOptions in SearchTextRequest ([commit 0606c35](https://github.com/googleapis/google-cloud-dotnet/commit/0606c35dcffdf54c56dd7a33cb877a989d0e5a37))
+- Fix designation of Text Search ([commit 4f448cc](https://github.com/googleapis/google-cloud-dotnet/commit/4f448cc0a8c591fb0e835abfc08db96a21e74f05))
+- Update field mask guidance ([commit 4f448cc](https://github.com/googleapis/google-cloud-dotnet/commit/4f448cc0a8c591fb0e835abfc08db96a21e74f05))
+- Fix typo in PriceLevel enum ([commit 2528532](https://github.com/googleapis/google-cloud-dotnet/commit/252853284b74cea2a59db60828f88b6e3fed5bd0))
+- Document the maximum number of reviews and photos returned ([commit 2528532](https://github.com/googleapis/google-cloud-dotnet/commit/252853284b74cea2a59db60828f88b6e3fed5bd0))
+- Correct requirements on Autocomplete and Details session token field ([commit 2528532](https://github.com/googleapis/google-cloud-dotnet/commit/252853284b74cea2a59db60828f88b6e3fed5bd0))
+
 ## Version 1.0.0-beta05, released 2024-03-27
 
 ### New features
